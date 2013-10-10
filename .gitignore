@@ -20,4 +20,5 @@ bin
 *.DS_Store
 *.cache
 *.target
+*.iml
 logfile
