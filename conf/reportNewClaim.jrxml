@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="90378acd-33ad-413e-ad03-6f54642cad18">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#D9C3C3">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#FFE6E6">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String">
+		<defaultValueExpression><![CDATA["/Users/valtechuk/Dropbox/JasperReports/"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="xPath">
+		<![CDATA[/]]>
+	</queryString>
+	<field name="Version" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/Version]]></fieldDescription>
+	</field>
+	<field name="ClaimantSurname" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Surname]]></fieldDescription>
+	</field>
+	<field name="NationalInsuranceNumber" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/NationalInsuranceNumber]]></fieldDescription>
+	</field>
+	<field name="TransactionId" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/TransactionId]]></fieldDescription>
+	</field>
+	<field name="ClaimantTitle" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Title]]></fieldDescription>
+	</field>
+	<field name="DateTimeGenerated" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DateTimeGenerated]]></fieldDescription>
+	</field>
+	<variable name="ClaimantTitleUpper" class="java.lang.String">
+		<variableExpression><![CDATA[$F{ClaimantSurname}.toUpperCase()]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="75f637d8-0398-4c9a-a01e-46db988c9bf3" x="0" y="0" width="555" height="20" backcolor="#666666"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="f611597b-ca9e-4eee-b245-2214c1573ce9" x="250" y="0" width="193" height="20" forecolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ClaimantSurname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="fa8df42d-d92f-4051-a603-d9108427489c" x="469" y="0" width="85" height="20" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{NationalInsuranceNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="97b2efa8-c290-4b0e-b5d1-0ddc084d45e0" x="81" y="0" width="126" height="20" forecolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TransactionId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="413555f5-6e37-46fa-9f7b-00d6dd12b626" x="218" y="0" width="30" height="20" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ClaimantTitle}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="eb8201ef-3319-4f71-ba4a-434848230663" x="2" y="0" width="78" height="20" forecolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Transaction:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="12" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="49">
+			<subreport>
+				<reportElement uuid="e4836334-7bf3-456a-9d50-dc2e3afb7ab7" x="0" y="0" width="555" height="49"/>
+				<subreportParameter name="SUBREPORT_DIR"/>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Summary.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="7fc54fa3-8e8e-49e3-b237-71e48d1d5de5" x="369" y="44" width="186" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[This form was completed in English]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4c0f480a-90e9-4e9e-bd3a-20a48d069444" x="443" y="24" width="112" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="14" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Claim Form]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="33f37f7e-ea89-47ec-9572-b60206334392" x="369" y="4" width="186" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Carer's Allowance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7928087b-40c5-44a2-a88b-033a02972ec2" x="0" y="4" width="79" height="20"/>
+				<textElement/>
+				<text><![CDATA[Service version: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="3205d842-c416-44c0-82fe-89f83bcb8739" x="81" y="4" width="100" height="17"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Version}]]></textFieldExpression>
+			</textField>
+			<break>
+				<reportElement uuid="ae481603-4ddd-43c8-a8d3-7287ea703788" x="0" y="3" width="540" height="1"/>
+			</break>
+		</band>
+		<band height="50">
+			<subreport>
+				<reportElement uuid="863d417f-10ec-45bd-9cef-dace035918f9" x="0" y="0" width="555" height="50" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/Caree/CareBreak")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_CareBreak.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="60">
+			<subreport isUsingCache="false">
+				<reportElement uuid="cf0e1b01-f950-4600-906f-07f51b5bab61" x="0" y="0" width="555" height="59"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/Consents/Consent")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Consents.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="40">
+			<subreport>
+				<reportElement uuid="127cdbb5-9bc4-442b-b0a6-16d3356cb109" x="0" y="0" width="555" height="40"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("//Evidence")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_subreportEvidenceList.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="c2c2df57-21e4-40c1-9059-1985d6986f09" x="243" y="0" width="126" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{DateTimeGenerated}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="6063e8ee-92b9-44aa-b97d-37bad5da42f5" x="167" y="0" width="81" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Claim received:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="0133ea8a-e3b4-4d1b-ae6b-918fecfcdd07" x="63" y="0" width="96" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{TransactionId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="fb0d9e43-5827-4ea3-a9c3-df5752f30646" x="406" y="0" width="121" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER} + " of "]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="ff73e306-b40d-442d-98a9-1abf56267436" x="527" y="0" width="27" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="dc7a0fce-ab52-46eb-ab11-ed9d6e023e1a" x="2" y="0" width="61" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Transaction:]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="20" splitType="Stretch"/>
+	</summary>
+</jasperReport>

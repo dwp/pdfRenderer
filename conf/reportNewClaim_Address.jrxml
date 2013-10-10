@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Address" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="ac31be84-fd90-4512-8a77-f66c41de4722">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="XPATH_ADDRESS" class="java.lang.String"/>
+	<queryString language="xPath">
+		<![CDATA[$P{XPATH_ADDRESS}]]>
+	</queryString>
+	<field name="PostCode" class="java.lang.String">
+		<fieldDescription><![CDATA[PostCode]]></fieldDescription>
+	</field>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<subreport>
+				<reportElement uuid="1e3e4155-43bc-444e-b78b-c05e69c14019" x="355" y="0" width="197" height="15"/>
+				<subreportParameter name="XPATH_ADDRESS">
+					<subreportParameterExpression><![CDATA[$P{XPATH_ADDRESS}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource) $P{REPORT_DATA_SOURCE}).subDataSource("//Line")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Street.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement uuid="5bf1e7ac-4166-4043-967d-614bcb5338fc" x="0" y="0" width="350" height="15"/>
+				<textElement/>
+				<text><![CDATA[Street / Town / City]]></text>
+			</staticText>
+		</band>
+		<band height="15" splitType="Prevent">
+			<printWhenExpression><![CDATA[$F{PostCode} != null]]></printWhenExpression>
+			<staticText>
+				<reportElement uuid="c89a47b6-166a-41d0-800c-7ae95827ec24" x="0" y="0" width="350" height="15"/>
+				<textElement/>
+				<text><![CDATA[Postcode]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="fcb11e07-7e2a-4fdf-89e8-2eed4992fed3" x="355" y="0" width="197" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{PostCode}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
