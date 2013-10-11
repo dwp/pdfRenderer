@@ -1,7 +1,7 @@
 package generators
 
 import org.specs2.mutable._
-import data_sources.ReportDataSource
+import data_sources.{EmptyDataSource, ReportDataSource}
 
 
 /**
@@ -12,6 +12,6 @@ import data_sources.ReportDataSource
 class PdfGeneratorSpec extends Specification {
 
   "PdfGenerator should be able to handle an empty data source and return None"  should {
-    PdfGenerator.generateFrom(new ReportDataSource{}) must beNone
+    PdfGenerator.generateFrom(new EmptyDataSource) must beNone
   }
 }

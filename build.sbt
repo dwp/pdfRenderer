@@ -12,5 +12,7 @@ libraryDependencies += "org.specs2" %% "specs2" % "1.14" % "test"
 
 libraryDependencies += "net.sf.jasperreports" % "jasperreports" % "5.2.0"
 
+libraryDependencies += "xalan" % "xalan" % "2.7.1"
+
 // for debugging sbt problems
 //logLevel := Level.Debug

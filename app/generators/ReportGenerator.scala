@@ -3,7 +3,7 @@ package generators
 import data_sources.ReportDataSource
 
 /**
- * TODO write description
+ * Interface of the report generators.
  * @author Jorge Migueis
  *         Date: 11/10/2013
  */
