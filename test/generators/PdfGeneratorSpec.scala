@@ -5,9 +5,8 @@ import data_sources.{EmptyDataSource, ReportDataSource}
 
 
 /**
- * TODO write description
+ * Test PdfGenerator with the implicits defined in package object data_sources.
  * @author Jorge Migueis
- *         Date: 11/10/2013
  */
 class PdfGeneratorSpec extends Specification {
 

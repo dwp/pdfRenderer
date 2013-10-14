@@ -7,13 +7,12 @@ import data_sources.ReportDataSource
  * It reads the compiled report template, generate a JasperPrint and returns a PDF (an array of bytes).
  *
  * @author Jorge Migueis
- *         Date: 11/10/2013
  */
 object PdfGenerator  extends Object with ReportGenerator {
 
   type GeneratorResult = Option[Array[Byte]]
 
-  def generateFrom(source:ReportDataSource) = {
+  def generateFrom(source:ReportDataSource)(implicit template:(ReportDataSource) => String) = {
    None
   }
 

@@ -9,7 +9,6 @@ import net.sf.jasperreports.engine.data.JRXmlDataSource
  * A data source that is an XML document.
  * Converts an XML into a JRXmlDataSource.
  * @author Jorge Migueis
- *         Date: 11/10/2013
  */
 class XmlDataSource(val source:Elem) extends Object with ReportDataSource {
 
