@@ -1,6 +1,7 @@
 package generators
 
 import data_sources.ReportDataSource
+import net.sf.jasperreports.engine.{JasperPrint, JasperFillManager}
 
 /**
  * Generates a PDF from a DataSource.
@@ -12,8 +13,10 @@ object PdfGenerator  extends Object with ReportGenerator {
 
   type GeneratorResult = Option[Array[Byte]]
 
-  def generateFrom(source:ReportDataSource)(implicit template:(ReportDataSource) => String) = {
-   None
+  protected def convertPrint(print:JasperPrint):GeneratorResult = {
+    None
   }
+
+
 
 }

@@ -1,6 +1,7 @@
 package data_sources
 
 import org.specs2.mutable._
+import scala.xml.Elem
 
 /**
  * TODO write description
@@ -10,7 +11,7 @@ import org.specs2.mutable._
 class DataSourceConverterSpec extends Specification {
 
   "An XML should be converted to a ReportDataSource implicitly"  should {
-     val xml = <DWPCAClaim><DWPCATransaction>ER123DF</DWPCATransaction></DWPCAClaim>
+     val xml:Elem = <DWPCAClaim><DWPCATransaction>ER123DF</DWPCATransaction></DWPCAClaim>
 
     def needsInteger( one:ReportDataSource) = {
       true
