@@ -1,0 +1,8 @@
+# POST     /submit/claim     controllers.Application.submitClaim
+# POST     /retry/claim      controllers.Application.retryClaim
+
+
+
+# Mock GG endpoint
+# POST     /submission        controllers.MockGG.submission
+# POST     /poll              controllers.MockGG.poll
