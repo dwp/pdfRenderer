@@ -1,14 +1,18 @@
 package generators
 
-import data_sources.{ReportDataSource}
-import net.sf.jasperreports.engine.{JasperReport, JasperCompileManager, JasperFillManager, JasperPrint}
+import data_sources.ReportDataSource
+import net.sf.jasperreports.engine._
 import net.sf.jasperreports.engine.xml.JRXmlLoader
 import play.api.Logger
+import net.sf.jasperreports.engine.design.JasperDesign
+import net.sf.jasperreports.engine.util.{JRElementsVisitor, JRSaver}
+import net.sf.jasperreports.crosstabs.JRCrosstab
+import java.util.StringTokenizer
+import scala.Predef.String
 
 
 /**
  * Interface of the report generators.
- * @author Jorge Migueis
  */
 trait ReportGenerator {
 
@@ -17,6 +21,9 @@ trait ReportGenerator {
 
     try {
       val jasperReportFilename = source.jasperReportFilenameMatcher()
+
+      compileReportsRecursively(jasperReportFilename)
+
       val jasperReport = createJasperReport(jasperReportFilename)
       val dataSource = source.convertToJRDataSource()
       val jasperPrint = JasperFillManager.fillReport(jasperReport, null, dataSource)
@@ -32,8 +39,7 @@ trait ReportGenerator {
   }
 
   private def createJasperReport(fileName: String): JasperReport = {
-    println("ReportGenerator:createJasperReport:fileName "+fileName)
-    val jasperTemplate = getClass.getClassLoader.getResourceAsStream(fileName)
+    val jasperTemplate = getClass.getClassLoader.getResourceAsStream(fileName + ".jrxml")
     val jasperDesign = JRXmlLoader.load(jasperTemplate)
     val jasperReport = JasperCompileManager.compileReport(jasperDesign)
     jasperReport
@@ -41,4 +47,59 @@ trait ReportGenerator {
 
   protected def exportReportToFormat(print: JasperPrint): SuccessOrFailure
 
+
+  def compileReportsRecursively(fileName: String): Unit = {
+    val jrxmlFilename = "conf/" + fileName + ".jrxml"
+    val jasperFilename = "conf/" + fileName + ".jasper"
+
+
+    val jasperDesign: JasperDesign = JRXmlLoader.load(jrxmlFilename)
+    val jasperReport = JasperCompileManager.compileReport(jasperDesign)
+    if (!new java.io.File(jasperFilename).exists) {
+      JRSaver.saveObject(jasperReport, jasperFilename)
+    }
+    //Compile sub reports
+    JRElementsVisitor.visitReport(jasperReport, new JRVisitor() {
+      def visitBreak(breakElement: JRBreak) = {}
+
+      def visitChart(chart: JRChart) = {}
+
+      def visitCrosstab(crosstab: JRCrosstab) = {}
+
+      def visitElementGroup(elementGroup: JRElementGroup) = {}
+
+      def visitEllipse(ellipse: JREllipse) = {}
+
+      def visitFrame(frame: JRFrame) = {}
+
+      def visitImage(image: JRImage) = {}
+
+      def visitLine(line: JRLine) = {}
+
+      def visitRectangle(rectangle: JRRectangle) = {}
+
+      def visitStaticText(staticText: JRStaticText) = {}
+
+      def visitSubreport(subreport: JRSubreport): Unit = {
+        val expression = subreport.getExpression().getText().replace(".jasper", "")
+        val st = new StringTokenizer(expression, "\"/")
+        var subReportName: String = null
+        while (st.hasMoreTokens()) {
+          subReportName = st.nextToken()
+        }
+        //Sometimes the same subreport can be used multiple times, but
+        //there is no need to compile multiple times
+        //if(completedSubReports.contains(subReportName)) return
+        //completedSubReports.add(subReportName)
+        compileReportsRecursively(subReportName)
+      }
+
+      def visitTextField(textField: JRTextField) = {}
+
+      def visitComponentElement(componentElement: JRComponentElement) = {}
+
+      def visitGenericElement(element: JRGenericElement) = {}
+    })
+
+  }
 }

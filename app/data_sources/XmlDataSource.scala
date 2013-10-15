@@ -16,10 +16,10 @@ case class XmlDataSource(val source:Elem) extends ReportDataSource {
       case 0 => {
         (source \\ "DWPCATransaction" \\ "DWPCAClaim").length match {
           case 0 => throw new scala.RuntimeException("XmlDataSource could not match a report template")
-          case _ => "reportNewClaim.jrxml"
+          case _ => "reportNewClaim"
         }
       }
-      case _ => "reportNewCircs.jrxml"
+      case _ => "reportNewCircs"
     }
   }
 }
