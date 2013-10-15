@@ -16,8 +16,8 @@ trait ReportGenerator {
   def generateFrom(source: ReportDataSource): SuccessOrFailure = {
 
     try {
-      val filename = source.reportMatcher()
-      val jasperReport = createJasperReport(filename)
+      val jasperReportFilename = source.jasperReportFilenameMatcher()
+      val jasperReport = createJasperReport(jasperReportFilename)
       val dataSource = source.convertToJRDataSource()
       val jasperPrint = JasperFillManager.fillReport(jasperReport, null, dataSource)
       exportReportToFormat(jasperPrint)

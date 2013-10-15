@@ -9,6 +9,12 @@ import test_data.ClaimBuilder
  * @author Jorge Migueis
  */
 class PdfGeneratorSpec extends Specification {
+  "PdfGenerator should be reject xml that does not contain DWPCAClaim or DWPCACircs"  should {
+    val xml = ClaimBuilder.buildBadClaim
+    val dataSource = new XmlDataSource(xml)
+    val generatorResult = PdfGenerator.generateFrom(dataSource)
+    generatorResult must beAnInstanceOf[GenerationFailure]
+  }
 
   "PdfGenerator should be handle valid xml and return success"  should {
     val xml = ClaimBuilder.buildGoodClaim
