@@ -1,7 +1,8 @@
 package generators
 
 import data_sources.ReportDataSource
-import net.sf.jasperreports.engine.{JasperPrint, JasperFillManager}
+import net.sf.jasperreports.engine.{JasperExportManager, JasperPrint, JasperFillManager}
+import java.io.{File, OutputStream, FileOutputStream}
 
 /**
  * Generates a PDF from a DataSource.
@@ -11,12 +12,10 @@ import net.sf.jasperreports.engine.{JasperPrint, JasperFillManager}
  */
 object PdfGenerator  extends Object with ReportGenerator {
 
-  type GeneratorResult = Option[Array[Byte]]
 
-  protected def convertPrint(print:JasperPrint):GeneratorResult = {
-    None
+  protected def exportReportToFormat(print:JasperPrint):GeneratorResult = {
+    val pdfData = JasperExportManager.exportReportToPdf(print)
+    JasperExportManager.exportReportToPdfFile(print, "/Users/valtechuk/test.pdf")
+    GeneratorResult(pdfData)
   }
-
-
-
 }

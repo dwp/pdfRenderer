@@ -10,14 +10,12 @@ import scala.xml.Elem
  */
 class DataSourceConverterSpec extends Specification {
 
-  "An XML should be converted to a ReportDataSource implicitly"  should {
+  "An XML should be converted to a XmlDataSource implicitly"  should {
      val xml:Elem = <DWPCAClaim><DWPCATransaction>ER123DF</DWPCATransaction></DWPCAClaim>
 
-    def needsInteger( one:ReportDataSource) = {
-      true
+    def instanceOfXmlDataSource( reportDataSource:ReportDataSource) = {
+       reportDataSource
     }
-
-    needsInteger(xml) must beTrue
+    instanceOfXmlDataSource(xml) must beAnInstanceOf[XmlDataSource]
   }
-
 }

@@ -13,6 +13,8 @@ object ApplicationBuild extends Build {
     "me.moocar" % "logback-gelf" % "0.9.6p2",
 	"org.specs2" %% "specs2" % "1.14" % "test",
 	"net.sf.jasperreports" % "jasperreports" % "5.2.0",
+  "com.lowagie" % "itext" % "2.1.7",
+  "org.codehaus.groovy" % "groovy-all" % "2.0.1",
 	"xalan" % "xalan" % "2.7.1"
   )
 
