@@ -12,9 +12,14 @@ case class XmlDataSource(val source:Elem) extends ReportDataSource {
   }
 
   def jasperReportFilenameMatcher(): String = {
-    (source \\ "DWPCATransaction" \\ "DWPCAClaim").length match {
-      case 0 => throw new scala.RuntimeException("XmlDataSource could not match a report template")
-      case _ => "reportNewClaim.jrxml"
+    (source \\ "DWPCATransaction" \\ "DWPCACircs").length match {
+      case 0 => {
+        (source \\ "DWPCATransaction" \\ "DWPCAClaim").length match {
+          case 0 => throw new scala.RuntimeException("XmlDataSource could not match a report template")
+          case _ => "reportNewClaim.jrxml"
+        }
+      }
+      case _ => "reportNewCircs.jrxml"
     }
   }
 }
