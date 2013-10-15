@@ -10,6 +10,6 @@ trait ReportDataSource {
 
   def convertToJRDataSource():JRDataSource
 
-  def reportMatcher(source:ReportDataSource):String
+  def reportMatcher():String
 
 }

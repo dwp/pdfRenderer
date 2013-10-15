@@ -16,7 +16,14 @@ case class XmlDataSource(val source:Elem) extends ReportDataSource {
     new JRXmlDataSource(new ByteArrayInputStream(source.toString().getBytes("UTF-8")))
   }
 
-  def reportMatcher(source: ReportDataSource): String = {
-      null
+  def reportMatcher(): String = {
+    /*
+      new String(source.getBytes).contains("DWPCAClaim") match {
+        case true => "reportNewClaim.jrxml"
+        case false => ""
+      }*/
+
+    println("XmlDataSource:reportMatcher")
+    "reportNewClaim.jrxml"
   }
 }
