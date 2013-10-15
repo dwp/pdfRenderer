@@ -1,10 +1,8 @@
 package generators
 
 import org.specs2.mutable._
-import data_sources.{XmlDataSource, EmptyDataSource, ReportDataSource}
-import generators.PdfGenerator.GeneratorResult
-import play.api.Play.current
-import play.api.libs.concurrent.Execution.Implicits.defaultContext
+import data_sources.{EmptyDataSource, XmlDataSource}
+import test_data.ClaimBuilder
 
 /**
  * Test PdfGenerator with the implicits defined in package object data_sources.
@@ -12,16 +10,16 @@ import play.api.libs.concurrent.Execution.Implicits.defaultContext
  */
 class PdfGeneratorSpec extends Specification {
 
-  /*
-  "PdfGenerator should be able to handle an empty data source and return None"  should {
-    PdfGenerator.generateFrom(new EmptyDataSource) must beNone
-  }*/
+  "PdfGenerator should fail with no data source"  should {
+    val dataSource = new EmptyDataSource
+    val generatorResult = PdfGenerator.generateFrom(dataSource)
+    generatorResult must beAnInstanceOf[GenerationFailure]
+  }
 
-  "PdfGenerator should be able to handle an xml data source and return pdf"  should {
-    val xml = <DWPCAClaim><DWPCATransaction>ER123DF</DWPCATransaction></DWPCAClaim>
+  "PdfGenerator should be handle valid xml and return success"  should {
+    val xml = ClaimBuilder.buildGoodClaim
     val dataSource = new XmlDataSource(xml)
     val generatorResult = PdfGenerator.generateFrom(dataSource)
-    generatorResult must beAnInstanceOf[GeneratorResult]
-    generatorResult.convertedData.length mustNotEqual 0
+    generatorResult must beAnInstanceOf[GenerationSuccess]
   }
 }

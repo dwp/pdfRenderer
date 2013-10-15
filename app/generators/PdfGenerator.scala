@@ -3,6 +3,7 @@ package generators
 import data_sources.ReportDataSource
 import net.sf.jasperreports.engine.{JasperExportManager, JasperPrint, JasperFillManager}
 import java.io.{File, OutputStream, FileOutputStream}
+import play.api.Logger
 
 /**
  * Generates a PDF from a DataSource.
@@ -10,12 +11,18 @@ import java.io.{File, OutputStream, FileOutputStream}
  *
  * @author Jorge Migueis
  */
-object PdfGenerator  extends Object with ReportGenerator {
+object PdfGenerator extends ReportGenerator {
 
 
-  protected def exportReportToFormat(print:JasperPrint):GeneratorResult = {
-    val pdfData = JasperExportManager.exportReportToPdf(print)
-    JasperExportManager.exportReportToPdfFile(print, "/Users/valtechuk/test.pdf")
-    GeneratorResult(pdfData)
+  protected def exportReportToFormat(print: JasperPrint): SuccessOrFailure = {
+    try {
+      JasperExportManager.exportReportToPdfFile(print, "/Users/valtechuk/test.pdf")
+      GenerationSuccess()
+    } catch {
+      case e: Exception => {
+        Logger.error(e.getMessage)
+        GenerationFailure()
+      }
+    }
   }
 }

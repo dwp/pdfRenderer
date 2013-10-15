@@ -10,13 +10,13 @@ import net.sf.jasperreports.engine.data.JRXmlDataSource
  * Converts an XML into a JRXmlDataSource.
  * @author Jorge Migueis
  */
-class XmlDataSource(val source:Elem) extends Object with ReportDataSource {
+case class XmlDataSource(val source:Elem) extends ReportDataSource {
 
   def convertToJRDataSource(): JRDataSource = {
     new JRXmlDataSource(new ByteArrayInputStream(source.toString().getBytes("UTF-8")))
   }
-}
 
-object XmlDataSource {
-  def apply(xmlSource:Elem) = new XmlDataSource(xmlSource)
+  def reportMatcher(source: ReportDataSource): String = {
+      null
+  }
 }
