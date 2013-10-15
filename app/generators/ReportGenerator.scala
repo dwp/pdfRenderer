@@ -6,7 +6,6 @@ import net.sf.jasperreports.engine.xml.JRXmlLoader
 import play.api.Logger
 import net.sf.jasperreports.engine.design.JasperDesign
 import net.sf.jasperreports.engine.util.{JRElementsVisitor, JRSaver}
-import net.sf.jasperreports.crosstabs.JRCrosstab
 import java.util.StringTokenizer
 import scala.Predef.String
 
@@ -59,28 +58,8 @@ trait ReportGenerator {
       JRSaver.saveObject(jasperReport, jasperFilename)
     }
     //Compile sub reports
-    JRElementsVisitor.visitReport(jasperReport, new JRVisitor() {
-      def visitBreak(breakElement: JRBreak) = {}
-
-      def visitChart(chart: JRChart) = {}
-
-      def visitCrosstab(crosstab: JRCrosstab) = {}
-
-      def visitElementGroup(elementGroup: JRElementGroup) = {}
-
-      def visitEllipse(ellipse: JREllipse) = {}
-
-      def visitFrame(frame: JRFrame) = {}
-
-      def visitImage(image: JRImage) = {}
-
-      def visitLine(line: JRLine) = {}
-
-      def visitRectangle(rectangle: JRRectangle) = {}
-
-      def visitStaticText(staticText: JRStaticText) = {}
-
-      def visitSubreport(subreport: JRSubreport): Unit = {
+    JRElementsVisitor.visitReport(jasperReport, new RecursiveVisitor() {
+      override def visitSubreport(subreport: JRSubreport): Unit = {
         val expression = subreport.getExpression().getText().replace(".jasper", "")
         val st = new StringTokenizer(expression, "\"/")
         var subReportName: String = null
@@ -93,13 +72,6 @@ trait ReportGenerator {
         //completedSubReports.add(subReportName)
         compileReportsRecursively(subReportName)
       }
-
-      def visitTextField(textField: JRTextField) = {}
-
-      def visitComponentElement(componentElement: JRComponentElement) = {}
-
-      def visitGenericElement(element: JRGenericElement) = {}
     })
-
   }
 }
