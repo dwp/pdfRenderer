@@ -84,16 +84,13 @@
 			<rectangle>
 				<reportElement uuid="75f637d8-0398-4c9a-a01e-46db988c9bf3" x="0" y="0" width="555" height="20" backcolor="#666666"/>
 			</rectangle>
-			<textField>
-				<reportElement uuid="f611597b-ca9e-4eee-b245-2214c1573ce9" x="250" y="0" width="193" height="20" forecolor="#FFFFFF"/>
-				<textElement verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{ClaimantSurname}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="fa8df42d-d92f-4051-a603-d9108427489c" x="469" y="0" width="85" height="20" forecolor="#FFFFFF"/>
-				<textElement textAlignment="Right" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{NationalInsuranceNumber}]]></textFieldExpression>
-			</textField>
+			<staticText>
+				<reportElement uuid="eb8201ef-3319-4f71-ba4a-434848230663" x="2" y="0" width="78" height="20" forecolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Transaction:]]></text>
+			</staticText>
 			<textField>
 				<reportElement uuid="97b2efa8-c290-4b0e-b5d1-0ddc084d45e0" x="81" y="0" width="126" height="20" forecolor="#FFFFFF"/>
 				<textElement verticalAlignment="Middle">
@@ -106,13 +103,16 @@
 				<textElement textAlignment="Right" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{ClaimantTitle}.toUpperCase()]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement uuid="eb8201ef-3319-4f71-ba4a-434848230663" x="2" y="0" width="78" height="20" forecolor="#FFFFFF"/>
-				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Transaction:]]></text>
-			</staticText>
+			<textField>
+				<reportElement uuid="f611597b-ca9e-4eee-b245-2214c1573ce9" x="250" y="0" width="193" height="20" forecolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ClaimantSurname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="fa8df42d-d92f-4051-a603-d9108427489c" x="469" y="0" width="85" height="20" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{NationalInsuranceNumber}]]></textFieldExpression>
+			</textField>
 		</band>
 	</pageHeader>
 	<columnHeader>
@@ -131,25 +131,6 @@
 		</band>
 		<band height="70" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="7fc54fa3-8e8e-49e3-b237-71e48d1d5de5" x="369" y="44" width="186" height="20"/>
-				<textElement textAlignment="Right"/>
-				<text><![CDATA[This form was completed in English]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="4c0f480a-90e9-4e9e-bd3a-20a48d069444" x="443" y="24" width="112" height="20"/>
-				<textElement textAlignment="Right">
-					<font size="14" isItalic="true"/>
-				</textElement>
-				<text><![CDATA[Claim Form]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="33f37f7e-ea89-47ec-9572-b60206334392" x="369" y="4" width="186" height="20"/>
-				<textElement textAlignment="Right">
-					<font size="14" isBold="true" isItalic="true"/>
-				</textElement>
-				<text><![CDATA[Carer's Allowance]]></text>
-			</staticText>
-			<staticText>
 				<reportElement uuid="7928087b-40c5-44a2-a88b-033a02972ec2" x="0" y="4" width="79" height="20"/>
 				<textElement/>
 				<text><![CDATA[Service version: ]]></text>
@@ -159,6 +140,25 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{Version}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement uuid="33f37f7e-ea89-47ec-9572-b60206334392" x="369" y="4" width="186" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Carer's Allowance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4c0f480a-90e9-4e9e-bd3a-20a48d069444" x="443" y="24" width="112" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="14" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Claim Form]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7fc54fa3-8e8e-49e3-b237-71e48d1d5de5" x="369" y="44" width="186" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[This form was completed in English]]></text>
+			</staticText>
 			<break>
 				<reportElement uuid="ae481603-4ddd-43c8-a8d3-7287ea703788" x="0" y="3" width="540" height="1"/>
 			</break>
@@ -196,10 +196,15 @@
 	</detail>
 	<pageFooter>
 		<band height="20" splitType="Stretch">
-			<textField>
-				<reportElement uuid="c2c2df57-21e4-40c1-9059-1985d6986f09" x="243" y="0" width="126" height="20"/>
+			<staticText>
+				<reportElement uuid="dc7a0fce-ab52-46eb-ab11-ed9d6e023e1a" x="2" y="0" width="61" height="20"/>
 				<textElement verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{DateTimeGenerated}]]></textFieldExpression>
+				<text><![CDATA[Transaction:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="0133ea8a-e3b4-4d1b-ae6b-918fecfcdd07" x="63" y="0" width="96" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{TransactionId}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement uuid="6063e8ee-92b9-44aa-b97d-37bad5da42f5" x="167" y="0" width="81" height="20"/>
@@ -207,12 +212,12 @@
 				<text><![CDATA[Claim received:]]></text>
 			</staticText>
 			<textField>
-				<reportElement uuid="0133ea8a-e3b4-4d1b-ae6b-918fecfcdd07" x="63" y="0" width="96" height="20"/>
+				<reportElement uuid="c2c2df57-21e4-40c1-9059-1985d6986f09" x="243" y="0" width="126" height="20"/>
 				<textElement verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{TransactionId}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{DateTimeGenerated}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement uuid="fb0d9e43-5827-4ea3-a9c3-df5752f30646" x="406" y="0" width="121" height="20"/>
+				<reportElement uuid="fb0d9e43-5827-4ea3-a9c3-df5752f30646" x="403" y="0" width="121" height="20"/>
 				<textElement textAlignment="Right" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER} + " of "]]></textFieldExpression>
 			</textField>
@@ -221,11 +226,6 @@
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement uuid="dc7a0fce-ab52-46eb-ab11-ed9d6e023e1a" x="2" y="0" width="61" height="20"/>
-				<textElement verticalAlignment="Middle"/>
-				<text><![CDATA[Transaction:]]></text>
-			</staticText>
 		</band>
 	</pageFooter>
 	<summary>

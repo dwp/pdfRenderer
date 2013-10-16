@@ -95,11 +95,9 @@
 				<text><![CDATA[From date and time]]></text>
 			</staticText>
 			<textField>
-				<reportElement uuid="ae1699e8-0023-4c15-81b8-44ecdfbd3a0d" x="355" y="22" width="197" height="20" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{EndDateTime} != null]]></printWhenExpression>
-				</reportElement>
+				<reportElement uuid="218f2dc4-631a-44bc-b575-c5358348e9ea" x="355" y="1" width="197" height="20"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{EndDateTime}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{StartDateTime}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement uuid="10c13715-86ee-409d-a59a-16c4c9acada8" x="20" y="22" width="330" height="20" isRemoveLineWhenBlank="true">
@@ -108,19 +106,19 @@
 				<textElement/>
 				<text><![CDATA[To date and time]]></text>
 			</staticText>
+			<textField>
+				<reportElement uuid="ae1699e8-0023-4c15-81b8-44ecdfbd3a0d" x="355" y="22" width="197" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{EndDateTime} != null]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EndDateTime}]]></textFieldExpression>
+			</textField>
 			<textField isStretchWithOverflow="true">
 				<reportElement uuid="b15a6344-b09e-4634-b2bc-4d81c2bf1d0d" x="20" y="42" width="330" height="20" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{ReasonClaimantAnswer} != null]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{ReasonClaimantQuestionLabel}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement uuid="193b9430-bdc2-43a1-9cc9-c099401fdaa5" x="355" y="62" width="197" height="20" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{ReasonClaimantOther} != null]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{ReasonClaimantOther}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="cae9a88e-0697-4628-80ec-7eb233216f5e" x="355" y="42" width="197" height="20" isRemoveLineWhenBlank="true">
@@ -136,6 +134,13 @@
 				<textElement verticalAlignment="Middle"/>
 				<text><![CDATA[Other]]></text>
 			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="193b9430-bdc2-43a1-9cc9-c099401fdaa5" x="355" y="62" width="197" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{ReasonClaimantOther} != null]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ReasonClaimantOther}]]></textFieldExpression>
+			</textField>
 			<textField isStretchWithOverflow="true">
 				<reportElement uuid="6928b9ab-0492-4afc-af0a-7c29241cf924" mode="Opaque" x="20" y="82" width="330" height="20" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{ReasonCareeAnswer} != null]]></printWhenExpression>
@@ -165,11 +170,6 @@
 				</reportElement>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{MedicalAnswer}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="218f2dc4-631a-44bc-b575-c5358348e9ea" x="355" y="1" width="197" height="20"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{StartDateTime}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
