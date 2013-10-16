@@ -179,9 +179,15 @@ class PdfGeneratorSpec extends Specification {
       reader.close()
 
       val xmlData = XMLData.functionalTestCase9(ClaimBuilder.functionalTestCase9)
-      val totalContent = content.mkString("\n")
+      val totalContent = content.mkString("\n").toLowerCase
 
-      xmlData.forall(x => totalContent.contains(x) must beTrue)
+      println("TotalContent "+totalContent)
+
+      xmlData.forall(x => {
+        val found = totalContent.contains(x.toLowerCase)
+        if(!found) {println("Cannot find: "+x.toLowerCase)}
+        found must beTrue
+      })
     }
   }
 }
