@@ -42,7 +42,6 @@ abstract class ReportGenerator(source: ReportDataSource) {
   private def createJasperReport(fileName: String): JasperReport = {
     val jasperTemplate = getClass.getClassLoader.getResourceAsStream(fileName + ".jrxml")
     val jasperDesign = JRXmlLoader.load(jasperTemplate)
-    jasperDesign.getParametersMap.get()
     val jasperReport = JasperCompileManager.compileReport(jasperDesign)
     jasperReport
   }
