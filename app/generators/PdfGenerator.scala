@@ -13,10 +13,11 @@ import play.api.Logger
  */
 object PdfGenerator extends ReportGenerator {
 
+  val pdfFileLocation = "/Users/valtechuk/test.pdf"
 
   protected def exportReportToFormat(print: JasperPrint): SuccessOrFailure = {
     try {
-      JasperExportManager.exportReportToPdfFile(print, "/Users/valtechuk/test.pdf")
+      JasperExportManager.exportReportToPdfFile(print, pdfFileLocation)
       GenerationSuccess()
     } catch {
       case e: Exception => {

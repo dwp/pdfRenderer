@@ -8,6 +8,8 @@ import net.sf.jasperreports.engine.design.JasperDesign
 import net.sf.jasperreports.engine.util.{JRElementsVisitor, JRSaver}
 import java.util.StringTokenizer
 import scala.Predef.String
+import scala.xml.XML
+import com.lowagie.text.pdf.PdfReader
 
 
 /**
@@ -40,6 +42,7 @@ trait ReportGenerator {
   private def createJasperReport(fileName: String): JasperReport = {
     val jasperTemplate = getClass.getClassLoader.getResourceAsStream(fileName + ".jrxml")
     val jasperDesign = JRXmlLoader.load(jasperTemplate)
+    jasperDesign.getParametersMap.get()
     val jasperReport = JasperCompileManager.compileReport(jasperDesign)
     jasperReport
   }
@@ -50,7 +53,6 @@ trait ReportGenerator {
   def compileReportsRecursively(fileName: String): Unit = {
     val jrxmlFilename = "conf/" + fileName + ".jrxml"
     val jasperFilename = "conf/" + fileName + ".jasper"
-
 
     val jasperDesign: JasperDesign = JRXmlLoader.load(jrxmlFilename)
     val jasperReport = JasperCompileManager.compileReport(jasperDesign)

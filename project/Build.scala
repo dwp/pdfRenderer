@@ -11,11 +11,12 @@ object ApplicationBuild extends Build {
   val appDependencies = Seq(
     "com.dwp.carers" % "carersXMLValidation" % "0.15.2",
     "me.moocar" % "logback-gelf" % "0.9.6p2",
-	"org.specs2" %% "specs2" % "1.14" % "test",
-	"net.sf.jasperreports" % "jasperreports" % "5.2.0",
-  "com.lowagie" % "itext" % "2.1.7",
-  "org.codehaus.groovy" % "groovy-all" % "2.0.1",
-	"xalan" % "xalan" % "2.7.1"
+    "org.specs2" %% "specs2" % "1.14" % "test",
+    "net.sf.jasperreports" % "jasperreports" % "5.2.0",
+    "com.lowagie" % "itext" % "4.2.1",
+    "com.itextpdf" % "itextpdf" % "5.4.4",
+    "org.codehaus.groovy" % "groovy-all" % "2.0.1",
+    "xalan" % "xalan" % "2.7.1"
   )
 
   val sampleStringTask = System.getProperty("sbt.carers.keystore")
