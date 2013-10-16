@@ -5,6 +5,7 @@ import data_sources.XmlDataSource
 import test_data.ClaimBuilder
 
 import java.io.File
+import scala.xml.Elem
 
 
 /**
@@ -12,14 +13,33 @@ import java.io.File
  * @author Jorge Migueis
  */
 class PdfGeneratorSpec extends Specification {
-  def before(pdfFileLocation: String) = {
-    val pdfFile = new File(pdfFileLocation)
-    if (pdfFile.exists()) {
-      pdfFile.delete()
-    }
-  }
-
   "PdfGenerator" should {
+    def before(pdfFileLocation: String) = {
+      val pdfFile = new File(pdfFileLocation)
+      if (pdfFile.exists()) {
+        pdfFile.delete()
+      }
+    }
+
+    def getPdfGenerator(pdfFileLocation: String, xml: Elem) = {
+      before(pdfFileLocation)
+      val dataSource = new XmlDataSource(xml)
+      PdfGenerator(dataSource, pdfFileLocation)
+    }
+
+    def testGeneratorResultIsSuccess(pdfFileLocation: String, xml: Elem) = {
+      val generator = getPdfGenerator(pdfFileLocation, xml)
+      val generatorResult = generator.generateFrom()
+      generatorResult must beAnInstanceOf[GenerationSuccess]
+    }
+
+    def testOutputFileExists(pdfFileLocation: String, xml: Elem) = {
+      val generator = getPdfGenerator(pdfFileLocation, xml)
+      generator.generateFrom()
+      val pdfFile = new File(pdfFileLocation)
+      pdfFile.exists() must beTrue
+    }
+
     "PdfGenerator should be reject xml that does not contain DWPCAClaim or DWPCACircs" in {
       val pdfFileLocation = "/Users/valtechuk/goodClaim.pdf"
       before(pdfFileLocation)
@@ -51,185 +71,94 @@ class PdfGeneratorSpec extends Specification {
       pdfFile.exists() must beTrue
     }
 
-
     "PdfGenerator should be handle functionalTestCase1 and return success" in {
-      val pdfFileLocation = "/Users/valtechuk/functionalTestCase1.pdf"
-      before(pdfFileLocation)
-      val xml = ClaimBuilder.functionalTestCase1
-      val dataSource = new XmlDataSource(xml)
-      val generator = PdfGenerator(dataSource, pdfFileLocation)
-      val generatorResult = generator.generateFrom()
-      generatorResult must beAnInstanceOf[GenerationSuccess]
+      val pdfFileLocation = "/Users/valtechuk/functionalTestCase1_testGeneratorResultIsSuccess.pdf"
+      testGeneratorResultIsSuccess(pdfFileLocation, ClaimBuilder.functionalTestCase1)
     }
 
     "PdfGenerator should create functionalTestCase1 PDF file" in {
-      val pdfFileLocation = "/Users/valtechuk/functionalTestCase1.pdf"
-      before(pdfFileLocation)
-      val xml = ClaimBuilder.functionalTestCase1
-      val dataSource = new XmlDataSource(xml)
-      PdfGenerator(dataSource, pdfFileLocation).generateFrom()
-      val pdfFile = new File(pdfFileLocation)
-      pdfFile.exists() must beTrue
+      val pdfFileLocation = "/Users/valtechuk/functionalTestCase1_testOutputFileExists.pdf"
+      testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase1)
     }
 
     "PdfGenerator should be handle functionalTestCase2 and return success" in {
-      val pdfFileLocation = "/Users/valtechuk/functionalTestCase2.pdf"
-      before(pdfFileLocation)
-      val xml = ClaimBuilder.functionalTestCase2
-      val dataSource = new XmlDataSource(xml)
-      val generator = PdfGenerator(dataSource, pdfFileLocation)
-      val generatorResult = generator.generateFrom()
-      generatorResult must beAnInstanceOf[GenerationSuccess]
+      val pdfFileLocation = "/Users/valtechuk/functionalTestCase2_testGeneratorResultIsSuccess.pdf"
+      testGeneratorResultIsSuccess(pdfFileLocation, ClaimBuilder.functionalTestCase2)
     }
 
     "PdfGenerator should create functionalTestCase2 PDF file" in {
-      val pdfFileLocation = "/Users/valtechuk/functionalTestCase2.pdf"
-      before(pdfFileLocation)
-      val xml = ClaimBuilder.functionalTestCase2
-      val dataSource = new XmlDataSource(xml)
-      PdfGenerator(dataSource, pdfFileLocation).generateFrom()
-      val pdfFile = new File(pdfFileLocation)
-      pdfFile.exists() must beTrue
+      val pdfFileLocation = "/Users/valtechuk/functionalTestCase2_testOutputFileExists.pdf"
+      testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase2)
     }
 
     "PdfGenerator should be handle functionalTestCase3 and return success" in {
-      val pdfFileLocation = "/Users/valtechuk/functionalTestCase3.pdf"
-      before(pdfFileLocation)
-      val xml = ClaimBuilder.functionalTestCase3
-      val dataSource = new XmlDataSource(xml)
-      val generator = PdfGenerator(dataSource, pdfFileLocation)
-      val generatorResult = generator.generateFrom()
-      generatorResult must beAnInstanceOf[GenerationSuccess]
+      val pdfFileLocation = "/Users/valtechuk/functionalTestCase3_testGeneratorResultIsSuccess.pdf"
+      testGeneratorResultIsSuccess(pdfFileLocation, ClaimBuilder.functionalTestCase3)
     }
 
     "PdfGenerator should create functionalTestCase3 PDF file" in {
-      val pdfFileLocation = "/Users/valtechuk/functionalTestCase3.pdf"
-      before(pdfFileLocation)
-      val xml = ClaimBuilder.functionalTestCase3
-      val dataSource = new XmlDataSource(xml)
-      PdfGenerator(dataSource, pdfFileLocation).generateFrom()
-      val pdfFile = new File(pdfFileLocation)
-      pdfFile.exists() must beTrue
+      val pdfFileLocation = "/Users/valtechuk/functionalTestCase3_testOutputFileExists.pdf"
+      testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase3)
     }
 
     "PdfGenerator should be handle functionalTestCase4 and return success" in {
-      val pdfFileLocation = "/Users/valtechuk/functionalTestCase4.pdf"
-      before(pdfFileLocation)
-      val xml = ClaimBuilder.functionalTestCase4
-      val dataSource = new XmlDataSource(xml)
-      val generator = PdfGenerator(dataSource, pdfFileLocation)
-      val generatorResult = generator.generateFrom()
-      generatorResult must beAnInstanceOf[GenerationSuccess]
+      val pdfFileLocation = "/Users/valtechuk/functionalTestCase4_testGeneratorResultIsSuccess.pdf"
+      testGeneratorResultIsSuccess(pdfFileLocation, ClaimBuilder.functionalTestCase4)
     }
 
     "PdfGenerator should create functionalTestCase4 PDF file" in {
-      val pdfFileLocation = "/Users/valtechuk/functionalTestCase4.pdf"
-      before(pdfFileLocation)
-      val xml = ClaimBuilder.functionalTestCase4
-      val dataSource = new XmlDataSource(xml)
-      PdfGenerator(dataSource, pdfFileLocation).generateFrom()
-      val pdfFile = new File(pdfFileLocation)
-      pdfFile.exists() must beTrue
+      val pdfFileLocation = "/Users/valtechuk/functionalTestCase4_testOutputFileExists.pdf"
+      testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase4)
     }
 
     "PdfGenerator should be handle functionalTestCase5 and return success" in {
-      val pdfFileLocation = "/Users/valtechuk/functionalTestCase5.pdf"
-      before(pdfFileLocation)
-      val xml = ClaimBuilder.functionalTestCase5
-      val dataSource = new XmlDataSource(xml)
-      val generator = PdfGenerator(dataSource, pdfFileLocation)
-      val generatorResult = generator.generateFrom()
-      generatorResult must beAnInstanceOf[GenerationSuccess]
+      val pdfFileLocation = "/Users/valtechuk/functionalTestCase5_testGeneratorResultIsSuccess.pdf"
+      testGeneratorResultIsSuccess(pdfFileLocation, ClaimBuilder.functionalTestCase5)
     }
 
     "PdfGenerator should create functionalTestCase5 PDF file" in {
-      val pdfFileLocation = "/Users/valtechuk/functionalTestCase5.pdf"
-      before(pdfFileLocation)
-      val xml = ClaimBuilder.functionalTestCase5
-      val dataSource = new XmlDataSource(xml)
-      PdfGenerator(dataSource, pdfFileLocation).generateFrom()
-      val pdfFile = new File(pdfFileLocation)
-      pdfFile.exists() must beTrue
+      val pdfFileLocation = "/Users/valtechuk/functionalTestCase5_testOutputFileExists.pdf"
+      testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase5)
     }
 
     "PdfGenerator should be handle functionalTestCase6 and return success" in {
-      val pdfFileLocation = "/Users/valtechuk/functionalTestCase6.pdf"
-      before(pdfFileLocation)
-      val xml = ClaimBuilder.functionalTestCase6
-      val dataSource = new XmlDataSource(xml)
-      val generator = PdfGenerator(dataSource, pdfFileLocation)
-      val generatorResult = generator.generateFrom()
-      generatorResult must beAnInstanceOf[GenerationSuccess]
+      val pdfFileLocation = "/Users/valtechuk/functionalTestCase6_testGeneratorResultIsSuccess.pdf"
+      testGeneratorResultIsSuccess(pdfFileLocation, ClaimBuilder.functionalTestCase6)
     }
 
     "PdfGenerator should create functionalTestCase6 PDF file" in {
-      val pdfFileLocation = "/Users/valtechuk/functionalTestCase6.pdf"
-      before(pdfFileLocation)
-      val xml = ClaimBuilder.functionalTestCase6
-      val dataSource = new XmlDataSource(xml)
-      PdfGenerator(dataSource, pdfFileLocation).generateFrom()
-      val pdfFile = new File(pdfFileLocation)
-      pdfFile.exists() must beTrue
+      val pdfFileLocation = "/Users/valtechuk/functionalTestCase6_testOutputFileExists.pdf"
+      testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase6)
     }
 
     "PdfGenerator should be handle functionalTestCase7 and return success" in {
-      val pdfFileLocation = "/Users/valtechuk/functionalTestCase7.pdf"
-      before(pdfFileLocation)
-      val xml = ClaimBuilder.functionalTestCase7
-      val dataSource = new XmlDataSource(xml)
-      val generator = PdfGenerator(dataSource, pdfFileLocation)
-      val generatorResult = generator.generateFrom()
-      generatorResult must beAnInstanceOf[GenerationSuccess]
+      val pdfFileLocation = "/Users/valtechuk/functionalTestCase7_testGeneratorResultIsSuccess.pdf"
+      testGeneratorResultIsSuccess(pdfFileLocation, ClaimBuilder.functionalTestCase7)
     }
 
     "PdfGenerator should create functionalTestCase7 PDF file" in {
-      val pdfFileLocation = "/Users/valtechuk/functionalTestCase7.pdf"
-      before(pdfFileLocation)
-      val xml = ClaimBuilder.functionalTestCase7
-      val dataSource = new XmlDataSource(xml)
-      PdfGenerator(dataSource, pdfFileLocation).generateFrom()
-      val pdfFile = new File(pdfFileLocation)
-      pdfFile.exists() must beTrue
+      val pdfFileLocation = "/Users/valtechuk/functionalTestCase7_testOutputFileExists.pdf"
+      testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase7)
     }
 
     "PdfGenerator should be handle functionalTestCase8 and return success" in {
-      val pdfFileLocation = "/Users/valtechuk/functionalTestCase8.pdf"
-      before(pdfFileLocation)
-      val xml = ClaimBuilder.functionalTestCase8
-      val dataSource = new XmlDataSource(xml)
-      val generator = PdfGenerator(dataSource, pdfFileLocation)
-      val generatorResult = generator.generateFrom()
-      generatorResult must beAnInstanceOf[GenerationSuccess]
+      val pdfFileLocation = "/Users/valtechuk/functionalTestCase8_testGeneratorResultIsSuccess.pdf"
+      testGeneratorResultIsSuccess(pdfFileLocation, ClaimBuilder.functionalTestCase8)
     }
 
     "PdfGenerator should create functionalTestCase8 PDF file" in {
-      val pdfFileLocation = "/Users/valtechuk/functionalTestCase8.pdf"
-      before(pdfFileLocation)
-      val xml = ClaimBuilder.functionalTestCase8
-      val dataSource = new XmlDataSource(xml)
-      PdfGenerator(dataSource, pdfFileLocation).generateFrom()
-      val pdfFile = new File(pdfFileLocation)
-      pdfFile.exists() must beTrue
+      val pdfFileLocation = "/Users/valtechuk/functionalTestCase8_testOutputFileExists.pdf"
+      testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase8)
     }
 
     "PdfGenerator should be handle functionalTestCase9 and return success" in {
-      val pdfFileLocation = "/Users/valtechuk/functionalTestCase9.pdf"
-      before(pdfFileLocation)
-      val xml = ClaimBuilder.functionalTestCase9
-      val dataSource = new XmlDataSource(xml)
-      val generator = PdfGenerator(dataSource, pdfFileLocation)
-      val generatorResult = generator.generateFrom()
-      generatorResult must beAnInstanceOf[GenerationSuccess]
+      val pdfFileLocation = "/Users/valtechuk/functionalTestCase9_testGeneratorResultIsSuccess.pdf"
+      testGeneratorResultIsSuccess(pdfFileLocation, ClaimBuilder.functionalTestCase9)
     }
 
     "PdfGenerator should create functionalTestCase9 PDF file" in {
-      val pdfFileLocation = "/Users/valtechuk/functionalTestCase9.pdf"
-      before(pdfFileLocation)
-      val xml = ClaimBuilder.functionalTestCase9
-      val dataSource = new XmlDataSource(xml)
-      PdfGenerator(dataSource, pdfFileLocation).generateFrom()
-      val pdfFile = new File(pdfFileLocation)
-      pdfFile.exists() must beTrue
+      val pdfFileLocation = "/Users/valtechuk/functionalTestCase9_testOutputFileExists.pdf"
+      testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase9)
     }
 
     /*
