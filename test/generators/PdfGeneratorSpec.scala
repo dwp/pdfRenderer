@@ -2,10 +2,11 @@ package generators
 
 import org.specs2.mutable._
 import data_sources.XmlDataSource
-import test_data.ClaimBuilder
-
+import test_data.{XMLData, ClaimBuilder}
 import java.io.File
 import scala.xml.Elem
+import com.itextpdf.text.pdf.parser.{PdfReaderContentParser, SimpleTextExtractionStrategy}
+
 
 
 /**
@@ -161,22 +162,36 @@ class PdfGeneratorSpec extends Specification {
       testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase9)
     }
 
-    /*
-      "Extract PDF" in {
-        val reader = new com.itextpdf.text.pdf.PdfReader("/Users/valtechuk/test.pdf")
-        val parser = new PdfReaderContentParser(reader)
+    "Extract PDF" in {
+      val pdfFileLocation = "/Users/valtechuk/extractPDF.pdf"
+      val xmlTestCase9 = ClaimBuilder.functionalTestCase9
+      val dataSource = new XmlDataSource(xmlTestCase9)
+      PdfGenerator(dataSource, pdfFileLocation).generateFrom()
+      val pdfFile = new File(pdfFileLocation)
+      pdfFile.exists() must beTrue
 
-        val content = for (i  <- 1 until reader.getNumberOfPages()) yield {
-          val strategy = parser.processContent(i, new SimpleTextExtractionStrategy())
-          strategy.getResultantText()
-        }
-        reader.close()
+      val reader = new com.itextpdf.text.pdf.PdfReader(pdfFileLocation)
+      val parser = new PdfReaderContentParser(reader)
 
-        val xml = ClaimBuilder.buildGoodClaim
-    println(content)
-        content.contains( "Title " + (xml \\ "DWPCATransaction" \\ "DWPCAClaim" \\ "Caree" \\ "Title").text ) must beTrue
+      val content: Seq[String] = for (i <- 1 to reader.getNumberOfPages()) yield {
+        val strategy = parser.processContent(i, new SimpleTextExtractionStrategy())
+
+        strategy.getResultantText()
       }
-    */
+      reader.close()
+
+      val xmlData = XMLData.functionalTestCase9(xmlTestCase9)
+      val totalContent = content.mkString("\n")
+      println(totalContent)
+      println("content.length: " + totalContent.length)
+
+      val iterator = xmlData.iterator
+
+      while (iterator.hasNext) {
+        val seqData = iterator.next()
+        totalContent.contains(seqData) must beTrue
+      }
+    }
   }
 }
 
