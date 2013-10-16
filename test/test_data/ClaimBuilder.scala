@@ -839,7 +839,7 @@ object ClaimBuilder {
           <Caree>
             <Surname>Caseone</Surname>
             <OtherNames>Test</OtherNames>
-            <Title>dame</Title>
+            <Title>Dame</Title>
             <DateOfBirth>1980-09-12</DateOfBirth>
             <NationalInsuranceNumber></NationalInsuranceNumber>
             <Address>
@@ -2062,7 +2062,7 @@ object ClaimBuilder {
           <Caree>
             <Surname>watson</Surname>
             <OtherNames>Cloe scott</OtherNames>
-            <Title>dame</Title>
+            <Title>Dame</Title>
             <DateOfBirth>1951-07-03</DateOfBirth>
             <NationalInsuranceNumber></NationalInsuranceNumber>
             <Address>
@@ -4163,7 +4163,7 @@ object ClaimBuilder {
           <Caree>
             <Surname>Caseone</Surname>
             <OtherNames>Test</OtherNames>
-            <Title>dame</Title>
+            <Title>Dame</Title>
             <DateOfBirth>1980-09-12</DateOfBirth>
             <NationalInsuranceNumber></NationalInsuranceNumber>
             <Address>
