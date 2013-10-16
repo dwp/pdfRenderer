@@ -2,9 +2,10 @@ package generators
 
 import org.specs2.mutable._
 import data_sources.XmlDataSource
-import test_data.ClaimBuilder
+import test_data.{XMLData, ClaimBuilder}
 
 import java.io.File
+import com.itextpdf.text.pdf.parser.{PdfReaderContentParser, SimpleTextExtractionStrategy}
 
 
 /**
@@ -190,22 +191,36 @@ class PdfGeneratorSpec extends Specification with Before {
       pdfFile.exists() must beTrue
     }
 
-    /*
-      "Extract PDF" in {
-        val reader = new com.itextpdf.text.pdf.PdfReader("/Users/valtechuk/test.pdf")
-        val parser = new PdfReaderContentParser(reader)
 
-        val content = for (i  <- 1 until reader.getNumberOfPages()) yield {
-          val strategy = parser.processContent(i, new SimpleTextExtractionStrategy())
-          strategy.getResultantText()
-        }
-        reader.close()
+    "Extract PDF" in {
+      val xmlTestCase9 = ClaimBuilder.functionalTestCase9
+      val dataSource = new XmlDataSource(xmlTestCase9)
+      PdfGenerator(dataSource).generateFrom()
+      val pdfFile = new File(PdfGenerator.pdfFileLocation)
+      pdfFile.exists() must beTrue
 
-        val xml = ClaimBuilder.buildGoodClaim
-    println(content)
-        content.contains( "Title " + (xml \\ "DWPCATransaction" \\ "DWPCAClaim" \\ "Caree" \\ "Title").text ) must beTrue
+      val reader = new com.itextpdf.text.pdf.PdfReader(PdfGenerator.pdfFileLocation)
+      val parser = new PdfReaderContentParser(reader)
+
+      val content: Seq[String] = for (i <- 1 to reader.getNumberOfPages()) yield {
+        val strategy = parser.processContent(i, new SimpleTextExtractionStrategy())
+
+        strategy.getResultantText()
       }
-    */
+      reader.close()
+
+      val xmlData = XMLData.functionalTestCase9(xmlTestCase9)
+      val totalContent = content.mkString("\n")
+      println(totalContent)
+      println("content.length: " + totalContent.length)
+
+      val iterator = xmlData.iterator
+
+      while (iterator.hasNext) {
+        val seqData = iterator.next()
+        totalContent.contains(seqData) must beTrue
+      }
+    }
   }
 }
 
