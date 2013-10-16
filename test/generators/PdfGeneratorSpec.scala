@@ -68,6 +68,38 @@ class PdfGeneratorSpec extends Specification with Before{
     pdfFile.exists() must beTrue
   }
 
+  "PdfGenerator should be handle functionalTestCase2 and return success"  should {
+    val xml = ClaimBuilder.functionalTestCase2
+    val dataSource = new XmlDataSource(xml)
+    val generator = PdfGenerator(dataSource)
+    val generatorResult = generator.generateFrom()
+    generatorResult must beAnInstanceOf[GenerationSuccess]
+  }
+
+  "PdfGenerator should create functionalTestCase2 PDF file" should {
+    val xml = ClaimBuilder.functionalTestCase2
+    val dataSource = new XmlDataSource(xml)
+    PdfGenerator(dataSource).generateFrom()
+    val pdfFile = new File(PdfGenerator.pdfFileLocation)
+    pdfFile.exists() must beTrue
+  }
+
+  "PdfGenerator should be handle functionalTestCase3 and return success"  should {
+    val xml = ClaimBuilder.functionalTestCase3
+    val dataSource = new XmlDataSource(xml)
+    val generator = PdfGenerator(dataSource)
+    val generatorResult = generator.generateFrom()
+    generatorResult must beAnInstanceOf[GenerationSuccess]
+  }
+
+  "PdfGenerator should create functionalTestCase3 PDF file" should {
+    val xml = ClaimBuilder.functionalTestCase3
+    val dataSource = new XmlDataSource(xml)
+    PdfGenerator(dataSource).generateFrom()
+    val pdfFile = new File(PdfGenerator.pdfFileLocation)
+    pdfFile.exists() must beTrue
+  }
+
        /*
   "Extract PDF" should {
     val reader = new com.itextpdf.text.pdf.PdfReader("/Users/valtechuk/test.pdf")
