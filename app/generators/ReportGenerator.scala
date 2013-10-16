@@ -14,7 +14,7 @@ import com.lowagie.text.pdf.PdfReader
 /**
  * Interface of the report generators.
  */
-abstract class ReportGenerator(source: ReportDataSource) {
+abstract class ReportGenerator(source: ReportDataSource, pdfFileLocation: String) {
 
 
   def generateFrom(): SuccessOrFailure = {
