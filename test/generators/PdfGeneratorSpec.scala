@@ -14,7 +14,9 @@ import com.itextpdf.text.pdf.parser.{PdfReaderContentParser, SimpleTextExtractio
  * @author Jorge Migueis
  */
 class PdfGeneratorSpec extends Specification {
+
   "PdfGenerator" should {
+
     def before(pdfFileLocation: String) = {
       val pdfFile = new File(pdfFileLocation)
       if (pdfFile.exists()) {
@@ -163,12 +165,8 @@ class PdfGeneratorSpec extends Specification {
     }
 
     "Extract PDF" in {
-      val pdfFileLocation = "/Users/valtechuk/extractPDF.pdf"
-      val xmlTestCase9 = ClaimBuilder.functionalTestCase9
-      val dataSource = new XmlDataSource(xmlTestCase9)
-      PdfGenerator(dataSource, pdfFileLocation).generateFrom()
-      val pdfFile = new File(pdfFileLocation)
-      pdfFile.exists() must beTrue
+      val pdfFileLocation = "/Users/valtechuk/functionalTestCase9_contentTestPDF.pdf"
+      testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase9)
 
       val reader = new com.itextpdf.text.pdf.PdfReader(pdfFileLocation)
       val parser = new PdfReaderContentParser(reader)
@@ -180,17 +178,10 @@ class PdfGeneratorSpec extends Specification {
       }
       reader.close()
 
-      val xmlData = XMLData.functionalTestCase9(xmlTestCase9)
+      val xmlData = XMLData.functionalTestCase9(ClaimBuilder.functionalTestCase9)
       val totalContent = content.mkString("\n")
-      println(totalContent)
-      println("content.length: " + totalContent.length)
 
-      val iterator = xmlData.iterator
-
-      while (iterator.hasNext) {
-        val seqData = iterator.next()
-        totalContent.contains(seqData) must beTrue
-      }
+      xmlData.forall(x => totalContent.contains(x) must beTrue)
     }
   }
 }
