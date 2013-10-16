@@ -11,16 +11,15 @@ import play.api.Logger
  *
  * @author Jorge Migueis
  */
-case class PdfGenerator(source: ReportDataSource) extends ReportGenerator(source) {
+case class PdfGenerator(source: ReportDataSource, pdfFileLocation: String) extends ReportGenerator(source, pdfFileLocation) {
   override protected def exportReportToFormat(print: JasperPrint): SuccessOrFailure = {
-    PdfGenerator.exportReportToFormat(print)
+    PdfGenerator.exportReportToFormat(print, pdfFileLocation)
   }
 }
 
 object PdfGenerator {
-  val pdfFileLocation = "/Users/valtechuk/test.pdf"
 
-  protected def exportReportToFormat(print: JasperPrint): SuccessOrFailure = {
+  protected def exportReportToFormat(print: JasperPrint, pdfFileLocation: String): SuccessOrFailure = {
     try {
       JasperExportManager.exportReportToPdfFile(print, pdfFileLocation)
       GenerationSuccess()
