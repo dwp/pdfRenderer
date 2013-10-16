@@ -31,26 +31,28 @@ class PdfGeneratorSpec extends Specification with Before{
   "PdfGenerator should be reject xml that does not contain DWPCAClaim or DWPCACircs"  should {
     val xml = ClaimBuilder.buildBadClaim
     val dataSource = new XmlDataSource(xml)
-    val generatorResult = PdfGenerator.generateFrom(dataSource)
+    val generator = PdfGenerator(dataSource)
+    val generatorResult = generator.generateFrom()
     generatorResult must beAnInstanceOf[GenerationFailure]
   }
 
   "PdfGenerator should be handle valid xml and return success"  should {
     val xml = ClaimBuilder.buildGoodClaim
     val dataSource = new XmlDataSource(xml)
-    val generatorResult = PdfGenerator.generateFrom(dataSource)
+    val generator = PdfGenerator(dataSource)
+    val generatorResult = generator.generateFrom()
     generatorResult must beAnInstanceOf[GenerationSuccess]
   }
 
   "PdfGenerator should create a PDF file" should {
     val xml = ClaimBuilder.buildGoodClaim
     val dataSource = new XmlDataSource(xml)
-    PdfGenerator.generateFrom(dataSource)
+    PdfGenerator(dataSource).generateFrom()
     val pdfFile = new File(PdfGenerator.pdfFileLocation)
     pdfFile.exists() must beTrue
   }
 
-/*
+       /*
   "Extract PDF" should {
     val reader = new com.itextpdf.text.pdf.PdfReader("/Users/valtechuk/test.pdf")
     val parser = new PdfReaderContentParser(reader)

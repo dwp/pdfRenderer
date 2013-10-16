@@ -7,7 +7,6 @@ import play.api.Logger
 import net.sf.jasperreports.engine.design.JasperDesign
 import net.sf.jasperreports.engine.util.{JRElementsVisitor, JRSaver}
 import java.util.StringTokenizer
-import scala.Predef.String
 import scala.xml.XML
 import com.lowagie.text.pdf.PdfReader
 
@@ -15,10 +14,10 @@ import com.lowagie.text.pdf.PdfReader
 /**
  * Interface of the report generators.
  */
-trait ReportGenerator {
+abstract class ReportGenerator(source: ReportDataSource) {
 
 
-  def generateFrom(source: ReportDataSource): SuccessOrFailure = {
+  def generateFrom(): SuccessOrFailure = {
 
     try {
       val jasperReportFilename = source.jasperReportFilenameMatcher()
@@ -33,6 +32,7 @@ trait ReportGenerator {
     }
     catch {
       case e: Throwable => {
+        e.printStackTrace()
         Logger.error(e.getMessage)
         GenerationFailure()
       }
