@@ -233,15 +233,15 @@ class PdfGeneratorSpec extends Specification {
       pdfFile.exists() must beTrue
     }
 
-
     "Extract PDF" in {
+      val pdfFileLocation = "/Users/valtechuk/extractPDF.pdf"
       val xmlTestCase9 = ClaimBuilder.functionalTestCase9
       val dataSource = new XmlDataSource(xmlTestCase9)
-      PdfGenerator(dataSource).generateFrom()
-      val pdfFile = new File(PdfGenerator.pdfFileLocation)
+      PdfGenerator(dataSource, pdfFileLocation).generateFrom()
+      val pdfFile = new File(pdfFileLocation)
       pdfFile.exists() must beTrue
 
-      val reader = new com.itextpdf.text.pdf.PdfReader(PdfGenerator.pdfFileLocation)
+      val reader = new com.itextpdf.text.pdf.PdfReader(pdfFileLocation)
       val parser = new PdfReaderContentParser(reader)
 
       val content: Seq[String] = for (i <- 1 to reader.getNumberOfPages()) yield {
