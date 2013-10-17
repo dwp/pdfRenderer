@@ -15,8 +15,8 @@
 	</background>
 	<detail>
 		<band height="15" splitType="Stretch">
-			<textField>
-				<reportElement uuid="02d690de-fac7-400b-8db9-8f01fd2b04bd" x="0" y="0" width="555" height="15"/>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="02d690de-fac7-400b-8db9-8f01fd2b04bd" x="0" y="0" width="555" height="15" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{Line}]]></textFieldExpression>
 			</textField>
