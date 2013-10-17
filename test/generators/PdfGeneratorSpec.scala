@@ -60,7 +60,7 @@ class PdfGeneratorSpec extends Specification {
     }
 
     "PdfGenerator should be reject xml that does not contain DWPCAClaim or DWPCACircs" in {
-      val pdfFileLocation = "/Users/valtechuk/goodClaim.pdf"
+      val pdfFileLocation = "goodClaimReject.pdf"
       before(pdfFileLocation)
       val xml = ClaimBuilder.buildBadClaim
       val dataSource = new XmlDataSource(xml)
@@ -70,7 +70,7 @@ class PdfGeneratorSpec extends Specification {
     }
 
     "PdfGenerator should be handle valid xml and return success" in {
-      val pdfFileLocation = "/Users/valtechuk/goodClaim.pdf"
+      val pdfFileLocation = "goodClaimSuccess.pdf"
       before(pdfFileLocation)
       val xml = ClaimBuilder.buildGoodClaim
       val dataSource = new XmlDataSource(xml)
@@ -81,7 +81,7 @@ class PdfGeneratorSpec extends Specification {
 
 
     "PdfGenerator should create a PDF file" in {
-      val pdfFileLocation = "/Users/valtechuk/badClaim.pdf"
+      val pdfFileLocation = "goodClaimCreate.pdf"
       before(pdfFileLocation)
       val xml = ClaimBuilder.buildGoodClaim
       val dataSource = new XmlDataSource(xml)
