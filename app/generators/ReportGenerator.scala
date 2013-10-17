@@ -55,9 +55,9 @@ abstract class ReportGenerator(source: ReportDataSource, pdfFileLocation: String
 
     val jasperDesign: JasperDesign = JRXmlLoader.load(jrxmlFilename)
     val jasperReport = JasperCompileManager.compileReport(jasperDesign)
-    if (!new java.io.File(jasperFilename).exists) {
+    //if (!new java.io.File(jasperFilename).exists) {
       JRSaver.saveObject(jasperReport, jasperFilename)
-    }
+    //}
     //Compile sub reports
     JRElementsVisitor.visitReport(jasperReport, new RecursiveVisitor() {
       override def visitSubreport(subreport: JRSubreport): Unit = {
