@@ -3,7 +3,7 @@ import Keys._
 
 object ApplicationBuild extends Build {
 
-  val appName = "s2"
+  val appName = "pdfService"
   val appVersion = "1.0-SNAPSHOT"
 
   var repo: Seq[Project.Setting[_]] = Seq(resolvers += "Carers repo" at "http://build.3cbeta.co.uk:8080/artifactory/repo/")
