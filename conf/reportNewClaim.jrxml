@@ -85,14 +85,14 @@
 				<reportElement uuid="75f637d8-0398-4c9a-a01e-46db988c9bf3" x="0" y="0" width="555" height="20" backcolor="#666666"/>
 			</rectangle>
 			<staticText>
-				<reportElement uuid="eb8201ef-3319-4f71-ba4a-434848230663" x="2" y="0" width="78" height="20" forecolor="#FFFFFF"/>
+				<reportElement uuid="eb8201ef-3319-4f71-ba4a-434848230663" x="2" y="0" width="90" height="20" forecolor="#FFFFFF"/>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Transaction:]]></text>
 			</staticText>
 			<textField>
-				<reportElement uuid="97b2efa8-c290-4b0e-b5d1-0ddc084d45e0" x="81" y="0" width="126" height="20" forecolor="#FFFFFF"/>
+				<reportElement uuid="97b2efa8-c290-4b0e-b5d1-0ddc084d45e0" x="93" y="0" width="126" height="20" forecolor="#FFFFFF"/>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
