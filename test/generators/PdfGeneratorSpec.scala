@@ -8,7 +8,6 @@ import scala.xml.Elem
 import com.itextpdf.text.pdf.parser.{PdfReaderContentParser, SimpleTextExtractionStrategy}
 
 
-
 /**
  * Test PdfGenerator with the implicits defined in package object data_sources.
  * @author Jorge Migueis
@@ -41,6 +40,23 @@ class PdfGeneratorSpec extends Specification {
       generator.generateFrom()
       val pdfFile = new File(pdfFileLocation)
       pdfFile.exists() must beTrue
+    }
+
+    def getPDFContent(pdfFileLocation: String): String = {
+
+      val reader = new com.itextpdf.text.pdf.PdfReader(pdfFileLocation)
+      val parser = new PdfReaderContentParser(reader)
+
+
+      val content: Seq[String] = for (i <- 1 to reader.getNumberOfPages()) yield {
+        val strategy = parser.processContent(i, new SimpleTextExtractionStrategy())
+
+        strategy.getResultantText()
+      }
+      reader.close()
+
+      val totalContent = content.mkString("\n").toLowerCase
+      totalContent
     }
 
     "PdfGenerator should be reject xml that does not contain DWPCAClaim or DWPCACircs" in {
@@ -164,28 +180,20 @@ class PdfGeneratorSpec extends Specification {
       testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase9)
     }
 
-    "Extract PDF" in {
+    "Extract PDF for functionalTestCase9" in {
       val pdfFileLocation = "/Users/valtechuk/functionalTestCase9_contentTestPDF.pdf"
       testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase9)
 
-      val reader = new com.itextpdf.text.pdf.PdfReader(pdfFileLocation)
-      val parser = new PdfReaderContentParser(reader)
-
-      val content: Seq[String] = for (i <- 1 to reader.getNumberOfPages()) yield {
-        val strategy = parser.processContent(i, new SimpleTextExtractionStrategy())
-
-        strategy.getResultantText()
-      }
-      reader.close()
-
+      val totalContent = getPDFContent(pdfFileLocation)
       val xmlData = XMLData.functionalTestCase9(ClaimBuilder.functionalTestCase9)
-      val totalContent = content.mkString("\n").toLowerCase
 
-      println("TotalContent "+totalContent)
+      println("TotalContent " + totalContent)
 
       xmlData.forall(x => {
         val found = totalContent.contains(x.toLowerCase)
-        if(!found) {println("Cannot find: "+x.toLowerCase)}
+        if (!found) {
+          println("Cannot find: " + x.toLowerCase)
+        }
         found must beTrue
       })
     }
