@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="90378acd-33ad-413e-ad03-6f54642cad18">
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="40"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<style name="table">
 		<box>
@@ -198,12 +198,12 @@
 	<pageFooter>
 		<band height="20" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="dc7a0fce-ab52-46eb-ab11-ed9d6e023e1a" x="2" y="0" width="61" height="20"/>
+				<reportElement uuid="dc7a0fce-ab52-46eb-ab11-ed9d6e023e1a" x="2" y="0" width="66" height="20"/>
 				<textElement verticalAlignment="Middle"/>
 				<text><![CDATA[Transaction:]]></text>
 			</staticText>
 			<textField>
-				<reportElement uuid="0133ea8a-e3b4-4d1b-ae6b-918fecfcdd07" x="63" y="0" width="96" height="20"/>
+				<reportElement uuid="0133ea8a-e3b4-4d1b-ae6b-918fecfcdd07" x="68" y="0" width="96" height="20"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{TransactionId}]]></textFieldExpression>
 			</textField>
