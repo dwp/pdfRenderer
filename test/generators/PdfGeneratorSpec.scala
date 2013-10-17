@@ -59,7 +59,7 @@ class PdfGeneratorSpec extends Specification {
       totalContent
     }
 
-    "PdfGenerator should be reject xml that does not contain DWPCAClaim or DWPCACircs" in {
+    "be reject xml that does not contain DWPCAClaim or DWPCACircs" in {
       val pdfFileLocation = "goodClaimReject.pdf"
       before(pdfFileLocation)
       val xml = ClaimBuilder.buildBadClaim
@@ -69,7 +69,7 @@ class PdfGeneratorSpec extends Specification {
       generatorResult must beAnInstanceOf[GenerationFailure]
     }
 
-    "PdfGenerator should be handle valid xml and return success" in {
+    "be handle valid xml and return success" in {
       val pdfFileLocation = "goodClaimSuccess.pdf"
       before(pdfFileLocation)
       val xml = ClaimBuilder.buildGoodClaim
@@ -80,7 +80,7 @@ class PdfGeneratorSpec extends Specification {
     }
 
 
-    "PdfGenerator should create a PDF file" in {
+    "create a PDF file" in {
       val pdfFileLocation = "goodClaimCreate.pdf"
       before(pdfFileLocation)
       val xml = ClaimBuilder.buildGoodClaim
@@ -90,97 +90,97 @@ class PdfGeneratorSpec extends Specification {
       pdfFile.exists() must beTrue
     }
 
-    "PdfGenerator should be handle functionalTestCase1 and return success" in {
+    "be handle functionalTestCase1 and return success" in {
       val pdfFileLocation = "functionalTestCase1_testGeneratorResultIsSuccess.pdf"
       testGeneratorResultIsSuccess(pdfFileLocation, ClaimBuilder.functionalTestCase1)
     }
 
-    "PdfGenerator should create functionalTestCase1 PDF file" in {
+    "create functionalTestCase1 PDF file" in {
       val pdfFileLocation = "functionalTestCase1_testOutputFileExists.pdf"
       testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase1)
     }
 
-    "PdfGenerator should be handle functionalTestCase2 and return success" in {
+    "be handle functionalTestCase2 and return success" in {
       val pdfFileLocation = "functionalTestCase2_testGeneratorResultIsSuccess.pdf"
       testGeneratorResultIsSuccess(pdfFileLocation, ClaimBuilder.functionalTestCase2)
     }
 
-    "PdfGenerator should create functionalTestCase2 PDF file" in {
+    "create functionalTestCase2 PDF file" in {
       val pdfFileLocation = "functionalTestCase2_testOutputFileExists.pdf"
       testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase2)
     }
 
-    "PdfGenerator should be handle functionalTestCase3 and return success" in {
+    "be handle functionalTestCase3 and return success" in {
       val pdfFileLocation = "functionalTestCase3_testGeneratorResultIsSuccess.pdf"
       testGeneratorResultIsSuccess(pdfFileLocation, ClaimBuilder.functionalTestCase3)
     }
 
-    "PdfGenerator should create functionalTestCase3 PDF file" in {
+    "create functionalTestCase3 PDF file" in {
       val pdfFileLocation = "functionalTestCase3_testOutputFileExists.pdf"
       testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase3)
     }
 
-    "PdfGenerator should be handle functionalTestCase4 and return success" in {
+    "be handle functionalTestCase4 and return success" in {
       val pdfFileLocation = "functionalTestCase4_testGeneratorResultIsSuccess.pdf"
       testGeneratorResultIsSuccess(pdfFileLocation, ClaimBuilder.functionalTestCase4)
     }
 
-    "PdfGenerator should create functionalTestCase4 PDF file" in {
+    "create functionalTestCase4 PDF file" in {
       val pdfFileLocation = "functionalTestCase4_testOutputFileExists.pdf"
       testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase4)
     }
 
-    "PdfGenerator should be handle functionalTestCase5 and return success" in {
+    "be handle functionalTestCase5 and return success" in {
       val pdfFileLocation = "functionalTestCase5_testGeneratorResultIsSuccess.pdf"
       testGeneratorResultIsSuccess(pdfFileLocation, ClaimBuilder.functionalTestCase5)
     }
 
-    "PdfGenerator should create functionalTestCase5 PDF file" in {
+    "create functionalTestCase5 PDF file" in {
       val pdfFileLocation = "functionalTestCase5_testOutputFileExists.pdf"
       testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase5)
     }
 
-    "PdfGenerator should be handle functionalTestCase6 and return success" in {
+    "be handle functionalTestCase6 and return success" in {
       val pdfFileLocation = "functionalTestCase6_testGeneratorResultIsSuccess.pdf"
       testGeneratorResultIsSuccess(pdfFileLocation, ClaimBuilder.functionalTestCase6)
     }
 
-    "PdfGenerator should create functionalTestCase6 PDF file" in {
+    "create functionalTestCase6 PDF file" in {
       val pdfFileLocation = "functionalTestCase6_testOutputFileExists.pdf"
       testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase6)
     }
 
-    "PdfGenerator should be handle functionalTestCase7 and return success" in {
+    "be handle functionalTestCase7 and return success" in {
       val pdfFileLocation = "functionalTestCase7_testGeneratorResultIsSuccess.pdf"
       testGeneratorResultIsSuccess(pdfFileLocation, ClaimBuilder.functionalTestCase7)
     }
 
-    "PdfGenerator should create functionalTestCase7 PDF file" in {
+    "create functionalTestCase7 PDF file" in {
       val pdfFileLocation = "functionalTestCase7_testOutputFileExists.pdf"
       testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase7)
     }
 
-    "PdfGenerator should be handle functionalTestCase8 and return success" in {
+    "be handle functionalTestCase8 and return success" in {
       val pdfFileLocation = "functionalTestCase8_testGeneratorResultIsSuccess.pdf"
       testGeneratorResultIsSuccess(pdfFileLocation, ClaimBuilder.functionalTestCase8)
     }
 
-    "PdfGenerator should create functionalTestCase8 PDF file" in {
+    "create functionalTestCase8 PDF file" in {
       val pdfFileLocation = "functionalTestCase8_testOutputFileExists.pdf"
       testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase8)
     }
 
-    "PdfGenerator should be handle functionalTestCase9 and return success" in {
+    "be handle functionalTestCase9 and return success" in {
       val pdfFileLocation = "functionalTestCase9_testGeneratorResultIsSuccess.pdf"
       testGeneratorResultIsSuccess(pdfFileLocation, ClaimBuilder.functionalTestCase9)
     }
 
-    "PdfGenerator should create functionalTestCase9 PDF file" in {
+    "create functionalTestCase9 PDF file" in {
       val pdfFileLocation = "functionalTestCase9_testOutputFileExists.pdf"
       testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase9)
     }
 
-    "Extract PDF for functionalTestCase9" in {
+    "extract PDF for functionalTestCase9 and match contents" in {
       val pdfFileLocation = "functionalTestCase9_contentTestPDF.pdf"
       testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase9)
 
