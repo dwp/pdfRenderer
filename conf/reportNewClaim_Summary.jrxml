@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="2.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="240"/>
+	<property name="ireport.y" value="807"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
@@ -180,7 +180,7 @@
 				</graphicElement>
 			</rectangle>
 			<staticText>
-				<reportElement uuid="0862ee85-65ff-482c-a03e-6c62d78f2833" x="2" y="0" width="158" height="18" forecolor="#FFFFFF"/>
+				<reportElement uuid="0862ee85-65ff-482c-a03e-6c62d78f2833" x="2" y="0" width="550" height="18" forecolor="#FFFFFF"/>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -281,7 +281,7 @@
 				</graphicElement>
 			</rectangle>
 			<staticText>
-				<reportElement uuid="f152a887-ec97-4593-8af7-db0c754ba16b" x="2" y="19" width="180" height="18" forecolor="#FFFFFF"/>
+				<reportElement uuid="f152a887-ec97-4593-8af7-db0c754ba16b" x="2" y="19" width="550" height="18" forecolor="#FFFFFF"/>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -404,7 +404,7 @@
 				</graphicElement>
 			</rectangle>
 			<staticText>
-				<reportElement uuid="25f47f4a-712c-47a8-b86c-c45a585cb2eb" x="2" y="0" width="180" height="18" forecolor="#FFFFFF"/>
+				<reportElement uuid="25f47f4a-712c-47a8-b86c-c45a585cb2eb" x="2" y="0" width="550" height="18" forecolor="#FFFFFF"/>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -503,7 +503,7 @@
 				</graphicElement>
 			</rectangle>
 			<staticText>
-				<reportElement uuid="933986e3-9239-450a-8b58-ea0bf55d46aa" x="2" y="0" width="180" height="18" forecolor="#FFFFFF"/>
+				<reportElement uuid="933986e3-9239-450a-8b58-ea0bf55d46aa" x="2" y="0" width="550" height="18" forecolor="#FFFFFF"/>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -538,7 +538,7 @@
 				</graphicElement>
 			</rectangle>
 			<staticText>
-				<reportElement uuid="c5d75703-3d97-4707-9c08-94dcb0204ca3" x="2" y="0" width="180" height="18" forecolor="#FFFFFF"/>
+				<reportElement uuid="c5d75703-3d97-4707-9c08-94dcb0204ca3" x="2" y="0" width="550" height="18" forecolor="#FFFFFF"/>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
