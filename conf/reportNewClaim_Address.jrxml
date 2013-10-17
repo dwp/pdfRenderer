@@ -15,6 +15,11 @@
 	</field>
 	<detail>
 		<band height="15" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="5bf1e7ac-4166-4043-967d-614bcb5338fc" x="0" y="0" width="350" height="15"/>
+				<textElement/>
+				<text><![CDATA[Street / Town / City]]></text>
+			</staticText>
 			<subreport>
 				<reportElement uuid="1e3e4155-43bc-444e-b78b-c05e69c14019" x="355" y="0" width="197" height="15"/>
 				<subreportParameter name="XPATH_ADDRESS">
@@ -23,11 +28,6 @@
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource) $P{REPORT_DATA_SOURCE}).subDataSource("//Line")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Street.jasper"]]></subreportExpression>
 			</subreport>
-			<staticText>
-				<reportElement uuid="5bf1e7ac-4166-4043-967d-614bcb5338fc" x="0" y="0" width="350" height="15"/>
-				<textElement/>
-				<text><![CDATA[Street / Town / City]]></text>
-			</staticText>
 		</band>
 		<band height="15" splitType="Prevent">
 			<printWhenExpression><![CDATA[$F{PostCode} != null]]></printWhenExpression>
