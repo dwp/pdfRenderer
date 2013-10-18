@@ -51,7 +51,7 @@ class PdfGeneratorCommonSpec extends Specification {
       val pdfFile = new File(pdfFileLocation)
       pdfFile.exists() must beTrue
     }
-
+/*
     "write files in parallel" in {
       (1 to 1000).toArray.par.forall(x => {
         val pdfFileLocation = "parallelTestFile" + x + ".pdf"
@@ -62,8 +62,7 @@ class PdfGeneratorCommonSpec extends Specification {
         val pdfFile = new File(pdfFileLocation)
         pdfFile.exists()
       }) must beTrue
-
-    }
+    }*/
   }
 }
 
