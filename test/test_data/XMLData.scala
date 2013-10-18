@@ -42,7 +42,11 @@ object XMLData {
       "Other surname or maiden name " + fields.claimantOtherSurnames.text
     )
 
-    functionalTestCaseMandatoryFields(xml) ++ aboutYouTheCarer
+    val careBreaks = Seq(
+      fields.careBreak
+    )
+println("**** " + careBreaks)
+    functionalTestCaseMandatoryFields(xml) ++ aboutYouTheCarer// ++ careBreaks
   }
 
   def functionalTestCase5(xml: Elem) = {

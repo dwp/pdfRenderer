@@ -45,4 +45,13 @@ case class XMLDataFields(xml:Elem) {
 
   val partnerOtherSurnames = (rootPath \\ "Partner" \\ "OtherSurnames")
 
+  val careBreak = {
+    (rootPath \\ "Caree" \\ "CareBreak").
+      map(x => {
+      "From date and time " + (x \\ "StartDateTime").text +
+      "\nTo date and time "  + (x \\ "EndDateTime").text
+    }).
+      filterNot(x => x.isEmpty).
+      mkString("\n")
+  }
 }
