@@ -53,16 +53,14 @@ class PdfContentMatchingSpec extends Specification {
       totalContent
     }
 
-    "extract PDF for functionalTestCase8 and match contents" in {
-      val pdfFileLocation = "functionalTestCase8_contentTestPDF.pdf"
-      testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase8)
-
+    def testContentMatches(pdfFileLocation: String, testCaseXml: Elem, generateTestData: (Elem => Seq[String])) = {
+      testOutputFileExists(pdfFileLocation, testCaseXml)
       val totalContent = getPDFContent(pdfFileLocation)
-      val xmlData = XMLData.functionalTestCase8(ClaimBuilder.functionalTestCase8)
+      val testData = generateTestData(testCaseXml)
 
       println("TotalContent " + totalContent)
 
-      xmlData.forall(x => {
+      testData.forall(x => {
         val found = totalContent.contains(x.toLowerCase)
         if (!found) {
           println("Cannot find: " + x.toLowerCase)
@@ -70,23 +68,15 @@ class PdfContentMatchingSpec extends Specification {
         found must beTrue
       })
     }
+    
+    "extract PDF for functionalTestCase8 and match contents" in {
+      val pdfFileLocation = "functionalTestCase8_contentTestPDF.pdf"
+      testContentMatches(pdfFileLocation, ClaimBuilder.functionalTestCase8, XMLData.functionalTestCase8)
+    }
 
     "extract PDF for functionalTestCase9 and match contents" in {
       val pdfFileLocation = "functionalTestCase9_contentTestPDF.pdf"
-      testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase9)
-
-      val totalContent = getPDFContent(pdfFileLocation)
-      val xmlData = XMLData.functionalTestCase9(ClaimBuilder.functionalTestCase9)
-
-      println("TotalContent " + totalContent)
-
-      xmlData.forall(x => {
-        val found = totalContent.contains(x.toLowerCase)
-        if (!found) {
-          println("Cannot find: " + x.toLowerCase)
-        }
-        found must beTrue
-      })
+      testContentMatches(pdfFileLocation, ClaimBuilder.functionalTestCase9, XMLData.functionalTestCase9)
     }
   }
 }
