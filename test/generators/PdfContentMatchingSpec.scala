@@ -118,7 +118,6 @@ class PdfContentMatchingSpec extends Specification {
       testContentMatches(pdfFileLocation, ClaimBuilder.functionalTestCase5, XMLData.functionalTestCase5, foundMustBeTrue)
     }
 
-
     "extract PDF for functionalTestCase6 and match contents" in {
       val pdfFileLocation = "functionalTestCase6_contentTestPDF.pdf"
       testContentMatches(pdfFileLocation, ClaimBuilder.functionalTestCase6, XMLData.functionalTestCase6, foundMustBeTrue)

@@ -11,6 +11,8 @@ case class XMLDataFields(xml:Elem) {
 
   val title = (rootPath \\ "Claimant" \\ "Title")
 
+  val claimantOtherSurnames = (rootPath \\ "Claimant" \\ "OtherSurnames")
+
   val surName = (rootPath \\ "Claimant" \\ "Surname")
 
   val nationalInsuranceNumber = (rootPath \\ "Claimant" \\ "NationalInsuranceNumber")
@@ -32,5 +34,15 @@ case class XMLDataFields(xml:Elem) {
   val addressCaree = (rootPath \\ "Caree" \\ "Address" \\ "Line").map(x => x.text).filterNot(x => x.isEmpty).mkString("\n")
 
   val postCodeCaree = (rootPath \\ "Caree" \\ "Address" \\ "PostCode")
+
+  val parnerNINO = (rootPath \\ "Partner" \\ "NationalInsuranceNumber")
+
+  val partnerSurname = (rootPath \\ "Partner" \\ "Surname")
+
+  val partnerOtherNames = (rootPath \\ "Partner" \\ "OtherNames")
+
+  val partnerTitle = (rootPath \\ "Partner" \\ "Title")
+
+  val partnerOtherSurnames = (rootPath \\ "Partner" \\ "OtherSurnames")
 
 }
