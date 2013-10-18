@@ -53,7 +53,7 @@ class PdfGeneratorCommonSpec extends Specification {
     }
 
     "write files in parallel" in {
-      (1 to 256).toArray.par.forall(x => {
+      (1 to 1000).toArray.par.forall(x => {
         val pdfFileLocation = "parallelTestFile" + x + ".pdf"
         val xml = ClaimBuilder.functionalTestCase9
         before(pdfFileLocation)
