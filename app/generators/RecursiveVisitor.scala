@@ -2,7 +2,6 @@ package generators
 
 import net.sf.jasperreports.engine._
 import net.sf.jasperreports.crosstabs.JRCrosstab
-import java.util.StringTokenizer
 
 
 abstract class RecursiveVisitor extends JRVisitor {

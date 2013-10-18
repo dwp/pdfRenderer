@@ -40,7 +40,7 @@ object XMLData {
 
   def functionalTestCase5(xml: Elem) = {
     val fields = XMLDataFields(xml)
-    functionalTestCaseMandatoryFields(xml) ++ aboutYourPartner(fields)  ++ careBreaks(fields)
+    functionalTestCaseMandatoryFields(xml) ++ aboutYourPartner(fields) ++ careBreaks(fields)
   }
 
   def functionalTestCase6(xml: Elem) = {

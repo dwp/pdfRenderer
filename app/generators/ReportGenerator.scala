@@ -7,8 +7,6 @@ import play.api.Logger
 import net.sf.jasperreports.engine.design.JasperDesign
 import net.sf.jasperreports.engine.util.{JRElementsVisitor, JRSaver}
 import java.util.StringTokenizer
-import scala.xml.XML
-import com.lowagie.text.pdf.PdfReader
 
 
 /**
@@ -56,7 +54,7 @@ abstract class ReportGenerator(source: ReportDataSource, pdfFileLocation: String
     val jasperDesign: JasperDesign = JRXmlLoader.load(jrxmlFilename)
     val jasperReport = JasperCompileManager.compileReport(jasperDesign)
     //if (!new java.io.File(jasperFilename).exists) {
-      JRSaver.saveObject(jasperReport, jasperFilename)
+    JRSaver.saveObject(jasperReport, jasperFilename)
     //}
     //Compile sub reports
     JRElementsVisitor.visitReport(jasperReport, new RecursiveVisitor() {

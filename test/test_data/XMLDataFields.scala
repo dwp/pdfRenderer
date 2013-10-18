@@ -3,7 +3,7 @@ package test_data
 import scala.xml.Elem
 
 
-case class XMLDataFields(xml:Elem) {
+case class XMLDataFields(xml: Elem) {
 
   val rootPath = xml \\ "DWPCATransaction" \\ "DWPCAClaim"
 
@@ -48,7 +48,7 @@ case class XMLDataFields(xml:Elem) {
   val careBreak: Seq[String] = {
     (rootPath \\ "Caree" \\ "CareBreak").
       map(x => {
-      val fromDate =  Seq("From date and time " + (x \\ "StartDateTime").text)
+      val fromDate = Seq("From date and time " + (x \\ "StartDateTime").text)
       val toDate = (x \\ "EndDateTime").text.isEmpty match {
         case true => Seq()
         case false => Seq("To date and time " + (x \\ "EndDateTime").text)
@@ -58,7 +58,7 @@ case class XMLDataFields(xml:Elem) {
       (fromDate ++ toDate).filterNot(x => x.isEmpty)
 
     }).
-    filterNot(x => x.isEmpty).flatten
+      filterNot(x => x.isEmpty).flatten
 
   }
 }

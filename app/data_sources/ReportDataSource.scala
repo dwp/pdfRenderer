@@ -8,8 +8,8 @@ import net.sf.jasperreports.engine.JRDataSource
  */
 trait ReportDataSource {
 
-  def convertToJRDataSource():JRDataSource
+  def convertToJRDataSource(): JRDataSource
 
-  def jasperReportFilenameMatcher():String
+  def jasperReportFilenameMatcher(): String
 
 }
