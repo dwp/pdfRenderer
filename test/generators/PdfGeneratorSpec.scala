@@ -51,7 +51,10 @@ class PdfGeneratorSpec extends Specification {
       val content: Seq[String] = for (i <- 1 to reader.getNumberOfPages()) yield {
         val strategy = parser.processContent(i, new SimpleTextExtractionStrategy())
 
-        strategy.getResultantText()
+        val result = strategy.getResultantText()
+        println()
+        println(result )
+        result
       }
       reader.close()
 
@@ -178,24 +181,6 @@ class PdfGeneratorSpec extends Specification {
     "create functionalTestCase9 PDF file" in {
       val pdfFileLocation = "functionalTestCase9_testOutputFileExists.pdf"
       testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase9)
-    }
-
-    "extract PDF for functionalTestCase9 and match contents" in {
-      val pdfFileLocation = "functionalTestCase9_contentTestPDF.pdf"
-      testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase9)
-
-      val totalContent = getPDFContent(pdfFileLocation)
-      val xmlData = XMLData.functionalTestCase9(ClaimBuilder.functionalTestCase9)
-
-      println("TotalContent " + totalContent)
-
-      xmlData.forall(x => {
-        val found = totalContent.contains(x.toLowerCase)
-        if (!found) {
-          println("Cannot find: " + x.toLowerCase)
-        }
-        found must beTrue
-      })
     }
   }
 }
