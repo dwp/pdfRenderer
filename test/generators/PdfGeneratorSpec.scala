@@ -2,7 +2,7 @@ package generators
 
 import org.specs2.mutable._
 import data_sources.XmlDataSource
-import test_data.{XMLData, ClaimBuilder}
+import test_data.ClaimBuilder
 import java.io.File
 import scala.xml.Elem
 import com.itextpdf.text.pdf.parser.{PdfReaderContentParser, SimpleTextExtractionStrategy}
@@ -53,7 +53,7 @@ class PdfGeneratorSpec extends Specification {
 
         val result = strategy.getResultantText()
         println()
-        println(result )
+        println(result)
         result
       }
       reader.close()

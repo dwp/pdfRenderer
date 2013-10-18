@@ -61,7 +61,7 @@ object XMLData {
       "Transaction: " + fields.transactionPath.text + " " + fields.title.text + " " + fields.surName.text + " " + fields.nationalInsuranceNumber.text,
       "Summary",
       "About you - the carer",
-      "National Insurance Number" + fields.nationalInsuranceNumber.text,
+      "National Insurance Number " + fields.nationalInsuranceNumber.text,
       "Last name " + fields.surName.text,
       "First name(s) " + fields.firstName.text,
       "Title " + fields.title.text,
