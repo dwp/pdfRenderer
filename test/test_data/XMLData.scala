@@ -25,7 +25,10 @@ object XMLData {
 
   def functionalTestCase3(xml: Elem) = {
     val fields = XMLDataFields(xml)
-    functionalTestCaseMandatoryFields(xml)
+    Seq(
+      "Other surname or maiden name " + fields.claimantOtherSurnames.text,
+      "Other surname or maiden name " + fields.partnerOtherSurnames.text
+    ) ++ functionalTestCaseMandatoryFields(xml) ++ aboutYourPartner(fields) ++ careBreaks(fields)
   }
 
   def functionalTestCase4(xml: Elem): Seq[String] = {
