@@ -1,8 +1,6 @@
 package generators
 
-
-trait SuccessOrFailure {
-}
+trait SuccessOrFailure
 
 case class GenerationSuccess() extends SuccessOrFailure
 

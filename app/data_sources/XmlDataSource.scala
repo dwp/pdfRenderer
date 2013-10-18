@@ -5,6 +5,10 @@ import scala.xml.Elem
 import java.io.ByteArrayInputStream
 import net.sf.jasperreports.engine.data.JRXmlDataSource
 
+/**
+ * Receives XML and converts to JRXmlDataSource
+ * @param source
+ */
 case class XmlDataSource(source: Elem) extends ReportDataSource {
   val claimElement = source \\ "DWPCATransaction" \\ "DWPCAClaim"
   val claimJasperTemplate = "reportNewClaim"

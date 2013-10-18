@@ -3,7 +3,9 @@ package generators
 import net.sf.jasperreports.engine._
 import net.sf.jasperreports.crosstabs.JRCrosstab
 
-
+/**
+ * Interface for compiling .jasper reports by recursively reading and compiling subreports.
+ */
 abstract class RecursiveVisitor extends JRVisitor {
   def visitBreak(breakElement: JRBreak) = {}
 

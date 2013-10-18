@@ -6,7 +6,7 @@ import play.api.Logger
 
 /**
  * Generates a PDF from a DataSource.
- * It reads the compiled report template, generate a JasperPrint and returns a PDF (an array of bytes).
+ * It reads the compiled report template, generate a JasperPrint and writes to a file.
  *
  * @author Jorge Migueis
  */
