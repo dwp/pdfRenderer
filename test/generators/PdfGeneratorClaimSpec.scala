@@ -5,16 +5,15 @@ import data_sources.XmlDataSource
 import test_data.ClaimBuilder
 import java.io.File
 import scala.xml.Elem
-import com.itextpdf.text.pdf.parser.{PdfReaderContentParser, SimpleTextExtractionStrategy}
 
 
 /**
  * Test PdfGenerator with the implicits defined in package object data_sources.
  * @author Jorge Migueis
  */
-class PdfGeneratorSpec extends Specification {
+class PdfGeneratorClaimSpec extends Specification {
 
-  "PdfGenerator" should {
+  "PdfGeneratorClaimSpec" should {
 
     def before(pdfFileLocation: String) = {
       val pdfFile = new File(pdfFileLocation)
@@ -38,57 +37,6 @@ class PdfGeneratorSpec extends Specification {
     def testOutputFileExists(pdfFileLocation: String, xml: Elem) = {
       val generator = getPdfGenerator(pdfFileLocation, xml)
       generator.generateFrom()
-      val pdfFile = new File(pdfFileLocation)
-      pdfFile.exists() must beTrue
-    }
-
-    def getPDFContent(pdfFileLocation: String): String = {
-
-      val reader = new com.itextpdf.text.pdf.PdfReader(pdfFileLocation)
-      val parser = new PdfReaderContentParser(reader)
-
-
-      val content: Seq[String] = for (i <- 1 to reader.getNumberOfPages) yield {
-        val strategy = parser.processContent(i, new SimpleTextExtractionStrategy())
-
-        val result = strategy.getResultantText
-        println()
-        println(result)
-        result
-      }
-      reader.close()
-
-      val totalContent = content.mkString("\n").toLowerCase
-      totalContent
-    }
-
-    "be reject xml that does not contain DWPCAClaim or DWPCACircs" in {
-      val pdfFileLocation = "goodClaimReject.pdf"
-      before(pdfFileLocation)
-      val xml = ClaimBuilder.badClaim
-      val dataSource = new XmlDataSource(xml)
-      val generator = PdfGenerator(dataSource, pdfFileLocation)
-      val generatorResult = generator.generateFrom()
-      generatorResult must beAnInstanceOf[GenerationFailure]
-    }
-
-    "be handle valid xml and return success" in {
-      val pdfFileLocation = "goodClaimSuccess.pdf"
-      before(pdfFileLocation)
-      val xml = ClaimBuilder.goodClaim
-      val dataSource = new XmlDataSource(xml)
-      val generator = PdfGenerator(dataSource, pdfFileLocation)
-      val generatorResult = generator.generateFrom()
-      generatorResult must beAnInstanceOf[GenerationSuccess]
-    }
-
-
-    "create a PDF file" in {
-      val pdfFileLocation = "goodClaimCreate.pdf"
-      before(pdfFileLocation)
-      val xml = ClaimBuilder.goodClaim
-      val dataSource = new XmlDataSource(xml)
-      PdfGenerator(dataSource, pdfFileLocation).generateFrom()
       val pdfFile = new File(pdfFileLocation)
       pdfFile.exists() must beTrue
     }
