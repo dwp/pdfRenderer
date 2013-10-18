@@ -45,8 +45,8 @@ object XMLData {
     val careBreaks = Seq(
       fields.careBreak
     )
-println("**** " + careBreaks)
-    functionalTestCaseMandatoryFields(xml) ++ aboutYouTheCarer// ++ careBreaks
+
+    functionalTestCaseMandatoryFields(xml) ++ aboutYouTheCarer ++ careBreaks
   }
 
   def functionalTestCase5(xml: Elem) = {
