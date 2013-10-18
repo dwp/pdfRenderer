@@ -22,12 +22,6 @@ class PdfGeneratorCommonSpec extends Specification {
       }
     }
 
-    def getPdfGenerator(pdfFileLocation: String, xml: Elem) = {
-      before(pdfFileLocation)
-      val dataSource = new XmlDataSource(xml)
-      PdfGenerator(dataSource, pdfFileLocation)
-    }
-
     "be reject xml that does not contain DWPCAClaim or DWPCACircs" in {
       val pdfFileLocation = "goodClaimReject.pdf"
       before(pdfFileLocation)
@@ -56,6 +50,19 @@ class PdfGeneratorCommonSpec extends Specification {
       PdfGenerator(dataSource, pdfFileLocation).generateFrom()
       val pdfFile = new File(pdfFileLocation)
       pdfFile.exists() must beTrue
+    }
+
+    "write files in parallel" in {
+      (1 to 256).toArray.par.forall(x => {
+        val pdfFileLocation = "parallelTestFile" + x + ".pdf"
+        val xml = ClaimBuilder.functionalTestCase9
+        before(pdfFileLocation)
+        val dataSource = new XmlDataSource(xml)
+        PdfGenerator(dataSource, pdfFileLocation).generateFrom()
+        val pdfFile = new File(pdfFileLocation)
+        pdfFile.exists()
+      }) must beTrue
+
     }
   }
 }

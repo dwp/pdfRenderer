@@ -16,6 +16,7 @@ case class XmlDataSource(source: Elem) extends ReportDataSource {
   val circsJasperTemplate = "reportNewCircs"
 
 
+  // Warning: Return value should be created once for each pdf, do not re-use.
   def convertToJRDataSource(): JRDataSource = {
     new JRXmlDataSource(new ByteArrayInputStream(source.toString().getBytes("UTF-8")))
   }
