@@ -1,4 +1,5 @@
 import scala.xml.Elem
+import scala.language.implicitConversions
 
 /**
  * TODO write description
