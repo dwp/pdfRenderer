@@ -57,7 +57,8 @@ class PdfContentMatchingSpec extends Specification {
       testData.forall(x => {
         val found = totalContent.contains(x.toLowerCase)
         if (!found) {
-          println("Cannot find: " + x.toLowerCase)
+          println("*** Cannot find: " + x.toLowerCase)
+          println("*** End ***")
         }
         found
       })
@@ -85,8 +86,6 @@ class PdfContentMatchingSpec extends Specification {
 
       matchFunction(testData, totalContent) must beTrue
     }
-
-
 
     "extract PDF for badClaim fails to match contents" in {
       val pdfFileLocation = "badClaim_contentTestPDF.pdf"
