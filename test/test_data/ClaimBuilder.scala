@@ -5,7 +5,7 @@ import scala.xml.Elem
 
 object ClaimBuilder {
 
-  def buildGoodClaim: Elem = {
+  def goodClaim: Elem = {
     <DWPBody xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns="http://www.govtalk.gov.uk/dwp/carers-allowance"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://www.govtalk.gov.uk/dwp/carers-allowance file:/Users/jmi/Temp/CarersAllowance_Schema.xsd">
@@ -793,7 +793,7 @@ object ClaimBuilder {
     </DWPBody>
   }
 
-  def buildBadClaim: Elem = {
+  def badClaim: Elem = {
     <DWPBody xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns="http://www.govtalk.gov.uk/dwp/carers-allowance"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://www.govtalk.gov.uk/dwp/carers-allowance file:/Users/jmi/Temp/CarersAllowance_Schema.xsd">

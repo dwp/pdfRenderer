@@ -4,6 +4,12 @@ import scala.xml.Elem
 
 
 object XMLData {
+  def madeUpField(xml: Elem) = {
+    Seq(
+      "I am an invalid field that should never appear in the pdf"
+    )
+  }
+
   def functionalTestCase1(xml: Elem) = {
     val fields = XMLDataFields(xml)
     functionalTestCaseMandatoryFields(xml)

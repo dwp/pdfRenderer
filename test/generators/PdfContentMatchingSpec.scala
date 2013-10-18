@@ -53,30 +53,54 @@ class PdfContentMatchingSpec extends Specification {
       totalContent
     }
 
-    def testContentMatches(pdfFileLocation: String, testCaseXml: Elem, generateTestData: (Elem => Seq[String])) = {
+    def foundMustBeTrue(testData: Seq[String], totalContent: String) = {
+      testData.forall(x => {
+        val found = totalContent.contains(x.toLowerCase)
+        if (!found) {
+          println("Cannot find: " + x.toLowerCase)
+        }
+        found
+      })
+    }
+
+    def foundMustBeFalse(testData: Seq[String], totalContent: String) = {
+      testData.forall(x => {
+        val found = totalContent.contains(x.toLowerCase)
+        if (found) {
+          println("Should not have found: " + x.toLowerCase)
+        }
+        !found
+      })
+    }
+
+    def testContentMatches(pdfFileLocation: String,
+                           testCaseXml: Elem,
+                           generateTestData: (Elem => Seq[String]),
+                           matchFunction: ((Seq[String], String) => Boolean)) = {
       testOutputFileExists(pdfFileLocation, testCaseXml)
       val totalContent = getPDFContent(pdfFileLocation)
       val testData = generateTestData(testCaseXml)
 
       println("TotalContent " + totalContent)
 
-      testData.forall(x => {
-        val found = totalContent.contains(x.toLowerCase)
-        if (!found) {
-          println("Cannot find: " + x.toLowerCase)
-        }
-        found must beTrue
-      })
+      matchFunction(testData, totalContent) must beTrue
     }
-    
+
+
+
+    "extract PDF for badClaim fails to match contents" in {
+      val pdfFileLocation = "badClaim_contentTestPDF.pdf"
+      testContentMatches(pdfFileLocation, ClaimBuilder.functionalTestCase9, XMLData.madeUpField, foundMustBeFalse)
+    }
+
     "extract PDF for functionalTestCase8 and match contents" in {
       val pdfFileLocation = "functionalTestCase8_contentTestPDF.pdf"
-      testContentMatches(pdfFileLocation, ClaimBuilder.functionalTestCase8, XMLData.functionalTestCase8)
+      testContentMatches(pdfFileLocation, ClaimBuilder.functionalTestCase8, XMLData.functionalTestCase8, foundMustBeTrue)
     }
 
     "extract PDF for functionalTestCase9 and match contents" in {
       val pdfFileLocation = "functionalTestCase9_contentTestPDF.pdf"
-      testContentMatches(pdfFileLocation, ClaimBuilder.functionalTestCase9, XMLData.functionalTestCase9)
+      testContentMatches(pdfFileLocation, ClaimBuilder.functionalTestCase9, XMLData.functionalTestCase9, foundMustBeTrue)
     }
   }
 }
