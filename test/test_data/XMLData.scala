@@ -4,10 +4,17 @@ import scala.xml.Elem
 
 
 object XMLData {
-
-
+  def functionalTestCase8(xml:Elem) = {
+    val fields = XMLDataFields(xml)
+    functionalTestCaseMandatoryFields(xml)
+  }
 
   def functionalTestCase9(xml:Elem) = {
+    val fields = XMLDataFields(xml)
+    functionalTestCaseMandatoryFields(xml)
+  }
+
+  def functionalTestCaseMandatoryFields(xml:Elem) = {
      val fields = XMLDataFields(xml)
      Seq (
        "Transaction: "+fields.transactionPath.text+" "+fields.title.text + " "+fields.surName.text+" "+fields.nationalInsuranceNumber.text,

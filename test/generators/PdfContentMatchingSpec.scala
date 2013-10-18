@@ -52,7 +52,7 @@ class PdfContentMatchingSpec extends Specification {
       val totalContent = content.mkString("\n").toLowerCase
       totalContent
     }
-/*
+
     "extract PDF for functionalTestCase8 and match contents" in {
       val pdfFileLocation = "functionalTestCase8_contentTestPDF.pdf"
       testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase8)
@@ -69,7 +69,7 @@ class PdfContentMatchingSpec extends Specification {
         }
         found must beTrue
       })
-    }*/
+    }
 
     "extract PDF for functionalTestCase9 and match contents" in {
       val pdfFileLocation = "functionalTestCase9_contentTestPDF.pdf"
