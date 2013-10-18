@@ -17,18 +17,10 @@ object XMLData {
 
   def functionalTestCase2(xml: Elem) = {
     val fields = XMLDataFields(xml)
-    val aboutYouTheCarer = Seq(
-      "Other surname or maiden name " + fields.claimantOtherSurnames.text
-    )
-    val aboutYourPartner = Seq(
-      "National Insurance Number " + fields.parnerNINO.text,
-      "Last name " + fields.partnerSurname.text,
-      "First name(s) " + fields.partnerOtherNames.text,
-      "Title " + fields.partnerTitle.text,
+    Seq(
+      "Other surname or maiden name " + fields.claimantOtherSurnames.text,
       "Other surname or maiden name " + fields.partnerOtherSurnames.text
-    )
-
-    functionalTestCaseMandatoryFields(xml) ++ aboutYouTheCarer ++ aboutYourPartner
+    ) ++ functionalTestCaseMandatoryFields(xml) ++ aboutYourPartner(fields)
   }
 
   def functionalTestCase3(xml: Elem) = {
@@ -38,20 +30,14 @@ object XMLData {
 
   def functionalTestCase4(xml: Elem): Seq[String] = {
     val fields = XMLDataFields(xml)
-    val aboutYouTheCarer = Seq(
+    Seq(
       "Other surname or maiden name " + fields.claimantOtherSurnames.text
-    )
-
-    val careBreaks = Seq(
-      fields.careBreak
-    )
-
-    functionalTestCaseMandatoryFields(xml) ++ aboutYouTheCarer ++ careBreaks
+    ) ++ functionalTestCaseMandatoryFields(xml) ++ careBreaks(fields)
   }
 
   def functionalTestCase5(xml: Elem) = {
     val fields = XMLDataFields(xml)
-    functionalTestCaseMandatoryFields(xml)
+    functionalTestCaseMandatoryFields(xml) ++ aboutYourPartner(fields)  ++ careBreaks(fields)
   }
 
   def functionalTestCase6(xml: Elem) = {
@@ -61,7 +47,7 @@ object XMLData {
 
   def functionalTestCase7(xml: Elem) = {
     val fields = XMLDataFields(xml)
-    functionalTestCaseMandatoryFields(xml)
+    functionalTestCaseMandatoryFields(xml) ++ aboutYourPartner(fields) ++ careBreaks(fields)
   }
 
   def functionalTestCase8(xml: Elem) = {
@@ -115,4 +101,14 @@ object XMLData {
       "Transaction: " + fields.transactionPath.text + " " + "Claim received: " + fields.dateClaimReceived.text
     )
   }
+
+  def aboutYourPartner(fields: XMLDataFields) = Seq(
+    "National Insurance Number " + fields.parnerNINO.text,
+    "Last name " + fields.partnerSurname.text,
+    "First name(s) " + fields.partnerOtherNames.text,
+    "Title " + fields.partnerTitle.text
+  )
+
+  def careBreaks(fields: XMLDataFields) = fields.careBreak
+
 }
