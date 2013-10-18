@@ -61,10 +61,10 @@ abstract class ReportGenerator(source: ReportDataSource, pdfFileLocation: String
     //Compile sub reports
     JRElementsVisitor.visitReport(jasperReport, new RecursiveVisitor() {
       override def visitSubreport(subreport: JRSubreport): Unit = {
-        val expression = subreport.getExpression().getText().replace(".jasper", "")
+        val expression = subreport.getExpression.getText.replace(".jasper", "")
         val st = new StringTokenizer(expression, "\"/")
         var subReportName: String = null
-        while (st.hasMoreTokens()) {
+        while (st.hasMoreTokens) {
           subReportName = st.nextToken()
         }
         //Sometimes the same subreport can be used multiple times, but

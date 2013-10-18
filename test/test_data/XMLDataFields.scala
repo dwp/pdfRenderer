@@ -7,43 +7,43 @@ case class XMLDataFields(xml:Elem) {
 
   val rootPath = xml \\ "DWPCATransaction" \\ "DWPCAClaim"
 
-  val transactionPath = (xml \\ "DWPCATransaction" \\ "TransactionId")
+  val transactionPath = xml \\ "DWPCATransaction" \\ "TransactionId"
 
-  val title = (rootPath \\ "Claimant" \\ "Title")
+  val title = rootPath \\ "Claimant" \\ "Title"
 
-  val claimantOtherSurnames = (rootPath \\ "Claimant" \\ "OtherSurnames")
+  val claimantOtherSurnames = rootPath \\ "Claimant" \\ "OtherSurnames"
 
-  val surName = (rootPath \\ "Claimant" \\ "Surname")
+  val surName = rootPath \\ "Claimant" \\ "Surname"
 
-  val nationalInsuranceNumber = (rootPath \\ "Claimant" \\ "NationalInsuranceNumber")
+  val nationalInsuranceNumber = rootPath \\ "Claimant" \\ "NationalInsuranceNumber"
 
-  val firstName = (rootPath \\ "Claimant" \\ "OtherNames")
+  val firstName = rootPath \\ "Claimant" \\ "OtherNames"
 
-  val careeLastName = (rootPath \\ "Caree" \\ "Surname")
+  val careeLastName = rootPath \\ "Caree" \\ "Surname"
 
-  val careeFirstName = (rootPath \\ "Caree" \\ "OtherNames")
+  val careeFirstName = rootPath \\ "Caree" \\ "OtherNames"
 
-  val careeTitle = (rootPath \\ "Caree" \\ "Title")
+  val careeTitle = rootPath \\ "Caree" \\ "Title"
 
-  val dateClaimReceived = (xml \\ "DWPCATransaction" \\ "DateTimeGenerated")
+  val dateClaimReceived = xml \\ "DWPCATransaction" \\ "DateTimeGenerated"
 
   val addressCarer = (rootPath \\ "Claimant" \\ "Address" \\ "Line").map(x => x.text).filterNot(x => x.isEmpty).mkString("\n")
 
-  val postCodeCarer = (rootPath \\ "Claimant" \\ "Address" \\ "PostCode")
+  val postCodeCarer = rootPath \\ "Claimant" \\ "Address" \\ "PostCode"
 
   val addressCaree = (rootPath \\ "Caree" \\ "Address" \\ "Line").map(x => x.text).filterNot(x => x.isEmpty).mkString("\n")
 
-  val postCodeCaree = (rootPath \\ "Caree" \\ "Address" \\ "PostCode")
+  val postCodeCaree = rootPath \\ "Caree" \\ "Address" \\ "PostCode"
 
-  val parnerNINO = (rootPath \\ "Partner" \\ "NationalInsuranceNumber")
+  val parnerNINO = rootPath \\ "Partner" \\ "NationalInsuranceNumber"
 
-  val partnerSurname = (rootPath \\ "Partner" \\ "Surname")
+  val partnerSurname = rootPath \\ "Partner" \\ "Surname"
 
-  val partnerOtherNames = (rootPath \\ "Partner" \\ "OtherNames")
+  val partnerOtherNames = rootPath \\ "Partner" \\ "OtherNames"
 
-  val partnerTitle = (rootPath \\ "Partner" \\ "Title")
+  val partnerTitle = rootPath \\ "Partner" \\ "Title"
 
-  val partnerOtherSurnames = (rootPath \\ "Partner" \\ "OtherSurnames")
+  val partnerOtherSurnames = rootPath \\ "Partner" \\ "OtherSurnames"
 
   val careBreak: Seq[String] = {
     (rootPath \\ "Caree" \\ "CareBreak").

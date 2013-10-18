@@ -48,10 +48,10 @@ class PdfGeneratorSpec extends Specification {
       val parser = new PdfReaderContentParser(reader)
 
 
-      val content: Seq[String] = for (i <- 1 to reader.getNumberOfPages()) yield {
+      val content: Seq[String] = for (i <- 1 to reader.getNumberOfPages) yield {
         val strategy = parser.processContent(i, new SimpleTextExtractionStrategy())
 
-        val result = strategy.getResultantText()
+        val result = strategy.getResultantText
         println()
         println(result)
         result
