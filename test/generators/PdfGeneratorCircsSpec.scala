@@ -15,21 +15,18 @@ import data_sources.XmlDataSource
 class PdfGeneratorCircsSpec extends Specification {
 
   "PdfGeneratorCircsSpec" should {
-    def getPdfGenerator(pdfFileLocation: String, xml: Elem) = {
+    def deleteAndGeneratePDF(pdfFileLocation: String, xml: Elem) = {
       deletePdfFile(pdfFileLocation)
-      val dataSource = new XmlDataSource(xml)
-      PdfGenerator(dataSource, pdfFileLocation)
+      generatePDF(pdfFileLocation, xml)
     }
 
     def testGeneratorResultIsSuccess(pdfFileLocation: String, xml: Elem) = {
-      val generator = getPdfGenerator(pdfFileLocation, xml)
-      val generatorResult = generator.generateFrom()
+      val generatorResult = deleteAndGeneratePDF(pdfFileLocation, xml)
       generatorResult must beAnInstanceOf[GenerationSuccess]
     }
 
     def testOutputFileExists(pdfFileLocation: String, xml: Elem) = {
-      val generator = getPdfGenerator(pdfFileLocation, xml)
-      generator.generateFrom()
+      deleteAndGeneratePDF(pdfFileLocation, xml)
       val pdfFile = new File(pdfFileLocation)
       pdfFile.exists() must beTrue
     }

@@ -17,8 +17,7 @@ class PdfGeneratorCommonSpec extends Specification {
       val pdfFileLocation = "goodClaimReject.pdf"
       val xml = ClaimBuilder.badClaim
       val dataSource = new XmlDataSource(xml)
-      val generator = PdfGenerator(dataSource, pdfFileLocation)
-      val generatorResult = generator.generateFrom()
+      val generatorResult = PdfGenerator.generateFrom(dataSource, pdfFileLocation)
       generatorResult must beAnInstanceOf[GenerationFailure]
       deletePdfFile(pdfFileLocation)
     }
@@ -27,8 +26,7 @@ class PdfGeneratorCommonSpec extends Specification {
       val pdfFileLocation = "goodClaimSuccess.pdf"
       val xml = ClaimBuilder.goodClaim
       val dataSource = new XmlDataSource(xml)
-      val generator = PdfGenerator(dataSource, pdfFileLocation)
-      val generatorResult = generator.generateFrom()
+      val generatorResult = PdfGenerator.generateFrom(dataSource, pdfFileLocation)
       generatorResult must beAnInstanceOf[GenerationSuccess]
       deletePdfFile(pdfFileLocation)
     }
@@ -37,7 +35,7 @@ class PdfGeneratorCommonSpec extends Specification {
       val pdfFileLocation = "goodClaimCreate.pdf"
       val xml = ClaimBuilder.goodClaim
       val dataSource = new XmlDataSource(xml)
-      PdfGenerator(dataSource, pdfFileLocation).generateFrom()
+      PdfGenerator.generateFrom(dataSource, pdfFileLocation)
       val pdfFile = new File(pdfFileLocation)
       pdfFile.exists() must beTrue
       deletePdfFile(pdfFileLocation)
@@ -50,7 +48,7 @@ class PdfGeneratorCommonSpec extends Specification {
         val pdfFileLocation = "parallelTestFile" + x + ".pdf"
         val xml = ClaimBuilder.functionalTestCase9
         val dataSource = new XmlDataSource(xml)
-        PdfGenerator(dataSource, pdfFileLocation).generateFrom()
+        PdfGenerator.generateFrom(dataSource, pdfFileLocation)
         val pdfFile = new File(pdfFileLocation)
         pdfFile.exists()
       }) must beTrue

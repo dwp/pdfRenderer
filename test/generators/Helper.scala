@@ -1,6 +1,8 @@
 package generators
 
 import java.io.File
+import scala.xml.Elem
+import data_sources.XmlDataSource
 
 /**
  * Created with IntelliJ IDEA.
@@ -16,4 +18,11 @@ object Helper {
       pdfFile.delete()
     }
   }
+
+  def generatePDF (pdfFileLocation: String, xml: Elem) = {
+    val dataSource = new XmlDataSource(xml)
+    PdfGenerator.generateFrom(dataSource, pdfFileLocation)
+  }
+
+
 }

@@ -12,10 +12,10 @@ import java.util.StringTokenizer
 /**
  * Interface of the report generators.
  */
-abstract class ReportGenerator(source: ReportDataSource, pdfFileLocation: String) {
+trait ReportGenerator {
 
 
-  def generateFrom(): SuccessOrFailure = {
+  def generateFrom(source: ReportDataSource, fileLocation: String): SuccessOrFailure = {
 
     try {
       val jasperReportFilename = source.jasperReportFilenameMatcher()
@@ -25,7 +25,7 @@ abstract class ReportGenerator(source: ReportDataSource, pdfFileLocation: String
       val jasperReport = createJasperReport(jasperReportFilename)
       val dataSource = source.convertToJRDataSource()
       val jasperPrint = JasperFillManager.fillReport(jasperReport, null, dataSource)
-      exportReportToFormat(jasperPrint)
+      exportReportToFormat(jasperPrint, fileLocation)
       GenerationSuccess()
     }
     catch {
@@ -44,7 +44,7 @@ abstract class ReportGenerator(source: ReportDataSource, pdfFileLocation: String
     jasperReport
   }
 
-  protected def exportReportToFormat(print: JasperPrint): SuccessOrFailure
+  protected def exportReportToFormat(print: JasperPrint, fileLocation:String): SuccessOrFailure
 
 
   def compileReportsRecursively(fileName: String): Unit = {

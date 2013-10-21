@@ -15,21 +15,19 @@ import generators.Helper._
 class PdfGeneratorClaimSpec extends Specification {
 
   "PdfGeneratorClaimSpec" should {
-    def getPdfGenerator(pdfFileLocation: String, xml: Elem) = {
-      val dataSource = new XmlDataSource(xml)
-      PdfGenerator(dataSource, pdfFileLocation)
+    def deleteAndGeneratePDF(pdfFileLocation: String, xml: Elem) = {
+      deletePdfFile(pdfFileLocation)
+      generatePDF(pdfFileLocation, xml)
     }
 
     def testGeneratorResultIsSuccess(pdfFileLocation: String, xml: Elem) = {
-      val generator = getPdfGenerator(pdfFileLocation, xml)
-      val generatorResult = generator.generateFrom()
+      val generatorResult = deleteAndGeneratePDF(pdfFileLocation, xml)
       generatorResult must beAnInstanceOf[GenerationSuccess]
       deletePdfFile(pdfFileLocation)
     }
 
     def testOutputFileExists(pdfFileLocation: String, xml: Elem) = {
-      val generator = getPdfGenerator(pdfFileLocation, xml)
-      generator.generateFrom()
+      deleteAndGeneratePDF(pdfFileLocation, xml)
       val pdfFile = new File(pdfFileLocation)
       pdfFile.exists() must beTrue
       deletePdfFile(pdfFileLocation)
