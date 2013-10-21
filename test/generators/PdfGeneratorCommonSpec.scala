@@ -42,7 +42,7 @@ class PdfGeneratorCommonSpec extends Specification {
     }
 
     "write files in parallel" in {
-      val max = 500
+      val max = 10
 
       (1 to max).toArray.par.forall(x => {
         val pdfFileLocation = "parallelTestFile" + x + ".pdf"

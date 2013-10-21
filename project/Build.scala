@@ -18,7 +18,8 @@ object ApplicationBuild extends Build {
     "org.codehaus.groovy" % "groovy-all" % "2.0.1",
     "xalan" % "xalan" % "2.7.1",
     "com.google.inject" % "guice" % "4.0-beta",
-    "com.tzavellas" % "sse-guice" % "0.7.1"
+    "com.tzavellas" % "sse-guice" % "0.7.1",
+    "com.dwp.carers" %% "carerscommon" % "0.9"
   )
 
   val sampleStringTask = System.getProperty("sbt.carers.keystore")
