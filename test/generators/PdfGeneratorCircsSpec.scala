@@ -1,10 +1,11 @@
 package generators
 
 import org.specs2.mutable._
-import data_sources.XmlDataSource
 import test_data.CircsBuilder
 import java.io.File
 import scala.xml.Elem
+import generators.Helper._
+import data_sources.XmlDataSource
 
 
 /**
@@ -14,16 +15,8 @@ import scala.xml.Elem
 class PdfGeneratorCircsSpec extends Specification {
 
   "PdfGeneratorCircsSpec" should {
-
-    def before(pdfFileLocation: String) = {
-      val pdfFile = new File(pdfFileLocation)
-      if (pdfFile.exists()) {
-        pdfFile.delete()
-      }
-    }
-
     def getPdfGenerator(pdfFileLocation: String, xml: Elem) = {
-      before(pdfFileLocation)
+      deletePdfFile(pdfFileLocation)
       val dataSource = new XmlDataSource(xml)
       PdfGenerator(dataSource, pdfFileLocation)
     }

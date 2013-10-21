@@ -4,7 +4,7 @@ import org.specs2.mutable._
 import data_sources.XmlDataSource
 import test_data.ClaimBuilder
 import java.io.File
-import scala.xml.Elem
+import generators.Helper._
 
 
 /**
@@ -12,57 +12,54 @@ import scala.xml.Elem
  * @author Jorge Migueis
  */
 class PdfGeneratorCommonSpec extends Specification {
-
   "PdfGeneratorCommonSpec" should {
-
-    def before(pdfFileLocation: String) = {
-      val pdfFile = new File(pdfFileLocation)
-      if (pdfFile.exists()) {
-        pdfFile.delete()
-      }
-    }
-
     "be reject xml that does not contain DWPCAClaim or DWPCACircs" in {
       val pdfFileLocation = "goodClaimReject.pdf"
-      before(pdfFileLocation)
       val xml = ClaimBuilder.badClaim
       val dataSource = new XmlDataSource(xml)
       val generator = PdfGenerator(dataSource, pdfFileLocation)
       val generatorResult = generator.generateFrom()
       generatorResult must beAnInstanceOf[GenerationFailure]
+      deletePdfFile(pdfFileLocation)
     }
 
     "be handle valid xml and return success" in {
       val pdfFileLocation = "goodClaimSuccess.pdf"
-      before(pdfFileLocation)
       val xml = ClaimBuilder.goodClaim
       val dataSource = new XmlDataSource(xml)
       val generator = PdfGenerator(dataSource, pdfFileLocation)
       val generatorResult = generator.generateFrom()
       generatorResult must beAnInstanceOf[GenerationSuccess]
+      deletePdfFile(pdfFileLocation)
     }
 
     "create a PDF file" in {
       val pdfFileLocation = "goodClaimCreate.pdf"
-      before(pdfFileLocation)
       val xml = ClaimBuilder.goodClaim
       val dataSource = new XmlDataSource(xml)
       PdfGenerator(dataSource, pdfFileLocation).generateFrom()
       val pdfFile = new File(pdfFileLocation)
       pdfFile.exists() must beTrue
+      deletePdfFile(pdfFileLocation)
     }
-/*
+
     "write files in parallel" in {
-      (1 to 1000).toArray.par.forall(x => {
+      val max = 10
+
+      (1 to max).toArray.par.forall(x => {
         val pdfFileLocation = "parallelTestFile" + x + ".pdf"
         val xml = ClaimBuilder.functionalTestCase9
-        before(pdfFileLocation)
         val dataSource = new XmlDataSource(xml)
         PdfGenerator(dataSource, pdfFileLocation).generateFrom()
         val pdfFile = new File(pdfFileLocation)
         pdfFile.exists()
       }) must beTrue
-    }*/
+
+      (1 to max).foreach(x => {
+        val pdfFileLocation = "parallelTestFile" + x + ".pdf"
+        deletePdfFile(pdfFileLocation)
+      })
+    }
   }
 }
 

@@ -6,6 +6,7 @@ import test_data.{XMLData, ClaimBuilder}
 import java.io.File
 import scala.xml.Elem
 import com.itextpdf.text.pdf.parser.{PdfReaderContentParser, SimpleTextExtractionStrategy}
+import generators.Helper._
 
 
 /**
@@ -15,16 +16,8 @@ import com.itextpdf.text.pdf.parser.{PdfReaderContentParser, SimpleTextExtractio
 class PdfContentMatchingSpec extends Specification {
 
   "PdfContentMatching" should {
-
-    def before(pdfFileLocation: String) = {
-      val pdfFile = new File(pdfFileLocation)
-      if (pdfFile.exists()) {
-        pdfFile.delete()
-      }
-    }
-
     def getPdfGenerator(pdfFileLocation: String, xml: Elem) = {
-      before(pdfFileLocation)
+      deletePdfFile(pdfFileLocation)
       val dataSource = new XmlDataSource(xml)
       PdfGenerator(dataSource, pdfFileLocation)
     }

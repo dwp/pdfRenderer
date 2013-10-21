@@ -5,6 +5,7 @@ import data_sources.XmlDataSource
 import test_data.ClaimBuilder
 import java.io.File
 import scala.xml.Elem
+import generators.Helper._
 
 
 /**
@@ -14,16 +15,8 @@ import scala.xml.Elem
 class PdfGeneratorClaimSpec extends Specification {
 
   "PdfGeneratorClaimSpec" should {
-
-    def before(pdfFileLocation: String) = {
-      val pdfFile = new File(pdfFileLocation)
-      if (pdfFile.exists()) {
-        pdfFile.delete()
-      }
-    }
-
     def getPdfGenerator(pdfFileLocation: String, xml: Elem) = {
-      before(pdfFileLocation)
+      deletePdfFile(pdfFileLocation)
       val dataSource = new XmlDataSource(xml)
       PdfGenerator(dataSource, pdfFileLocation)
     }
