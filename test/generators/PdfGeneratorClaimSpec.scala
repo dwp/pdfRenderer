@@ -16,7 +16,6 @@ class PdfGeneratorClaimSpec extends Specification {
 
   "PdfGeneratorClaimSpec" should {
     def getPdfGenerator(pdfFileLocation: String, xml: Elem) = {
-      deletePdfFile(pdfFileLocation)
       val dataSource = new XmlDataSource(xml)
       PdfGenerator(dataSource, pdfFileLocation)
     }
@@ -25,6 +24,7 @@ class PdfGeneratorClaimSpec extends Specification {
       val generator = getPdfGenerator(pdfFileLocation, xml)
       val generatorResult = generator.generateFrom()
       generatorResult must beAnInstanceOf[GenerationSuccess]
+      deletePdfFile(pdfFileLocation)
     }
 
     def testOutputFileExists(pdfFileLocation: String, xml: Elem) = {
@@ -32,6 +32,7 @@ class PdfGeneratorClaimSpec extends Specification {
       generator.generateFrom()
       val pdfFile = new File(pdfFileLocation)
       pdfFile.exists() must beTrue
+      deletePdfFile(pdfFileLocation)
     }
 
     "be handle functionalTestCase1 and return success" in {

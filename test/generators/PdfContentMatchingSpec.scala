@@ -78,6 +78,7 @@ class PdfContentMatchingSpec extends Specification {
       println("TotalContent " + totalContent)
 
       matchFunction(testData, totalContent) must beTrue
+      deletePdfFile(pdfFileLocation)
     }
 
     "extract PDF for badClaim fails to match contents" in {

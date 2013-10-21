@@ -57,7 +57,7 @@ abstract class ReportGenerator(source: ReportDataSource, pdfFileLocation: String
     JRSaver.saveObject(jasperReport, jasperFilename)
     }
     //Compile sub reports
-    JRElementsVisitor.visitReport(jasperReport, new RecursiveVisitor() {
+    JRElementsVisitor.visitReport(jasperReport, new ReportCompilerVisitor() {
       override def visitSubreport(subreport: JRSubreport): Unit = {
         val expression = subreport.getExpression.getText.replace(".jasper", "")
         val st = new StringTokenizer(expression, "\"/")
