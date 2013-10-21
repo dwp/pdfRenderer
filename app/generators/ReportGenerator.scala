@@ -57,7 +57,7 @@ trait ReportGenerator {
     JRSaver.saveObject(jasperReport, jasperFilename)
     }
     //Compile sub reports
-    JRElementsVisitor.visitReport(jasperReport, new ReportCompilerVisitor() {
+    JRElementsVisitor.visitReport(jasperReport, new ReportCompiler() {
       override def visitSubreport(subreport: JRSubreport): Unit = {
         val expression = subreport.getExpression.getText.replace(".jasper", "")
         val st = new StringTokenizer(expression, "\"/")
