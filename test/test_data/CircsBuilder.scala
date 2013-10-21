@@ -6,7 +6,7 @@ object CircsBuilder {
   def functionalTestCase1: Elem = {
     <DWPBody xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns="http://www.govtalk.gov.uk/dwp/carers-allowance"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:schemaLocation="http://www.govtalk.gov.uk/dwp/carers-allowance file:/Users/jmi/Temp/CarersAllowance_Schema.xsd">
+             xsi:schemaLocation="http://www.govtalk.gov.uk/dwp/carers-allowance file:CarersAllowance_Schema.xsd">
       <Version>0.1</Version>
       <DWPCATransaction>
         <TransactionId>NFM33DB</TransactionId>

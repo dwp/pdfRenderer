@@ -23,7 +23,7 @@ object ClaimBuilder {
             <OtherNames>Test Middle</OtherNames>
             <OtherSurnames>Smithson</OtherSurnames>
             <Title>Mr</Title>
-            <DateOfBitrh>01-01-1931</DateOfBitrh>
+            <DateOfBirth>01-01-1931</DateOfBirth>
             <NationalInsuranceNumber>JB486278C</NationalInsuranceNumber>
             <Address>
               <Line>3 Preston Road</Line>
@@ -44,7 +44,7 @@ object ClaimBuilder {
             <OtherNames>Cloe Scott</OtherNames>
             <OtherSurnames>Watson</OtherSurnames>
             <Title>Dame</Title>
-            <DateOfBitrh>03-7-1953</DateOfBitrh>
+            <DateOfBirth>03-7-1953</DateOfBirth>
             <NationalInsuranceNumber>BA234567A</NationalInsuranceNumber>
             <Address>
               <Line>3a Preston Road</Line>
@@ -594,7 +594,7 @@ object ClaimBuilder {
             <OtherNames>Test Middle</OtherNames>
             <OtherSurnames>Dixon</OtherSurnames>
             <Title>Mrs</Title>
-            <DateOfBitrh>1937-09-28</DateOfBitrh>
+            <DateOfBirth>1937-09-28</DateOfBirth>
             <NationalInsuranceNumber>BA234567A</NationalInsuranceNumber>
             <!-- <Address>
                     <Line>Line4</Line>

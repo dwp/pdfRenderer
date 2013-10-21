@@ -146,10 +146,10 @@
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/ClaimantBenefits/StatePension/Answer]]></fieldDescription>
 	</field>
 	<field name="ClaimantDateOfBirth" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/DateOfBitrh]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/DateOfBirth]]></fieldDescription>
 	</field>
 	<field name="CareeDateOfBirth" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/DateOfBitrh]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/DateOfBirth]]></fieldDescription>
 	</field>
 	<background>
 		<band splitType="Stretch"/>
