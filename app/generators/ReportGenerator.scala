@@ -30,7 +30,7 @@ trait ReportGenerator {
     }
     catch {
       case e: Throwable => {
-        e.printStackTrace()
+        //e.printStackTrace()
         Logger.error(e.getMessage)
         GenerationFailure()
       }
