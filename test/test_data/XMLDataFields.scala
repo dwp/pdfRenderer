@@ -48,8 +48,8 @@ case class XMLDataFields(xml: Elem) {
   val careBreak: Seq[String] = {
     (rootPath \\ "Caree" \\ "CareBreak").
       map(x => {
-      val fromDate = Seq("From date and time " + (x \\ "StartDateTime").text)
-      val toDate = (x \\ "EndDateTime").text.isEmpty match {
+      val fromDate: Seq[String] = Seq("From date and time " + (x \\ "StartDateTime").text)
+      val toDate: Seq[String] = (x \\ "EndDateTime").text.isEmpty match {
         case true => Seq()
         case false => Seq("To date and time " + (x \\ "EndDateTime").text)
       }
