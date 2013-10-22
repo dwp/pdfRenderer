@@ -44,7 +44,7 @@ object ClaimBuilder {
             <OtherNames>Cloe Scott</OtherNames>
             <OtherSurnames>Watson</OtherSurnames>
             <Title>Dame</Title>
-            <DateOfBirth>03-7-1953</DateOfBirth>
+            <DateOfBirth>03-07-1953</DateOfBirth>
             <NationalInsuranceNumber>BA234567A</NationalInsuranceNumber>
             <Address>
               <Line>3a Preston Road</Line>
@@ -107,7 +107,7 @@ object ClaimBuilder {
             </Cared35HoursBefore>
             <DateStartCaring>
               <QuestionLabel>care.started</QuestionLabel>
-              <Answer>2010-05-01</Answer>
+              <Answer>05-01-2010</Answer>
             </DateStartCaring>
             <LiveSameAddress>
               <QuestionLabel>caree.sameadrees</QuestionLabel>
@@ -136,11 +136,11 @@ object ClaimBuilder {
               <Period>
                 <DateFrom>
                   <QuestionLabel>abroad.date.from</QuestionLabel>
-                  <Answer>2010-08-09</Answer>
+                  <Answer>08-09-2010</Answer>
                 </DateFrom>
                 <DateTo>
                   <QuestionLabel>abroad.date.to</QuestionLabel>
-                  <Answer>2010-08-12</Answer>
+                  <Answer>08-12-2010</Answer>
                 </DateTo>
               </Period>
               <Reason>
@@ -161,11 +161,11 @@ object ClaimBuilder {
               <Period>
                 <DateFrom>
                   <QuestionLabel>abroad.date.from</QuestionLabel>
-                  <Answer>2011-06-09</Answer>
+                  <Answer>06-09-2011</Answer>
                 </DateFrom>
                 <DateTo>
                   <QuestionLabel>abroad.date.to</QuestionLabel>
-                  <Answer>2011-06-12</Answer>
+                  <Answer>06-12-2011</Answer>
                 </DateTo>
               </Period>
               <Reason>
@@ -192,16 +192,16 @@ object ClaimBuilder {
               <Title>Bussines Studies</Title>
               <DateStarted>
                 <QuestionLabel>education.started</QuestionLabel>
-                <Answer>2013-01-01</Answer>
+                <Answer>01-01-2013</Answer>
               </DateStarted>
               <!--               <DateStopped>
-                        <QuestionLabel>education.ended</QuestionLabel>
-                        <Answer>2013-05-04</Answer>
-                    </DateStopped>
-                    -->
+                              <QuestionLabel>education.ended</QuestionLabel>
+                              <Answer>2013-05-04</Answer>
+                          </DateStopped>
+                          -->
               <ExpectedEndDate>
                 <QuestionLabel>education.end.expected</QuestionLabel>
-                <Answer>2014-05-01</Answer>
+                <Answer>05-01-2014</Answer>
               </ExpectedEndDate>
             </CourseDetails>
             <LocationDetails>
@@ -230,7 +230,7 @@ object ClaimBuilder {
             <RecentJobDetails>
               <DateStarted>
                 <QuestionLabel>selfemployed.started</QuestionLabel>
-                <Answer>2010-05-01</Answer>
+                <Answer>05-01-2010</Answer>
               </DateStarted>
               <NatureBusiness>
                 <QuestionLabel>selfemployed.business</QuestionLabel>
@@ -239,11 +239,11 @@ object ClaimBuilder {
               <TradingYear>
                 <DateFrom>
                   <QuestionLabel>trading.from</QuestionLabel>
-                  <Answer>2013-05-01</Answer>
+                  <Answer>05-01-2013</Answer>
                 </DateFrom>
                 <DateTo>
                   <QuestionLabel>trading.to</QuestionLabel>
-                  <Answer>2014-04-30</Answer>
+                  <Answer>30-04-2014</Answer>
                 </DateTo>
               </TradingYear>
               <SameIncomeOutgoingLevels>
@@ -256,7 +256,7 @@ object ClaimBuilder {
               </WhyWhenChange>
               <DateEnded>
                 <QuestionLabel>selfemployed.ended</QuestionLabel>
-                <Answer>2013-09-01</Answer>
+                <Answer>01-09-2013</Answer>
               </DateEnded>
               <TradingCeased>
                 <QuestionLabel>selfemployed.ceased</QuestionLabel>
@@ -264,33 +264,33 @@ object ClaimBuilder {
               </TradingCeased>
             </RecentJobDetails>
             <!--                <CurrentJobDetails>
-                    <DateStarted>
-                        <QuestionLabel>QuestionLabel34</QuestionLabel>
-                        <Answer>2006-05-04</Answer>
-                    </DateStarted>
-                    <NatureBusiness>
-                        <QuestionLabel>QuestionLabel35</QuestionLabel>
-                        <Answer>Answer23</Answer>
-                    </NatureBusiness>
-                    <TradingYear>
-                        <DateFrom>
-                            <QuestionLabel>QuestionLabel36</QuestionLabel>
+                        <DateStarted>
+                            <QuestionLabel>QuestionLabel34</QuestionLabel>
                             <Answer>2006-05-04</Answer>
-                        </DateFrom>
-                        <DateTo>
-                            <QuestionLabel>QuestionLabel37</QuestionLabel>
-                            <Answer>2006-05-04</Answer>
-                        </DateTo>
-                    </TradingYear>
-                    <SameIncomeOutgoingLevels>
-                        <QuestionLabel>QuestionLabel38</QuestionLabel>
-                        <Answer>Yes</Answer>
-                    </SameIncomeOutgoingLevels>
-                    <WhyWhenChange>
-                        <QuestionLabel>QuestionLabel39</QuestionLabel>
-                        <Answer>Answer25</Answer>
-                    </WhyWhenChange>
-                </CurrentJobDetails>-->
+                        </DateStarted>
+                        <NatureBusiness>
+                            <QuestionLabel>QuestionLabel35</QuestionLabel>
+                            <Answer>Answer23</Answer>
+                        </NatureBusiness>
+                        <TradingYear>
+                            <DateFrom>
+                                <QuestionLabel>QuestionLabel36</QuestionLabel>
+                                <Answer>2006-05-04</Answer>
+                            </DateFrom>
+                            <DateTo>
+                                <QuestionLabel>QuestionLabel37</QuestionLabel>
+                                <Answer>2006-05-04</Answer>
+                            </DateTo>
+                        </TradingYear>
+                        <SameIncomeOutgoingLevels>
+                            <QuestionLabel>QuestionLabel38</QuestionLabel>
+                            <Answer>Yes</Answer>
+                        </SameIncomeOutgoingLevels>
+                        <WhyWhenChange>
+                            <QuestionLabel>QuestionLabel39</QuestionLabel>
+                            <Answer>Answer25</Answer>
+                        </WhyWhenChange>
+                    </CurrentJobDetails>-->
             <CareExpensesChildren>
               <QuestionLabel>self.child.expenses</QuestionLabel>
               <Answer>Yes</Answer>
@@ -395,12 +395,12 @@ object ClaimBuilder {
               <Employer>
                 <DateJobStarted>
                   <QuestionLabel>job.started</QuestionLabel>
-                  <Answer>2013-01-01</Answer>
+                  <Answer>01-01-2013</Answer>
                 </DateJobStarted>
                 <!--        <DateJobEnded>
-                            <QuestionLabel>job.ended</QuestionLabel>
-                            <Answer>2013-07-01</Answer>
-                        </DateJobEnded> -->
+                                    <QuestionLabel>job.ended</QuestionLabel>
+                                    <Answer>2013-07-01</Answer>
+                                </DateJobEnded> -->
                 <JobType>
                   <QuestionLabel>job.title</QuestionLabel>
                   <Answer>Hacker</Answer>
@@ -419,9 +419,9 @@ object ClaimBuilder {
                   <Answer>No</Answer>
                 </HaveFinishedJob>
                 <!--               <P45LeavingDate>
-                            <QuestionLabel>job.p45</QuestionLabel>
-                            <Answer>2013-07-01</Answer>
-                        </P45LeavingDate> -->
+                                    <QuestionLabel>job.p45</QuestionLabel>
+                                    <Answer>2013-07-01</Answer>
+                                </P45LeavingDate> -->
               </Employer>
               <Pay>
                 <WeeklyHoursWorked>
@@ -430,7 +430,7 @@ object ClaimBuilder {
                 </WeeklyHoursWorked>
                 <DateLastPaid>
                   <QuestionLabel>job.lastpaid</QuestionLabel>
-                  <Answer>2013-07-02</Answer>
+                  <Answer>02-07-2013</Answer>
                 </DateLastPaid>
                 <GrossPayment>
                   <QuestionLabel>job.pay</QuestionLabel>
@@ -594,14 +594,14 @@ object ClaimBuilder {
             <OtherNames>Test Middle</OtherNames>
             <OtherSurnames>Dixon</OtherSurnames>
             <Title>Mrs</Title>
-            <DateOfBirth>1937-09-28</DateOfBirth>
+            <DateOfBirth>28-09-1937</DateOfBirth>
             <NationalInsuranceNumber>BA234567A</NationalInsuranceNumber>
             <!-- <Address>
-                    <Line>Line4</Line>
-                    <PostCode>GIR 0AA</PostCode>
-                </Address>
+                        <Line>Line4</Line>
+                        <PostCode>GIR 0AA</PostCode>
+                    </Address>
 
-                <MobileNumber>       </MobileNumber> -->
+                    <MobileNumber>       </MobileNumber> -->
             <DayTimePhoneNumber>0987654321</DayTimePhoneNumber>
             <NationalityPartner>British</NationalityPartner>
             <RelationshipStatus>
