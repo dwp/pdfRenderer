@@ -32,7 +32,7 @@ class PdfGeneratorClaimSpec extends Specification {
       pdfFile.exists() must beTrue
       deletePdfFile(pdfFileLocation)
     }
-/*  Commented out tests until we have new data in the new schema format from C3
+
     "be handle functionalTestCase1 and return success" in {
       val pdfFileLocation = "functionalTestCase1_testGeneratorResultIsSuccess.pdf"
       testGeneratorResultIsSuccess(pdfFileLocation, ClaimBuilder.functionalTestCase1)
@@ -121,7 +121,7 @@ class PdfGeneratorClaimSpec extends Specification {
     "create functionalTestCase9 PDF file" in {
       val pdfFileLocation = "functionalTestCase9_testOutputFileExists.pdf"
       testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase9)
-    }*/
+    }
   }
 }
 
