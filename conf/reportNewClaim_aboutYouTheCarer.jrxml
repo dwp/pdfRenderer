@@ -3,15 +3,18 @@
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
+	<field name="AboutClaimantTitle" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Title]]></fieldDescription>
+	</field>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="79" splitType="Stretch">
+		<band height="35" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="56742aad-bf5f-467e-a06c-eefbbaf0ba9b" x="17" y="24" width="527" height="20"/>
+				<reportElement uuid="0a5b0e79-189a-49ee-bdc9-dae1235c1081" x="13" y="0" width="542" height="35" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<text><![CDATA[Static text]]></text>
+				<text><![CDATA[Part 1 About You the carer]]></text>
 			</staticText>
 		</band>
 	</title>
@@ -22,7 +25,18 @@
 		<band height="61" splitType="Stretch"/>
 	</columnHeader>
 	<detail>
-		<band height="125" splitType="Stretch"/>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement uuid="29a3db90-e94b-41d1-a812-1b0323ff488b" x="334" y="27" width="100" height="41" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutClaimantTitle}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="aa2bfc54-4c23-45ee-a01e-134ec55ddf46" x="13" y="37" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Title]]></text>
+			</staticText>
+		</band>
 	</detail>
 	<columnFooter>
 		<band height="45" splitType="Stretch"/>
