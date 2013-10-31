@@ -25,9 +25,6 @@
 	<field name="ClaimantOtherSurnames" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/OtherSurnames]]></fieldDescription>
 	</field>
-	<field name="ClaimantPostCode" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Address/PostCode]]></fieldDescription>
-	</field>
 	<field name="ClaimantDayTimePhoneNumber" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/DayTimePhoneNumber]]></fieldDescription>
 	</field>
