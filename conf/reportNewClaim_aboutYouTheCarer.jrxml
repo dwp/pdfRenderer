@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a66aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="2.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="27"/>
+	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
@@ -10,309 +10,32 @@
 	<queryString language="xPath">
 		<![CDATA[/]]>
 	</queryString>
-	<field name="AboutClaimantTitle" class="java.lang.String">
+	<field name="AboutYouTheCarerClaimantTitle" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Title]]></fieldDescription>
-	</field>
-	<field name="AboutClaimantFirstNames" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/OtherNames]]></fieldDescription>
-	</field>
-	<field name="AboutClaimantLastName" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Surname]]></fieldDescription>
-	</field>
-	<field name="AboutClaimantOtherSurnames" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/OtherSurnames]]></fieldDescription>
-	</field>
-	<field name="AboutClaimantNationalInsuranceNumber" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/NationalInsuranceNumber]]></fieldDescription>
-	</field>
-	<field name="AboutClaimantDateOfBirth" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/DateOfBirth]]></fieldDescription>
-	</field>
-	<field name="AboutClaimantMaritalStatus" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/MaritalStatus]]></fieldDescription>
-	</field>
-	<field name="AboutClaimantDateOfClaim" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/DateOfClaim]]></fieldDescription>
-	</field>
-	<field name="AboutClaimantDayTimePhoneNumber" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/DayTimePhoneNumber]]></fieldDescription>
-	</field>
-	<field name="AboutClaimantMobileNumber" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/MobileNumber]]></fieldDescription>
-	</field>
-	<field name="AboutClaimantTextPhoneContact" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/TextPhoneContact]]></fieldDescription>
-	</field>
-	<field name="AboutClaimantNationality" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/Nationality]]></fieldDescription>
-	</field>
-	<field name="AboutClaimantNormallyLiveInGB" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/NormallyLiveInGB]]></fieldDescription>
-	</field>
-	<field name="AboutClaimantCountryNormallyLive" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/CountryNormallyLive]]></fieldDescription>
-	</field>
-	<field name="AboutClaimantTimeOutsideGBLasThreeYears" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/TimeOutsideGBLast3Years]]></fieldDescription>
-	</field>
-	<field name="AboutClaimantPeriodAbroadCountry" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/PeriodAbroad/Country]]></fieldDescription>
-	</field>
-	<field name="AboutClaimantPeriodAbroadDateFrom" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/PeriodAbroadDateFrom]]></fieldDescription>
-	</field>
-	<field name="AboutClaimantPeriodAbroadDateTo" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/PeriodAbroad/DateTo]]></fieldDescription>
-	</field>
-	<field name="AboutClaimantPeriodAbroadReason" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/PeriodAbroad/Reason]]></fieldDescription>
-	</field>
-	<field name="AboutClaimantPeriodAbroadReasonOther" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/PeriodAbroad/ReasonOther]]></fieldDescription>
-	</field>
-	<field name="AboutClaimantPeriodAbroadCareePresent" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/PeriodAbroad/CareePresent]]></fieldDescription>
-	</field>
-	<field name="AboutClaimantEEAPensionBenefits" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/EEAPensionBenefits]]></fieldDescription>
-	</field>
-	<field name="AboutClaimantEEAWorkingInsurance" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/EEAWorkingInsurance]]></fieldDescription>
-	</field>
-	<field name="AboutClaimantHavePartner" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/HavePartner]]></fieldDescription>
-	</field>
-	<field name="AboutClaimantCourseOfEducation" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/CourseOfEducation]]></fieldDescription>
-	</field>
-	<field name="AboutClaimantOtherBenefitsStatePension" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/ClaimantBenefits/StatePension]]></fieldDescription>
-	</field>
-	<field name="AboutClaimantEmployed" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Employed]]></fieldDescription>
-	</field>
-	<field name="AboutClaimantSelfEmployed" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmpoyed]]></fieldDescription>
 	</field>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="802" splitType="Stretch">
-			<textField>
-				<reportElement uuid="29a3db90-e94b-41d1-a812-1b0323ff488b" mode="Transparent" x="13" y="37" width="287" height="27" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutClaimantTitle}]]></textFieldExpression>
-			</textField>
+		<band height="478">
 			<staticText>
-				<reportElement uuid="aa2bfc54-4c23-45ee-a01e-134ec55ddf46" x="13" y="7" width="100" height="20"/>
+				<reportElement uuid="0fadeae0-25ca-4795-86fc-389b48b394f6" x="45" y="22" width="100" height="20"/>
 				<textElement/>
 				<text><![CDATA[Title]]></text>
 			</staticText>
 			<textField>
-				<reportElement uuid="c3b904aa-f1b7-49c8-b240-7e91ac86be5c" x="0" y="74" width="555" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{AboutClaimantTitle}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="ec89ebd3-f976-4cb3-8ea9-cda40c6ac9f3" x="0" y="92" width="555" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{AboutClaimantFirstNames}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="3232978e-53dd-4bdf-acec-4efa55f9b83b" x="0" y="110" width="555" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{AboutClaimantLastName}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="7e3ae484-8a21-4c87-91fe-e70d49ba395c" x="0" y="128" width="555" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{AboutClaimantOtherSurnames}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="b0db9cbd-f2d5-4ab5-ad0a-dcbf55db80fa" x="0" y="344" width="555" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{AboutClaimantNormallyLiveInGB}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="3c60df03-a292-4988-9897-09f523b139b4" x="0" y="272" width="555" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{AboutClaimantDayTimePhoneNumber}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="b3c90334-479c-495c-85f7-d33d17cd65e3" x="0" y="326" width="555" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{AboutClaimantNationality}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="c8592236-fe3d-4fdc-9963-80912f5606d4" x="0" y="308" width="555" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{AboutClaimantTextPhoneContact}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="2d0b70f2-2479-4d7d-9769-7844869a30a7" x="0" y="290" width="555" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{AboutClaimantMobileNumber}]]></textFieldExpression>
+				<reportElement uuid="0f00aab9-bd9c-417b-8e32-a61a0b7c360c" x="176" y="22" width="190" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantTitle}]]></textFieldExpression>
 			</textField>
 			<subreport>
-				<reportElement uuid="b2816b62-b100-47f0-bdcc-201cdfa5e393" x="0" y="70" width="553" height="21" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="e289b271-cab8-4a98-8c45-25f4e96dc760" x="45" y="57" width="321" height="100" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
-				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource) $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Address")]]></dataSourceExpression>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource) $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Address")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Address.jasper"]]></subreportExpression>
 			</subreport>
-			<textField>
-				<reportElement uuid="83f290b9-e27f-4787-9fc7-e0117268927c" x="0" y="200" width="555" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{AboutClaimantDateOfClaim}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="1ca2e599-b269-4f89-81e7-7892964ada1c" x="0" y="182" width="555" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{AboutClaimantMaritalStatus}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="79cfef0d-e474-4f23-a360-5d33a51f765d" x="0" y="164" width="555" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{AboutClaimantDateOfBirth}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="d3bb17ce-1136-4f45-a8f6-a01ca3b3fe1e" x="0" y="146" width="555" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{AboutClaimantNationalInsuranceNumber}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="a4821d68-0992-470f-ae8d-655bf2c7212c" x="0" y="362" width="555" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{AboutClaimantCountryNormallyLive}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="2264767a-125c-4426-b7b7-562a56391b52" x="0" y="381" width="555" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{AboutClaimantTimeOutsideGBLasThreeYears}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="69f08fdf-857c-4f5c-abed-b7121ccbf9f5" x="0" y="434" width="555" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{AboutClaimantPeriodAbroadDateTo}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="2e914379-3766-4239-86fc-f57dd72cc311" x="0" y="416" width="555" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{AboutClaimantPeriodAbroadDateFrom}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="52ec297d-5601-4428-b3c0-bca2059c232c" x="0" y="398" width="555" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{AboutClaimantPeriodAbroadCountry}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="61109ada-4716-41b4-a51d-d22da0280286" x="0" y="452" width="555" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{AboutClaimantPeriodAbroadReason}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="a849634d-ea1c-4c39-baca-2007f971240c" x="0" y="470" width="555" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{AboutClaimantPeriodAbroadReasonOther}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="19f2fa8e-1b25-4d8d-a626-0a7df6789d23" x="0" y="488" width="555" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{AboutClaimantPeriodAbroadCareePresent}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="d1f49c50-23c4-4ac5-8282-5b0f40501894" x="0" y="506" width="555" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{AboutClaimantEEAPensionBenefits}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="a5f8dc58-7b30-4e75-ac8d-fa4da196d773" x="0" y="524" width="555" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{AboutClaimantEEAWorkingInsurance}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="5c0aba82-4555-45be-b53b-7efebde565cd" x="0" y="542" width="555" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{AboutClaimantHavePartner}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="609caa47-c406-4cb9-98d3-2f1623f93166" x="0" y="560" width="555" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{AboutClaimantCourseOfEducation}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="dabb7ae3-956e-4375-bf58-07d41794f488" x="0" y="578" width="555" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{AboutClaimantOtherBenefitsStatePension}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="22f15a82-b955-411e-8e88-e263ca659e2e" x="0" y="596" width="555" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{AboutClaimantEmployed}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="20dd66b0-e9ba-4c01-b26d-ce4cc189bfad" x="0" y="614" width="555" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{AboutClaimantSelfEmployed}]]></textFieldExpression>
-			</textField>
 		</band>
 	</detail>
 </jasperReport>
