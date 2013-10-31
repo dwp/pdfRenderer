@@ -15,6 +15,7 @@ object PdfGenerator extends ReportGenerator{
   protected def exportReportToFormat(print: JasperPrint, pdfFileLocation: String): SuccessOrFailure = {
     try {
       JasperExportManager.exportReportToPdfFile(print, pdfFileLocation)
+
       GenerationSuccess()
     } catch {
       case e: Exception => {

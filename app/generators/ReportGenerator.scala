@@ -53,9 +53,9 @@ trait ReportGenerator {
 
     val jasperDesign: JasperDesign = JRXmlLoader.load(jrxmlFilename)
     val jasperReport = JasperCompileManager.compileReport(jasperDesign)
-    if (!new java.io.File(jasperFilename).exists) {
-    JRSaver.saveObject(jasperReport, jasperFilename)
-    }
+    //if (!new java.io.File(jasperFilename).exists) {
+      JRSaver.saveObject(jasperReport, jasperFilename)
+    //}
     //Compile sub reports
     JRElementsVisitor.visitReport(jasperReport, new ReportCompiler() {
       override def visitSubreport(subreport: JRSubreport): Unit = {
@@ -65,6 +65,7 @@ trait ReportGenerator {
         while (st.hasMoreTokens) {
           subReportName = st.nextToken()
         }
+
         //Sometimes the same subreport can be used multiple times, but
         //there is no need to compile multiple times
         //if(completedSubReports.contains(subReportName)) return
