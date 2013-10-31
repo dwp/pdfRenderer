@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYouTheCarer" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="522b0918-53ec-4e76-81c0-c01d6b4aadb2">
-	<property name="ireport.zoom" value="1.0"/>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a66aead0-a2c6-4cbf-be45-bb0d849ea1f9">
+	<property name="ireport.zoom" value="2.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="27"/>
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="xPath">
+		<![CDATA[/]]>
+	</queryString>
 	<field name="AboutClaimantTitle" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Title]]></fieldDescription>
 	</field>
@@ -26,15 +33,6 @@
 	</field>
 	<field name="AboutClaimantDateOfClaim" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/DateOfClaim]]></fieldDescription>
-	</field>
-	<field name="AboutClaimantStreet" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/]]></fieldDescription>
-	</field>
-	<field name="AboutClaimantTown" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/]]></fieldDescription>
-	</field>
-	<field name="AboutClaimantPostcode" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Address/Postcode]]></fieldDescription>
 	</field>
 	<field name="AboutClaimantDayTimePhoneNumber" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/DayTimePhoneNumber]]></fieldDescription>
@@ -99,23 +97,8 @@
 	<background>
 		<band splitType="Stretch"/>
 	</background>
-	<title>
-		<band height="35" splitType="Stretch">
-			<staticText>
-				<reportElement uuid="0a5b0e79-189a-49ee-bdc9-dae1235c1081" x="13" y="0" width="542" height="35" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<text><![CDATA[Part 1 About You the carer]]></text>
-			</staticText>
-		</band>
-	</title>
-	<pageHeader>
-		<band height="35" splitType="Stretch"/>
-	</pageHeader>
-	<columnHeader>
-		<band height="13" splitType="Stretch"/>
-	</columnHeader>
 	<detail>
-		<band height="632" splitType="Stretch">
+		<band height="802" splitType="Stretch">
 			<textField>
 				<reportElement uuid="29a3db90-e94b-41d1-a812-1b0323ff488b" mode="Transparent" x="13" y="37" width="287" height="27" isRemoveLineWhenBlank="true"/>
 				<textElement/>
@@ -189,27 +172,14 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$F{AboutClaimantMobileNumber}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement uuid="8c7b7ac1-32d0-490f-a947-92675b63ca4a" x="0" y="254" width="555" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{AboutClaimantPostcode}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="4f17d513-c897-403a-beb5-231a2189efa9" x="0" y="236" width="555" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{AboutClaimantTown}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="c924e5f3-8d97-45db-b44c-c73e96dacc13" x="0" y="218" width="555" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{AboutClaimantStreet}]]></textFieldExpression>
-			</textField>
+			<subreport>
+				<reportElement uuid="b2816b62-b100-47f0-bdcc-201cdfa5e393" x="0" y="70" width="553" height="21" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource) $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Address")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Address.jasper"]]></subreportExpression>
+			</subreport>
 			<textField>
 				<reportElement uuid="83f290b9-e27f-4787-9fc7-e0117268927c" x="0" y="200" width="555" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement>
@@ -246,7 +216,7 @@
 				<textFieldExpression><![CDATA[$F{AboutClaimantCountryNormallyLive}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement uuid="2264767a-125c-4426-b7b7-562a56391b52" x="0" y="380" width="555" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="2264767a-125c-4426-b7b7-562a56391b52" x="0" y="381" width="555" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
@@ -345,13 +315,4 @@
 			</textField>
 		</band>
 	</detail>
-	<columnFooter>
-		<band height="45" splitType="Stretch"/>
-	</columnFooter>
-	<pageFooter>
-		<band height="54" splitType="Stretch"/>
-	</pageFooter>
-	<summary>
-		<band height="42" splitType="Stretch"/>
-	</summary>
 </jasperReport>
