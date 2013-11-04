@@ -30,8 +30,8 @@ class PdfContentMatchingSpec extends Specification {
     def getPDFContent(pdfFileLocation: String): String = {
 
       val reader = new com.itextpdf.text.pdf.PdfReader(pdfFileLocation)
-      val parser = new PdfReaderContentParser(reader)
 
+      val parser = new PdfReaderContentParser(reader)
 
       val content: Seq[String] = for (i <- 1 to reader.getNumberOfPages) yield {
         val strategy = parser.processContent(i, new SimpleTextExtractionStrategy())
@@ -41,6 +41,22 @@ class PdfContentMatchingSpec extends Specification {
       reader.close()
 
       val totalContent = content.mkString("\n").toLowerCase
+      totalContent
+    }
+
+    def getPDFContentByPage(pdfFileLocation: String, pageNumber:Int): String = {
+
+      val reader = new com.itextpdf.text.pdf.PdfReader(pdfFileLocation)
+      val parser = new PdfReaderContentParser(reader)
+
+      println("***NumberOfpage :"+reader.getNumberOfPages)
+
+      val strategy = parser.processContent(pageNumber, new SimpleTextExtractionStrategy())
+      val content: String = strategy.getResultantText
+
+      reader.close()
+
+      val totalContent = content.toLowerCase
       totalContent
     }
 
@@ -79,16 +95,33 @@ class PdfContentMatchingSpec extends Specification {
       deletePdfFile(pdfFileLocation)
     }
 
+    def testContentMatchesByPage(pdfFileLocation: String,
+                           testCaseXml: Elem,
+                           generateTestData: (Elem => Seq[String]),
+                           matchFunction: ((Seq[String], String) => Boolean), pageNumber:Int) = {
+      testOutputFileExists(pdfFileLocation, testCaseXml)
+      val totalContent = getPDFContentByPage(pdfFileLocation, pageNumber)
+      val testData = generateTestData(testCaseXml)
+
+      println("TotalContent " + totalContent)
+
+      matchFunction(testData, totalContent) must beTrue
+      deletePdfFile(pdfFileLocation)
+    }
+
+/*
     "extract PDF for badClaim fails to match contents" in {
       val pdfFileLocation = "badClaim_contentTestPDF.pdf"
       testContentMatches(pdfFileLocation, ClaimBuilder.functionalTestCase9, XMLData.madeUpField, foundMustBeFalse)
     }
 
+*/
     "extract PDF for functionalTestCase1 and match contents" in {
       val pdfFileLocation = "functionalTestCase1_contentTestPDF.pdf"
-      testContentMatches(pdfFileLocation, ClaimBuilder.functionalTestCase1, XMLData.functionalTestCase1, foundMustBeTrue)
+      testContentMatchesByPage(pdfFileLocation, ClaimBuilder.functionalTestCase1, XMLData.functionalTestCase1, foundMustBeTrue, 2)
     }
 
+/*
     "extract PDF for functionalTestCase2 and match contents" in {
       val pdfFileLocation = "functionalTestCase2_contentTestPDF.pdf"
       testContentMatches(pdfFileLocation, ClaimBuilder.functionalTestCase2, XMLData.functionalTestCase2, foundMustBeTrue)
@@ -128,6 +161,7 @@ class PdfContentMatchingSpec extends Specification {
       val pdfFileLocation = "functionalTestCase9_contentTestPDF.pdf"
       testContentMatches(pdfFileLocation, ClaimBuilder.functionalTestCase9, XMLData.functionalTestCase9, foundMustBeTrue)
     }
+*/
   }
 }
 
