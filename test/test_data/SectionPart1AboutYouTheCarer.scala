@@ -6,6 +6,8 @@ case class SectionPart1AboutYouTheCarer(xml: Elem) {
 
   val rootPath = xml \\ "DWPCATransaction" \\ "DWPCAClaim" \\ "Claimant"
 
+  val rootPathResidency = xml \\ "DWPCATransaction" \\ "DWPCAClaim" \\ "Residency"
+
   val title = rootPath \\ "Title"
 
   val firstName = rootPath  \\ "OtherNames"
@@ -32,22 +34,88 @@ case class SectionPart1AboutYouTheCarer(xml: Elem) {
 
   val mobileNumber = rootPath \\ "MobileNumber"
 
+  val speechOrHearingDifficultyQuestion = rootPath \\ "TextPhoneContact" \\ "QuestionLabel"
+
+  val speechOrHearingDifficultyAnswer = rootPath \\ "TextPhoneContact" \\ "Answer"
+
+  val nationality =  rootPathResidency \\ "Nationality"
+
+  val doYouLiveEnglandScotlandWalesQuestion = rootPathResidency \\ "NormallyLiveInGB" \\ "QuestionLabel"
+
+  val doYouLiveEnglandScotlandWalesAnswer = rootPathResidency \\ "NormallyLiveInGB" \\ "Answer"
+
+  val countryNormallyLiveInQuestion = rootPathResidency \\ "CountryNormallyLive" \\ "QuestionLabel"
+
+  val countryNormallyLiveInAnswer = rootPathResidency \\ "CountryNormallyLive" \\ "Answer"
+
+  val timeOutsideGBLast3YearsQuestion = rootPathResidency \\ "TimeOutsideGBLast3Years" \\ "QuestionLabel"
+
+  val timeOutsideGBLast3YearsAnswer = rootPathResidency \\ "TimeOutsideGBLast3Years" \\ "Answer"
+
+  val periodAbroadDateFromQuestion = rootPathResidency \\ "PeriodAbroad" \\ "Period" \\ "DateFrom" \\ "QuestionLabel"
+
+  val periodAbroadDateFromAnswer = rootPathResidency \\ "PeriodAbroad" \\ "Period" \\ "DateFrom" \\ "Answer"
+
+  val periodAbroad: Seq[String] = {
+    (rootPathResidency \\ "PeriodAbroad"
+      map (y =>
+          (y \\ "Period").
+            map(x => {
+              Seq((x \\ "DateFrom" \\ "QuestionLabel").text+" "+(x \\ "DateFrom" \\ "Answer").text,
+              (x \\ "DateTo" \\ "QuestionLabel").text+" "+(x \\ "DateTo" \\ "Answer").text)
+          }).flatten ++
+          (y \\ "Reason").
+              map(x => {
+                  Seq((x \\ "QuestionLabel").text+" "+
+                    (x \\ "Answer").text match {
+                      case "Other" => (x \\ "Other").text +" "+ (x \\ "Answer").text
+                      case _ => (x \\ "Answer").text
+                  })
+          }).flatten ++
+          (y \\ "Country").
+            map(x => {
+              Seq((x \\ "QuestionLabel").text+" "+(x \\ "Answer").text)
+          }).flatten ++
+          (y \\ "CareePresent").
+            map(x => {
+              Seq((x \\ "QuestionLabel").text+" "+(x \\ "Answer").text)
+          }).flatten
+        )
+      ).flatten
+  }
+
+  val periodAbroad1: Seq[Object] = {
+    (rootPathResidency \\ "PeriodAbroad"
+      map (y =>
+//      (y \\ "Period").
+//        map(x => {
+//        Seq((x \\ "DateFrom" \\ "QuestionLabel").text+" "+(x \\ "DateFrom" \\ "Answer").text)
+//        Seq((x \\ "DateTo" \\ "QuestionLabel").text+" "+(x \\ "DateTo" \\ "Answer").text)
+//      }).flatten ++
+//        (y \\ "Reason").
+//          map(x => {
+//          Seq((x \\ "QuestionLabel").text+" "+
+//            (x \\ "Answer").text match {
+//            case "Other" => (x \\ "Other").text +" "+ (x \\ "Answer").text
+//            case _ => (x \\ "Answer").text
+//          })
+//        }).flatten ++
+//        (y \\ "Country").
+//          map(x => {
+//          Seq((x \\ "QuestionLabel").text+" "+(x \\ "Answer").text)
+//        }).flatten ++
+        (y \\ "CareePresent").
+          map(x => {
+          (x \\ "QuestionLabel").text+" "+(x \\ "Answer").text
+        })
+      )
+      ).flatten
+  }
+
+
 
   /*
-  If you have speech or hearing difficulties, would you like us to contact you by textphone?	DWPCAClaim>Claimant>TextPhoneContact
-  Your nationality and residency
-    What is your nationality	DWPCAClaim>Residency>Nationality
-  Do you live in England, Scotland or Wales	DWPCAClaim>Residency>NormallyLiveInGB
-    Which country do you normally live in	DWPCAClaim>Residency>CountryNormallyLive
-  Time outside of England, Scotland or Wales
-  Have you spent any time outside England, Scotland or Wales in the last 3 years before your claim date <<ddmmyyyy>>?	DWPCAClaim>Residency>TimeOutsideGBLast3Years
-    -->>  Outside England, Scotland and Wales X
-    -->> Which country did you go to?	DWPCAClaim>Residency>PeriodAbroad>Country
-  -->> Date you left	DWPCAClaim>Residency>PeriodAbroad>Period>DateFrom
-  -->> Date you returned	DWPCAClaim>Residency>PeriodAbroad>Period>DateTo
-  -->> Reason for being there?	DWPCAClaim>Residency>PeriodAbroad>Period>Reason
-    -->> Other	DWPCAClaim>Residency>PeriodAbroad>Period>Reason>Other
-  -->> Was the person you care for with you?	DWPCAClaim>Residency>PeriodAbroad>CareePresent
+
   Money you get from other European Economic Area (EEA) countries or Switzerland
     Do you, or any member of your family, receive any benefits or pensions from a European Economic Area (EEA) state or Switzerland?	DWPCAClaim>OtherBenefits>EEAPensionBenefits
     Have you, or a member  of your family, made a claim for any benefits or pensions from a European Economic Area (EEA) state or Switzerland?

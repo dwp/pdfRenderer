@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a66aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="2.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="240"/>
+	<property name="ireport.y" value="1447"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
@@ -13,11 +13,47 @@
 	<field name="AbouYouTheCarerDayTimeTelephoneNumber" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/DayTimePhoneNumber]]></fieldDescription>
 	</field>
+	<field name="AboutYouTheCarerMobileNumber" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/MobileNumber]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerSpeechOrHearingDifficultyQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/TextPhoneContact/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerSpeechOrHearingDifficultyAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/TextPhoneContact/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerNationality" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/Nationality]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerNormallyLiveInGBQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/NormallyLiveInGB/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerNormallyLiveInGBAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/NormallyLiveInGB/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerCountryNormallyLiveQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/CountryNormallyLive/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerCountryNormallyLiveAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/CountryNormallyLive/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerTimeOutsideGBLast3YearsQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/TimeOutsideGBLast3Years/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerTimeOutsideGBLast3YearsAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/TimeOutsideGBLast3Years/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerCountryVisitedQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/PeriodAbroad/Country/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerCountryVisitedAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/PeriodAbroad/Country/Answer]]></fieldDescription>
+	</field>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="500">
+		<band height="200">
 			<staticText>
 				<reportElement uuid="9bac90e4-49ff-4e66-913f-a2c5c32bbb94" mode="Opaque" x="45" y="0" width="321" height="20"/>
 				<textElement/>
@@ -31,13 +67,15 @@
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource) $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/Claimant")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_aboutYouTheCarer_YourDetails.jasper"]]></subreportExpression>
 			</subreport>
+		</band>
+		<band height="300">
 			<staticText>
-				<reportElement uuid="aeaf4fa2-793d-41d1-9cf3-5455fc5275b7" x="45" y="137" width="321" height="20"/>
+				<reportElement uuid="aeaf4fa2-793d-41d1-9cf3-5455fc5275b7" x="14" y="10" width="516" height="20"/>
 				<textElement/>
 				<text><![CDATA[Your Contact Details]]></text>
 			</staticText>
-			<subreport>
-				<reportElement uuid="e289b271-cab8-4a98-8c45-25f4e96dc760" x="45" y="177" width="321" height="78" isRemoveLineWhenBlank="true"/>
+			<subreport isUsingCache="false">
+				<reportElement uuid="e289b271-cab8-4a98-8c45-25f4e96dc760" x="14" y="49" width="530" height="78"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -45,14 +83,103 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Address.jasper"]]></subreportExpression>
 			</subreport>
 			<staticText>
-				<reportElement uuid="c4625070-c52a-454b-8a4f-c2a501aa38cf" x="45" y="273" width="181" height="20"/>
+				<reportElement uuid="c4625070-c52a-454b-8a4f-c2a501aa38cf" x="14" y="147" width="296" height="20"/>
 				<textElement/>
 				<text><![CDATA[Daytime telephone number]]></text>
 			</staticText>
 			<textField>
-				<reportElement uuid="0cc3309a-996b-48fb-a96b-48857a605f39" x="256" y="273" width="128" height="20"/>
+				<reportElement uuid="0cc3309a-996b-48fb-a96b-48857a605f39" x="366" y="147" width="128" height="20"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AbouYouTheCarerDayTimeTelephoneNumber}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="caf62b78-99b6-4a53-a2aa-4c56055ace63" x="14" y="188" width="296" height="20"/>
+				<textElement/>
+				<text><![CDATA[Mobile Number]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="01f4d768-6277-4e72-848b-e021e651de79" x="366" y="188" width="128" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerMobileNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a3503460-4846-4b36-9cd7-3196914e4dcb" x="14" y="229" width="296" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerSpeechOrHearingDifficultyQuestion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="08474f6d-a180-4641-a3f4-0b477843d386" x="366" y="229" width="128" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerSpeechOrHearingDifficultyAnswer}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="225">
+			<staticText>
+				<reportElement uuid="ba820bca-920c-4d85-9ce4-d9c45ac123a5" x="14" y="21" width="530" height="20"/>
+				<textElement/>
+				<text><![CDATA[Your nationality and residency]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="96edeba4-6496-4e27-8021-54579254e9a8" x="14" y="64" width="217" height="20"/>
+				<textElement/>
+				<text><![CDATA[What is your nationality]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="4a186ab4-1950-4c0c-95a1-3a9b27096e2d" x="266" y="64" width="205" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerNationality}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2e065a0b-a510-4baa-baa7-d98f99140d69" x="14" y="104" width="217" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerNormallyLiveInGBQuestion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f51a4d7c-a6d1-4fe7-95e7-48e922675511" x="266" y="104" width="205" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerNormallyLiveInGBAnswer}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="247b8325-214f-49d6-9504-bd5f128ba8e0" x="14" y="140" width="217" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerCountryNormallyLiveQuestion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="06829694-2b1a-45df-8b32-142988c3f223" x="266" y="140" width="205" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerCountryNormallyLiveAnswer}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="250">
+			<staticText>
+				<reportElement uuid="465bf80d-daf1-4e62-b427-9db056a82129" x="14" y="15" width="530" height="20"/>
+				<textElement/>
+				<text><![CDATA[Time outside of England, Scotland or Wales]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="df4d2fb9-4b93-4082-bfd4-db07b791763f" x="14" y="52" width="217" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerTimeOutsideGBLast3YearsQuestion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c6d1496d-fee4-4f86-9165-1d0c243a5aa2" x="266" y="52" width="205" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerTimeOutsideGBLast3YearsAnswer}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="1ca9800e-fbb4-4152-a5a6-6c7394bff323" x="14" y="98" width="530" height="20"/>
+				<textElement/>
+				<text><![CDATA[-->>  Outside England, Scotland and Wales X]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="3a0b8e90-5e92-4913-a464-26f141b8e53a" x="14" y="138" width="217" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerCountryVisitedQuestion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="05eeec83-a472-4684-81a3-758851dd4f6b" x="266" y="138" width="205" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerCountryVisitedAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>

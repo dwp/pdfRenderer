@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYouTheCarer_yourContactDetails" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="df36f3b3-c71c-4a12-8345-fd261131532b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="xPath">
+		<![CDATA[/]]>
+	</queryString>
+	<field name="AbouYouTheCarerDayTimeTelephoneNumber" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/DayTimePhoneNumber]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="500">
+			<staticText>
+				<reportElement uuid="aeaf4fa2-793d-41d1-9cf3-5455fc5275b7" x="11" y="10" width="530" height="20"/>
+				<textElement/>
+				<text><![CDATA[Your Contact Details]]></text>
+			</staticText>
+			<subreport isUsingCache="false">
+				<reportElement uuid="e289b271-cab8-4a98-8c45-25f4e96dc760" x="11" y="40" width="530" height="78"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource) $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Address")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Address.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement uuid="c4625070-c52a-454b-8a4f-c2a501aa38cf" x="11" y="137" width="296" height="20"/>
+				<textElement/>
+				<text><![CDATA[Daytime telephone number]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="0cc3309a-996b-48fb-a96b-48857a605f39" x="413" y="137" width="128" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AbouYouTheCarerDayTimeTelephoneNumber}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -134,21 +134,17 @@ object XMLData {
       "Street / Town / City " + fields.address,
       "Postcode " + fields.postCode.text,
       "Daytime telephone number " + fields.dayTimeTelephoneNumber.text,
-      "Mobile number" + fields.mobileNumber.text
-//      "If you have speech or hearing difficulties, would you like us to contact you by textphone?" + fields..text,
-//      "Your nationality and residency",
-//      "What is your nationality" + fields..text,
-//      "Do you live in England, Scotland or Wales" + fields..text,
-//      "Which country do you normally live in" + fields..text,
-//      "Time outside of England, Scotland or Wales" + fields..text,
-//      "Have you spent any time outside England, Scotland or Wales in the last 3 years before your claim date <<ddmmyyyy>>?" + fields..text,
-//      "Outside England, Scotland and Wales",
-//      "Which country did you go to?" + fields..text,
-//      "Date you left" + fields..text,
-//      "Date you returned" + fields..text,
-//      "Reason for being there?" + fields..text,
-//      "Other" + fields..text,
-//      "Was the person you care for with you?" + fields..text,
+      "Mobile number " + fields.mobileNumber.text,
+       fields.speechOrHearingDifficultyQuestion.text +" "+ fields.speechOrHearingDifficultyAnswer.text,
+       "Your nationality and residency",
+       "What is your nationality "+fields.nationality.text,
+       fields.doYouLiveEnglandScotlandWalesQuestion.text +" "+fields.doYouLiveEnglandScotlandWalesAnswer.text,
+       fields.countryNormallyLiveInQuestion.text +" "+fields.countryNormallyLiveInAnswer.text,
+       "Time outside of England, Scotland or Wales",
+       fields.timeOutsideGBLast3YearsQuestion.text +" "+fields.timeOutsideGBLast3YearsAnswer.text,
+       "-->>  Outside England, Scotland and Wales X"
+
+
 //      "Money you get from other European Economic Area (EEA) countries or Switzerland",
 //      "Do you, or any member of your family, receive any benefits or pensions from a European Economic Area (EEA) state or Switzerland?" + fields..text,
 //      "Have you, or a member  of your family, made a claim for any benefits or pensions from a European Economic Area (EEA) state or Switzerland?" + fields..text,
@@ -161,7 +157,7 @@ object XMLData {
 //      "Have you been employed at any time since <ddmmyyyy_1> (this is six months before your claim date:< ddmmyyyy>)?" + fields..text,
 //      "Have you been self-employed at any time since <ddmmyyyy_2> (this is one week before your claim date:<ddmmyyyy>)?" + fields..text,
 
-    )
+    ) ++ fields.periodAbroad
   }
 
 }

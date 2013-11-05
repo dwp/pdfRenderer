@@ -23,23 +23,26 @@ class SectionPart1AboutYouTheCarerSpec extends Specification {
       pdfFile.exists() must beTrue
     }
 
-    def getPDFContentByPage(pdfFileLocation: String, pageNumber:Int): String = {
+    def getPDFContentFromPage(pdfFileLocation: String, pageNumber:Int): String = {
 
       val reader = new com.itextpdf.text.pdf.PdfReader(pdfFileLocation)
       val parser = new PdfReaderContentParser(reader)
 
       println("***NumberOfpage :"+reader.getNumberOfPages)
 
-      val strategy = parser.processContent(pageNumber, new SimpleTextExtractionStrategy())
-      val content: String = strategy.getResultantText
+      val content: Seq[String] = for (i <- pageNumber to reader.getNumberOfPages) yield {
+        val strategy = parser.processContent(i, new SimpleTextExtractionStrategy())
 
+        strategy.getResultantText
+      }
       reader.close()
 
-      val totalContent = content.toLowerCase
+      val totalContent = content.mkString("\n").toLowerCase
       totalContent
     }
 
     def foundMustBeTrue(testData: Seq[String], totalContent: String) = {
+      testData map (s => println("TestDat "+s))
       testData.forall(x => {
         val found = totalContent.contains(x.toLowerCase)
         if (!found) {
@@ -50,12 +53,12 @@ class SectionPart1AboutYouTheCarerSpec extends Specification {
       })
     }
 
-    def testContentMatchesByPage(pdfFileLocation: String,
+    def testContentMatchesFromPage(pdfFileLocation: String,
                                  testCaseXml: Elem,
                                  generateTestData: (Elem => Seq[String]),
                                  matchFunction: ((Seq[String], String) => Boolean), pageNumber:Int) = {
       testOutputFileExists(pdfFileLocation, testCaseXml)
-      val totalContent = getPDFContentByPage(pdfFileLocation, pageNumber)
+      val totalContent = getPDFContentFromPage(pdfFileLocation, pageNumber)
       val testData = generateTestData(testCaseXml)
 
       println("TotalContent " + totalContent)
@@ -66,7 +69,7 @@ class SectionPart1AboutYouTheCarerSpec extends Specification {
 
     "extract PDF for SectionPart1AbouYouTheCarer and match contents" in {
       val pdfFileLocation = "goodClaim_contentTestPDF.pdf"
-      testContentMatchesByPage(pdfFileLocation, ClaimBuilder.goodClaim, XMLData.sectionPart1AboutYouTheCarer, foundMustBeTrue, 3)
+      testContentMatchesFromPage(pdfFileLocation, ClaimBuilder.goodClaim, XMLData.sectionPart1AboutYouTheCarer, foundMustBeTrue, 3)
     }
   }
 }
