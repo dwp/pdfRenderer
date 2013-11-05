@@ -44,22 +44,6 @@ class PdfContentMatchingSpec extends Specification {
       totalContent
     }
 
-    def getPDFContentByPage(pdfFileLocation: String, pageNumber:Int): String = {
-
-      val reader = new com.itextpdf.text.pdf.PdfReader(pdfFileLocation)
-      val parser = new PdfReaderContentParser(reader)
-
-      println("***NumberOfpage :"+reader.getNumberOfPages)
-
-      val strategy = parser.processContent(pageNumber, new SimpleTextExtractionStrategy())
-      val content: String = strategy.getResultantText
-
-      reader.close()
-
-      val totalContent = content.toLowerCase
-      totalContent
-    }
-
     def foundMustBeTrue(testData: Seq[String], totalContent: String) = {
       testData.forall(x => {
         val found = totalContent.contains(x.toLowerCase)
@@ -95,20 +79,6 @@ class PdfContentMatchingSpec extends Specification {
       deletePdfFile(pdfFileLocation)
     }
 
-    def testContentMatchesByPage(pdfFileLocation: String,
-                           testCaseXml: Elem,
-                           generateTestData: (Elem => Seq[String]),
-                           matchFunction: ((Seq[String], String) => Boolean), pageNumber:Int) = {
-      testOutputFileExists(pdfFileLocation, testCaseXml)
-      val totalContent = getPDFContentByPage(pdfFileLocation, pageNumber)
-      val testData = generateTestData(testCaseXml)
-
-      println("TotalContent " + totalContent)
-
-      matchFunction(testData, totalContent) must beTrue
-      deletePdfFile(pdfFileLocation)
-    }
-
 /*
     "extract PDF for badClaim fails to match contents" in {
       val pdfFileLocation = "badClaim_contentTestPDF.pdf"
@@ -118,7 +88,7 @@ class PdfContentMatchingSpec extends Specification {
 */
     "extract PDF for functionalTestCase1 and match contents" in {
       val pdfFileLocation = "functionalTestCase1_contentTestPDF.pdf"
-      testContentMatchesByPage(pdfFileLocation, ClaimBuilder.functionalTestCase1, XMLData.functionalTestCase1, foundMustBeTrue, 2)
+      testContentMatches(pdfFileLocation, ClaimBuilder.functionalTestCase1, XMLData.functionalTestCase1, foundMustBeTrue)
     }
 
 /*

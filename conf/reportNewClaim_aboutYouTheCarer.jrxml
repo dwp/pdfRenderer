@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a66aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="2.0"/>
-	<property name="ireport.x" value="0"/>
+	<property name="ireport.x" value="24"/>
 	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
@@ -16,18 +16,26 @@
 	<field name="AboutYouTheCarerClaimantFirstName" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/OtherNames]]></fieldDescription>
 	</field>
+	<field name="AboutYouTheCarerClaimantLastName" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Surname]]></fieldDescription>
+	</field>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="478">
+		<band height="500">
 			<staticText>
-				<reportElement uuid="0fadeae0-25ca-4795-86fc-389b48b394f6" x="45" y="22" width="100" height="20"/>
+				<reportElement uuid="9bac90e4-49ff-4e66-913f-a2c5c32bbb94" x="45" y="0" width="321" height="20"/>
+				<textElement/>
+				<text><![CDATA[Part 1 - About you - the carer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0fadeae0-25ca-4795-86fc-389b48b394f6" x="45" y="28" width="100" height="20"/>
 				<textElement/>
 				<text><![CDATA[Title]]></text>
 			</staticText>
 			<textField>
-				<reportElement uuid="0f00aab9-bd9c-417b-8e32-a61a0b7c360c" x="176" y="22" width="190" height="20"/>
+				<reportElement uuid="0f00aab9-bd9c-417b-8e32-a61a0b7c360c" x="176" y="26" width="190" height="20"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantTitle}]]></textFieldExpression>
 			</textField>
@@ -41,14 +49,24 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantFirstName}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement uuid="ab08d812-19ab-4191-96bf-7b8aa6914cfb" x="45" y="88" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Last Name]]></text>
+			</staticText>
 			<subreport>
-				<reportElement uuid="e289b271-cab8-4a98-8c45-25f4e96dc760" x="45" y="108" width="321" height="78" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="e289b271-cab8-4a98-8c45-25f4e96dc760" x="45" y="115" width="321" height="78" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource) $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Address")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Address.jasper"]]></subreportExpression>
 			</subreport>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="8c75e471-dd48-4837-99a1-ec82c69b2d40" x="176" y="88" width="190" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantLastName}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 </jasperReport>
