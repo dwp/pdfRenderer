@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYouTheCarer_YourDetails" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="298ab450-e0e7-4402-afad-ec2c84b931c1">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="xPath">
+		<![CDATA[/]]>
+	</queryString>
+	<field name="AboutYouTheCarerClaimantTitle" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Title]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerClaimantFirstName" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/OtherNames]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerClaimantLastName" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Surname]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerOtherSurname" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/OtherSurnames]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerNationalInsuranceNumber" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/NationalInsuranceNumber]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerDateOfBirth" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/DateOfBirth]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerMaritalStatus" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/MaritalStatus]]></fieldDescription>
+	</field>
+	<field name="AbouYouTheCarerClaimStartQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/DateOfClaim/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AbouYouTheCarerClaimStartAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/DateOfClaim/Answer]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="500" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="cecc9b28-1daf-4258-a11c-8288d4dfccc6" x="13" y="29" width="321" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Your Details]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0973cf93-60f0-4416-a85b-43c88ff3aab0" x="13" y="61" width="167" height="20"/>
+				<textElement/>
+				<text><![CDATA[Title]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+				<reportElement uuid="0f00aab9-bd9c-417b-8e32-a61a0b7c360c" x="211" y="61" width="123" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantTitle}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="c41b5149-9597-4864-bc97-f697bd8e8cf1" x="13" y="88" width="167" height="20"/>
+				<textElement/>
+				<text><![CDATA[First Name]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+				<reportElement uuid="7fb7a342-d9f3-42ba-86f2-7f418864f0f4" x="211" y="88" width="123" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantFirstName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="ab08d812-19ab-4191-96bf-7b8aa6914cfb" x="13" y="117" width="167" height="20"/>
+				<textElement/>
+				<text><![CDATA[Last Name]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+				<reportElement uuid="8c75e471-dd48-4837-99a1-ec82c69b2d40" x="211" y="117" width="123" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantLastName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="f850d128-dc33-4720-8f5c-853e9bcd628b" x="13" y="147" width="167" height="20"/>
+				<textElement/>
+				<text><![CDATA[Other surname or maiden name]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="3d1b0b06-5f74-4a2e-b01d-749dc81b3ff6" x="211" y="147" width="123" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerOtherSurname}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="03ea1d1c-6387-4815-9375-55e97a8b6ee0" x="13" y="181" width="167" height="20"/>
+				<textElement/>
+				<text><![CDATA[National Insurance number]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="2aa6b536-54b9-4d3e-b3d3-a79e9df0173c" x="211" y="181" width="123" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerNationalInsuranceNumber}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="3defe712-f6b6-4864-912a-ff78ee45f208" x="13" y="216" width="167" height="20"/>
+				<textElement/>
+				<text><![CDATA[Date of Birth]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="79f5aba9-3547-4f6e-862f-cdb7dfc7c27a" x="211" y="216" width="123" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerDateOfBirth}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="655baa04-dd90-4196-8757-72d34edbc35a" x="13" y="250" width="167" height="20"/>
+				<textElement/>
+				<text><![CDATA[Marital Status]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="9d8f39ed-090d-4e52-a912-790e129a0b44" x="211" y="250" width="123" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerMaritalStatus}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c4b66142-205d-4ab8-9764-896448ec30fe" x="13" y="289" width="321" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AbouYouTheCarerClaimStartQuestion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d8095409-d029-4680-b50a-00422fe55512" x="387" y="289" width="123" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AbouYouTheCarerClaimStartAnswer}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

@@ -132,9 +132,9 @@ object XMLData {
       fields.dateOfClaimQuestion.text +" "+ fields.dateOfClaimAnswer.text,
       "Your contact details",
       "Street / Town / City " + fields.address,
-      "Postcode " + fields.postCode.text
-//      "Daytime telephone number" + fields..text,
-//      "Mobile number" + fields..text,
+      "Postcode " + fields.postCode.text,
+      "Daytime telephone number " + fields.dayTimeTelephoneNumber.text,
+      "Mobile number" + fields.mobileNumber.text
 //      "If you have speech or hearing difficulties, would you like us to contact you by textphone?" + fields..text,
 //      "Your nationality and residency",
 //      "What is your nationality" + fields..text,

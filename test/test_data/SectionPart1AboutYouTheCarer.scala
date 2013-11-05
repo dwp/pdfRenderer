@@ -28,9 +28,12 @@ case class SectionPart1AboutYouTheCarer(xml: Elem) {
 
   val postCode = rootPath \\ "Address" \\ "PostCode"
 
-/*
-  Daytime telephone number	DWPCAClaim>Claimant>DayTimePhoneNumber
-    Mobile number	DWPCAClaim>Claimant>MobileNumber
+  val dayTimeTelephoneNumber	= rootPath \\ "DayTimePhoneNumber"
+
+  val mobileNumber = rootPath \\ "MobileNumber"
+
+
+  /*
   If you have speech or hearing difficulties, would you like us to contact you by textphone?	DWPCAClaim>Claimant>TextPhoneContact
   Your nationality and residency
     What is your nationality	DWPCAClaim>Residency>Nationality
