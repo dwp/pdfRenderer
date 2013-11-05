@@ -10,10 +10,13 @@ object XMLData {
     )
   }
 
+  def functionalTestCaseSectionPart1AboutYouTheCarer(xml: Elem) = {
+    sectionPart1AboutYouTheCarer(xml)
+  }
+
   def functionalTestCase1(xml: Elem) = {
     val fields = XMLDataFields(xml)
     functionalTestCaseMandatoryFields(xml)
-
   }
 
   def functionalTestCase2(xml: Elem) = {
@@ -118,11 +121,46 @@ object XMLData {
   def sectionPart1AboutYouTheCarer(xml: Elem) = {
     val fields = SectionPart1AboutYouTheCarer(xml);
     Seq("Part 1 - About you - the carer",
+      //"Your details",
       "Title " + fields.title.text,
       "First Name " + fields.firstName.text,
       "Last Name "+ fields.lastName.text,
+//      "Other surname or maiden name" + fields..text,
+//      "National Insurance number" + fields..text,
+//      "Date of Birth" + fields..text,
+//      "Martial Status" + fields..text,
+//      "When do you want your Carer’s Allowance claim to start?" + fields..text,
+//      "Your contact details",
       "Street / Town / City " + fields.address,
       "Postcode " + fields.postCode.text
+//      "Daytime telephone number" + fields..text,
+//      "Mobile number" + fields..text,
+//      "If you have speech or hearing difficulties, would you like us to contact you by textphone?" + fields..text,
+//      "Your nationality and residency",
+//      "What is your nationality" + fields..text,
+//      "Do you live in England, Scotland or Wales" + fields..text,
+//      "Which country do you normally live in" + fields..text,
+//      "Time outside of England, Scotland or Wales" + fields..text,
+//      "Have you spent any time outside England, Scotland or Wales in the last 3 years before your claim date <<ddmmyyyy>>?" + fields..text,
+//      "Outside England, Scotland and Wales",
+//      "Which country did you go to?" + fields..text,
+//      "Date you left" + fields..text,
+//      "Date you returned" + fields..text,
+//      "Reason for being there?" + fields..text,
+//      "Other" + fields..text,
+//      "Was the person you care for with you?" + fields..text,
+//      "Money you get from other European Economic Area (EEA) countries or Switzerland",
+//      "Do you, or any member of your family, receive any benefits or pensions from a European Economic Area (EEA) state or Switzerland?" + fields..text,
+//      "Have you, or a member  of your family, made a claim for any benefits or pensions from a European Economic Area (EEA) state or Switzerland?" + fields..text,
+//      "Are you, or a member of your family, working in or paying insurance to, another European Economic Area (EEA) state or Switzerland?" + fields..text,
+//      "More about you",
+//      "Have you had a partner/spouse living with you since your claim date?: <ddmmyyyy>?" + fields..text,
+//      "Have you been on a course of education since your claim date:<ddmmyyyy>? Have you been on a course of education since your claim date:<ddmmyyyy>? Have you been on a course of education since your claim date:<ddmmyyyy>? Have you been on a course of education since your claim date:<ddmmyyyy>? Have you been on a course of education since your claim date:<ddmmyyyy>? Have you been on a course of education since your claim date:<ddmmyyyy>? Have you been on a course of education since your claim date:<ddmmyyyy>? Have you been on a course of education since your claim date:<ddmmyyyy>? Have you been on a course of education since your claim date:<ddmmyyyy>? Have you been on a course of education since your claim date:<ddmmyyyy>? Have you been on a course of education since your claim date:<ddmmyyyy>? Have you been on a course of education since your claim date:<ddmmyyyy>? Have you been on a course of education since your claim date:<ddmmyyyy>? Have you been on a course of education since your claim date:<ddmmyyyy>? Have you been on a course of education since your claim date:<ddmmyyyy>? Have you been on a course of education since your claim date:<ddmmyyyy>?" + fields..text,
+//      "Do you get State Pension?" + fields.,
+//      "Employment",
+//      "Have you been employed at any time since <ddmmyyyy_1> (this is six months before your claim date:< ddmmyyyy>)?" + fields..text,
+//      "Have you been self-employed at any time since <ddmmyyyy_2> (this is one week before your claim date:<ddmmyyyy>)?" + fields..text,
+
     )
   }
 
