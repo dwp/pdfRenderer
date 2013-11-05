@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a66aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="2.0"/>
-	<property name="ireport.x" value="30"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="368"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
@@ -18,6 +18,24 @@
 	</field>
 	<field name="AboutYouTheCarerClaimantLastName" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Surname]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerOtherSurname" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/OtherSurnames]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerNationalInsuranceNumber" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/NationalInsuranceNumber]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerDateOfBirth" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/DateOfBirth]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerMaritalStatus" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/MaritalStatus]]></fieldDescription>
+	</field>
+	<field name="AbouYouTheCarerClaimStartQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/DateOfClaim/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AbouYouTheCarerClaimStartAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/DateOfClaim/Answer]]></fieldDescription>
 	</field>
 	<background>
 		<band splitType="Stretch"/>
@@ -67,13 +85,68 @@
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantLastName}]]></textFieldExpression>
 			</textField>
 			<subreport>
-				<reportElement uuid="e289b271-cab8-4a98-8c45-25f4e96dc760" x="45" y="150" width="321" height="78" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="e289b271-cab8-4a98-8c45-25f4e96dc760" x="45" y="353" width="321" height="78" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource) $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Address")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Address.jasper"]]></subreportExpression>
 			</subreport>
+			<staticText>
+				<reportElement uuid="f850d128-dc33-4720-8f5c-853e9bcd628b" x="45" y="151" width="167" height="20"/>
+				<textElement/>
+				<text><![CDATA[Other surname or maiden name]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="3d1b0b06-5f74-4a2e-b01d-749dc81b3ff6" x="243" y="151" width="123" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerOtherSurname}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="03ea1d1c-6387-4815-9375-55e97a8b6ee0" x="45" y="185" width="167" height="20"/>
+				<textElement/>
+				<text><![CDATA[National Insurance number]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="2aa6b536-54b9-4d3e-b3d3-a79e9df0173c" x="243" y="185" width="123" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerNationalInsuranceNumber}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="3defe712-f6b6-4864-912a-ff78ee45f208" x="45" y="220" width="167" height="20"/>
+				<textElement/>
+				<text><![CDATA[Date of Birth]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="79f5aba9-3547-4f6e-862f-cdb7dfc7c27a" x="243" y="220" width="123" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerDateOfBirth}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="655baa04-dd90-4196-8757-72d34edbc35a" x="45" y="254" width="167" height="20"/>
+				<textElement/>
+				<text><![CDATA[Marital Status]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="9d8f39ed-090d-4e52-a912-790e129a0b44" x="243" y="254" width="123" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerMaritalStatus}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c4b66142-205d-4ab8-9764-896448ec30fe" x="45" y="291" width="293" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AbouYouTheCarerClaimStartQuestion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d8095409-d029-4680-b50a-00422fe55512" x="390" y="291" width="123" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AbouYouTheCarerClaimStartAnswer}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="aeaf4fa2-793d-41d1-9cf3-5455fc5275b7" x="45" y="323" width="321" height="20"/>
+				<textElement/>
+				<text><![CDATA[Your Contact Details]]></text>
+			</staticText>
 		</band>
 	</detail>
 </jasperReport>

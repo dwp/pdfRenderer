@@ -61,12 +61,12 @@ class SectionPart1AboutYouTheCarerSpec extends Specification {
       println("TotalContent " + totalContent)
 
       matchFunction(testData, totalContent) must beTrue
-      deletePdfFile(pdfFileLocation)
+      //deletePdfFile(pdfFileLocation)
     }
 
     "extract PDF for SectionPart1AbouYouTheCarer and match contents" in {
-      val pdfFileLocation = "functionalTestCase1_contentTestPDF.pdf"
-      testContentMatchesByPage(pdfFileLocation, ClaimBuilder.functionalTestCase1, XMLData.sectionPart1AboutYouTheCarer, foundMustBeTrue, 2)
+      val pdfFileLocation = "goodClaim_contentTestPDF.pdf"
+      testContentMatchesByPage(pdfFileLocation, ClaimBuilder.goodClaim, XMLData.sectionPart1AboutYouTheCarer, foundMustBeTrue, 3)
     }
   }
 }

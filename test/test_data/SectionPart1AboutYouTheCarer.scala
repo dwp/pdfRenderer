@@ -14,13 +14,15 @@ case class SectionPart1AboutYouTheCarer(xml: Elem) {
 
   val otherSurnameOrMaidenName = rootPath  \\ "OtherSurnames"
 
-  //val nationalInsuranceNumber	= rootPath  \\ "NationalInsuranceNumber"
+  val nationalInsuranceNumber	= rootPath  \\ "NationalInsuranceNumber"
 
-  //val dateOfBirth = rootPath \\ "DateofBirth"
+  val dateOfBirth = rootPath \\ "DateOfBirth"
 
-  //val martialStatus =	rootPath \\ "MartialStatus"
+  val maritalStatus =	rootPath \\ "MaritalStatus"
 
-  //val dateOfClaim = rootPath \\ "DateofClaim"
+  val dateOfClaimQuestion = xml \\ "DWPCATransaction" \\ "DWPCAClaim" \\ "DateOfClaim" \\ "QuestionLabel"
+
+  val dateOfClaimAnswer = xml \\ "DWPCATransaction" \\ "DWPCAClaim" \\ "DateOfClaim" \\ "Answer"
 
   val address = (rootPath \\ "Address" \\ "Line").map(x => x.text).filterNot(x => x.isEmpty).mkString("\n")
 
