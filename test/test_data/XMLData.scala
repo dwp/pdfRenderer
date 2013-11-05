@@ -121,11 +121,11 @@ object XMLData {
   def sectionPart1AboutYouTheCarer(xml: Elem) = {
     val fields = SectionPart1AboutYouTheCarer(xml);
     Seq("Part 1 - About you - the carer",
-      //"Your details",
+      "Your details",
       "Title " + fields.title.text,
       "First Name " + fields.firstName.text,
       "Last Name "+ fields.lastName.text,
-//      "Other surname or maiden name" + fields..text,
+      "Other surname or maiden name" + fields.otherSurnameOrMaidenName.text,
 //      "National Insurance number" + fields..text,
 //      "Date of Birth" + fields..text,
 //      "Martial Status" + fields..text,

@@ -12,7 +12,7 @@ case class SectionPart1AboutYouTheCarer(xml: Elem) {
 
   val lastName = rootPath  \\ "Surname"
 
-  //val otherSurnameOrMaidenName = rootPath  \\ "OtherSurnames"
+  val otherSurnameOrMaidenName = rootPath  \\ "OtherSurnames"
 
   //val nationalInsuranceNumber	= rootPath  \\ "NationalInsuranceNumber"
 
