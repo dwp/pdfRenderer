@@ -160,4 +160,16 @@ object XMLData {
     ) ++ fields.periodAbroad
   }
 
+  def sectionPart2AboutYourPartner(xml: Elem) = {
+    val fields = SectionPart2AboutYourPartner(xml);
+    Seq ("Part 2 - About your partner",
+         "Partner/Spouse details",
+         "Other surname or maiden name "+fields.otherSurnameOrMaidenName.text,
+         "Date of Birth "+fields.dateOfBirth.text,
+         "Nationality "+fields.nationalityPartner.text,
+         fields.seperatedFromPartnerQuestion.text+" "+fields.seperatedFromPartnerAnswer.text,
+         "Person you care for",
+         fields.isCareeQuestion.text+" "+fields.isCareeAnswer.text
+         ) ++ aboutYourPartner(XMLDataFields(xml))
+  }
 }

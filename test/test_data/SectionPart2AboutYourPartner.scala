@@ -7,23 +7,15 @@ case class SectionPart2AboutYourPartner(xml: Elem) {
 
   val rootPath = xml \\ "DWPCATransaction" \\ "DWPCAClaim" \\ "Partner"
 
-  val title = rootPath \\ "Title"
-
-  val firstName = rootPath \\ "OtherNames"
-
-  val lastName = rootPath \\ "Surname"
-
   val otherSurnameOrMaidenName = rootPath \\ "OtherSurnames"
 
-  val nationalInsuranceNumber = rootPath \\ "NationalInsuranceNumber"
-
-  val dateOfBirth = rootPath \\ "DateofBirth"
+  val dateOfBirth = rootPath \\ "DateOfBirth"
 
   val nationalityPartner = rootPath \\ "NationalityPartner"
 
-  val seperatedFromPartnerQuestion = rootPath \\ "RelationshipStatus" \\ "SeperatedFromPartner" \\ "QuestionLabel"
+  val seperatedFromPartnerQuestion = rootPath \\ "RelationshipStatus" \\ "SeparatedFromPartner" \\ "QuestionLabel"
 
-  val seperatedFromPartnerAnswer = rootPath \\ "RelationshipStatus" \\ "SeperatedFromPartner" \\ "Answer"
+  val seperatedFromPartnerAnswer = rootPath \\ "RelationshipStatus" \\ "SeparatedFromPartner" \\ "Answer"
 
   val isCareeQuestion = rootPath \\ "IsCaree" \\ "QuestionLabel"
 
