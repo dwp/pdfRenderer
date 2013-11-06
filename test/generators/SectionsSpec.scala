@@ -8,7 +8,7 @@ import com.itextpdf.text.pdf.parser.{SimpleTextExtractionStrategy, PdfReaderCont
 import test_data.{XMLData, ClaimBuilder}
 
 
-class SectionPart1AboutYouTheCarerSpec extends Specification {
+class SectionsSpec extends Specification {
 
   "PdfContentMatching" should {
 
