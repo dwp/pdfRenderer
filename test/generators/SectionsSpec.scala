@@ -66,15 +66,16 @@ class SectionsSpec extends Specification {
       //deletePdfFile(pdfFileLocation)
     }
 
-    /*
+
     "extract PDF for SectionPart1AbouYouTheCarer and match contents" in {
       val pdfFileLocation = "goodClaim_contentTestPDF.pdf"
       testContentMatchesFromPage(pdfFileLocation, ClaimBuilder.goodClaim, XMLData.sectionPart1AboutYouTheCarer, foundMustBeTrue, 3)
-    }*/
-
+    }
+     /*
     "extract PDF for SectionPart2AboutYourPartner and match contents" in {
       val pdfFileLocation = "goodClaim_contentTestPDF.pdf"
       testContentMatchesFromPage(pdfFileLocation, ClaimBuilder.goodClaim, XMLData.sectionPart2AboutYourPartner, foundMustBeTrue, 5)
     }
+    */
   }
 }

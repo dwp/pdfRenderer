@@ -4,39 +4,41 @@ import scala.xml.Elem
 
 case class SectionPart1AboutYouTheCarer(xml: Elem) {
 
-  val rootPath = xml \\ "DWPCATransaction" \\ "DWPCAClaim" \\ "Claimant"
+  val rootPath = xml \\ "DWPCATransaction" \\ "DWPCAClaim"
+
+  val rootPathClaimant = rootPath \\ "Claimant"
 
   val rootPathResidency = xml \\ "DWPCATransaction" \\ "DWPCAClaim" \\ "Residency"
 
-  val title = rootPath \\ "Title"
+  val title = rootPathClaimant \\ "Title"
 
-  val firstName = rootPath  \\ "OtherNames"
+  val firstName = rootPathClaimant  \\ "OtherNames"
 
-  val lastName = rootPath  \\ "Surname"
+  val lastName = rootPathClaimant  \\ "Surname"
 
-  val otherSurnameOrMaidenName = rootPath  \\ "OtherSurnames"
+  val otherSurnameOrMaidenName = rootPathClaimant  \\ "OtherSurnames"
 
-  val nationalInsuranceNumber	= rootPath  \\ "NationalInsuranceNumber"
+  val nationalInsuranceNumber	= rootPathClaimant  \\ "NationalInsuranceNumber"
 
-  val dateOfBirth = rootPath \\ "DateOfBirth"
+  val dateOfBirth = rootPathClaimant \\ "DateOfBirth"
 
-  val maritalStatus =	rootPath \\ "MaritalStatus"
+  val maritalStatus =	rootPathClaimant \\ "MaritalStatus"
 
   val dateOfClaimQuestion = xml \\ "DWPCATransaction" \\ "DWPCAClaim" \\ "DateOfClaim" \\ "QuestionLabel"
 
   val dateOfClaimAnswer = xml \\ "DWPCATransaction" \\ "DWPCAClaim" \\ "DateOfClaim" \\ "Answer"
 
-  val address = (rootPath \\ "Address" \\ "Line").map(x => x.text).filterNot(x => x.isEmpty).mkString("\n")
+  val address = (rootPathClaimant \\ "Address" \\ "Line").map(x => x.text).filterNot(x => x.isEmpty).mkString(" ")
 
-  val postCode = rootPath \\ "Address" \\ "PostCode"
+  val postCode = rootPathClaimant \\ "Address" \\ "PostCode"
 
-  val dayTimeTelephoneNumber	= rootPath \\ "DayTimePhoneNumber"
+  val dayTimeTelephoneNumber	= rootPathClaimant \\ "DayTimePhoneNumber"
 
-  val mobileNumber = rootPath \\ "MobileNumber"
+  val mobileNumber = rootPathClaimant \\ "MobileNumber"
 
-  val speechOrHearingDifficultyQuestion = rootPath \\ "TextPhoneContact" \\ "QuestionLabel"
+  val speechOrHearingDifficultyQuestion = rootPathClaimant \\ "TextPhoneContact" \\ "QuestionLabel"
 
-  val speechOrHearingDifficultyAnswer = rootPath \\ "TextPhoneContact" \\ "Answer"
+  val speechOrHearingDifficultyAnswer = rootPathClaimant \\ "TextPhoneContact" \\ "Answer"
 
   val nationality =  rootPathResidency \\ "Nationality"
 
@@ -84,17 +86,17 @@ case class SectionPart1AboutYouTheCarer(xml: Elem) {
       ).flatten
   }
 
-  val receiveEEAPensionsBenefitsQuestion = rootPathResidency \\ "OtherBenefits" \\ "EEA" \\ "EEAReceivePensionsBenefits" \\ "QuestionLabel"
+  val receiveEEAPensionsBenefitsQuestion = rootPath \\ "OtherBenefits" \\ "EEA" \\ "EEAReceivePensionsBenefits" \\ "QuestionLabel"
 
-  val receiveEEAPensionsBenefitsAnswer = rootPathResidency \\ "OtherBenefits" \\ "EEA" \\ "EEAReceivePensionsBenefits" \\ "Answer"
+  val receiveEEAPensionsBenefitsAnswer = rootPath \\ "OtherBenefits" \\ "EEA" \\ "EEAReceivePensionsBenefits" \\ "Answer"
 
-  val claimEEAPensionsBenefitsQuestion = rootPathResidency \\ "OtherBenefits" \\ "EEA" \\ "EEAClaimPensionsBenefits" \\ "QuestionLabel"
+  val claimEEAPensionsBenefitsQuestion = rootPath \\ "OtherBenefits" \\ "EEA" \\ "EEAClaimPensionsBenefits" \\ "QuestionLabel"
 
-  val claimEEAPensionsBenefitsAnswer = rootPathResidency \\ "OtherBenefits" \\ "EEA" \\ "EEAClaimPensionsBenefits" \\ "Answer"
+  val claimEEAPensionsBenefitsAnswer = rootPath \\ "OtherBenefits" \\ "EEA" \\ "EEAClaimPensionsBenefits" \\ "Answer"
 
-  val workingEEAInsuranceQuestion = rootPathResidency \\ "OtherBenefits" \\ "EEA" \\ "EEAWorkingInsurance" \\ "QuestionLabel"
+  val workingEEAInsuranceQuestion = rootPath \\ "OtherBenefits" \\ "EEA" \\ "EEAWorkingInsurance" \\ "QuestionLabel"
 
-  val workingEEAInsuranceAnswer = rootPathResidency \\ "OtherBenefits" \\ "EEA" \\ "EEAWorkingInsurance" \\ "Answer"
+  val workingEEAInsuranceAnswer = rootPath \\ "OtherBenefits" \\ "EEA" \\ "EEAWorkingInsurance" \\ "Answer"
 
   val havePartnerQuestion = rootPath \\ "HavePartner" \\ "QuestionLabel"
 
@@ -112,9 +114,7 @@ case class SectionPart1AboutYouTheCarer(xml: Elem) {
 
   val employedAnswer = rootPath \\ "Employed" \\ "Answer"
 
-  val selfEmployedQuestion = rootPathResidency \\ "SelfEmployed" \\ "QuestionLabel"
+  val selfEmployedQuestion = rootPath \\ "SelfEmployed" \\ "QuestionLabel"
 
-  val selfEmployedAnswer = rootPathResidency \\ "SelfEmployed" \\ "Answer"
-
-
+  val selfEmployedAnswer = rootPath \\ "SelfEmployed" \\ "Answer"
 }

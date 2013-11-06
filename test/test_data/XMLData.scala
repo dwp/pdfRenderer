@@ -144,16 +144,16 @@ object XMLData {
       fields.timeOutsideGBLast3YearsQuestion.text +" "+fields.timeOutsideGBLast3YearsAnswer.text,
       "-->>  Outside England, Scotland and Wales X",
       "Money you get from other European Economic Area (EEA) countries or Switzerland",
-      fields.receiveEEAPensionsBenefitsQuestion + " " + fields.receiveEEAPensionsBenefitsAnswer,
-      fields.claimEEAPensionsBenefitsQuestion + " " + fields.claimEEAPensionsBenefitsAnswer,
-      fields.workingEEAInsuranceQuestion + " " + fields.workingEEAInsuranceAnswer,
+      fields.receiveEEAPensionsBenefitsQuestion.text + " " + fields.receiveEEAPensionsBenefitsAnswer.text,
+      fields.claimEEAPensionsBenefitsQuestion.text + " " + fields.claimEEAPensionsBenefitsAnswer.text,
+      fields.workingEEAInsuranceQuestion.text + " " + fields.workingEEAInsuranceAnswer.text,
       "More about you",
-      fields.havePartnerQuestion + " " + fields.havePartnerAnswer,
-      fields.courseOfEducationQuestion + " " + fields.courseOfEducationAnswer,
-      fields.statePensionQuestion + " " + fields.statePensionAnswer,
+      fields.havePartnerQuestion.text + " " + fields.havePartnerAnswer.text,
+      fields.courseOfEducationQuestion.text + " " + fields.courseOfEducationAnswer.text,
+      fields.statePensionQuestion.text + " " + fields.statePensionAnswer.text,
       "Employment",
-      fields.employedQuestion + " " + fields.employedAnswer,
-      fields.selfEmployedQuestion + " " + fields.selfEmployedAnswer
+      fields.employedQuestion.text + " " + fields.employedAnswer.text,
+      fields.selfEmployedQuestion.text + " " + fields.selfEmployedAnswer.text
     ) ++ fields.periodAbroad
   }
 
