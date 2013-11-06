@@ -591,8 +591,8 @@ object ClaimBuilder {
           </HavePartner>
           <Partner>
             <Surname>CaseThree</Surname>
-            <OtherNames>Test Middle</OtherNames>
-            <OtherSurnames>Dixon</OtherSurnames>
+            <OtherNames>Test Middle clémence</OtherNames>
+            <OtherSurnames>Dixon Jão SØren Górnictwo</OtherSurnames>
             <Title>Mrs</Title>
             <DateOfBirth>28-09-1937</DateOfBirth>
             <NationalInsuranceNumber>BA234567A</NationalInsuranceNumber>
