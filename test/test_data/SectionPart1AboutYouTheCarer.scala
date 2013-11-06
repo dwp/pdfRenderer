@@ -84,51 +84,37 @@ case class SectionPart1AboutYouTheCarer(xml: Elem) {
       ).flatten
   }
 
-  val periodAbroad1: Seq[Object] = {
-    (rootPathResidency \\ "PeriodAbroad"
-      map (y =>
-//      (y \\ "Period").
-//        map(x => {
-//        Seq((x \\ "DateFrom" \\ "QuestionLabel").text+" "+(x \\ "DateFrom" \\ "Answer").text)
-//        Seq((x \\ "DateTo" \\ "QuestionLabel").text+" "+(x \\ "DateTo" \\ "Answer").text)
-//      }).flatten ++
-//        (y \\ "Reason").
-//          map(x => {
-//          Seq((x \\ "QuestionLabel").text+" "+
-//            (x \\ "Answer").text match {
-//            case "Other" => (x \\ "Other").text +" "+ (x \\ "Answer").text
-//            case _ => (x \\ "Answer").text
-//          })
-//        }).flatten ++
-//        (y \\ "Country").
-//          map(x => {
-//          Seq((x \\ "QuestionLabel").text+" "+(x \\ "Answer").text)
-//        }).flatten ++
-        (y \\ "CareePresent").
-          map(x => {
-          (x \\ "QuestionLabel").text+" "+(x \\ "Answer").text
-        })
-      )
-      ).flatten
-  }
+  val receiveEEAPensionsBenefitsQuestion = rootPathResidency \\ "OtherBenefits" \\ "EEA" \\ "EEAReceivePensionsBenefits" \\ "QuestionLabel"
+
+  val receiveEEAPensionsBenefitsAnswer = rootPathResidency \\ "OtherBenefits" \\ "EEA" \\ "EEAReceivePensionsBenefits" \\ "Answer"
+
+  val claimEEAPensionsBenefitsQuestion = rootPathResidency \\ "OtherBenefits" \\ "EEA" \\ "EEAClaimPensionsBenefits" \\ "QuestionLabel"
+
+  val claimEEAPensionsBenefitsAnswer = rootPathResidency \\ "OtherBenefits" \\ "EEA" \\ "EEAClaimPensionsBenefits" \\ "Answer"
+
+  val workingEEAInsuranceQuestion = rootPathResidency \\ "OtherBenefits" \\ "EEA" \\ "EEAWorkingInsurance" \\ "QuestionLabel"
+
+  val workingEEAInsuranceAnswer = rootPathResidency \\ "OtherBenefits" \\ "EEA" \\ "EEAWorkingInsurance" \\ "Answer"
+
+  val havePartnerQuestion = rootPath \\ "HavePartner" \\ "QuestionLabel"
+
+  val havePartnerAnswer = rootPath \\ "HavePartner" \\ "Answer"
+
+  val courseOfEducationQuestion = rootPath \\ "CourseOfEducation" \\ "QuestionLabel"
+
+  val courseOfEducationAnswer = rootPath \\ "CourseOfEducation" \\ "Answer"
+
+  val statePensionQuestion = rootPath \\ "OtherBenefits" \\ "ClaimantBenefits" \\ "StatePension" \\ "QuestionLabel"
+
+  val statePensionAnswer = rootPath \\ "OtherBenefits" \\ "ClaimantBenefits" \\ "StatePension" \\ "Answer"
+
+  val employedQuestion = rootPath \\ "Employed" \\ "QuestionLabel"
+
+  val employedAnswer = rootPath \\ "Employed" \\ "Answer"
+
+  val selfEmployedQuestion = rootPathResidency \\ "SelfEmployed" \\ "QuestionLabel"
+
+  val selfEmployedAnswer = rootPathResidency \\ "SelfEmployed" \\ "Answer"
 
 
-
-  /*
-
-  Money you get from other European Economic Area (EEA) countries or Switzerland
-    Do you, or any member of your family, receive any benefits or pensions from a European Economic Area (EEA) state or Switzerland?	DWPCAClaim>OtherBenefits>EEAPensionBenefits
-    Have you, or a member  of your family, made a claim for any benefits or pensions from a European Economic Area (EEA) state or Switzerland?
-  Are you, or a member of your family, working in or paying insurance to, another European Economic Area (EEA) state or Switzerland?	DWPCAClaim>OtherBenefits>EEAWorkingInsurance
-    More about you
-  Have you had a partner/spouse living with you since your claim date?: <ddmmyyyy>?	DWPCAClaim>HavePartner
-    Have you been on a course of education since your claim date:<ddmmyyyy>? Have you been on a course of education since your claim date:<ddmmyyyy>? Have you been on a course of education since your claim date:<ddmmyyyy>? Have you been on a course of education since your claim date:<ddmmyyyy>? Have you been on a course of education since your claim date:<ddmmyyyy>? Have you been on a course of education since your claim date:<ddmmyyyy>? Have you been on a course of education since your claim date:<ddmmyyyy>? Have you been on a course of education since your claim date:<ddmmyyyy>? Have you been on a course of education since your claim date:<ddmmyyyy>? Have you been on a course of education since your claim date:<ddmmyyyy>? Have you been on a course of education since your claim date:<ddmmyyyy>? Have you been on a course of education since your claim date:<ddmmyyyy>? Have you been on a course of education since your claim date:<ddmmyyyy>? Have you been on a course of education since your claim date:<ddmmyyyy>? Have you been on a course of education since your claim date:<ddmmyyyy>? Have you been on a course of education since your claim date:<ddmmyyyy>? 	DWPCAClaim>CourseofEducation
-      Do you get State Pension?	DWPCAClaim>OtherBenefits>ClaimantBenefits>StatePension
-      Employment
-      Have you been employed at any time since <ddmmyyyy_1> (this is six months before your claim date:< ddmmyyyy>)?	DWPCAClaim>Employed
-        Have you been self-employed at any time since <ddmmyyyy_2> (this is one week before your claim date:<ddmmyyyy>)?	DWPCAClaim>SelfEmployed
- */
-
-
-
-          }
+}
