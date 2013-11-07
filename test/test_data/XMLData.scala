@@ -10,8 +10,8 @@ object XMLData {
     )
   }
 
-  def functionalTestCaseSectionPart1AboutYouTheCarer(xml: Elem) = {
-    sectionPart1AboutYouTheCarer(xml)
+  def functionalTestCaseSectionAboutYouTheCarer(xml: Elem) = {
+    sectionAboutYouTheCarer(xml)
   }
 
   def functionalTestCase1(xml: Elem) = {
@@ -118,7 +118,7 @@ object XMLData {
 
   def careBreaks(fields: XMLDataFields) = fields.careBreak
 
-  def sectionPart1AboutYouTheCarer(xml: Elem) = {
+  def sectionAboutYouTheCarer(xml: Elem) = {
     val fields = SectionPart1AboutYouTheCarer(xml);
     Seq("Part 1 - About you - the carer",
       "Your details",
@@ -157,7 +157,7 @@ object XMLData {
     ) ++ fields.periodAbroad
   }
 
-  def sectionPart2AboutYourPartner(xml: Elem) = {
+  def sectionAboutYourPartner(xml: Elem) = {
     val fields = SectionPart2AboutYourPartner(xml);
     Seq ("Part 2 - About your partner",
          "Partner/Spouse details",
@@ -176,4 +176,63 @@ object XMLData {
          fields.areYouEmployedQuestion.text+" "+fields.areYouEmployedAnswer.text,
          "Your Job Details for "+fields.employerName.text)
   }
+
+  def sectionAboutSelfEmployment(xml:Elem) = {
+    val fields = SectionAboutSelfEmployment(xml);
+    Seq ("Part 6 - About Self Employment",
+         buildQuestion(fields.haveBeenSelfEmployedQuestion.text, fields.haveBeenSelfEmployedAnswer.text),
+         "Your job",
+         buildQuestion(fields.selfEmployedNowQuestion.text, fields.selfEmployedNowAnswer.text),
+         buildQuestion(fields.selfEmployedStartedQuestion.text, fields.selfEmployedStartedAnswer.text),
+         buildQuestion(fields.selfEmployedEndedQuestion.text, fields.selfEmployedEndedAnswer.text),
+         buildQuestion(fields.ceasedTradingQuestion.text, fields.ceasedTradingAnswer.text),
+         buildQuestion(fields.natureOfBusinessQuestion.text, fields.natureOfBusinessAnswer.text),
+         "Your accounts",
+         buildQuestion(fields.tradingYearStartedQuestion.text, fields.tradingYearStartedAnswer.text),
+         buildQuestion(fields.tradingYearEndedQuestion.text, fields.tradingYearEndedAnswer.text),
+         buildQuestion(fields.sameIncomeOutgoingLevelsQuestion.text, fields.sameIncomeOutgoingLevelsAnswer.text),
+         buildQuestion(fields.whyWhenChangeQuestion.text, fields.whyWhenChangeAnswer.text),
+         "Pension and expenses",
+         buildQuestion(fields.paidForPensionQuestion.text, fields.paidForPensionAnswer.text),
+         buildAmount(fields.pensionSchemeQuestion.text, fields.pensionSchemeAnswerCurrency.text, fields.pensionSchemeAnswerAmount.text),
+         buildOther(fields.pensionSchemeFrequencyQuestion.text, fields.pensionSchemeFrequencyAnswer.text, fields.pensionSchemeFrequencyOther.text),
+         "Childcare expenses while you are at work",
+         buildQuestion(fields.careExpensesChildrenQuestion.text, fields.careExpensesChildrenAnswer.text),
+         buildQuestion(fields.careExpensesChildrenCarerNameQuestion.text, fields.careExpensesChildrenCarerNameAnswer.text),
+         buildAmount(fields.careExpensesChildrenPaymentQuestion.text, fields.careExpensesChildrenPaymentAnswerCurrency.text, fields.careExpensesChildrenPaymentAnswerAmount.text),
+         buildOther(fields.careExpensesChildrenPaymentFrequencyQuestion.text, fields.careExpensesChildrenPaymentFrequencyAnswer.text, fields.careExpensesChildrenPaymentFrequencyOther.text),
+         buildQuestion(fields.careExpensesChildrenRelationshipToCarerQuestion.text, fields.careExpensesChildrenRelationshipToCarerAnswer.text),
+         buildQuestion(fields.careExpensesChildrenRelationshipToPartnerQuestion.text, fields.careExpensesChildrenRelationshipToPartnerAnswer.text),
+         buildQuestion(fields.careExpensesChildrenRelationshipToChildQuestion.text, fields.careExpensesChildrenRelationshipToChildAnswer.text),
+         "Expenses related to the person you care for while at work",
+         buildQuestion(fields.careExpensesCareeQuestion.text, fields.careExpensesCareeAnswer.text),
+         buildQuestion(fields.careExpensesCareeCarerNameQuestion.text, fields.careExpensesCareeCarerNameAnswer.text),
+         buildAmount(fields.careExpensesCareePaymentQuestion.text, fields.careExpensesCareePaymentAnswerCurrency.text, fields.careExpensesCareePaymentAnswerAmount.text),
+         buildOther(fields.careExpensesCareePaymentFrequencyQuestion.text, fields.careExpensesCareePaymentFrequencyAnswer.text, fields.careExpensesCareePaymentFrequencyOther.text),
+         buildQuestion(fields.careExpensesRelationshipCarerToClaimantQuestion.text, fields.careExpensesRelationshipCarerToClaimantAnswer.text),
+         buildQuestion(fields.careExpensesRelationshipCarerToPartnerQuestion.text, fields.careExpensesRelationshipCarerToPartnerAnswer.text),
+         buildQuestion(fields.careExpensesRelationshipCarerToCareeQuestion.text, fields.careExpensesRelationshipCarerToCareeAnswer.text)
+      )
+  }
+
+  // TODO : Move this somewhere more reasonable
+  def buildQuestion (question :String, answer :String) :String = {
+    question + " " + answer
+  }
+
+  // TODO : Move this somewhere more reasonable
+  def buildOther (question :String, answer :String, other :String) :String = {
+    val otherLabel = "Other"
+    answer match {
+      case "Other" => buildQuestion(question, answer) + " " + buildQuestion("Other", other)
+      case _ => buildQuestion(question, answer)
+    }
+  }
+
+  // TODO : Move this somewhere more reasonable
+  def buildAmount (question :String, currency :String, amount :String) :String = {
+    question + " " + currency + " " + amount
+  }
+
+
 }

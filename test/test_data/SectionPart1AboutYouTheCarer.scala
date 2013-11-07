@@ -58,7 +58,7 @@ case class SectionPart1AboutYouTheCarer(xml: Elem) {
 
   val periodAbroadDateFromAnswer = rootPathResidency \\ "PeriodAbroad" \\ "Period" \\ "DateFrom" \\ "Answer"
 
-  val periodAbroad: Seq[String] = {
+  val periodAbroad1: Seq[String] = {
     (rootPathResidency \\ "PeriodAbroad"
       map (y =>
           (y \\ "Period").
@@ -83,6 +83,24 @@ case class SectionPart1AboutYouTheCarer(xml: Elem) {
               Seq((x \\ "QuestionLabel").text+" "+(x \\ "Answer").text)
           }).flatten
         )
+      ).flatten
+  }
+
+  val periodAbroad: Seq[String] = {
+    (rootPathResidency \\ "PeriodAbroad"
+      map (y =>
+        (y \\ "Period").
+          map(x => {
+          Seq((x \\ "DateFrom" \\ "QuestionLabel").text+" "+(x \\ "DateFrom" \\ "Answer").text,
+            (x \\ "DateTo" \\ "QuestionLabel").text+" "+(x \\ "DateTo" \\ "Answer").text)
+        }).flatten ++
+        (y \\ "Reason").map(x => {(x \\ "Answer").text match {
+                                   //case "Other" => Seq((x \\ "QuestionLabel").text+" "+(x \\ "Other").text +" "+ (x \\ "Answer").text)
+                                   case _ => Seq((x \\ "QuestionLabel").text+" "+(x \\ "Answer").text)
+                                 }}).flatten ++
+        (y \\ "Country").map(x => (x \\ "QuestionLabel").text+" "+(x \\ "Answer").text) ++
+        (y \\ "CareePresent").map(x => (x \\ "QuestionLabel").text+" "+(x \\ "Answer").text)
+      )
       ).flatten
   }
 
