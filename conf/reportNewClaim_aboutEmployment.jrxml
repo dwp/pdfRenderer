@@ -35,7 +35,7 @@
 	<detail>
 		<band height="227" splitType="Stretch">
 			<textField isStretchWithOverflow="true">
-				<reportElement uuid="eb266188-59cb-419c-a0f8-91a681fa3220" x="35" y="0" width="291" height="20" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="eb266188-59cb-419c-a0f8-91a681fa3220" x="11" y="0" width="321" height="20" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutEmploymentAreYouEmployedQuestion}]]></textFieldExpression>
 			</textField>
@@ -45,7 +45,7 @@
 				<textFieldExpression><![CDATA[$F{AboutEmploymentAreYouEmployedAnswer}]]></textFieldExpression>
 			</textField>
 			<subreport>
-				<reportElement uuid="5ec5478a-539a-408a-9a3f-d5e6bb2e5f77" x="35" y="31" width="494" height="100"/>
+				<reportElement uuid="b12f8af5-9ea9-46b6-8f91-18ab702af38f" x="63" y="53" width="200" height="100"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
