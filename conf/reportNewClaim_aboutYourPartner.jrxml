@@ -49,7 +49,7 @@
 	<pageHeader>
 		<band height="46">
 			<rectangle>
-				<reportElement uuid="68e23025-814c-4037-bcd3-43fca400b3cb" x="0" y="0" width="555" height="20" backcolor="#999999"/>
+				<reportElement uuid="68e23025-814c-4037-bcd3-43fca400b3cb" x="0" y="3" width="555" height="20" backcolor="#999999"/>
 				<graphicElement>
 					<pen lineWidth="0.0"/>
 				</graphicElement>
