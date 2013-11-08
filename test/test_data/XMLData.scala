@@ -194,7 +194,7 @@ object XMLData {
          buildQuestion(fields.whyWhenChangeQuestion.text, fields.whyWhenChangeAnswer.text),
          "Pension and expenses",
          buildQuestion(fields.paidForPensionQuestion.text, fields.paidForPensionAnswer.text),
-         buildAmount(fields.pensionSchemeQuestion.text, fields.pensionSchemeAnswerCurrency.text, fields.pensionSchemeAnswerAmount.text),
+         buildAmount(fields.pensionSchemeAmountQuestion.text, fields.pensionSchemeAmountAnswerCurrency.text, fields.pensionSchemeAmountAnswerAmount.text),
          buildOther(fields.pensionSchemeFrequencyQuestion.text, fields.pensionSchemeFrequencyAnswer.text, fields.pensionSchemeFrequencyOther.text),
          "Childcare expenses while you are at work",
          buildQuestion(fields.careExpensesChildrenQuestion.text, fields.careExpensesChildrenAnswer.text),
@@ -231,7 +231,7 @@ object XMLData {
 
   // TODO : Move this somewhere more reasonable
   def buildAmount (question :String, currency :String, amount :String) :String = {
-    question + " " + currency + " " + amount
+    question + " " + amount + " " + currency
   }
 
 

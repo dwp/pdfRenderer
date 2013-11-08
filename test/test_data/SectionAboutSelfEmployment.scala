@@ -6,90 +6,90 @@ case class SectionAboutSelfEmployment(xml: Elem) {
 
   val rootPath = xml \\ "DWPCATransaction" \\ "DWPCAClaim"
 
-  val haveBeenSelfEmployedQuestion = rootPath \\ "DWPCAClaim" \\ "SelfEmployed" \\ "QuestionLabel"
-  val haveBeenSelfEmployedAnswer = rootPath \\ "DWPCAClaim" \\ "SelfEmployed" \\ "Answer"
+  val haveBeenSelfEmployedQuestion = rootPath \\ "SelfEmployed" \\ "QuestionLabel"
+  val haveBeenSelfEmployedAnswer = rootPath \\ "SelfEmployed" \\ "Answer"
 
-  val selfEmployedNowQuestion = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "SelfEmployedNow" \\ "QuestionLabel"
-  val selfEmployedNowAnswer = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "SelfEmployedNow" \\ "Answer"
+  val selfEmployedNowQuestion = rootPath  \\ "SelfEmployment" \\ "SelfEmployedNow" \\ "QuestionLabel"
+  val selfEmployedNowAnswer = rootPath  \\ "SelfEmployment" \\ "SelfEmployedNow" \\ "Answer"
 
-  val selfEmployedStartedQuestion = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "RecentJobDetails" \\ "DateStarted" \\ "QuestionLabel"
-  val selfEmployedStartedAnswer = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "RecentJobDetails" \\ "DateStarted" \\ "Answer"
+  val selfEmployedStartedQuestion = rootPath  \\ "SelfEmployment" \\ "RecentJobDetails" \\ "DateStarted" \\ "QuestionLabel"
+  val selfEmployedStartedAnswer = rootPath  \\ "SelfEmployment" \\ "RecentJobDetails" \\ "DateStarted" \\ "Answer"
 
-  val selfEmployedEndedQuestion = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "RecentJobDetails" \\ "DateEnded" \\ "QuestionLabel"
-  val selfEmployedEndedAnswer = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "RecentJobDetails" \\ "DateEnded" \\ "Answer"
+  val selfEmployedEndedQuestion = rootPath  \\ "SelfEmployment" \\ "RecentJobDetails" \\ "DateEnded" \\ "QuestionLabel"
+  val selfEmployedEndedAnswer = rootPath  \\ "SelfEmployment" \\ "RecentJobDetails" \\ "DateEnded" \\ "Answer"
 
-  val ceasedTradingQuestion = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "RecentJobDetails" \\ "TradingCeased" \\ "QuestionLabel"
-  val ceasedTradingAnswer = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "RecentJobDetails" \\ "TradingCeased" \\ "Answer"
+  val ceasedTradingQuestion = rootPath  \\ "SelfEmployment" \\ "RecentJobDetails" \\ "TradingCeased" \\ "QuestionLabel"
+  val ceasedTradingAnswer = rootPath  \\ "SelfEmployment" \\ "RecentJobDetails" \\ "TradingCeased" \\ "Answer"
 
-  val natureOfBusinessQuestion = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "RecentJobDetails" \\ "NatureBusiness" \\ "QuestionLabel"
-  val natureOfBusinessAnswer = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "RecentJobDetails" \\ "NatureBusiness" \\ "Answer"
+  val natureOfBusinessQuestion = rootPath  \\ "SelfEmployment" \\ "RecentJobDetails" \\ "NatureBusiness" \\ "QuestionLabel"
+  val natureOfBusinessAnswer = rootPath  \\ "SelfEmployment" \\ "RecentJobDetails" \\ "NatureBusiness" \\ "Answer"
 
-  val tradingYearStartedQuestion = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "RecentJobDetails" \\ "TradingYear" \\ "DateFrom" \\ "QuestionLabel"
-  val tradingYearStartedAnswer = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "RecentJobDetails" \\ "TradingYear" \\ "DateFrom" \\ "Answer"
+  val tradingYearStartedQuestion = rootPath  \\ "SelfEmployment" \\ "RecentJobDetails" \\ "TradingYear" \\ "DateFrom" \\ "QuestionLabel"
+  val tradingYearStartedAnswer = rootPath  \\ "SelfEmployment" \\ "RecentJobDetails" \\ "TradingYear" \\ "DateFrom" \\ "Answer"
 
-  val tradingYearEndedQuestion = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "RecentJobDetails" \\ "TradingYear" \\ "DateTo" \\ "QuestionLabel"
-  val tradingYearEndedAnswer = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "RecentJobDetails" \\ "TradingYear" \\ "DateTo" \\ "Answer"
+  val tradingYearEndedQuestion = rootPath  \\ "SelfEmployment" \\ "RecentJobDetails" \\ "TradingYear" \\ "DateTo" \\ "QuestionLabel"
+  val tradingYearEndedAnswer = rootPath  \\ "SelfEmployment" \\ "RecentJobDetails" \\ "TradingYear" \\ "DateTo" \\ "Answer"
 
-  val sameIncomeOutgoingLevelsQuestion = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "RecentJobDetails" \\ "SameIncomeOutgoingLevels" \\ "QuestionLabel"
-  val sameIncomeOutgoingLevelsAnswer = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "RecentJobDetails" \\ "SameIncomeOutgoingLevels"
+  val sameIncomeOutgoingLevelsQuestion = rootPath  \\ "SelfEmployment" \\ "RecentJobDetails" \\ "SameIncomeOutgoingLevels" \\ "QuestionLabel"
+  val sameIncomeOutgoingLevelsAnswer = rootPath  \\ "SelfEmployment" \\ "RecentJobDetails" \\ "SameIncomeOutgoingLevels" \\ "Answer"
 
-  val whyWhenChangeQuestion = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "RecentJobDetails" \\ "WhyWhenChange" \\ "QuestionLabel"
-  val whyWhenChangeAnswer = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "RecentJobDetails" \\ "WhyWhenChange" \\ "Answer"
+  val whyWhenChangeQuestion = rootPath  \\ "SelfEmployment" \\ "RecentJobDetails" \\ "WhyWhenChange" \\ "QuestionLabel"
+  val whyWhenChangeAnswer = rootPath  \\ "SelfEmployment" \\ "RecentJobDetails" \\ "WhyWhenChange" \\ "Answer"
 
-  val paidForPensionQuestion = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "PaidForPension" \\ "QuestionLabel"
-  val paidForPensionAnswer = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "PaidForPension" \\ "Answer"
+  val paidForPensionQuestion = rootPath  \\ "SelfEmployment" \\ "PaidForPension" \\ "QuestionLabel"
+  val paidForPensionAnswer = rootPath  \\ "SelfEmployment" \\ "PaidForPension" \\ "Answer"
 
-  val pensionSchemeQuestion = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "PensionScheme" \\ "Amount" \\ "QuestionLabel"
-  val pensionSchemeAnswerAmount = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "PensionScheme" \\ "Answer" \\ "Amount"
-  val pensionSchemeAnswerCurrency = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "PensionScheme" \\ "Answer" \\ "Currency"
+  val pensionSchemeAmountQuestion = rootPath  \\ "SelfEmployment" \\ "PensionScheme" \\ "Payment" \\ "QuestionLabel"
+  val pensionSchemeAmountAnswerAmount = rootPath  \\ "SelfEmployment" \\ "PensionScheme" \\ "Payment" \\ "Answer" \\ "Amount"
+  val pensionSchemeAmountAnswerCurrency = rootPath  \\ "SelfEmployment" \\ "PensionScheme" \\ "Payment" \\ "Answer" \\ "Currency"
 
-  val pensionSchemeFrequencyQuestion = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "PensionScheme" \\ "Frequency" \\ "QuestionLabel"
-  val pensionSchemeFrequencyAnswer = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "PensionScheme" \\ "Frequency" \\ "Answer"
-  val pensionSchemeFrequencyOther = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "PensionScheme" \\ "Frequency" \\ "Answer"
+  val pensionSchemeFrequencyQuestion = rootPath  \\ "SelfEmployment" \\ "PensionScheme" \\ "Frequency" \\ "QuestionLabel"
+  val pensionSchemeFrequencyAnswer = rootPath  \\ "SelfEmployment" \\ "PensionScheme" \\ "Frequency" \\ "Answer"
+  val pensionSchemeFrequencyOther = rootPath  \\ "SelfEmployment" \\ "PensionScheme" \\ "Frequency" \\ "Answer"
 
-  val careExpensesChildrenQuestion = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "CareExpensesChildren" \\ "QuestionLabel"
-  val careExpensesChildrenAnswer = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "CareExpensesChildren" \\ "Answer"
+  val careExpensesChildrenQuestion = rootPath  \\ "SelfEmployment" \\ "CareExpensesChildren" \\ "QuestionLabel"
+  val careExpensesChildrenAnswer = rootPath  \\ "SelfEmployment" \\ "CareExpensesChildren" \\ "Answer"
 
-  val careExpensesChildrenCarerNameQuestion = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "CarerName" \\ "QuestionLabel"
-  val careExpensesChildrenCarerNameAnswer = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "CarerName" \\ "Answer"
+  val careExpensesChildrenCarerNameQuestion = rootPath  \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "CarerName" \\ "QuestionLabel"
+  val careExpensesChildrenCarerNameAnswer = rootPath  \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "CarerName" \\ "Answer"
 
-  val careExpensesChildrenPaymentQuestion = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "Payment" \\ "Amount" \\ "QuestionLabel"
-  val careExpensesChildrenPaymentAnswerAmount = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "Payment" \\ "Answer" \\ "Amount"
-  val careExpensesChildrenPaymentAnswerCurrency = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "Payment" \\ "Answer" \\ "Currency"
+  val careExpensesChildrenPaymentQuestion = rootPath  \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "Expense" \\ "Payment" \\ "Amount" \\ "QuestionLabel"
+  val careExpensesChildrenPaymentAnswerAmount = rootPath  \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "Expense" \\ "Payment" \\ "Answer" \\ "Amount"
+  val careExpensesChildrenPaymentAnswerCurrency = rootPath  \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "Expense" \\ "Payment" \\ "Answer" \\ "Currency"
 
-  val careExpensesChildrenPaymentFrequencyQuestion = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "Frequency" \\ "QuestionLabel"
-  val careExpensesChildrenPaymentFrequencyAnswer = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "Frequency" \\ "Answer"
-  val careExpensesChildrenPaymentFrequencyOther = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "Frequency" \\ "Answer"
+  val careExpensesChildrenPaymentFrequencyQuestion = rootPath  \\ "SelfEmployment" \\ "ChildCareExpenses"  \\ "Expense" \\ "Frequency" \\ "QuestionLabel"
+  val careExpensesChildrenPaymentFrequencyAnswer = rootPath  \\ "SelfEmployment" \\ "ChildCareExpenses"  \\ "Expense" \\ "Frequency" \\ "Answer"
+  val careExpensesChildrenPaymentFrequencyOther = rootPath  \\ "SelfEmployment" \\ "ChildCareExpenses"  \\ "Expense" \\ "Frequency" \\ "Answer"
 
-  val careExpensesChildrenRelationshipToCarerQuestion = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "RelationshipCarerToClaimant" \\ "QuestionLabel"
-  val careExpensesChildrenRelationshipToCarerAnswer = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "RelationshipCarerToClaimant" \\ "Answer"
+  val careExpensesChildrenRelationshipToCarerQuestion = rootPath  \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "RelationshipCarerToClaimant" \\ "QuestionLabel"
+  val careExpensesChildrenRelationshipToCarerAnswer = rootPath  \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "RelationshipCarerToClaimant" \\ "Answer"
 
-  val careExpensesChildrenRelationshipToPartnerQuestion = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "RelationshipCarerToPartner" \\ "QuestionLabel"
-  val careExpensesChildrenRelationshipToPartnerAnswer = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "RelationshipCarerToPartner" \\ "Answer"
+  val careExpensesChildrenRelationshipToPartnerQuestion = rootPath  \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "RelationshipCarerToPartner" \\ "QuestionLabel"
+  val careExpensesChildrenRelationshipToPartnerAnswer = rootPath  \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "RelationshipCarerToPartner" \\ "Answer"
 
-  val careExpensesChildrenRelationshipToChildQuestion = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "RelationshipCarerToChild" \\ "QuestionLabel"
-  val careExpensesChildrenRelationshipToChildAnswer = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "RelationshipCarerToChild" \\ "Answer"
+  val careExpensesChildrenRelationshipToChildQuestion = rootPath  \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "RelationshipCarerToChild" \\ "QuestionLabel"
+  val careExpensesChildrenRelationshipToChildAnswer = rootPath  \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "RelationshipCarerToChild" \\ "Answer"
 
-  val careExpensesCareeQuestion = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "CareExpensesCaree" \\ "QuestionLabel"
-  val careExpensesCareeAnswer = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "CareExpensesCaree" \\ "Answer"
+  val careExpensesCareeQuestion = rootPath  \\ "SelfEmployment" \\ "CareExpensesCaree" \\ "QuestionLabel"
+  val careExpensesCareeAnswer = rootPath  \\ "SelfEmployment" \\ "CareExpensesCaree" \\ "Answer"
 
-  val careExpensesCareeCarerNameQuestion = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "CareExpenses" \\ "CarerName" \\ "QuestionLabel"
-  val careExpensesCareeCarerNameAnswer = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "CareExpenses" \\ "CarerName" \\ "Answer"
+  val careExpensesCareeCarerNameQuestion = rootPath  \\ "SelfEmployment" \\ "CareExpenses" \\ "CarerName" \\ "QuestionLabel"
+  val careExpensesCareeCarerNameAnswer = rootPath  \\ "SelfEmployment" \\ "CareExpenses" \\ "CarerName" \\ "Answer"
 
-  val careExpensesCareePaymentQuestion = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "CareExpenses" \\ "Payment" \\ "Amount" \\ "QuestionLabel"
-  val careExpensesCareePaymentAnswerAmount = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "CareExpenses" \\ "Payment" \\ "Answer" \\ "Amount"
-  val careExpensesCareePaymentAnswerCurrency = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "CareExpenses" \\ "Payment" \\ "Answer" \\ "Currency"
+  val careExpensesCareePaymentQuestion = rootPath  \\ "SelfEmployment" \\ "CareExpenses"  \\ "Expense" \\ "Payment" \\ "Amount" \\ "QuestionLabel"
+  val careExpensesCareePaymentAnswerAmount = rootPath  \\ "SelfEmployment" \\ "CareExpenses"  \\ "Expense" \\ "Payment" \\ "Answer" \\ "Amount"
+  val careExpensesCareePaymentAnswerCurrency = rootPath  \\ "SelfEmployment" \\ "CareExpenses"  \\ "Expense" \\ "Payment" \\ "Answer" \\ "Currency"
 
-  val careExpensesCareePaymentFrequencyQuestion = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "CareExpenses" \\ "Payment" \\ "Frequency" \\ "QuestionLabel"
-  val careExpensesCareePaymentFrequencyAnswer = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "CareExpenses" \\ "Payment" \\ "Frequency" \\ "Answer"
-  val careExpensesCareePaymentFrequencyOther = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "CareExpenses" \\ "Payment" \\ "Frequency" \\ "Answer"
+  val careExpensesCareePaymentFrequencyQuestion = rootPath  \\ "SelfEmployment" \\ "CareExpenses"  \\ "Expense" \\ "Payment" \\ "Frequency" \\ "QuestionLabel"
+  val careExpensesCareePaymentFrequencyAnswer = rootPath  \\ "SelfEmployment" \\ "CareExpenses"  \\ "Expense" \\ "Payment" \\ "Frequency" \\ "Answer"
+  val careExpensesCareePaymentFrequencyOther = rootPath  \\ "SelfEmployment" \\ "CareExpenses"  \\ "Expense" \\ "Payment" \\ "Frequency" \\ "Answer"
 
-  val careExpensesRelationshipCarerToClaimantQuestion = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "CareExpenses" \\ "RelationshipCarerToClaimant" \\ "QuestionLabel"
-  val careExpensesRelationshipCarerToClaimantAnswer = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "CareExpenses" \\ "RelationshipCarerToClaimant" \\ "Answer"
+  val careExpensesRelationshipCarerToClaimantQuestion = rootPath  \\ "SelfEmployment" \\ "CareExpenses" \\ "RelationshipCarerToClaimant" \\ "QuestionLabel"
+  val careExpensesRelationshipCarerToClaimantAnswer = rootPath  \\ "SelfEmployment" \\ "CareExpenses" \\ "RelationshipCarerToClaimant" \\ "Answer"
 
-  val careExpensesRelationshipCarerToPartnerQuestion = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "CareExpenses" \\ "RelationshipCarerToPartner" \\ "QuestionLabel"
-  val careExpensesRelationshipCarerToPartnerAnswer = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "CareExpenses" \\ "RelationshipCarerToPartner" \\ "Answer"
+  val careExpensesRelationshipCarerToPartnerQuestion = rootPath  \\ "SelfEmployment" \\ "CareExpenses" \\ "RelationshipCarerToPartner" \\ "QuestionLabel"
+  val careExpensesRelationshipCarerToPartnerAnswer = rootPath  \\ "SelfEmployment" \\ "CareExpenses" \\ "RelationshipCarerToPartner" \\ "Answer"
 
-  val careExpensesRelationshipCarerToCareeQuestion = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "CareExpenses" \\ "RelationToCaree" \\ "QuestionLabel"
-  val careExpensesRelationshipCarerToCareeAnswer = rootPath \\ "DWPCAClaim" \\ "SelfEmployment" \\ "CareExpenses" \\ "RelationToCaree" \\ "Answer"
+  val careExpensesRelationshipCarerToCareeQuestion = rootPath  \\ "SelfEmployment" \\ "CareExpenses" \\ "RelationToCaree" \\ "QuestionLabel"
+  val careExpensesRelationshipCarerToCareeAnswer = rootPath  \\ "SelfEmployment" \\ "CareExpenses" \\ "RelationToCaree" \\ "Answer"
 }

@@ -251,7 +251,7 @@ object ClaimBuilder {
                 <Answer>No</Answer>
               </SameIncomeOutgoingLevels>
               <WhyWhenChange>
-                <QuestionLabel>slefemployed.level.change</QuestionLabel>
+                <QuestionLabel>selfemployed.level.change</QuestionLabel>
                 <Answer>Depends on the seasons, and productivity of the fruit.</Answer>
               </WhyWhenChange>
               <DateEnded>
@@ -2936,7 +2936,7 @@ object ClaimBuilder {
                 <Answer>No</Answer>
               </SameIncomeOutgoingLevels>
               <WhyWhenChange>
-                <QuestionLabel>slefemployed.level.change</QuestionLabel>
+                <QuestionLabel>selfemployed.level.change</QuestionLabel>
                 <Answer>Depends on the seasons, and productivity of the fruit.</Answer>
               </WhyWhenChange>
               <DateEnded>
@@ -4589,7 +4589,7 @@ object ClaimBuilder {
                 <Answer>No</Answer>
               </SameIncomeOutgoingLevels>
               <WhyWhenChange>
-                <QuestionLabel>slefemployed.level.change</QuestionLabel>
+                <QuestionLabel>selfemployed.level.change</QuestionLabel>
                 <Answer>Depends on the seasons, and productivity of the fruit.</Answer>
               </WhyWhenChange>
               <DateEnded>
