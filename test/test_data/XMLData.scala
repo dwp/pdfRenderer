@@ -173,8 +173,7 @@ object XMLData {
   def sectionAboutEmployment(xml:Elem) = {
     val fields = SectionAboutEmployment(xml);
     Seq ("Part 5 - About Your Employment",
-         fields.areYouEmployedQuestion.text+" "+fields.areYouEmployedAnswer.text,
-         "Your Job Details for "+fields.employerName.text)
+         fields.areYouEmployedQuestion.text+" "+fields.areYouEmployedAnswer.text) ++ fields.employmentDetails
   }
 
   def sectionAboutSelfEmployment(xml:Elem) = {
