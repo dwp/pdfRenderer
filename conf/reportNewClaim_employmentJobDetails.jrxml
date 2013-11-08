@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_CareBreak" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isSummaryNewPage="true" isIgnorePagination="true" uuid="d2b233ab-6178-4bb0-9059-17e24879fcd8">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_employmentJobDetails" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isSummaryNewPage="true" isIgnorePagination="true" uuid="d2b233ab-6178-4bb0-9059-17e24879fcd8">
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="240"/>
+	<property name="ireport.y" value="1054"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
-		<defaultValueExpression><![CDATA["/Users/valtechuk/carers-dev-pdf/pdfService/pdfService/conf/"]]></defaultValueExpression>
+		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
 	</parameter>
 	<queryString language="xPath">
-		<![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/CareBreak]]>
+		<![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Employment/JobDetails]]>
 	</queryString>
 	<field name="JobDetailsEmployer" class="java.lang.String">
 		<fieldDescription><![CDATA[Employer/Name]]></fieldDescription>
@@ -45,6 +45,153 @@
 	</field>
 	<field name="JobDetailsPayrollOrEmployeeNumber" class="java.lang.String">
 		<fieldDescription><![CDATA[Employer/ClockPayrollNumber]]></fieldDescription>
+	</field>
+	<field name="Line1" class="java.lang.String">
+		<fieldDescription><![CDATA[Employer/Address/Line[1]]]></fieldDescription>
+	</field>
+	<field name="Line2" class="java.lang.String">
+		<fieldDescription><![CDATA[Employer/Address/Line[2]]]></fieldDescription>
+	</field>
+	<field name="Line3" class="java.lang.String">
+		<fieldDescription><![CDATA[Employer/Address/Line[3]]]></fieldDescription>
+	</field>
+	<field name="JobDetailsEmployerPostCode" class="java.lang.String">
+		<fieldDescription><![CDATA[Employer/Address/PostCode]]></fieldDescription>
+	</field>
+	<field name="JobDetailsEmployerPhoneNumber" class="java.lang.String">
+		<fieldDescription><![CDATA[Employer/EmployersPhoneNumber]]></fieldDescription>
+	</field>
+	<field name="JobDetailsPayDateLastPaidQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[Pay/DateLastPaid/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="JobDetailsPayDateLastPaidAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[Pay/DateLastPaid/Answer]]></fieldDescription>
+	</field>
+	<field name="JobDetailsPayGrossPaymentQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[Pay/GrossPayment/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="JobDetailsPayGrossPaymentAnswerAmount" class="java.lang.String">
+		<fieldDescription><![CDATA[Pay/GrossPayment/Answer/Amount]]></fieldDescription>
+	</field>
+	<field name="JobDetailsPayGrossPaymentAnswerCurrency" class="java.lang.String">
+		<fieldDescription><![CDATA[Pay/GrossPayment/Answer/Currency]]></fieldDescription>
+	</field>
+	<field name="JobDetailsPayIncludedInWageQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[Pay/IncludedInWage/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="JobDetailsPayIncludedInWageAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[Pay/IncludedInWage/Answer]]></fieldDescription>
+	</field>
+	<field name="JobDetailsPayConstantEarningsQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[Pay/ConstantEarnings/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="JobDetailsPayConstantEarningsAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[Pay/ConstantEarnings/Answer]]></fieldDescription>
+	</field>
+	<field name="JobDetailsPayFrequencyQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[Pay/PayFrequency/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="JobDetailsPayFrequencyAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[Pay/PayFrequency/Answer]]></fieldDescription>
+	</field>
+	<field name="JobDetailsPayUsualPayDayQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[Pay/UsualPayDay/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="JobDetailsPayUsualPayDayAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[Pay/UsualPayDay/Answer]]></fieldDescription>
+	</field>
+	<field name="JobDetailsOweMoneyQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[OweMoney/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="JobDetailsOweMoneyAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[OweMoney/Answer]]></fieldDescription>
+	</field>
+	<field name="JobDetailsPaidForOccupationalPensionQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[PaidForOccupationalPension/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="JobDetailsPaidForOccupationalPensionAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[PaidForOccupationalPension/Answer]]></fieldDescription>
+	</field>
+	<field name="JobDetailsOccupationalPensionQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[OccupationalPension/Payment/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="JobDetailsOccupationalPensionAnswerAmount" class="java.lang.String">
+		<fieldDescription><![CDATA[OccupationalPension/Payment/Answer/Amount]]></fieldDescription>
+	</field>
+	<field name="JobDetailsOccupationalPensionAnswerCurrency" class="java.lang.String">
+		<fieldDescription><![CDATA[OccupationalPension/Payment/Answer/Currency]]></fieldDescription>
+	</field>
+	<field name="JobDetailsOccupationalPensionFrequencyQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[OccupationalPension/Frequency/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="JobDetailsOccupationalPensionFrequencyAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[OccupationalPension/Frequency/Answer]]></fieldDescription>
+	</field>
+	<field name="JobDetailsOccupationalPensionFrequencyOther" class="java.lang.String">
+		<fieldDescription><![CDATA[OccupationalPension/Frequency/Other]]></fieldDescription>
+	</field>
+	<field name="JobDetailsPayFrequencyOther" class="java.lang.String">
+		<fieldDescription><![CDATA[Pay/PayFrequency/Other]]></fieldDescription>
+	</field>
+	<field name="JobDetailsPaidForPersonalPensionQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[PaidForPersonalPension/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="JobDetailsPaidForPersonalPensionAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[PaidForPersonalPension/Answer]]></fieldDescription>
+	</field>
+	<field name="JobDetailsPersonalPensionQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[PersonalPension/Payment/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="JobDetailsPersonalPensionAnswerAmount" class="java.lang.String">
+		<fieldDescription><![CDATA[PersonalPension/Payment/Answer/Amount]]></fieldDescription>
+	</field>
+	<field name="JobDetailsPersonalPensionAnswerCurrency" class="java.lang.String">
+		<fieldDescription><![CDATA[PersonalPension/Payment/Answer/Currency]]></fieldDescription>
+	</field>
+	<field name="JobDetailsPersonalPensionFrequencyQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[PersonalPension/Frequency/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="JobDetailsPersonalPensionFrequencyAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[PersonalPension/Frequency/Answer]]></fieldDescription>
+	</field>
+	<field name="JobDetailsPersonalPensionFrequencyOther" class="java.lang.String">
+		<fieldDescription><![CDATA[PersonalPension/Frequency/Other]]></fieldDescription>
+	</field>
+	<field name="JobDetailsPaidForJobExpensesQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[PaidForJobExpenses/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="JobDetailsPaidForJobExpensesAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[PaidForJobExpenses/Answer]]></fieldDescription>
+	</field>
+	<field name="JobDetailsCareExpensesChildrenQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[CareExpensesChildren/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="JobDetailsCareExpensesChildrenAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[CareExpensesChildren/Answer]]></fieldDescription>
+	</field>
+	<field name="JobDetailsCareExpensesCareeQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[CareExpensesCaree/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="JobDetailsCareExpensesCareeAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[CareExpensesCaree/Answer]]></fieldDescription>
+	</field>
+	<field name="JobDetailsJobExpensesQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[JobExpenses/Expense/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="JobDetailsJobExpensesAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[JobExpenses/Expense/Answer]]></fieldDescription>
+	</field>
+	<field name="JobDetailsEmployerJobTypeQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[Employer/JobType/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="JobDetailsEmployerJobTypeAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[Employer/JobType/Answer]]></fieldDescription>
+	</field>
+	<field name="JobDetailsChildCareExpensesCarerNameQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[ChildCareExpenses/CarerName/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="JobDetailsChildCareExpensesCarerNameAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[ChildCareExpenses/CarerName/Answer]]></fieldDescription>
 	</field>
 	<variable name="variable1" class="java.lang.Integer" incrementType="Group" incrementGroup="Break">
 		<variableExpression><![CDATA[$V{variable1}+1]]></variableExpression>
@@ -101,7 +248,7 @@
 		</band>
 	</pageHeader>
 	<detail>
-		<band height="347" splitType="Stretch">
+		<band height="485" splitType="Stretch">
 			<rectangle>
 				<reportElement uuid="a037ac22-7584-4b68-9d11-406cd07b3250" x="20" y="0" width="523" height="20" forecolor="#FFFFFF" backcolor="#999999"/>
 			</rectangle>
@@ -184,14 +331,295 @@
 				</textElement>
 				<text><![CDATA[Employer's contact details]]></text>
 			</staticText>
-			<subreport isUsingCache="false">
-				<reportElement uuid="a0051b39-d773-4e87-8dfb-81bee93c6737" x="55" y="191" width="200" height="100"/>
-				<subreportParameter name="SUBREPORT_DIR">
-					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
-				</subreportParameter>
-				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/Employment/JobDetails/Employer/Address")]]></dataSourceExpression>
-				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Address.jasper"]]></subreportExpression>
-			</subreport>
+			<staticText>
+				<reportElement uuid="2657ea80-6d75-44fb-8a2e-2f2a26fb1c7f" x="20" y="160" width="294" height="20"/>
+				<textElement/>
+				<text><![CDATA[Street / Town / City]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="d83e9980-c54a-4008-b5b5-c9804e6c26f0" x="340" y="160" width="203" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Line1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="6bae534a-cfb3-4a2b-b753-d56e701d74e5" x="340" y="180" width="203" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Line2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="6ab9dd5f-e44d-4b23-98f7-b4b8cb1922df" x="340" y="200" width="203" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Line3}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d22ac702-bf34-444a-98d6-6d4191841ad0" x="20" y="220" width="294" height="20"/>
+				<textElement/>
+				<text><![CDATA[Postcode]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="4fff7fd3-9006-4322-a49e-fd7bd4c38aca" x="340" y="220" width="203" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsEmployerPostCode}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d27afea5-d757-46a6-8210-cac524840b3c" x="20" y="240" width="294" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<text><![CDATA[Phone number]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f64f69b6-274d-4fdc-be90-1a5a3ceea4c7" x="340" y="240" width="203" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsEmployerPhoneNumber}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="a52b0ad8-c419-44a1-aa18-2c7f79cbbb8c" x="20" y="260" width="523" height="20"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Your last wage]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="55d62644-39a7-4a10-8189-fca941319609" x="20" y="280" width="294" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsPayDateLastPaidQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="01bdf01b-d916-46f6-8edd-0a847732938c" x="340" y="280" width="203" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsPayDateLastPaidAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="36485c4a-147c-4f69-bbea-a765a183a099" x="20" y="300" width="294" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsPayGrossPaymentQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="208f7160-2bb2-4d16-8346-d289ee05762b" x="340" y="300" width="203" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsPayGrossPaymentAnswerAmount}+" "+$F{JobDetailsPayGrossPaymentAnswerCurrency}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="a404dcae-85d0-42ba-900e-4a4601fcc06a" x="20" y="320" width="294" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsPayIncludedInWageQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="d934431a-0a35-4f23-8566-8f0c5ca72026" x="340" y="320" width="203" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsPayIncludedInWageAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="410e26c9-24cb-48b9-91bd-e11cd4394bb1" x="20" y="340" width="294" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsPayConstantEarningsQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="0a87ab1f-0d6f-4973-bf67-fbacf18d9bf3" x="340" y="340" width="203" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsPayConstantEarningsAnswer}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="9ece30f0-bf0a-43e6-b36c-9b642b323f4e" x="20" y="360" width="523" height="20"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Additional details on your last wage]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="b5817cef-4de3-4067-89d8-cdc4bdaac964" x="20" y="380" width="294" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsPayFrequencyQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="59d5b4cf-4802-48c8-84bc-60f688cc606e" x="340" y="380" width="203" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsPayFrequencyAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="60c22e0c-b0f8-44ec-9f26-ecaeec0ab13c" x="20" y="424" width="294" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsPayUsualPayDayQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="666e5cd6-6b0c-4f58-9ec6-49ae5d0b409c" x="340" y="423" width="203" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsPayUsualPayDayAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f260da5b-a5c5-4544-bce5-50d1cfc06d0f" x="20" y="447" width="294" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsOweMoneyQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="436e2f7d-f215-47f6-9437-5a7de2605dd9" x="340" y="445" width="203" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsOweMoneyAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="fc0c44c4-1752-4a63-b736-4b06ebc21026" x="340" y="400" width="203" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsPayFrequencyOther}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="481">
+			<staticText>
+				<reportElement uuid="9123999a-8bef-4b7a-adc0-5346c4e17805" x="20" y="10" width="523" height="20"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Pension Schemes]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="6f51eb00-89b6-492b-b132-0dbd54f500ac" x="20" y="33" width="294" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsPaidForOccupationalPensionQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="6e76bb06-41e1-4720-bac5-027dd9c03051" x="340" y="34" width="203" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsPaidForOccupationalPensionAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="71e801b2-ae44-46fb-82fb-62d9de8b4a88" x="22" y="54" width="292" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsOccupationalPensionQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="93347356-6068-4b9a-af41-fac409b71d38" x="340" y="55" width="203" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsOccupationalPensionAnswerAmount}+" "+$F{JobDetailsOccupationalPensionAnswerCurrency}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="0d36eb56-d9c0-48c0-a27a-dea0e9fc7fb4" x="22" y="75" width="292" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsOccupationalPensionFrequencyQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="b1f78dd6-2abe-418b-9d75-6c02ffd834ea" x="340" y="75" width="203" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsOccupationalPensionFrequencyAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="887263c3-16f8-4e4c-a700-fff575d1054d" x="303" y="95" width="240" height="67" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsOccupationalPensionFrequencyOther}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="c39589ec-7cc1-4eab-be0f-6caa94f12aca" x="22" y="164" width="292" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsPaidForPersonalPensionQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="7a2bde4e-2c72-4669-a7c8-7cd742aef85a" x="340" y="164" width="203" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsPaidForPersonalPensionAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="e6950724-4175-40a3-943b-3360108dc199" x="22" y="185" width="292" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsPersonalPensionQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="1cf956c7-3644-49c7-ad18-e8483476bfdb" x="340" y="185" width="203" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsPersonalPensionAnswerAmount}+" "+$F{JobDetailsPersonalPensionAnswerCurrency}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="869f5b5b-9b8d-42a6-810b-ead66ab82e26" x="22" y="205" width="292" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsPersonalPensionFrequencyQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="124cbff7-e85a-47ab-a97e-bde37b79cfd2" x="340" y="205" width="203" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsPersonalPensionFrequencyAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="1b7dfde4-d89b-4738-b6ef-572c976fc78c" x="340" y="225" width="203" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsPersonalPensionFrequencyOther}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="1d97a8b1-f0ca-4597-9cdf-c9cbd9bbfea6" x="24" y="245" width="519" height="20"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[About expenses to do with your employment]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="9f72c589-ee02-4f4e-a524-7be103ec9d19" x="24" y="265" width="290" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsPaidForJobExpensesQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="1903a7da-d06d-4d78-9ce0-752e55e74ad0" x="340" y="265" width="203" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsPaidForJobExpensesAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="8b4283fe-d225-4451-9236-6ada0e9648e1" x="24" y="285" width="290" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsCareExpensesChildrenQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="19fbc265-a2a5-4674-bb4b-8fc9699375a7" x="340" y="285" width="203" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsCareExpensesChildrenAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="0b7fe36e-081c-49d7-8247-de588bbb18cd" x="24" y="305" width="290" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsCareExpensesCareeQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="e7b8cd46-d3e8-4120-96dd-30c947b2332e" x="340" y="305" width="203" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsCareExpensesCareeAnswer}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d4ee85a0-2b60-48f6-b8f4-184e0d48d748" x="24" y="325" width="519" height="20"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[-->>Necessary expenses to do your job]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="ff17ee3f-150e-4a42-b8c2-fe35ec9d08a4" x="24" y="345" width="290" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsJobExpensesQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="722f01f9-2add-453a-8216-ff4a20d1a467" x="340" y="345" width="203" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsJobExpensesAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="735c5f7d-e94d-449f-a6c1-95864ae264ae" x="24" y="365" width="290" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsEmployerJobTypeQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="0504b297-73c1-4964-a3c3-d92aa3d1c2c2" x="340" y="365" width="203" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsEmployerJobTypeAnswer}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d984d04c-aa17-4086-ad8d-de033a0e62a3" x="24" y="385" width="519" height="20"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[-->>Childcare expenses while you are at work]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="510189d7-18b1-4fc7-84ff-c1825f920140" x="24" y="405" width="290" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsChildCareExpensesCarerNameQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="6a672e51-abaa-40b0-af65-d31ae1adad54" x="340" y="405" width="203" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsChildCareExpensesCarerNameAnswer}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 </jasperReport>

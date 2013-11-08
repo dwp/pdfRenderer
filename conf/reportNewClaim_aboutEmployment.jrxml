@@ -4,7 +4,7 @@
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
-		<defaultValueExpression><![CDATA["/Users/valtechuk/carers-dev-pdf/pdfService/pdfService/conf/"]]></defaultValueExpression>
+		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
 	</parameter>
 	<field name="AboutEmploymentAreYouEmployedQuestion" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Employed/QuestionLabel]]></fieldDescription>
@@ -44,7 +44,7 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutEmploymentAreYouEmployedAnswer}]]></textFieldExpression>
 			</textField>
-			<subreport>
+			<subreport isUsingCache="true">
 				<reportElement uuid="b12f8af5-9ea9-46b6-8f91-18ab702af38f" x="63" y="53" width="200" height="100"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>

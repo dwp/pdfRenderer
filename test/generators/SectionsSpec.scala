@@ -40,6 +40,23 @@ class SectionsSpec extends Specification {
       content.mkString.toLowerCase.replaceAll("\n", " ")
     }
 
+    def getPDFContentBetweenPage(pdfFileLocation: String, pageNumber:Int, endPageNumber:Int): String = {
+
+      val reader = new com.itextpdf.text.pdf.PdfReader(pdfFileLocation)
+      val parser = new PdfReaderContentParser(reader)
+
+      println("***NumberOfpage :"+reader.getNumberOfPages)
+
+      val content: Seq[String] = for (i <- pageNumber to endPageNumber) yield {
+        val strategy = parser.processContent(i, new SimpleTextExtractionStrategy())
+
+        strategy.getResultantText
+      }
+      reader.close()
+
+      content.mkString.toLowerCase.replaceAll("\n", " ")
+    }
+
     def foundMustBeTrue(testData: Seq[String], totalContent: String) = {
       testData map (s => println("TestDat "+s))
       testData.forall(x => {
@@ -66,6 +83,20 @@ class SectionsSpec extends Specification {
       //deletePdfFile(pdfFileLocation)
     }
 
+    def testContentMatchesBetweenPage(pdfFileLocation: String,
+                                   testCaseXml: Elem,
+                                   generateTestData: (Elem => Seq[String]),
+                                   matchFunction: ((Seq[String], String) => Boolean), pageNumber:Int, endPageNumber:Int) = {
+      testOutputFileExists(pdfFileLocation, testCaseXml)
+      val totalContent = getPDFContentBetweenPage(pdfFileLocation, pageNumber, endPageNumber)
+      val testData = generateTestData(testCaseXml)
+
+      println("TotalContent " + totalContent)
+
+      matchFunction(testData, totalContent) must beTrue
+      //deletePdfFile(pdfFileLocation)
+    }
+
 
 /*
     "extract PDF for SectionPart1AbouYouTheCarer and match contents" in {
@@ -79,16 +110,17 @@ class SectionsSpec extends Specification {
       val pdfFileLocation = "goodClaim_contentTestPDF.pdf"
       testContentMatchesFromPage(pdfFileLocation, ClaimBuilder.goodClaim, XMLData.sectionAboutYourPartner, foundMustBeTrue, 5)
     }*/
-                                                                                        /*
+
     "extract PDF for SectionAboutEmployment and match contents" in {
       val pdfFileLocation = "goodClaim_contentTestPDF.pdf"
-      testContentMatchesFromPage(pdfFileLocation, ClaimBuilder.goodClaim, XMLData.sectionAboutEmployment, foundMustBeTrue, 6)
-    }                                                                                     */
+      testContentMatchesBetweenPage(pdfFileLocation, ClaimBuilder.goodClaim, XMLData.sectionAboutEmployment, foundMustBeTrue, 5, 7)
+    }
 
+    /*
     "extract PDF for SectionAboutSelfEmployment and match contents" in {
       val pdfFileLocation = "goodClaim_contentTestPDF.pdf"
       testContentMatchesFromPage(pdfFileLocation, ClaimBuilder.goodClaim, XMLData.sectionAboutSelfEmployment, foundMustBeTrue, 6)
-    }
+    }*/
 
   }
 }
