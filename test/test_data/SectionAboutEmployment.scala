@@ -70,8 +70,30 @@ case class SectionAboutEmployment(xml: Elem) {
         (y \\ "ChildCareExpenses").
           map(x => {
            Seq("-->>Childcare expenses while you are at work",
-             (x \\ "CarerName" \\ "QuestionLabel").text+" "+(x \\ "CarerName" \\ "Answer").text
+             (x \\ "CarerName" \\ "QuestionLabel").text+" "+(x \\ "CarerName" \\ "Answer").text,
+             (x \\ "Expense" \\ "Payment" \\ "QuestionLabel").text+" "+(x \\ "Expense" \\ "Payment" \\ "Answer" \\ "Amount").text+" "+(x \\ "Expense" \\ "Payment" \\ "Answer" \\ "Currency").text,
+             (x \\ "Expense" \\ "Frequency" \\ "QuestionLabel").text+" "+(x \\ "Expense" \\ "Frequency" \\ "Answer").text,
+             (x \\ "Expense" \\ "Frequency" \\ "Other").text,
+             (x \\ "RelationshipCarerToClaimant" \\ "QuestionLabel").text+" "+(x \\ "RelationshipCarerToClaimant" \\ "Answer").text,
+             (x \\ "RelationshipCarerToPartner" \\ "QuestionLabel").text+" "+(x \\ "RelationshipCarerToPartner" \\ "Answer").text,
+             (x \\ "RelationshipCarerToPartner" \\ "Other").text,
+             (x \\ "RelationToChild" \\ "QuestionLabel").text+" "+(x \\ "RelationToChild" \\ "Answer").text
            )
+        }).flatten ++
+        (y \\ "CareExpenses").
+         map(x =>{
+          Seq("-->>Expenses related to the person you care for, while you are at work",
+            (x \\ "CarerName" \\ "QuestionLabel").text+" "+(x \\ "CarerName" \\ "Answer").text,
+            (x \\ "Expense" \\ "Payment" \\ "QuestionLabel").text+" "+(x \\ "Expense" \\ "Payment" \\ "Answer" \\ "Amount").text+" "+(x \\ "Expense" \\ "Payment" \\ "Answer" \\ "Currency").text,
+            (x \\ "Expense" \\ "Frequency" \\ "QuestionLabel").text+" "+(x \\ "Expense" \\ "Frequency" \\ "Answer").text,
+            (x \\ "Expense" \\ "Frequency" \\ "Other").text,
+            (x \\ "RelationshipCarerToClaimant" \\ "QuestionLabel").text+" "+(x \\ "RelationshipCarerToClaimant" \\ "Answer").text,
+            (x \\ "RelationshipCarerToClaimant" \\ "Other").text,
+            (x \\ "RelationshipCarerToPartner" \\ "QuestionLabel").text+" "+(x \\ "RelationshipCarerToPartner" \\ "Answer").text,
+            (x \\ "RelationshipCarerToPartner" \\ "Other").text,
+            (x \\ "RelationshipCarerToCaree" \\ "QuestionLabel").text+" "+(x \\ "RelationshipCarerToCaree" \\ "Answer").text,
+            (x \\ "RelationshipCarerToCaree" \\ "Other").text
+          )
         }).flatten
       )
       ).flatten
