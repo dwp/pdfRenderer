@@ -109,18 +109,23 @@ class SectionsSpec extends Specification {
     "extract PDF for SectionPart2AboutYourPartner and match contents" in {
       val pdfFileLocation = "goodClaim_contentTestPDF.pdf"
       testContentMatchesFromPage(pdfFileLocation, ClaimBuilder.goodClaim, XMLData.sectionAboutYourPartner, foundMustBeTrue, 5)
-    }*/
+    }
 
     "extract PDF for SectionAboutEmployment and match contents" in {
       val pdfFileLocation = "goodClaim_contentTestPDF.pdf"
       testContentMatchesBetweenPage(pdfFileLocation, ClaimBuilder.goodClaim, XMLData.sectionAboutEmployment, foundMustBeTrue, 5, 7)
-    }
+    }*/
 
     /*
     "extract PDF for SectionAboutSelfEmployment and match contents" in {
       val pdfFileLocation = "goodClaim_contentTestPDF.pdf"
       testContentMatchesFromPage(pdfFileLocation, ClaimBuilder.goodClaim, XMLData.sectionAboutSelfEmployment, foundMustBeTrue, 6)
     }*/
+
+    "extract PDF for SectionAboutTheCareYouProvide and match contents" in {
+      val pdfFileLocation = "goodClaim_contentTestPDF.pdf"
+      testContentMatchesBetweenPage(pdfFileLocation, ClaimBuilder.goodClaim, XMLData.sectionAboutTheCareYouProvide, foundMustBeTrue, 4, 6)
+    }
 
   }
 }
