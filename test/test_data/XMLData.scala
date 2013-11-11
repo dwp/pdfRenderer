@@ -222,7 +222,15 @@ object XMLData extends TestUtils{
         "National Insurance number "+fields.nationalInsuranceNumber.text,
         "Date of Birth "+fields.dateOfBirth.text,
         buildQuestion(fields.liveSameAddressQuestion.text,fields.liveSameAddressAnswer.text),
-        "Contact details of the person you care for"
-    ) ++ aboutTheCareYouProvide(XMLDataFields(xml))
+        "Contact details of the person you care for",
+        "Daytime telephone number "+fields.dayTimeTelephoneNumber.text,
+        "Relationship and other claims",
+        buildQuestion(fields.relationToClaimantQuestion.text, fields.relationToClaimantAnswer.text),
+        buildQuestion(fields.armedForcesIndependantPaymentQuestion.text, fields.armedForcesIndependantPaymentAnswer.text),
+        "More about the care you provide",
+        buildQuestion(fields.cared35HoursQuestion.text, fields.cared35HoursAnswer.text),
+        buildQuestion(fields.cared35HoursBeforeQuestion.text, fields.cared35HoursBeforeAnswer.text),
+        buildQuestion(fields.dateStartedCaringQuestion.text, fields.dateStartedCaringAnswer.text)
+    ) ++ aboutTheCareYouProvide(XMLDataFields(xml)) ++ careBreaks(XMLDataFields(xml))
   }
 }

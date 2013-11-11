@@ -1,9 +1,10 @@
 package test_data
 
 import scala.xml.Elem
+import utils.TestUtils
 
 
-case class XMLDataFields(xml: Elem) {
+case class XMLDataFields(xml: Elem) extends TestUtils{
 
   val rootPath = xml \\ "DWPCATransaction" \\ "DWPCAClaim"
 
@@ -53,12 +54,19 @@ case class XMLDataFields(xml: Elem) {
         case true => Seq()
         case false => Seq("To date and time " + (x \\ "EndDateTime").text)
       }
-
-
-      (fromDate ++ toDate).filterNot(x => x.isEmpty)
-
-    }).
-      filterNot(x => x.isEmpty).flatten
-
+      val otherData = Seq(
+         buildQuestion((x \\ "ReasonClaimant" \\ "QuestionLabel").text,(x \\ "ReasonClaimant" \\ "Answer").text),
+         (x \\ "ReasonClaimant" \\ "Other").text,
+        buildQuestion((x \\ "ReasonCaree" \\ "QuestionLabel").text,(x \\ "ReasonCaree" \\ "Answer").text),
+        buildQuestion((x \\ "MedicalCare" \\ "QuestionLabel").text,(x \\ "MedicalCare" \\ "Answer").text)
+      )
+      (fromDate ++ toDate).filterNot(x => x.isEmpty) ++ otherData
+    }).filterNot(x => x.isEmpty).flatten ++
+    (rootPath \\ "Caree").
+      map(x => {
+      Seq (
+        (x \\ "BreaksSinceClaim" \\ "QuestionLabel").text+" "+(x \\ "BreaksSinceClaim" \\ "Answer").text
+      )
+    }).flatten
   }
 }

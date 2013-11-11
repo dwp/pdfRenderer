@@ -15,4 +15,30 @@ case class SectionAboutTheCareYouProvide(xml: Elem) {
 
   val liveSameAddressAnswer = rootPath \\ "LiveSameAddress" \\ "Answer"
 
+  val dayTimeTelephoneNumber = rootPath \\ "DayTimePhoneNumber"
+
+  val relationToClaimantQuestion = rootPath \\ "RelationToClaimant" \\ "QuestionLabel"
+
+  val relationToClaimantAnswer = rootPath \\ "RelationToClaimant" \\ "Answer"
+
+  val armedForcesIndependantPaymentQuestion = rootPath \\ "ArmedForcesIndependencePayment" \\ "QuestionLabel"
+
+  val armedForcesIndependantPaymentAnswer = rootPath \\ "ArmedForcesIndependencePayment" \\ "Answer"
+
+  val cared35HoursQuestion = rootPath \\ "Cared35Hours" \\ "QuestionLabel"
+
+  val cared35HoursAnswer = rootPath \\ "Cared35Hours" \\ "Answer"
+
+  val cared35HoursBeforeQuestion = rootPath \\ "Cared35HoursBefore" \\ "QuestionLabel"
+
+  val cared35HoursBeforeAnswer = rootPath \\ "Cared35HoursBefore" \\ "Answer"
+
+  val dateStartedCaringQuestion = rootPath \\ "DateStartCaring" \\ "QuestionLabel"
+
+  val dateStartedCaringAnswer = rootPath \\ "DateStartCaring" \\ "Answer"
+
+  val breaksInCareQuestion = rootPath \\ "BreaksSinceClaim" \\ "QuestionLabel"
+
+  val breaksInCareAnswer = rootPath \\ "BreaksSinceClaim" \\ "Answer"
+
 }

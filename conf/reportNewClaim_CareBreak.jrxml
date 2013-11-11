@@ -34,6 +34,12 @@
 	<field name="MedicalAnswer" class="java.lang.String">
 		<fieldDescription><![CDATA[MedicalCare/Answer]]></fieldDescription>
 	</field>
+	<field name="BreaksSinceClaimQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/BreaksSinceClaim/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="BreaksSinceClaimAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/BreaksSinceClaim/Answer]]></fieldDescription>
+	</field>
 	<variable name="variable1" class="java.lang.Integer" incrementType="Group" incrementGroup="Break">
 		<variableExpression><![CDATA[$V{variable1}+1]]></variableExpression>
 		<initialValueExpression><![CDATA[1]]></initialValueExpression>
@@ -65,14 +71,14 @@
 			</band>
 		</groupHeader>
 		<groupFooter>
-			<band height="4"/>
+			<band height="94"/>
 		</groupFooter>
 	</group>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<pageHeader>
-		<band height="23" splitType="Stretch">
+		<band height="44" splitType="Stretch">
 			<rectangle>
 				<reportElement uuid="9f51f6bc-8183-4b31-817c-99e225bdc38e" x="0" y="0" width="553" height="21" backcolor="#999999"/>
 				<graphicElement>
@@ -86,10 +92,20 @@
 				</textElement>
 				<text><![CDATA[Breaks in care]]></text>
 			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="a9f4a284-7c57-49a6-9bb1-70b65bc07018" x="22" y="22" width="328" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{BreaksSinceClaimQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="ac1e911a-07ae-4ed0-a9f3-a5f9b1d4c251" x="355" y="23" width="197" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{BreaksSinceClaimAnswer}]]></textFieldExpression>
+			</textField>
 		</band>
 	</pageHeader>
 	<detail>
-		<band height="124" splitType="Stretch">
+		<band height="130" splitType="Stretch">
 			<staticText>
 				<reportElement uuid="dc478e1f-5c6e-4f3e-bac4-b386f0503472" x="20" y="1" width="330" height="20"/>
 				<textElement/>

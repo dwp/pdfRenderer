@@ -124,7 +124,7 @@ class SectionsSpec extends Specification {
 
     "extract PDF for SectionAboutTheCareYouProvide and match contents" in {
       val pdfFileLocation = "goodClaim_contentTestPDF.pdf"
-      testContentMatchesBetweenPage(pdfFileLocation, ClaimBuilder.goodClaim, XMLData.sectionAboutTheCareYouProvide, foundMustBeTrue, 4, 6)
+      testContentMatchesBetweenPage(pdfFileLocation, ClaimBuilder.goodClaim, XMLData.sectionAboutTheCareYouProvide, foundMustBeTrue, 4, 8)
     }
 
   }
