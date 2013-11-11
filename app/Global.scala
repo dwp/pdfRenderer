@@ -3,7 +3,6 @@ import modules.ProdModule
 import play.api._
 
 object Global extends GlobalSettings {
-  lazy val injector = Guice.createInjector(module)
 
   def module = ProdModule
 

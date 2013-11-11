@@ -5,7 +5,6 @@ import test_data.CircsBuilder
 import java.io.File
 import scala.xml.Elem
 import generators.Helper._
-import data_sources.XmlDataSource
 
 
 /**

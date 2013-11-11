@@ -17,7 +17,6 @@ object ApplicationBuild extends Build {
     "com.itextpdf" % "itextpdf" % "5.4.4",
     "org.codehaus.groovy" % "groovy-all" % "2.0.1",
     "xalan" % "xalan" % "2.7.1",
-    "com.google.inject" % "guice" % "4.0-beta",
     "com.tzavellas" % "sse-guice" % "0.7.1",
     "com.dwp.carers" %% "carerscommon" % "0.9"
   )

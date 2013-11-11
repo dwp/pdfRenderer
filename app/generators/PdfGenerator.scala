@@ -7,7 +7,7 @@ import java.io.OutputStream
 
 /**
  * Generates a PDF from a DataSource.
- * It reads the compiled report template, generate a JasperPrint and writes to a file.
+ * It reads the compiled report template, generate a JasperPrint and writes to a stream.
  *
  * @author Jorge Migueis
  */

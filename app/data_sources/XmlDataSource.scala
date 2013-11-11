@@ -1,7 +1,7 @@
 package data_sources
 
 import net.sf.jasperreports.engine.JRDataSource
-import scala.xml.{NodeSeq, Elem}
+import scala.xml.NodeSeq
 import java.io.ByteArrayInputStream
 import net.sf.jasperreports.engine.data.JRXmlDataSource
 

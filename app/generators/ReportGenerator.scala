@@ -17,35 +17,22 @@ trait ReportGenerator {
 
 
   def generateFrom(source: ReportDataSource):Option[JasperPrint] = {
-
     try {
       val jasperReportFilename = source.jasperReportFilenameMatcher()
 
       // Needed so compiles sub-reports
       val jasperReport = compileReportsRecursively(jasperReportFilename)
 
-//      val jasperReport = createJasperReport(jasperReportFilename)
       val dataSource = source.convertToJRDataSource()
       val jasperPrint = JasperFillManager.fillReport(jasperReport, null, dataSource)
       if (null != jasperPrint) Some(jasperPrint) else None
-//      exportReportToFormat(jasperPrint, fileLocation)
-//      GenerationSuccess()
     }
     catch {
       case e: Throwable => {
-        //e.printStackTrace()
         Logger.error(e.getMessage)
         None
-//        GenerationFailure()
       }
     }
-  }
-
-  private def createJasperReport(fileName: String): JasperReport = {
-    val jasperTemplate = getClass.getClassLoader.getResourceAsStream(fileName + ".jrxml")
-    val jasperDesign = JRXmlLoader.load(jasperTemplate)
-    val jasperReport = JasperCompileManager.compileReport(jasperDesign)
-    jasperReport
   }
 
   def exportReportToStream(print: Option[JasperPrint], stream: OutputStream): SuccessOrFailure
