@@ -5,6 +5,7 @@ import generators.{GenerationFailure, GenerationSuccess, ReportGenerator}
 import pdfService.Implicits._
 import play.api.Logger
 import java.io.OutputStream
+import data_sources.InvalidSourceFormatException
 
 /**
  * TODO write description
@@ -22,22 +23,27 @@ trait PdfService {
     request.body.asXml.map {
       xml =>
         val generator = reportGenerator
-        val print = generator.generateFrom(xml)
+        try {
+          val print = generator.generateFrom(xml)
 
-        generator.exportReportToStream(print, outputStream) match {
-          case GenerationSuccess() =>
-            Results.Ok
+          generator.exportReportToStream(print, outputStream) match {
+            case GenerationSuccess() =>
+              Results.Ok
 
-          case GenerationFailure() =>
-            Results.InternalServerError
+            case GenerationFailure() =>
+              Results.InternalServerError
 
-          case _ =>
-            Logger.error("Unexpected result")
-            Results.InternalServerError
+            case _ =>
+              Logger.error("Unexpected result")
+              Results.InternalServerError
 
+          }
+        }
+        catch {
+          case e: InvalidSourceFormatException => Results.BadRequest
         }
 
-    }.getOrElse(Results.BadRequest)
+    }.getOrElse(Results.UnsupportedMediaType)
 
   }
 

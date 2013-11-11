@@ -1,7 +1,8 @@
 package service
 
 import generators.{PdfGenerator, ReportGenerator}
-import java.io.OutputStream
+import java.io.{FileOutputStream, OutputStream}
+import java.util.Date
 
 /**
  * TODO write description
@@ -12,6 +13,6 @@ trait PdfServiceImpl extends PdfService {
   protected def reportGenerator: ReportGenerator = PdfGenerator
 
   protected def outputStream: OutputStream = {
-    null
+    new FileOutputStream("PDFGenerated_" + new Date())
   }
 }

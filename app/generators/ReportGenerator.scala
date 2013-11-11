@@ -1,6 +1,6 @@
 package generators
 
-import data_sources.ReportDataSource
+import data_sources.{InvalidSourceFormatException, ReportDataSource}
 import net.sf.jasperreports.engine._
 import net.sf.jasperreports.engine.xml.JRXmlLoader
 import play.api.Logger
@@ -28,6 +28,7 @@ trait ReportGenerator {
       if (null != jasperPrint) Some(jasperPrint) else None
     }
     catch {
+      case e: InvalidSourceFormatException => throw e
       case e: Throwable => {
         Logger.error(e.getMessage)
         None

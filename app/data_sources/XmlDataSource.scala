@@ -25,7 +25,7 @@ case class XmlDataSource(source: NodeSeq) extends ReportDataSource {
     circsElement.isEmpty match {
       case true => {
         claimElement.isEmpty match {
-          case true => throw new scala.RuntimeException("XmlDataSource did not contain an XML element that matches a jasper template")
+          case true => throw new InvalidSourceFormatException("XmlDataSource did not contain an XML element that matches a jasper template")
           case false => claimJasperTemplate
         }
       }
