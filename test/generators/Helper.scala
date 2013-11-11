@@ -1,6 +1,6 @@
 package generators
 
-import java.io.File
+import java.io.{FileOutputStream, File}
 import scala.xml.Elem
 import data_sources.XmlDataSource
 
@@ -14,7 +14,9 @@ object Helper {
 
   def generatePDF (pdfFileLocation: String, xml: Elem) = {
     val dataSource = new XmlDataSource(xml)
-    PdfGenerator.generateFrom(dataSource, pdfFileLocation)
+    val print = PdfGenerator.generateFrom(dataSource)
+    val file = new FileOutputStream(pdfFileLocation)
+    PdfGenerator.exportReportToStream(print, file)
   }
 
 

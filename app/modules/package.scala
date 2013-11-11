@@ -1,4 +1,6 @@
 import com.tzavellas.sse.guice.ScalaModule
+import data_sources.{XmlDataSource, ReportDataSource}
+import scala.xml.{NodeSeq, Elem}
 
 package object modules {
 
@@ -10,4 +12,12 @@ package object modules {
     }
   }
 
+}
+
+package object pdfService {
+
+  object Implicits {
+
+ implicit def xmlToDataSource(xml:NodeSeq ):ReportDataSource = new XmlDataSource(xml)
+}
 }

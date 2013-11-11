@@ -1,8 +1,7 @@
-# POST     /submit/claim     controllers.Application.submitClaim
-# POST     /retry/claim      controllers.Application.retryClaim
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
 
+# Home page
+POST     /print                           controllers.Application.generatePDF
 
-
-# Mock GG endpoint
-# POST     /submission        controllers.MockGG.submission
-# POST     /poll              controllers.MockGG.poll

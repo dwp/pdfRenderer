@@ -7,6 +7,7 @@ import play.api.Logger
 import net.sf.jasperreports.engine.design.JasperDesign
 import net.sf.jasperreports.engine.util.{JRElementsVisitor, JRSaver}
 import java.util.StringTokenizer
+import java.io.OutputStream
 
 
 /**
@@ -15,24 +16,27 @@ import java.util.StringTokenizer
 trait ReportGenerator {
 
 
-  def generateFrom(source: ReportDataSource, fileLocation: String): SuccessOrFailure = {
+  def generateFrom(source: ReportDataSource):Option[JasperPrint] = {
 
     try {
       val jasperReportFilename = source.jasperReportFilenameMatcher()
 
-      compileReportsRecursively(jasperReportFilename)
+      // Needed so compiles sub-reports
+      val jasperReport = compileReportsRecursively(jasperReportFilename)
 
-      val jasperReport = createJasperReport(jasperReportFilename)
+//      val jasperReport = createJasperReport(jasperReportFilename)
       val dataSource = source.convertToJRDataSource()
       val jasperPrint = JasperFillManager.fillReport(jasperReport, null, dataSource)
-      exportReportToFormat(jasperPrint, fileLocation)
-      GenerationSuccess()
+      if (null != jasperPrint) Some(jasperPrint) else None
+//      exportReportToFormat(jasperPrint, fileLocation)
+//      GenerationSuccess()
     }
     catch {
       case e: Throwable => {
         //e.printStackTrace()
         Logger.error(e.getMessage)
-        GenerationFailure()
+        None
+//        GenerationFailure()
       }
     }
   }
@@ -44,10 +48,9 @@ trait ReportGenerator {
     jasperReport
   }
 
-  protected def exportReportToFormat(print: JasperPrint, fileLocation:String): SuccessOrFailure
+  def exportReportToStream(print: Option[JasperPrint], stream: OutputStream): SuccessOrFailure
 
-
-  def compileReportsRecursively(fileName: String): Unit = {
+  private def compileReportsRecursively(fileName: String): JasperReport = {
     val jrxmlFilename = "conf/" + fileName + ".jrxml"
     val jasperFilename = "conf/" + fileName + ".jasper"
 
@@ -73,5 +76,6 @@ trait ReportGenerator {
         compileReportsRecursively(subReportName)
       }
     })
+    jasperReport
   }
 }

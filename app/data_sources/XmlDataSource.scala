@@ -1,15 +1,15 @@
 package data_sources
 
 import net.sf.jasperreports.engine.JRDataSource
-import scala.xml.Elem
+import scala.xml.{NodeSeq, Elem}
 import java.io.ByteArrayInputStream
 import net.sf.jasperreports.engine.data.JRXmlDataSource
 
 /**
- * Receives XML and converts to JRXmlDataSource
- * @param source
+ * Receives XML and converts to JRXmlDataSource so it can be used by the Jasper generator engine.
+ * @param source XML to convert to a Jasper ReportDataSource.
  */
-case class XmlDataSource(source: Elem) extends ReportDataSource {
+case class XmlDataSource(source: NodeSeq) extends ReportDataSource {
   val claimElement = source \\ "DWPCATransaction" \\ "DWPCAClaim"
   val claimJasperTemplate = "reportNewClaim"
   val circsElement = source \\ "DWPCATransaction" \\ "DWPCAChangeOfCircumstances"

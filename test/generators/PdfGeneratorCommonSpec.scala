@@ -4,6 +4,8 @@ import org.specs2.mutable._
 import data_sources.XmlDataSource
 import test_data.ClaimBuilder
 import java.io.File
+import java.io.{FileOutputStream, File}
+
 import generators.Helper._
 
 
@@ -36,7 +38,8 @@ class PdfGeneratorCommonSpec extends Specification {
       val pdfFileLocation = "goodClaimCreate.pdf"
       val xml = ClaimBuilder.goodClaim
       val dataSource = new XmlDataSource(xml)
-      PdfGenerator.generateFrom(dataSource, pdfFileLocation)
+      val print = PdfGenerator.generateFrom(dataSource)
+      PdfGenerator.exportReportToStream(print, new FileOutputStream(pdfFileLocation))
       val pdfFile = new File(pdfFileLocation)
       pdfFile.exists() must beTrue
       //deletePdfFile(pdfFileLocation)
