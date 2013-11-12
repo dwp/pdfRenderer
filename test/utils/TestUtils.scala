@@ -10,7 +10,7 @@ trait TestUtils {
   def buildOther (question :String, answer :String, other :String) :String = {
     val otherLabel = "Other"
     answer match {
-      case "Other" => buildQuestion(question, answer) + " " + buildQuestion("Other", other)
+      case "Other" => buildQuestion(question, answer) + " " + other
       case _ => buildQuestion(question, answer)
     }
   }
