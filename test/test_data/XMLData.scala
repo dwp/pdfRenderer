@@ -259,4 +259,11 @@ object XMLData extends TestUtils{
       "Postcode " + fields.otherMoneySPEmployerPostcode.text
     )
   }
+
+  def sectionAboutYourPayDetails(xml:Elem) = {
+    val fields = SectionAboutOtherMoney(xml)
+    Seq ("Part 8 - About Your Pay Details"
+    )
+  }
+
 }
