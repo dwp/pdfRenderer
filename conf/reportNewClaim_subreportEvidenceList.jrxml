@@ -13,6 +13,18 @@
 	<field name="Title" class="java.lang.String">
 		<fieldDescription><![CDATA[Title]]></fieldDescription>
 	</field>
+	<field name="EvidenceListAddressLine1" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/EvidenceList/RecipientAddress/Line[1]]]></fieldDescription>
+	</field>
+	<field name="EvidenceListAddressLine2" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/EvidenceList/RecipientAddress/Line[2]]]></fieldDescription>
+	</field>
+	<field name="EvidenceListAddressLine3" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/EvidenceList/RecipientAddress/Line[3]]]></fieldDescription>
+	</field>
+	<field name="EvidenceListAddressPostcode" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/EvidenceList/RecipientAddress/PostCode]]></fieldDescription>
+	</field>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -25,27 +37,47 @@
 				</graphicElement>
 			</rectangle>
 			<staticText>
-				<reportElement uuid="6cf14df3-9e26-47f3-bc7b-d79c3c5d705f" x="2" y="0" width="100" height="21" forecolor="#FFFFFF"/>
+				<reportElement uuid="6cf14df3-9e26-47f3-bc7b-d79c3c5d705f" x="2" y="0" width="220" height="21" forecolor="#FFFFFF"/>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Evidence List]]></text>
+				<text><![CDATA[Part 10 - Customer Evidence List]]></text>
 			</staticText>
 		</band>
 	</pageHeader>
 	<detail>
-		<band height="20" splitType="Stretch">
+		<band height="118" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="a3cceaa9-422f-496c-a993-d68a03fdb48f" x="2" y="0" width="321" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EvidenceListAddressLine1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="262b4290-0d97-4286-9454-dfd5efe70674" x="2" y="20" width="321" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EvidenceListAddressLine2}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="1ee61698-1c8a-4183-bf2c-c3ba35f5376d" x="2" y="40" width="321" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EvidenceListAddressLine3}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="a58d0a28-3e57-45e4-8893-1b760457ad32" x="2" y="60" width="321" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EvidenceListAddressPostcode}]]></textFieldExpression>
+			</textField>
 			<textField>
-				<reportElement uuid="fcd3ab37-4374-45fc-bfd2-b8f2313382c1" x="0" y="1" width="555" height="18"/>
+				<reportElement uuid="fcd3ab37-4374-45fc-bfd2-b8f2313382c1" x="0" y="98" width="555" height="18"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{Title}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="21">
+		<band height="24">
 			<subreport>
-				<reportElement uuid="468b0525-7ca5-465f-9703-0e5b4110ced4" x="0" y="0" width="555" height="20"/>
+				<reportElement uuid="468b0525-7ca5-465f-9703-0e5b4110ced4" x="2" y="0" width="555" height="20"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
