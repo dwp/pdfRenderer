@@ -261,8 +261,16 @@ object XMLData extends TestUtils{
   }
 
   def sectionAboutYourPayDetails(xml:Elem) = {
-    val fields = SectionAboutOtherMoney(xml)
-    Seq ("Part 8 - About Your Pay Details"
+    val fields = SectionAboutYourPayDetails(xml)
+    Seq ("Part 8 - About Your Pay Details",
+         buildQuestion(fields.howToGetPaidQuestion.text, fields.howToGetPaidAnswer.text),
+         buildOther(fields.howOftenGetPaidQuestion.text, fields.howOftenGetPaidAnswer.text, fields.howOftenGetPaidOther.text),
+         "Bank/Building Society Details",
+         "Name of account holder" + " " + fields.bankAccountHolderName.text,
+         "Full name of bank or building society" + " " + fields.bankAccountBankName.text,
+         "Sort code" + " " + fields.bankAccountSortCode.text,
+         "Account number" + " " + fields.bankAccountNumber.text,
+         "Building society roll or reference number" + " " + fields.bankAccountReferenceNumber.text
     )
   }
 

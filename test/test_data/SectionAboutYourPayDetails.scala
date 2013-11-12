@@ -2,7 +2,7 @@ package test_data
 
 import scala.xml.Elem
 
-class SectionAboutYourPayDetails(xml: Elem) {
+case class SectionAboutYourPayDetails(xml: Elem) {
 
   val rootPath = xml \ "DWPCATransaction" \ "DWPCAClaim"
 
