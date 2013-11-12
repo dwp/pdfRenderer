@@ -45,7 +45,7 @@ case class SectionAboutSelfEmployment(xml: Elem) {
 
   val pensionSchemeFrequencyQuestion = rootPath  \\ "SelfEmployment" \\ "PensionScheme" \\ "Frequency" \\ "QuestionLabel"
   val pensionSchemeFrequencyAnswer = rootPath  \\ "SelfEmployment" \\ "PensionScheme" \\ "Frequency" \\ "Answer"
-  val pensionSchemeFrequencyOther = rootPath  \\ "SelfEmployment" \\ "PensionScheme" \\ "Frequency" \\ "Answer"
+  val pensionSchemeFrequencyOther = rootPath  \\ "SelfEmployment" \\ "PensionScheme" \\ "Frequency" \\ "Other"
 
   val careExpensesChildrenQuestion = rootPath  \\ "SelfEmployment" \\ "CareExpensesChildren" \\ "QuestionLabel"
   val careExpensesChildrenAnswer = rootPath  \\ "SelfEmployment" \\ "CareExpensesChildren" \\ "Answer"
@@ -59,7 +59,7 @@ case class SectionAboutSelfEmployment(xml: Elem) {
 
   val careExpensesChildrenPaymentFrequencyQuestion = rootPath  \\ "SelfEmployment" \\ "ChildCareExpenses"  \\ "Expense" \\ "Frequency" \\ "QuestionLabel"
   val careExpensesChildrenPaymentFrequencyAnswer = rootPath  \\ "SelfEmployment" \\ "ChildCareExpenses"  \\ "Expense" \\ "Frequency" \\ "Answer"
-  val careExpensesChildrenPaymentFrequencyOther = rootPath  \\ "SelfEmployment" \\ "ChildCareExpenses"  \\ "Expense" \\ "Frequency" \\ "Answer"
+  val careExpensesChildrenPaymentFrequencyOther = rootPath  \\ "SelfEmployment" \\ "ChildCareExpenses"  \\ "Expense" \\ "Frequency" \\ "Other"
 
   val careExpensesChildrenRelationshipToCarerQuestion = rootPath  \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "RelationshipCarerToClaimant" \\ "QuestionLabel"
   val careExpensesChildrenRelationshipToCarerAnswer = rootPath  \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "RelationshipCarerToClaimant" \\ "Answer"
@@ -82,7 +82,7 @@ case class SectionAboutSelfEmployment(xml: Elem) {
 
   val careExpensesCareePaymentFrequencyQuestion = rootPath  \\ "SelfEmployment" \\ "CareExpenses"  \\ "Expense" \\ "Payment" \\ "Frequency" \\ "QuestionLabel"
   val careExpensesCareePaymentFrequencyAnswer = rootPath  \\ "SelfEmployment" \\ "CareExpenses"  \\ "Expense" \\ "Payment" \\ "Frequency" \\ "Answer"
-  val careExpensesCareePaymentFrequencyOther = rootPath  \\ "SelfEmployment" \\ "CareExpenses"  \\ "Expense" \\ "Payment" \\ "Frequency" \\ "Answer"
+  val careExpensesCareePaymentFrequencyOther = rootPath  \\ "SelfEmployment" \\ "CareExpenses"  \\ "Expense" \\ "Payment" \\ "Frequency" \\ "Other"
 
   val careExpensesRelationshipCarerToClaimantQuestion = rootPath  \\ "SelfEmployment" \\ "CareExpenses" \\ "RelationshipCarerToClaimant" \\ "QuestionLabel"
   val careExpensesRelationshipCarerToClaimantAnswer = rootPath  \\ "SelfEmployment" \\ "CareExpenses" \\ "RelationshipCarerToClaimant" \\ "Answer"

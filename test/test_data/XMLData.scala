@@ -1,10 +1,9 @@
 package test_data
 
 import scala.xml.Elem
-import utils.TestUtils
 
 
-object XMLData extends TestUtils{
+object XMLData {
   def madeUpField(xml: Elem) = {
     Seq(
       "I am an invalid field that should never appear in the pdf"
@@ -72,8 +71,7 @@ object XMLData extends TestUtils{
     val fields = XMLDataFields(xml)
     Seq(
       "Transaction: " + fields.transactionPath.text + " " + fields.title.text + " " + fields.surName.text + " " + fields.nationalInsuranceNumber.text,
-      "Summary",
-      "About the care you provide"
+      "Summary"
     ) ++ aboutYouTheCarer(fields) ++ aboutTheCareYouProvide(fields) ++ claimDates(fields) ++ claimSummary(fields)
   }
 
@@ -90,6 +88,7 @@ object XMLData extends TestUtils{
 
   def aboutTheCareYouProvide(fields: XMLDataFields) = {
     Seq(
+      "About the care you provide",
       "Last name " + fields.careeLastName.text,
       "First name(s) " + fields.careeFirstName.text,
       "Title " + fields.careeTitle.text,
@@ -120,7 +119,7 @@ object XMLData extends TestUtils{
   def careBreaks(fields: XMLDataFields) = fields.careBreak
 
   def sectionAboutYouTheCarer(xml: Elem) = {
-    val fields = SectionPart1AboutYouTheCarer(xml)
+    val fields = SectionPart1AboutYouTheCarer(xml);
     Seq("Part 1 - About you - the carer",
       "Your details",
       "Title " + fields.title.text,
@@ -159,7 +158,7 @@ object XMLData extends TestUtils{
   }
 
   def sectionAboutYourPartner(xml: Elem) = {
-    val fields = SectionPart2AboutYourPartner(xml)
+    val fields = SectionPart2AboutYourPartner(xml);
     Seq ("Part 2 - About your partner",
          "Partner/Spouse details",
          "Other surname or maiden name "+fields.otherSurnameOrMaidenName.text,
@@ -172,7 +171,7 @@ object XMLData extends TestUtils{
   }
 
   def sectionAboutEmployment(xml:Elem) = {
-    val fields = SectionAboutEmployment(xml)
+    val fields = SectionAboutEmployment(xml);
     Seq ("Part 5 - About Your Employment",
          fields.areYouEmployedQuestion.text+" "+fields.areYouEmployedAnswer.text) ++ fields.employmentDetails
   }
@@ -215,14 +214,50 @@ object XMLData extends TestUtils{
       )
   }
 
-  def sectionAboutTheCareYouProvide(xml:Elem) = {
-    val fields = SectionAboutTheCareYouProvide(xml)
-    Seq("Part 3 - About the care you provide",
-        "Details of the person you care for",
-        "National Insurance number "+fields.nationalInsuranceNumber.text,
-        "Date of Birth "+fields.dateOfBirth.text,
-        buildQuestion(fields.liveSameAddressQuestion.text,fields.liveSameAddressAnswer.text),
-        "Contact details of the person you care for"
-    ) ++ aboutTheCareYouProvide(XMLDataFields(xml))
+  def sectionAboutOtherMoney(xml:Elem) = {
+    val fields = SectionAboutOtherMoney(xml)
+    Seq ("Part 7 - About Other Money",
+      "Details about other money",
+      buildQuestion(fields.otherMoneyQuestion.text, fields.otherMoneyAnswer.text),
+      buildQuestion(fields.otherMoneyPaymentQuestion.text, fields.otherMoneyPaymentAnswer.text),
+      buildQuestion(fields.otherMoneyPaymentNameQuestion.text, fields.otherMoneyPaymentNameAnswer.text),
+      buildAmount(fields.otherMoneyPaymentAmountQuestion.text, fields.otherMoneyPaymentAmountCurrency.text, fields.otherMoneyPaymentAmountAmount.text),
+      buildOther(fields.otherMoneyPaymentFrequencyQuestion.text, fields.otherMoneyPaymentFrequencyAnswer.text, fields.otherMoneyPaymentFrequencyOther.text),
+      "Statutory Sick Pay",
+      buildQuestion(fields.otherMoneySSPQuestion.text, fields.otherMoneySSPAnswer.text),
+      buildAmount(fields.otherMoneySSPPaymentAmountQuestion.text, fields.otherMoneySSPPaymentAmountCurrency.text, fields.otherMoneySSPPaymentAmountAmount.text),
+      buildOther(fields.otherMoneySSPPaymentFrequencyQuestion.text, fields.otherMoneySSPPaymentFrequencyAnswer.text, fields.otherMoneySSPPaymentFrequencyOther.text),
+      "Employer's Name" + " " + fields.otherMoneySSPEmployerName.text,
+      "Street / Town / City " + fields.otherMoneySSPEmployerAddress,
+      "Postcode " + fields.otherMoneySSPEmployerPostcode.text,
+      "Other Statutory Pay",
+      buildQuestion(fields.otherMoneySPQuestion.text, fields.otherMoneySPAnswer.text),
+      buildAmount(fields.otherMoneySPPaymentAmountQuestion.text, fields.otherMoneySPPaymentAmountCurrency.text, fields.otherMoneySPPaymentAmountAmount.text),
+      buildOther(fields.otherMoneySPPaymentFrequencyQuestion.text, fields.otherMoneySPPaymentFrequencyAnswer.text, fields.otherMoneySPPaymentFrequencyOther.text),
+      "Employer's Name" + " " + fields.otherMoneySPEmployerName.text,
+      "Street / Town / City " + fields.otherMoneySPEmployerAddress,
+      "Postcode " + fields.otherMoneySPEmployerPostcode.text
+    )
   }
+
+  // TODO : Move this somewhere more reasonable
+  def buildQuestion (question :String, answer :String) :String = {
+    question + " " + answer
+  }
+
+  // TODO : Move this somewhere more reasonable
+  def buildOther (question :String, answer :String, other :String) :String = {
+    val otherLabel = "Other"
+    answer match {
+      case "Other" => buildQuestion(question, answer) + " " + other
+      case _ => buildQuestion(question, answer)
+    }
+  }
+
+  // TODO : Move this somewhere more reasonable
+  def buildAmount (question :String, currency :String, amount :String) :String = {
+    question + " " + amount + " " + currency
+  }
+
+
 }

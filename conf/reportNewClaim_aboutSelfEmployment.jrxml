@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYourPartner" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="2c76a7f8-deb9-45af-83f2-c12559d20c72">
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="640"/>
+	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
@@ -62,7 +62,7 @@
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/RecentJobDetails/SameIncomeOutgoingLevels/QuestionLabel]]></fieldDescription>
 	</field>
 	<field name="sameIncomeOutgoingLevelsAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[           /DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/RecentJobDetails/SameIncomeOutgoingLevels/Answer]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/RecentJobDetails/SameIncomeOutgoingLevels/Answer]]></fieldDescription>
 	</field>
 	<field name="whyWhenChangeQuestion" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/RecentJobDetails/WhyWhenChange/QuestionLabel]]></fieldDescription>
@@ -387,11 +387,6 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{pensionSchemeFrequencyAnswer}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="8096f851-fda9-403a-adc7-ff2064eb4229" x="11" y="90" width="291" height="20" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{pensionSchemeFrequencyAnswer} == "Other" ? $F{pensionSchemeFrequencyAnswer} : null]]></textFieldExpression>
-			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="14124939-e11d-424f-ae13-256b9a7943d9" x="349" y="90" width="185" height="20" isRemoveLineWhenBlank="true"/>
 				<textElement/>
@@ -546,11 +541,6 @@
 				<reportElement uuid="dbfa813a-f5f6-49b1-8caf-9676123e3927" x="349" y="90" width="185" height="20" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{careExpensesCareePaymentFrequencyAnswer}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="2334fad7-d8ad-4b7b-a0df-3d9afa981a37" x="11" y="110" width="291" height="20" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{careExpensesCareePaymentFrequencyAnswer}=="Other" ? $F{careExpensesCareePaymentFrequencyAnswer} : null]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="6d869767-6ec5-453f-a727-d76541c12e4d" x="349" y="110" width="185" height="20" isRemoveLineWhenBlank="true"/>
