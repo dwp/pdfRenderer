@@ -15,7 +15,8 @@ case class SectionEvidenceList(xml:Elem) {
     (rootPath \\ "Evidence").
       map(x => {
       Seq((x \\ "Title").text,
-        (x \\ "Content").text)
+         (x \\ "Content").map(v => v.text).reduce((total,cur) => total + " " + cur)
+      )
     }).flatten
   }
 }
