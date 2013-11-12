@@ -32,7 +32,7 @@ case class XMLDataFields(xml: Elem) extends TestUtils{
 
   val postCodeCarer = rootPath \\ "Claimant" \\ "Address" \\ "PostCode"
 
-  val addressCaree = (rootPath \\ "Caree" \\ "Address" \\ "Line").map(x => x.text).filterNot(x => x.isEmpty).mkString(" ")
+  val addressCaree = (rootPath \\ "Caree" \\ "Address" \\ "Line").map(x => x.text).filterNot(x => x.isEmpty).mkString("\n")
 
   val postCodeCaree = rootPath \\ "Caree" \\ "Address" \\ "PostCode"
 
