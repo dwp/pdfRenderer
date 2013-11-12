@@ -1,9 +1,10 @@
 package test_data
 
 import scala.xml.Elem
+import utils.TestUtils
 
 
-object XMLData {
+object XMLData extends TestUtils{
   def madeUpField(xml: Elem) = {
     Seq(
       "I am an invalid field that should never appear in the pdf"
@@ -71,7 +72,8 @@ object XMLData {
     val fields = XMLDataFields(xml)
     Seq(
       "Transaction: " + fields.transactionPath.text + " " + fields.title.text + " " + fields.surName.text + " " + fields.nationalInsuranceNumber.text,
-      "Summary"
+      "Summary",
+      "About the care you provide"
     ) ++ aboutYouTheCarer(fields) ++ aboutTheCareYouProvide(fields) ++ claimDates(fields) ++ claimSummary(fields)
   }
 
@@ -88,7 +90,6 @@ object XMLData {
 
   def aboutTheCareYouProvide(fields: XMLDataFields) = {
     Seq(
-      "About the care you provide",
       "Last name " + fields.careeLastName.text,
       "First name(s) " + fields.careeFirstName.text,
       "Title " + fields.careeTitle.text,
@@ -119,7 +120,7 @@ object XMLData {
   def careBreaks(fields: XMLDataFields) = fields.careBreak
 
   def sectionAboutYouTheCarer(xml: Elem) = {
-    val fields = SectionPart1AboutYouTheCarer(xml);
+    val fields = SectionPart1AboutYouTheCarer(xml)
     Seq("Part 1 - About you - the carer",
       "Your details",
       "Title " + fields.title.text,
@@ -158,7 +159,7 @@ object XMLData {
   }
 
   def sectionAboutYourPartner(xml: Elem) = {
-    val fields = SectionPart2AboutYourPartner(xml);
+    val fields = SectionPart2AboutYourPartner(xml)
     Seq ("Part 2 - About your partner",
          "Partner/Spouse details",
          "Other surname or maiden name "+fields.otherSurnameOrMaidenName.text,
@@ -171,7 +172,7 @@ object XMLData {
   }
 
   def sectionAboutEmployment(xml:Elem) = {
-    val fields = SectionAboutEmployment(xml);
+    val fields = SectionAboutEmployment(xml)
     Seq ("Part 5 - About Your Employment",
          fields.areYouEmployedQuestion.text+" "+fields.areYouEmployedAnswer.text) ++ fields.employmentDetails
   }
@@ -214,6 +215,25 @@ object XMLData {
       )
   }
 
+  def sectionAboutTheCareYouProvide(xml:Elem) = {
+    val fields = SectionAboutTheCareYouProvide(xml)
+    Seq("Part 3 - About the care you provide",
+        "Details of the person you care for",
+        "National Insurance number "+fields.nationalInsuranceNumber.text,
+        "Date of Birth "+fields.dateOfBirth.text,
+        buildQuestion(fields.liveSameAddressQuestion.text,fields.liveSameAddressAnswer.text),
+        "Contact details of the person you care for",
+        "Daytime telephone number "+fields.dayTimeTelephoneNumber.text,
+        "Relationship and other claims",
+        buildQuestion(fields.relationToClaimantQuestion.text, fields.relationToClaimantAnswer.text),
+        buildQuestion(fields.armedForcesIndependantPaymentQuestion.text, fields.armedForcesIndependantPaymentAnswer.text),
+        "More about the care you provide",
+        buildQuestion(fields.cared35HoursQuestion.text, fields.cared35HoursAnswer.text),
+        buildQuestion(fields.cared35HoursBeforeQuestion.text, fields.cared35HoursBeforeAnswer.text),
+        buildQuestion(fields.dateStartedCaringQuestion.text, fields.dateStartedCaringAnswer.text)
+    ) ++ aboutTheCareYouProvide(XMLDataFields(xml)) ++ careBreaks(XMLDataFields(xml))
+  }
+  
   def sectionAboutOtherMoney(xml:Elem) = {
     val fields = SectionAboutOtherMoney(xml)
     Seq ("Part 7 - About Other Money",
@@ -239,25 +259,4 @@ object XMLData {
       "Postcode " + fields.otherMoneySPEmployerPostcode.text
     )
   }
-
-  // TODO : Move this somewhere more reasonable
-  def buildQuestion (question :String, answer :String) :String = {
-    question + " " + answer
-  }
-
-  // TODO : Move this somewhere more reasonable
-  def buildOther (question :String, answer :String, other :String) :String = {
-    val otherLabel = "Other"
-    answer match {
-      case "Other" => buildQuestion(question, answer) + " " + other
-      case _ => buildQuestion(question, answer)
-    }
-  }
-
-  // TODO : Move this somewhere more reasonable
-  def buildAmount (question :String, currency :String, amount :String) :String = {
-    question + " " + amount + " " + currency
-  }
-
-
 }
