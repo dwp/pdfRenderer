@@ -274,4 +274,25 @@ object XMLData extends TestUtils{
     )
   }
 
+  def sectionAboutYourEducation(xml:Elem) = {
+     val fields = SectionAboutYourEducation(xml)
+     Seq("Part 4 - About Your Education",
+        buildQuestion(fields.courseOfEducationQuestion.text, fields.courseOfEducationAnswer.text),
+        "Your course details",
+        "Type of course "+fields.courseDetailsType.text,
+        "Course title "+fields.courseDetailsTitle.text,
+        buildQuestion(fields.courseDetailsDateStartedQuestion.text, fields.courseDetailsDateStartedAnswer.text),
+        buildQuestion(fields.courseDetailsDateStoppedQuestion.text, fields.courseDetailsDateStoppedAnswer.text),
+        buildQuestion(fields.courseDetailsExpectedEndDateQuestion.text, fields.courseDetailsExpectedEndDateAnswer.text),
+        "Your student reference number "+fields.studentReferenceNumber.text,
+        "School, college or university’s contact details",
+        "Name of school, college or university "+fields.nameOfUniversity.text,
+        "Name of main Teacher or Tutor "+fields.nameOfTheTutor.text,
+        "Street / Town / City " + fields.address,
+        "Postcode "+fields.postCode.text,
+        "Phone number "+fields.phoneNumber.text,
+        "Fax number "+fields.faxNumber.text
+     )
+  }
+
 }

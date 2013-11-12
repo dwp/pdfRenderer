@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_AboutYourEducation" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="233a6ecd-5683-49cd-8996-0dfae9f2e3d1">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="144"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/Users/valtechuk/carers-dev-pdf/pdfService/pdfService/conf/"]]></defaultValueExpression>
+	</parameter>
+	<field name="AboutYourEducationCourseofEducationQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/CourseOfEducation/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutYourEducationCourseofEducationAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/CourseOfEducation/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutYourEducationCourseDetailsType" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/FullTimeEducation/CourseDetails/Type]]></fieldDescription>
+	</field>
+	<field name="AboutYourEducationCourseDetailsTitle" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/FullTimeEducation/CourseDetails/Title]]></fieldDescription>
+	</field>
+	<field name="AboutYourEducationCourseDetailsDateStartedQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/FullTimeEducation/CourseDetails/DateStarted/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutYourEducationCourseDetailsDateStartedAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/FullTimeEducation/CourseDetails/DateStarted/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutYourEducationCourseDetailsDateStoppedQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/FullTimeEducation/CourseDetails/DateStopped/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutYourEducationCourseDetailsDateStoppedAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/FullTimeEducation/CourseDetails/DateStopped/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutYourEducationCourseDetailsExpectedEndDateQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/FullTimeEducation/CourseDetails/ExpectedEndDate/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutYourEducationCourseDetailsExpectedEndDateAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/FullTimeEducation/CourseDetails/ExpectedEndDate/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutYourEducationLocationDetailsStudentReferenceNumber" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/FullTimeEducation/LocationDetails/StudentReferenceNumber]]></fieldDescription>
+	</field>
+	<field name="AboutYourEducationLocationDetailsNameOfUniversity" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/FullTimeEducation/LocationDetails/Name]]></fieldDescription>
+	</field>
+	<field name="AboutYourEducationLocationDetailsNameOfTutor" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/FullTimeEducation/LocationDetails/Tutor]]></fieldDescription>
+	</field>
+	<field name="AboutYourEducationLocationDetailsPostcode" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/FullTimeEducation/LocationDetails/Address/PostCode]]></fieldDescription>
+	</field>
+	<field name="AboutYourEducationLocationDetailsPhonenumber" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/FullTimeEducation/LocationDetails/PhoneNumber]]></fieldDescription>
+	</field>
+	<field name="AboutYourEducationLocationDetailsFaxnumber" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/FullTimeEducation/LocationDetails/FaxNumber]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="44" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="2bddbe50-2a0f-485e-ae29-8cad31555792" x="2" y="2" width="553" height="20" backcolor="#999999"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="130411b3-59f9-4c8b-b394-99a8644d6960" mode="Transparent" x="2" y="2" width="195" height="20" forecolor="#FFFFFF" backcolor="#FFFFFF"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Part 4 - About Your Education]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="2df660ad-33a1-43ce-b849-5e67c3340dc5" x="2" y="23" width="352" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYourEducationCourseofEducationQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="9e9ec7fb-2ae1-4fd8-a28d-3c6f2d71a867" x="372" y="23" width="180" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYourEducationCourseofEducationAnswer}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="428" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="3fb60df5-93bc-41b9-bf47-616798b1b63d" x="2" y="3" width="550" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Your course details]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f03e59f1-4d87-456a-b921-422149332504" x="2" y="23" width="279" height="20"/>
+				<textElement/>
+				<text><![CDATA[Type of course]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="3fb37b6b-f301-4825-b456-f239d772a2eb" x="303" y="23" width="249" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYourEducationCourseDetailsType}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="71992b1f-83b1-4abe-9cf3-d7cdd0bfd32f" x="2" y="43" width="279" height="20"/>
+				<textElement/>
+				<text><![CDATA[Course title]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="9b62df6f-cded-4336-aff7-9c2cb880ce51" x="303" y="43" width="249" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYourEducationCourseDetailsTitle}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="c2a98357-060c-4f64-b845-45ace075225a" x="2" y="63" width="279" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYourEducationCourseDetailsDateStartedQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="07b8ddfe-7e1f-47b4-8091-cd13333a0878" x="303" y="63" width="249" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYourEducationCourseDetailsDateStartedAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="5cdc2aa9-8363-4e93-9c7e-86885fbb795d" x="2" y="83" width="279" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYourEducationCourseDetailsExpectedEndDateQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="d211d745-4912-4f07-a0b6-f44767a19e2b" x="303" y="83" width="249" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYourEducationCourseDetailsExpectedEndDateAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="966f434b-0a47-4002-b877-094b66e06446" x="2" y="103" width="279" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYourEducationCourseDetailsDateStoppedQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="60454e66-2edc-4a7e-b94e-eb85c88a5d2d" x="303" y="103" width="249" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYourEducationCourseDetailsDateStoppedAnswer}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="e9ae0ed4-8044-43cf-8d96-954830f98b08" x="2" y="123" width="279" height="20"/>
+				<textElement/>
+				<text><![CDATA[Your student reference number]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="87cc5e3e-0116-4c99-a52c-01ae4ef4a373" x="303" y="123" width="249" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYourEducationLocationDetailsStudentReferenceNumber}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="0f0f836d-9774-4b62-befe-84b69e968bba" x="2" y="143" width="550" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[School, college or university’s contact details]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="627962b9-bd0c-4f41-a9af-225882954cd3" x="2" y="163" width="279" height="20"/>
+				<textElement/>
+				<text><![CDATA[Name of school, college or university]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="5b641e33-8b16-4ffa-9b44-de8d66208cc3" x="303" y="163" width="249" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYourEducationLocationDetailsNameOfUniversity}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="4de3d6e9-b4f3-4ac4-aba8-10f0f7b90095" x="2" y="183" width="279" height="20"/>
+				<textElement/>
+				<text><![CDATA[Name of main Teacher or Tutor]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="d027512b-759d-483e-a22b-abca19e49424" x="303" y="183" width="249" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYourEducationLocationDetailsNameOfTutor}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement uuid="df1928cb-7129-40fb-b3ac-2b13a40df3e1" stretchType="RelativeToBandHeight" x="2" y="203" width="550" height="82"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/FullTimeEducation/LocationDetails/Address")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_addressForNestedReports.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement uuid="d6c35c1d-2ce1-415a-a609-df65ee9cc358" x="2" y="286" width="279" height="20"/>
+				<textElement/>
+				<text><![CDATA[Phone number]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="091bf1f0-6e13-40b6-82dd-c5dd8170d0b0" x="303" y="286" width="249" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYourEducationLocationDetailsPhonenumber}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d7ca70d5-e6be-4157-9842-e63661a1faac" x="2" y="307" width="279" height="20"/>
+				<textElement/>
+				<text><![CDATA[Fax number]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="246c54df-2224-4ec8-9c7a-3c0159386c51" x="303" y="307" width="249" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYourEducationLocationDetailsFaxnumber}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
