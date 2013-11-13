@@ -17,6 +17,7 @@ import net.sf.jasperreports.engine.JasperPrint
 class PdfGeneratorCommonSpec extends Specification {
   "PdfGeneratorCommonSpec" should {
 
+    /*
     "be reject xml that does not contain DWPCAClaim or DWPCACircs" in {
       val pdfFileLocation = "goodClaimReject.pdf"
       val xml = ClaimBuilder.badClaim
@@ -33,7 +34,7 @@ class PdfGeneratorCommonSpec extends Specification {
       val generatorResult = PdfGenerator.generateFrom(dataSource)
       generatorResult must beAnInstanceOf[GenerationSuccess]
       deletePdfFile(pdfFileLocation)
-    }
+    } */
 
     "create a PDF file" in {
       val pdfFileLocation = "goodClaimCreate.pdf"
@@ -46,6 +47,7 @@ class PdfGeneratorCommonSpec extends Specification {
       deletePdfFile(pdfFileLocation)
     }
 
+    /*
     "write files in parallel" in {
       val max = 10
 
@@ -62,7 +64,7 @@ class PdfGeneratorCommonSpec extends Specification {
         val pdfFileLocation = "parallelTestFile" + x + ".pdf"
         deletePdfFile(pdfFileLocation)
       })
-    }
+    }*/
   }
 }
 
