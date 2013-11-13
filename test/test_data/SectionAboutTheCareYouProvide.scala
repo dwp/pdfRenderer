@@ -49,4 +49,6 @@ case class SectionAboutTheCareYouProvide(xml: Elem) {
 
   val addressCaree = (rootPath \\ "Address" \\ "Line").map(x => x.text).filterNot(x => x.isEmpty).mkString(" ")
 
+  val postCodeCaree = rootPath \\ "Address" \\ "PostCode"
+
 }

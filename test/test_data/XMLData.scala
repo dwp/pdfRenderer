@@ -230,12 +230,7 @@ object XMLData extends TestUtils{
         "More about the care you provide",
         buildQuestion(fields.cared35HoursQuestion.text, fields.cared35HoursAnswer.text),
         buildQuestion(fields.cared35HoursBeforeQuestion.text, fields.cared35HoursBeforeAnswer.text),
-        buildQuestion(fields.dateStartedCaringQuestion.text, fields.dateStartedCaringAnswer.text),
-        "Last name " + fields.careeLastName.text,
-        "First name(s) " + fields.careeFirstName.text,
-        "Title " + fields.careeTitle.text,
-        "Street / Town / City " + fields.addressCaree,
-        "Postcode " + fields.postCodeCaree.text
+        buildQuestion(fields.dateStartedCaringQuestion.text, fields.dateStartedCaringAnswer.text)
     ) ++ aboutTheCareYouProvide(XMLDataFields(xml)) ++ careBreaks(XMLDataFields(xml))
   }
   

@@ -40,8 +40,10 @@ class PdfContentMatchingSpec extends Specification {
       }
       reader.close()
 
-      val totalContent = content.mkString("\n").toLowerCase
-      totalContent
+      //val totalContent = content.mkString("\n").toLowerCase
+      //totalContent
+
+      content.mkString.toLowerCase.replaceAll("\n", " ")
     }
 
     def foundMustBeTrue(testData: Seq[String], totalContent: String) = {
@@ -78,7 +80,6 @@ class PdfContentMatchingSpec extends Specification {
       matchFunction(testData, totalContent) must beTrue
       deletePdfFile(pdfFileLocation)
     }
-
 
     "extract PDF for badClaim fails to match contents" in {
       val pdfFileLocation = "badClaim_contentTestPDF.pdf"

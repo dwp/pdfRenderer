@@ -28,11 +28,11 @@ case class XMLDataFields(xml: Elem) extends TestUtils{
 
   val dateClaimReceived = xml \\ "DWPCATransaction" \\ "DateTimeGenerated"
 
-  val addressCarer = (rootPath \\ "Claimant" \\ "Address" \\ "Line").map(x => x.text).filterNot(x => x.isEmpty).mkString("\n")
+  val addressCarer = (rootPath \\ "Claimant" \\ "Address" \\ "Line").map(x => x.text).filterNot(x => x.isEmpty).mkString(" ")
 
   val postCodeCarer = rootPath \\ "Claimant" \\ "Address" \\ "PostCode"
 
-  val addressCaree = (rootPath \\ "Caree" \\ "Address" \\ "Line").map(x => x.text).filterNot(x => x.isEmpty).mkString("\n")
+  val addressCaree = (rootPath \\ "Caree" \\ "Address" \\ "Line").map(x => x.text).filterNot(x => x.isEmpty).mkString(" ")
 
   val postCodeCaree = rootPath \\ "Caree" \\ "Address" \\ "PostCode"
 
