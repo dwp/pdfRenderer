@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="90378acd-33ad-413e-ad03-6f54642cad18">
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="684"/>
+	<property name="ireport.y" value="513"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<style name="table">
 		<box>
@@ -175,8 +175,11 @@
 			</subreport>
 		</band>
 		<band height="50">
+			<break>
+				<reportElement uuid="a25785d2-d88b-4726-8b5e-69b0a2ff01df" x="0" y="0" width="100" height="1"/>
+			</break>
 			<subreport>
-				<reportElement uuid="75564d7a-a29b-41fc-a89c-debc7307f3fb" x="2" y="0" width="552" height="50"/>
+				<reportElement uuid="75564d7a-a29b-41fc-a89c-debc7307f3fb" x="0" y="8" width="555" height="40"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -195,8 +198,11 @@
 			</subreport>
 		</band>
 		<band height="50">
+			<break>
+				<reportElement uuid="cea9aee6-3105-4d99-9924-9362158b3c33" x="0" y="5" width="100" height="1"/>
+			</break>
 			<subreport>
-				<reportElement uuid="32e318d3-4311-4a9d-9fb2-13e3f6bb8c40" x="2" y="0" width="552" height="50"/>
+				<reportElement uuid="32e318d3-4311-4a9d-9fb2-13e3f6bb8c40" x="2" y="8" width="552" height="40"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -205,8 +211,11 @@
 			</subreport>
 		</band>
 		<band height="50">
+			<break>
+				<reportElement uuid="5a1205d4-794e-4f39-a9f1-a627801b6edf" x="0" y="2" width="100" height="1"/>
+			</break>
 			<subreport>
-				<reportElement uuid="57b7fddc-1a96-4fb6-8d15-fc3c5d961a7a" x="0" y="0" width="554" height="50"/>
+				<reportElement uuid="57b7fddc-1a96-4fb6-8d15-fc3c5d961a7a" x="0" y="8" width="554" height="40"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -215,8 +224,11 @@
 			</subreport>
 		</band>
 		<band height="50">
+			<break>
+				<reportElement uuid="14da7685-2ec5-4d9e-b21d-47cda30d326d" x="0" y="2" width="100" height="1"/>
+			</break>
 			<subreport>
-				<reportElement uuid="4e2c7d53-6a5a-4343-933f-005fbdd500d2" x="1" y="0" width="553" height="50"/>
+				<reportElement uuid="4e2c7d53-6a5a-4343-933f-005fbdd500d2" x="1" y="9" width="553" height="40"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -257,7 +269,7 @@
 		<band height="50">
 			<subreport>
 				<reportElement uuid="541dfba5-c6b0-442f-9bd1-ec584e4b89ca" x="1" y="0" width="555" height="50"/>
-                <subreportParameter name="SUBREPORT_DIR">
+				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
