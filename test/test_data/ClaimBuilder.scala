@@ -2149,7 +2149,19 @@ object ClaimBuilder {
             <Answer>It takes too long to claim. But I can write a very long answer here. 2000 characters.</Answer>
           </AdditionalInformation>
         </OtherInformation>
-        <Declaration>I am the customer and have completed the form myself.</Declaration>
+        <Declaration>
+          <DeclarationStatement>
+            <Content>I am the customer and have completed the form myself.</Content>
+          </DeclarationStatement>
+          <DeclarationQuestion>
+            <QuestionLabel>Please tick this box if this claim form has been filled in by someone else, if so, please ensure that you understand the declarations above as another person cannot make the declarations on your behalf.</QuestionLabel>
+            <Answer>Yes</Answer>
+          </DeclarationQuestion>
+          <DeclarationQuestion>
+            <QuestionLabel>Please tick this box to confirm that you understand and make the declarations above.</QuestionLabel>
+            <Answer>Yes</Answer>
+          </DeclarationQuestion>
+        </Declaration>
         <EvidenceList>
           <RecipientAddress>
             <Line>CA Freepost</Line>
