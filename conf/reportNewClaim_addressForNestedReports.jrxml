@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="addressForNestedReports" language="groovy" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="5612b57e-df15-4e7b-8f55-17a1d4853ba9">
 	<property name="ireport.zoom" value="2.0"/>
-	<property name="ireport.x" value="0"/>
+	<property name="ireport.x" value="333"/>
 	<property name="ireport.y" value="0"/>
 	<field name="Line1" class="java.lang.String">
 		<fieldDescription><![CDATA[Line[1]]]></fieldDescription>
@@ -19,34 +19,34 @@
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="93" splitType="Immediate">
+		<band height="80" splitType="Prevent">
 			<staticText>
-				<reportElement uuid="9b41ad39-c486-46a8-a4b8-a6ca6f46c41a" x="3" y="10" width="255" height="20"/>
+				<reportElement uuid="9b41ad39-c486-46a8-a4b8-a6ca6f46c41a" x="0" y="1" width="350" height="18"/>
 				<textElement/>
 				<text><![CDATA[Street / Town / City]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="c354e299-7659-4c20-a75d-ed92c9998acc" x="312" y="10" width="241" height="20" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="c354e299-7659-4c20-a75d-ed92c9998acc" x="355" y="1" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{Line1}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="f7492aec-0af8-4f5f-a34e-94b29a2b2a02" x="312" y="30" width="241" height="20" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="f7492aec-0af8-4f5f-a34e-94b29a2b2a02" x="355" y="19" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{Line2}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="dd465117-7b01-48bb-87d8-263c81f10f29" x="312" y="50" width="241" height="20" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="dd465117-7b01-48bb-87d8-263c81f10f29" x="355" y="39" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{Line3}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="86f05d70-50fc-4356-84c7-f4babf835e9e" x="3" y="70" width="255" height="20"/>
+				<reportElement uuid="86f05d70-50fc-4356-84c7-f4babf835e9e" x="0" y="57" width="350" height="18"/>
 				<textElement/>
 				<text><![CDATA[Postcode]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="98b72c97-a655-4a45-97fd-154307390572" x="312" y="70" width="241" height="20" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="98b72c97-a655-4a45-97fd-154307390572" x="355" y="57" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{Postcode}]]></textFieldExpression>
 			</textField>

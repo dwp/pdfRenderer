@@ -17,12 +17,12 @@
 	<detail>
 		<band height="20" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="5bf1e7ac-4166-4043-967d-614bcb5338fc" x="0" y="0" width="110" height="18"/>
+				<reportElement uuid="5bf1e7ac-4166-4043-967d-614bcb5338fc" x="0" y="0" width="350" height="18"/>
 				<textElement/>
 				<text><![CDATA[Street / Town / City]]></text>
 			</staticText>
 			<subreport>
-				<reportElement uuid="1e3e4155-43bc-444e-b78b-c05e69c14019" x="115" y="0" width="437" height="18"/>
+				<reportElement uuid="1e3e4155-43bc-444e-b78b-c05e69c14019" x="355" y="0" width="197" height="18"/>
 				<subreportParameter name="XPATH_ADDRESS">
 					<subreportParameterExpression><![CDATA[$P{XPATH_ADDRESS}]]></subreportParameterExpression>
 				</subreportParameter>
