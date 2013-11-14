@@ -1,37 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Declaration" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="9294c83c-2f9e-43be-be00-e5341b401111">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/valtechuk/carers-dev-pdf/pdfService/pdfService/conf/"]]></defaultValueExpression>
 	</parameter>
+	<field name="DeclarationQuestion" class="java.lang.String"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
-	<pageHeader>
-		<band height="25" splitType="Stretch">
-			<rectangle>
-				<reportElement uuid="361a723a-c39f-4edb-a597-984864eaed95" mode="Opaque" x="0" y="1" width="553" height="21" backcolor="#999999"/>
-				<graphicElement>
-					<pen lineWidth="0.0"/>
-				</graphicElement>
-			</rectangle>
-			<staticText>
-				<reportElement uuid="653eee41-938f-4c3b-a08f-e92d29bb65cc" mode="Transparent" x="0" y="2" width="275" height="20" forecolor="#FFFFFF"/>
-				<textElement>
-					<font size="12" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Part 9 - Customer Consent and Declaration]]></text>
-			</staticText>
-		</band>
-	</pageHeader>
 	<detail>
-		<band height="203" splitType="Stretch">
+		<band height="39" splitType="Stretch">
 			<subreport>
-				<reportElement uuid="e9b10ce4-a2cc-4199-9cd5-2854b1554d31" x="191" y="38" width="200" height="100"/>
-                 <subreportParameter name="SUBREPORT_DIR">
+				<reportElement uuid="e9b10ce4-a2cc-4199-9cd5-2854b1554d31" x="0" y="0" width="555" height="39"/>
+				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource) $P{REPORT_DATA_SOURCE}).subDataSource("//DeclarationStatement")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Declaration_declarationStatement.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="40" splitType="Stretch">
+			<subreport>
+				<reportElement uuid="e9b10ce4-a2cc-4199-9cd5-2854b1554d31" x="0" y="0" width="555" height="40"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource) $P{REPORT_DATA_SOURCE}).subDataSource("//DeclarationQuestion")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Declaration_declarationQuestion.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 	</detail>

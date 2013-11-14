@@ -14,7 +14,7 @@
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="22" splitType="Stretch">
+		<band height="20" splitType="Stretch">
 			<textField isStretchWithOverflow="true">
 				<reportElement uuid="d1f681c7-12c0-4696-afcf-2d7be4833b58" x="0" y="0" width="555" height="20"/>
 				<textElement>

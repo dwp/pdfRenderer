@@ -6,29 +6,29 @@
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/valtechuk/carers-dev-pdf/pdfService/pdfService/conf/"]]></defaultValueExpression>
 	</parameter>
-	<field name="DeclarationQuestion" class="java.lang.String"/>
+	<field name="DisclaimerQuestion" class="java.lang.String"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="100" splitType="Stretch">
+		<band height="41" splitType="Stretch">
 			<subreport>
-				<reportElement uuid="e9b10ce4-a2cc-4199-9cd5-2854b1554d31" x="0" y="0" width="555" height="100"/>
+				<reportElement uuid="e9b10ce4-a2cc-4199-9cd5-2854b1554d31" x="0" y="0" width="555" height="41"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
-				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource) $P{REPORT_DATA_SOURCE}).subDataSource("//DeclarationStatement")]]></dataSourceExpression>
-				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Declaration_declarationStatement.jasper"]]></subreportExpression>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource) $P{REPORT_DATA_SOURCE}).subDataSource("//DisclaimerStatement")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Disclaimer_disclaimerStatement.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="100" splitType="Stretch">
+		<band height="41" splitType="Stretch">
 			<subreport>
-				<reportElement uuid="e9b10ce4-a2cc-4199-9cd5-2854b1554d31" x="0" y="0" width="555" height="100"/>
+				<reportElement uuid="e9b10ce4-a2cc-4199-9cd5-2854b1554d31" x="0" y="0" width="555" height="41"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
-				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource) $P{REPORT_DATA_SOURCE}).subDataSource("//DeclarationQuestion")]]></dataSourceExpression>
-				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Declaration_declarationQuestion.jasper"]]></subreportExpression>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource) $P{REPORT_DATA_SOURCE}).subDataSource("//DisclaimerQuestion")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Disclaimer_disclaimerQuestion.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 	</detail>

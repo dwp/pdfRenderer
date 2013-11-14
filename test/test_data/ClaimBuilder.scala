@@ -758,6 +758,20 @@ object ClaimBuilder {
               <Answer>Yes</Answer>
             </DeclarationQuestion>
           </Declaration>
+          <Disclaimer>
+            <DisclaimerStatement>
+              <Content>Disc yyyyyyyyyyyyyyyyyyyyyyyyyyyyy.</Content>
+              <Content>Disc xxxxxxxxxxxxxxxxxxxxxxxxxxxx</Content>
+            </DisclaimerStatement>
+            <DisclaimerQuestion>
+              <QuestionLabel>Disc Please tick this box if this claim form has been filled in by someone else, if so, please ensure that you understand the declarations above as another person cannot make the declarations on your behalf.</QuestionLabel>
+              <Answer>Yes</Answer>
+            </DisclaimerQuestion>
+            <DisclaimerQuestion>
+              <QuestionLabel>Disc Please tick this box to confirm that you understand and make the declarations above.</QuestionLabel>
+              <Answer>Yes</Answer>
+            </DisclaimerQuestion>
+          </Disclaimer>
           <EvidenceList>
             <RecipientAddress>
               <Line>CA Freepost</Line>

@@ -82,6 +82,14 @@
 					<pen lineWidth="0.0"/>
 				</graphicElement>
 			</rectangle>
+			<subreport>
+				<reportElement uuid="6ad6aef0-be4f-4dc0-9bcc-45b625ce4ee2" x="0" y="21" width="555" height="49"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Disclaimer.jasper"]]></subreportExpression>
+			</subreport>
 			<staticText>
 				<reportElement uuid="149c37e2-57ad-46d1-89bb-f9f30959fc13" x="0" y="0" width="100" height="21" forecolor="#FFFFFF"/>
 				<textElement verticalAlignment="Middle">
@@ -90,13 +98,21 @@
 				<text><![CDATA[Disclaimer]]></text>
 			</staticText>
 		</band>
-		<band height="108">
+		<band height="80">
 			<rectangle>
 				<reportElement uuid="98d8647f-7433-4428-8a6b-d59ab53efaa2" x="0" y="0" width="555" height="21" backcolor="#999999"/>
 				<graphicElement>
 					<pen lineWidth="0.0"/>
 				</graphicElement>
 			</rectangle>
+			<subreport>
+				<reportElement uuid="6ad6aef0-be4f-4dc0-9bcc-45b625ce4ee2" x="0" y="21" width="555" height="59"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Declaration.jasper"]]></subreportExpression>
+			</subreport>
 			<staticText>
 				<reportElement uuid="fe6f19f7-59d4-4d8b-a7e7-9cff92db0fb7" x="0" y="0" width="100" height="21" forecolor="#FFFFFF"/>
 				<textElement verticalAlignment="Middle">
