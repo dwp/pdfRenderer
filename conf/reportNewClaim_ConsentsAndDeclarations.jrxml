@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Consents" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="ce7b9f2b-d8a3-4228-abe5-88fb5d2f3eae">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/Users/valtechuk/Documents/Carers/code/pdfService/conf/"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="xPath">
+		<![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="ad701a01-6f49-4d43-ad2d-4d63af31e679" x="0" y="0" width="555" height="20" backcolor="#999999"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="c6fb5c1e-aac1-4fcd-b4ff-655479a6a68e" mode="Transparent" x="0" y="0" width="289" height="20" forecolor="#FFFFFF" backcolor="#FFFFFF"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Part 9 - Customer Consent and Declaration]]></text>
+			</staticText>
+		</band>
+		<band height="62">
+			<rectangle>
+				<reportElement uuid="22474102-1ae7-4ed7-ae0b-8ef2337dba86" x="0" y="0" width="555" height="21" backcolor="#999999"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="b27a93b7-8251-4671-8655-338fb345cc76" x="0" y="0" width="202" height="21" forecolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Additional Information]]></text>
+			</staticText>
+			<subreport>
+				<reportElement uuid="922102db-53c1-4c3e-ada4-d9ce5d2b5a73" x="2" y="21" width="553" height="41"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_AdditionalInfo.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="63">
+			<rectangle>
+				<reportElement uuid="14395253-abdb-45b8-9045-307673c8ba56" x="0" y="0" width="555" height="21" backcolor="#999999"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="afcf6426-9227-4d64-990d-ccfec2ad7acb" x="0" y="0" width="100" height="21" forecolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Consent]]></text>
+			</staticText>
+			<subreport>
+				<reportElement uuid="d3871437-c332-4410-b1af-cff64934d3fa" x="0" y="21" width="555" height="42"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("//Consent")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Consents.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="70">
+			<rectangle>
+				<reportElement uuid="1cddae82-399c-4344-9a35-fe454f74fa49" x="0" y="0" width="555" height="21" backcolor="#999999"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="149c37e2-57ad-46d1-89bb-f9f30959fc13" x="0" y="0" width="100" height="21" forecolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Disclaimer]]></text>
+			</staticText>
+		</band>
+		<band height="108">
+			<rectangle>
+				<reportElement uuid="98d8647f-7433-4428-8a6b-d59ab53efaa2" x="0" y="0" width="555" height="21" backcolor="#999999"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="fe6f19f7-59d4-4d8b-a7e7-9cff92db0fb7" x="0" y="0" width="100" height="21" forecolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Declaration]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

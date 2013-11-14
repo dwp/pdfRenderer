@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Consents" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="ce7b9f2b-d8a3-4228-abe5-88fb5d2f3eae">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<queryString language="xPath">
+		<![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Consents/Consent]]>
+	</queryString>
+	<field name="welshQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherInformation/WelshCommunication/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="welshAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherInformation/WelshCommunication/Answer]]></fieldDescription>
+	</field>
+	<field name="additionalInformationQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherInformation/AdditionalInformation/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="additionalInformationAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherInformation/AdditionalInformation/Answer]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="40">
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="0f862337-92b2-479f-8e79-1dd536a16c4e" x="0" y="0" width="350" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{additionalInformationQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="5b80a305-25fd-4fef-9c09-af2ce25c3858" x="358" y="0" width="197" height="20"/>
+				<textElement verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{additionalInformationAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="53de5b37-2b0a-4074-9e5f-50eddf56e2bb" x="0" y="20" width="350" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{welshQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="2013b6a7-5201-4e87-aec0-28c7521b86a6" x="358" y="20" width="197" height="20"/>
+				<textElement verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{welshAnswer}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

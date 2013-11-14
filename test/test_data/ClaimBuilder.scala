@@ -746,7 +746,8 @@ object ClaimBuilder {
           </OtherInformation>
           <Declaration>
             <DeclarationStatement>
-              <Content>I am the customer and have completed the form myself.</Content>
+              <Content>yyyyyyyyyyyyyyyyyyyyyyyyyyyyy.</Content>
+              <Content>xxxxxxxxxxxxxxxxxxxxxxxxxxxx</Content>
             </DeclarationStatement>
             <DeclarationQuestion>
               <QuestionLabel>Please tick this box if this claim form has been filled in by someone else, if so, please ensure that you understand the declarations above as another person cannot make the declarations on your behalf.</QuestionLabel>

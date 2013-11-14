@@ -295,6 +295,27 @@ object XMLData extends TestUtils{
      )
   }
 
+  def sectionCustomerConsentAndDeclaration(xml:Elem) = {
+    val fields = SectionConsentAndDeclaration(xml)
+
+    val consentXml = fields.consent.map (c => buildQuestion((c \ "QuestionLabel").text, (c \ "Answer").text))
+
+    val disclaimerStatementXml = fields.disclaimerStatement.map (d => (d \ "Content").text)
+    val disclaimerQuestionXml = fields.disclaimerQuestion.map (d => buildQuestion((d \ "QuestionLabel").text, (d \ "Answer").text))
+
+    val declarationStatementXml = fields.declarationStatement.map (d => (d \ "Content").text)
+    val declarationQuestionXml = fields.declarationQuestion.map (d => buildQuestion((d \ "QuestionLabel").text, (d \ "Answer").text))
+
+    Seq ("Part 9 - Customer Consent And Declaration",
+         "Additional Information",
+         buildQuestion(fields.otherInformationAdditionalInformationQuestion.text,fields.otherInformationAdditionalInformationAnswer.text),
+         buildQuestion(fields.otherInformationWelshCommunicationQuestion.text,fields.otherInformationWelshCommunicationAnswer.text),
+         "Consent",
+         "Disclaimer",
+         "Declaration"
+    ) ++ consentXml ++ disclaimerStatementXml ++ disclaimerQuestionXml ++ declarationStatementXml ++ declarationQuestionXml
+  }
+
   def sectionEvidenceList(xml:Elem) = {
     val fields = SectionEvidenceList(xml)
     Seq("Part 10 - Customer Evidence List",
