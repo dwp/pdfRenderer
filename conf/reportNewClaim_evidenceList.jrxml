@@ -49,7 +49,7 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_subreportEvidenceList.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="88">
+		<band height="152">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="ca47f04c-5f78-4523-80b3-0fad318b0849" x="1" y="2" width="329" height="20" isRemoveLineWhenBlank="true"/>
 				<textElement/>
@@ -70,6 +70,18 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EvidenceListAddressPostcode}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement uuid="6cbae657-29a5-4c95-8588-533506869fdf" x="1" y="94" width="555" height="21"/>
+				<textElement/>
+				<text><![CDATA[The Carer's Allowance unit will contact you if they need any further information.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fe0558c0-060a-461d-892b-3d613bcb38d7" x="1" y="115" width="555" height="21"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[*************************END OF PRINT**********************]]></text>
+			</staticText>
 		</band>
 	</detail>
 </jasperReport>
