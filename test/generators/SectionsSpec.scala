@@ -147,8 +147,7 @@ class SectionsSpec extends Specification {
     "extract PDF for SectionCustomerConsentAndDeclaration and match contents" in {
       val pdfFileLocation = "goodClaim_contentTestPDF.pdf"
       testContentMatchesFromPage(pdfFileLocation, ClaimBuilder.goodClaim, XMLData.sectionCustomerConsentAndDeclaration, foundMustBeTrue, 6)
-    }
-    */
+    } */
 
 
     /*
