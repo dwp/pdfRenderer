@@ -48,25 +48,12 @@
 		<groupExpression><![CDATA[$F{StartDateTime}]]></groupExpression>
 		<groupHeader>
 			<band height="22">
-				<rectangle>
-					<reportElement uuid="03c1b728-de1d-495f-aaba-90e12cc23944" x="20" y="1" width="533" height="20" forecolor="#FFFFFF" backcolor="#999999"/>
-					<graphicElement>
-						<pen lineWidth="0.0"/>
-					</graphicElement>
-				</rectangle>
-				<staticText>
-					<reportElement uuid="c2ae6e06-c518-4cef-a024-0ac6f9a21c1f" x="22" y="1" width="64" height="20" forecolor="#FFFFFF"/>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="10" isBold="true"/>
-					</textElement>
-					<text><![CDATA[Care Break]]></text>
-				</staticText>
 				<textField>
-					<reportElement uuid="546e57b0-0c10-4b4b-b768-1f3cea76fdc0" x="87" y="1" width="77" height="20" forecolor="#FFFFFF"/>
+					<reportElement uuid="546e57b0-0c10-4b4b-b768-1f3cea76fdc0" mode="Opaque" x="20" y="0" width="535" height="20" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
 					<textElement verticalAlignment="Middle">
 						<font isBold="true"/>
 					</textElement>
-					<textFieldExpression><![CDATA[$V{variable1}]]></textFieldExpression>
+					<textFieldExpression><![CDATA["Care Break " + $V{variable1}]]></textFieldExpression>
 				</textField>
 			</band>
 		</groupHeader>
@@ -79,14 +66,8 @@
 	</background>
 	<pageHeader>
 		<band height="44" splitType="Stretch">
-			<rectangle>
-				<reportElement uuid="9f51f6bc-8183-4b31-817c-99e225bdc38e" x="0" y="1" width="553" height="21" backcolor="#999999"/>
-				<graphicElement>
-					<pen lineWidth="0.0"/>
-				</graphicElement>
-			</rectangle>
 			<staticText>
-				<reportElement uuid="a415a243-c2e6-483a-8f49-31a568e887ae" x="2" y="0" width="100" height="21" forecolor="#FFFFFF"/>
+				<reportElement uuid="a415a243-c2e6-483a-8f49-31a568e887ae" mode="Opaque" x="0" y="0" width="555" height="21" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>

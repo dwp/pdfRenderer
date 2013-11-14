@@ -19,12 +19,12 @@
 	<detail>
 		<band height="20">
 			<textField isStretchWithOverflow="true">
-				<reportElement uuid="5f5b2185-9b5f-4d1e-858b-24852cd2757e" x="0" y="0" width="350" height="20"/>
+				<reportElement uuid="5f5b2185-9b5f-4d1e-858b-24852cd2757e" x="0" y="0" width="330" height="18"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ConsentQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement uuid="8a91fad2-9d40-45d2-84be-d2e058a1e540" x="358" y="0" width="197" height="20"/>
+				<reportElement uuid="8a91fad2-9d40-45d2-84be-d2e058a1e540" x="355" y="0" width="197" height="18"/>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{ConsentAnswer}]]></textFieldExpression>
 			</textField>

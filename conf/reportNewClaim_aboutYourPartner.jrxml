@@ -62,13 +62,13 @@
 				<text><![CDATA[Part 2 - About your partner]]></text>
 			</staticText>
 			<rectangle>
-				<reportElement uuid="2466ca13-a9af-4553-994f-1ddd26ced294" x="20" y="24" width="533" height="20" backcolor="#CCCCCC"/>
+				<reportElement uuid="2466ca13-a9af-4553-994f-1ddd26ced294" x="0" y="23" width="555" height="20" backcolor="#CCCCCC"/>
 				<graphicElement>
 					<pen lineWidth="0.0"/>
 				</graphicElement>
 			</rectangle>
 			<staticText>
-				<reportElement uuid="682874b6-bfe4-439f-8bb8-4abdfe329111" x="20" y="23" width="151" height="20" forecolor="#FFFFFF"/>
+				<reportElement uuid="682874b6-bfe4-439f-8bb8-4abdfe329111" x="0" y="23" width="151" height="20" forecolor="#FFFFFF"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -159,9 +159,9 @@
 				<textFieldExpression><![CDATA[$F{AboutYourPartnerSeparatedFromPartnerAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="b8944184-591b-4029-bbef-a0fc9a196d48" x="0" y="145" width="553" height="21"/>
+				<reportElement uuid="b8944184-591b-4029-bbef-a0fc9a196d48" mode="Opaque" x="0" y="145" width="555" height="21" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
 				<textElement>
-					<font isBold="true"/>
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Person you care for]]></text>
 			</staticText>

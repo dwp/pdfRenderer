@@ -63,92 +63,86 @@
 	<detail>
 		<band height="61">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="61c7218b-715a-4359-9449-ee3c564dbe6f" x="11" y="0" width="291" height="20" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="61c7218b-715a-4359-9449-ee3c564dbe6f" x="0" y="0" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{howToGetPaidQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="57e79dc7-f890-477f-831c-ab6a643652c4" x="349" y="0" width="185" height="20" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="57e79dc7-f890-477f-831c-ab6a643652c4" x="355" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{howToGetPaidAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="0802ec1f-3436-47b0-9d4a-32035567b1c9" x="11" y="20" width="291" height="20" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="0802ec1f-3436-47b0-9d4a-32035567b1c9" x="0" y="20" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{howOftenGetPaidQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="e8079ca6-0ec7-44e4-9c1a-e42b72da36db" x="349" y="20" width="185" height="20" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="e8079ca6-0ec7-44e4-9c1a-e42b72da36db" x="355" y="20" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{howOftenGetPaidAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="38020387-0dc2-4f7f-bfe0-63dc81a0daf4" x="349" y="40" width="185" height="20" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="38020387-0dc2-4f7f-bfe0-63dc81a0daf4" x="355" y="40" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{howOftenGetPaidAnswer}=="Other" ? $F{howOftenGetPaidOther} : null]]></textFieldExpression>
 			</textField>
 		</band>
 		<band height="120">
-			<rectangle>
-				<reportElement uuid="2466ca13-a9af-4553-994f-1ddd26ced294" x="11" y="0" width="523" height="20" backcolor="#CCCCCC"/>
-				<graphicElement>
-					<pen lineWidth="0.0"/>
-				</graphicElement>
-			</rectangle>
 			<staticText>
-				<reportElement uuid="682874b6-bfe4-439f-8bb8-4abdfe329111" x="11" y="0" width="291" height="20" isPrintInFirstWholeBand="true" forecolor="#FFFFFF"/>
+				<reportElement uuid="682874b6-bfe4-439f-8bb8-4abdfe329111" mode="Opaque" x="0" y="0" width="555" height="20" isPrintInFirstWholeBand="true" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Bank/Building Society Details]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="ac563e30-beb3-4063-b697-5ee47e8da1b0" x="11" y="20" width="291" height="20"/>
+				<reportElement uuid="ac563e30-beb3-4063-b697-5ee47e8da1b0" x="0" y="20" width="350" height="18"/>
 				<textElement/>
 				<text><![CDATA[Name of account holder]]></text>
 			</staticText>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="3585c88b-ad07-47d0-b172-d609bf404eeb" x="349" y="20" width="185" height="20" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="3585c88b-ad07-47d0-b172-d609bf404eeb" x="355" y="20" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{bankAccountHolderName}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="48642e96-81a1-4387-928c-02f25596ccfa" x="11" y="40" width="291" height="20"/>
+				<reportElement uuid="48642e96-81a1-4387-928c-02f25596ccfa" x="0" y="40" width="350" height="18"/>
 				<textElement/>
 				<text><![CDATA[Full name of bank or building society]]></text>
 			</staticText>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="be49c075-e8db-4d27-8a30-f5414761027e" x="349" y="40" width="185" height="20" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="be49c075-e8db-4d27-8a30-f5414761027e" x="355" y="40" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{bankAccountBankName}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="32e1525f-abb6-4b62-8960-4b0ae6a82fde" x="11" y="60" width="291" height="20"/>
+				<reportElement uuid="32e1525f-abb6-4b62-8960-4b0ae6a82fde" x="0" y="60" width="350" height="18"/>
 				<textElement/>
 				<text><![CDATA[Sort code]]></text>
 			</staticText>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="12f94aa2-1e66-40c4-8916-2990ca93e937" x="349" y="60" width="185" height="20" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="12f94aa2-1e66-40c4-8916-2990ca93e937" x="355" y="60" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{bankAccountSortCode}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="31199384-fd54-4e89-a19e-d01d9fccd46f" x="11" y="80" width="291" height="20"/>
+				<reportElement uuid="31199384-fd54-4e89-a19e-d01d9fccd46f" x="0" y="80" width="350" height="18"/>
 				<textElement/>
 				<text><![CDATA[Account number]]></text>
 			</staticText>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="a7591379-f58d-46ba-877b-a488f1fdd851" x="349" y="80" width="185" height="20" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="a7591379-f58d-46ba-877b-a488f1fdd851" x="355" y="80" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{bankAccountNumber}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="3c5423d0-aa23-4b73-a833-a6f6c226b230" x="11" y="100" width="291" height="20"/>
+				<reportElement uuid="3c5423d0-aa23-4b73-a833-a6f6c226b230" x="0" y="100" width="350" height="18"/>
 				<textElement/>
 				<text><![CDATA[Building society roll or reference number]]></text>
 			</staticText>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="2c435d18-b073-4b27-9f62-609d1d035aec" x="349" y="100" width="185" height="20" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="2c435d18-b073-4b27-9f62-609d1d035aec" x="355" y="100" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{bankAccountReferenceNumber}]]></textFieldExpression>
 			</textField>

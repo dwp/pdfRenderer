@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_AboutYourEducation" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="233a6ecd-5683-49cd-8996-0dfae9f2e3d1">
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="141"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/valtechuk/carers-dev-pdf/pdfService/pdfService/conf/"]]></defaultValueExpression>
 	</parameter>
@@ -60,7 +60,7 @@
 	<title>
 		<band height="44" splitType="Stretch">
 			<rectangle>
-				<reportElement uuid="2bddbe50-2a0f-485e-ae29-8cad31555792" x="0" y="1" width="553" height="21" backcolor="#999999"/>
+				<reportElement uuid="2bddbe50-2a0f-485e-ae29-8cad31555792" x="0" y="1" width="555" height="21" backcolor="#999999"/>
 				<graphicElement>
 					<pen lineWidth="0.0"/>
 				</graphicElement>
@@ -87,7 +87,7 @@
 	<detail>
 		<band height="329" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="3fb60df5-93bc-41b9-bf47-616798b1b63d" x="0" y="3" width="553" height="21"/>
+				<reportElement uuid="3fb60df5-93bc-41b9-bf47-616798b1b63d" mode="Opaque" x="0" y="3" width="555" height="21" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -154,7 +154,7 @@
 				<textFieldExpression><![CDATA[$F{AboutYourEducationLocationDetailsStudentReferenceNumber}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="0f0f836d-9774-4b62-befe-84b69e968bba" x="0" y="143" width="553" height="21"/>
+				<reportElement uuid="0f0f836d-9774-4b62-befe-84b69e968bba" mode="Opaque" x="0" y="143" width="555" height="21" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -181,7 +181,7 @@
 				<textFieldExpression><![CDATA[$F{AboutYourEducationLocationDetailsNameOfTutor}]]></textFieldExpression>
 			</textField>
 			<subreport>
-				<reportElement uuid="df1928cb-7129-40fb-b3ac-2b13a40df3e1" x="0" y="203" width="553" height="82"/>
+				<reportElement uuid="df1928cb-7129-40fb-b3ac-2b13a40df3e1" x="0" y="203" width="555" height="82"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>

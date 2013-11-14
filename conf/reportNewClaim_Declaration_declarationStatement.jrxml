@@ -12,7 +12,7 @@
 	<detail>
 		<band height="47" splitType="Stretch">
 			<subreport>
-				<reportElement uuid="7c3aadd2-de8b-44f5-a3fc-bc5816713ec3" x="0" y="0" width="536" height="47"/>
+				<reportElement uuid="7c3aadd2-de8b-44f5-a3fc-bc5816713ec3" x="0" y="0" width="533" height="47"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
