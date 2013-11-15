@@ -2461,8 +2461,8 @@ object ClaimBuilder {
                 </DateLastPaid>
                 <GrossPayment>
                   <QuestionLabel>job.pay</QuestionLabel>
+                  <Currency>GBP</Currency>
                   <Answer>
-                    <Currency>GBP</Currency>
                     <Amount>600.00</Amount>
                   </Answer>
                 </GrossPayment>
