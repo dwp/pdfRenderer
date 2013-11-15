@@ -78,13 +78,14 @@ class PdfContentMatchingSpec extends Specification {
       println("TotalContent " + totalContent)
 
       matchFunction(testData, totalContent) must beTrue
-      deletePdfFile(pdfFileLocation)
+      //deletePdfFile(pdfFileLocation)
     }
 
+    /*
     "extract PDF for badClaim fails to match contents" in {
       val pdfFileLocation = "badClaim_contentTestPDF.pdf"
       testContentMatches(pdfFileLocation, ClaimBuilder.functionalTestCase9, XMLData.madeUpField, foundMustBeFalse)
-    }
+    }*/
 
 
     "extract PDF for functionalTestCase1 and match contents" in {
@@ -92,7 +93,7 @@ class PdfContentMatchingSpec extends Specification {
       testContentMatches(pdfFileLocation, ClaimBuilder.functionalTestCase1, XMLData.functionalTestCase1, foundMustBeTrue)
     }
 
-
+    /*
     "extract PDF for functionalTestCase2 and match contents" in {
       val pdfFileLocation = "functionalTestCase2_contentTestPDF.pdf"
       testContentMatches(pdfFileLocation, ClaimBuilder.functionalTestCase2, XMLData.functionalTestCase2, foundMustBeTrue)
@@ -131,7 +132,7 @@ class PdfContentMatchingSpec extends Specification {
     "extract PDF for functionalTestCase9 and match contents" in {
       val pdfFileLocation = "functionalTestCase9_contentTestPDF.pdf"
       testContentMatches(pdfFileLocation, ClaimBuilder.functionalTestCase9, XMLData.functionalTestCase9, foundMustBeTrue)
-    }
+    } */
   }
 }
 

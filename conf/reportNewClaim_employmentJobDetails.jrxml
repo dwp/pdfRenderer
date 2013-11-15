@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_employmentJobDetails" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isSummaryNewPage="true" isIgnorePagination="true" uuid="d2b233ab-6178-4bb0-9059-17e24879fcd8">
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="1416"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
@@ -283,6 +283,21 @@
 	<field name="JobDetailsCareExpensesRelationshipCarerToCareeOther" class="java.lang.String">
 		<fieldDescription><![CDATA[CareExpenses/RelationshipCarerToCaree/Other]]></fieldDescription>
 	</field>
+	<field name="displayChildCareExpensed" class="java.lang.String">
+		<fieldDescription><![CDATA[ChildCareExpenses]]></fieldDescription>
+	</field>
+	<field name="displayJobExpenses" class="java.lang.String">
+		<fieldDescription><![CDATA[JobExpenses]]></fieldDescription>
+	</field>
+	<field name="displayExpensesRelatedToPerson" class="java.lang.String">
+		<fieldDescription><![CDATA[CareExpenses]]></fieldDescription>
+	</field>
+	<field name="displayAboutExpensesToDoEmployment" class="java.lang.String">
+		<fieldDescription><![CDATA[PaidForJobExpenses]]></fieldDescription>
+	</field>
+	<field name="displayPensionScheme" class="java.lang.String">
+		<fieldDescription><![CDATA[PaidForOccupationalPension]]></fieldDescription>
+	</field>
 	<variable name="variable1" class="java.lang.Integer" incrementType="Group" incrementGroup="Break">
 		<variableExpression><![CDATA[$V{variable1}+1]]></variableExpression>
 		<initialValueExpression><![CDATA[1]]></initialValueExpression>
@@ -290,7 +305,7 @@
 	<group name="Break">
 		<groupExpression><![CDATA[$F{JobDetailsEmployer}]]></groupExpression>
 		<groupHeader>
-			<band height="20">
+			<band height="20" splitType="Stretch">
 				<textField>
 					<reportElement uuid="546e57b0-0c10-4b4b-b768-1f3cea76fdc0" mode="Opaque" x="20" y="0" width="535" height="20" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
 					<textElement verticalAlignment="Middle">
@@ -301,14 +316,14 @@
 			</band>
 		</groupHeader>
 		<groupFooter>
-			<band height="26"/>
+			<band height="1"/>
 		</groupFooter>
 	</group>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="461" splitType="Stretch">
+		<band height="457" splitType="Stretch">
 			<staticText>
 				<reportElement uuid="c615e37f-c4f0-4002-8960-83bdcedb41d0" mode="Opaque" x="20" y="0" width="535" height="20" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
 				<textElement verticalAlignment="Middle">
@@ -520,7 +535,9 @@
 		</band>
 		<band height="518">
 			<staticText>
-				<reportElement uuid="9123999a-8bef-4b7a-adc0-5346c4e17805" x="20" y="10" width="533" height="20"/>
+				<reportElement uuid="9123999a-8bef-4b7a-adc0-5346c4e17805" x="20" y="10" width="533" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[!$F{displayPensionScheme}.isEmpty()]]></printWhenExpression>
+				</reportElement>
 				<textElement>
 					<font size="12" isBold="true" isItalic="true"/>
 				</textElement>
@@ -597,7 +614,9 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsPersonalPensionFrequencyOther}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="1d97a8b1-f0ca-4597-9cdf-c9cbd9bbfea6" x="20" y="192" width="533" height="21"/>
+				<reportElement uuid="1d97a8b1-f0ca-4597-9cdf-c9cbd9bbfea6" x="20" y="192" width="533" height="21">
+					<printWhenExpression><![CDATA[!$F{displayAboutExpensesToDoEmployment}.isEmpty()]]></printWhenExpression>
+				</reportElement>
 				<textElement>
 					<font size="12" isBold="true" isItalic="true"/>
 				</textElement>
@@ -634,7 +653,9 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsCareExpensesCareeAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="d4ee85a0-2b60-48f6-b8f4-184e0d48d748" x="20" y="273" width="533" height="21"/>
+				<reportElement uuid="d4ee85a0-2b60-48f6-b8f4-184e0d48d748" x="20" y="273" width="533" height="21" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[!$F{displayJobExpenses}.isEmpty()]]></printWhenExpression>
+				</reportElement>
 				<textElement>
 					<font size="12" isBold="true" isItalic="true"/>
 				</textElement>
@@ -661,7 +682,9 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsEmployerJobTypeAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="d984d04c-aa17-4086-ad8d-de033a0e62a3" x="20" y="332" width="533" height="21"/>
+				<reportElement uuid="d984d04c-aa17-4086-ad8d-de033a0e62a3" x="20" y="332" width="533" height="21" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[!$F{displayChildCareExpensed}.isEmpty()]]></printWhenExpression>
+				</reportElement>
 				<textElement>
 					<font size="12" isBold="true" isItalic="true"/>
 				</textElement>
@@ -685,7 +708,7 @@
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="ddfbfbda-1a68-4bf4-a5ae-9106b9990c62" x="355" y="374" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{JobDetailsChildCareExpensesAnswerAmount}+" "+$F{JobDetailsChildCareExpensesAnswerCurrency}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{JobDetailsChildCareExpensesAnswerAmount}!=null?$F{JobDetailsChildCareExpensesAnswerAmount}:""+" "+$F{JobDetailsChildCareExpensesAnswerCurrency}!=null?$F{JobDetailsChildCareExpensesAnswerCurrency}:""]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="c8e97b39-1089-465b-aa64-81d30c9b37e1" x="20" y="394" width="330" height="18" isRemoveLineWhenBlank="true"/>
@@ -740,7 +763,9 @@
 		</band>
 		<band height="226">
 			<staticText>
-				<reportElement uuid="d7a21d48-7670-4c96-89a7-0225bb5a04da" x="20" y="4" width="533" height="21"/>
+				<reportElement uuid="d7a21d48-7670-4c96-89a7-0225bb5a04da" x="20" y="4" width="533" height="21" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[!$F{displayExpensesRelatedToPerson}.isEmpty()]]></printWhenExpression>
+				</reportElement>
 				<textElement>
 					<font size="12" isBold="true" isItalic="true"/>
 				</textElement>
@@ -764,7 +789,7 @@
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="deddf7b0-1131-423d-9bcb-56d1192c1995" x="355" y="47" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{JobDetailsCareExpensesPaymentAnswerAmount}+" "+$F{JobDetailsCareExpensesPaymentAnswerCurrency}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{JobDetailsCareExpensesPaymentAnswerAmount}!=null?$F{JobDetailsCareExpensesPaymentAnswerAmount}:""+" "+$F{JobDetailsCareExpensesPaymentAnswerCurrency}!=null?$F{JobDetailsCareExpensesPaymentAnswerCurrency}:""]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="2c66af5a-6410-4238-87f8-2861d3b09eea" x="20" y="67" width="330" height="18" isRemoveLineWhenBlank="true"/>

@@ -16,7 +16,7 @@
 		<band splitType="Stretch"/>
 	</background>
 	<pageHeader>
-		<band height="23" splitType="Stretch">
+		<band height="44" splitType="Stretch">
 			<rectangle>
 				<reportElement uuid="7d35266a-048b-4bf0-9160-1dffa50dc2a7" x="0" y="1" width="553" height="21" backcolor="#999999"/>
 				<graphicElement>
@@ -30,22 +30,23 @@
 				</textElement>
 				<text><![CDATA[Part 5 - About Your Employment ]]></text>
 			</staticText>
-		</band>
-	</pageHeader>
-	<detail>
-		<band height="227" splitType="Stretch">
 			<textField isStretchWithOverflow="true">
-				<reportElement uuid="eb266188-59cb-419c-a0f8-91a681fa3220" x="0" y="1" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="eb266188-59cb-419c-a0f8-91a681fa3220" x="0" y="24" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutEmploymentAreYouEmployedQuestion}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement uuid="611415b6-f512-4ac4-b6c1-518bb947d854" x="355" y="1" width="197" height="18"/>
+				<reportElement uuid="611415b6-f512-4ac4-b6c1-518bb947d854" x="355" y="24" width="197" height="18"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutEmploymentAreYouEmployedAnswer}]]></textFieldExpression>
 			</textField>
-			<subreport isUsingCache="true">
-				<reportElement uuid="b12f8af5-9ea9-46b6-8f91-18ab702af38f" x="0" y="23" width="553" height="100"/>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="104" splitType="Stretch">
+			<printWhenExpression><![CDATA[$F{AboutEmploymentAreYouEmployedAnswer}.equals("Yes")]]></printWhenExpression>
+			<subreport>
+				<reportElement uuid="05913b57-31c0-4e7f-91bd-95a159dbf9bb" x="0" y="1" width="552" height="100"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>

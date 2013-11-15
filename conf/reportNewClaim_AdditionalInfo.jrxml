@@ -23,24 +23,33 @@
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="40">
-			<textField isStretchWithOverflow="true">
-				<reportElement uuid="0f862337-92b2-479f-8e79-1dd536a16c4e" x="0" y="0" width="330" height="18"/>
+		<band height="61">
+			<staticText>
+				<reportElement uuid="22c02e51-e13c-42cc-86e4-f2af124afd5e" mode="Opaque" x="0" y="0" width="553" height="21" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" backcolor="#CCCCCC">
+					<printWhenExpression><![CDATA[!$F{additionalInformationAnswer}.isEmpty() || !$F{welshAnswer}.isEmpty()]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Additional Information]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="0f862337-92b2-479f-8e79-1dd536a16c4e" x="0" y="21" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{additionalInformationQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="5b80a305-25fd-4fef-9c09-af2ce25c3858" x="358" y="0" width="197" height="18"/>
+				<reportElement uuid="5b80a305-25fd-4fef-9c09-af2ce25c3858" x="355" y="21" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{additionalInformationAnswer}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement uuid="53de5b37-2b0a-4074-9e5f-50eddf56e2bb" x="0" y="20" width="330" height="18"/>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="53de5b37-2b0a-4074-9e5f-50eddf56e2bb" x="0" y="42" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{welshQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="2013b6a7-5201-4e87-aec0-28c7521b86a6" x="358" y="20" width="197" height="18"/>
+				<reportElement uuid="2013b6a7-5201-4e87-aec0-28c7521b86a6" x="355" y="42" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{welshAnswer}]]></textFieldExpression>
 			</textField>

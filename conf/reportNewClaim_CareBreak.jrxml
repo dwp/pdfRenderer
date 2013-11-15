@@ -44,12 +44,12 @@
 		<variableExpression><![CDATA[$V{variable1}+1]]></variableExpression>
 		<initialValueExpression><![CDATA[1]]></initialValueExpression>
 	</variable>
-	<group name="Break">
+	<group name="Break" isStartNewPage="true" isReprintHeaderOnEachPage="true">
 		<groupExpression><![CDATA[$F{StartDateTime}]]></groupExpression>
 		<groupHeader>
-			<band height="22">
-				<textField>
-					<reportElement uuid="546e57b0-0c10-4b4b-b768-1f3cea76fdc0" mode="Opaque" x="20" y="0" width="535" height="20" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
+			<band height="22" splitType="Stretch">
+				<textField isBlankWhenNull="true">
+					<reportElement uuid="546e57b0-0c10-4b4b-b768-1f3cea76fdc0" mode="Opaque" x="20" y="0" width="535" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
 					<textElement verticalAlignment="Middle">
 						<font isBold="true"/>
 					</textElement>
@@ -58,7 +58,7 @@
 			</band>
 		</groupHeader>
 		<groupFooter>
-			<band height="11"/>
+			<band/>
 		</groupFooter>
 	</group>
 	<background>
@@ -67,7 +67,7 @@
 	<pageHeader>
 		<band height="44" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="a415a243-c2e6-483a-8f49-31a568e887ae" mode="Opaque" x="0" y="0" width="555" height="21" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
+				<reportElement uuid="a415a243-c2e6-483a-8f49-31a568e887ae" mode="Opaque" x="0" y="0" width="555" height="21" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -86,7 +86,7 @@
 		</band>
 	</pageHeader>
 	<detail>
-		<band height="130" splitType="Stretch">
+		<band height="124" splitType="Stretch">
 			<staticText>
 				<reportElement uuid="dc478e1f-5c6e-4f3e-bac4-b386f0503472" x="20" y="1" width="330" height="18"/>
 				<textElement/>

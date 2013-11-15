@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_AboutYourEducation" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="233a6ecd-5683-49cd-8996-0dfae9f2e3d1">
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="148"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/valtechuk/carers-dev-pdf/pdfService/pdfService/conf/"]]></defaultValueExpression>
 	</parameter>
@@ -85,16 +85,17 @@
 		</band>
 	</title>
 	<detail>
-		<band height="329" splitType="Stretch">
+		<band height="333" splitType="Stretch">
+			<printWhenExpression><![CDATA[$F{AboutYourEducationCourseofEducationAnswer}.equals("Yes")]]></printWhenExpression>
 			<staticText>
-				<reportElement uuid="3fb60df5-93bc-41b9-bf47-616798b1b63d" mode="Opaque" x="0" y="3" width="555" height="21" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
+				<reportElement uuid="3fb60df5-93bc-41b9-bf47-616798b1b63d" mode="Opaque" x="0" y="3" width="555" height="21" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Your course details]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="f03e59f1-4d87-456a-b921-422149332504" x="0" y="25" width="350" height="18"/>
+				<reportElement uuid="f03e59f1-4d87-456a-b921-422149332504" x="0" y="25" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<text><![CDATA[Type of course]]></text>
 			</staticText>
@@ -104,7 +105,7 @@
 				<textFieldExpression><![CDATA[$F{AboutYourEducationCourseDetailsType}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="71992b1f-83b1-4abe-9cf3-d7cdd0bfd32f" x="0" y="43" width="350" height="18"/>
+				<reportElement uuid="71992b1f-83b1-4abe-9cf3-d7cdd0bfd32f" x="0" y="43" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<text><![CDATA[Course title]]></text>
 			</staticText>
@@ -144,7 +145,7 @@
 				<textFieldExpression><![CDATA[$F{AboutYourEducationCourseDetailsDateStoppedAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="e9ae0ed4-8044-43cf-8d96-954830f98b08" x="0" y="123" width="350" height="18"/>
+				<reportElement uuid="e9ae0ed4-8044-43cf-8d96-954830f98b08" x="0" y="123" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<text><![CDATA[Your student reference number]]></text>
 			</staticText>
@@ -154,14 +155,14 @@
 				<textFieldExpression><![CDATA[$F{AboutYourEducationLocationDetailsStudentReferenceNumber}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="0f0f836d-9774-4b62-befe-84b69e968bba" mode="Opaque" x="0" y="143" width="555" height="21" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
+				<reportElement uuid="0f0f836d-9774-4b62-befe-84b69e968bba" mode="Opaque" x="0" y="143" width="555" height="21" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[School, college or university’s contact details]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="627962b9-bd0c-4f41-a9af-225882954cd3" x="0" y="165" width="350" height="18"/>
+				<reportElement uuid="627962b9-bd0c-4f41-a9af-225882954cd3" x="0" y="165" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<text><![CDATA[Name of school, college or university]]></text>
 			</staticText>
@@ -171,7 +172,7 @@
 				<textFieldExpression><![CDATA[$F{AboutYourEducationLocationDetailsNameOfUniversity}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="4de3d6e9-b4f3-4ac4-aba8-10f0f7b90095" x="0" y="183" width="350" height="18"/>
+				<reportElement uuid="4de3d6e9-b4f3-4ac4-aba8-10f0f7b90095" x="0" y="183" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<text><![CDATA[Name of main Teacher or Tutor]]></text>
 			</staticText>
@@ -181,7 +182,7 @@
 				<textFieldExpression><![CDATA[$F{AboutYourEducationLocationDetailsNameOfTutor}]]></textFieldExpression>
 			</textField>
 			<subreport>
-				<reportElement uuid="df1928cb-7129-40fb-b3ac-2b13a40df3e1" x="0" y="203" width="555" height="82"/>
+				<reportElement uuid="df1928cb-7129-40fb-b3ac-2b13a40df3e1" x="0" y="203" width="555" height="82" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -189,7 +190,7 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_addressForNestedReports.jasper"]]></subreportExpression>
 			</subreport>
 			<staticText>
-				<reportElement uuid="d6c35c1d-2ce1-415a-a609-df65ee9cc358" x="0" y="286" width="350" height="18"/>
+				<reportElement uuid="d6c35c1d-2ce1-415a-a609-df65ee9cc358" x="0" y="286" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<text><![CDATA[Phone number]]></text>
 			</staticText>
@@ -199,7 +200,7 @@
 				<textFieldExpression><![CDATA[$F{AboutYourEducationLocationDetailsPhonenumber}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="d7ca70d5-e6be-4157-9842-e63661a1faac" x="0" y="306" width="350" height="18"/>
+				<reportElement uuid="d7ca70d5-e6be-4157-9842-e63661a1faac" x="0" y="306" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<text><![CDATA[Fax number]]></text>
 			</staticText>

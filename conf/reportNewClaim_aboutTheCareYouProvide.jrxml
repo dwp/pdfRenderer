@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutTheCareYouProvide" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="7235f8d3-c0a0-415a-aa3f-969494fe9489">
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="16"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/valtechuk/carers-dev-pdf/pdfService/pdfService/conf/"]]></defaultValueExpression>
 	</parameter>
@@ -60,28 +60,47 @@
 	<field name="AboutCareYouProvideCareeDateStartCaringAnswer" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/DateStartCaring/Answer]]></fieldDescription>
 	</field>
+	<field name="displayCareYouProvide" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Cared35Hours]]></fieldDescription>
+	</field>
+	<field name="displayRelationShipOtherClaims" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/RelationToClaimant]]></fieldDescription>
+	</field>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
-	<detail>
-		<band height="435" splitType="Stretch">
+	<pageHeader>
+		<band height="41" splitType="Stretch">
 			<rectangle>
-				<reportElement uuid="29685526-ed8b-4544-8b43-a2693c8a827d" mode="Opaque" x="0" y="1" width="553" height="21" forecolor="#999999" backcolor="#999999"/>
+				<reportElement uuid="29685526-ed8b-4544-8b43-a2693c8a827d" mode="Opaque" x="1" y="0" width="553" height="21" isRemoveLineWhenBlank="true" forecolor="#999999" backcolor="#999999"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
 			</rectangle>
 			<staticText>
-				<reportElement uuid="0352c26e-c945-465d-a87d-c2030a5dc51d" x="0" y="1" width="234" height="20" forecolor="#FFFFFF"/>
+				<reportElement uuid="0352c26e-c945-465d-a87d-c2030a5dc51d" x="0" y="0" width="234" height="20" forecolor="#FFFFFF"/>
 				<textElement>
 					<font size="12" isBold="true" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[Part 3 - About the care you provide]]></text>
 			</staticText>
+			<rectangle>
+				<reportElement uuid="01abffd3-36a6-46cc-99b7-46a4bd9ee37f" x="0" y="21" width="555" height="20" isRemoveLineWhenBlank="true" backcolor="#CCCCCC"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
 			<staticText>
-				<reportElement uuid="1cbce792-112d-4e39-8088-39c855728d3b" mode="Opaque" x="0" y="24" width="555" height="20" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
+				<reportElement uuid="1cbce792-112d-4e39-8088-39c855728d3b" mode="Transparent" x="0" y="21" width="234" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" backcolor="#FFFFFF"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Details of the person you care for]]></text>
 			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="435" splitType="Stretch">
 			<staticText>
 				<reportElement uuid="6c510654-76e3-4aa8-8b07-135293fcab55" x="0" y="45" width="350" height="18"/>
 				<textElement/>
@@ -150,7 +169,7 @@
 				<text><![CDATA[Contact details of the person you care for]]></text>
 			</staticText>
 			<subreport>
-				<reportElement uuid="15feeace-8a18-4dcf-982d-e67a66e7e551" x="0" y="175" width="555" height="100"/>
+				<reportElement uuid="15feeace-8a18-4dcf-982d-e67a66e7e551" x="0" y="175" width="555" height="100" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -168,7 +187,9 @@
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeDayTimeTelephoneNumber}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="35fde8b7-2c4f-4011-8ded-e1e3ebf084f0" mode="Opaque" x="0" y="293" width="555" height="21" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
+				<reportElement uuid="35fde8b7-2c4f-4011-8ded-e1e3ebf084f0" mode="Opaque" x="0" y="293" width="555" height="21" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" backcolor="#CCCCCC">
+					<printWhenExpression><![CDATA[!$F{displayRelationShipOtherClaims}.isEmpty()]]></printWhenExpression>
+				</reportElement>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -195,7 +216,9 @@
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeArmedForcesAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="c9913d36-dbcf-4fdc-841b-9a496f3d3f0f" mode="Opaque" x="0" y="354" width="555" height="21" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
+				<reportElement uuid="c9913d36-dbcf-4fdc-841b-9a496f3d3f0f" mode="Opaque" x="0" y="354" width="555" height="21" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" backcolor="#CCCCCC">
+					<printWhenExpression><![CDATA[!$F{displayCareYouProvide}.isEmpty()]]></printWhenExpression>
+				</reportElement>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -232,9 +255,9 @@
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeDateStartCaringAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="268">
+		<band height="260" splitType="Stretch">
 			<subreport>
-				<reportElement uuid="e023222c-36da-453b-8ec4-4d1faba787b3" x="0" y="0" width="555" height="258"/>
+				<reportElement uuid="e023222c-36da-453b-8ec4-4d1faba787b3" x="0" y="0" width="555" height="258" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>

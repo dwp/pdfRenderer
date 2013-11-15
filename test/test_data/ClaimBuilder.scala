@@ -856,134 +856,105 @@ object ClaimBuilder {
       <DWPCATransaction>
         <TransactionId>NFM33DB</TransactionId>
         <DateTimeGenerated>02-10-2010 14:36</DateTimeGenerated>
-        <DWPCAClaim id="TEST432">
+        <DWPCAClaim>
+          <DateOfClaim>
+            <QuestionLabel>When do you want your Carer's Allowance claim to start?</QuestionLabel>
+            <Answer>21-07-2013</Answer>
+          </DateOfClaim>
           <Claimant>
-            <DateOfClaim>2013-07-21</DateOfClaim>
             <Surname>Caseone</Surname>
             <OtherNames>Test</OtherNames>
-            <OtherSurnames></OtherSurnames>
-            <Title>mr</Title>
-            <MaritalStatus>p</MaritalStatus>
-            <DateOfBirth>1976-09-28</DateOfBirth>
-            <NationalInsuranceNumber></NationalInsuranceNumber>
-            <ExistingNationalInsuranceNumber/>
+            <OtherSurnames>Hello</OtherSurnames>
+            <Title>Mr</Title>
+            <DateOfBirth>28-09-1976</DateOfBirth>
+            <NationalInsuranceNumber>JB486278C</NationalInsuranceNumber>
             <Address>
-              <gds:Line>1 Preston Road</gds:Line> <gds:Line>Preston</gds:Line> <gds:Line></gds:Line> <gds:PostCode>PR1 1HB</gds:PostCode>
+              <Line>1 Preston Road</Line>
+              <Line>Preston</Line>
+              <Line>Preston</Line>
+              <PostCode>PR1 1HB</PostCode>
             </Address>
-            <ConfirmAddress>yes</ConfirmAddress>
-            <HomePhoneNumber></HomePhoneNumber>
-            <DaytimePhoneNumber>
-              <Number></Number>
-              <Qualifier/>
-            </DaytimePhoneNumber>
-            <EmailAddress/>
-            <ClaimedBefore>Not asked</ClaimedBefore>
+            <DayTimePhoneNumber>01772 888901</DayTimePhoneNumber>
+            <MaritalStatus>Married or civil partner</MaritalStatus>
           </Claimant>
           <Caree>
             <Surname>Caseone</Surname>
             <OtherNames>Test</OtherNames>
             <Title>Dame</Title>
-            <DateOfBirth>1980-09-12</DateOfBirth>
-            <NationalInsuranceNumber></NationalInsuranceNumber>
+            <DateOfBirth>12-09-1980</DateOfBirth>
+            <NationalInsuranceNumber>JB486278C</NationalInsuranceNumber>
             <Address>
-              <gds:Line>1 Preston Road</gds:Line> <gds:Line>Preston</gds:Line> <gds:Line></gds:Line> <gds:PostCode>PR1 1HB</gds:PostCode>
+              <Line>1 Preston Road</Line>
+              <Line>Preston</Line>
+              <Line>Preston</Line>
+              <PostCode>PR1 1HB</PostCode>
             </Address>
-            <ConfirmAddress>yes</ConfirmAddress>
-            <HomePhoneNumber/>
-            <DaytimePhoneNumber>
-              <Number></Number>
-              <Qualifier/>
-            </DaytimePhoneNumber>
-            <RelationToClaimant>partner</RelationToClaimant>
-            <Cared35hours>Not asked</Cared35hours>
-            <CanCareeSign>Not asked</CanCareeSign>
-            <CanSomeoneElseSign>Not asked</CanSomeoneElseSign>
-            <CanClaimantSign>Not asked</CanClaimantSign>
-            <BreaksSinceClaim>no</BreaksSinceClaim>
-
-            <Cared35hoursBefore>Not asked</Cared35hoursBefore>
-            <DateStartedCaring>2012-01-21</DateStartedCaring>
-            <BreaksBeforeClaim>no</BreaksBeforeClaim>
-            <PaidForCaring>Not asked</PaidForCaring>
-            <ClaimedPreviously>Not asked</ClaimedPreviously>
+            <DayTimePhoneNumber>01772 888901</DayTimePhoneNumber>
+            <RelationToClaimant>
+              <QuestionLabel>What's their relationshipt to you?</QuestionLabel>
+              <Answer>Partner</Answer>
+            </RelationToClaimant>
+            <Cared35Hours>
+              <QuestionLabel>Do you spend 35 hours or more each week caring for this person?</QuestionLabel>
+              <Answer>No</Answer>
+            </Cared35Hours>
+            <BreaksSinceClaim>
+              <QuestionLabel>Have you had any breaks in caring for this person since claim date?</QuestionLabel>
+              <Answer>No</Answer>
+            </BreaksSinceClaim>
+            <ArmedForcesIndependencePayment>
+              <QuestionLabel>Does this person get Armed Forces Independence Payment?</QuestionLabel>
+              <Answer>No</Answer>
+            </ArmedForcesIndependencePayment>
           </Caree>
-          <ClaimADI>no</ClaimADI>
           <Residency>
             <Nationality>British</Nationality>
-            <EUEEASwissNational>Not asked</EUEEASwissNational>
-            <CountryNormallyLive>Not asked</CountryNormallyLive>
-            <CountryNormallyLiveOther>Not asked</CountryNormallyLiveOther>
-            <InGreatBritainNow>yes</InGreatBritainNow>
-            <InGreatBritain26Weeks>Not asked</InGreatBritain26Weeks>
-
-            <BritishOverseasPassport>Not asked</BritishOverseasPassport>
-
-            <OutOfGreatBritain>Not asked</OutOfGreatBritain>
-
+            <TimeOutsideGBLast3Years>
+              <QuestionLabel>Time.out.GB</QuestionLabel>
+              <Answer>No</Answer>
+            </TimeOutsideGBLast3Years>
+            <!-- NormallyLiveInGB>
+                    <QuestionLabel>live.normally.GB</QuestionLabel>
+                    <Answer>Yes</Answer>
+                </NormallyLiveInGB -->
           </Residency>
-          <CourseOfEducation>no</CourseOfEducation>
-
-          <SelfEmployed>no</SelfEmployed>
-
-          <Employed>no</Employed>
-
-          <PropertyRentedOut>
-            <PayNationalInsuranceContributions/>
-            <RentOutProperty>Not asked</RentOutProperty>
-            <SubletHome>Not asked</SubletHome>
-          </PropertyRentedOut>
-          <HavePartner>no</HavePartner>
-
+          <CourseOfEducation>
+            <QuestionLabel>Have you been on a course of education since your claim date?</QuestionLabel>
+            <Answer>No</Answer>
+          </CourseOfEducation>
+          <SelfEmployed>
+            <QuestionLabel>Have you been self-employed at any time since (this is one week before your claim date)?</QuestionLabel>
+            <Answer>No</Answer>
+          </SelfEmployed>
+          <Employed>
+            <QuestionLabel>Have you been employed at any time since (this is six months before your claim date)?</QuestionLabel>
+            <Answer>No</Answer>
+          </Employed>
+          <HavePartner>
+            <QuestionLabel>Have you had a partner/spouse living with you since your claim date?</QuestionLabel>
+            <Answer>No</Answer>
+          </HavePartner>
           <OtherBenefits>
             <ClaimantBenefits>
-              <JobseekersAllowance>no</JobseekersAllowance>
-              <IncomeSupport>no</IncomeSupport>
-              <PensionCredit>no</PensionCredit>
-              <StatePension>no</StatePension>
-              <IncapacityBenefit>no</IncapacityBenefit>
-              <SevereDisablementAllowance>no</SevereDisablementAllowance>
-              <MaternityAllowance>no</MaternityAllowance>
-              <UnemployabilitySupplement>no</UnemployabilitySupplement>
-              <WindowsBenefit>no</WindowsBenefit>
-              <WarWidowsPension>no</WarWidowsPension>
-              <IndustrialDeathBenefit>no</IndustrialDeathBenefit>
-              <GovernmentTrainingAllowance>no</GovernmentTrainingAllowance>
-              <LoneParentChildBenefit>no</LoneParentChildBenefit>
-              <OtherSocialSecurityBenefit>Not asked</OtherSocialSecurityBenefit>
-              <NonSocialSecurityBenefit>Not asked</NonSocialSecurityBenefit>
-              <NoBenefits>Not asked</NoBenefits>
+              <StatePension>
+                <QuestionLabel>Do you get State Pension?</QuestionLabel>
+                <Answer>No</Answer>
+              </StatePension>
             </ClaimantBenefits>
-            <PartnerBenefits>
-              <JobseekersAllowance>no</JobseekersAllowance>
-              <IncomeSupport>no</IncomeSupport>
-              <PensionCredit>no</PensionCredit>
-              <StatePension>no</StatePension>
-              <IncapacityBenefit>no</IncapacityBenefit>
-              <SevereDisablementAllowance>no</SevereDisablementAllowance>
-              <MaternityAllowance>no</MaternityAllowance>
-              <UnemployabilitySupplement>no</UnemployabilitySupplement>
-              <WindowsBenefit>no</WindowsBenefit>
-              <WarWidowsPension>no</WarWidowsPension>
-              <IndustrialDeathBenefit>no</IndustrialDeathBenefit>
-              <GovernmentTrainingAllowance>no</GovernmentTrainingAllowance>
-              <OtherSocialSecurityBenefit>Not asked</OtherSocialSecurityBenefit>
-              <NonSocialSecurityBenefit>Not asked</NonSocialSecurityBenefit>
-              <NoBenefits>Not asked</NoBenefits>
-            </PartnerBenefits>
-            <ExtraMoney>Not asked</ExtraMoney>
-            <OtherMoneySSP>no</OtherMoneySSP>
-            <OtherMoneySMP>no</OtherMoneySMP>
+            <OtherMoneySSP>
+              <QuestionLabel>ssp.money</QuestionLabel>
+              <Answer>No</Answer>
+            </OtherMoneySSP>
+            <OtherMoney>
+              <QuestionLabel>Have you or your Partner or Spouse claimed or received any other benefits since the date you want to claim?</QuestionLabel>
+              <Answer>No</Answer>
+            </OtherMoney>
           </OtherBenefits>
-          <Payment>
-            <PaymentFrequency>Not asked</PaymentFrequency>
-            <InitialAccountQuestion>Not asked</InitialAccountQuestion>
-
-          </Payment>
           <OtherInformation/>
-          <ThirdParty>no</ThirdParty>
           <Declaration>
             <DeclarationStatement>
-              <Content>I am the customer and have completed the form myself.</Content>
+              <Content>yyyyyyyyyyyyyyyyyyyyyyyyyyyyy.</Content>
+              <Content>xxxxxxxxxxxxxxxxxxxxxxxxxxxx</Content>
             </DeclarationStatement>
             <DeclarationQuestion>
               <QuestionLabel>Please tick this box if this claim form has been filled in by someone else, if so, please ensure that you understand the declarations above as another person cannot make the declarations on your behalf.</QuestionLabel>
@@ -995,58 +966,37 @@ object ClaimBuilder {
             </DeclarationQuestion>
           </Declaration>
           <EvidenceList>
-            <TextLine>
-              XML Generated at: 2013-10-16T11:51:11
-            </TextLine> <TextLine>
-            ======================About You======================
-          </TextLine> <TextLine>
-            Have you always lived in the UK? = Yes
-          </TextLine> <TextLine/>
-            <TextLine/> <TextLine>
-            Do you get state Pension? = Yes
-          </TextLine> <TextLine/> <TextLine>
-            ================About Care You Provide================
-          </TextLine> <TextLine>
-            Do they live at the same address as you? = Yes
-          </TextLine> <TextLine>
-            Does this person get Armed Forces Independence Payment? = Yes
-          </TextLine> <TextLine>
-            Do you spend 35 hours or more each week caring for this person? = Yes
-          </TextLine> <TextLine>
-            Did you care for this person for 35 hours or more each week before your claim date ? = Yes
-          </TextLine> <TextLine>
-            =====================Time abroad=====================
-          </TextLine> <TextLine>
-            Do you normally live in the UK, Republic of Ireland, Isle of Man or the Channel Islands? = Yes
-          </TextLine> <TextLine>
-            Have you had any more trips out of Great Britain for more than 52 weeks at a time, since 21/07/2013 (this is 156 weeks before your claim date)? = No
-          </TextLine> <TextLine>
-            Have you been out of Great Britain with the person you care for, for more than four weeks at a time, since 21/07/2013 (this is 3 years before your claim date)? = No
-          </TextLine> <TextLine>
-            =====================Other Money=====================
-          </TextLine> <TextLine>
-            Have you
-            &lt;
-            or your partner/spouse
-            &gt;
-            claimed or received any other benefits since the date you want to claim? = No
-          </TextLine> <TextLine>
-            Have you received any payments for the person you care for or any other person since your claim date? = No
-          </TextLine> <TextLine/>
-            <TextLine/>
-            <TextLine/>
-            <TextLine/>
-            <TextLine/>
-            <TextLine/>
-            <TextLine/>
-            <TextLine/>
-            <TextLine/>
-            <TextLine/> <TextLine>
-            Are you, your wife, husband, civil partner or parent you are dependent on, receiving any pensions or benefits from another EEA State or Switzerland? = No
-          </TextLine> <TextLine>
-            Are you, your wife, husband, civil partner or parent you are dependent on working in or paying insurance to another EEA State or Switzerland? = No
-          </TextLine>
+            <RecipientAddress>
+              <Line>CA Freepost</Line>
+              <Line>Palatine House</Line>
+              <Line>Preston</Line>
+              <PostCode>PR1 1HN</PostCode>
+            </RecipientAddress>
+            <Evidence>
+              <Title>Document you need to send us</Title>
+              <Content>You must send us all the documents we ask for. If you do not, any benefit you may be entitled to my be delayed because of this claim. 1</Content>
+              <Content>You must send us all the documents we ask for. If you do not, any benefit you may be entitled to my be delayed because of this claim. 2</Content>
+              <Content>You must send us all the documents we ask for. If you do not, any benefit you may be entitled to my be delayed because of this claim. 3</Content>
+            </Evidence>
+            <Evidence>
+              <Title>Pay Details</Title>
+              <Content>You need to send us the last payslip before 10 Ocotber 2013 and all the payslips you have since then.</Content>
+            </Evidence>
+            <Evidence>
+              <Title>Statement Signed</Title>
+              <Content>You need to send us the completed and signed statement.</Content>
+            </Evidence>
           </EvidenceList>
+          <Consents>
+            <Consent>
+              <QuestionLabel>An example of a very long consent question so we can see the impact on the report and be sure that everything flows properly. Whenever there are multiple entries in an XML, one has to create subreport.</QuestionLabel>
+              <Answer>Yes</Answer>
+            </Consent>
+            <Consent>
+              <QuestionLabel>Another consent question</QuestionLabel>
+              <Answer>Yes</Answer>
+            </Consent>
+          </Consents>
         </DWPCAClaim>
       </DWPCATransaction>
       <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
@@ -1066,7 +1016,7 @@ object ClaimBuilder {
   def functionalTestCase2: Elem = {
     <DWPBody xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns="http://www.govtalk.gov.uk/dwp/carers-allowance"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:schemaLocation="http://www.govtalk.gov.uk/dwp/carers-allowance CarersAllowance_Schema_0.9.xsd">
+             xsi:schemaLocation="http://www.govtalk.gov.uk/dwp/carers-allowance file:/Users/jmi/Temp/CarersAllowance_Schema.xsd">
       <Version>0.1</Version>
       <DWPCATransaction>
         <TransactionId>NFM33DB</TransactionId>
@@ -1101,7 +1051,7 @@ object ClaimBuilder {
             <OtherNames>Person Cared</OtherNames>
             <OtherSurnames>Watson</OtherSurnames>
             <Title>Mr</Title>
-            <DateOfBirth>03-7-1953</DateOfBirth>
+            <DateOfBirth>03-07-1953</DateOfBirth>
             <NationalInsuranceNumber>JA789871C</NationalInsuranceNumber>
             <Address>
               <Line>12 Preston Road</Line>
@@ -1129,7 +1079,7 @@ object ClaimBuilder {
             </Cared35HoursBefore>
             <DateStartCaring>
               <QuestionLabel>care.started</QuestionLabel>
-              <Answer>2010-05-01</Answer>
+              <Answer>01-05-2010</Answer>
             </DateStartCaring>
             <LiveSameAddress>
               <QuestionLabel>caree.sameadrees</QuestionLabel>
@@ -1158,11 +1108,11 @@ object ClaimBuilder {
               <Period>
                 <DateFrom>
                   <QuestionLabel>abroad.date.from</QuestionLabel>
-                  <Answer>2011-06-09</Answer>
+                  <Answer>09-06-2011</Answer>
                 </DateFrom>
                 <DateTo>
                   <QuestionLabel>abroad.date.to</QuestionLabel>
-                  <Answer>2011-06-12</Answer>
+                  <Answer>12-06-2011</Answer>
                 </DateTo>
               </Period>
               <Reason>
@@ -1189,16 +1139,16 @@ object ClaimBuilder {
               <Title>Bussines Studies</Title>
               <DateStarted>
                 <QuestionLabel>education.started</QuestionLabel>
-                <Answer>2013-01-01</Answer>
+                <Answer>01-01-2013</Answer>
               </DateStarted>
               <!--               <DateStopped>
-                              <QuestionLabel>education.ended</QuestionLabel>
-                              <Answer>2013-05-04</Answer>
-                          </DateStopped>
-                          -->
+                                    <QuestionLabel>education.ended</QuestionLabel>
+                                    <Answer>2013-05-04</Answer>
+                                </DateStopped>
+                                -->
               <ExpectedEndDate>
                 <QuestionLabel>education.end.expected</QuestionLabel>
-                <Answer>2014-05-01</Answer>
+                <Answer>01-05-2014</Answer>
               </ExpectedEndDate>
             </CourseDetails>
             <LocationDetails>
@@ -1234,14 +1184,14 @@ object ClaimBuilder {
             <OtherNames>Test Middle</OtherNames>
             <OtherSurnames>Dixon</OtherSurnames>
             <Title>Mrs</Title>
-            <DateOfBirth>1977-09-28</DateOfBirth>
+            <DateOfBirth>28-09-1977</DateOfBirth>
             <NationalInsuranceNumber>JA234567B</NationalInsuranceNumber>
             <!-- <Address>
-                        <Line>Line4</Line>
-                        <PostCode>GIR 0AA</PostCode>
-                    </Address>
+                            <Line>Line4</Line>
+                            <PostCode>GIR 0AA</PostCode>
+                        </Address>
 
-                    <MobileNumber>       </MobileNumber> -->
+                        <MobileNumber>       </MobileNumber> -->
             <DayTimePhoneNumber>0987654321</DayTimePhoneNumber>
             <NationalityPartner>British</NationalityPartner>
             <RelationshipStatus>

@@ -22,7 +22,7 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{Question}]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="e1e6da2c-4b06-412f-abc3-78d85a5ef810" x="335" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{Answer}]]></textFieldExpression>

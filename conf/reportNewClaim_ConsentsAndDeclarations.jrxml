@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Consents" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="ce7b9f2b-d8a3-4228-abe5-88fb5d2f3eae">
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="1"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/valtechuk/Documents/Carers/code/pdfService/conf/"]]></defaultValueExpression>
@@ -10,6 +10,10 @@
 	<queryString language="xPath">
 		<![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim]]>
 	</queryString>
+	<field name="displayDisclaimer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Disclaimer]]></fieldDescription>
+	</field>
+	<field name="field1" class="java.lang.String"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -29,16 +33,9 @@
 				<text><![CDATA[Part 9 - Customer Consent and Declaration]]></text>
 			</staticText>
 		</band>
-		<band height="62">
-			<staticText>
-				<reportElement uuid="b27a93b7-8251-4671-8655-338fb345cc76" mode="Opaque" x="0" y="0" width="555" height="21" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
-				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Additional Information]]></text>
-			</staticText>
+		<band height="42" splitType="Stretch">
 			<subreport>
-				<reportElement uuid="922102db-53c1-4c3e-ada4-d9ce5d2b5a73" x="0" y="21" width="555" height="41"/>
+				<reportElement uuid="922102db-53c1-4c3e-ada4-d9ce5d2b5a73" x="0" y="0" width="555" height="41" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -63,7 +60,15 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Consents.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="70">
+		<band height="70" splitType="Stretch">
+			<printWhenExpression><![CDATA[!$F{displayDisclaimer}.isEmpty()]]></printWhenExpression>
+			<staticText>
+				<reportElement uuid="149c37e2-57ad-46d1-89bb-f9f30959fc13" mode="Opaque" x="0" y="0" width="555" height="21" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Disclaimer]]></text>
+			</staticText>
 			<subreport>
 				<reportElement uuid="6ad6aef0-be4f-4dc0-9bcc-45b625ce4ee2" x="0" y="21" width="555" height="49"/>
 				<subreportParameter name="SUBREPORT_DIR">
@@ -72,15 +77,15 @@
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Disclaimer.jasper"]]></subreportExpression>
 			</subreport>
+		</band>
+		<band height="80">
 			<staticText>
-				<reportElement uuid="149c37e2-57ad-46d1-89bb-f9f30959fc13" mode="Opaque" x="0" y="0" width="555" height="21" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
+				<reportElement uuid="fe6f19f7-59d4-4d8b-a7e7-9cff92db0fb7" mode="Opaque" x="0" y="0" width="555" height="21" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Disclaimer]]></text>
+				<text><![CDATA[Declaration]]></text>
 			</staticText>
-		</band>
-		<band height="80">
 			<subreport>
 				<reportElement uuid="6ad6aef0-be4f-4dc0-9bcc-45b625ce4ee2" x="0" y="21" width="555" height="59"/>
 				<subreportParameter name="SUBREPORT_DIR">
@@ -89,16 +94,6 @@
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Declaration.jasper"]]></subreportExpression>
 			</subreport>
-			<staticText>
-				<reportElement uuid="fe6f19f7-59d4-4d8b-a7e7-9cff92db0fb7" mode="Opaque" x="0" y="0" width="555" height="21" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
-				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Declaration]]></text>
-			</staticText>
 		</band>
 	</detail>
-	<summary>
-		<band splitType="Stretch"/>
-	</summary>
 </jasperReport>
