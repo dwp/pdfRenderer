@@ -7,7 +7,7 @@ import play.api.Logger
 import net.sf.jasperreports.engine.design.JasperDesign
 import net.sf.jasperreports.engine.util.{JRElementsVisitor, JRSaver}
 import java.util.StringTokenizer
-import java.io.OutputStream
+import java.io.{File, OutputStream}
 
 
 /**
@@ -16,15 +16,21 @@ import java.io.OutputStream
 trait ReportGenerator {
 
 
-  def generateFrom(source: ReportDataSource):Option[JasperPrint] = {
+  def generateFrom(source: ReportDataSource): Option[JasperPrint] = {
     try {
-      val jasperReportFilename = source.jasperReportFilenameMatcher()
+      val reportName = source.jasperReportFilenameMatcher()
+      val jasperFilename = s"conf/$reportName.jasper"
 
-      // Needed so compiles sub-reports
-      val jasperReport = compileReportsRecursively(jasperReportFilename)
+      // If we do not have the compiled report templates, then we need to compile them
+      // before we can generate a report.
+      if (! new File(jasperFilename).exists()) {
+        Logger.info("No jasper files. Compiling them from JRXML files")
+        compileReportsRecursively(reportName)
+        Logger.info("Completed compilation of JRXML files.")
+      }
 
       val dataSource = source.convertToJRDataSource()
-      val jasperPrint = JasperFillManager.fillReport(jasperReport, null, dataSource)
+      val jasperPrint = JasperFillManager.fillReport(jasperFilename, null, dataSource)
       if (null != jasperPrint) Some(jasperPrint) else None
     }
     catch {
@@ -39,14 +45,12 @@ trait ReportGenerator {
   def exportReportToStream(print: Option[JasperPrint], stream: OutputStream): SuccessOrFailure
 
   private def compileReportsRecursively(fileName: String): JasperReport = {
-    val jrxmlFilename = "conf/" + fileName + ".jrxml"
-    val jasperFilename = "conf/" + fileName + ".jasper"
+    val jrxmlFilename = s"conf/$fileName.jrxml"
+    val jasperFilename = s"conf/$fileName.jasper"
 
-    val jasperDesign: JasperDesign = JRXmlLoader.load(jrxmlFilename)
-    val jasperReport = JasperCompileManager.compileReport(jasperDesign)
-    //if (!new java.io.File(jasperFilename).exists) {
+      val jasperDesign: JasperDesign = JRXmlLoader.load(jrxmlFilename)
+      val jasperReport = JasperCompileManager.compileReport(jasperDesign)
       JRSaver.saveObject(jasperReport, jasperFilename)
-    //}
     //Compile sub reports
     JRElementsVisitor.visitReport(jasperReport, new ReportCompiler() {
       override def visitSubreport(subreport: JRSubreport): Unit = {
