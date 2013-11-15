@@ -17,6 +17,7 @@ object PdfGenerator extends ReportGenerator {
     try {
       if (print.isDefined) {
         JasperExportManager.exportReportToPdfStream(print.get,stream)
+        Logger.debug("PDF Generated.")
         GenerationSuccess()
       }
       else GenerationFailure()

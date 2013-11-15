@@ -24,6 +24,7 @@ trait PdfService {
       xml =>
         val generator = reportGenerator
         try {
+          Logger.debug("treating XML received.")
           val print = generator.generateFrom(xml)
 
           generator.exportReportToStream(print, outputStream) match {
