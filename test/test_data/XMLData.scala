@@ -300,11 +300,25 @@ object XMLData extends TestUtils{
 
     val consentXml = fields.consent.map (c => buildQuestion((c \ "QuestionLabel").text, (c \ "Answer").text))
 
-    val disclaimerStatementXml = fields.disclaimerStatement.map (d => (d \ "Content").text)
     val disclaimerQuestionXml = fields.disclaimerQuestion.map (d => buildQuestion((d \ "QuestionLabel").text, (d \ "Answer").text))
 
-    val declarationStatementXml = fields.declarationStatement.map (d => (d \ "Content").text)
+    val disclaimerStatementXml: Seq[String] = {
+      fields.disclaimerStatement.
+        map(x => {
+        Seq((x \\ "Content").map(v => v.text).reduce((total,cur) => total + " " + cur)
+        )
+      }).flatten
+    }
+
     val declarationQuestionXml = fields.declarationQuestion.map (d => buildQuestion((d \ "QuestionLabel").text, (d \ "Answer").text))
+
+    val declarationStatementXml: Seq[String] = {
+      fields.disclaimerStatement.
+        map(x => {
+        Seq((x \\ "Content").map(v => v.text).reduce((total,cur) => total + " " + cur)
+        )
+      }).flatten
+    }
 
     Seq ("Part 9 - Customer Consent And Declaration",
          "Additional Information",

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
-	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="448"/>
+	<property name="ireport.y" value="80"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
@@ -148,6 +148,12 @@
 	<field name="CareeDateOfBirth" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/DateOfBirth]]></fieldDescription>
 	</field>
+	<field name="ClaimantPostCode" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Address/PostCode]]></fieldDescription>
+	</field>
+	<field name="CareePostCode" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Address/PostCode]]></fieldDescription>
+	</field>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -177,221 +183,187 @@
 				</graphicElement>
 			</rectangle>
 			<staticText>
-				<reportElement uuid="0862ee85-65ff-482c-a03e-6c62d78f2833" x="2" y="0" width="550" height="18" forecolor="#FFFFFF"/>
+				<reportElement uuid="0862ee85-65ff-482c-a03e-6c62d78f2833" x="168" y="1" width="180" height="18" forecolor="#FFFFFF"/>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[About you - the carer]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="bf706aa0-98e4-424b-ba2a-4e33cea3862a" x="0" y="19" width="350" height="18"/>
+				<reportElement uuid="bf706aa0-98e4-424b-ba2a-4e33cea3862a" x="0" y="19" width="156" height="18"/>
 				<textElement/>
 				<text><![CDATA[National Insurance Number]]></text>
 			</staticText>
 			<textField>
-				<reportElement uuid="ff849d51-1a45-4305-9ba5-19d553e1e4fd" x="355" y="19" width="197" height="18"/>
+				<reportElement uuid="ff849d51-1a45-4305-9ba5-19d553e1e4fd" x="168" y="19" width="180" height="18"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ClaimantNationalInsuranceNumber}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="a4c4e722-bd59-4a8c-bb03-297dd295603b" x="0" y="37" width="350" height="18"/>
+				<reportElement uuid="a4c4e722-bd59-4a8c-bb03-297dd295603b" x="0" y="37" width="156" height="18"/>
 				<textElement/>
 				<text><![CDATA[Last name]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true">
-				<reportElement uuid="79256d1b-93c2-4e6d-871d-9ad261188fb3" x="355" y="37" width="197" height="18"/>
+				<reportElement uuid="79256d1b-93c2-4e6d-871d-9ad261188fb3" x="168" y="37" width="180" height="18"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ClaimantSurname}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="3494d746-2781-4f39-8b60-753ed88b0fba" x="0" y="55" width="350" height="18"/>
+				<reportElement uuid="3494d746-2781-4f39-8b60-753ed88b0fba" x="0" y="55" width="156" height="18"/>
 				<textElement/>
 				<text><![CDATA[First name(s)]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true">
-				<reportElement uuid="4252d74b-0fa3-43ac-a029-efa997d4c608" x="355" y="55" width="197" height="18"/>
+				<reportElement uuid="4252d74b-0fa3-43ac-a029-efa997d4c608" x="168" y="55" width="180" height="18"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ClaimantOtherNames}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="291d53ca-1039-41a9-a003-40f5160ce600" x="0" y="73" width="350" height="18"/>
+				<reportElement uuid="291d53ca-1039-41a9-a003-40f5160ce600" x="0" y="73" width="156" height="18"/>
 				<textElement/>
 				<text><![CDATA[Title]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true">
-				<reportElement uuid="a2f8c457-7785-4e44-abe1-81b05dab74d1" x="355" y="73" width="197" height="18"/>
+				<reportElement uuid="a2f8c457-7785-4e44-abe1-81b05dab74d1" x="168" y="73" width="180" height="18"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ClaimantTitle}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="04b0ddad-dcbd-4e35-9195-96248c10da4e" x="0" y="93" width="350" height="18" isRemoveLineWhenBlank="true">
+				<reportElement uuid="04b0ddad-dcbd-4e35-9195-96248c10da4e" x="0" y="93" width="156" height="18" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{ClaimantOtherSurnames}!= null]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<text><![CDATA[Other surname or maiden name]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="ce9ab700-3406-4f05-b4e5-dd8aa79252d8" x="355" y="93" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="ce9ab700-3406-4f05-b4e5-dd8aa79252d8" x="168" y="93" width="180" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ClaimantOtherSurnames}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="74f0d526-ec67-46c9-9728-59156b7c8f16" x="0" y="111" width="350" height="18" isPrintInFirstWholeBand="true">
+				<reportElement uuid="74f0d526-ec67-46c9-9728-59156b7c8f16" x="0" y="111" width="156" height="18" isPrintInFirstWholeBand="true">
 					<printWhenExpression><![CDATA[$F{ClaimantDateOfBirth} != null]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<text><![CDATA[Date of Birth]]></text>
 			</staticText>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="7e4d35a8-ffa9-47b7-945c-f6a459e2e8c9" x="355" y="111" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="7e4d35a8-ffa9-47b7-945c-f6a459e2e8c9" x="168" y="111" width="180" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ClaimantDateOfBirth}]]></textFieldExpression>
 			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="704a30ae-0c34-4287-acce-8bdb18f0cee8" x="355" y="19" width="180" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CareeNationalInsuranceNumber}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="a03c8ac3-e688-481b-8ef2-10bdca40c98c" x="355" y="37" width="180" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CareeLastName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="7fa85fb1-35bb-4662-ad18-2fdb9257c635" x="355" y="55" width="180" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CareeOtherNames}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="0deafee2-18ed-4157-b5cf-9c99f80eefd4" x="355" y="73" width="180" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CareeTitle}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f1705b31-ed52-4a00-ad39-338352c94475" x="355" y="111" width="180" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CareeDateOfBirth}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="5f589801-ff54-47f6-9293-7d9500145937" x="355" y="93" width="180" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA["Not Asked"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="f152a887-ec97-4593-8af7-db0c754ba16b" x="355" y="1" width="180" height="18" forecolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[About the care you provide]]></text>
+			</staticText>
 		</band>
 		<band height="21">
 			<subreport>
-				<reportElement uuid="b2816b62-b100-47f0-bdcc-201cdfa5e393" x="0" y="0" width="553" height="21" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="b2816b62-b100-47f0-bdcc-201cdfa5e393" x="168" y="0" width="180" height="21" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource) $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Address")]]></dataSourceExpression>
-				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Address.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_SummaryAddress.jasper"]]></subreportExpression>
 			</subreport>
-		</band>
-		<band height="128">
+			<subreport>
+				<reportElement uuid="a3a9751c-70f4-4f7a-a111-01db93f241f1" x="355" y="0" width="180" height="21" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource) $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Address")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_SummaryAddress.jasper"]]></subreportExpression>
+			</subreport>
 			<staticText>
-				<reportElement uuid="fe544d49-bb35-466b-be0a-5bc430e999b6" x="0" y="0" width="350" height="18" isRemoveLineWhenBlank="true">
+				<reportElement uuid="3fc3f603-b4d7-4b39-94b0-3aefab936083" x="0" y="0" width="136" height="18"/>
+				<textElement/>
+				<text><![CDATA[Street / Town / City]]></text>
+			</staticText>
+		</band>
+		<band height="78">
+			<staticText>
+				<reportElement uuid="fe544d49-bb35-466b-be0a-5bc430e999b6" x="0" y="18" width="156" height="18" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{ClaimantDayTimePhoneNumber} != null]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<text><![CDATA[Daytime telephone number]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="cd15a8f2-4e4c-4b4c-a91b-0c6a3908e4df" x="355" y="0" width="197" height="18" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true"/>
+				<reportElement uuid="cd15a8f2-4e4c-4b4c-a91b-0c6a3908e4df" x="168" y="18" width="180" height="18" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ClaimantDayTimePhoneNumber}]]></textFieldExpression>
 			</textField>
-			<rectangle>
-				<reportElement uuid="c3921886-9f8c-424e-a359-303a2374653c" x="0" y="19" width="552" height="18" backcolor="#999999"/>
-				<graphicElement>
-					<pen lineWidth="0.0"/>
-				</graphicElement>
-			</rectangle>
-			<staticText>
-				<reportElement uuid="f152a887-ec97-4593-8af7-db0c754ba16b" x="2" y="19" width="550" height="18" forecolor="#FFFFFF"/>
-				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
-				</textElement>
-				<text><![CDATA[About the care you provide]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="acb87ba8-3f87-48ca-912a-e43f779b06b3" x="0" y="38" width="350" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{CareeNationalInsuranceNumber} != null]]></printWhenExpression>
-				</reportElement>
-				<textElement/>
-				<text><![CDATA[National Insurance Number]]></text>
-			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="704a30ae-0c34-4287-acce-8bdb18f0cee8" x="355" y="38" width="197" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{CareeNationalInsuranceNumber}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement uuid="8b97cc5a-7b31-43f7-8975-78bad22e319f" x="0" y="56" width="350" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{CareeLastName} != null]]></printWhenExpression>
-				</reportElement>
-				<textElement/>
-				<text><![CDATA[Last name]]></text>
-			</staticText>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="a03c8ac3-e688-481b-8ef2-10bdca40c98c" x="355" y="56" width="197" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{CareeLastName}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement uuid="4f73e645-4cd4-4660-990f-e3366563d49c" x="0" y="74" width="350" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{CareeOtherNames} != null]]></printWhenExpression>
-				</reportElement>
-				<textElement/>
-				<text><![CDATA[First name(s)]]></text>
-			</staticText>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="7fa85fb1-35bb-4662-ad18-2fdb9257c635" x="355" y="74" width="197" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{CareeOtherNames}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement uuid="515b7af0-d1ce-41c2-838f-c3163181286c" x="0" y="92" width="350" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{CareeTitle} != null]]></printWhenExpression>
-				</reportElement>
-				<textElement/>
-				<text><![CDATA[Title]]></text>
-			</staticText>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="0deafee2-18ed-4157-b5cf-9c99f80eefd4" x="355" y="92" width="197" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{CareeTitle}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement uuid="43be788b-1a8d-4b35-a456-91b6463abe3b" x="0" y="110" width="350" height="18" isPrintInFirstWholeBand="true">
-					<printWhenExpression><![CDATA[$F{CareeDateOfBirth} != null]]></printWhenExpression>
-				</reportElement>
-				<textElement/>
-				<text><![CDATA[Date of Birth]]></text>
-			</staticText>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="f1705b31-ed52-4a00-ad39-338352c94475" x="355" y="110" width="197" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{CareeDateOfBirth}]]></textFieldExpression>
-			</textField>
-		</band>
-		<band height="21">
-			<subreport>
-				<reportElement uuid="a3a9751c-70f4-4f7a-a111-01db93f241f1" x="0" y="0" width="553" height="21" isRemoveLineWhenBlank="true"/>
-				<subreportParameter name="SUBREPORT_DIR">
-					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
-				</subreportParameter>
-				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource) $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Address")]]></dataSourceExpression>
-				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Address.jasper"]]></subreportExpression>
-			</subreport>
-		</band>
-		<band height="55">
-			<staticText>
-				<reportElement uuid="f51feec6-9d29-4d9b-a480-1cd1e2c2ba32" x="0" y="0" width="350" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{CareeDayTimePhoneNumber} != null]]></printWhenExpression>
-				</reportElement>
-				<textElement/>
-				<text><![CDATA[Daytime telephone number]]></text>
-			</staticText>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="ff610dae-a49a-47ef-be9e-fda9ab3b6c6c" x="355" y="0" width="197" height="18" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true"/>
+				<reportElement uuid="ff610dae-a49a-47ef-be9e-fda9ab3b6c6c" x="356" y="19" width="197" height="18" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{CareeDayTimePhoneNumber}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="f1197136-f51c-430b-b688-e7f44b2032e5" x="0" y="18" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="f1197136-f51c-430b-b688-e7f44b2032e5" x="0" y="37" width="156" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{CareeRelQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="356229cf-91a4-4f6a-b7a3-9b1840393869" x="355" y="18" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="356229cf-91a4-4f6a-b7a3-9b1840393869" x="356" y="40" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{CareeRelAnswer}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement uuid="975014cc-90e6-4202-96f7-7c9eb28f758d" x="0" y="36" width="350" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{CareeRelOther} != null]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Middle"/>
-				<text><![CDATA[Other]]></text>
-			</staticText>
 			<textField isStretchWithOverflow="true">
-				<reportElement uuid="1efb8c6f-2595-4875-8678-8b1284df8d64" x="355" y="36" width="197" height="18" isRemoveLineWhenBlank="true">
+				<reportElement uuid="1efb8c6f-2595-4875-8678-8b1284df8d64" x="355" y="60" width="197" height="18" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{CareeRelOther} != null]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{CareeRelOther}]]></textFieldExpression>
 			</textField>
+			<textField>
+				<reportElement uuid="359f7e57-7caa-4137-b0c5-77eff0bc1fb4" x="170" y="0" width="180" height="18"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{ClaimantPostCode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b2b6c32d-d05e-41ee-ba77-95c98938a857" x="356" y="1" width="180" height="18"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CareePostCode}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="0c1719c8-7a22-4434-8c75-120031d92aad" x="0" y="0" width="136" height="18"/>
+				<textElement/>
+				<text><![CDATA[Postcode]]></text>
+			</staticText>
 		</band>
 		<band height="145">
 			<rectangle>

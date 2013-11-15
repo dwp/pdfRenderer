@@ -24,13 +24,13 @@
 	<pageHeader>
 		<band height="24" splitType="Stretch">
 			<rectangle>
-				<reportElement uuid="a48b6c47-3c14-4c86-9fd6-a3eef7ca5547" x="1" y="2" width="554" height="21" backcolor="#999999"/>
+				<reportElement uuid="a48b6c47-3c14-4c86-9fd6-a3eef7ca5547" x="0" y="3" width="555" height="20" backcolor="#999999"/>
 				<graphicElement>
 					<pen lineWidth="0.0"/>
 				</graphicElement>
 			</rectangle>
 			<staticText>
-				<reportElement uuid="f3b5dff4-39c9-4ce1-91fe-15e640d4d715" x="1" y="2" width="220" height="21" forecolor="#FFFFFF"/>
+				<reportElement uuid="f3b5dff4-39c9-4ce1-91fe-15e640d4d715" x="0" y="0" width="220" height="18" forecolor="#FFFFFF"/>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -41,7 +41,7 @@
 	<detail>
 		<band height="110" splitType="Stretch">
 			<subreport>
-				<reportElement uuid="f283a59c-12de-489c-bbdb-f4335cb24a47" x="1" y="0" width="554" height="109"/>
+				<reportElement uuid="f283a59c-12de-489c-bbdb-f4335cb24a47" x="1" y="0" width="555" height="109"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -51,32 +51,32 @@
 		</band>
 		<band height="152">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="ca47f04c-5f78-4523-80b3-0fad318b0849" x="1" y="2" width="329" height="20" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="ca47f04c-5f78-4523-80b3-0fad318b0849" x="0" y="0" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EvidenceListAddressLine1}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="dcfdbee9-72c3-4992-a8ec-0909fc2c0a6a" x="1" y="23" width="329" height="20" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="dcfdbee9-72c3-4992-a8ec-0909fc2c0a6a" x="1" y="18" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EvidenceListAddressLine2}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="a57c785b-5469-4919-a0e5-823b36f92ff0" x="1" y="43" width="329" height="20" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="a57c785b-5469-4919-a0e5-823b36f92ff0" x="1" y="36" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EvidenceListAddressLine3}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="e470daa1-453e-48a4-9a5d-9bc30257fe19" x="1" y="63" width="329" height="20" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="e470daa1-453e-48a4-9a5d-9bc30257fe19" x="1" y="54" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EvidenceListAddressPostcode}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="6cbae657-29a5-4c95-8588-533506869fdf" x="1" y="94" width="555" height="21"/>
+				<reportElement uuid="6cbae657-29a5-4c95-8588-533506869fdf" x="1" y="82" width="530" height="18"/>
 				<textElement/>
 				<text><![CDATA[The Carer's Allowance unit will contact you if they need any further information.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="fe0558c0-060a-461d-892b-3d613bcb38d7" x="1" y="115" width="555" height="21"/>
+				<reportElement uuid="fe0558c0-060a-461d-892b-3d613bcb38d7" x="1" y="100" width="530" height="21"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>

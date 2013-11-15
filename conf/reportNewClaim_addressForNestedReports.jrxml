@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="addressForNestedReports" language="groovy" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="5612b57e-df15-4e7b-8f55-17a1d4853ba9">
 	<property name="ireport.zoom" value="2.0"/>
-	<property name="ireport.x" value="333"/>
+	<property name="ireport.x" value="304"/>
 	<property name="ireport.y" value="0"/>
 	<field name="Line1" class="java.lang.String">
 		<fieldDescription><![CDATA[Line[1]]]></fieldDescription>
@@ -26,7 +26,7 @@
 				<text><![CDATA[Street / Town / City]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="c354e299-7659-4c20-a75d-ed92c9998acc" x="355" y="1" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="c354e299-7659-4c20-a75d-ed92c9998acc" x="355" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{Line1}]]></textFieldExpression>
 			</textField>

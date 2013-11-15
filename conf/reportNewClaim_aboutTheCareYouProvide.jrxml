@@ -66,7 +66,7 @@
 	<detail>
 		<band height="435" splitType="Stretch">
 			<rectangle>
-				<reportElement uuid="29685526-ed8b-4544-8b43-a2693c8a827d" x="0" y="1" width="553" height="21" forecolor="#000000" backcolor="#999999"/>
+				<reportElement uuid="29685526-ed8b-4544-8b43-a2693c8a827d" mode="Opaque" x="0" y="1" width="553" height="21" forecolor="#999999" backcolor="#999999"/>
 			</rectangle>
 			<staticText>
 				<reportElement uuid="0352c26e-c945-465d-a87d-c2030a5dc51d" x="0" y="1" width="234" height="20" forecolor="#FFFFFF"/>
@@ -75,14 +75,8 @@
 				</textElement>
 				<text><![CDATA[Part 3 - About the care you provide]]></text>
 			</staticText>
-			<rectangle>
-				<reportElement uuid="bb35d9ea-79bb-4cdc-aa9c-b60b06490bc2" x="20" y="24" width="533" height="20" backcolor="#CCCCCC"/>
-				<graphicElement>
-					<pen lineWidth="0.0"/>
-				</graphicElement>
-			</rectangle>
 			<staticText>
-				<reportElement uuid="1cbce792-112d-4e39-8088-39c855728d3b" x="20" y="24" width="241" height="20" forecolor="#FFFFFF"/>
+				<reportElement uuid="1cbce792-112d-4e39-8088-39c855728d3b" mode="Opaque" x="0" y="24" width="555" height="20" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -149,14 +143,14 @@
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeLiveSameAddressAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="1c5d9726-b4ef-44ce-9a67-6874d77320ab" x="0" y="153" width="553" height="21"/>
+				<reportElement uuid="1c5d9726-b4ef-44ce-9a67-6874d77320ab" mode="Opaque" x="0" y="153" width="555" height="21" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
 				<textElement>
-					<font isBold="true"/>
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Contact details of the person you care for]]></text>
 			</staticText>
 			<subreport>
-				<reportElement uuid="15feeace-8a18-4dcf-982d-e67a66e7e551" x="0" y="175" width="553" height="100"/>
+				<reportElement uuid="15feeace-8a18-4dcf-982d-e67a66e7e551" x="0" y="175" width="555" height="100"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -174,9 +168,9 @@
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeDayTimeTelephoneNumber}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="35fde8b7-2c4f-4011-8ded-e1e3ebf084f0" x="0" y="293" width="553" height="21"/>
+				<reportElement uuid="35fde8b7-2c4f-4011-8ded-e1e3ebf084f0" mode="Opaque" x="0" y="293" width="555" height="21" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
 				<textElement>
-					<font isBold="true"/>
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Relationship and other claims]]></text>
 			</staticText>
@@ -201,9 +195,9 @@
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeArmedForcesAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="c9913d36-dbcf-4fdc-841b-9a496f3d3f0f" x="0" y="353" width="553" height="21"/>
+				<reportElement uuid="c9913d36-dbcf-4fdc-841b-9a496f3d3f0f" mode="Opaque" x="0" y="354" width="555" height="21" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
 				<textElement>
-					<font isBold="true"/>
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[More about the care you provide]]></text>
 			</staticText>
@@ -240,7 +234,7 @@
 		</band>
 		<band height="268">
 			<subreport>
-				<reportElement uuid="e023222c-36da-453b-8ec4-4d1faba787b3" x="0" y="0" width="553" height="258"/>
+				<reportElement uuid="e023222c-36da-453b-8ec4-4d1faba787b3" x="0" y="0" width="555" height="258"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
