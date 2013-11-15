@@ -746,8 +746,11 @@ object ClaimBuilder {
           </OtherInformation>
           <Declaration>
             <DeclarationStatement>
-              <Content>yyyyyyyyyyyyyyyyyyyyyyyyyyyyy.</Content>
-              <Content>xxxxxxxxxxxxxxxxxxxxxxxxxxxx</Content>
+              <Content>The declarations below sets out your legal responsibilities in respect of your claim.</Content>
+              <Content>I declare that I understand the Carer's Allowance Claim Notes and that the information provided on this claim form is correct and complete.</Content>
+              <Content>I understand that I must report all changes in my circumstances or that of the person that I am caring for which may affect my entitlement promptly and by failing to do so I may be liable to prosecution or face a financial penalty.</Content>
+              <Content>I will phone 08456084321 or write to Carer's Allowance Unit, Palatine House, Preston, Lancaster, PR1 1HB to report a change in my circumstances or that of the person that I am caring for.</Content>
+              <Content>If I give false or incomplete information or fail to report changes in my circumstances or that of the person that I am caring for promptly, I understand that my Carer's Allowance may be stopped or reduced and any overpayment of Carer's Allowance may be recovered. In addition I may be prosecuted or face a financial penalty.</Content>
             </DeclarationStatement>
             <DeclarationQuestion>
               <QuestionLabel>Please tick this box if this claim form has been filled in by someone else, if so, please ensure that you understand the declarations above as another person cannot make the declarations on your behalf.</QuestionLabel>
@@ -760,15 +763,16 @@ object ClaimBuilder {
           </Declaration>
           <Disclaimer>
             <DisclaimerStatement>
-              <Content>Disc yyyyyyyyyyyyyyyyyyyyyyyyyyyyy.</Content>
-              <Content>Disc xxxxxxxxxxxxxxxxxxxxxxxxxxxx</Content>
+              <Content>I understand that if I am paid Carer's Allowance it may affect the benefits paid to DP's name I understand that if I am paid Carer's Allowance it may affect the benefits paid to DP's name>>I understand that if I am paid Carer's Allowance it may affect the benefits paid to DP's name</Content>
+              <Content>If the person you are caring for receives certain benefits, the amount they receive may be affected by your claim for Carer's Allowance. Because of this we need both of you to understand the potential consequences of your claim to Carer's Allowance.</Content>
+              <Content>If DP's name gets a Severe Disability Premium with their income-based Jobseeker's Allowance, Income Support, income-related Employment and Support Allowance, Housing Benefit, they may no longer get that premium if we pay Carer's Allowance to you.If DP's name>> gets a Severe Disability Premium with their income-based Jobseeker's Allowance, Income Support, income-related Employment and Support Allowance, Housing Benefit, they may no longer get that premium if we pay Carer's Allowance to you.If DP's name gets a Severe Disability Premium with their income-based Jobseeker's Allowance, Income Support, income-related Employment and Support Allowance, Housing Benefit, they may no longer get that premium if we pay Carer's Allowance to you.</Content>
+              <Content>If DP's name Pension Credit includes an extra amount for severe disability, they may no longer get that extra amount if we pay Carer's Allowance to you.If DP's name Pension Credit includes an extra amount for severe disability, they may no longer get that extra amount if we pay Carer's Allowance to you.If DP's name Pension Credit includes an extra amount for severe disability, they may no longer get that extra amount if we pay Carer's Allowance to you.</Content>
+              <Content>This could also affect any reduction in Council Tax DP's name may be entitled to. To find out more about it, please contact the Local Authority.This could also affect any reduction in Council Tax DP's name>> may be entitled to. To find out more about it, please contact the Local Authority.This could also affect any reduction in Council Tax DP's name may be entitled to. To find out more about it, please contact the Local Authority.</Content>
+              <Content>We will need to check DP's name entitlement to Disability Living Allowance, Personal Independence Payment, Attendance Allowance, Constant Attendance Allowance or Armed Forces Independence Payment when considering your claim.We will need to check DP's name entitlement to Disability Living Allowance, Personal Independence Payment, Attendance Allowance, Constant Attendance Allowance or Armed Forces Independence Payment when considering your claim.We will need to check DP's name entitlement to Disability Living Allowance, Personal Independence Payment, Attendance Allowance, Constant Attendance Allowance or Armed Forces Independence Payment when considering your claim.</Content>
+              <Content>We may contact DP's name or their representative to establish whether 35 hours caring per week is taking place.We may contact DP's name or their representative to establish whether 35 hours caring per week is taking place.We may contact DP's name or their representative to establish whether 35 hours caring per week is taking place.</Content>
             </DisclaimerStatement>
             <DisclaimerQuestion>
-              <QuestionLabel>Disc Please tick this box if this claim form has been filled in by someone else, if so, please ensure that you understand the declarations above as another person cannot make the declarations on your behalf.</QuestionLabel>
-              <Answer>Yes</Answer>
-            </DisclaimerQuestion>
-            <DisclaimerQuestion>
-              <QuestionLabel>Disc Please tick this box to confirm that you understand and make the declarations above.</QuestionLabel>
+              <QuestionLabel>Please tick this box to declare that you have understood the notes and you have made / will make the person you are caring for / or their representative aware that there could be a change to their benefits.</QuestionLabel>
               <Answer>Yes</Answer>
             </DisclaimerQuestion>
           </Disclaimer>
@@ -796,11 +800,23 @@ object ClaimBuilder {
           </EvidenceList>
           <Consents>
             <Consent>
-              <QuestionLabel>An example of a very long consent question so we can see the impact on the report and be sure that everything flows properly. Whenever there are multiple entries in an XML, one has to create subreport.</QuestionLabel>
+              <QuestionLabel>Do you agree to us getting information from any current or previous employer you have told us about on this form?</QuestionLabel>
               <Answer>Yes</Answer>
             </Consent>
             <Consent>
-              <QuestionLabel>Another consent question</QuestionLabel>
+              <QuestionLabel>Please tell us why</QuestionLabel>
+              <Answer>Yes</Answer>
+            </Consent>
+            <Consent>
+              <QuestionLabel></QuestionLabel>
+              <Answer>Yes</Answer>
+            </Consent>
+            <Consent>
+              <QuestionLabel>Please tell us why</QuestionLabel>
+              <Answer>Yes</Answer>
+            </Consent>
+            <Consent>
+              <QuestionLabel>Do you agree to us getting information from any other person or organisation you have told us about on this form?</QuestionLabel>
               <Answer>Yes</Answer>
             </Consent>
           </Consents>
