@@ -47,7 +47,7 @@
 		<band splitType="Stretch"/>
 	</background>
 	<pageHeader>
-		<band height="46" splitType="Stretch">
+		<band height="43" splitType="Stretch">
 			<rectangle>
 				<reportElement uuid="68e23025-814c-4037-bcd3-43fca400b3cb" x="0" y="1" width="553" height="21" backcolor="#999999"/>
 				<graphicElement>
