@@ -1,6 +1,7 @@
 import com.tzavellas.sse.guice.ScalaModule
 import data_sources.{XmlDataSource, ReportDataSource}
-import scala.xml.{NodeSeq, Elem}
+import scala.xml.NodeSeq
+import scala.language.implicitConversions
 
 package object modules {
 

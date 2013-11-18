@@ -1,5 +1,5 @@
 import sbt._
-import Keys._
+import sbt.Keys._
 
 object ApplicationBuild extends Build {
 
@@ -17,14 +17,16 @@ object ApplicationBuild extends Build {
     "com.itextpdf" % "itextpdf" % "5.4.4",
     "org.codehaus.groovy" % "groovy-all" % "2.0.1",
     "xalan" % "xalan" % "2.7.1",
-    "com.tzavellas" % "sse-guice" % "0.7.1",
-    "com.dwp.carers" %% "carerscommon" % "0.11"
+    "com.tzavellas" % "sse-guice" % "0.7.1"
   )
 
-  val sampleStringTask = System.getProperty("sbt.carers.keystore")
-  var testSettings: Seq[Project.Setting[_]] = Seq(javaOptions in Test += ("-Dcarers.keystore=" + sampleStringTask))
-  var sV: Seq[Project.Setting[_]] = Seq(scalaVersion := "2.10.2")
-  var appSettings: Seq[Project.Setting[_]] = repo ++ testSettings ++ sV
+
+//  val sampleStringTask = System.getProperty("sbt.carers.keystore")
+//  var testSettings: Seq[Project.Setting[_]] = Seq(javaOptions in Test += ("-Dcarers.keystore=" + sampleStringTask))
+  var sV: Seq[Project.Setting[_]] = Seq(scalaVersion := "2.10.3")
+  val compilerSettings: Seq[Project.Setting[_]] = Seq(scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8","-feature"))
+
+  var appSettings: Seq[Project.Setting[_]] = repo ++ sV ++ compilerSettings
 
   val main = play.Project(appName, appVersion, appDependencies).settings(appSettings: _*)
 

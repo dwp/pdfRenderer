@@ -1,7 +1,6 @@
 package generators
 
 import org.specs2.mutable._
-import data_sources.XmlDataSource
 import test_data.ClaimBuilder
 import java.io.File
 import scala.xml.Elem
