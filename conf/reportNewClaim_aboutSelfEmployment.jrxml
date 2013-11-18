@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYourPartner" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="2c76a7f8-deb9-45af-83f2-c12559d20c72">
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="633"/>
+	<property name="ireport.y" value="628"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
@@ -194,7 +194,7 @@
 		<band splitType="Stretch"/>
 	</background>
 	<pageHeader>
-		<band height="23">
+		<band height="23" splitType="Stretch">
 			<rectangle>
 				<reportElement uuid="68e23025-814c-4037-bcd3-43fca400b3cb" x="0" y="3" width="555" height="20" backcolor="#999999"/>
 				<graphicElement>
@@ -211,7 +211,7 @@
 		</band>
 	</pageHeader>
 	<detail>
-		<band height="22">
+		<band height="22" splitType="Stretch">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="61c7218b-715a-4359-9449-ee3c564dbe6f" x="0" y="0" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
@@ -223,7 +223,7 @@
 				<textFieldExpression><![CDATA[$F{haveBeenSelfEmployedAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="118">
+		<band height="118" splitType="Stretch">
 			<printWhenExpression><![CDATA[$F{haveBeenSelfEmployedAnswer}.equals("Yes")]]></printWhenExpression>
 			<staticText>
 				<reportElement uuid="682874b6-bfe4-439f-8bb8-4abdfe329111" mode="Opaque" x="0" y="0" width="555" height="21" isPrintInFirstWholeBand="true" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
@@ -283,7 +283,7 @@
 				<textFieldExpression><![CDATA[$F{natureOfBusinessAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="98">
+		<band height="98" splitType="Stretch">
 			<printWhenExpression><![CDATA[$F{selfEmployedNowAnswer}.equals("Yes")]]></printWhenExpression>
 			<staticText>
 				<reportElement uuid="52392fc1-1198-49d5-81cc-98d3752e4379" mode="Opaque" x="0" y="1" width="555" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
@@ -333,7 +333,7 @@
 				<textFieldExpression><![CDATA[$F{whyWhenChangeAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="97">
+		<band height="97" splitType="Stretch">
 			<printWhenExpression><![CDATA[$F{haveBeenSelfEmployedAnswer}.equals("Yes")]]></printWhenExpression>
 			<staticText>
 				<reportElement uuid="3e35e067-9af8-4ceb-9abf-e2d152a1e24b" mode="Opaque" x="0" y="1" width="555" height="20" isPrintInFirstWholeBand="true" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
@@ -378,7 +378,7 @@
 				<textFieldExpression><![CDATA[$F{pensionSchemeFrequencyAnswer}=="Other" ? $F{pensionSchemeFrequencyOther} : null]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="170">
+		<band height="170" splitType="Stretch">
 			<printWhenExpression><![CDATA[$F{haveBeenSelfEmployedAnswer}.equals("Yes")]]></printWhenExpression>
 			<staticText>
 				<reportElement uuid="c2181e86-d16c-40e2-af56-2c702260e4ee" mode="Opaque" x="0" y="1" width="555" height="20" isPrintInFirstWholeBand="true" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
@@ -468,7 +468,7 @@
 				<textFieldExpression><![CDATA[$F{careExpensesChildrenRelationshipToChildAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="172">
+		<band height="172" splitType="Stretch">
 			<printWhenExpression><![CDATA[$F{haveBeenSelfEmployedAnswer}.equals("Yes")]]></printWhenExpression>
 			<staticText>
 				<reportElement uuid="8556a719-4317-47f5-afbd-70abd9427ae0" mode="Opaque" x="0" y="1" width="555" height="20" isPrintInFirstWholeBand="true" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
@@ -518,24 +518,24 @@
 				<textFieldExpression><![CDATA[$F{careExpensesCareePaymentFrequencyAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="6d869767-6ec5-453f-a727-d76541c12e4d" x="355" y="94" width="197" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{careExpensesCareePaymentFrequencyAnswer}=="Other" ? $F{careExpensesCareePaymentFrequencyOther} : ""]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="c00bfb7f-d2bf-4f0d-b469-f1e2690f1c91" x="0" y="94" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{careExpensesRelationshipCarerToClaimantQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="20930787-f509-46b4-87d5-7c69f078f162" x="355" y="112" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="6d869767-6ec5-453f-a727-d76541c12e4d" x="355" y="94" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{careExpensesRelationshipCarerToClaimantAnswer}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{careExpensesCareePaymentFrequencyAnswer}=="Other" ? $F{careExpensesCareePaymentFrequencyOther} : ""]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="aa45753f-a857-4e37-9e2c-3a3747c84daf" x="0" y="112" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{careExpensesRelationshipCarerToPartnerQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="20930787-f509-46b4-87d5-7c69f078f162" x="355" y="112" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{careExpensesRelationshipCarerToClaimantAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="f1635831-4781-4081-87de-e4bc924de9d9" x="355" y="130" width="197" height="18" isRemoveLineWhenBlank="true"/>

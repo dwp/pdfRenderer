@@ -16,7 +16,7 @@
 		<band splitType="Stretch"/>
 	</background>
 	<pageHeader>
-		<band height="44" splitType="Stretch">
+		<band height="43" splitType="Stretch">
 			<rectangle>
 				<reportElement uuid="7d35266a-048b-4bf0-9160-1dffa50dc2a7" x="0" y="1" width="553" height="21" backcolor="#999999"/>
 				<graphicElement>
@@ -43,10 +43,10 @@
 		</band>
 	</pageHeader>
 	<detail>
-		<band height="104" splitType="Stretch">
+		<band height="102" splitType="Stretch">
 			<printWhenExpression><![CDATA[$F{AboutEmploymentAreYouEmployedAnswer}.equals("Yes")]]></printWhenExpression>
 			<subreport>
-				<reportElement uuid="05913b57-31c0-4e7f-91bd-95a159dbf9bb" x="0" y="1" width="552" height="100"/>
+				<reportElement uuid="05913b57-31c0-4e7f-91bd-95a159dbf9bb" x="0" y="1" width="552" height="100" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>

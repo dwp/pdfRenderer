@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="90378acd-33ad-413e-ad03-6f54642cad18">
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="48"/>
+	<property name="ireport.y" value="1400"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<style name="table">
 		<box>
@@ -167,9 +167,9 @@
 				<text><![CDATA[This form was completed in English]]></text>
 			</staticText>
 		</band>
-		<band height="100" splitType="Stretch">
+		<band height="110" splitType="Stretch">
 			<subreport>
-				<reportElement uuid="215b4880-58fe-4b83-b271-f650709b3cac" x="0" y="0" width="555" height="100" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="215b4880-58fe-4b83-b271-f650709b3cac" x="0" y="0" width="555" height="110" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -177,10 +177,10 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_aboutYouTheCarer.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="50" splitType="Stretch">
+		<band height="110" splitType="Stretch">
 			<printWhenExpression><![CDATA[$F{HavePartnerAnswer}.equals("Yes")]]></printWhenExpression>
 			<subreport>
-				<reportElement uuid="75564d7a-a29b-41fc-a89c-debc7307f3fb" x="0" y="0" width="555" height="50" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="75564d7a-a29b-41fc-a89c-debc7307f3fb" x="0" y="0" width="555" height="110" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -188,9 +188,9 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_aboutYourPartner.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="50" splitType="Stretch">
+		<band height="110" splitType="Stretch">
 			<subreport>
-				<reportElement uuid="dfd7d263-0881-4af0-b3c1-166b1491022a" x="0" y="0" width="555" height="50" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="dfd7d263-0881-4af0-b3c1-166b1491022a" x="0" y="0" width="555" height="110" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -198,9 +198,9 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_aboutTheCareYouProvide.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="49" splitType="Stretch">
+		<band height="59" splitType="Stretch">
 			<subreport>
-				<reportElement uuid="32e318d3-4311-4a9d-9fb2-13e3f6bb8c40" x="0" y="0" width="555" height="48" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="32e318d3-4311-4a9d-9fb2-13e3f6bb8c40" x="0" y="0" width="555" height="59" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -208,9 +208,9 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_AboutYourEducation.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="49" splitType="Stretch">
+		<band height="60" splitType="Stretch">
 			<subreport>
-				<reportElement uuid="57b7fddc-1a96-4fb6-8d15-fc3c5d961a7a" x="0" y="-1" width="555" height="50" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="57b7fddc-1a96-4fb6-8d15-fc3c5d961a7a" x="0" y="0" width="555" height="60" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -218,9 +218,9 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_aboutEmployment.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="52" splitType="Stretch">
+		<band height="110" splitType="Stretch">
 			<subreport>
-				<reportElement uuid="4e2c7d53-6a5a-4343-933f-005fbdd500d2" x="0" y="0" width="555" height="51" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="4e2c7d53-6a5a-4343-933f-005fbdd500d2" x="0" y="1" width="555" height="109" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -228,9 +228,9 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_aboutSelfEmployment.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="60" splitType="Stretch">
+		<band height="110" splitType="Stretch">
 			<subreport>
-				<reportElement uuid="026da851-8e62-4c4a-a0b8-71e5ce6ad71e" x="0" y="0" width="555" height="60" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="026da851-8e62-4c4a-a0b8-71e5ce6ad71e" x="0" y="0" width="555" height="110" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -238,9 +238,9 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_aboutOtherMoney.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="59" splitType="Stretch">
+		<band height="110" splitType="Stretch">
 			<subreport>
-				<reportElement uuid="9698f1c6-8133-4262-83e4-8567c8ee247f" x="0" y="0" width="555" height="59" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="9698f1c6-8133-4262-83e4-8567c8ee247f" x="0" y="0" width="555" height="110" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -248,9 +248,9 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_aboutYourPayDetails.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="50" splitType="Stretch">
+		<band height="110" splitType="Stretch">
 			<subreport>
-				<reportElement uuid="e07170fa-a386-4eb8-94f3-bab926bd1918" x="0" y="0" width="555" height="50" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="e07170fa-a386-4eb8-94f3-bab926bd1918" x="0" y="0" width="555" height="110" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -258,9 +258,9 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_ConsentsAndDeclarations.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="50" splitType="Stretch">
+		<band height="110" splitType="Stretch">
 			<subreport>
-				<reportElement uuid="541dfba5-c6b0-442f-9bd1-ec584e4b89ca" x="0" y="0" width="555" height="50" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="541dfba5-c6b0-442f-9bd1-ec584e4b89ca" x="0" y="0" width="555" height="110" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -270,29 +270,29 @@
 		</band>
 	</detail>
 	<pageFooter>
-		<band height="20" splitType="Stretch">
+		<band height="27" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="dc7a0fce-ab52-46eb-ab11-ed9d6e023e1a" x="2" y="0" width="66" height="20"/>
+				<reportElement uuid="dc7a0fce-ab52-46eb-ab11-ed9d6e023e1a" x="0" y="0" width="66" height="20"/>
 				<textElement verticalAlignment="Middle"/>
 				<text><![CDATA[Transaction:]]></text>
 			</staticText>
 			<textField>
-				<reportElement uuid="0133ea8a-e3b4-4d1b-ae6b-918fecfcdd07" x="68" y="0" width="96" height="20"/>
+				<reportElement uuid="0133ea8a-e3b4-4d1b-ae6b-918fecfcdd07" x="66" y="0" width="96" height="20"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{TransactionId}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="6063e8ee-92b9-44aa-b97d-37bad5da42f5" x="167" y="0" width="81" height="20"/>
+				<reportElement uuid="6063e8ee-92b9-44aa-b97d-37bad5da42f5" x="181" y="0" width="81" height="20"/>
 				<textElement verticalAlignment="Middle"/>
 				<text><![CDATA[Claim received:]]></text>
 			</staticText>
 			<textField>
-				<reportElement uuid="c2c2df57-21e4-40c1-9059-1985d6986f09" x="243" y="0" width="126" height="20"/>
+				<reportElement uuid="c2c2df57-21e4-40c1-9059-1985d6986f09" x="262" y="0" width="126" height="20"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{DateTimeGenerated}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement uuid="fb0d9e43-5827-4ea3-a9c3-df5752f30646" x="403" y="0" width="121" height="20"/>
+				<reportElement uuid="fb0d9e43-5827-4ea3-a9c3-df5752f30646" x="404" y="0" width="121" height="20"/>
 				<textElement textAlignment="Right" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER} + " of "]]></textFieldExpression>
 			</textField>
