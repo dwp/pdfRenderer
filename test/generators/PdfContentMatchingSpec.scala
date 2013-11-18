@@ -77,7 +77,7 @@ class PdfContentMatchingSpec extends Specification {
       println("TotalContent " + totalContent)
 
       matchFunction(testData, totalContent) must beTrue
-      //deletePdfFile(pdfFileLocation)
+      deletePdfFile(pdfFileLocation)
     }
 
     /*
