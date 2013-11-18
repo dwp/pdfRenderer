@@ -42,6 +42,7 @@ trait PdfService {
         }
         catch {
           case e: InvalidSourceFormatException => Results.BadRequest
+          case _ => Results.InternalServerError
         }
 
     }.getOrElse(Results.UnsupportedMediaType)

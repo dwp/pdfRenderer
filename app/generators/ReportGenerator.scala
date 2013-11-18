@@ -1,20 +1,21 @@
 package generators
 
+import scala.util.{Success, Try}
 import data_sources.{InvalidSourceFormatException, ReportDataSource}
 import net.sf.jasperreports.engine._
 import net.sf.jasperreports.engine.xml.JRXmlLoader
-import play.api.Logger
+import play.api.{Play, Logger}
 import net.sf.jasperreports.engine.design.JasperDesign
 import net.sf.jasperreports.engine.util.{JRElementsVisitor, JRSaver}
 import java.io.{File, OutputStream}
+import java.util
 
 
 /**
  * Interface of the report generators.
  */
 trait ReportGenerator {
-
-  val jasperLocation = "conf/"
+  lazy val jasperLocation = Try(Play.current.configuration.getString("jasper.folder").getOrElse("./")) match {case Success(s) => s; case _ => "./"}
 
   def generateFrom(source: ReportDataSource): Option[JasperPrint] = {
     try {
@@ -28,15 +29,16 @@ trait ReportGenerator {
         compileReportsRecursively(reportName)
         Logger.info("Completed compilation of JRXML files.")
       }
-
-      val jasperPrint = JasperFillManager.fillReport(jasperFilename, null, source.convertToJRDataSource())
+      val parameter:util.Map[String,Object] = new util.HashMap[String,Object]()
+      parameter.put("SUBREPORT_DIR",jasperLocation)
+      val jasperPrint = JasperFillManager.fillReport(jasperFilename, parameter, source.convertToJRDataSource())
       if (null != jasperPrint) Some(jasperPrint) else None
     }
     catch {
       case e: InvalidSourceFormatException => throw e
       case e: Throwable => {
         Logger.error(e.getMessage)
-        None
+        throw e
       }
     }
   }
@@ -44,10 +46,8 @@ trait ReportGenerator {
   def exportReportToStream(print: Option[JasperPrint], stream: OutputStream): SuccessOrFailure
 
   private def compileReportsRecursively(fileName: String): JasperReport = {
-    val jrxmlFilename = s"$jasperLocation$fileName.jrxml"
     val jasperFilename = s"$jasperLocation$fileName.jasper"
-
-    val jasperDesign: JasperDesign = JRXmlLoader.load(jrxmlFilename)
+    val jasperDesign: JasperDesign = JRXmlLoader.load(getClass getResourceAsStream s"/$fileName.jrxml")
     val jasperReport = JasperCompileManager.compileReport(jasperDesign)
     JRSaver.saveObject(jasperReport, jasperFilename)
     //Compile sub reports
