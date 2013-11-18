@@ -30,7 +30,7 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Street.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="20" splitType="Prevent">
+		<band height="19" splitType="Prevent">
 			<printWhenExpression><![CDATA[$F{PostCode} != null]]></printWhenExpression>
 			<staticText>
 				<reportElement uuid="c89a47b6-166a-41d0-800c-7ae95827ec24" x="0" y="0" width="350" height="18"/>
