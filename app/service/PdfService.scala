@@ -8,7 +8,8 @@ import java.io.OutputStream
 import data_sources.InvalidSourceFormatException
 
 /**
- * TODO write description
+ * Entry point of the service. It consumes the HTTP request received, checks it is an XML request
+ * and then ask a [[[generators.ReportGenerator]]] to generate a report from the XML.
  * @author Jorge Migueis
  */
 trait PdfService {
@@ -34,7 +35,7 @@ trait PdfService {
             case GenerationFailure() =>
               Results.InternalServerError
 
-            case _ =>
+            case _: Throwable =>
               Logger.error("Unexpected result")
               Results.InternalServerError
 
@@ -42,7 +43,7 @@ trait PdfService {
         }
         catch {
           case e: InvalidSourceFormatException => Results.BadRequest
-          case _ => Results.InternalServerError
+          case _: Throwable => Results.InternalServerError
         }
 
     }.getOrElse(Results.UnsupportedMediaType)
