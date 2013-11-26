@@ -16,17 +16,24 @@ object ApplicationBuild extends Build {
     "com.lowagie" % "itext" % "4.2.1",
     "com.itextpdf" % "itextpdf" % "5.4.4",
     "org.codehaus.groovy" % "groovy-all" % "2.0.1",
-    "xalan" % "xalan" % "2.7.1",
     "com.tzavellas" % "sse-guice" % "0.7.1"
   )
 
 
 //  val sampleStringTask = System.getProperty("sbt.carers.keystore")
 //  var testSettings: Seq[Project.Setting[_]] = Seq(javaOptions in Test += ("-Dcarers.keystore=" + sampleStringTask))
+
+  val cleanjspr = TaskKey[Unit]("clean-j", "Cleans jasper reports compiled files")
+
+  val cleanjsprTask = cleanjspr := {
+    val files = new File(".").listFiles().filter{_.name.endsWith(".jasper")}.filter{_.delete}
+    println("Files deleted:"+(files mkString ","))
+  }
+
   var sV: Seq[Project.Setting[_]] = Seq(scalaVersion := "2.10.3")
   val compilerSettings: Seq[Project.Setting[_]] = Seq(scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8","-feature"))
 
-  var appSettings: Seq[Project.Setting[_]] = repo ++ sV ++ compilerSettings
+  var appSettings: Seq[Project.Setting[_]] = repo ++ sV ++ compilerSettings ++ cleanjsprTask
 
   val main = play.Project(appName, appVersion, appDependencies).settings(appSettings: _*)
 
