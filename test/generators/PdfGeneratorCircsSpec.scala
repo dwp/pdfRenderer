@@ -5,6 +5,7 @@ import test_data.CircsBuilder
 import java.io.File
 import scala.xml.Elem
 import generators.Helper._
+import play.api.test.WithApplication
 
 
 /**
@@ -30,13 +31,13 @@ class PdfGeneratorCircsSpec extends Specification {
       pdfFile.exists() must beTrue
     }
 
-    "be handle functionalTestCase1 and return success" in {
+    "be handle functionalTestCase1 and return success" in new WithApplication{
       pending
       val pdfFileLocation = "circs_functionalTestCase1_testGeneratorResultIsSuccess.pdf"
       testGeneratorResultIsSuccess(pdfFileLocation, CircsBuilder.functionalTestCase1)
     }//.pendingUntilFixed("Need to implement .jrxml for circs")
 
-    "create functionalTestCase1 PDF file" in {
+    "create functionalTestCase1 PDF file" in new WithApplication{
       pending
       val pdfFileLocation = "circs_functionalTestCase1_testOutputFileExists.pdf"
       testOutputFileExists(pdfFileLocation, CircsBuilder.functionalTestCase1)

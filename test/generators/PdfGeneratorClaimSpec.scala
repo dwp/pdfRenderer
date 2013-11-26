@@ -5,6 +5,7 @@ import test_data.ClaimBuilder
 import java.io.File
 import scala.xml.Elem
 import generators.Helper._
+import play.api.test.WithApplication
 
 
 /**
@@ -32,92 +33,92 @@ class PdfGeneratorClaimSpec extends Specification {
       deletePdfFile(pdfFileLocation)
     }
 
-    "be handle functionalTestCase1 and return success" in {
+    "be handle functionalTestCase1 and return success" in new WithApplication{
       val pdfFileLocation = "functionalTestCase1_testGeneratorResultIsSuccess.pdf"
       testGeneratorResultIsSuccess(pdfFileLocation, ClaimBuilder.functionalTestCase1)
     }
 
-    "create functionalTestCase1 PDF file" in {
+    "create functionalTestCase1 PDF file" in new WithApplication{
       val pdfFileLocation = "functionalTestCase1_testOutputFileExists.pdf"
       testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase1)
     }
 
-    "be handle functionalTestCase2 and return success" in {
+    "be handle functionalTestCase2 and return success" in new WithApplication{
       val pdfFileLocation = "functionalTestCase2_testGeneratorResultIsSuccess.pdf"
       testGeneratorResultIsSuccess(pdfFileLocation, ClaimBuilder.functionalTestCase2)
     }
 
-    "create functionalTestCase2 PDF file" in {
+    "create functionalTestCase2 PDF file" in new WithApplication{
       val pdfFileLocation = "functionalTestCase2_testOutputFileExists.pdf"
       testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase2)
     }
 
-    "be handle functionalTestCase3 and return success" in {
+    "be handle functionalTestCase3 and return success" in new WithApplication{
       val pdfFileLocation = "functionalTestCase3_testGeneratorResultIsSuccess.pdf"
       testGeneratorResultIsSuccess(pdfFileLocation, ClaimBuilder.functionalTestCase3)
     }
 
-    "create functionalTestCase3 PDF file" in {
+    "create functionalTestCase3 PDF file" in new WithApplication{
       val pdfFileLocation = "functionalTestCase3_testOutputFileExists.pdf"
       testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase3)
     }
 
-    "be handle functionalTestCase4 and return success" in {
+    "be handle functionalTestCase4 and return success" in new WithApplication{
       val pdfFileLocation = "functionalTestCase4_testGeneratorResultIsSuccess.pdf"
       testGeneratorResultIsSuccess(pdfFileLocation, ClaimBuilder.functionalTestCase4)
     }
 
-    "create functionalTestCase4 PDF file" in {
+    "create functionalTestCase4 PDF file" in new WithApplication{
       val pdfFileLocation = "functionalTestCase4_testOutputFileExists.pdf"
       testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase4)
     }
 
-    "be handle functionalTestCase5 and return success" in {
+    "be handle functionalTestCase5 and return success" in new WithApplication{
       val pdfFileLocation = "functionalTestCase5_testGeneratorResultIsSuccess.pdf"
       testGeneratorResultIsSuccess(pdfFileLocation, ClaimBuilder.functionalTestCase5)
     }
 
-    "create functionalTestCase5 PDF file" in {
+    "create functionalTestCase5 PDF file" in new WithApplication{
       val pdfFileLocation = "functionalTestCase5_testOutputFileExists.pdf"
       testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase5)
     }
 
-    "be handle functionalTestCase6 and return success" in {
+    "be handle functionalTestCase6 and return success" in new WithApplication{
       val pdfFileLocation = "functionalTestCase6_testGeneratorResultIsSuccess.pdf"
       testGeneratorResultIsSuccess(pdfFileLocation, ClaimBuilder.functionalTestCase6)
     }
 
-    "create functionalTestCase6 PDF file" in {
+    "create functionalTestCase6 PDF file" in new WithApplication{
       val pdfFileLocation = "functionalTestCase6_testOutputFileExists.pdf"
       testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase6)
     }
 
-    "be handle functionalTestCase7 and return success" in {
+    "be handle functionalTestCase7 and return success" in new WithApplication{
       val pdfFileLocation = "functionalTestCase7_testGeneratorResultIsSuccess.pdf"
       testGeneratorResultIsSuccess(pdfFileLocation, ClaimBuilder.functionalTestCase7)
     }
 
-    "create functionalTestCase7 PDF file" in {
+    "create functionalTestCase7 PDF file" in new WithApplication{
       val pdfFileLocation = "functionalTestCase7_testOutputFileExists.pdf"
       testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase7)
     }
 
-    "be handle functionalTestCase8 and return success" in {
+    "be handle functionalTestCase8 and return success" in new WithApplication{
       val pdfFileLocation = "functionalTestCase8_testGeneratorResultIsSuccess.pdf"
       testGeneratorResultIsSuccess(pdfFileLocation, ClaimBuilder.functionalTestCase8)
     }
 
-    "create functionalTestCase8 PDF file" in {
+    "create functionalTestCase8 PDF file" in new WithApplication{
       val pdfFileLocation = "functionalTestCase8_testOutputFileExists.pdf"
       testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase8)
     }
 
-    "be handle functionalTestCase9 and return success" in {
+    "be handle functionalTestCase9 and return success" in new WithApplication{
       val pdfFileLocation = "functionalTestCase9_testGeneratorResultIsSuccess.pdf"
       testGeneratorResultIsSuccess(pdfFileLocation, ClaimBuilder.functionalTestCase9)
     }
 
-    "create functionalTestCase9 PDF file" in {
+    "create functionalTestCase9 PDF file" in new WithApplication{
       val pdfFileLocation = "functionalTestCase9_testOutputFileExists.pdf"
       testOutputFileExists(pdfFileLocation, ClaimBuilder.functionalTestCase9)
     }

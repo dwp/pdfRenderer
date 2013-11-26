@@ -1,5 +1,6 @@
 import sbt._
 import sbt.Keys._
+import com.typesafe.config._
 
 object ApplicationBuild extends Build {
 
@@ -23,11 +24,15 @@ object ApplicationBuild extends Build {
 //  val sampleStringTask = System.getProperty("sbt.carers.keystore")
 //  var testSettings: Seq[Project.Setting[_]] = Seq(javaOptions in Test += ("-Dcarers.keystore=" + sampleStringTask))
 
+  val conf = ConfigFactory.parseFile(new File("conf/application.conf")).resolve()
+
   val cleanjspr = TaskKey[Unit]("clean-j", "Cleans jasper reports compiled files")
 
   val cleanjsprTask = cleanjspr := {
-    val files = new File(".").listFiles().filter{_.name.endsWith(".jasper")}.filter{_.delete}
-    println("Files deleted:"+(files mkString ","))
+    val jasperFolder    = conf.getString("jasper.folder")
+    val files = new File(jasperFolder).listFiles().filter(_.name.endsWith(".jasper")).filter(_.delete)
+    println("Removed files:")
+    files map(p=>println(p))
   }
 
   var sV: Seq[Project.Setting[_]] = Seq(scalaVersion := "2.10.3")

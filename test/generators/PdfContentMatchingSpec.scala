@@ -6,6 +6,7 @@ import java.io.File
 import scala.xml.Elem
 import com.itextpdf.text.pdf.parser.{PdfReaderContentParser, SimpleTextExtractionStrategy}
 import generators.Helper._
+import play.api.test.WithApplication
 
 
 /**
@@ -87,51 +88,51 @@ class PdfContentMatchingSpec extends Specification {
     }*/
 
 
-    "extract PDF for functionalTestCase1 and match contents" in {
+    "extract PDF for functionalTestCase1 and match contents" in new WithApplication{
       val pdfFileLocation = "functionalTestCase1_contentTestPDF.pdf"
       testContentMatches(pdfFileLocation, ClaimBuilder.functionalTestCase1, XMLData.functionalTestCase1, foundMustBeTrue)
     }
 
 
-    "extract PDF for functionalTestCase2 and match contents" in {
+    "extract PDF for functionalTestCase2 and match contents" in new WithApplication{
       val pdfFileLocation = "functionalTestCase2_contentTestPDF.pdf"
       testContentMatches(pdfFileLocation, ClaimBuilder.functionalTestCase2, XMLData.functionalTestCase2, foundMustBeTrue)
     }
 
 
-    "extract PDF for functionalTestCase3 and match contents" in {
+    "extract PDF for functionalTestCase3 and match contents" in new WithApplication{
       val pdfFileLocation = "functionalTestCase3_contentTestPDF.pdf"
       testContentMatches(pdfFileLocation, ClaimBuilder.functionalTestCase3, XMLData.functionalTestCase3, foundMustBeTrue)
     }
 
-    "extract PDF for functionalTestCase4 and match contents" in {
+    "extract PDF for functionalTestCase4 and match contents" in new WithApplication{
       val pdfFileLocation = "functionalTestCase4_contentTestPDF.pdf"
       testContentMatches(pdfFileLocation, ClaimBuilder.functionalTestCase4, XMLData.functionalTestCase4, foundMustBeTrue)
     }
 
 
 
-    "extract PDF for functionalTestCase5 and match contents" in {
+    "extract PDF for functionalTestCase5 and match contents" in new WithApplication{
       val pdfFileLocation = "functionalTestCase5_contentTestPDF.pdf"
       testContentMatches(pdfFileLocation, ClaimBuilder.functionalTestCase5, XMLData.functionalTestCase5, foundMustBeTrue)
     }
 
-    "extract PDF for functionalTestCase6 and match contents" in {
+    "extract PDF for functionalTestCase6 and match contents" in new WithApplication{
       val pdfFileLocation = "functionalTestCase6_contentTestPDF.pdf"
       testContentMatches(pdfFileLocation, ClaimBuilder.functionalTestCase6, XMLData.functionalTestCase6, foundMustBeTrue)
     }
 
-    "extract PDF for functionalTestCase7 and match contents" in {
+    "extract PDF for functionalTestCase7 and match contents" in new WithApplication{
       val pdfFileLocation = "functionalTestCase7_contentTestPDF.pdf"
       testContentMatches(pdfFileLocation, ClaimBuilder.functionalTestCase7, XMLData.functionalTestCase7, foundMustBeTrue)
     }
 
-    "extract PDF for functionalTestCase8 and match contents" in {
+    "extract PDF for functionalTestCase8 and match contents" in new WithApplication{
       val pdfFileLocation = "functionalTestCase8_contentTestPDF.pdf"
       testContentMatches(pdfFileLocation, ClaimBuilder.functionalTestCase8, XMLData.functionalTestCase8, foundMustBeTrue)
     }
 
-    "extract PDF for functionalTestCase9 and match contents" in {
+    "extract PDF for functionalTestCase9 and match contents" in new WithApplication{
       val pdfFileLocation = "functionalTestCase9_contentTestPDF.pdf"
       testContentMatches(pdfFileLocation, ClaimBuilder.functionalTestCase9, XMLData.functionalTestCase9, foundMustBeTrue)
     }

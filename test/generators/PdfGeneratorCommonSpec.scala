@@ -8,6 +8,7 @@ import java.io.{FileOutputStream, File}
 
 import generators.Helper._
 import net.sf.jasperreports.engine.JasperPrint
+import play.api.test.WithApplication
 
 
 /**
@@ -16,7 +17,7 @@ import net.sf.jasperreports.engine.JasperPrint
  */
 class PdfGeneratorCommonSpec extends Specification {
   "PdfGeneratorCommonSpec" should {
-    "be reject xml that does not contain DWPCAClaim or DWPCACircs" in {
+    "be reject xml that does not contain DWPCAClaim or DWPCACircs" in new WithApplication{
       val pdfFileLocation = "goodClaimReject.pdf"
       val xml = ClaimBuilder.badClaim
       val generatorResult = None
@@ -31,7 +32,7 @@ class PdfGeneratorCommonSpec extends Specification {
       generatorResult must beNone
     }
 
-    "be handle valid xml and return success" in {
+    "be handle valid xml and return success" in new WithApplication{
       val pdfFileLocation = "goodClaimSuccess.pdf"
       val xml = ClaimBuilder.goodClaim
       val dataSource = new XmlDataSource(xml)
@@ -41,7 +42,7 @@ class PdfGeneratorCommonSpec extends Specification {
       deletePdfFile(pdfFileLocation)
     }
 
-    "create a PDF file" in {
+    "create a PDF file" in new WithApplication{
       val pdfFileLocation = "goodClaimCreate.pdf"
       val xml = ClaimBuilder.goodClaim
       val dataSource = new XmlDataSource(xml)
@@ -53,7 +54,7 @@ class PdfGeneratorCommonSpec extends Specification {
     }
 
 
-    "write files in parallel" in {
+    "write files in parallel" in new WithApplication{
       val max = 10
 
       (1 to max).toArray.par.forall(x => {

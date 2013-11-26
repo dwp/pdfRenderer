@@ -2,6 +2,7 @@ package data_sources
 
 import org.specs2.mutable.Specification
 import net.sf.jasperreports.engine.data.JRXmlDataSource
+import play.api.test.WithApplication
 
 /**
  * TODO write description
@@ -28,7 +29,7 @@ class XmlDataSourceSpec extends Specification {
       dataSource.jasperReportFilenameMatcher() mustEqual "reportNewCircs"
     }
 
-    "jasperReportFilenameMatcher returns reportNewClaim for xml containing DWPCAClaim element" in {
+    "jasperReportFilenameMatcher returns reportNewClaim for xml containing DWPCAClaim element" in new WithApplication{
       val xml = <DWPCAClaim>
         <DWPCATransaction>
           <DWPCAClaim></DWPCAClaim>
