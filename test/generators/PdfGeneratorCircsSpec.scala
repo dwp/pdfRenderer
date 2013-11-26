@@ -32,13 +32,13 @@ class PdfGeneratorCircsSpec extends Specification {
     }
 
     "be handle functionalTestCase1 and return success" in new WithApplication{
-      pending
+
       val pdfFileLocation = "circs_functionalTestCase1_testGeneratorResultIsSuccess.pdf"
       testGeneratorResultIsSuccess(pdfFileLocation, CircsBuilder.functionalTestCase1)
     }//.pendingUntilFixed("Need to implement .jrxml for circs")
 
     "create functionalTestCase1 PDF file" in new WithApplication{
-      pending
+
       val pdfFileLocation = "circs_functionalTestCase1_testOutputFileExists.pdf"
       testOutputFileExists(pdfFileLocation, CircsBuilder.functionalTestCase1)
     } //.pendingUntilFixed("Need to implement .jrxml for circs")

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewCircs_Summary" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="2.0"/>
 	<property name="ireport.x" value="427"/>
@@ -279,7 +280,7 @@
 			</textField>
 			<staticText>
 				<reportElement uuid="d98bf361-e737-4ccf-b14e-c01ab782e7b1" x="2" y="17" width="348" height="20">
-					<printWhenExpression><![CDATA[$F{ClaimantMobileNumber}]]></printWhenExpression>
+					<printWhenExpression><![CDATA[$F{CircsClaimantMobileNumber} != null]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<text><![CDATA[Mobile telephone number]]></text>
