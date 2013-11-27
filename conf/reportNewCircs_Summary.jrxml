@@ -155,6 +155,18 @@
 	<field name="CircsClaimantMobileNumber" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/Claim/ClaimantDetails/MobileNumber]]></fieldDescription>
 	</field>
+	<field name="CircsOtherChangesQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/OtherChanges/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="CircsOtherChangesAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/OtherChanges/Answer]]></fieldDescription>
+	</field>
+	<field name="CircsDeclarationQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/Declaration/DeclarationQuestion/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="CircsDeclarationAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/Declaration/DeclarationQuestion/Answer]]></fieldDescription>
+	</field>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -191,7 +203,7 @@
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[About you - the carer]]></text>
+				<text><![CDATA[Part 1 - About you - the carer]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="3494d746-2781-4f39-8b60-753ed88b0fba" x="0" y="54" width="350" height="18">
@@ -349,7 +361,7 @@
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[About the care you provide]]></text>
+				<text><![CDATA[Part 2 - About the care you provide]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="acb87ba8-3f87-48ca-912a-e43f779b06b3" x="0" y="110" width="350" height="18" isRemoveLineWhenBlank="true">
@@ -434,6 +446,93 @@
 				</textElement>
 				<text><![CDATA[Details of the person  you care for]]></text>
 			</staticText>
+		</band>
+		<band height="41">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<rectangle>
+				<reportElement uuid="78e2aefa-2ecf-44f2-a93b-d8797a7ad8af" x="0" y="0" width="552" height="18" backcolor="#999999">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="6c0b5710-e170-4bd1-8165-9525d19f0bd8" x="1" y="0" width="550" height="18" forecolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Part 3 - Change in Circumstances]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="674d0baa-9321-4758-b717-f242dcf07dd0" x="356" y="18" width="197" height="18" isRemoveLineWhenBlank="true">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CircsOtherChangesAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="c528da55-d198-47a6-8439-0c07572d6423" x="0" y="18" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CircsOtherChangesQuestion}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="18">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<rectangle>
+				<reportElement uuid="c66eb453-5996-4b5f-8288-3fcf65e0c0f3" x="0" y="0" width="552" height="18" backcolor="#999999">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="8cc57fe4-2171-4ffc-a306-4ec267e4bcf6" x="1" y="0" width="550" height="18" forecolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Part 4 - Declaration]]></text>
+			</staticText>
+		</band>
+		<band height="20">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<subreport>
+				<reportElement uuid="88bcf35d-2301-41ae-ac3a-9edd865b268a" x="0" y="0" width="553" height="18" isRemoveLineWhenBlank="true">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("//Declaration")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_subreportDeclaration.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="18">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="c5ac2087-adea-4e7c-ac3d-633622e13dad" x="0" y="0" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CircsDeclarationQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="07dfde56-277f-4b8e-97c4-2f3dbf984bd5" x="356" y="0" width="197" height="18" isRemoveLineWhenBlank="true">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CircsDeclarationAnswer}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 </jasperReport>
