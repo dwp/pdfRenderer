@@ -9,7 +9,7 @@ import data_sources.InvalidSourceFormatException
 
 /**
  * Entry point of the service. It consumes the HTTP request received, checks it is an XML request
- * and then ask a [[[generators.ReportGenerator]]] to generate a report from the XML.
+ * and then ask a [[generators.ReportGenerator]] to generate a report from the XML.
  * @author Jorge Migueis
  */
 trait PdfService {
@@ -35,8 +35,8 @@ trait PdfService {
             case GenerationFailure() =>
               Results.InternalServerError
 
-            case _: Throwable =>
-              Logger.error("Unexpected result")
+            case e: Throwable =>
+              Logger.error("Unexpected result",e)
               Results.InternalServerError
 
           }

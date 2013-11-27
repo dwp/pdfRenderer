@@ -23,7 +23,7 @@ object PdfGenerator extends ReportGenerator {
       else GenerationFailure()
     } catch {
       case e: Exception => {
-        Logger.error(e.getMessage)
+        Logger.error(e.getMessage,e)
         GenerationFailure()
       }
     }

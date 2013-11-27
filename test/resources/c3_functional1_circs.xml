@@ -1,0 +1,55 @@
+<DWPBody xsi:schemaLocation="http://www.govtalk.gov.uk/dwp/carers-allowance file:./CarersAllowance_Schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns="http://www.govtalk.gov.uk/dwp/carers-allowance">
+    <Version>0.1</Version>
+    <DWPCATransaction id="TEST432">
+        <TransactionId>TEST432</TransactionId>
+        <DateTimeGenerated>27-11-2013 12:29</DateTimeGenerated>
+        <DWPCAChangeOfCircumstances>
+            <Claim>
+                <ClaimantDetails>
+                    <Surname>Smith</Surname>
+                    <OtherNames>John Roger</OtherNames>
+                    <Title>Mr</Title>
+                    <DateOfBirth>03-04-1950</DateOfBirth>
+                    <NationalInsuranceNumber>JA486278A</NationalInsuranceNumber>
+                    <Address>
+                        <Line>101 Clifton Street</Line>
+                        <Line>Blackpool</Line>
+
+                        <PostCode>PE1 4AQ</PostCode>
+                    </Address>
+                    <DayTimePhoneNumber>012345678901</DayTimePhoneNumber>
+                    <MobileNumber>0743434341234</MobileNumber>
+                </ClaimantDetails>
+                <CareeDetails>
+                    <Surname>Smith</Surname>
+                    <OtherNames>John Roger</OtherNames>
+                    <DateOfBirth>03-04-1950</DateOfBirth>
+                    <NationalInsuranceNumber>JA486278A</NationalInsuranceNumber>
+                </CareeDetails>
+            </Claim>
+            <OtherChanges><QuestionLabel>Other Change Information</QuestionLabel><Answer>other text</Answer></OtherChanges>
+            <Declaration>
+                <DeclarationStatement>
+                    <Title>The declarations below sets out your legal responsibilities in respect of your claim.</Title>
+                    <Content>I declare that the information I have given on this form is correct and complete as far as I know and believe.</Content>
+                    <Content>I understand that if I knowingly give information that is incorrect or incomplete, I may be liable to prosecution or other action.</Content>
+                    <Content>I understand that I must promptly tell the office that pays my Carer's Allowance of anything that may affect my entitlement to, or the amount of, that benefit.</Content>
+                </DeclarationStatement>
+                <DeclarationQuestion><QuestionLabel>Please tick this box to confirm that you understand and make the declarations above.</QuestionLabel><Answer>Yes</Answer></DeclarationQuestion>
+            </Declaration>
+            <Consents>
+                <Consent><QuestionLabel>Do you agree to us obtaining information from any other persons or organisations you may have told us about?</QuestionLabel><Answer>No</Answer><Why>I don't want to</Why></Consent>
+            </Consents>
+        </DWPCAChangeOfCircumstances>
+    </DWPCATransaction>
+    <ds:Signature>
+        <ds:SignedInfo>
+            <ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+            <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+            <ds:Reference URI="#TEST432">
+                <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+                <ds:DigestValue>OeGmGD/UCAj8WTDDEgY1mQLgYr4=</ds:DigestValue>
+            </ds:Reference>
+        </ds:SignedInfo>
+        <ds:SignatureValue>bCEZE1q15rT8Q1qXMxMMCDV1MrEwCUdVhZAq0XGkXZklIosLjsKjQA==</ds:SignatureValue>
+    </ds:Signature></DWPBody>

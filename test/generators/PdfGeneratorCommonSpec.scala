@@ -9,6 +9,7 @@ import java.io.{FileOutputStream, File}
 import generators.Helper._
 import net.sf.jasperreports.engine.JasperPrint
 import play.api.test.WithApplication
+import scala.xml.XML
 
 
 /**
@@ -59,7 +60,7 @@ class PdfGeneratorCommonSpec extends Specification {
 
       (1 to max).toArray.par.forall(x => {
         val pdfFileLocation = "parallelTestFile" + x + ".pdf"
-        val xml = ClaimBuilder.functionalTestCase9
+        val xml =  XML.load(getClass.getResource("/c3_functional9.xml"))
         val dataSource = new XmlDataSource(xml)
         val print = PdfGenerator.generateFrom(dataSource)
         PdfGenerator.exportReportToStream(print, new FileOutputStream(pdfFileLocation))

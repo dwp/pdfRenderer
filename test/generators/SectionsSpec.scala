@@ -8,20 +8,10 @@ import com.itextpdf.text.pdf.parser.{SimpleTextExtractionStrategy, PdfReaderCont
 import test_data.{XMLData, ClaimBuilder}
 
 
-class SectionsSpec extends Specification {
+class SectionsSpec extends Specification  with PdfSpecification {
 
   "PdfContentMatching" should {
 
-    def deletAndGeneratePDF(pdfFileLocation: String, xml: Elem) = {
-      deletePdfFile(pdfFileLocation)
-      generatePDF(pdfFileLocation, xml)
-    }
-
-    def testOutputFileExists(pdfFileLocation: String, xml: Elem) = {
-      deletAndGeneratePDF(pdfFileLocation, xml)
-      val pdfFile = new File(pdfFileLocation)
-      pdfFile.exists() must beTrue
-    }
 
     def getPDFContentFromPage(pdfFileLocation: String, pageNumber:Int): String = {
 
