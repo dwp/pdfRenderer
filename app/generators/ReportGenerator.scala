@@ -35,7 +35,10 @@ trait ReportGenerator {
       if (null != jasperPrint) Some(jasperPrint) else None
     }
     catch {
-      case e: InvalidSourceFormatException => throw e
+      case e: InvalidSourceFormatException => {
+        Logger.error(e.getMessage,e)
+        throw e
+      }
       case e: Throwable => {
         Logger.error(e.getMessage,e)
         throw e

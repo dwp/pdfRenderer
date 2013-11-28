@@ -38,12 +38,14 @@ trait PdfService {
             case e: Throwable =>
               Logger.error("Unexpected result",e)
               Results.InternalServerError
-
           }
         }
         catch {
           case e: InvalidSourceFormatException => Results.BadRequest
-          case _: Throwable => Results.InternalServerError
+          case t: Throwable => {
+            Logger.error(t.getMessage,t)
+            Results.InternalServerError
+          }
         }
 
     }.getOrElse(Results.UnsupportedMediaType)
