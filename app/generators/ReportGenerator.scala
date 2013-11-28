@@ -37,7 +37,7 @@ trait ReportGenerator {
     catch {
       case e: InvalidSourceFormatException => throw e
       case e: Throwable => {
-        Logger.error(e.getMessage)
+        Logger.error(e.getMessage,e)
         throw e
       }
     }
