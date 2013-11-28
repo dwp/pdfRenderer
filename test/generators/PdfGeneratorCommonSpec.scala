@@ -3,11 +3,9 @@ package generators
 import org.specs2.mutable._
 import data_sources.{InvalidSourceFormatException, XmlDataSource}
 import test_data.ClaimBuilder
-import java.io.File
 import java.io.{FileOutputStream, File}
 
 import generators.Helper._
-import net.sf.jasperreports.engine.JasperPrint
 import play.api.test.WithApplication
 import scala.xml.XML
 

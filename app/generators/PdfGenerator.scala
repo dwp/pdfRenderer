@@ -1,6 +1,5 @@
 package generators
 
-import data_sources.ReportDataSource
 import net.sf.jasperreports.engine.{JasperExportManager, JasperPrint}
 import play.api.Logger
 import java.io.OutputStream

@@ -1,10 +1,6 @@
-import com.google.inject.Guice
-import modules.ProdModule
 import play.api._
 
 object Global extends GlobalSettings {
-
-  def module = ProdModule
 
   override def onStart(app: Application) {
     super.onStart(app)

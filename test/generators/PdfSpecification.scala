@@ -2,7 +2,6 @@ package generators
 
 import scala.xml.Elem
 import generators.Helper._
-import generators.GenerationSuccess
 import java.io.File
 import org.specs2.mutable.Specification
 
