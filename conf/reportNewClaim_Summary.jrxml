@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="80"/>
+	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
@@ -185,9 +185,9 @@
 			<staticText>
 				<reportElement uuid="0862ee85-65ff-482c-a03e-6c62d78f2833" x="168" y="1" width="180" height="18" forecolor="#FFFFFF"/>
 				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+					<font fontName="Helvetica" size="12" isBold="true" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
 				</textElement>
-				<text><![CDATA[About you - the carer]]></text>
+				<text><![CDATA[About you \u0373 - the carer]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="bf706aa0-98e4-424b-ba2a-4e33cea3862a" x="0" y="19" width="156" height="18"/>
@@ -206,7 +206,9 @@
 			</staticText>
 			<textField isStretchWithOverflow="true">
 				<reportElement uuid="79256d1b-93c2-4e6d-871d-9ad261188fb3" x="168" y="37" width="180" height="18"/>
-				<textElement/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{ClaimantSurname}]]></textFieldExpression>
 			</textField>
 			<staticText>
@@ -216,7 +218,9 @@
 			</staticText>
 			<textField isStretchWithOverflow="true">
 				<reportElement uuid="4252d74b-0fa3-43ac-a029-efa997d4c608" x="168" y="55" width="180" height="18"/>
-				<textElement/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{ClaimantOtherNames}]]></textFieldExpression>
 			</textField>
 			<staticText>
