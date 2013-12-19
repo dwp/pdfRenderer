@@ -187,7 +187,7 @@
 				<textElement verticalAlignment="Middle">
 					<font fontName="Helvetica" size="12" isBold="true" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
 				</textElement>
-				<text><![CDATA[About you \u0373 - the carer]]></text>
+				<text><![CDATA[About you - the carer]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="bf706aa0-98e4-424b-ba2a-4e33cea3862a" x="0" y="19" width="156" height="18"/>
