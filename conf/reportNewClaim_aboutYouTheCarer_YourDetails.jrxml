@@ -73,11 +73,13 @@
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantLastName}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="f850d128-dc33-4720-8f5c-853e9bcd628b" x="0" y="75" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="f850d128-dc33-4720-8f5c-853e9bcd628b" x="0" y="75" width="350" height="18" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[!$F{AboutYouTheCarerOtherSurname}.isEmpty()]]></printWhenExpression>
+				</reportElement>
 				<textElement/>
 				<text><![CDATA[Other surname or maiden name]]></text>
 			</staticText>
-			<textField>
+			<textField isBlankWhenNull="true">
 				<reportElement uuid="3d1b0b06-5f74-4a2e-b01d-749dc81b3ff6" x="355" y="75" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerOtherSurname}]]></textFieldExpression>

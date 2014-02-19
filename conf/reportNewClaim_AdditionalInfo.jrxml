@@ -25,9 +25,7 @@
 	<detail>
 		<band height="61">
 			<staticText>
-				<reportElement uuid="22c02e51-e13c-42cc-86e4-f2af124afd5e" mode="Opaque" x="0" y="0" width="553" height="21" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" backcolor="#CCCCCC">
-					<printWhenExpression><![CDATA[!$F{additionalInformationAnswer}.isEmpty() || !$F{welshAnswer}.isEmpty()]]></printWhenExpression>
-				</reportElement>
+				<reportElement uuid="22c02e51-e13c-42cc-86e4-f2af124afd5e" mode="Opaque" x="0" y="0" width="553" height="21" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>

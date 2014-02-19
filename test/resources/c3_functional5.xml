@@ -1,13 +1,10 @@
-<DWPBody xsi:schemaLocation="http://www.govtalk.gov.uk/dwp/carers-allowance file:./CarersAllowance_Schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns="http://www.govtalk.gov.uk/dwp/carers-allowance">
+<DWPBody xsi:schemaLocation="http://www.govtalk.gov.uk/dwp/carers-allowance file:/xsdfiles/schema/ca/CarersAllowance_Schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns="http://www.govtalk.gov.uk/dwp/carers-allowance">
     <Version>0.1</Version>
     <DWPCATransaction id="TEST432">
         <TransactionId>TEST432</TransactionId>
-        <DateTimeGenerated>27-11-2013 12:29</DateTimeGenerated>
+        <DateTimeGenerated>18-02-2014 17:40</DateTimeGenerated>
         <DWPCAClaim>
-            <DateOfClaim>
-                <QuestionLabel>When do you want your Carer's Allowance claim to start?</QuestionLabel>
-                <Answer>10-02-2013</Answer>
-            </DateOfClaim>
+            <DateOfClaim><QuestionLabel>When do you want your Carer's Allowance claim to start?</QuestionLabel><Answer>10-02-2013</Answer></DateOfClaim>
             <Claimant>
                 <Surname>CaseFive</Surname>
                 <OtherNames>Test Middle</OtherNames>
@@ -16,10 +13,7 @@
                 <DateOfBirth>01-01-1981</DateOfBirth>
                 <NationalInsuranceNumber>XB486248C</NationalInsuranceNumber>
                 <Address>
-                    <Line>5 Preston Road</Line>
-                    <Line>Preston</Line>
-                    <Line>Lancashire</Line>
-                    <PostCode>PR1 2TH</PostCode>
+                    <Line>5 Preston Road</Line><Line>Preston</Line><Line>Lancashire</Line><PostCode>PR1 2TH</PostCode>
                 </Address>
                 <DayTimePhoneNumber>01772 888901</DayTimePhoneNumber>
                 <MobileNumber>0771 5419899</MobileNumber>
@@ -33,160 +27,154 @@
                 <DateOfBirth>12-09-1933</DateOfBirth>
                 <NationalInsuranceNumber>JA789871C</NationalInsuranceNumber>
                 <Address>
-                    <Line>5 Preston Road</Line>
-                    <Line>Preston</Line>
-                    <Line>Lancashire</Line>
-                    <PostCode>PR1 2TH</PostCode>
+                    <Line>5 Preston Road</Line><Line>Preston</Line><Line>Lancashire</Line><PostCode>PR1 2TH</PostCode>
                 </Address>
 
-                <RelationToClaimant><QuestionLabel>What relation, if any, is the person to you?</QuestionLabel><Answer>Sister</Answer></RelationToClaimant>
+                <RelationToClaimant><QuestionLabel>What relation, if any, is the person/organisation to you?</QuestionLabel><Answer>Sister</Answer></RelationToClaimant>
                 <Cared35Hours><QuestionLabel>Do you spend 35 hours or more each week caring for the person you care for?</QuestionLabel><Answer>Yes</Answer></Cared35Hours>
-                <BreaksSinceClaim><QuestionLabel>Have you had any breaks in caring for this person since {0}?</QuestionLabel><Answer>Yes</Answer></BreaksSinceClaim>
+                <BreaksSinceClaim><QuestionLabel>Have you had any breaks in caring for this person since 10/02/2013?</QuestionLabel><Answer>Yes</Answer></BreaksSinceClaim>
                 <CareBreak>
                     <StartDateTime>10-01-2010 10:15</StartDateTime>
                     <EndDateTime>17-01-2010 17:30</EndDateTime>
                     <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>Yes</Answer></MedicalCare>
-                    <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Answer>At Home</Answer></ReasonClaimant>
-
+                    <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Answer>Home</Answer></ReasonClaimant>
                     <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Answer>Hospital</Answer></ReasonCaree>
                 </CareBreak><CareBreak>
                 <StartDateTime>20-01-2010 00:00</StartDateTime>
                 <EndDateTime>27-01-2010 00:00</EndDateTime>
                 <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>Yes</Answer></MedicalCare>
                 <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Answer>Holiday</Answer></ReasonClaimant>
-
                 <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Answer>Nursing Home</Answer></ReasonCaree>
             </CareBreak><CareBreak>
                 <StartDateTime>20-02-2010 12:15</StartDateTime>
 
                 <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>Yes</Answer></MedicalCare>
                 <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Answer>Respite Care</Answer></ReasonClaimant>
-
                 <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Answer>Care Home</Answer></ReasonCaree>
             </CareBreak><CareBreak>
                 <StartDateTime>20-03-2010 00:00</StartDateTime>
 
                 <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>Yes</Answer></MedicalCare>
                 <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Answer>Holiday</Answer></ReasonClaimant>
-
                 <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Answer>Nursing Home</Answer></ReasonCaree>
             </CareBreak><CareBreak>
                 <StartDateTime>20-03-2013 12:00</StartDateTime>
                 <EndDateTime>21-02-2013 00:00</EndDateTime>
                 <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>No</Answer></MedicalCare>
                 <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Other>Other Place 5a</Other><Answer>Other</Answer></ReasonClaimant>
-
                 <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Other>Other place 5b</Other><Answer>Other</Answer></ReasonCaree>
             </CareBreak><CareBreak>
                 <StartDateTime>10-01-2010 10:30</StartDateTime>
                 <EndDateTime>17-01-2010 16:45</EndDateTime>
                 <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>Yes</Answer></MedicalCare>
-                <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Answer>At Home</Answer></ReasonClaimant>
-
+                <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Answer>Home</Answer></ReasonClaimant>
                 <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Answer>Hospital</Answer></ReasonCaree>
             </CareBreak><CareBreak>
                 <StartDateTime>20-01-2010 10:15</StartDateTime>
                 <EndDateTime>27-01-2010 18:30</EndDateTime>
                 <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>Yes</Answer></MedicalCare>
                 <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Answer>Holiday</Answer></ReasonClaimant>
-
                 <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Answer>Nursing Home</Answer></ReasonCaree>
             </CareBreak><CareBreak>
                 <StartDateTime>20-02-2010 12:00</StartDateTime>
                 <EndDateTime>27-02-2010 13:45</EndDateTime>
                 <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>Yes</Answer></MedicalCare>
                 <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Answer>Respite Care</Answer></ReasonClaimant>
-
                 <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Answer>Care Home</Answer></ReasonCaree>
             </CareBreak><CareBreak>
                 <StartDateTime>20-03-2010 12:15</StartDateTime>
                 <EndDateTime>21-02-2010 13:30</EndDateTime>
                 <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>Yes</Answer></MedicalCare>
                 <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Answer>Holiday</Answer></ReasonClaimant>
-
                 <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Answer>Nursing Home</Answer></ReasonCaree>
             </CareBreak><CareBreak>
                 <StartDateTime>20-03-2013 12:00</StartDateTime>
                 <EndDateTime>21-02-2013 13:45</EndDateTime>
                 <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>No</Answer></MedicalCare>
                 <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Other>Other place 10a</Other><Answer>Other</Answer></ReasonClaimant>
-
                 <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Other>Other place 10b</Other><Answer>Other</Answer></ReasonCaree>
             </CareBreak>
                 <Cared35HoursBefore><QuestionLabel>Did you care for this person for 35 hours or more each week before your claim date?</QuestionLabel><Answer>Yes</Answer></Cared35HoursBefore>
                 <DateStartCaring><QuestionLabel>When did you start to care for this person?</QuestionLabel><Answer>01-05-2012</Answer></DateStartCaring>
-
                 <LiveSameAddress><QuestionLabel>Do they live at the same address as you?</QuestionLabel><Answer>Yes</Answer></LiveSameAddress>
                 <ArmedForcesIndependencePayment><QuestionLabel>Does this person get Armed Forces Independence Payment (AFIP)?</QuestionLabel><Answer>No</Answer></ArmedForcesIndependencePayment>
             </Caree>
             <Residency>
+                <NormallyLiveInGB><QuestionLabel>Do you normally live in England, Scotland or Wales?</QuestionLabel><Answer>Yes</Answer></NormallyLiveInGB>
 
-                <NormallyLiveInGB><QuestionLabel>Do you normally live in the UK, Republic of Ireland, Isle of Man or the Channel Islands?</QuestionLabel><Answer>Yes</Answer></NormallyLiveInGB>
 
-                <CountryNormallyLive><QuestionLabel>Where do you normally live?</QuestionLabel><Answer>Not asked</Answer></CountryNormallyLive>
 
                 <Nationality>British</Nationality>
 
-                <TimeOutsideGBLast3Years><QuestionLabel>Have you been out of Great Britain</QuestionLabel><Answer>Yes</Answer></TimeOutsideGBLast3Years>
-
-
                 <PeriodAbroad>
+                    <TimeOutsideGBLast3Years><QuestionLabel>Have you been out of England, Scotland or Wales for more than 52 weeks in the last 3 years before your claim date?</QuestionLabel><Answer>Yes</Answer></TimeOutsideGBLast3Years>
                     <Period>
-                        <DateFrom><QuestionLabel>Date you left Great Britain</QuestionLabel><Answer>31-05-2013</Answer></DateFrom>
-                        <DateTo><QuestionLabel>Date you returned to Great Britain</QuestionLabel><Answer>09-06-2013</Answer></DateTo>
+                        <DateFrom><QuestionLabel>Date you left?</QuestionLabel><Answer>31-05-2012</Answer></DateFrom>
+                        <DateTo><QuestionLabel>Date you returned?</QuestionLabel><Answer>01-06-2012</Answer></DateTo>
                     </Period>
-                    <Reason><QuestionLabel>Why did you go?</QuestionLabel><Answer>Holiday</Answer></Reason>
-                    <Country><QuestionLabel>Where did you go?</QuestionLabel><Answer>Spain</Answer></Country>
+                    <Reason><QuestionLabel>Reason for being there?</QuestionLabel><Answer>Holiday</Answer></Reason>
+                    <Country><QuestionLabel>Which country did you go to?</QuestionLabel><Answer>Bangor</Answer></Country>
+                    <CareePresent><QuestionLabel>Was the person you care for with you?</QuestionLabel><Answer>No</Answer></CareePresent>
                 </PeriodAbroad><PeriodAbroad>
+                <TimeOutsideGBLast3Years><QuestionLabel>Have you been out of England, Scotland or Wales at any other time in the last 3 years before your claim date?</QuestionLabel><Answer>Yes</Answer></TimeOutsideGBLast3Years>
                 <Period>
-                    <DateFrom><QuestionLabel>Date you left Great Britain</QuestionLabel><Answer>11-06-2013</Answer></DateFrom>
-                    <DateTo><QuestionLabel>Date you returned to Great Britain</QuestionLabel><Answer>19-06-2013</Answer></DateTo>
+                    <DateFrom><QuestionLabel>Date you left?</QuestionLabel><Answer>04-06-2012</Answer></DateFrom>
+                    <DateTo><QuestionLabel>Date you returned?</QuestionLabel><Answer>08-06-2012</Answer></DateTo>
                 </Period>
-                <Reason><QuestionLabel>Why did you go?</QuestionLabel><Answer>Holiday</Answer></Reason>
-                <Country><QuestionLabel>Where did you go?</QuestionLabel><Answer>France</Answer></Country>
+                <Reason><QuestionLabel>Reason for being there?</QuestionLabel><Answer>Holiday</Answer></Reason>
+                <Country><QuestionLabel>Which country did you go to?</QuestionLabel><Answer>Spain</Answer></Country>
+                <CareePresent><QuestionLabel>Was the person you care for with you?</QuestionLabel><Answer>No</Answer></CareePresent>
             </PeriodAbroad><PeriodAbroad>
+                <TimeOutsideGBLast3Years><QuestionLabel>Have you been out of England, Scotland or Wales at any other time in the last 3 years before your claim date?</QuestionLabel><Answer>Yes</Answer></TimeOutsideGBLast3Years>
                 <Period>
-                    <DateFrom><QuestionLabel>Date you left Great Britain</QuestionLabel><Answer>01-01-2013</Answer></DateFrom>
-                    <DateTo><QuestionLabel>Date you returned to Great Britain</QuestionLabel><Answer>09-01-2013</Answer></DateTo>
+                    <DateFrom><QuestionLabel>Date you left?</QuestionLabel><Answer>14-06-2012</Answer></DateFrom>
+                    <DateTo><QuestionLabel>Date you returned?</QuestionLabel><Answer>18-06-2012</Answer></DateTo>
                 </Period>
-                <Reason><QuestionLabel>Why did you go?</QuestionLabel><Answer>Holiday</Answer></Reason>
-                <Country><QuestionLabel>Where did you go?</QuestionLabel><Answer>Scotland</Answer></Country>
+                <Reason><QuestionLabel>Reason for being there?</QuestionLabel><Other>Testing Other with 60 characters Testing Other with 60 chara</Other><Answer>Other</Answer></Reason>
+                <Country><QuestionLabel>Which country did you go to?</QuestionLabel><Answer>USA</Answer></Country>
+                <CareePresent><QuestionLabel>Was the person you care for with you?</QuestionLabel><Answer>No</Answer></CareePresent>
+            </PeriodAbroad><PeriodAbroad>
+                <TimeOutsideGBLast3Years><QuestionLabel>Have you been out of England, Scotland or Wales at any other time in the last 3 years before your claim date?</QuestionLabel><Answer>Yes</Answer></TimeOutsideGBLast3Years>
+                <Period>
+                    <DateFrom><QuestionLabel>Date you left?</QuestionLabel><Answer>04-06-2012</Answer></DateFrom>
+                    <DateTo><QuestionLabel>Date you returned?</QuestionLabel><Answer>08-06-2012</Answer></DateTo>
+                </Period>
+                <Reason><QuestionLabel>Reason for being there?</QuestionLabel><Answer>Holiday</Answer></Reason>
+                <Country><QuestionLabel>Which country did you go to?</QuestionLabel><Answer>Spain</Answer></Country>
+                <CareePresent><QuestionLabel>Was the person you care for with you?</QuestionLabel><Answer>No</Answer></CareePresent>
+            </PeriodAbroad><PeriodAbroad>
+                <TimeOutsideGBLast3Years><QuestionLabel>Have you been out of England, Scotland or Wales at any other time in the last 3 years before your claim date?</QuestionLabel><Answer>Yes</Answer></TimeOutsideGBLast3Years>
+                <Period>
+                    <DateFrom><QuestionLabel>Date you left?</QuestionLabel><Answer>14-06-2012</Answer></DateFrom>
+                    <DateTo><QuestionLabel>Date you returned?</QuestionLabel><Answer>18-06-2012</Answer></DateTo>
+                </Period>
+                <Reason><QuestionLabel>Reason for being there?</QuestionLabel><Answer>Holiday</Answer></Reason>
+                <Country><QuestionLabel>Which country did you go to?</QuestionLabel><Answer>USA</Answer></Country>
+                <CareePresent><QuestionLabel>Was the person you care for with you?</QuestionLabel><Answer>No</Answer></CareePresent>
             </PeriodAbroad>
 
-
             </Residency>
-            <CourseOfEducation>
-                <QuestionLabel>CourseOfEducation?</QuestionLabel>
-                <Answer>Yes</Answer>
-            </CourseOfEducation>
+            <CourseOfEducation><QuestionLabel>Have you been on a course of education since your claim date: 10/02/2013?</QuestionLabel><Answer>Yes</Answer></CourseOfEducation>
             <FullTimeEducation>
                 <CourseDetails>
-                    <Type>A-Levels</Type>
-                    <Title>Geograpghy and History</Title>
-                    <DateStarted><QuestionLabel>When did you start the course?</QuestionLabel><Answer>09-09-2013</Answer></DateStarted>
 
-                    <ExpectedEndDate><QuestionLabel>When do you expect the course to end?</QuestionLabel><Answer>09-07-2014</Answer></ExpectedEndDate>
+                    <Title>Bussines Studies</Title>
+                    <DateStarted><QuestionLabel>When did you start the course?</QuestionLabel><Answer>01-01-2013</Answer></DateStarted>
+
+                    <ExpectedEndDate><QuestionLabel>When did the course end or when will you finish?</QuestionLabel><Answer>01-01-2014</Answer></ExpectedEndDate>
                 </CourseDetails>
                 <LocationDetails>
-                    <Name>Preston College</Name>
-                    <Address>
-                        <Line>90 Preston Road</Line>
-                        <Line>Preston</Line>
-                        <Line>Lancashire</Line>
-                        <PostCode>PR45 6YH</PostCode>
-                    </Address>
-                    <PhoneNumber>01772 891891</PhoneNumber>
+                    <Name>Oxford College</Name>
+
+                    <PhoneNumber>01776 829920</PhoneNumber>
 
 
-                    <Tutor>Mr Steve Tudor</Tutor>
+                    <Tutor>Edward Mansfield</Tutor>
                 </LocationDetails>
             </FullTimeEducation>
-            <SelfEmployed>
-                <QuestionLabel>SelfEmployed?</QuestionLabel>
-                <Answer>No</Answer>
-            </SelfEmployed>
+            <SelfEmployed><QuestionLabel>Have you been self-employed at any time since 03/02/2013 (this is one week before your claim date: 10/02/2013)?</QuestionLabel><Answer>No</Answer></SelfEmployed>
 
-            <Employed><QuestionLabel>Have you had another job at any time since 10/08/2012 (this is six months before your claim date: 10/02/2013)?</QuestionLabel><Answer>No</Answer></Employed>
+            <Employed><QuestionLabel>Have you been employed at any time since 10/08/2012 (this is six months before your claim date: 10/02/2013)?</QuestionLabel><Answer>No</Answer></Employed>
 
             <HavePartner><QuestionLabel>Have you had a partner/spouse living with you since your claim date: 10/02/2013?</QuestionLabel><Answer>Yes</Answer></HavePartner>
             <Partner>
@@ -210,20 +198,20 @@
 
                 <OtherMoneySP><QuestionLabel>Have you had any Statutory Maternity Pay (SMP), Statutory Paternity Pay (SPP) or Statutory Adoption Pay (SAP) since the date you want to claim from 10/02/2013?</QuestionLabel><Answer>No</Answer></OtherMoneySP>
 
-                <OtherMoney><QuestionLabel>Have you &lt;or your Partner/Spouse&gt; claimed or received any other benefits since the date you want to claim?</QuestionLabel><Answer>No</Answer></OtherMoney>
+                <OtherMoney><QuestionLabel>Have you or your Partner or Spouse claimed or received any other benefits since your claim date: 10/02/2013?</QuestionLabel><Answer>No</Answer></OtherMoney>
                 <OtherMoneyPayments><QuestionLabel>Have you received any payments for the person you care for or any other person since your claim date 10/02/2013</QuestionLabel><Answer>No</Answer></OtherMoneyPayments>
 
-
                 <EEA>
-                    <EEAReceivePensionsBenefits><QuestionLabel>Are you, your wife, husband, civil partner or parent you are dependent on, receiving any pensions or benefits from another EEA State or Switzerland?</QuestionLabel><Answer>No</Answer></EEAReceivePensionsBenefits>
-                    <EEAWorkingInsurance><QuestionLabel>Are you, your wife, husband, civil partner or parent you are dependent on, working in or paying insurance to another EEA State or Switzerland?</QuestionLabel><Answer>No</Answer></EEAWorkingInsurance>
+                    <EEAReceivePensionsBenefits><QuestionLabel>Do you, or any member of your family, receive any benefits or pensions from a European Economic Area (EEA) state or Switzerland?</QuestionLabel><Answer>No</Answer></EEAReceivePensionsBenefits>
+                    <EEAClaimPensionsBenefits><QuestionLabel>Have you, or a member of your family, made a claim for any benefits or pensions from a European Economic Area (EEA) state or Switzerland?</QuestionLabel><Answer>No</Answer></EEAClaimPensionsBenefits>
+                    <EEAWorkingInsurance><QuestionLabel>Are you, or a member of your family, working in or paying insurance to, another European Economic Area (EEA) state or Switzerland?</QuestionLabel><Answer>No</Answer></EEAWorkingInsurance>
                 </EEA>
             </OtherBenefits>
             <Payment>
                 <PaymentFrequency><QuestionLabel>How often do you want to get paid?</QuestionLabel><Answer>Four-Weekly</Answer></PaymentFrequency>
                 <InitialAccountQuestion><QuestionLabel>How would you like to get paid?</QuestionLabel><Answer>UK bank or building society account</Answer></InitialAccountQuestion>
                 <Account>
-
+                    <AccountHolder>Both you and your partner</AccountHolder>
                     <HolderName>Mr Test Casefive</HolderName>
                     <BuildingSocietyDetails>
                         <AccountNumber>12345678</AccountNumber>
@@ -247,9 +235,9 @@
                 </DeclarationStatement>
                 <DeclarationQuestion><QuestionLabel>Please tick this box if this claim form has been filled in by someone else, if so, please ensure that you understand the declarations above as another person cannot make the declarations on your behalf.</QuestionLabel><Answer>Yes</Answer></DeclarationQuestion>
                 <DeclarationQuestion><QuestionLabel>Please tick this box to confirm that you understand and make the declarations above.</QuestionLabel><Answer>Yes</Answer></DeclarationQuestion>
+                <DeclarationNameOrg><QuestionLabel>Your name and/or organisation</QuestionLabel><Answer>Some Org</Answer></DeclarationNameOrg>
             </Declaration>
             <Disclaimer>
-
                 <DisclaimerStatement>
                     <Title>This is my claim for Carer's Allowance.</Title>
                     <Content>I understand that if I am paid Carer's Allowance it may affect the benefits paid to [Person Cared Forfive].</Content>
@@ -263,22 +251,16 @@
                 <DisclaimerQuestion><QuestionLabel>Please tick this box to declare that you have understood the notes and you have made / will make the person you are caring for / or their representative aware that there could be a change to their benefits.</QuestionLabel><Answer>Yes</Answer></DisclaimerQuestion>
             </Disclaimer>
             <EvidenceList>
-                <RecipientAddress>
-                    <Line>5 Preston Road</Line>
-                    <Line>Preston</Line>
-                    <Line>Lancashire</Line>
-                    <PostCode>PR1 2TH</PostCode>
-                </RecipientAddress>
                 <Evidence>
                     <Title/>
-                    <Content>XML Generated at: 2013-11-27T12:29:52</Content>
+                    <Content>The Carers Allowance unit will contact you if they need any further information.</Content>
                 </Evidence>
-
             </EvidenceList>
             <Consents>
 
-                <Consent><QuestionLabel>Do you agree to us getting information from any other person or organisation you have told us about on this form?</QuestionLabel><Answer>Yes</Answer></Consent>
+                <Consent><QuestionLabel>Do you agree to us getting information from any other person or organisation you have told us about on this claim?</QuestionLabel><Answer>Yes</Answer></Consent>
             </Consents>
+
         </DWPCAClaim>
     </DWPCATransaction>
     <ds:Signature>
@@ -287,8 +269,8 @@
             <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
             <ds:Reference URI="#TEST432">
                 <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
-                <ds:DigestValue>9cvBvk0e1tE+2zGeIhDvFpIJhzM=</ds:DigestValue>
+                <ds:DigestValue>wW1hX0L+gNYxVi4xH2V354XJ0nU=</ds:DigestValue>
             </ds:Reference>
         </ds:SignedInfo>
-        <ds:SignatureValue>E2RfdNCUICUPjBu/ZRHHLJCmyyCPOqD58IXNwfct0KUl9vA70p0JPQ==</ds:SignatureValue>
+        <ds:SignatureValue>QY7+0SFLXsHfsfi52wYimQb4Z51zeLM2mbTwJcdlaxk8YS7kfRJ6dw==</ds:SignatureValue>
     </ds:Signature></DWPBody>

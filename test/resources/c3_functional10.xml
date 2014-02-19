@@ -2,7 +2,7 @@
     <Version>0.1</Version>
     <DWPCATransaction id="TEST432">
         <TransactionId>TEST432</TransactionId>
-        <DateTimeGenerated>19-02-2014 09:41</DateTimeGenerated>
+        <DateTimeGenerated>19-02-2014 11:05</DateTimeGenerated>
         <DWPCAClaim>
             <DateOfClaim><QuestionLabel>When do you want your Carer's Allowance claim to start?</QuestionLabel><Answer>23-07-2013</Answer></DateOfClaim>
             <Claimant>
@@ -21,13 +21,13 @@
 
             </Claimant>
             <Caree>
-                <Surname>Caseseven</Surname>
-                <OtherNames>Partner Middle</OtherNames>
+                <Surname>Forfive</Surname>
+                <OtherNames>Person Cared</OtherNames>
                 <Title>Mrs</Title>
-                <DateOfBirth>28-09-1977</DateOfBirth>
-                <NationalInsuranceNumber>WA234567A</NationalInsuranceNumber>
+                <DateOfBirth>12-09-1933</DateOfBirth>
+                <NationalInsuranceNumber>JA789871C</NationalInsuranceNumber>
                 <Address>
-                    <Line>12 Preston Road</Line><Line>Preston</Line><Line>Lancashire</Line><PostCode>PR1 1HB</PostCode>
+                    <Line>6 Preston Road</Line><Line>Preston</Line><Line>Lancashire</Line><PostCode>PR1 2TH</PostCode>
                 </Address>
 
                 <RelationToClaimant><QuestionLabel>What relation, if any, is the person/organisation to you?</QuestionLabel><Answer>Father</Answer></RelationToClaimant>
@@ -46,9 +46,9 @@
                 <ArmedForcesIndependencePayment><QuestionLabel>Does this person get Armed Forces Independence Payment (AFIP)?</QuestionLabel><Answer>No</Answer></ArmedForcesIndependencePayment>
             </Caree>
             <Residency>
-                <NormallyLiveInGB><QuestionLabel>Do you normally live in England, Scotland or Wales?</QuestionLabel><Answer>Yes</Answer></NormallyLiveInGB>
+                <NormallyLiveInGB><QuestionLabel>Do you normally live in England, Scotland or Wales?</QuestionLabel><Answer>No</Answer></NormallyLiveInGB>
 
-
+                <CountryNormallyLive><QuestionLabel>Which country do you normally live in?</QuestionLabel><Answer>France</Answer></CountryNormallyLive>
 
                 <Nationality>British</Nationality>
 
@@ -59,8 +59,37 @@
             </Residency>
             <CourseOfEducation><QuestionLabel>Have you been on a course of education since your claim date: 23/07/2013?</QuestionLabel><Answer>No</Answer></CourseOfEducation>
 
-            <SelfEmployed><QuestionLabel>Have you been self-employed at any time since 16/07/2013 (this is one week before your claim date: 23/07/2013)?</QuestionLabel><Answer>No</Answer></SelfEmployed>
+            <SelfEmployed><QuestionLabel>Have you been self-employed at any time since 16/07/2013 (this is one week before your claim date: 23/07/2013)?</QuestionLabel><Answer>Yes</Answer></SelfEmployed>
+            <SelfEmployment>
+                <SelfEmployedNow><QuestionLabel>Are you self-employed now?</QuestionLabel><Answer>Yes</Answer></SelfEmployedNow>
+                <CurrentJobDetails>
+                    <DateStarted><QuestionLabel>When did you start this self employed work?</QuestionLabel><Answer>01-02-2010</Answer></DateStarted>
+                    <NatureBusiness><QuestionLabel>Nature of business?</QuestionLabel><Answer>Fruit and veg, delivery service</Answer></NatureBusiness>
+                    <TradingYear>
+                        <DateFrom><QuestionLabel>What is your trading year? From</QuestionLabel><Answer>01-02-2012</Answer></DateFrom>
+                        <DateTo><QuestionLabel>What is your trading year? To</QuestionLabel><Answer>31-01-2013</Answer></DateTo>
+                    </TradingYear>
+                    <SameIncomeOutgoingLevels><QuestionLabel>Are the income, outgoings and profit in these accounts similar to your current level of trading?</QuestionLabel><Answer>No</Answer></SameIncomeOutgoingLevels>
+                    <WhyWhenChange><QuestionLabel>Please tell us why and when the change happened</QuestionLabel><Answer>Depends on the seasons, and productivity of the fruit.</Answer></WhyWhenChange>
+                </CurrentJobDetails>
+                <CareExpensesChildren><QuestionLabel>While at work, do you pay anyone to care for your children?</QuestionLabel><Answer>Yes</Answer></CareExpensesChildren>
+                <ChildCareExpenses>
+                    <CarerName><QuestionLabel>Name of the person/organisation who looks after your child/children</QuestionLabel><Answer>Mr John Johnson</Answer></CarerName>
+                    <Expense>
+                        <Payment><QuestionLabel>How much Do you pay them?</QuestionLabel><Answer><Currency>GBP</Currency><Amount>234</Amount></Answer></Payment>
+                        <Frequency><QuestionLabel>How often do you pay childcare expenses?</QuestionLabel><Answer>Fortnightly</Answer></Frequency>
+                    </Expense>
+                    <RelationshipCarerToClaimant><QuestionLabel>What relation, if any, is the person/organisation to you?</QuestionLabel><Answer>Brother</Answer></RelationshipCarerToClaimant>
+                    <RelationshipCarerToPartner><QuestionLabel>What relation, if any, is the person/organisation to your Partner/Spouse?</QuestionLabel><Answer>Other</Answer></RelationshipCarerToPartner>
+                </ChildCareExpenses>
+                <CareExpensesCaree><QuestionLabel>While at work, do you pay anyone to care for the person you care for?</QuestionLabel><Answer>No</Answer></CareExpensesCaree>
 
+                <PaidForPension><QuestionLabel>do you pay towards a personal or stakeholder pension scheme or a retirement annuity scheme</QuestionLabel><Answer>Yes</Answer></PaidForPension>
+                <PensionScheme>
+                    <Payment><QuestionLabel>How much do you pay?</QuestionLabel><Answer><Currency>GBP</Currency><Amount>100</Amount></Answer></Payment>
+                    <Frequency><QuestionLabel>How often do you pay into a Pension?</QuestionLabel><Answer>Weekly</Answer></Frequency>
+                </PensionScheme>
+            </SelfEmployment>
             <Employed><QuestionLabel>Have you been employed at any time since 23/01/2013 (this is six months before your claim date: 23/07/2013)?</QuestionLabel><Answer>Yes</Answer></Employed>
             <Employment>
                 <CurrentlyEmployed><QuestionLabel>Have you finished this job?</QuestionLabel><Answer>No</Answer></CurrentlyEmployed>
@@ -87,7 +116,15 @@
                         <ConstantEarnings><QuestionLabel>Did you get the same amount each time?</QuestionLabel><Answer>No</Answer></ConstantEarnings>
                     </Pay>
                     <OweMoney><QuestionLabel>Does your employer owe you any money?</QuestionLabel><Answer>No</Answer></OweMoney>
-                    <CareExpensesChildren><QuestionLabel>While at work, did you pay anyone to look after your children?</QuestionLabel><Answer>No</Answer></CareExpensesChildren>
+                    <CareExpensesChildren><QuestionLabel>While at work, did you pay anyone to look after your children?</QuestionLabel><Answer>Yes</Answer></CareExpensesChildren><ChildCareExpenses>
+                    <CarerName><QuestionLabel>Name of the person/organisation who looks after your child/children</QuestionLabel><Answer>Gustave</Answer></CarerName>
+                    <Expense>
+                        <Payment><QuestionLabel>How much did you pay them?</QuestionLabel><Answer><Currency>GBP</Currency><Amount>123.04</Amount></Answer></Payment>
+                        <Frequency><QuestionLabel>How often did you pay childcare expenses?</QuestionLabel><Other>really Other</Other><Answer>Other</Answer></Frequency>
+                    </Expense>
+                    <RelationshipCarerToClaimant><QuestionLabel>What relation, if any, is the person/organisation to you?</QuestionLabel><Answer>Friend</Answer></RelationshipCarerToClaimant>
+                    <RelationshipCarerToPartner><QuestionLabel>What relation, if any, is the person/organisation to your Partner/Spouse?</QuestionLabel><Answer>Friend</Answer></RelationshipCarerToPartner>
+                </ChildCareExpenses>
                     <CareExpensesCaree><QuestionLabel>While at work, did you pay anyone to look after the person you care for?</QuestionLabel><Answer>No</Answer></CareExpensesCaree>
                     <PaidForOccupationalPension><QuestionLabel>Did you pay towards an occupational pension scheme?</QuestionLabel><Answer>Yes</Answer></PaidForOccupationalPension><OccupationalPension>
                     <Payment><QuestionLabel>How much did you pay?</QuestionLabel><Answer><Currency>GBP</Currency><Amount>100</Amount></Answer></Payment>
@@ -108,7 +145,7 @@
                 <RelationshipStatus>
                     <SeparatedFromPartner><QuestionLabel>Have you separated from your partner/spouse since the date you want to claim from: 23/07/2013?</QuestionLabel><Answer>No</Answer></SeparatedFromPartner>
                 </RelationshipStatus>
-                <IsCaree><QuestionLabel>Is your partner/spouse the person you are claiming Carer's Allowance for?</QuestionLabel><Answer>Yes</Answer></IsCaree>
+                <IsCaree><QuestionLabel>Is your partner/spouse the person you are claiming Carer's Allowance for?</QuestionLabel><Answer>No</Answer></IsCaree>
             </Partner>
             <OtherBenefits>
                 <ClaimantBenefits>
@@ -160,13 +197,13 @@
             <Disclaimer>
                 <DisclaimerStatement>
                     <Title>This is my claim for Carer's Allowance.</Title>
-                    <Content>I understand that if I am paid Carer's Allowance it may affect the benefits paid to [Partner Middle Caseseven].</Content>
+                    <Content>I understand that if I am paid Carer's Allowance it may affect the benefits paid to [Person Cared Forfive].</Content>
                     <Content>If the person you are caring for receives certain benefits, the amount they receive may be affected by your claim for Carer's Allowance. Because of this we need both of you to understand the potential consequences of your claim to Carer's Allowance.</Content>
-                    <Content>If [Partner Middle Caseseven] gets a Severe Disability Premium with their income-based Jobseeker's Allowance, Income Support, income-related Employment and Support Allowance, Housing Benefit, they may no longer get that premium if we pay Carer's Allowance to you.</Content>
-                    <Content>If [Partner Middle Caseseven]'s Pension Credit includes an extra amount for severe disability, they may no longer get that extra amount if we pay Carer's Allowance to you.</Content>
-                    <Content>This could also affect any reduction in Council Tax [Partner Middle Caseseven] may be entitled to. To find out more about it, please contact the Local Authority.</Content>
-                    <Content>We will need to check [Partner Middle Caseseven] entitlement to Disability Living Allowance, Personal Independence Payment, Attendance Allowance, Constant Attendance Allowance or Armed Forces Independence Payment when considering your claim.</Content>
-                    <Content>We may contact [Partner Middle Caseseven] or their representative to establish whether 35 hours caring per week is taking place.</Content>
+                    <Content>If [Person Cared Forfive] gets a Severe Disability Premium with their income-based Jobseeker's Allowance, Income Support, income-related Employment and Support Allowance, Housing Benefit, they may no longer get that premium if we pay Carer's Allowance to you.</Content>
+                    <Content>If [Person Cared Forfive]'s Pension Credit includes an extra amount for severe disability, they may no longer get that extra amount if we pay Carer's Allowance to you.</Content>
+                    <Content>This could also affect any reduction in Council Tax [Person Cared Forfive] may be entitled to. To find out more about it, please contact the Local Authority.</Content>
+                    <Content>We will need to check [Person Cared Forfive] entitlement to Disability Living Allowance, Personal Independence Payment, Attendance Allowance, Constant Attendance Allowance or Armed Forces Independence Payment when considering your claim.</Content>
+                    <Content>We may contact [Person Cared Forfive] or their representative to establish whether 35 hours caring per week is taking place.</Content>
                 </DisclaimerStatement>
                 <DisclaimerQuestion><QuestionLabel>Please tick this box to declare that you have understood the notes and you have made / will make the person you are caring for / or their representative aware that there could be a change to their benefits.</QuestionLabel><Answer>Yes</Answer></DisclaimerQuestion>
             </Disclaimer>
@@ -177,6 +214,9 @@
                 <Title>Your Employment documents.</Title>
                 <Content>Last payslip you got before your claim date:23-07-2013</Content><Content>Any payslips you have had since then.</Content><Content>Any pension statements you may have.</Content>
             </Evidence><Evidence>
+                <Title>Your Self-employed documents.</Title>
+                <Content>Most recent finalised accounts you have for your business.</Content><Content>Any pension statements you may have.</Content>
+            </Evidence><Evidence>
                 <Title/>
                 <Content>The Carers Allowance unit will contact you if they need any further information.</Content>
             </Evidence>
@@ -185,7 +225,7 @@
                 <Consent><QuestionLabel>Do you agree to us getting information from any current or previous employer you have told us about on this form?</QuestionLabel><Answer>Yes</Answer></Consent>
                 <Consent><QuestionLabel>Do you agree to us getting information from any other person or organisation you have told us about on this claim?</QuestionLabel><Answer>Yes</Answer></Consent>
             </Consents>
-
+            <AssistedDecisions><AssistedDecision><Reason>Person does not normally live in England, Scotland or Wales.</Reason><RecommendedDecision>Transfer to Exportability team.</RecommendedDecision></AssistedDecision></AssistedDecisions>
         </DWPCAClaim>
     </DWPCATransaction>
     <ds:Signature>
@@ -194,8 +234,8 @@
             <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
             <ds:Reference URI="#TEST432">
                 <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
-                <ds:DigestValue>T/3Wqxx7dP6pGnEEZwXeWHYuwVo=</ds:DigestValue>
+                <ds:DigestValue>EDf1jCgUa/zjVpKP+z3/6w+r2kw=</ds:DigestValue>
             </ds:Reference>
         </ds:SignedInfo>
-        <ds:SignatureValue>T8ZsuojT1zWpZR1llq2XOwsHqvRcJo5Bj6o6zDYrxX+Ue+olkF7KSA==</ds:SignatureValue>
+        <ds:SignatureValue>kQ+57qAWYgV3vW9y7XbWhBQ/RBKD9nFQJumP0oIvD2A8q/Z9z7imLg==</ds:SignatureValue>
     </ds:Signature></DWPBody>

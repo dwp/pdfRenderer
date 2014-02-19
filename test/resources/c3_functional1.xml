@@ -1,25 +1,19 @@
-<DWPBody xsi:schemaLocation="http://www.govtalk.gov.uk/dwp/carers-allowance file:./CarersAllowance_Schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns="http://www.govtalk.gov.uk/dwp/carers-allowance">
+<DWPBody xsi:schemaLocation="http://www.govtalk.gov.uk/dwp/carers-allowance file:/xsdfiles/schema/ca/CarersAllowance_Schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns="http://www.govtalk.gov.uk/dwp/carers-allowance">
     <Version>0.1</Version>
     <DWPCATransaction id="TEST432">
         <TransactionId>TEST432</TransactionId>
-        <DateTimeGenerated>27-11-2013 12:29</DateTimeGenerated>
+        <DateTimeGenerated>17-02-2014 16:14</DateTimeGenerated>
         <DWPCAClaim>
-            <DateOfClaim>
-                <QuestionLabel>When do you want your Carer's Allowance claim to start?</QuestionLabel>
-                <Answer>21-07-2013</Answer>
-            </DateOfClaim>
+            <DateOfClaim><QuestionLabel>When do you want your Carer's Allowance claim to start?</QuestionLabel><Answer>21-07-2013</Answer></DateOfClaim>
             <Claimant>
-                <Surname>Caséone</Surname>
-                <OtherNames>Tëst</OtherNames>
+                <Surname>Caseone</Surname>
+                <OtherNames>Test </OtherNames>
 
                 <Title>Mr</Title>
                 <DateOfBirth>28-09-1976</DateOfBirth>
                 <NationalInsuranceNumber>AB123456C</NationalInsuranceNumber>
                 <Address>
-                    <Line>1 Preston Road</Line>
-                    <Line>Preston</Line>
-
-                    <PostCode>PR1 1HB</PostCode>
+                    <Line>1 Preston Road</Line><Line>Preston</Line><PostCode>PR1 1HB</PostCode>
                 </Address>
 
 
@@ -31,50 +25,37 @@
                 <OtherNames>Test </OtherNames>
                 <Title>Dame</Title>
                 <DateOfBirth>12-09-1980</DateOfBirth>
-                <NationalInsuranceNumber>AB123456C</NationalInsuranceNumber>
-                <Address>
-                    <Line>1 Preston Road</Line>
-                    <Line>Preston</Line>
 
-                    <PostCode>PR1 1HB</PostCode>
+                <Address>
+                    <Line>1 Preston Road</Line><Line>Preston</Line><PostCode>PR1 1HB</PostCode>
                 </Address>
 
-                <RelationToClaimant><QuestionLabel>What relation, if any, is the person to you?</QuestionLabel><Answer>Partner</Answer></RelationToClaimant>
+                <RelationToClaimant><QuestionLabel>What relation, if any, is the person/organisation to you?</QuestionLabel><Answer>Partner</Answer></RelationToClaimant>
                 <Cared35Hours><QuestionLabel>Do you spend 35 hours or more each week caring for the person you care for?</QuestionLabel><Answer>Yes</Answer></Cared35Hours>
-                <BreaksSinceClaim><QuestionLabel>Have you had any breaks in caring for this person since {0}?</QuestionLabel><Answer>No</Answer></BreaksSinceClaim>
+                <BreaksSinceClaim><QuestionLabel>Have you had any breaks in caring for this person since 21/07/2013?</QuestionLabel><Answer>No</Answer></BreaksSinceClaim>
 
                 <Cared35HoursBefore><QuestionLabel>Did you care for this person for 35 hours or more each week before your claim date?</QuestionLabel><Answer>Yes</Answer></Cared35HoursBefore>
                 <DateStartCaring><QuestionLabel>When did you start to care for this person?</QuestionLabel><Answer>21-01-2012</Answer></DateStartCaring>
-
                 <LiveSameAddress><QuestionLabel>Do they live at the same address as you?</QuestionLabel><Answer>Yes</Answer></LiveSameAddress>
                 <ArmedForcesIndependencePayment><QuestionLabel>Does this person get Armed Forces Independence Payment (AFIP)?</QuestionLabel><Answer>Yes</Answer></ArmedForcesIndependencePayment>
             </Caree>
             <Residency>
+                <NormallyLiveInGB><QuestionLabel>Do you normally live in England, Scotland or Wales?</QuestionLabel><Answer>Yes</Answer></NormallyLiveInGB>
 
-                <NormallyLiveInGB><QuestionLabel>Do you normally live in the UK, Republic of Ireland, Isle of Man or the Channel Islands?</QuestionLabel><Answer>Yes</Answer></NormallyLiveInGB>
 
-                <CountryNormallyLive><QuestionLabel>Where do you normally live?</QuestionLabel><Answer>Not asked</Answer></CountryNormallyLive>
 
                 <Nationality>British</Nationality>
 
-                <TimeOutsideGBLast3Years><QuestionLabel>Have you been out of Great Britain</QuestionLabel><Answer>No</Answer></TimeOutsideGBLast3Years>
-
-
-
-
+                <PeriodAbroad>
+                    <TimeOutsideGBLast3Years><QuestionLabel>Have you been out of England, Scotland or Wales for more than 52 weeks in the last 3 years before your claim date?</QuestionLabel><Answer>No</Answer></TimeOutsideGBLast3Years>
+                </PeriodAbroad>
 
             </Residency>
-            <CourseOfEducation>
-                <QuestionLabel>CourseOfEducation?</QuestionLabel>
-                <Answer>No</Answer>
-            </CourseOfEducation>
+            <CourseOfEducation><QuestionLabel>Have you been on a course of education since your claim date: 21/07/2013?</QuestionLabel><Answer>No</Answer></CourseOfEducation>
 
-            <SelfEmployed>
-                <QuestionLabel>SelfEmployed?</QuestionLabel>
-                <Answer>No</Answer>
-            </SelfEmployed>
+            <SelfEmployed><QuestionLabel>Have you been self-employed at any time since 14/07/2013 (this is one week before your claim date: 21/07/2013)?</QuestionLabel><Answer>No</Answer></SelfEmployed>
 
-            <Employed><QuestionLabel>Have you had another job at any time since 21/01/2013 (this is six months before your claim date: 21/07/2013)?</QuestionLabel><Answer>No</Answer></Employed>
+            <Employed><QuestionLabel>Have you been employed at any time since 21/01/2013 (this is six months before your claim date: 21/07/2013)?</QuestionLabel><Answer>No</Answer></Employed>
 
             <HavePartner><QuestionLabel>Have you had a partner/spouse living with you since your claim date: 21/07/2013?</QuestionLabel><Answer>No</Answer></HavePartner>
 
@@ -86,13 +67,13 @@
 
                 <OtherMoneySP><QuestionLabel>Have you had any Statutory Maternity Pay (SMP), Statutory Paternity Pay (SPP) or Statutory Adoption Pay (SAP) since the date you want to claim from 21/07/2013?</QuestionLabel><Answer>No</Answer></OtherMoneySP>
 
-                <OtherMoney><QuestionLabel>Have you &lt;or your Partner/Spouse&gt; claimed or received any other benefits since the date you want to claim?</QuestionLabel><Answer>No</Answer></OtherMoney>
-                <OtherMoneyPayments><QuestionLabel>Have you received any payments for the person you care for or any other person since your claim date 21/07/2013</QuestionLabel><Answer>No</Answer></OtherMoneyPayments>
-
+                <OtherMoney><QuestionLabel>Have you or your Partner or Spouse claimed or received any other benefits since your claim date: 21/07/2013?</QuestionLabel><Answer>No</Answer></OtherMoney>
+                <OtherMoneyPayments><QuestionLabel>anyPaymentsSinceClaimDate.answer.label</QuestionLabel><Answer>No</Answer></OtherMoneyPayments>
 
                 <EEA>
-                    <EEAReceivePensionsBenefits><QuestionLabel>Are you, your wife, husband, civil partner or parent you are dependent on, receiving any pensions or benefits from another EEA State or Switzerland?</QuestionLabel><Answer>No</Answer></EEAReceivePensionsBenefits>
-                    <EEAWorkingInsurance><QuestionLabel>Are you, your wife, husband, civil partner or parent you are dependent on, working in or paying insurance to another EEA State or Switzerland?</QuestionLabel><Answer>No</Answer></EEAWorkingInsurance>
+                    <EEAReceivePensionsBenefits><QuestionLabel>Do you, or any member of your family, receive any benefits or pensions from a European Economic Area (EEA) state or Switzerland?</QuestionLabel><Answer>No</Answer></EEAReceivePensionsBenefits>
+                    <EEAClaimPensionsBenefits><QuestionLabel>Have you, or a member of your family, made a claim for any benefits or pensions from a European Economic Area (EEA) state or Switzerland?</QuestionLabel><Answer>No</Answer></EEAClaimPensionsBenefits>
+                    <EEAWorkingInsurance><QuestionLabel>Are you, or a member of your family, working in or paying insurance to, another European Economic Area (EEA) state or Switzerland?</QuestionLabel><Answer>No</Answer></EEAWorkingInsurance>
                 </EEA>
             </OtherBenefits>
 
@@ -110,9 +91,9 @@
                 </DeclarationStatement>
                 <DeclarationQuestion><QuestionLabel>Please tick this box if this claim form has been filled in by someone else, if so, please ensure that you understand the declarations above as another person cannot make the declarations on your behalf.</QuestionLabel><Answer>Yes</Answer></DeclarationQuestion>
                 <DeclarationQuestion><QuestionLabel>Please tick this box to confirm that you understand and make the declarations above.</QuestionLabel><Answer>Yes</Answer></DeclarationQuestion>
+                <DeclarationNameOrg><QuestionLabel>Your name and/or organisation</QuestionLabel><Answer>Some Org</Answer></DeclarationNameOrg>
             </Declaration>
             <Disclaimer>
-
                 <DisclaimerStatement>
                     <Title>This is my claim for Carer's Allowance.</Title>
                     <Content>I understand that if I am paid Carer's Allowance it may affect the benefits paid to [Test Caseone].</Content>
@@ -126,22 +107,16 @@
                 <DisclaimerQuestion><QuestionLabel>Please tick this box to declare that you have understood the notes and you have made / will make the person you are caring for / or their representative aware that there could be a change to their benefits.</QuestionLabel><Answer>Yes</Answer></DisclaimerQuestion>
             </Disclaimer>
             <EvidenceList>
-                <RecipientAddress>
-                    <Line>1 Preston Road</Line>
-                    <Line>Preston</Line>
-
-                    <PostCode>PR1 1HB</PostCode>
-                </RecipientAddress>
                 <Evidence>
                     <Title/>
-                    <Content>XML Generated at: 2013-11-27T12:29:25</Content>
+                    <Content>The Carers Allowance unit will contact you if they need any further information.</Content>
                 </Evidence>
-
             </EvidenceList>
             <Consents>
 
-                <Consent><QuestionLabel>Do you agree to us getting information from any other person or organisation you have told us about on this form?</QuestionLabel><Answer>Yes</Answer></Consent>
+                <Consent><QuestionLabel>Do you agree to us getting information from any other person or organisation you have told us about on this claim?</QuestionLabel><Answer>Yes</Answer></Consent>
             </Consents>
+            <AssistedDecisions><AssistedDecision><Reason>Person receives Armed Forces Independence Payment.</Reason><RecommendedDecision>Transfer to Armed Forces Independent Payments team.</RecommendedDecision></AssistedDecision></AssistedDecisions>
         </DWPCAClaim>
     </DWPCATransaction>
     <ds:Signature>
@@ -150,8 +125,8 @@
             <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
             <ds:Reference URI="#TEST432">
                 <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
-                <ds:DigestValue>zvbLtkKezuZ+WwjTSO7lWxjSG7I=</ds:DigestValue>
+                <ds:DigestValue>7rEOFRZHPN7SHrcO2fOvM8kcUro=</ds:DigestValue>
             </ds:Reference>
         </ds:SignedInfo>
-        <ds:SignatureValue>Co/2/6NmFgXtv277biXKaw+oL4FNHCF99y9QuThk0aAK86pozInwDg==</ds:SignatureValue>
+        <ds:SignatureValue>QeGlAwWi2rRvoG1Mfrh9co5wWHJ5lVTGZAk7wn0F1RM7dxsibqY6jA==</ds:SignatureValue>
     </ds:Signature></DWPBody>

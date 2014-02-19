@@ -68,6 +68,11 @@ object XMLData extends TestUtils{
     functionalTestCaseMandatoryFields(xml)
   }
 
+  def functionalTestCase10(xml: Elem) = {
+    val fields = XMLDataFields(xml)
+    functionalTestCaseMandatoryFields(xml)
+  }
+
   def functionalTestCaseMandatoryFields(xml: Elem) = {
     val fields = XMLDataFields(xml)
     Seq(

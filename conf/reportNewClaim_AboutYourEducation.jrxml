@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_AboutYourEducation" language="groovy" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="233a6ecd-5683-49cd-8996-0dfae9f2e3d1">
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="130"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/valtechuk/carers-dev-pdf/pdfService/pdfService/conf/"]]></defaultValueExpression>
 	</parameter>
@@ -95,7 +95,9 @@
 				<text><![CDATA[Your course details]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="f03e59f1-4d87-456a-b921-422149332504" x="0" y="25" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="f03e59f1-4d87-456a-b921-422149332504" x="0" y="25" width="350" height="18" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[!$F{AboutYourEducationCourseDetailsType}.isEmpty()]]></printWhenExpression>
+				</reportElement>
 				<textElement/>
 				<text><![CDATA[Type of course]]></text>
 			</staticText>
@@ -145,7 +147,9 @@
 				<textFieldExpression><![CDATA[$F{AboutYourEducationCourseDetailsDateStoppedAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="e9ae0ed4-8044-43cf-8d96-954830f98b08" x="0" y="123" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="e9ae0ed4-8044-43cf-8d96-954830f98b08" x="0" y="123" width="350" height="18" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[!$F{AboutYourEducationLocationDetailsStudentReferenceNumber}.isEmpty()]]></printWhenExpression>
+				</reportElement>
 				<textElement/>
 				<text><![CDATA[Your student reference number]]></text>
 			</staticText>
@@ -200,7 +204,9 @@
 				<textFieldExpression><![CDATA[$F{AboutYourEducationLocationDetailsPhonenumber}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="d7ca70d5-e6be-4157-9842-e63661a1faac" x="0" y="306" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="d7ca70d5-e6be-4157-9842-e63661a1faac" x="0" y="306" width="350" height="18" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[!$F{AboutYourEducationLocationDetailsFaxnumber}.isEmpty()]]></printWhenExpression>
+				</reportElement>
 				<textElement/>
 				<text><![CDATA[Fax number]]></text>
 			</staticText>

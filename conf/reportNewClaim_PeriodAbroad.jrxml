@@ -37,6 +37,12 @@
 	<field name="AboutYouTheCarerPeriodAbroadCareePresentAnswer" class="java.lang.String">
 		<fieldDescription><![CDATA[CareePresent/Answer]]></fieldDescription>
 	</field>
+	<field name="AboutYouTheCarerTimeOutsideGBLast3YearsQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[TimeOutsideGBLast3Years/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerTimeOutsideGBLast3YearsAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[TimeOutsideGBLast3Years/Answer]]></fieldDescription>
+	</field>
 	<variable name="variable1" class="java.lang.Integer" incrementType="Group" incrementGroup="Break">
 		<variableExpression><![CDATA[$V{variable1}+1]]></variableExpression>
 		<initialValueExpression><![CDATA[1]]></initialValueExpression>
@@ -73,59 +79,69 @@
 		</band>
 	</pageHeader>
 	<detail>
-		<band height="122" splitType="Stretch">
+		<band height="139" splitType="Stretch">
 			<staticText>
 				<reportElement uuid="1ca9800e-fbb4-4152-a5a6-6c7394bff323" x="22" y="2" width="533" height="18"/>
 				<textElement/>
 				<text><![CDATA[-->>  Outside England, Scotland and Wales X]]></text>
 			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement uuid="3d091f97-47b6-4819-b5bb-c919c8560721" x="20" y="20" width="330" height="18"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerTimeOutsideGBLast3YearsQuestion}]]></textFieldExpression>
+			</textField>
 			<textField>
-				<reportElement uuid="3a0b8e90-5e92-4913-a464-26f141b8e53a" x="20" y="20" width="330" height="18"/>
+				<reportElement uuid="5a870f84-cae3-4556-ad18-dbf6def71f0b" x="356" y="20" width="197" height="18"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerTimeOutsideGBLast3YearsAnswer}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3a0b8e90-5e92-4913-a464-26f141b8e53a" x="20" y="38" width="330" height="18"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerCountryVisitedQuestion}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement uuid="05eeec83-a472-4684-81a3-758851dd4f6b" x="355" y="20" width="197" height="18"/>
+				<reportElement uuid="05eeec83-a472-4684-81a3-758851dd4f6b" x="356" y="38" width="197" height="18"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerCountryVisitedAnswer}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement uuid="1b310c3e-4d61-4907-b6d6-d7dac30f88d6" x="20" y="40" width="330" height="18"/>
+				<reportElement uuid="1b310c3e-4d61-4907-b6d6-d7dac30f88d6" x="20" y="58" width="330" height="18"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerPeriodAbroadDateFromQuestion}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement uuid="7c44552e-cb23-4ff5-a937-0a9de1adcf59" x="355" y="40" width="197" height="18"/>
+				<reportElement uuid="7c44552e-cb23-4ff5-a937-0a9de1adcf59" x="356" y="58" width="197" height="18"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerPeriodAbroadDateFromAnswer}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement uuid="6d1d14e1-2361-48b5-b348-93f06688654b" x="20" y="60" width="330" height="18"/>
+				<reportElement uuid="6d1d14e1-2361-48b5-b348-93f06688654b" x="20" y="78" width="330" height="18"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerPeriodAbroadDateToQuestion}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement uuid="128b9b78-4709-4fe7-944f-c336a91d3c64" x="355" y="60" width="197" height="18"/>
+				<reportElement uuid="128b9b78-4709-4fe7-944f-c336a91d3c64" x="356" y="78" width="197" height="18"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerPeriodAbroadDateToAnswer}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement uuid="3490cb57-069c-47a9-82f4-97d443eda793" x="20" y="80" width="330" height="18"/>
+				<reportElement uuid="3490cb57-069c-47a9-82f4-97d443eda793" x="20" y="97" width="330" height="18"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerPeriodAbroadReasonQuestion}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement uuid="40a4a547-9f7e-4da4-b9a8-652676a6ff44" x="355" y="80" width="197" height="18"/>
+				<reportElement uuid="40a4a547-9f7e-4da4-b9a8-652676a6ff44" x="356" y="97" width="197" height="18"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerPeriodAbroadReasonAnswer}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement uuid="2a7aee4f-94fe-49cb-bd7b-8efcce88dd77" x="20" y="100" width="330" height="18"/>
+				<reportElement uuid="2a7aee4f-94fe-49cb-bd7b-8efcce88dd77" x="20" y="117" width="330" height="18"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerPeriodAbroadCareePresentQuestion}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement uuid="84f02d3b-402e-4631-b757-f6678d948873" x="355" y="100" width="197" height="18"/>
+				<reportElement uuid="84f02d3b-402e-4631-b757-f6678d948873" x="356" y="117" width="197" height="18"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerPeriodAbroadCareePresentAnswer}]]></textFieldExpression>
 			</textField>
