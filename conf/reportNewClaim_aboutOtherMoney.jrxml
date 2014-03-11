@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYourPartner" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="2c76a7f8-deb9-45af-83f2-c12559d20c72">
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="255"/>
+	<property name="ireport.y" value="596"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
@@ -256,36 +256,22 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{otherMoneySSPEmployerName}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement uuid="7affa0bd-8d59-4bb3-a0e5-e1557bfe7241" x="0" y="119" width="350" height="20"/>
-				<textElement/>
-				<text><![CDATA[Employer's Address]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="fba48959-94d5-4b6e-952f-fcbf52b8752f" x="0" y="183" width="350" height="20"/>
-				<textElement/>
-				<text><![CDATA[Employer's Postcode]]></text>
-			</staticText>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="b7452c73-9c36-47ca-90fb-daf8f6198d4d" x="355" y="119" width="197" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{Line1}]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="5fe22dda-0558-4cac-9160-63603f4a1c50" x="355" y="140" width="197" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{Line2}]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="93e354a4-f069-4745-ae97-04571a8b657d" x="355" y="159" width="197" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{Line3}]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="192bfab2-bb2a-4f1f-8d5f-42a30fc4b24c" x="355" y="183" width="197" height="20" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{otherMoneySSPEmployersPostCode}]]></textFieldExpression>
-			</textField>
+			<subreport>
+				<reportElement uuid="3a1885f4-3c9e-4131-aa43-af61f05e274b" x="0" y="118" width="555" height="60" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{otherMoneySSPAnswer}.equals("Yes")]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="postCode">
+					<subreportParameterExpression><![CDATA["Employer's Postcode"]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="addressLabel">
+					<subreportParameterExpression><![CDATA["Employer's Address"]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySPDetails/Address")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_addressForNestedReports.jasper"]]></subreportExpression>
+			</subreport>
 		</band>
 		<band height="188" splitType="Stretch">
 			<printWhenExpression><![CDATA[$F{otherMoneyAnswer}.equals("Yes")]]></printWhenExpression>
@@ -340,6 +326,12 @@
 				<reportElement uuid="35137a21-8cdc-4abb-8133-c3754e88b753" x="0" y="126" width="555" height="60"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="postCode">
+					<subreportParameterExpression><![CDATA["Employer's Postcode"]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="addressLabel">
+					<subreportParameterExpression><![CDATA["Employer's Address"]]></subreportParameterExpression>
 				</subreportParameter>
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySPDetails/Address")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_addressForNestedReports.jasper"]]></subreportExpression>

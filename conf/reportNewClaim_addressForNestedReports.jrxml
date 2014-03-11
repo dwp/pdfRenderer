@@ -3,6 +3,12 @@
 	<property name="ireport.zoom" value="2.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
+	<parameter name="addressLabel" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["Address"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="postCode" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["PostCode"]]></defaultValueExpression>
+	</parameter>
 	<field name="Line1" class="java.lang.String">
 		<fieldDescription><![CDATA[Line[1]]]></fieldDescription>
 	</field>
@@ -20,11 +26,6 @@
 	</background>
 	<detail>
 		<band height="80" splitType="Prevent">
-			<staticText>
-				<reportElement uuid="9b41ad39-c486-46a8-a4b8-a6ca6f46c41a" x="0" y="1" width="350" height="18"/>
-				<textElement/>
-				<text><![CDATA[Address]]></text>
-			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="c354e299-7659-4c20-a75d-ed92c9998acc" x="355" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
@@ -40,15 +41,20 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{Line3}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement uuid="86f05d70-50fc-4356-84c7-f4babf835e9e" x="0" y="57" width="350" height="18"/>
-				<textElement/>
-				<text><![CDATA[Postcode]]></text>
-			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="98b72c97-a655-4a45-97fd-154307390572" x="355" y="57" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{Postcode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="fe31c064-9c6d-4657-8273-21794cb35f9d" x="0" y="1" width="350" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{addressLabel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="653f8379-d915-465b-9267-bda1f0d8d7b2" x="0" y="57" width="350" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{postCode}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
