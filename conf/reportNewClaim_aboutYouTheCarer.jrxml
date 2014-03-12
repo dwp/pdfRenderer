@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYouTheCarer" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a66aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="2.0"/>
-	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="954"/>
+	<property name="ireport.x" value="250"/>
+	<property name="ireport.y" value="266"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
@@ -127,7 +127,7 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_aboutYouTheCarer_YourDetails.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="197" splitType="Stretch">
+		<band height="216" splitType="Stretch">
 			<rectangle>
 				<reportElement uuid="84e9a3a2-2fa1-4fa3-9d4c-a493978ebf9e" x="0" y="1" width="553" height="21" isRemoveLineWhenBlank="true" backcolor="#CCCCCC"/>
 				<graphicElement>
@@ -162,7 +162,7 @@
 				<textFieldExpression><![CDATA[$F{AbouYouTheCarerDayTimeTelephoneNumber}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="a3503460-4846-4b36-9cd7-3196914e4dcb" x="0" y="139" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="a3503460-4846-4b36-9cd7-3196914e4dcb" x="0" y="139" width="350" height="36" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerSpeechOrHearingDifficultyQuestion}]]></textFieldExpression>
 			</textField>
@@ -187,25 +187,25 @@
 				<text><![CDATA[How we can contact you]]></text>
 			</staticText>
 			<rectangle>
-				<reportElement uuid="592b0bd7-64a5-4e26-b68f-51173e743f25" x="0" y="158" width="552" height="21" backcolor="#CCCCCC"/>
+				<reportElement uuid="592b0bd7-64a5-4e26-b68f-51173e743f25" x="0" y="177" width="552" height="21" backcolor="#CCCCCC"/>
 				<graphicElement>
 					<pen lineWidth="0.0"/>
 				</graphicElement>
 			</rectangle>
 			<staticText>
-				<reportElement uuid="2e7291b0-81be-45a4-9549-ce3f6812f4b4" x="0" y="158" width="100" height="20" forecolor="#FFFFFF"/>
+				<reportElement uuid="2e7291b0-81be-45a4-9549-ce3f6812f4b4" x="-1" y="178" width="100" height="20" forecolor="#FFFFFF"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Your claim date]]></text>
 			</staticText>
 			<textField>
-				<reportElement uuid="5b4d1eca-9216-4389-849e-14c074093a3b" x="0" y="179" width="350" height="18"/>
+				<reportElement uuid="5b4d1eca-9216-4389-849e-14c074093a3b" x="-1" y="198" width="350" height="18"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimDateQuestion}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement uuid="4f2b464f-d57e-4053-a5e8-9e65da71d763" x="355" y="179" width="197" height="18"/>
+				<reportElement uuid="4f2b464f-d57e-4053-a5e8-9e65da71d763" x="355" y="198" width="197" height="18"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimDateAnswer}]]></textFieldExpression>
 			</textField>
