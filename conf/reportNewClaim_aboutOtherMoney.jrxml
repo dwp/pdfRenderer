@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYourPartner" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="2c76a7f8-deb9-45af-83f2-c12559d20c72">
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="104"/>
+	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
@@ -134,7 +134,6 @@
 	</pageHeader>
 	<detail>
 		<band height="148" splitType="Stretch">
-			<printWhenExpression><![CDATA[$F{otherMoneyAnswer}.equals("Yes")]]></printWhenExpression>
 			<staticText>
 				<reportElement uuid="682874b6-bfe4-439f-8bb8-4abdfe329111" mode="Opaque" x="0" y="0" width="555" height="20" isPrintInFirstWholeBand="true" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
 				<textElement>
@@ -243,7 +242,7 @@
 				<textFieldExpression><![CDATA[$F{otherMoneySSPPaymentFrequencyAnswer}=="Other" ? $F{otherMoneySSPPaymentFrequencyOther} : ""]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="708d14ba-594a-40ce-84c4-add4c1d3aa13" x="0" y="100" width="350" height="18">
+				<reportElement uuid="708d14ba-594a-40ce-84c4-add4c1d3aa13" x="0" y="100" width="350" height="18" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[!$F{otherMoneySSPEmployerName}.isEmpty()]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
@@ -311,7 +310,9 @@
 				<textFieldExpression><![CDATA[$F{otherMoneySPPaymentFrequencyAnswer}=="Other" ? $F{otherMoneySPPaymentFrequencyOther} : ""]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="811dfe96-7440-4968-b749-b41bd9f68280" x="0" y="91" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="811dfe96-7440-4968-b749-b41bd9f68280" x="0" y="91" width="350" height="18" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[!$F{otherMoneySPEmployerName}.isEmpty()]]></printWhenExpression>
+				</reportElement>
 				<textElement/>
 				<text><![CDATA[Employer's Name]]></text>
 			</staticText>
