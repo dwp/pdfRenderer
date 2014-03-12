@@ -2,7 +2,7 @@
     <Version>0.1</Version>
     <DWPCATransaction id="TEST432">
         <TransactionId>TEST432</TransactionId>
-        <DateTimeGenerated>12-03-2014 15:20</DateTimeGenerated>
+        <DateTimeGenerated>12-03-2014 15:26</DateTimeGenerated>
         <DWPCAClaim>
             <DateOfClaim><QuestionLabel>When do you want your Carer's Allowance claim to start?</QuestionLabel><Answer>01-01-2010</Answer></DateOfClaim>
             <Claimant>
@@ -151,7 +151,7 @@
                     <Employer>
                         <DateJobStarted><QuestionLabel>When did you start your job?</QuestionLabel><Answer>01-01-2013</Answer></DateJobStarted>
                         <DateJobEnded><QuestionLabel>What date did you last work?</QuestionLabel><Answer>01-07-2013</Answer></DateJobEnded>
-                        <JobType><QuestionLabel>jobTitle.was</QuestionLabel><Answer>Hacker</Answer></JobType>
+                        <JobType><QuestionLabel>What was your job title?</QuestionLabel><Answer>Hacker</Answer></JobType>
                         <ClockPayrollNumber>12345678</ClockPayrollNumber>
                         <Name>Tesco's</Name>
                         <Address>
@@ -202,7 +202,7 @@
                 <Employer>
                     <DateJobStarted><QuestionLabel>When did you start your job?</QuestionLabel><Answer>01-01-2013</Answer></DateJobStarted>
                     <DateJobEnded><QuestionLabel>What date did you last work?</QuestionLabel><Answer>01-01-2001</Answer></DateJobEnded>
-                    <JobType><QuestionLabel>jobTitle.was</QuestionLabel><Answer>Hacker</Answer></JobType>
+                    <JobType><QuestionLabel>What was your job title?</QuestionLabel><Answer>Hacker</Answer></JobType>
                     <ClockPayrollNumber>12345678</ClockPayrollNumber>
                     <Name>Tesco's</Name>
                     <Address>
@@ -352,8 +352,8 @@
             <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
             <ds:Reference URI="#TEST432">
                 <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
-                <ds:DigestValue>hcw5ZfAMp+AB5cPwARfqTKkJuG0=</ds:DigestValue>
+                <ds:DigestValue>kenuvjhxBxFrLN5J4NjUS9pvRfw=</ds:DigestValue>
             </ds:Reference>
         </ds:SignedInfo>
-        <ds:SignatureValue>NbJbjvfuxTHgtQXSycd5z0BwX6U5sQg8k6oMaj1ATR6QW77QuZpBmQ==</ds:SignatureValue>
+        <ds:SignatureValue>RKhuke60bJ2VQn6VqGqUn1ig2q0f5XWIDRd+lDuAbLPvgDoJb3R18A==</ds:SignatureValue>
     </ds:Signature></DWPBody>
