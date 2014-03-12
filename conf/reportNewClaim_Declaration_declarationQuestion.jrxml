@@ -6,26 +6,46 @@
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/valtechuk/carers-dev-pdf/pdfService/pdfService/conf/"]]></defaultValueExpression>
 	</parameter>
-	<field name="Question" class="java.lang.String">
-		<fieldDescription><![CDATA[QuestionLabel]]></fieldDescription>
+	<field name="DeclarationSomeOneElseQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[Declaration/DeclarationQuestion//QuestionLabel[1]]]></fieldDescription>
 	</field>
-	<field name="Answer" class="java.lang.String">
-		<fieldDescription><![CDATA[Answer]]></fieldDescription>
+	<field name="DeclarationSomeOneElseAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[DeclarationQuestion/Answer[1]]]></fieldDescription>
+	</field>
+	<field name="DeclarationNameOrgQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[DeclarationNameOrg/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="DeclarationNameOrgAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[DeclarationNameOrg/Answer]]></fieldDescription>
 	</field>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="20" splitType="Stretch">
+		<band height="48" splitType="Stretch">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="da37dfe6-34e3-487b-83ba-f4bcbd593d68" x="0" y="1" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{Question}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{DeclarationSomeOneElseQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="e1e6da2c-4b06-412f-abc3-78d85a5ef810" x="355" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{Answer}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{DeclarationSomeOneElseAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="fdf71c14-3bb7-4e0c-b01b-798c24e135a5" x="0" y="19" width="350" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{DeclarationSomeOneElseAnswer}.equals("Yes")]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{DeclarationNameOrgQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="0cd1bdbf-3221-4467-8702-16e296b6f6ea" x="355" y="19" width="197" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{DeclarationSomeOneElseAnswer}.equals("Yes")]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{DeclarationNameOrgAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>

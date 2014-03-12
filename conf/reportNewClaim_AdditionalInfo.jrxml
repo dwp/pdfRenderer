@@ -32,7 +32,9 @@
 				<text><![CDATA[Additional Information]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="0f862337-92b2-479f-8e79-1dd536a16c4e" x="0" y="21" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="0f862337-92b2-479f-8e79-1dd536a16c4e" x="0" y="21" width="350" height="18" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[!$F{additionalInformationAnswer}.isEmpty()]]></printWhenExpression>
+				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{additionalInformationQuestion}]]></textFieldExpression>
 			</textField>

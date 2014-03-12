@@ -88,7 +88,7 @@ object XMLData extends TestUtils{
       "Last name " + fields.surName.text,
       "First name(s) " + fields.firstName.text,
       "Title " + fields.title.text,
-      "Street / Town / City " + fields.addressCarer,
+      "Address " + fields.addressCarer,
       "Postcode " + fields.postCodeCarer.text
     )
   }
@@ -98,7 +98,7 @@ object XMLData extends TestUtils{
       "Last name " + fields.careeLastName.text,
       "First name(s) " + fields.careeFirstName.text,
       "Title " + fields.careeTitle.text,
-      "Street / Town / City " + fields.addressCaree,
+      "Address " + fields.addressCaree,
       "Postcode " + fields.postCodeCaree.text
     )
   }
@@ -137,7 +137,7 @@ object XMLData extends TestUtils{
       "Marital Status " + fields.maritalStatus.text,
       fields.dateOfClaimQuestion.text +" "+ fields.dateOfClaimAnswer.text,
       "Your contact details",
-      "Street / Town / City " + fields.address,
+      "Address " + fields.address,
       "Postcode " + fields.postCode.text,
       "Daytime telephone number " + fields.dayTimeTelephoneNumber.text,
       "Mobile number " + fields.mobileNumber.text,
@@ -248,20 +248,19 @@ object XMLData extends TestUtils{
       buildQuestion(fields.otherMoneyPaymentNameQuestion.text, fields.otherMoneyPaymentNameAnswer.text),
       buildAmount(fields.otherMoneyPaymentAmountQuestion.text, fields.otherMoneyPaymentAmountCurrency.text, fields.otherMoneyPaymentAmountAmount.text),
       buildOther(fields.otherMoneyPaymentFrequencyQuestion.text, fields.otherMoneyPaymentFrequencyAnswer.text, fields.otherMoneyPaymentFrequencyOther.text),
-      "Statutory Sick Pay",
+      "Statutory Pay",
       buildQuestion(fields.otherMoneySSPQuestion.text, fields.otherMoneySSPAnswer.text),
       buildAmount(fields.otherMoneySSPPaymentAmountQuestion.text, fields.otherMoneySSPPaymentAmountCurrency.text, fields.otherMoneySSPPaymentAmountAmount.text),
       buildOther(fields.otherMoneySSPPaymentFrequencyQuestion.text, fields.otherMoneySSPPaymentFrequencyAnswer.text, fields.otherMoneySSPPaymentFrequencyOther.text),
       "Employer's Name" + " " + fields.otherMoneySSPEmployerName.text,
-      "Street / Town / City " + fields.otherMoneySSPEmployerAddress,
-      "Postcode " + fields.otherMoneySSPEmployerPostcode.text,
-      "Other Statutory Pay",
+      "Employer's Address " + fields.otherMoneySSPEmployerAddress,
+      "Employer's Postcode " + fields.otherMoneySSPEmployerPostcode.text,
       buildQuestion(fields.otherMoneySPQuestion.text, fields.otherMoneySPAnswer.text),
       buildAmount(fields.otherMoneySPPaymentAmountQuestion.text, fields.otherMoneySPPaymentAmountCurrency.text, fields.otherMoneySPPaymentAmountAmount.text),
       buildOther(fields.otherMoneySPPaymentFrequencyQuestion.text, fields.otherMoneySPPaymentFrequencyAnswer.text, fields.otherMoneySPPaymentFrequencyOther.text),
       "Employer's Name" + " " + fields.otherMoneySPEmployerName.text,
-      "Street / Town / City " + fields.otherMoneySPEmployerAddress,
-      "Postcode " + fields.otherMoneySPEmployerPostcode.text
+      "Employer's Address " + fields.otherMoneySPEmployerAddress,
+      "Employer's Postcode " + fields.otherMoneySPEmployerPostcode.text
     )
   }
 
