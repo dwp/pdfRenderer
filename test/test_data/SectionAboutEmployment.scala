@@ -28,7 +28,7 @@ case class SectionAboutEmployment(xml: Elem) {
           (x \\ "P45LeavingDate" \\ "QuestionLabel").text+" "+(x \\ "P45LeavingDate" \\ "Answer").text,
           "Payroll or Employee number "+(x \\ "ClockPayrollNumber").text,
           "Employer's contact details",
-          "Street / Town / City " + address,
+          "Address " + address,
           "Postcode " + postCode.text,
           "Phone number "+(x \\ "EmployersPhoneNumber").text,
           (x \\ "JobType" \\ "QuestionLabel").text+" "+(x \\ "JobType" \\ "Answer").text

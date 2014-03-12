@@ -48,22 +48,12 @@ class PdfContentMatchingSpec extends Specification {
 
     def foundMustBeTrue(testData: Seq[String], totalContent: String) = {
       testData.forall(x => {
-        val found = totalContent.contains(x.toLowerCase)
+        val found = totalContent.toLowerCase.contains(x.toLowerCase)
         if (!found) {
           println("*** Cannot find: " + x.toLowerCase)
           println("*** End ***")
         }
         found
-      })
-    }
-
-    def foundMustBeFalse(testData: Seq[String], totalContent: String) = {
-      testData.forall(x => {
-        val found = totalContent.contains(x.toLowerCase)
-        if (found) {
-          println("Should not have found: " + x.toLowerCase)
-        }
-        !found
       })
     }
 
@@ -76,7 +66,7 @@ class PdfContentMatchingSpec extends Specification {
       val testData = generateTestData(testCaseXml)
 
       println("TotalContent " + totalContent)
-
+      println("Test Data" + testData)
       matchFunction(testData, totalContent) must beTrue
       deletePdfFile(pdfFileLocation)
     }

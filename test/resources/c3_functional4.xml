@@ -2,7 +2,7 @@
     <Version>0.1</Version>
     <DWPCATransaction id="TEST432">
         <TransactionId>TEST432</TransactionId>
-        <DateTimeGenerated>18-02-2014 16:58</DateTimeGenerated>
+        <DateTimeGenerated>12-03-2014 11:56</DateTimeGenerated>
         <DWPCAClaim>
             <DateOfClaim><QuestionLabel>When do you want your Carer's Allowance claim to start?</QuestionLabel><Answer>05-01-2013</Answer></DateOfClaim>
             <Claimant>
@@ -76,23 +76,23 @@
                 <ChildCareExpenses>
                     <CarerName><QuestionLabel>Name of the person/organisation who looks after your child/children</QuestionLabel><Answer>Mr John Johnson</Answer></CarerName>
                     <Expense>
-                        <Payment><QuestionLabel>How much Do you pay them?</QuestionLabel><Answer><Currency>GBP</Currency><Amount>234</Amount></Answer></Payment>
-                        <Frequency><QuestionLabel>How often do you pay childcare expenses?</QuestionLabel><Answer>Fortnightly</Answer></Frequency>
+                        <Payment><QuestionLabel>How much do you pay them?</QuestionLabel><Answer><Currency>GBP</Currency><Amount>234</Amount></Answer></Payment>
+                        <Frequency><QuestionLabel>{1}</QuestionLabel><Answer>Fortnightly</Answer></Frequency>
                     </Expense>
                     <RelationshipCarerToClaimant><QuestionLabel>What relation, if any, is the person/organisation to you?</QuestionLabel><Answer>Brother</Answer></RelationshipCarerToClaimant>
 
                 </ChildCareExpenses>
                 <CareExpensesCaree><QuestionLabel>While at work, do you pay anyone to care for the person you care for?</QuestionLabel><Answer>Yes</Answer></CareExpensesCaree>
                 <CareExpenses>
-                    <CarerName><QuestionLabel>Name of the person/organisation do you pay</QuestionLabel><Answer>Mrs Terry Thornhill</Answer></CarerName>
+                    <CarerName><QuestionLabel>Name of the person/organisation you do pay</QuestionLabel><Answer>Mrs Terry Thornhill</Answer></CarerName>
                     <Expense>
-                        <Payment><QuestionLabel>How much Do you pay them?</QuestionLabel><Answer><Currency>GBP</Currency><Amount>1235.01</Amount></Answer></Payment>
-                        <Frequency><QuestionLabel>How often do you pay expenses related to the person you care for?</QuestionLabel><Answer>Fortnightly</Answer></Frequency>
+                        <Payment><QuestionLabel>How much do you pay them?</QuestionLabel><Answer><Currency>GBP</Currency><Amount>1235.01</Amount></Answer></Payment>
+                        <Frequency><QuestionLabel>{1}</QuestionLabel><Answer>Fortnightly</Answer></Frequency>
                     </Expense>
                     <RelationshipCarerToClaimant><QuestionLabel>What relation, if any, is the person/organisation to you?</QuestionLabel><Answer>Aunt</Answer></RelationshipCarerToClaimant>
                     <RelationshipCarerToCaree><QuestionLabel>What relation, if any, is this person/organisation to the person you care for?</QuestionLabel><Answer>Adopted Son</Answer></RelationshipCarerToCaree>
                 </CareExpenses>
-                <PaidForPension><QuestionLabel>do you pay towards a personal or stakeholder pension scheme or a retirement annuity scheme</QuestionLabel><Answer>Yes</Answer></PaidForPension>
+                <PaidForPension><QuestionLabel>Do you pay towards a personal or stakeholder pension scheme or a retirement annuity scheme?</QuestionLabel><Answer>Yes</Answer></PaidForPension>
                 <PensionScheme>
                     <Payment><QuestionLabel>How much do you pay?</QuestionLabel><Answer><Currency>GBP</Currency><Amount>100</Amount></Answer></Payment>
                     <Frequency><QuestionLabel>How often do you pay into a Pension?</QuestionLabel><Answer>Weekly</Answer></Frequency>
@@ -105,7 +105,7 @@
                     <Employer>
                         <DateJobStarted><QuestionLabel>When did you start your job?</QuestionLabel><Answer>01-01-2013</Answer></DateJobStarted>
 
-                        <JobType><QuestionLabel>What is your job title?</QuestionLabel><Answer>Hacker</Answer></JobType>
+                        <JobType><QuestionLabel>jobTitle.is</QuestionLabel><Answer>Hacker</Answer></JobType>
                         <ClockPayrollNumber>12345678</ClockPayrollNumber>
                         <Name>Tesco's Bank</Name>
                         <Address>
@@ -128,7 +128,7 @@
                     <CarerName><QuestionLabel>Name of the person/organisation who looks after your child/children</QuestionLabel><Answer>Mr Grandfather Senior</Answer></CarerName>
                     <Expense>
                         <Payment><QuestionLabel>How much do you pay them?</QuestionLabel><Answer><Currency>GBP</Currency><Amount>120.03</Amount></Answer></Payment>
-                        <Frequency><QuestionLabel>How often do you pay childcare expenses?</QuestionLabel><Answer>Weekly</Answer></Frequency>
+                        <Frequency><QuestionLabel>{1}</QuestionLabel><Answer>Weekly</Answer></Frequency>
                     </Expense>
                     <RelationshipCarerToClaimant><QuestionLabel>What relation, if any, is the person/organisation to you?</QuestionLabel><Answer>Father</Answer></RelationshipCarerToClaimant>
 
@@ -137,7 +137,7 @@
                     <CarerName><QuestionLabel>Name of the person/organisation who looks after your child/children</QuestionLabel><Answer>Carers UK Ltd</Answer></CarerName>
                     <Expense>
                         <Payment><QuestionLabel>How much do you pay them?</QuestionLabel><Answer><Currency>GBP</Currency><Amount>150.89</Amount></Answer></Payment>
-                        <Frequency><QuestionLabel>How often do you pay childcare expenses?</QuestionLabel><Answer>Fortnightly</Answer></Frequency>
+                        <Frequency><QuestionLabel>{1}</QuestionLabel><Answer>Fortnightly</Answer></Frequency>
                     </Expense>
                     <RelationshipCarerToClaimant><QuestionLabel>What relation, if any, is the person/organisation to you?</QuestionLabel><Answer>Father</Answer></RelationshipCarerToClaimant>
                     <RelationshipCarerToCaree><QuestionLabel>What relation, if any, is this person/organisation to the person you care for?</QuestionLabel><Answer>Other</Answer></RelationshipCarerToCaree>
@@ -162,8 +162,8 @@
                 <OtherMoneyPayments><QuestionLabel>Have you received any payments for the person you care for or any other person since your claim date 05/01/2013</QuestionLabel><Answer>No</Answer></OtherMoneyPayments>
 
                 <EEA>
-                    <EEAReceivePensionsBenefits><QuestionLabel>Do you, or any member of your family, receive any benefits or pensions from a European Economic Area (EEA) state or Switzerland?</QuestionLabel><Answer>No</Answer></EEAReceivePensionsBenefits>
-                    <EEAClaimPensionsBenefits><QuestionLabel>Have you, or a member of your family, made a claim for any benefits or pensions from a European Economic Area (EEA) state or Switzerland?</QuestionLabel><Answer>No</Answer></EEAClaimPensionsBenefits>
+                    <EEAReceivePensionsBenefits><QuestionLabel>Do you, or any member of your family, receive any benefits or pensions from any other European Economic Area (EEA) state or Switzerland?</QuestionLabel><Answer>No</Answer></EEAReceivePensionsBenefits>
+                    <EEAClaimPensionsBenefits><QuestionLabel>Have you, or a member of your family, made a claim for any benefits or pensions from any other European Economic Area (EEA) state or Switzerland?</QuestionLabel><Answer>No</Answer></EEAClaimPensionsBenefits>
                     <EEAWorkingInsurance><QuestionLabel>Are you, or a member of your family, working in or paying insurance to, another European Economic Area (EEA) state or Switzerland?</QuestionLabel><Answer>No</Answer></EEAWorkingInsurance>
                 </EEA>
             </OtherBenefits>
@@ -183,14 +183,14 @@
             </Payment>
             <OtherInformation>
                 <WelshCommunication><QuestionLabel>Do you live in Wales and would like to receive future communications in Welsh?</QuestionLabel><Answer>Yes</Answer></WelshCommunication>
-                <AdditionalInformation><QuestionLabel>Please tell us anything else you think we should know about your claim</QuestionLabel><Answer>What do you want me to tell you?</Answer></AdditionalInformation>
+
             </OtherInformation>
             <Declaration>
                 <DeclarationStatement>
                     <Title>The declarations below sets out your legal responsibilities in respect of your claim.</Title>
                     <Content>I declare that I understand the Carer's Allowance Claim Notes and that the information provided on this claim form is correct and complete.</Content>
                     <Content>I understand that I must report all changes in my circumstances or that of the person that I am caring for which may affect my entitlement promptly and by failing to do so I may be liable to prosecution or face a financial penalty.</Content>
-                    <Content>I will phone 0845 6084321 or write to the Carer's Allowance Unit, Palatine House,Lancaster Road, Preston PR1 1HB or use the online service to report a change in my circumstances or that of the person that I am caring for.</Content>
+                    <Content>I will use the online service or phone 0845 6084321 or write to the Carer's Allowance Unit, Palatine House,Lancaster Road, Preston, PR1 1HB to report a change in my circumstances or that of the person that I am caring for.</Content>
                     <Content>If I give false or incomplete information or fail to report changes in my circumstances or that of the person that I am caring for promptly, I understand that my Carer's Allowance may be stopped or reduced and any overpayment of Carer's Allowance may be recovered. In addition I may be prosecuted or face a financial penalty.</Content>
                 </DeclarationStatement>
                 <DeclarationQuestion><QuestionLabel>Please tick this box if this claim form has been filled in by someone else, if so, please ensure that you understand the declarations above as another person cannot make the declarations on your behalf.</QuestionLabel><Answer>Yes</Answer></DeclarationQuestion>
@@ -219,6 +219,9 @@
             </Evidence><Evidence>
                 <Title>Your Self-employed documents.</Title>
                 <Content>Most recent finalised accounts you have for your business.</Content><Content>Any pension statements you may have.</Content>
+            </Evidence><Evidence>
+                <Title/>
+                <Content>The Carers Allowance unit will contact you if they need any further information.</Content>
             </Evidence>
             </EvidenceList>
             <Consents>
@@ -234,8 +237,8 @@
             <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
             <ds:Reference URI="#TEST432">
                 <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
-                <ds:DigestValue>5nckVz36MRKUL8l3ZhCsWHZhAHM=</ds:DigestValue>
+                <ds:DigestValue>RqA/ZA3OnDLgBizlCZDWFSpuD6A=</ds:DigestValue>
             </ds:Reference>
         </ds:SignedInfo>
-        <ds:SignatureValue>aFHDAJeOjAulzT46gE1r5vbfWvcbiLs3NVsaqvjIghaKcOtsv92nsg==</ds:SignatureValue>
+        <ds:SignatureValue>lSVGZxmLjrjfgUogVZgErAnqivtTZ2gOx38aJLY2zy6TPaPmIxl0xA==</ds:SignatureValue>
     </ds:Signature></DWPBody>

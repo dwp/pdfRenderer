@@ -88,8 +88,8 @@ object XMLData extends TestUtils{
       "Last name " + fields.surName.text,
       "First name(s) " + fields.firstName.text,
       "Title " + fields.title.text,
-      "Address " + fields.addressCarer,
-      "Postcode " + fields.postCodeCarer.text
+       fields.addressCarer,
+       fields.postCodeCarer.text
     )
   }
 
@@ -98,8 +98,8 @@ object XMLData extends TestUtils{
       "Last name " + fields.careeLastName.text,
       "First name(s) " + fields.careeFirstName.text,
       "Title " + fields.careeTitle.text,
-      "Address " + fields.addressCaree,
-      "Postcode " + fields.postCodeCaree.text
+      fields.addressCaree,
+      fields.postCodeCaree.text
     )
   }
 
@@ -137,8 +137,8 @@ object XMLData extends TestUtils{
       "Marital Status " + fields.maritalStatus.text,
       fields.dateOfClaimQuestion.text +" "+ fields.dateOfClaimAnswer.text,
       "Your contact details",
-      "Address " + fields.address,
-      "Postcode " + fields.postCode.text,
+      fields.address,
+      fields.postCode.text,
       "Daytime telephone number " + fields.dayTimeTelephoneNumber.text,
       "Mobile number " + fields.mobileNumber.text,
       fields.speechOrHearingDifficultyQuestion.text +" "+ fields.speechOrHearingDifficultyAnswer.text,
@@ -156,10 +156,7 @@ object XMLData extends TestUtils{
       "More about you",
       fields.havePartnerQuestion.text + " " + fields.havePartnerAnswer.text,
       fields.courseOfEducationQuestion.text + " " + fields.courseOfEducationAnswer.text,
-      fields.statePensionQuestion.text + " " + fields.statePensionAnswer.text,
-      "Employment",
-      fields.employedQuestion.text + " " + fields.employedAnswer.text,
-      fields.selfEmployedQuestion.text + " " + fields.selfEmployedAnswer.text
+      fields.statePensionQuestion.text + " " + fields.statePensionAnswer.text
     ) ++ fields.periodAbroad
   }
 
@@ -242,7 +239,7 @@ object XMLData extends TestUtils{
   def sectionAboutOtherMoney(xml:Elem) = {
     val fields = SectionAboutOtherMoney(xml)
     Seq ("Part 7 - About Other Money",
-      "Details about other money",
+      "Benefits and Payments",
       buildQuestion(fields.otherMoneyQuestion.text, fields.otherMoneyAnswer.text),
       buildQuestion(fields.otherMoneyPaymentQuestion.text, fields.otherMoneyPaymentAnswer.text),
       buildQuestion(fields.otherMoneyPaymentNameQuestion.text, fields.otherMoneyPaymentNameAnswer.text),
@@ -283,19 +280,13 @@ object XMLData extends TestUtils{
      Seq("Part 4 - About Your Education",
         buildQuestion(fields.courseOfEducationQuestion.text, fields.courseOfEducationAnswer.text),
         "Your course details",
-        "Type of course "+fields.courseDetailsType.text,
         "Course title "+fields.courseDetailsTitle.text,
         buildQuestion(fields.courseDetailsDateStartedQuestion.text, fields.courseDetailsDateStartedAnswer.text),
-        buildQuestion(fields.courseDetailsDateStoppedQuestion.text, fields.courseDetailsDateStoppedAnswer.text),
         buildQuestion(fields.courseDetailsExpectedEndDateQuestion.text, fields.courseDetailsExpectedEndDateAnswer.text),
         "Your student reference number "+fields.studentReferenceNumber.text,
-        "School, college or university’s contact details",
         "Name of school, college or university "+fields.nameOfUniversity.text,
         "Name of main Teacher or Tutor "+fields.nameOfTheTutor.text,
-        "Street / Town / City " + fields.address,
-        "Postcode "+fields.postCode.text,
-        "Phone number "+fields.phoneNumber.text,
-        "Fax number "+fields.faxNumber.text
+        "Course contact number "+fields.phoneNumber.text
      )
   }
 

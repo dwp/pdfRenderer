@@ -2,7 +2,7 @@
     <Version>0.1</Version>
     <DWPCATransaction id="TEST432">
         <TransactionId>TEST432</TransactionId>
-        <DateTimeGenerated>12-03-2014 09:42</DateTimeGenerated>
+        <DateTimeGenerated>12-03-2014 11:48</DateTimeGenerated>
         <DWPCAClaim>
             <DateOfClaim><QuestionLabel>When do you want your Carer's Allowance claim to start?</QuestionLabel><Answer>01-01-2010</Answer></DateOfClaim>
             <Claimant>
@@ -352,8 +352,8 @@
             <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
             <ds:Reference URI="#TEST432">
                 <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
-                <ds:DigestValue>i0vLWCKFqFIsw++DH4nWZb0whgs=</ds:DigestValue>
+                <ds:DigestValue>bM/B4zoP2BV+GZUkNIQB1BdevL8=</ds:DigestValue>
             </ds:Reference>
         </ds:SignedInfo>
-        <ds:SignatureValue>S17Q7oF9rQsEW94RXXvX7BYQjw8K82phMlrh4Cj8P6HfrTLRKI8s1A==</ds:SignatureValue>
+        <ds:SignatureValue>HRsXVU2ewQbyy3Vx4GjMWHDeG15Yf1uRhi+iMaDjkqPYGYX6KC23QQ==</ds:SignatureValue>
     </ds:Signature></DWPBody>
