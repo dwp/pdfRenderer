@@ -2,7 +2,7 @@
     <Version>0.1</Version>
     <DWPCATransaction id="TEST432">
         <TransactionId>TEST432</TransactionId>
-        <DateTimeGenerated>12-03-2014 11:57</DateTimeGenerated>
+        <DateTimeGenerated>12-03-2014 15:37</DateTimeGenerated>
         <DWPCAClaim>
             <DateOfClaim><QuestionLabel>When do you want your Carer's Allowance claim to start?</QuestionLabel><Answer>20-06-2013</Answer></DateOfClaim>
             <Claimant>
@@ -108,7 +108,7 @@
                     <CarerName><QuestionLabel>Name of the person/organisation who looks after your child/children</QuestionLabel><Answer>Childcare UK</Answer></CarerName>
                     <Expense>
                         <Payment><QuestionLabel>How much did you pay them?</QuestionLabel><Answer><Currency>GBP</Currency><Amount>120.23</Amount></Answer></Payment>
-                        <Frequency><QuestionLabel>{1}</QuestionLabel><Answer>Weekly</Answer></Frequency>
+                        <Frequency><QuestionLabel>How often did you pay childcare expenses?</QuestionLabel><Answer>Weekly</Answer></Frequency>
                     </Expense>
                     <RelationshipCarerToClaimant><QuestionLabel>What relation, if any, is the person/organisation to you?</QuestionLabel><Answer>Other</Answer></RelationshipCarerToClaimant>
 
@@ -219,8 +219,8 @@
             <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
             <ds:Reference URI="#TEST432">
                 <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
-                <ds:DigestValue>Ywf64HLmNERxk/DYjmkoIpc/cHg=</ds:DigestValue>
+                <ds:DigestValue>tTQJ3jA/iUWa+LLEbERqv+pJP2c=</ds:DigestValue>
             </ds:Reference>
         </ds:SignedInfo>
-        <ds:SignatureValue>C7joyEqIHboVACWQtmS5vLvqhSl8vKygAvPPPAsPs4ciMBoum+o1Ww==</ds:SignatureValue>
+        <ds:SignatureValue>X+01JDGpcSa+Esa7tG5ZL3oiSkAobVNCzN+bl+PnpPCiitaR1JmK9Q==</ds:SignatureValue>
     </ds:Signature></DWPBody>
