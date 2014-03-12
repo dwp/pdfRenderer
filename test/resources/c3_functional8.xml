@@ -2,7 +2,7 @@
     <Version>0.1</Version>
     <DWPCATransaction id="TEST432">
         <TransactionId>TEST432</TransactionId>
-        <DateTimeGenerated>12-03-2014 12:03</DateTimeGenerated>
+        <DateTimeGenerated>12-03-2014 16:09</DateTimeGenerated>
         <DWPCAClaim>
             <DateOfClaim><QuestionLabel>When do you want your Carer's Allowance claim to start?</QuestionLabel><Answer>20-06-2013</Answer></DateOfClaim>
             <Claimant>
@@ -73,7 +73,7 @@
                     <CarerName><QuestionLabel>Name of the person/organisation who looks after your child/children</QuestionLabel><Answer>Mr Childcare</Answer></CarerName>
                     <Expense>
                         <Payment><QuestionLabel>How much did you pay them?</QuestionLabel><Answer><Currency>GBP</Currency><Amount>124.78</Amount></Answer></Payment>
-                        <Frequency><QuestionLabel>{1}</QuestionLabel><Other>Other childcare frequency</Other><Answer>Other</Answer></Frequency>
+                        <Frequency><QuestionLabel>How often did you pay childcare expenses?</QuestionLabel><Other>Other childcare frequency</Other><Answer>Other</Answer></Frequency>
                     </Expense>
                     <RelationshipCarerToClaimant><QuestionLabel>What relation, if any, is the person/organisation to you?</QuestionLabel><Answer>Father</Answer></RelationshipCarerToClaimant>
 
@@ -83,7 +83,7 @@
                     <CarerName><QuestionLabel>Name of the person/organisation you did pay</QuestionLabel><Answer>Mr Smith</Answer></CarerName>
                     <Expense>
                         <Payment><QuestionLabel>How much did you pay them?</QuestionLabel><Answer><Currency>GBP</Currency><Amount>1124.78</Amount></Answer></Payment>
-                        <Frequency><QuestionLabel>{1}</QuestionLabel><Answer>Weekly</Answer></Frequency>
+                        <Frequency><QuestionLabel>How often did you pay expenses related to the person you care for?</QuestionLabel><Answer>Weekly</Answer></Frequency>
                     </Expense>
                     <RelationshipCarerToClaimant><QuestionLabel>What relation, if any, is the person/organisation to you?</QuestionLabel><Answer>Father</Answer></RelationshipCarerToClaimant>
                     <RelationshipCarerToCaree><QuestionLabel>What relation, if any, is this person/organisation to the person you care for?</QuestionLabel><Answer>Grandfather</Answer></RelationshipCarerToCaree>
@@ -101,7 +101,7 @@
                     <Employer>
                         <DateJobStarted><QuestionLabel>When did you start your job?</QuestionLabel><Answer>01-05-2013</Answer></DateJobStarted>
                         <DateJobEnded><QuestionLabel>What date did you last work?</QuestionLabel><Answer>01-01-2001</Answer></DateJobEnded>
-                        <JobType><QuestionLabel>jobTitle.was</QuestionLabel><Answer>Tyre fitter</Answer></JobType>
+                        <JobType><QuestionLabel>What was your job title?</QuestionLabel><Answer>Tyre fitter</Answer></JobType>
 
                         <Name>Kwik Fit Tryes</Name>
                         <Address>
@@ -124,7 +124,7 @@
                     <CarerName><QuestionLabel>Name of the person/organisation who looks after your child/children</QuestionLabel><Answer>Childcare UK</Answer></CarerName>
                     <Expense>
                         <Payment><QuestionLabel>How much did you pay them?</QuestionLabel><Answer><Currency>GBP</Currency><Amount>120.23</Amount></Answer></Payment>
-                        <Frequency><QuestionLabel>{1}</QuestionLabel><Answer>Fortnightly</Answer></Frequency>
+                        <Frequency><QuestionLabel>How often did you pay childcare expenses?</QuestionLabel><Answer>Fortnightly</Answer></Frequency>
                     </Expense>
                     <RelationshipCarerToClaimant><QuestionLabel>What relation, if any, is the person/organisation to you?</QuestionLabel><Answer>None</Answer></RelationshipCarerToClaimant>
 
@@ -133,7 +133,7 @@
                     <CarerName><QuestionLabel>Name of the person/organisation who looks after your child/children</QuestionLabel><Answer>Wellington</Answer></CarerName>
                     <Expense>
                         <Payment><QuestionLabel>How much did you pay them?</QuestionLabel><Answer><Currency>GBP</Currency><Amount>121.02</Amount></Answer></Payment>
-                        <Frequency><QuestionLabel>{1}</QuestionLabel><Answer>Fortnightly</Answer></Frequency>
+                        <Frequency><QuestionLabel>How often did you pay childcare expenses?</QuestionLabel><Answer>Fortnightly</Answer></Frequency>
                     </Expense>
                     <RelationshipCarerToClaimant><QuestionLabel>What relation, if any, is the person/organisation to you?</QuestionLabel><Answer>Sister</Answer></RelationshipCarerToClaimant>
                     <RelationshipCarerToCaree><QuestionLabel>What relation, if any, is this person/organisation to the person you care for?</QuestionLabel><Answer>Granddaughter</Answer></RelationshipCarerToCaree>
@@ -248,8 +248,8 @@
             <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
             <ds:Reference URI="#TEST432">
                 <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
-                <ds:DigestValue>FX4URec9zpXWJ6fh8Q8LgUlvKwU=</ds:DigestValue>
+                <ds:DigestValue>o8Z+H/qHvMOtPz2zsGAQL9R1t1M=</ds:DigestValue>
             </ds:Reference>
         </ds:SignedInfo>
-        <ds:SignatureValue>ffQvBpgKRHd9LWI51//fu9BhRruXOVV5ApNcwTtLFu7m5+RZlOJHwA==</ds:SignatureValue>
+        <ds:SignatureValue>fG9yGm3AF45YWn7nzeLXXxa8TGVMR/THMeQXepEK9B5mHyAJmXkMBA==</ds:SignatureValue>
     </ds:Signature></DWPBody>
