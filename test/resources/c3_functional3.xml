@@ -2,7 +2,7 @@
     <Version>0.1</Version>
     <DWPCATransaction id="TEST432">
         <TransactionId>TEST432</TransactionId>
-        <DateTimeGenerated>17-03-2014 11:35</DateTimeGenerated>
+        <DateTimeGenerated>17-03-2014 14:00</DateTimeGenerated>
         <DWPCAClaim>
             <DateOfClaim><QuestionLabel>When do you want your Carer's Allowance claim to start?</QuestionLabel><Answer>01-01-2010</Answer></DateOfClaim>
             <Claimant>
@@ -298,7 +298,7 @@
             </Payment>
             <OtherInformation>
                 <WelshCommunication><QuestionLabel>Do you live in Wales and would like to receive future communications in Welsh?</QuestionLabel><Answer>No</Answer></WelshCommunication>
-
+                <AdditionalInformation><QuestionLabel>Do you want to tell us any additional information about your claim?</QuestionLabel><Answer>No</Answer></AdditionalInformation>
             </OtherInformation>
             <Declaration>
                 <DeclarationStatement>
@@ -352,8 +352,8 @@
             <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
             <ds:Reference URI="#TEST432">
                 <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
-                <ds:DigestValue>IYuDv5nEBTWlrBEhHNp61TnfmPk=</ds:DigestValue>
+                <ds:DigestValue>SygIs9xz9Gxuof2wZWe9VpzP334=</ds:DigestValue>
             </ds:Reference>
         </ds:SignedInfo>
-        <ds:SignatureValue>Ts+c7deb1Nc+59pt88HODCJZzvFfwbLGLEB0syY0RVTcyDPjE18CCA==</ds:SignatureValue>
+        <ds:SignatureValue>ZuCSQS3+WUuoTS91Xv+bDWLjp24ctR6fBq132zOPK+L6gpo7aCPsfQ==</ds:SignatureValue>
     </ds:Signature></DWPBody>
