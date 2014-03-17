@@ -28,20 +28,11 @@
 	<field name="AboutYouTheCarerDateOfBirth" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/DateOfBirth]]></fieldDescription>
 	</field>
-	<field name="AboutYouTheCarerMaritalStatus" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/MaritalStatus]]></fieldDescription>
-	</field>
-	<field name="AbouYouTheCarerClaimStartQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/DateOfClaim/QuestionLabel]]></fieldDescription>
-	</field>
-	<field name="AbouYouTheCarerClaimStartAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/DateOfClaim/Answer]]></fieldDescription>
-	</field>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="169" splitType="Stretch">
+		<band height="131" splitType="Stretch">
 			<staticText>
 				<reportElement uuid="0973cf93-60f0-4416-a85b-43c88ff3aab0" x="0" y="21" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
@@ -104,32 +95,12 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerDateOfBirth}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement uuid="655baa04-dd90-4196-8757-72d34edbc35a" x="0" y="129" width="350" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<text><![CDATA[Marital Status]]></text>
-			</staticText>
-			<textField>
-				<reportElement uuid="9d8f39ed-090d-4e52-a912-790e129a0b44" x="355" y="129" width="197" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutYouTheCarerMaritalStatus}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="c4b66142-205d-4ab8-9764-896448ec30fe" x="0" y="147" width="350" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{AbouYouTheCarerClaimStartQuestion}]]></textFieldExpression>
-			</textField>
 			<rectangle>
 				<reportElement uuid="e388dac2-7163-41cd-9a7c-adfdbf1531b1" x="0" y="0" width="553" height="21" backcolor="#CCCCCC"/>
 				<graphicElement>
 					<pen lineWidth="0.0"/>
 				</graphicElement>
 			</rectangle>
-			<textField>
-				<reportElement uuid="d8095409-d029-4680-b50a-00422fe55512" x="355" y="147" width="197" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{AbouYouTheCarerClaimStartAnswer}]]></textFieldExpression>
-			</textField>
 			<staticText>
 				<reportElement uuid="383e90a3-a5bb-43db-8f0e-6f9b79841f3a" x="0" y="0" width="151" height="20" forecolor="#FFFFFF"/>
 				<textElement>
