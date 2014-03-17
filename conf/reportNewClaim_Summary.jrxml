@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="386"/>
+	<property name="ireport.y" value="352"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
@@ -153,6 +153,9 @@
 	</field>
 	<field name="CareePostCode" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Address/PostCode]]></fieldDescription>
+	</field>
+	<field name="PartnerDateOfBirth" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Partner/DateOfBirth]]></fieldDescription>
 	</field>
 	<background>
 		<band splitType="Stretch"/>
@@ -371,7 +374,7 @@
 				<text><![CDATA[Postcode]]></text>
 			</staticText>
 		</band>
-		<band height="157">
+		<band height="175">
 			<rectangle>
 				<reportElement uuid="584cff2f-d083-4529-bdd5-99a496a8edef" x="0" y="0" width="553" height="18" backcolor="#999999"/>
 				<graphicElement>
@@ -458,16 +461,26 @@
 				<textFieldExpression><![CDATA[$F{PartnerOtherSurnames}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="fd2db202-8124-4322-a41a-b64398544386" x="0" y="138" width="350" height="18" isRemoveLineWhenBlank="true">
+				<reportElement uuid="fd2db202-8124-4322-a41a-b64398544386" x="0" y="156" width="350" height="18" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{PartnerDayTimePhoneNumber} != null]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<text><![CDATA[Daytime telephone number]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="d3859901-8f95-4e55-8708-6d281cfcf576" x="355" y="138" width="197" height="18" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true"/>
+				<reportElement uuid="d3859901-8f95-4e55-8708-6d281cfcf576" x="355" y="156" width="197" height="18" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PartnerDayTimePhoneNumber}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="ee599159-2c09-4f16-b880-582c6f466b5d" x="0" y="138" width="350" height="18"/>
+				<textElement/>
+				<text><![CDATA[Date of Birth]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="9254104d-4797-4f93-ae08-c180d0fe3405" x="355" y="138" width="197" height="18"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{PartnerDateOfBirth}]]></textFieldExpression>
 			</textField>
 		</band>
 		<band height="59">
