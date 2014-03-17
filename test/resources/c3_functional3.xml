@@ -2,7 +2,7 @@
     <Version>0.1</Version>
     <DWPCATransaction id="TEST432">
         <TransactionId>TEST432</TransactionId>
-        <DateTimeGenerated>12-03-2014 15:26</DateTimeGenerated>
+        <DateTimeGenerated>17-03-2014 11:35</DateTimeGenerated>
         <DWPCAClaim>
             <DateOfClaim><QuestionLabel>When do you want your Carer's Allowance claim to start?</QuestionLabel><Answer>01-01-2010</Answer></DateOfClaim>
             <Claimant>
@@ -30,7 +30,7 @@
                     <Line>12 Preston Road</Line><Line>Preston</Line><Line>Lancashire</Line><PostCode>PR1 2TH</PostCode>
                 </Address>
                 <DayTimePhoneNumber>01772 998761</DayTimePhoneNumber>
-                <RelationToClaimant><QuestionLabel>What relation, if any, is the person/organisation to you?</QuestionLabel><Answer>Wife or civil partner</Answer></RelationToClaimant>
+                <RelationToClaimant><QuestionLabel>What's their relationship to you?</QuestionLabel><Answer>Wife or civil partner</Answer></RelationToClaimant>
                 <Cared35Hours><QuestionLabel>Do you spend 35 hours or more each week caring for the person you care for?</QuestionLabel><Answer>Yes</Answer></Cared35Hours>
                 <BreaksSinceClaim><QuestionLabel>Have you had any breaks in caring for this person since 01/01/2010?</QuestionLabel><Answer>Yes</Answer></BreaksSinceClaim>
                 <CareBreak>
@@ -282,7 +282,7 @@
                         <Line>1012 Preston  Road</Line><Line>Preston</Line><Line>Lancashure</Line><PostCode>PR45 6YH</PostCode>
                     </Address>
                 </OtherMoneySPDetails>
-                <OtherMoney><QuestionLabel>Have you or your Partner or Spouse claimed or received any other benefits since your claim date: 01/01/2010?</QuestionLabel><Answer>Yes</Answer></OtherMoney>
+                <OtherMoney><QuestionLabel>Have you or your Partner/Spouse claimed or received any other benefits since your claim date: 01/01/2010?</QuestionLabel><Answer>Yes</Answer></OtherMoney>
                 <OtherMoneyPayments><QuestionLabel>Have you received any payments for the person you care for or any other person since your claim date 01/01/2010</QuestionLabel><Answer>No</Answer></OtherMoneyPayments>
 
                 <EEA>
@@ -352,8 +352,8 @@
             <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
             <ds:Reference URI="#TEST432">
                 <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
-                <ds:DigestValue>kenuvjhxBxFrLN5J4NjUS9pvRfw=</ds:DigestValue>
+                <ds:DigestValue>IYuDv5nEBTWlrBEhHNp61TnfmPk=</ds:DigestValue>
             </ds:Reference>
         </ds:SignedInfo>
-        <ds:SignatureValue>RKhuke60bJ2VQn6VqGqUn1ig2q0f5XWIDRd+lDuAbLPvgDoJb3R18A==</ds:SignatureValue>
+        <ds:SignatureValue>Ts+c7deb1Nc+59pt88HODCJZzvFfwbLGLEB0syY0RVTcyDPjE18CCA==</ds:SignatureValue>
     </ds:Signature></DWPBody>
