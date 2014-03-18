@@ -10,12 +10,9 @@
 	<queryString language="xPath">
 		<![CDATA[/]]>
 	</queryString>
-	<background>
-		<band splitType="Stretch"/>
-	</background>
 	<detail>
 		<band height="125" splitType="Stretch">
-			<subreport>
+			<subreport runToBottom="true">
 				<reportElement uuid="217922a1-3f84-4a20-8157-3125c1ad0afb" x="0" y="0" width="555" height="125"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
@@ -25,7 +22,7 @@
 			</subreport>
 		</band>
 		<band height="198" splitType="Prevent">
-			<subreport>
+			<subreport runToBottom="true">
 				<reportElement uuid="faf97e30-112f-4e5d-8186-0648f25acf29" x="0" y="0" width="555" height="198"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>

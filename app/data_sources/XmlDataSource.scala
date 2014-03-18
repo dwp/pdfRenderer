@@ -11,7 +11,7 @@ import net.sf.jasperreports.engine.data.JRXmlDataSource
  */
 case class XmlDataSource(source: NodeSeq) extends ReportDataSource {
   val claimElement = source \\ "DWPCATransaction" \\ "DWPCAClaim"
-  val claimJasperTemplate = "reportNewClaim"
+  val claimJasperTemplate = "reportClaimWithSummary"
   val circsElement = source \\ "DWPCATransaction" \\ "DWPCAChangeOfCircumstances"
   val circsJasperTemplate = "reportNewCircs"
 

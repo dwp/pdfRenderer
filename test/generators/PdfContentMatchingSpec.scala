@@ -40,9 +40,6 @@ class PdfContentMatchingSpec extends Specification {
       }
       reader.close()
 
-      //val totalContent = content.mkString("\n").toLowerCase
-      //totalContent
-
       content.mkString.toLowerCase.replaceAll("\n", " ")
     }
 
@@ -66,7 +63,7 @@ class PdfContentMatchingSpec extends Specification {
       val testData = generateTestData(testCaseXml)
 
       println("TotalContent " + totalContent)
-      println("Test Data" + testData)
+
       matchFunction(testData, totalContent) must beTrue
       deletePdfFile(pdfFileLocation)
     }

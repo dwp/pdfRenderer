@@ -46,6 +46,24 @@ case class XMLDataFields(xml: Elem) extends TestUtils{
 
   val partnerOtherSurnames = rootPath \\ "Partner" \\ "OtherSurnames"
 
+  val nationality = SectionPart1AboutYouTheCarer(xml: Elem).nationality
+
+  val receiveEEAPensionsBenefitsQuestion = SectionPart1AboutYouTheCarer(xml: Elem).receiveEEAPensionsBenefitsQuestion
+
+  val receiveEEAPensionsBenefitsAnswer = SectionPart1AboutYouTheCarer(xml: Elem).receiveEEAPensionsBenefitsAnswer
+
+  val timeOutsideGBLast3YearsQuestion =  xml \\ "DWPCATransaction" \\ "DWPCAClaim" \\ "Residency" \\ "TimeOutsideGBLast3Years" \\ "QuestionLabel[0]"
+
+  val timeOutsideGBLast3YearsAnswer = xml \\ "DWPCATransaction" \\ "DWPCAClaim" \\ "Residency" \\ "TimeOutsideGBLast3Years" \\ "Answer[0]"
+
+  val statePensionQuestion = SectionPart1AboutYouTheCarer(xml: Elem).statePensionQuestion
+
+  val statePensionAnswer = SectionPart1AboutYouTheCarer(xml: Elem).statePensionAnswer
+
+  val otherInformationWelshCommunicationQuestion = SectionConsentAndDeclaration(xml).otherInformationWelshCommunicationQuestion
+
+  val otherInformationWelshCommunicationAnswer = SectionConsentAndDeclaration(xml).otherInformationWelshCommunicationAnswer
+
   val careBreak: Seq[String] = {
     (rootPath \\ "Caree" \\ "CareBreak").
       map(x => {

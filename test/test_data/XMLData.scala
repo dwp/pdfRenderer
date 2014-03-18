@@ -111,6 +111,11 @@ object XMLData extends TestUtils{
 
   def claimSummary(fields: XMLDataFields) = {
     Seq("Claim Summary",
+      "What is your nationality "+fields.nationality.text,
+      buildQuestion(fields.receiveEEAPensionsBenefitsQuestion.text, fields.receiveEEAPensionsBenefitsAnswer.text),
+      buildQuestion(fields.timeOutsideGBLast3YearsQuestion.text, fields.timeOutsideGBLast3YearsAnswer.text),
+      buildQuestion(fields.statePensionQuestion.text, fields.statePensionAnswer.text),
+      buildQuestion(fields.otherInformationWelshCommunicationQuestion.text, fields.otherInformationWelshCommunicationAnswer.text),
       "Transaction: " + fields.transactionPath.text + " " + "Claim received: " + fields.dateClaimReceived.text
     )
   }

@@ -36,7 +36,7 @@ class XmlDataSourceSpec extends Specification {
         </DWPCATransaction>
       </DWPCAClaim>
       val dataSource = new XmlDataSource(xml)
-      dataSource.jasperReportFilenameMatcher() mustEqual "reportNewClaim"
+      dataSource.jasperReportFilenameMatcher() mustEqual "reportClaimWithSummary"
     }
 
     "jasperReportFilenameMatcher throws for xml not containing DWPCAChangeOfCircumstances or DWPCAClaim element" in {
