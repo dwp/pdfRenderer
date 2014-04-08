@@ -5,19 +5,26 @@ import scala.xml.Elem
 import data_sources.XmlDataSource
 
 object Helper {
-  def deletePdfFile(pdfFileLocation: String): Unit = {
-    val pdfFile = new File(pdfFileLocation)
+  def deleteFile(fileLocation: String): Unit = {
+    val pdfFile = new File(fileLocation)
     if (pdfFile.exists()) {
       pdfFile.delete()
     }
   }
 
   def generatePDF (pdfFileLocation: String, xml: Elem) = {
-    val dataSource = new XmlDataSource(xml)
-    val print = PdfGenerator.generateFrom(dataSource)
-    val file = new FileOutputStream(pdfFileLocation)
-    PdfGenerator.exportReportToStream(print, file)
+     generateFile(pdfFileLocation,xml,PdfGenerator)
   }
 
+  def generateHTML (fileLocation: String, xml: Elem) = {
+    generateFile(fileLocation,xml,HtmlGenerator)
+  }
+
+  private def generateFile(fileLocation:String, xml:Elem, generator: ReportGenerator) = {
+    val dataSource = new XmlDataSource(xml)
+    val print = generator.generateFrom(dataSource)
+    val file = new FileOutputStream(fileLocation)
+    generator.exportReportToStream(print, file)
+  }
 
 }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="555" pageHeight="900" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
-	<property name="ireport.zoom" value="1.5"/>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="560" pageHeight="872" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
+	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="861"/>
+	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
@@ -202,7 +202,7 @@
 	<pageHeader>
 		<band height="44" splitType="Stretch">
 			<rectangle>
-				<reportElement uuid="63cde76c-0ddc-4360-a8f6-924cf278352a" x="0" y="0" width="555" height="20" backcolor="#666666"/>
+				<reportElement uuid="63cde76c-0ddc-4360-a8f6-924cf278352a" x="0" y="0" width="560" height="20" backcolor="#666666"/>
 			</rectangle>
 			<staticText>
 				<reportElement uuid="5afd1804-f132-4c32-bbf5-6802d41a7ab2" x="2" y="0" width="90" height="20" forecolor="#FFFFFF"/>
@@ -229,12 +229,12 @@
 				<textFieldExpression><![CDATA[$F{ClaimantSurname}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement uuid="14cd9473-73fe-419a-849f-fd0f5014ac6a" x="469" y="0" width="85" height="20" forecolor="#FFFFFF"/>
+				<reportElement uuid="14cd9473-73fe-419a-849f-fd0f5014ac6a" x="460" y="0" width="80" height="20" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{NationalInsuranceNumber}]]></textFieldExpression>
 			</textField>
 			<rectangle>
-				<reportElement uuid="3b2bd46e-03fc-4904-bfcd-18081183bdbf" x="0" y="22" width="553" height="21" backcolor="#666666"/>
+				<reportElement uuid="3b2bd46e-03fc-4904-bfcd-18081183bdbf" x="0" y="22" width="560" height="21" backcolor="#666666"/>
 				<graphicElement>
 					<pen lineWidth="0.0"/>
 				</graphicElement>
@@ -251,7 +251,7 @@
 	<detail>
 		<band height="129" splitType="Stretch">
 			<rectangle>
-				<reportElement uuid="e849657a-7990-4175-a8f5-0ae08019e295" x="0" y="0" width="553" height="18" backcolor="#999999"/>
+				<reportElement uuid="e849657a-7990-4175-a8f5-0ae08019e295" x="0" y="0" width="560" height="18" backcolor="#999999"/>
 				<graphicElement>
 					<pen lineWidth="0.0"/>
 				</graphicElement>

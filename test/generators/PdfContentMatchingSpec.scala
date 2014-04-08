@@ -17,7 +17,7 @@ class PdfContentMatchingSpec extends Specification {
 
   "PdfContentMatching" should {
     def deletAndGeneratePDF(pdfFileLocation: String, xml: Elem) = {
-      deletePdfFile(pdfFileLocation)
+      deleteFile(pdfFileLocation)
       generatePDF(pdfFileLocation, xml)
     }
 
@@ -65,7 +65,7 @@ class PdfContentMatchingSpec extends Specification {
       println("TotalContent " + totalContent)
 
       matchFunction(testData, totalContent) must beTrue
-      deletePdfFile(pdfFileLocation)
+      deleteFile(pdfFileLocation)
     }
 
     /*

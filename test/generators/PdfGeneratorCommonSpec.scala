@@ -38,7 +38,7 @@ class PdfGeneratorCommonSpec extends Specification {
       val print = PdfGenerator.generateFrom(dataSource)
       val generatorResult = PdfGenerator.exportReportToStream(print, new FileOutputStream(pdfFileLocation))
       generatorResult must beAnInstanceOf[GenerationSuccess]
-      deletePdfFile(pdfFileLocation)
+      deleteFile(pdfFileLocation)
     }
 
     "create a PDF file" in new WithApplication{
@@ -49,7 +49,7 @@ class PdfGeneratorCommonSpec extends Specification {
       PdfGenerator.exportReportToStream(print, new FileOutputStream(pdfFileLocation))
       val pdfFile = new File(pdfFileLocation)
       pdfFile.exists() must beTrue
-      deletePdfFile(pdfFileLocation)
+      deleteFile(pdfFileLocation)
     }
 
 
@@ -68,7 +68,7 @@ class PdfGeneratorCommonSpec extends Specification {
 
       (1 to max).foreach(x => {
         val pdfFileLocation = "parallelTestFile" + x + ".pdf"
-        deletePdfFile(pdfFileLocation)
+        deleteFile(pdfFileLocation)
       })
     }
   }

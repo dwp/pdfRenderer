@@ -12,13 +12,15 @@ import data_sources.InvalidSourceFormatException
  * and then ask a [[generators.ReportGenerator]] to generate a report from the XML.
  * @author Jorge Migueis
  */
-trait PdfService {
+trait RenderService {
 
   protected def reportGenerator: ReportGenerator
 
-  protected def outputStream: OutputStream
+  protected val outputStream: OutputStream
 
-  def pdfGeneration(request: Request[AnyContent]) = {
+  protected def content: String
+
+  def outputGeneration(request: Request[AnyContent]) = {
 
 
     request.body.asXml.map {
@@ -30,7 +32,7 @@ trait PdfService {
 
           generator.exportReportToStream(print, outputStream) match {
             case GenerationSuccess() =>
-              Results.Ok
+              Results.Ok(content)
 
             case GenerationFailure() =>
               Results.InternalServerError

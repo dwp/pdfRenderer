@@ -11,7 +11,7 @@ import org.specs2.mutable.Specification
  */
 trait PdfSpecification extends Specification {
   def deleteAndGeneratePDF(pdfFileLocation: String, xml: Elem) = {
-    deletePdfFile(pdfFileLocation)
+    deleteFile(pdfFileLocation)
     generatePDF(pdfFileLocation, xml)
   }
 

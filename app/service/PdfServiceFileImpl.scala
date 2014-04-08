@@ -12,13 +12,15 @@ import play.api.Play
  * The file generated is stored under 'pdf.folder' and named 'PDFGenerated_timestamp.pdf'.
  *@author Jorge Migueis
  */
-trait PdfServiceFileImpl extends PdfService {
+trait PdfServiceFileImpl extends RenderService {
 
   lazy val pdfLocation = Try(Play.current.configuration.getString("pdf.folder").getOrElse("./")) match {case Success(s) => s; case _ => "./"}
 
   protected def reportGenerator: ReportGenerator = PdfGenerator
 
-  protected def outputStream: OutputStream = {
+  protected def content: String = ""
+
+  protected val outputStream: OutputStream =
     new FileOutputStream(s"${pdfLocation}PDFGenerated_${new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date())}.pdf")
-  }
+
 }
