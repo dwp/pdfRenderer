@@ -39,6 +39,7 @@ trait PdfContentMatchingSpec extends Specification{
     testData.forall(x => {
       val found = totalContent.toLowerCase.contains(x.toLowerCase)
       if (!found) {
+        println("TotalContent " + totalContent)
         println("*** Cannot find: " + x.toLowerCase)
         println("*** End ***")
       }
@@ -53,9 +54,6 @@ trait PdfContentMatchingSpec extends Specification{
     testOutputFileExists(pdfFileLocation, testCaseXml)
     val totalContent = getPDFContent(pdfFileLocation)
     val testData = generateTestData(testCaseXml)
-
-    println("TotalContent " + totalContent)
-
     matchFunction(testData, totalContent) must beTrue
     deleteFile(pdfFileLocation)
   }

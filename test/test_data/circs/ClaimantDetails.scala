@@ -30,3 +30,10 @@ case class CareeDetails(xml: Elem) extends CircsUtils(xml \\ "DWPCATransaction" 
   val relationToClaimantQuestion = pathQuestionLabel("RelationToClaimant")
   val relationToClaimantAnswer = pathAnswer("RelationToClaimant")
 }
+
+case class StoppedCaring(xml: Elem) extends CircsUtils(xml \\ "DWPCATransaction" \\ "DWPCAChangeOfCircumstances" \\ "StoppedCaring"){
+  val dateStoppedCaringQuestion = pathQuestionLabel("DateStoppedCaring")
+  val dateStoppedCaringAnswer = pathAnswer("DateStoppedCaring")
+  val otherChangesQuestion = pathQuestionLabel("OtherChanges")
+  val otherChangesAnswer = pathAnswer("OtherChanges")
+}

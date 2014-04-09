@@ -15,6 +15,14 @@ class PdfContentMatchingCircsSpec extends PdfContentMatchingSpec{
       val textCaseXml = XML.load(source)
       testContentMatches(pdfFileLocation, textCaseXml, XMLCircsData.functionalTestCase1, foundMustBeTrue)
     }
+
+    "extract PDF for functionalTestCase2 and match contents" in new WithApplication{
+      val pdfFileLocation = "functionalTestCase2_circs_contentTestPDF.pdf"
+      val source = getClass.getResource("/c3_functional2_circs.xml")
+      val textCaseXml = XML.load(source)
+      testContentMatches(pdfFileLocation, textCaseXml, XMLCircsData.functionalTestCase2, foundMustBeTrue)
+    }
+
   }
 
 }

@@ -10,7 +10,11 @@ object XMLCircsData extends TestUtils{
     claimantDetails(xml) ++ careeDetails(xml)
   }
 
-  def claimantDetails (xml:Elem) = {
+  def functionalTestCase2(xml: Elem) = {
+    claimantDetails(xml) ++ careeDetails(xml) ++ stoppedCaring(xml)
+  }
+
+  def claimantDetails(xml:Elem) = {
     val claimantDetails = ClaimantDetails(xml)
     Seq(
       "Part 1 - Identification - Carer and Person cared for.",
@@ -21,12 +25,21 @@ object XMLCircsData extends TestUtils{
     )
   }
 
-  def careeDetails (xml:Elem) = {
+  def careeDetails(xml:Elem) = {
     val details = CareeDetails(xml)
     Seq(
       "Person you are caring for",
       buildQuestion(details.fullNameQuestion.text, details.fullNameAnswer.text),
       buildQuestion(details.relationToClaimantQuestion.text, details.relationToClaimantAnswer.text)
+    )
+  }
+
+  def stoppedCaring(xml:Elem) = {
+    val details = StoppedCaring(xml)
+    Seq(
+      "Part 2 - Change in Circumstance - Stopped Caring",
+      buildQuestion(details.dateStoppedCaringQuestion.text, details.dateStoppedCaringAnswer.text),
+      buildQuestion(details.otherChangesQuestion.text, details.otherChangesAnswer.text)
     )
   }
 }
