@@ -40,6 +40,7 @@ class HtmlServiceSpec  extends Specification with Tags {
     }
 
     "accept valid XML and generate a html" in {
+      pending
       val output = new ByteArrayOutputStream()
       val service = new HtmlServiceFileImpl {
         override protected val outputStream: OutputStream = output
@@ -51,6 +52,7 @@ class HtmlServiceSpec  extends Specification with Tags {
     }
 
     "accept valid XML and generate a string html" in {
+      pending
       val service = new HtmlServiceStringImpl {}
       val validRequest = ClaimBuilder.goodClaim
       val response = Future(service.outputGeneration(FakeRequest().withXmlBody(validRequest)))
