@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewCircsSelfEmployment" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="72e33a67-3244-4210-8022-4698f3f65e1e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="xPath">
+		<![CDATA[/]]>
+	</queryString>
+	<field name="SelfEmploymentCaring35HoursQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/SelfEmployedChange/Caring35Hours/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="SelfEmploymentCaring35HoursAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/SelfEmployedChange/Caring35Hours/Answer]]></fieldDescription>
+	</field>
+	<field name="SelfEmploymentBusinessStartDateQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/SelfEmployedChange/BusinessStartDate/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="SelfEmploymentBusinessStartDateAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/SelfEmployedChange/BusinessStartDate/Answer]]></fieldDescription>
+	</field>
+	<field name="SelfEmploymentBusinessTypeQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/SelfEmployedChange/BusinessType/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="SelfEmploymentBusinessTypeAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/SelfEmployedChange/BusinessType/Answer]]></fieldDescription>
+	</field>
+	<field name="SelfEmploymentMoreThan100Question" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/SelfEmployedChange/MoreThan100/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="SelfEmploymentMoreThan100Answer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/SelfEmployedChange/MoreThan100/Answer]]></fieldDescription>
+	</field>
+	<field name="SelfEmploymentOtherChangesQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/SelfEmployedChange/OtherChanges/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="SelfEmploymentOtherChangesAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/SelfEmployedChange/OtherChanges/Answer]]></fieldDescription>
+	</field>
+	<field name="SelfEmploymentDateStoppedCaring35HoursQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/SelfEmployedChange/DateStoppedCaring35Hours/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="SelfEmploymentDateStoppedCaring35HoursAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/SelfEmployedChange/DateStoppedCaring35Hours/Answer]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="e1c2936c-494d-432d-a81e-f3b21017807e" mode="Opaque" x="0" y="0" width="555" height="35" forecolor="#FFFFFF" backcolor="#999999"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Part 2 - Change in Circumstance - Started self employment]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="158" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="c6395922-d01d-4a0c-a44c-e9d8a488133f" mode="Opaque" x="0" y="0" width="555" height="35" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[About your self employment]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="70b51e02-112e-41a6-83fc-86187a5ae8ef" x="0" y="36" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{SelfEmploymentCaring35HoursQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="2f197a15-b83e-4cd6-b0c2-dffa10544d0a" x="355" y="36" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{SelfEmploymentCaring35HoursAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="56f7aecd-23b8-4e6e-8af9-9945a2145c45" x="0" y="74" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{SelfEmploymentBusinessStartDateQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="4cfc638c-3bc2-44db-bcf5-5803e652a811" x="355" y="74" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{SelfEmploymentBusinessStartDateAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="b29c79df-4cfb-496c-997f-2b122da8b642" x="0" y="93" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{SelfEmploymentBusinessTypeQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="45a666d7-1501-4cc2-a766-7d568b66ab28" x="355" y="93" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{SelfEmploymentBusinessTypeAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="9b6d4393-413d-4ff5-9aaf-eb42497d2905" x="0" y="112" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{SelfEmploymentMoreThan100Question}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="e2fb8796-f738-4692-ad4b-8049dac44a5c" x="355" y="112" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{SelfEmploymentMoreThan100Answer}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="43126773-dd04-4a9d-8f61-87bced3b171c" x="0" y="131" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{SelfEmploymentOtherChangesQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="e83998f2-dcaf-4b30-99ea-dd9701d2f051" x="355" y="131" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{SelfEmploymentOtherChangesAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="625dfff0-1f6e-4163-9947-4870c6542e7e" x="0" y="55" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{SelfEmploymentDateStoppedCaring35HoursQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="29c44d69-c105-4919-b026-8635de169a02" x="355" y="55" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{SelfEmploymentDateStoppedCaring35HoursAnswer}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

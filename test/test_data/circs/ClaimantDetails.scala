@@ -13,27 +13,27 @@ sealed abstract class CircsUtils(rootPath: NodeSeq) {
     rootPath \\ element \\ "Answer"
   }
 
+  def pathQuestionLabelAnswer(element:String):(NodeSeq,NodeSeq) = {
+    (pathQuestionLabel(element), pathAnswer(element))
+  }
+
+  def prepareTestData(elements:Seq[String]) = {
+     elements.map(e => pathQuestionLabelAnswer(e))
+  }
 }
 
 case class ClaimantDetails(xml: Elem) extends CircsUtils(xml \\ "DWPCATransaction" \\ "DWPCAChangeOfCircumstances" \\ "ClaimantDetails"){
-  val fullNameQuestion = pathQuestionLabel("FullName")
-  val fullNameAnswer = pathAnswer("FullName")
-  val dateOfBirthQuestion = pathQuestionLabel("DateOfBirth")
-  val dateOfBirthAnswer = pathAnswer("DateOfBirth")
-  val nationalInsuranceNumberQuestion = pathQuestionLabel("NationalInsuranceNumber")
-  val nationalInsuranceNumberAnswer = pathAnswer("NationalInsuranceNumber")
+  val claimantDetails = prepareTestData(Seq("FullName","DateOfBirth","NationalInsuranceNumber"))
 }
 
 case class CareeDetails(xml: Elem) extends CircsUtils(xml \\ "DWPCATransaction" \\ "DWPCAChangeOfCircumstances" \\ "CareeDetails"){
-  val fullNameQuestion = pathQuestionLabel("FullName")
-  val fullNameAnswer = pathAnswer("FullName")
-  val relationToClaimantQuestion = pathQuestionLabel("RelationToClaimant")
-  val relationToClaimantAnswer = pathAnswer("RelationToClaimant")
+  val careeDetailsData = prepareTestData(Seq("FullName","RelationToClaimant"))
 }
 
 case class StoppedCaring(xml: Elem) extends CircsUtils(xml \\ "DWPCATransaction" \\ "DWPCAChangeOfCircumstances" \\ "StoppedCaring"){
-  val dateStoppedCaringQuestion = pathQuestionLabel("DateStoppedCaring")
-  val dateStoppedCaringAnswer = pathAnswer("DateStoppedCaring")
-  val otherChangesQuestion = pathQuestionLabel("OtherChanges")
-  val otherChangesAnswer = pathAnswer("OtherChanges")
+  val stoppedCaringData = prepareTestData(Seq("DateStoppedCaring", "OtherChanges"))
+}
+
+case class SelfEmployment(xml:Elem) extends CircsUtils(xml \\ "DWPCATransaction" \\ "DWPCAChangeOfCircumstances" \\ "SelfEmployedChange"){
+  val selfEmploymentData = prepareTestData(Seq("Caring35Hours", "BusinessStartDate", "BusinessType", "MoreThan100", "OtherChanges","DateStoppedCaring35Hours"))
 }

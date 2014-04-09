@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewCircs" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="90378acd-33ad-413e-ad03-6f54642cad18">
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="43"/>
+	<property name="ireport.y" value="222"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<style name="table">
 		<box>
@@ -174,7 +174,17 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsStoppedCaring.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="63">
+		<band height="94">
+			<subreport>
+				<reportElement uuid="1a3f9bb2-c3ff-4ad2-a98d-a06f07866943" x="0" y="0" width="555" height="94"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsSelfEmployment.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="62">
 			<subreport>
 				<reportElement uuid="863d417f-10ec-45bd-9cef-dace035918f9" x="0" y="0" width="555" height="60" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
@@ -206,7 +216,7 @@
 		</band>
 	</detail>
 	<pageFooter>
-		<band height="21" splitType="Stretch">
+		<band height="23" splitType="Stretch">
 			<staticText>
 				<reportElement uuid="dc7a0fce-ab52-46eb-ab11-ed9d6e023e1a" x="1" y="0" width="66" height="20"/>
 				<textElement verticalAlignment="Middle"/>
@@ -240,6 +250,6 @@
 		</band>
 	</pageFooter>
 	<summary>
-		<band height="2" splitType="Stretch"/>
+		<band height="5" splitType="Stretch"/>
 	</summary>
 </jasperReport>

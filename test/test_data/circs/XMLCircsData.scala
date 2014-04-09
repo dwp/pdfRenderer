@@ -10,36 +10,46 @@ object XMLCircsData extends TestUtils{
     claimantDetails(xml) ++ careeDetails(xml)
   }
 
+  /**
+   * Section with stopped caring and without Other changes
+   * @param xml
+   * @return
+   */
   def functionalTestCase2(xml: Elem) = {
     claimantDetails(xml) ++ careeDetails(xml) ++ stoppedCaring(xml)
   }
 
+  def functionalTestDataSelfEmployed(xml: Elem) = {
+    claimantDetails(xml) ++ careeDetails(xml) ++ selfEmployment(xml)
+  }
+
   def claimantDetails(xml:Elem) = {
-    val claimantDetails = ClaimantDetails(xml)
+    val claimantDetails = ClaimantDetails(xml).claimantDetails.map(s => buildQuestion(s._1.text, s._2.text))
     Seq(
       "Part 1 - Identification - Carer and Person cared for.",
-      "Your details",
-      buildQuestion(claimantDetails.fullNameQuestion.text, claimantDetails.fullNameAnswer.text),
-      buildQuestion(claimantDetails.dateOfBirthQuestion.text, claimantDetails.dateOfBirthAnswer.text),
-      buildQuestion(claimantDetails.nationalInsuranceNumberQuestion.text, claimantDetails.nationalInsuranceNumberAnswer.text)
-    )
+      "Your details"
+    ) ++ claimantDetails
   }
 
   def careeDetails(xml:Elem) = {
-    val details = CareeDetails(xml)
+    val details = CareeDetails(xml).careeDetailsData.map(s => buildQuestion(s._1.text, s._2.text))
     Seq(
-      "Person you are caring for",
-      buildQuestion(details.fullNameQuestion.text, details.fullNameAnswer.text),
-      buildQuestion(details.relationToClaimantQuestion.text, details.relationToClaimantAnswer.text)
-    )
+      "Person you are caring for"
+    ) ++ details
   }
 
   def stoppedCaring(xml:Elem) = {
-    val details = StoppedCaring(xml)
+    val details = StoppedCaring(xml).stoppedCaringData.map(s => buildQuestion(s._1.text, s._2.text))
     Seq(
-      "Part 2 - Change in Circumstance - Stopped Caring",
-      buildQuestion(details.dateStoppedCaringQuestion.text, details.dateStoppedCaringAnswer.text),
-      buildQuestion(details.otherChangesQuestion.text, details.otherChangesAnswer.text)
-    )
+      "Part 2 - Change in Circumstance - Stopped Caring"
+    ) ++ details
+  }
+
+  def selfEmployment(xml:Elem) = {
+    val details = SelfEmployment(xml).selfEmploymentData.map(s => buildQuestion(s._1.text, s._2.text))
+    Seq(
+      "Part 2 - Change in Circumstance - Started self employment",
+      "About your self employment"
+    ) ++ details
   }
 }
