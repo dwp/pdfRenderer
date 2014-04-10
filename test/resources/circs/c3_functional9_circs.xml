@@ -2,11 +2,11 @@
     <Version>0.1</Version>
     <DWPCATransaction id="TEST432">
         <TransactionId>TEST432</TransactionId>
-        <DateTimeGenerated>08-04-2014 16:40</DateTimeGenerated>
+        <DateTimeGenerated>10-04-2014 10:11</DateTimeGenerated>
         <DWPCAChangeOfCircumstances>
             <ClaimantDetails>
                 <FullName><QuestionLabel>Full name</QuestionLabel><Answer>Mr John Roger Smith</Answer></FullName>
-                <DateOfBirth><QuestionLabel>Date of birth</QuestionLabel><Answer>28-09-1976</Answer></DateOfBirth>
+                <DateOfBirth><QuestionLabel>Date of birth</QuestionLabel><Answer>03-04-1950</Answer></DateOfBirth>
                 <NationalInsuranceNumber><QuestionLabel>National Insurance number</QuestionLabel><Answer>JA486278A</Answer></NationalInsuranceNumber>
                 <ContactPreference><QuestionLabel>Contact phone or mobile number</QuestionLabel><Answer>By Post</Answer></ContactPreference>
             </ClaimantDetails>
@@ -17,8 +17,15 @@
 
 
 
+            <SelfEmployedChange>
+                <Caring35Hours><QuestionLabel>Are you still caring 35 hours or more each week?</QuestionLabel><Answer>No</Answer></Caring35Hours>
+                <DateStoppedCaring35Hours><QuestionLabel>What date did you stop caring 35 hours a week?</QuestionLabel><Answer>31-12-2013</Answer></DateStoppedCaring35Hours>
+                <BusinessStartDate><QuestionLabel>When did you start this self-employed work?</QuestionLabel><Answer>01-01-2014</Answer></BusinessStartDate>
+                <BusinessType><QuestionLabel>What type of business is your self-employed work?</QuestionLabel><Answer>Plumber</Answer></BusinessType>
+                <MoreThan100><QuestionLabel>Will the total income into your business be more than £100 a week?</QuestionLabel><Answer>dontknow</Answer></MoreThan100>
 
-            <OtherChanges><QuestionLabel>Any other changes</QuestionLabel><Answer>other text</Answer></OtherChanges>
+            </SelfEmployedChange>
+
             <Declaration>
                 <DeclarationStatement>
                     <Title>The declarations below sets out your legal responsibilities in respect of your claim.</Title>
@@ -32,7 +39,7 @@
                 <DeclarationNameOrg><QuestionLabel>Your name and/or organisation</QuestionLabel><Answer>Mr Smith</Answer></DeclarationNameOrg>
             </Declaration>
             <Consents>
-                <Consent><QuestionLabel>Do you agree to us obtaining information from any other persons or organisations you may have told us about?</QuestionLabel><Answer>No</Answer><Why>For some reason</Why></Consent>
+                <Consent><QuestionLabel>Do you agree to us obtaining information from any other persons or organisations you may have told us about?</QuestionLabel><Answer>No</Answer><Why>I don't want to</Why></Consent>
             </Consents>
         </DWPCAChangeOfCircumstances>
     </DWPCATransaction>
@@ -42,8 +49,8 @@
             <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
             <ds:Reference URI="#TEST432">
                 <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
-                <ds:DigestValue>FVaZhggo5K3VfS8rNRrnChEkn2c=</ds:DigestValue>
+                <ds:DigestValue>Kn55N6DyIOMibktG1wj9EELk/7U=</ds:DigestValue>
             </ds:Reference>
         </ds:SignedInfo>
-        <ds:SignatureValue>Pjjzlc9HXVchp4qR3lX8ntg4IqUxyu7A4xp+GfqFdE0o5NCr2EiEcA==</ds:SignatureValue>
+        <ds:SignatureValue>WdbItQKSHTIDXlHZfpq2EeWdVlwRlORDIarNrX9cPaxY2ph7m/Mnbg==</ds:SignatureValue>
     </ds:Signature></DWPBody>
