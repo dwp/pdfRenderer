@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewCircs" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="90378acd-33ad-413e-ad03-6f54642cad18">
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="240"/>
+	<property name="ireport.y" value="599"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CircsTestCase10"/>
 	<style name="table">
@@ -185,7 +185,7 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsStoppedCaring.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="109">
+		<band height="102">
 			<printWhenExpression><![CDATA[!$F{ShowPaymentBankDetailsSection}.isEmpty()]]></printWhenExpression>
 			<subreport>
 				<reportElement uuid="e01f87d6-f598-42e2-8c0e-1f63d48f456a" x="0" y="0" width="555" height="100"/>
@@ -207,17 +207,17 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsSelfEmployment.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="62">
+		<band height="107">
 			<subreport>
-				<reportElement uuid="863d417f-10ec-45bd-9cef-dace035918f9" x="0" y="0" width="555" height="60" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="d93bb26d-8ca2-4293-bb4a-4c903868681c" x="0" y="0" width="555" height="107"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
-				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/Caree/CareBreak")]]></dataSourceExpression>
-				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_CareBreak.jasper"]]></subreportExpression>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsConsentsAndDeclarations.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="64">
+		<band height="66">
 			<subreport isUsingCache="false">
 				<reportElement uuid="cf0e1b01-f950-4600-906f-07f51b5bab61" x="0" y="3" width="555" height="59"/>
 				<subreportParameter name="SUBREPORT_DIR">
@@ -227,19 +227,9 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Consents.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="45">
-			<subreport>
-				<reportElement uuid="127cdbb5-9bc4-442b-b0a6-16d3356cb109" x="0" y="2" width="555" height="40"/>
-				<subreportParameter name="SUBREPORT_DIR">
-					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
-				</subreportParameter>
-				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("//Evidence")]]></dataSourceExpression>
-				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_subreportEvidenceList.jasper"]]></subreportExpression>
-			</subreport>
-		</band>
 	</detail>
 	<pageFooter>
-		<band height="23" splitType="Stretch">
+		<band height="41" splitType="Stretch">
 			<staticText>
 				<reportElement uuid="dc7a0fce-ab52-46eb-ab11-ed9d6e023e1a" x="1" y="0" width="66" height="20"/>
 				<textElement verticalAlignment="Middle"/>
@@ -272,7 +262,4 @@
 			</textField>
 		</band>
 	</pageFooter>
-	<summary>
-		<band height="5" splitType="Stretch"/>
-	</summary>
 </jasperReport>
