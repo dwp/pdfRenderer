@@ -79,6 +79,52 @@ class PdfContentMatchingCircsSpec extends PdfContentMatchingSpec{
       val textCaseXml = XML.load(source)
       testContentMatches(pdfFileLocation, textCaseXml, XMLCircsData.functionalTestDataSelfEmployed, foundMustBeTrue)
     }
+
+    // Payment Details section
+    "extract PDF for functionalTestCase10 and match contents" in new WithApplication{
+      val pdfFileLocation = "functionalTestCase10_circs_contentTestPDF.pdf"
+      val source = getClass.getResource("/circs/c3_functional10_circs.xml")
+      val textCaseXml = XML.load(source)
+      testContentMatches(pdfFileLocation, textCaseXml, XMLCircsData.functionalTestDataPaymentBankDetails, foundMustBeTrue)
+    }
+
+    /**
+     * The following tests with different values for 'Whose Name Account In' would have made sense if we had enumeration for
+     * that field. Please delete the different versions if it becomes a problem with maintainance
+     */
+
+    // Payment Details section with 'Whose Name Account In' = 'Your partner's name'
+    "extract PDF for functionalTestCase11 and match contents" in new WithApplication{
+      val pdfFileLocation = "functionalTestCase11_circs_contentTestPDF.pdf"
+      val source = getClass.getResource("/circs/c3_functional11_circs.xml")
+      val textCaseXml = XML.load(source)
+      testContentMatches(pdfFileLocation, textCaseXml, XMLCircsData.functionalTestDataPaymentBankDetails, foundMustBeTrue)
+    }
+
+    // Payment Details section with 'Whose Name Account In' = 'Both you and your partner'
+    "extract PDF for functionalTestCase12 and match contents" in new WithApplication{
+      val pdfFileLocation = "functionalTestCase12_circs_contentTestPDF.pdf"
+      val source = getClass.getResource("/circs/c3_functional12_circs.xml")
+      val textCaseXml = XML.load(source)
+      testContentMatches(pdfFileLocation, textCaseXml, XMLCircsData.functionalTestDataPaymentBankDetails, foundMustBeTrue)
+    }
+
+    // Payment Details section with 'Whose Name Account In' = 'Person acting on your behalf'
+    "extract PDF for functionalTestCase13 and match contents" in new WithApplication{
+      val pdfFileLocation = "functionalTestCase13_circs_contentTestPDF.pdf"
+      val source = getClass.getResource("/circs/c3_functional13_circs.xml")
+      val textCaseXml = XML.load(source)
+      testContentMatches(pdfFileLocation, textCaseXml, XMLCircsData.functionalTestDataPaymentBankDetails, foundMustBeTrue)
+    }
+
+    // Payment Details section with 'Roll number' and 'more about your changes'
+    "extract PDF for functionalTestCase20 and match contents" in new WithApplication{
+      val pdfFileLocation = "functionalTestCase20_circs_contentTestPDF.pdf"
+      val source = getClass.getResource("/circs/c3_functional20_circs.xml")
+      val textCaseXml = XML.load(source)
+      testContentMatches(pdfFileLocation, textCaseXml, XMLCircsData.functionalTestDataPaymentBankDetails, foundMustBeTrue)
+    }
+
   }
 
 }

@@ -3,7 +3,7 @@ package test_data.circs
 import scala.xml.{NodeSeq, Elem}
 
 
-sealed abstract class CircsUtils(rootPath: NodeSeq) {
+sealed abstract class CircsUtils(rootPath: NodeSeq){
 
   def pathQuestionLabel (element:String) = {
     rootPath \\ element \\ "QuestionLabel"
@@ -36,4 +36,16 @@ case class StoppedCaring(xml: Elem) extends CircsUtils(xml \\ "DWPCATransaction"
 
 case class SelfEmployment(xml:Elem) extends CircsUtils(xml \\ "DWPCATransaction" \\ "DWPCAChangeOfCircumstances" \\ "SelfEmployedChange"){
   val selfEmploymentData = prepareTestData(Seq("Caring35Hours", "BusinessStartDate", "BusinessType", "MoreThan100", "OtherChanges","DateStoppedCaring35Hours"))
+}
+
+case class PaymentBankDetailsPaidIntoAccount(xml:Elem) extends CircsUtils(xml \\ "DWPCATransaction" \\ "DWPCAChangeOfCircumstances" \\ "PaymentChange" \\ "PaidIntoAccountDetails"){
+  val paidIntoAccountData = prepareTestData(Seq("PaidIntoAccount", "BankName", "MethodOfPayment"))
+}
+
+case class PaymentBankDetailsAccountDetails(xml:Elem) extends CircsUtils(xml \\ "DWPCATransaction" \\ "DWPCAChangeOfCircumstances" \\ "PaymentChange" \\ "AccountDetails"){
+  val accountDetailsData = prepareTestData(Seq("AccountHolder", "HolderName"))
+}
+
+case class PaymentBankDetailsBuildingSocietyDetails(xml:Elem) extends CircsUtils(xml \\ "DWPCATransaction" \\ "DWPCAChangeOfCircumstances" \\ "PaymentChange" \\  "AccountDetails" \\ "BuildingSocietyDetails"){
+  val buildingSocietyDetailsData = prepareTestData(Seq("AccountNumber", "RollNumber", "SortCode", "Name"))
 }

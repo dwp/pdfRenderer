@@ -2,8 +2,9 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewCircs" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="90378acd-33ad-413e-ad03-6f54642cad18">
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="96"/>
+	<property name="ireport.y" value="240"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CircsTestCase10"/>
 	<style name="table">
 		<box>
 			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
@@ -76,6 +77,9 @@
 	</field>
 	<field name="ShowSelfEmployedSection" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/SelfEmployedChange]]></fieldDescription>
+	</field>
+	<field name="ShowPaymentBankDetailsSection" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/PaymentChange]]></fieldDescription>
 	</field>
 	<variable name="ClaimantTitleUpper" class="java.lang.String">
 		<variableExpression><![CDATA[$F{ClaimantSurname}.toUpperCase()]]></variableExpression>
@@ -179,6 +183,17 @@
 				</subreportParameter>
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsStoppedCaring.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="109">
+			<printWhenExpression><![CDATA[!$F{ShowPaymentBankDetailsSection}.isEmpty()]]></printWhenExpression>
+			<subreport>
+				<reportElement uuid="e01f87d6-f598-42e2-8c0e-1f63d48f456a" x="0" y="0" width="555" height="100"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsPaymentBankDetails.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 		<band height="94">
