@@ -70,17 +70,19 @@ object XMLCircsData extends TestUtils{
 
   def declaration(xml:Elem):Seq[String] = {
     val titleContentPath = DeclarationDetails(xml).declarationTitleContentPath
-    val declarationQuestionContentPath = DeclarationDetails(xml).declarationQuestionContentPath
+    val declarationQuestionData = DeclarationDetails(xml).declarationQuestionContentPath.map(f => buildQuestion((f \ "QuestionLabel").text,(f \ "Answer").text))
+    val nameOrOrgData = DeclarationQuestionContentPath(xml).declarationNameOrOrgPath.map(s => buildQuestion(s._1.text, s._2.text))
+    val consentsData = ConsentsQuestionPath(xml).consentsQuestionPath.map(s => buildQuestion(s._1.text, s._2.text))
+    val consentsDataWhy = ConsentsWhyQuestionPath (xml).consentsWhyQuestionPath.map(s => buildQuestion(s._1.text, s._2.text))
     val title = Seq("Part 3 - Declaration",
         "Further Information",
         "Declaration",
-      (titleContentPath \ "Title").text,
-      buildQuestion((declarationQuestionContentPath \\ "DeclarationQuestion[1]" \ "QuestionLabel").text, (declarationQuestionContentPath \\ "DeclarationQuestion[1]" \ "Answer").text),
-      buildQuestion((declarationQuestionContentPath \\ "DeclarationQuestion[2]" \ "QuestionLabel").text, (declarationQuestionContentPath \\ "DeclarationQuestion[2]" \ "Answer").text)
-      ) ++ titleContentPath.map(x => {
+      (titleContentPath \ "Title").text
+      ) ++ declarationQuestionData ++ nameOrOrgData ++ consentsData ++ consentsDataWhy ++ titleContentPath.map(x => {
                     Seq((x \\ "Content").map(v => v.text).reduce((total,cur) => total + " " + cur)
                    )
                    }).flatten
+
     title
   }
 }

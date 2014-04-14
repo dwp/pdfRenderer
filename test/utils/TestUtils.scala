@@ -8,9 +8,8 @@ trait TestUtils {
   }
 
   def buildOther (question :String, answer :String, other :String) :String = {
-    val otherLabel = "Other"
-    answer match {
-      case "Other" => buildQuestion(question, answer) + " " + other
+    !other.isEmpty match {
+      case true => buildQuestion(question, answer) + " " + other
       case _ => buildQuestion(question, answer)
     }
   }

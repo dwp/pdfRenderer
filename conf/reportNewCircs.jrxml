@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewCircs" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="90378acd-33ad-413e-ad03-6f54642cad18">
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="599"/>
+	<property name="ireport.y" value="123"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CircsTestCase10"/>
 	<style name="table">
@@ -58,10 +58,10 @@
 		<fieldDescription><![CDATA[/DWPBody/Version]]></fieldDescription>
 	</field>
 	<field name="ClaimantSurname" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Surname]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/ClaimantDetails/FullName/Answer]]></fieldDescription>
 	</field>
 	<field name="NationalInsuranceNumber" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/NationalInsuranceNumber]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/ClaimantDetails/NationalInsuranceNumber/Answer]]></fieldDescription>
 	</field>
 	<field name="TransactionId" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/TransactionId]]></fieldDescription>
@@ -109,18 +109,13 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TransactionId}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement uuid="413555f5-6e37-46fa-9f7b-00d6dd12b626" x="218" y="0" width="30" height="20" forecolor="#FFFFFF"/>
-				<textElement textAlignment="Right" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{ClaimantTitle}.toUpperCase()]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="f611597b-ca9e-4eee-b245-2214c1573ce9" x="250" y="0" width="193" height="20" forecolor="#FFFFFF"/>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f611597b-ca9e-4eee-b245-2214c1573ce9" x="250" y="0" width="193" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{ClaimantSurname}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement uuid="fa8df42d-d92f-4051-a603-d9108427489c" x="469" y="0" width="85" height="20" forecolor="#FFFFFF"/>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="fa8df42d-d92f-4051-a603-d9108427489c" x="469" y="0" width="85" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{NationalInsuranceNumber}]]></textFieldExpression>
 			</textField>
@@ -176,7 +171,7 @@
 		</band>
 		<band height="60">
 			<printWhenExpression><![CDATA[!$F{ShowStoppedCaringSection}.isEmpty()]]></printWhenExpression>
-			<subreport>
+			<subreport runToBottom="true">
 				<reportElement uuid="5bdc073c-2e2f-4019-a5f3-adb0b7895289" x="0" y="0" width="555" height="60"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
@@ -187,7 +182,7 @@
 		</band>
 		<band height="102">
 			<printWhenExpression><![CDATA[!$F{ShowPaymentBankDetailsSection}.isEmpty()]]></printWhenExpression>
-			<subreport>
+			<subreport runToBottom="true">
 				<reportElement uuid="e01f87d6-f598-42e2-8c0e-1f63d48f456a" x="0" y="0" width="555" height="100"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
@@ -198,7 +193,7 @@
 		</band>
 		<band height="94">
 			<printWhenExpression><![CDATA[!$F{ShowSelfEmployedSection}.isEmpty()]]></printWhenExpression>
-			<subreport>
+			<subreport runToBottom="true">
 				<reportElement uuid="1a3f9bb2-c3ff-4ad2-a98d-a06f07866943" x="0" y="0" width="555" height="94"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
@@ -208,7 +203,7 @@
 			</subreport>
 		</band>
 		<band height="107">
-			<subreport>
+			<subreport runToBottom="false">
 				<reportElement uuid="d93bb26d-8ca2-4293-bb4a-4c903868681c" x="0" y="0" width="555" height="107"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
@@ -217,19 +212,9 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsConsentsAndDeclarations.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="66">
-			<subreport isUsingCache="false">
-				<reportElement uuid="cf0e1b01-f950-4600-906f-07f51b5bab61" x="0" y="3" width="555" height="59"/>
-				<subreportParameter name="SUBREPORT_DIR">
-					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
-				</subreportParameter>
-				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/Consents/Consent")]]></dataSourceExpression>
-				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Consents.jasper"]]></subreportExpression>
-			</subreport>
-		</band>
 	</detail>
 	<pageFooter>
-		<band height="41" splitType="Stretch">
+		<band height="22" splitType="Stretch">
 			<staticText>
 				<reportElement uuid="dc7a0fce-ab52-46eb-ab11-ed9d6e023e1a" x="1" y="0" width="66" height="20"/>
 				<textElement verticalAlignment="Middle"/>

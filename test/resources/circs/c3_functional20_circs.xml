@@ -50,7 +50,13 @@
                 <DeclarationNameOrg><QuestionLabel>Your name and/or organisation</QuestionLabel><Answer>Mr Smith</Answer></DeclarationNameOrg>
             </Declaration>
             <Consents>
-                <Consent><QuestionLabel>Do you agree to us obtaining information from any other persons or organisations you may have told us about?</QuestionLabel><Answer>No</Answer><Why>I don't want to</Why></Consent>
+                <Consent>
+                    <QuestionLabel>Do you agree to us obtaining information from any other persons or organisations you may have told us about?</QuestionLabel>
+                    <Answer>No</Answer>
+                    <Why><QuestionLabel>Please Tesll us why</QuestionLabel>
+                        <Answer>I don't want to</Answer>
+                    </Why>
+                </Consent>
             </Consents>
         </DWPCAChangeOfCircumstances>
     </DWPCATransaction>

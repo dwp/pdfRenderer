@@ -50,7 +50,19 @@ case class PaymentBankDetailsBuildingSocietyDetails(xml:Elem) extends CircsUtils
   val buildingSocietyDetailsData = prepareTestData(Seq("AccountNumber", "RollNumber", "SortCode", "Name"))
 }
 
-case class DeclarationDetails(xml:Elem) extends CircsUtils(xml \ "DWPCATransaction" \ "DWPCAChangeOfCircumstances" \ "Declaration" \  "DeclarationStatement"){
+case class DeclarationDetails(xml:Elem) {
   val declarationTitleContentPath = xml \ "DWPCATransaction" \ "DWPCAChangeOfCircumstances" \ "Declaration" \  "DeclarationStatement"
-  val declarationQuestionContentPath = xml \ "DWPCATransaction" \ "DWPCAChangeOfCircumstances" \ "Declaration"
+  val declarationQuestionContentPath = xml \ "DWPCATransaction" \ "DWPCAChangeOfCircumstances" \ "Declaration" \ "DeclarationQuestion"
+}
+
+case class DeclarationQuestionContentPath (xml:Elem) extends CircsUtils(xml \ "DWPCATransaction" \ "DWPCAChangeOfCircumstances" \ "Declaration"){
+  val declarationNameOrOrgPath = prepareTestData(Seq("DeclarationNameOrg"))
+}
+
+case class ConsentsQuestionPath(xml:Elem) extends CircsUtils(xml \ "DWPCATransaction" \ "DWPCAChangeOfCircumstances" \ "Consents"){
+  val consentsQuestionPath = prepareTestData(Seq("Consent", "\\ Consent \\ Why"))
+}
+
+case class ConsentsWhyQuestionPath(xml:Elem) extends CircsUtils(xml \ "DWPCATransaction" \ "DWPCAChangeOfCircumstances" \ "Consents" \ "Consent"){
+  val consentsWhyQuestionPath = prepareTestData(Seq("Why"))
 }
