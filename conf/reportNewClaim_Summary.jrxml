@@ -2,9 +2,158 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="560" pageHeight="872" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="273"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
-	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Claim Summary Table Dataset" uuid="602a0adc-bcd8-4850-9a30-0352c480fa13">
+		<parameter name="NO_IMG" class="java.lang.String">
+			<defaultValueExpression><![CDATA["/Users/neddakaltcheva/Desktop/Development/DWP/pdfService/public/images/no.png"]]></defaultValueExpression>
+		</parameter>
+		<parameter name="YES_IMG" class="java.lang.String">
+			<defaultValueExpression><![CDATA["/Users/neddakaltcheva/Desktop/Development/DWP/pdfService/public/images/yes.png"]]></defaultValueExpression>
+		</parameter>
+		<parameter name="SUBREPORT_DIR" class="java.lang.String">
+			<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
+		</parameter>
+		<queryString language="xPath">
+			<![CDATA[/]]>
+		</queryString>
+		<field name="ClaimantNationality" class="java.lang.String">
+			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/Nationality]]></fieldDescription>
+		</field>
+		<field name="AFIPQuestionLabel" class="java.lang.String">
+			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/ArmedForcesIndependencePayment/QuestionLabel]]></fieldDescription>
+		</field>
+		<field name="AFIPAnswer" class="java.lang.String">
+			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/ArmedForcesIndependencePayment/Answer]]></fieldDescription>
+		</field>
+		<field name="Caree35HoursAnswer" class="java.lang.String">
+			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Cared35Hours/Answer]]></fieldDescription>
+		</field>
+		<field name="Caree35HoursQuestionLabel" class="java.lang.String">
+			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Cared35Hours/QuestionLabel]]></fieldDescription>
+		</field>
+		<field name="EmployedQuestionLabel" class="java.lang.String">
+			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Employed/QuestionLabel]]></fieldDescription>
+		</field>
+		<field name="EmployedAnswer" class="java.lang.String">
+			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Employed/Answer]]></fieldDescription>
+		</field>
+		<field name="SelfEmployedQuestionLabel" class="java.lang.String">
+			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployed/QuestionLabel]]></fieldDescription>
+		</field>
+		<field name="SelfEmployedAnswer" class="java.lang.String">
+			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployed/Answer]]></fieldDescription>
+		</field>
+		<field name="EducationQuestionLabel" class="java.lang.String">
+			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/CourseOfEducation/QuestionLabel]]></fieldDescription>
+		</field>
+		<field name="EducationAnswer" class="java.lang.String">
+			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/CourseOfEducation/Answer]]></fieldDescription>
+		</field>
+		<field name="BreaksQuestionLabel" class="java.lang.String">
+			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/BreaksSinceClaim/QuestionLabel]]></fieldDescription>
+		</field>
+		<field name="BreaksAnswer" class="java.lang.String">
+			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/BreaksSinceClaim/Answer]]></fieldDescription>
+		</field>
+		<field name="HavePartnerAnswer" class="java.lang.String">
+			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/HavePartner/Answer]]></fieldDescription>
+		</field>
+		<field name="HavePartnerQuestionLabel" class="java.lang.String">
+			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/HavePartner/QuestionLabel]]></fieldDescription>
+		</field>
+		<field name="ClaimantReceiveEEAPensionsBenefitsQuestion" class="java.lang.String">
+			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/EEA/EEAReceivePensionsBenefits/QuestionLabel]]></fieldDescription>
+		</field>
+		<field name="ClaimantReceiveEEAPensionsBenefitsAnswer" class="java.lang.String">
+			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/EEA/EEAReceivePensionsBenefits/Answer]]></fieldDescription>
+		</field>
+		<field name="ClaimantTimeOutsideGBLast3YearsQuestion" class="java.lang.String">
+			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/PeriodAbroad/TimeOutsideGBLast3Years/QuestionLabel]]></fieldDescription>
+		</field>
+		<field name="ClaimantTimeOutsideGBLast3YearsAnswer" class="java.lang.String">
+			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/PeriodAbroad/TimeOutsideGBLast3Years/Answer]]></fieldDescription>
+		</field>
+		<field name="StatePensionQuestionLabel" class="java.lang.String">
+			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/ClaimantBenefits/StatePension/QuestionLabel]]></fieldDescription>
+		</field>
+		<field name="StatePensionAnswer" class="java.lang.String">
+			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/ClaimantBenefits/StatePension/Answer]]></fieldDescription>
+		</field>
+		<field name="welshAnswer" class="java.lang.String">
+			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherInformation/WelshCommunication/Answer]]></fieldDescription>
+		</field>
+		<field name="welshQuestion" class="java.lang.String">
+			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherInformation/WelshCommunication/QuestionLabel]]></fieldDescription>
+		</field>
+		<field name="OtherMoneySSPQuestionLabel" class="java.lang.String">
+			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySSP/QuestionLabel]]></fieldDescription>
+		</field>
+		<field name="OtherMoneySSPAnswer" class="java.lang.String">
+			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySSP/Answer]]></fieldDescription>
+		</field>
+	</subDataset>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String">
 		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
 	</parameter>
 	<queryString language="xPath">
@@ -544,7 +693,7 @@
 				<textFieldExpression><![CDATA[$F{PartnerDayTimePhoneNumber}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="59" splitType="Stretch">
+		<band height="55" splitType="Stretch">
 			<rectangle>
 				<reportElement uuid="f8741834-7c77-4a0b-864e-d7e76df3b578" x="0" y="0" width="553" height="18" backcolor="#999999"/>
 				<graphicElement>
@@ -579,7 +728,7 @@
 				<textFieldExpression><![CDATA[$F{ClaimDateAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="337" splitType="Stretch">
+		<band height="84" splitType="Stretch">
 			<rectangle>
 				<reportElement uuid="dc663a2b-f58b-45c1-8a4a-0ca78b8a969b" x="0" y="0" width="553" height="18" backcolor="#999999"/>
 				<graphicElement>
@@ -593,152 +742,348 @@
 				</textElement>
 				<text><![CDATA[Claim Summary]]></text>
 			</staticText>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="faf638f5-e6cf-4757-a4fa-6c036a1c8e0f" x="0" y="19" width="350" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{AFIPQuestionLabel}]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="dbdd96a7-026d-44fa-9b69-8895fe7dfe83" x="355" y="19" width="197" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{AFIPAnswer}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="067e2e73-4b3f-4427-a03e-d6749c781e93" x="0" y="37" width="350" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{Caree35HoursQuestionLabel}]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="81cef252-b615-46f3-a916-34680b853d34" x="355" y="37" width="197" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{Caree35HoursAnswer}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="428c40b0-5714-4c42-a7f5-39df51f9e40e" x="0" y="63" width="350" height="28" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{EmployedAnswer}.equals("Yes" )]]></printWhenExpression>
-				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{EmployedQuestionLabel}]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="9dfda46d-ac80-4897-b0d0-77e6ea9e942b" x="355" y="63" width="197" height="28" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{EmployedAnswer}.equals("Yes" )]]></printWhenExpression>
-				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{EmployedAnswer}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="4edfd54d-82e0-4174-94ad-0af4cda2f058" x="0" y="95" width="350" height="25" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{SelfEmployedAnswer}.equals("Yes" )]]></printWhenExpression>
-				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{SelfEmployedQuestionLabel}]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="a5023509-5e9d-4f9c-9250-79f303d8479c" x="355" y="95" width="197" height="25" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{SelfEmployedAnswer}.equals("Yes" )]]></printWhenExpression>
-				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{SelfEmployedAnswer}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="f34de43d-e6b7-4bd4-825b-85b74706c2f2" x="0" y="124" width="350" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{EducationAnswer}.equals("Yes" )]]></printWhenExpression>
-				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{EducationQuestionLabel}]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="97690294-b4b5-4042-b91d-8cb2719a0c83" x="355" y="124" width="197" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{EducationAnswer}.equals("Yes" )]]></printWhenExpression>
-				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{EducationAnswer}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="d4f455b9-9e09-4496-aa85-2fd6c9329729" x="0" y="148" width="350" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{BreaksAnswer}.equals("Yes" )]]></printWhenExpression>
-				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{BreaksQuestionLabel}]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="43256713-d2b5-4140-9806-356bb62bf714" x="355" y="148" width="197" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{BreaksAnswer}.equals("Yes" )]]></printWhenExpression>
-				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{BreaksAnswer}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="7f24363a-1d61-48be-8dfb-4a4da3332db7" x="0" y="170" width="350" height="25" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{OtherBenefitsAnswer}.equals("Yes" )]]></printWhenExpression>
-				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{OtherBenefitsQuestionLabel}]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="6df757af-11be-4e26-a49b-242947bfa496" x="356" y="170" width="197" height="25" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{OtherBenefitsAnswer}.equals("Yes" )]]></printWhenExpression>
-				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{OtherBenefitsAnswer}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="e1121a18-4846-4b44-b9f0-7e48d0d6ce37" x="0" y="282" width="350" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{StatePensionAnswer}.equals("Yes" )]]></printWhenExpression>
-				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{StatePensionQuestionLabel}]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="e8edf86c-468e-4ad1-88b7-9c305cffb91d" x="355" y="282" width="197" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{StatePensionAnswer}.equals("Yes" )]]></printWhenExpression>
-				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{StatePensionAnswer}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement uuid="92cfc426-93e5-4ce3-91dd-455a42893f70" x="0" y="232" width="350" height="20">
-					<printWhenExpression><![CDATA[!$F{ClaimantNationality}.isEmpty()]]></printWhenExpression>
-				</reportElement>
-				<textElement/>
-				<text><![CDATA[What is your nationality]]></text>
-			</staticText>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="56422bf7-78ef-489e-a1d4-63646a6e3608" x="356" y="232" width="197" height="20" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{ClaimantNationality}]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="a55fe223-5590-4ced-b329-17631490a1cb" x="0" y="202" width="350" height="30" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{ClaimantReceiveEEAPensionsBenefitsQuestion}]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="44710daa-4c9c-47ce-bd1f-3b34772ae7e9" x="355" y="202" width="197" height="30" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{ClaimantReceiveEEAPensionsBenefitsAnswer}]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="9ad65e85-6c19-4d95-84b6-2ba011fc4c64" x="0" y="252" width="350" height="30" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{ClaimantTimeOutsideGBLast3YearsQuestion}]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="b998dc9c-d4de-4a7b-9518-be35dc43b13c" x="355" y="252" width="197" height="30" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{ClaimantTimeOutsideGBLast3YearsAnswer}]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="5e3cfa56-da75-4a01-92e1-35188afb5faa" x="0" y="300" width="350" height="30" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{welshQuestion}]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="9fa15a84-b4ae-4cfb-9e61-6a272b2f8317" x="355" y="300" width="197" height="30" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{welshAnswer}]]></textFieldExpression>
-			</textField>
+			<componentElement>
+				<reportElement uuid="f6646de0-2ff3-494d-8f54-a45ed02679c2" key="table 2" style="table 2" x="0" y="18" width="560" height="66"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Claim Summary Table Dataset" uuid="3ac4c115-8d4a-47a9-9fbb-2c1d35bf6860">
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="441" uuid="0fd6e397-d811-4c21-ac3e-867f47edbc8c">
+						<jr:detailCell style="table 2_TD" height="335" rowSpan="1">
+							<staticText>
+								<reportElement uuid="5794c849-5fd4-49ac-bcdb-34c11266757d" x="0" y="0" width="441" height="25"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<paragraph leftIndent="5"/>
+								</textElement>
+								<text><![CDATA[Nationality]]></text>
+							</staticText>
+							<textField>
+								<reportElement uuid="29e8d2c0-e51f-428a-9537-0e252d851049" x="0" y="25" width="441" height="25"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<paragraph leftIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{AFIPQuestionLabel}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="cda2bdd3-6eda-4b3b-8591-5596044a41ca" x="0" y="50" width="441" height="25"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<paragraph leftIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{Caree35HoursQuestionLabel}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="68f8957d-ac74-4de1-85dd-6e90a2ed2026" x="0" y="75" width="441" height="25"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<paragraph leftIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{EmployedQuestionLabel}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="b1e3e59d-7202-4bea-881b-191b7d5c20e1" x="0" y="100" width="441" height="25"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<paragraph leftIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{SelfEmployedQuestionLabel}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="7d3b5fa1-1512-480a-90a7-583e2bac3f81" x="0" y="125" width="441" height="25"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<paragraph leftIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{EducationQuestionLabel}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="92b7c055-a783-4f29-876b-de5fbfd62d49" x="0" y="150" width="441" height="25"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<paragraph leftIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{BreaksQuestionLabel}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="ff8a8d75-a74c-46b1-8f76-d8efa7acdfa1" x="0" y="175" width="441" height="25"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<paragraph leftIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{HavePartnerQuestionLabel}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="2997760c-afda-492f-b856-ebba0e58cf27" x="0" y="200" width="441" height="30"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<paragraph leftIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{ClaimantReceiveEEAPensionsBenefitsQuestion}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="44e27fb6-25a2-48dd-8259-a5b91e49103e" x="0" y="230" width="441" height="30"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<paragraph leftIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{ClaimantTimeOutsideGBLast3YearsQuestion}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="0ddd9dcf-963a-4c06-a246-2fdca9389388" x="0" y="260" width="441" height="25"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<paragraph leftIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{StatePensionQuestionLabel}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="6fc25d1f-91a6-4de5-a292-aa4b4e4f97de" x="0" y="285" width="441" height="25"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<paragraph leftIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{OtherMoneySSPQuestionLabel}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement uuid="715c601d-c0b5-4696-8ae8-0a1c53b2e51d" x="0" y="310" width="441" height="25"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<paragraph leftIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{welshQuestion}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="110" uuid="04e7f669-53c3-4099-8ffb-575f335d66c4">
+						<jr:detailCell style="table 2_TD" height="335" rowSpan="1">
+							<textField>
+								<reportElement uuid="32242823-24f7-4cb7-b416-bb5950ad25bd" x="0" y="0" width="110" height="25"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{ClaimantNationality}]]></textFieldExpression>
+							</textField>
+							<image hAlign="Center" vAlign="Middle">
+								<reportElement uuid="5e185473-84e7-43c5-9ba0-0c35c6754906" x="0" y="25" width="110" height="25"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<imageExpression><![CDATA[($F{AFIPAnswer}.equalsIgnoreCase("Yes") ? $P{YES_IMG} : $P{NO_IMG})]]></imageExpression>
+							</image>
+							<image hAlign="Center" vAlign="Middle">
+								<reportElement uuid="b99ff812-7cfe-42d9-81c8-0137b289f107" x="0" y="50" width="110" height="25"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<imageExpression><![CDATA[($F{Caree35HoursAnswer}.equals("Yes") ? $P{YES_IMG} : $P{NO_IMG})]]></imageExpression>
+							</image>
+							<image hAlign="Center" vAlign="Middle">
+								<reportElement uuid="896f7843-f2c2-4543-9b32-d67e7ef518ba" mode="Opaque" x="0" y="75" width="110" height="25"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<imageExpression><![CDATA[($F{EmployedAnswer}.equals("Yes") ? $P{YES_IMG} : $P{NO_IMG})]]></imageExpression>
+							</image>
+							<image hAlign="Center" vAlign="Middle">
+								<reportElement uuid="d165a00f-692a-4ffe-a2b2-4a468f668050" x="0" y="100" width="110" height="25"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<imageExpression><![CDATA[($F{SelfEmployedAnswer}.equals("Yes") ? $P{YES_IMG} : $P{NO_IMG})]]></imageExpression>
+							</image>
+							<image hAlign="Center" vAlign="Middle">
+								<reportElement uuid="11e9977d-1e13-44b1-b00d-c289a0c50b17" x="0" y="125" width="110" height="25"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<imageExpression><![CDATA[($F{EducationAnswer}.equals("Yes") ? $P{YES_IMG} : $P{NO_IMG})]]></imageExpression>
+							</image>
+							<image hAlign="Center" vAlign="Middle">
+								<reportElement uuid="1b463ee3-b5a1-4871-a092-add2b9b8950b" x="0" y="150" width="110" height="25"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<imageExpression><![CDATA[($F{BreaksAnswer}.equals("Yes") ? $P{YES_IMG} : $P{NO_IMG})]]></imageExpression>
+							</image>
+							<image hAlign="Center" vAlign="Middle">
+								<reportElement uuid="e8a3e184-e21f-4b98-bea1-b9cde26e4a15" x="0" y="175" width="110" height="25"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<imageExpression><![CDATA[($F{HavePartnerAnswer}.equals("Yes") ? $P{YES_IMG} : $P{NO_IMG})]]></imageExpression>
+							</image>
+							<image scaleImage="RetainShape" hAlign="Center" vAlign="Middle" isUsingCache="true">
+								<reportElement uuid="16dba156-9f7c-40c2-b395-6f491662a4ce" x="0" y="200" width="110" height="30"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<imageExpression><![CDATA[($F{ClaimantReceiveEEAPensionsBenefitsAnswer}.equals("Yes") ? $P{YES_IMG} : $P{NO_IMG})]]></imageExpression>
+							</image>
+							<image scaleImage="RetainShape" hAlign="Center" vAlign="Middle" isUsingCache="true">
+								<reportElement uuid="76432cdc-8214-42d2-a07e-087f1db29f92" x="0" y="230" width="110" height="30"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<imageExpression><![CDATA[($F{ClaimantTimeOutsideGBLast3YearsAnswer}.equals("Yes") ? $P{YES_IMG} : $P{NO_IMG})]]></imageExpression>
+							</image>
+							<image hAlign="Center" vAlign="Middle" isUsingCache="true">
+								<reportElement uuid="f1defe4d-2079-46ec-b521-dceb56e66dd3" x="0" y="260" width="110" height="25"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<imageExpression><![CDATA[($F{StatePensionAnswer}.equals("Yes") ? $P{YES_IMG} : $P{NO_IMG})]]></imageExpression>
+							</image>
+							<image hAlign="Center" vAlign="Middle" isUsingCache="true">
+								<reportElement uuid="df6c2881-8e7e-4762-ac6a-fd45d134ff19" x="0" y="285" width="110" height="25"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<imageExpression><![CDATA[($F{OtherMoneySSPAnswer}.equals("Yes") ? $P{YES_IMG} : $P{NO_IMG})]]></imageExpression>
+							</image>
+							<image hAlign="Center" vAlign="Middle">
+								<reportElement uuid="8ddda277-6573-4296-8421-b3003c9dce39" x="0" y="310" width="110" height="25"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<imageExpression><![CDATA[($F{welshAnswer}.equals("Yes") ? $P{YES_IMG} : $P{NO_IMG})]]></imageExpression>
+							</image>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
 		</band>
 	</detail>
 	<pageFooter>

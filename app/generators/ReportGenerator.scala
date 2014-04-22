@@ -9,13 +9,15 @@ import net.sf.jasperreports.engine.design.JasperDesign
 import net.sf.jasperreports.engine.util.{JRElementsVisitor, JRSaver}
 import java.io.{File, OutputStream}
 import java.util
-
+import scala.language.postfixOps
 
 /**
  * Interface of the report generators.
  */
 trait ReportGenerator {
   lazy val jasperLocation = Try(Play.current.configuration.getString("jasper.folder").getOrElse("./")) match {case Success(s) => s; case _ => "./"}
+  lazy val yesImage = Play.current.configuration.getString("images.yes").getOrElse("./")
+  lazy val noImage = Play.current.configuration.getString("images.no").getOrElse("./")
 
   def generateFrom(source: ReportDataSource): Option[JasperPrint] = {
     try {
@@ -30,7 +32,14 @@ trait ReportGenerator {
         Logger.info("Completed compilation of JRXML files.")
       }
       val parameter:util.Map[String,Object] = new util.HashMap[String,Object]()
+
+      val encodeImgYes = encodeImageFile(yesImage)
+      val encodeImgNo = encodeImageFile(noImage)
+
       parameter.put("SUBREPORT_DIR",jasperLocation)
+      parameter.put("YES_IMG",encodeImgYes)
+      parameter.put("NO_IMG",encodeImgNo)
+
       val jasperPrint = JasperFillManager.fillReport(jasperFilename, parameter, source.convertToJRDataSource())
       if (null != jasperPrint) Some(jasperPrint) else None
     }
@@ -44,6 +53,13 @@ trait ReportGenerator {
         throw e
       }
     }
+  }
+
+  def encodeImageFile(imageFile: String): String = {
+    val bis = new java.io.BufferedInputStream(new java.io.FileInputStream(imageFile))
+    val bArray = Stream.continually(bis.read).takeWhile(-1 !=).map(_.toByte).toArray
+    val encodedImage = new sun.misc.BASE64Encoder().encode(bArray)
+    new String(encodedImage)
   }
 
   def exportReportToStream(print: Option[JasperPrint], stream: OutputStream): SuccessOrFailure
