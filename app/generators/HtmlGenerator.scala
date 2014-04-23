@@ -1,9 +1,10 @@
 package generators
 
-import net.sf.jasperreports.engine.{JRExporterParameter, DefaultJasperReportsContext, JasperExportManager, JasperPrint}
-import java.io.OutputStream
+import net.sf.jasperreports.engine.{JRExporterParameter, JasperPrint}
+import java.io.{File, OutputStream}
 import play.api.Logger
-import net.sf.jasperreports.engine.export.{JRHtmlExporterParameter, JRXhtmlExporter, JRHtmlExporter, HtmlExporter}
+import net.sf.jasperreports.engine.export.{JRHtmlExporterParameter, HtmlExporter}
+
 
 /**
  * Created by jmi on 07/04/2014.
@@ -11,9 +12,12 @@ import net.sf.jasperreports.engine.export.{JRHtmlExporterParameter, JRXhtmlExpor
 object HtmlGenerator extends ReportGenerator {
 
   def exportReportToStream(print: Option[JasperPrint], stream: OutputStream): SuccessOrFailure = {
+
     try {
       if (print.isDefined) {
         val exporter = new HtmlExporter()
+        exporter.setParameter(JRHtmlExporterParameter.IMAGES_DIR, new File("public/images/"));
+        exporter.setParameter(JRHtmlExporterParameter.IMAGES_URI, "public/images/");
         exporter.setParameter(JRExporterParameter.JASPER_PRINT, print.get)
         exporter.setParameter(JRExporterParameter.OUTPUT_STREAM, stream)
 //        exporter.setParameter(JRHtmlExporterParameter.IS_USING_IMAGES_TO_ALIGN, false);
