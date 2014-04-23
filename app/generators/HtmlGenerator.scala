@@ -18,6 +18,7 @@ object HtmlGenerator extends ReportGenerator {
         val exporter = new HtmlExporter()
         exporter.setParameter(JRHtmlExporterParameter.IMAGES_DIR, new File("public/images/"));
         exporter.setParameter(JRHtmlExporterParameter.IMAGES_URI, "public/images/");
+        exporter.setParameter(JRHtmlExporterParameter.IS_OUTPUT_IMAGES_TO_DIR, true);
         exporter.setParameter(JRExporterParameter.JASPER_PRINT, print.get)
         exporter.setParameter(JRExporterParameter.OUTPUT_STREAM, stream)
 //        exporter.setParameter(JRHtmlExporterParameter.IS_USING_IMAGES_TO_ALIGN, false);
