@@ -2,8 +2,9 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="560" pageHeight="872" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="273"/>
+	<property name="ireport.y" value="497"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<import value="org.apache.commons.codec.binary.Base64"/>
 	<style name="table">
 		<box>
 			<pen lineWidth="1.0" lineColor="#000000"/>
@@ -66,13 +67,18 @@
 	</style>
 	<subDataset name="Claim Summary Table Dataset" uuid="602a0adc-bcd8-4850-9a30-0352c480fa13">
 		<parameter name="NO_IMG" class="java.lang.String">
-			<defaultValueExpression><![CDATA["/Users/neddakaltcheva/Desktop/Development/DWP/pdfService/public/images/no.png"]]></defaultValueExpression>
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 		</parameter>
 		<parameter name="YES_IMG" class="java.lang.String">
-			<defaultValueExpression><![CDATA["/Users/neddakaltcheva/Desktop/Development/DWP/pdfService/public/images/yes.png"]]></defaultValueExpression>
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 		</parameter>
-		<parameter name="SUBREPORT_DIR" class="java.lang.String">
-			<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
+		<parameter name="YES_DECODED" class="java.io.InputStream">
+			<property name="new ByteArrayInputStream(new Base64().decodeBase64($P{YES_IMG}.getBytes(&quot;UTF-8&quot;)))" value=""/>
+			<defaultValueExpression><![CDATA[new ByteArrayInputStream(new Base64().decodeBase64($P{YES_IMG}.getBytes("UTF-8")))]]></defaultValueExpression>
+		</parameter>
+		<parameter name="NO_DECODED" class="java.io.InputStream">
+			<parameterDescription><![CDATA[]]></parameterDescription>
+			<defaultValueExpression><![CDATA[new ByteArrayInputStream(new Base64().decodeBase64($P{NO_IMG}.getBytes("UTF-8")))]]></defaultValueExpression>
 		</parameter>
 		<queryString language="xPath">
 			<![CDATA[/]]>
@@ -155,6 +161,15 @@
 	</subDataset>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String">
 		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="YES_IMG" class="java.lang.String"/>
+	<parameter name="NO_IMG" class="java.lang.String"/>
+	<parameter name="YES_DECODED" class="java.io.InputStream">
+		<property name="new ByteArrayInputStream(new Base64().decodeBase64($P{YES_IMG}.getBytes(&quot;UTF-8&quot;)))" value=""/>
+		<defaultValueExpression><![CDATA[new ByteArrayInputStream(new Base64().decodeBase64($P{YES_IMG}.getBytes("UTF-8")))]]></defaultValueExpression>
+	</parameter>
+	<parameter name="NO_DECODED" class="java.io.InputStream">
+		<defaultValueExpression><![CDATA[new ByteArrayInputStream(new Base64().decodeBase64($P{NO_IMG}.getBytes("UTF-8")))]]></defaultValueExpression>
 	</parameter>
 	<queryString language="xPath">
 		<![CDATA[/]]>
@@ -347,6 +362,12 @@
 	</field>
 	<field name="CourseOfEducationAnswer" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/CourseOfEducation/Answer]]></fieldDescription>
+	</field>
+	<field name="OtherMoneySSPQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySSP/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="OtherMoneySSPAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySSP/Answer]]></fieldDescription>
 	</field>
 	<pageHeader>
 		<band height="44" splitType="Stretch">
@@ -728,7 +749,7 @@
 				<textFieldExpression><![CDATA[$F{ClaimDateAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="84" splitType="Stretch">
+		<band height="295" splitType="Stretch">
 			<rectangle>
 				<reportElement uuid="dc663a2b-f58b-45c1-8a4a-0ca78b8a969b" x="0" y="0" width="553" height="18" backcolor="#999999"/>
 				<graphicElement>
@@ -742,352 +763,336 @@
 				</textElement>
 				<text><![CDATA[Claim Summary]]></text>
 			</staticText>
-			<componentElement>
-				<reportElement uuid="f6646de0-2ff3-494d-8f54-a45ed02679c2" key="table 2" style="table 2" x="0" y="18" width="560" height="66"/>
-				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
-					<datasetRun subDataset="Claim Summary Table Dataset" uuid="3ac4c115-8d4a-47a9-9fbb-2c1d35bf6860">
-						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
-					</datasetRun>
-					<jr:column width="441" uuid="0fd6e397-d811-4c21-ac3e-867f47edbc8c">
-						<jr:detailCell style="table 2_TD" height="335" rowSpan="1">
-							<staticText>
-								<reportElement uuid="5794c849-5fd4-49ac-bcdb-34c11266757d" x="0" y="0" width="441" height="25"/>
-								<box>
-									<pen lineWidth="0.5"/>
-									<topPen lineWidth="0.5"/>
-									<leftPen lineWidth="0.5"/>
-									<bottomPen lineWidth="0.5"/>
-									<rightPen lineWidth="0.5"/>
-								</box>
-								<textElement verticalAlignment="Middle">
-									<paragraph leftIndent="5"/>
-								</textElement>
-								<text><![CDATA[Nationality]]></text>
-							</staticText>
-							<textField>
-								<reportElement uuid="29e8d2c0-e51f-428a-9537-0e252d851049" x="0" y="25" width="441" height="25"/>
-								<box>
-									<pen lineWidth="0.5"/>
-									<topPen lineWidth="0.5"/>
-									<leftPen lineWidth="0.5"/>
-									<bottomPen lineWidth="0.5"/>
-									<rightPen lineWidth="0.5"/>
-								</box>
-								<textElement verticalAlignment="Middle">
-									<paragraph leftIndent="5"/>
-								</textElement>
-								<textFieldExpression><![CDATA[$F{AFIPQuestionLabel}]]></textFieldExpression>
-							</textField>
-							<textField>
-								<reportElement uuid="cda2bdd3-6eda-4b3b-8591-5596044a41ca" x="0" y="50" width="441" height="25"/>
-								<box>
-									<pen lineWidth="0.5"/>
-									<topPen lineWidth="0.5"/>
-									<leftPen lineWidth="0.5"/>
-									<bottomPen lineWidth="0.5"/>
-									<rightPen lineWidth="0.5"/>
-								</box>
-								<textElement verticalAlignment="Middle">
-									<paragraph leftIndent="5"/>
-								</textElement>
-								<textFieldExpression><![CDATA[$F{Caree35HoursQuestionLabel}]]></textFieldExpression>
-							</textField>
-							<textField>
-								<reportElement uuid="68f8957d-ac74-4de1-85dd-6e90a2ed2026" x="0" y="75" width="441" height="25"/>
-								<box>
-									<pen lineWidth="0.5"/>
-									<topPen lineWidth="0.5"/>
-									<leftPen lineWidth="0.5"/>
-									<bottomPen lineWidth="0.5"/>
-									<rightPen lineWidth="0.5"/>
-								</box>
-								<textElement verticalAlignment="Middle">
-									<paragraph leftIndent="5"/>
-								</textElement>
-								<textFieldExpression><![CDATA[$F{EmployedQuestionLabel}]]></textFieldExpression>
-							</textField>
-							<textField>
-								<reportElement uuid="b1e3e59d-7202-4bea-881b-191b7d5c20e1" x="0" y="100" width="441" height="25"/>
-								<box>
-									<pen lineWidth="0.5"/>
-									<topPen lineWidth="0.5"/>
-									<leftPen lineWidth="0.5"/>
-									<bottomPen lineWidth="0.5"/>
-									<rightPen lineWidth="0.5"/>
-								</box>
-								<textElement verticalAlignment="Middle">
-									<paragraph leftIndent="5"/>
-								</textElement>
-								<textFieldExpression><![CDATA[$F{SelfEmployedQuestionLabel}]]></textFieldExpression>
-							</textField>
-							<textField>
-								<reportElement uuid="7d3b5fa1-1512-480a-90a7-583e2bac3f81" x="0" y="125" width="441" height="25"/>
-								<box>
-									<pen lineWidth="0.5"/>
-									<topPen lineWidth="0.5"/>
-									<leftPen lineWidth="0.5"/>
-									<bottomPen lineWidth="0.5"/>
-									<rightPen lineWidth="0.5"/>
-								</box>
-								<textElement verticalAlignment="Middle">
-									<paragraph leftIndent="5"/>
-								</textElement>
-								<textFieldExpression><![CDATA[$F{EducationQuestionLabel}]]></textFieldExpression>
-							</textField>
-							<textField>
-								<reportElement uuid="92b7c055-a783-4f29-876b-de5fbfd62d49" x="0" y="150" width="441" height="25"/>
-								<box>
-									<pen lineWidth="0.5"/>
-									<topPen lineWidth="0.5"/>
-									<leftPen lineWidth="0.5"/>
-									<bottomPen lineWidth="0.5"/>
-									<rightPen lineWidth="0.5"/>
-								</box>
-								<textElement verticalAlignment="Middle">
-									<paragraph leftIndent="5"/>
-								</textElement>
-								<textFieldExpression><![CDATA[$F{BreaksQuestionLabel}]]></textFieldExpression>
-							</textField>
-							<textField>
-								<reportElement uuid="ff8a8d75-a74c-46b1-8f76-d8efa7acdfa1" x="0" y="175" width="441" height="25"/>
-								<box>
-									<pen lineWidth="0.5"/>
-									<topPen lineWidth="0.5"/>
-									<leftPen lineWidth="0.5"/>
-									<bottomPen lineWidth="0.5"/>
-									<rightPen lineWidth="0.5"/>
-								</box>
-								<textElement verticalAlignment="Middle">
-									<paragraph leftIndent="5"/>
-								</textElement>
-								<textFieldExpression><![CDATA[$F{HavePartnerQuestionLabel}]]></textFieldExpression>
-							</textField>
-							<textField>
-								<reportElement uuid="2997760c-afda-492f-b856-ebba0e58cf27" x="0" y="200" width="441" height="30"/>
-								<box>
-									<pen lineWidth="0.5"/>
-									<topPen lineWidth="0.5"/>
-									<leftPen lineWidth="0.5"/>
-									<bottomPen lineWidth="0.5"/>
-									<rightPen lineWidth="0.5"/>
-								</box>
-								<textElement verticalAlignment="Middle">
-									<paragraph leftIndent="5"/>
-								</textElement>
-								<textFieldExpression><![CDATA[$F{ClaimantReceiveEEAPensionsBenefitsQuestion}]]></textFieldExpression>
-							</textField>
-							<textField>
-								<reportElement uuid="44e27fb6-25a2-48dd-8259-a5b91e49103e" x="0" y="230" width="441" height="30"/>
-								<box>
-									<pen lineWidth="0.5"/>
-									<topPen lineWidth="0.5"/>
-									<leftPen lineWidth="0.5"/>
-									<bottomPen lineWidth="0.5"/>
-									<rightPen lineWidth="0.5"/>
-								</box>
-								<textElement verticalAlignment="Middle">
-									<paragraph leftIndent="5"/>
-								</textElement>
-								<textFieldExpression><![CDATA[$F{ClaimantTimeOutsideGBLast3YearsQuestion}]]></textFieldExpression>
-							</textField>
-							<textField>
-								<reportElement uuid="0ddd9dcf-963a-4c06-a246-2fdca9389388" x="0" y="260" width="441" height="25"/>
-								<box>
-									<pen lineWidth="0.5"/>
-									<topPen lineWidth="0.5"/>
-									<leftPen lineWidth="0.5"/>
-									<bottomPen lineWidth="0.5"/>
-									<rightPen lineWidth="0.5"/>
-								</box>
-								<textElement verticalAlignment="Middle">
-									<paragraph leftIndent="5"/>
-								</textElement>
-								<textFieldExpression><![CDATA[$F{StatePensionQuestionLabel}]]></textFieldExpression>
-							</textField>
-							<textField>
-								<reportElement uuid="6fc25d1f-91a6-4de5-a292-aa4b4e4f97de" x="0" y="285" width="441" height="25"/>
-								<box>
-									<pen lineWidth="0.5"/>
-									<topPen lineWidth="0.5"/>
-									<leftPen lineWidth="0.5"/>
-									<bottomPen lineWidth="0.5"/>
-									<rightPen lineWidth="0.5"/>
-								</box>
-								<textElement verticalAlignment="Middle">
-									<paragraph leftIndent="5"/>
-								</textElement>
-								<textFieldExpression><![CDATA[$F{OtherMoneySSPQuestionLabel}]]></textFieldExpression>
-							</textField>
-							<textField>
-								<reportElement uuid="715c601d-c0b5-4696-8ae8-0a1c53b2e51d" x="0" y="310" width="441" height="25"/>
-								<box>
-									<pen lineWidth="0.5"/>
-									<topPen lineWidth="0.5"/>
-									<leftPen lineWidth="0.5"/>
-									<bottomPen lineWidth="0.5"/>
-									<rightPen lineWidth="0.5"/>
-								</box>
-								<textElement verticalAlignment="Middle">
-									<paragraph leftIndent="5"/>
-								</textElement>
-								<textFieldExpression><![CDATA[$F{welshQuestion}]]></textFieldExpression>
-							</textField>
-						</jr:detailCell>
-					</jr:column>
-					<jr:column width="110" uuid="04e7f669-53c3-4099-8ffb-575f335d66c4">
-						<jr:detailCell style="table 2_TD" height="335" rowSpan="1">
-							<textField>
-								<reportElement uuid="32242823-24f7-4cb7-b416-bb5950ad25bd" x="0" y="0" width="110" height="25"/>
-								<box>
-									<pen lineWidth="0.5"/>
-									<topPen lineWidth="0.5"/>
-									<leftPen lineWidth="0.5"/>
-									<bottomPen lineWidth="0.5"/>
-									<rightPen lineWidth="0.5"/>
-								</box>
-								<textElement textAlignment="Center" verticalAlignment="Middle"/>
-								<textFieldExpression><![CDATA[$F{ClaimantNationality}]]></textFieldExpression>
-							</textField>
-							<image hAlign="Center" vAlign="Middle">
-								<reportElement uuid="5e185473-84e7-43c5-9ba0-0c35c6754906" x="0" y="25" width="110" height="25"/>
-								<box>
-									<pen lineWidth="0.5"/>
-									<topPen lineWidth="0.5"/>
-									<leftPen lineWidth="0.5"/>
-									<bottomPen lineWidth="0.5"/>
-									<rightPen lineWidth="0.5"/>
-								</box>
-								<imageExpression><![CDATA[($F{AFIPAnswer}.equalsIgnoreCase("Yes") ? $P{YES_IMG} : $P{NO_IMG})]]></imageExpression>
-							</image>
-							<image hAlign="Center" vAlign="Middle">
-								<reportElement uuid="b99ff812-7cfe-42d9-81c8-0137b289f107" x="0" y="50" width="110" height="25"/>
-								<box>
-									<pen lineWidth="0.5"/>
-									<topPen lineWidth="0.5"/>
-									<leftPen lineWidth="0.5"/>
-									<bottomPen lineWidth="0.5"/>
-									<rightPen lineWidth="0.5"/>
-								</box>
-								<imageExpression><![CDATA[($F{Caree35HoursAnswer}.equals("Yes") ? $P{YES_IMG} : $P{NO_IMG})]]></imageExpression>
-							</image>
-							<image hAlign="Center" vAlign="Middle">
-								<reportElement uuid="896f7843-f2c2-4543-9b32-d67e7ef518ba" mode="Opaque" x="0" y="75" width="110" height="25"/>
-								<box>
-									<pen lineWidth="0.5"/>
-									<topPen lineWidth="0.5"/>
-									<leftPen lineWidth="0.5"/>
-									<bottomPen lineWidth="0.5"/>
-									<rightPen lineWidth="0.5"/>
-								</box>
-								<imageExpression><![CDATA[($F{EmployedAnswer}.equals("Yes") ? $P{YES_IMG} : $P{NO_IMG})]]></imageExpression>
-							</image>
-							<image hAlign="Center" vAlign="Middle">
-								<reportElement uuid="d165a00f-692a-4ffe-a2b2-4a468f668050" x="0" y="100" width="110" height="25"/>
-								<box>
-									<pen lineWidth="0.5"/>
-									<topPen lineWidth="0.5"/>
-									<leftPen lineWidth="0.5"/>
-									<bottomPen lineWidth="0.5"/>
-									<rightPen lineWidth="0.5"/>
-								</box>
-								<imageExpression><![CDATA[($F{SelfEmployedAnswer}.equals("Yes") ? $P{YES_IMG} : $P{NO_IMG})]]></imageExpression>
-							</image>
-							<image hAlign="Center" vAlign="Middle">
-								<reportElement uuid="11e9977d-1e13-44b1-b00d-c289a0c50b17" x="0" y="125" width="110" height="25"/>
-								<box>
-									<pen lineWidth="0.5"/>
-									<topPen lineWidth="0.5"/>
-									<leftPen lineWidth="0.5"/>
-									<bottomPen lineWidth="0.5"/>
-									<rightPen lineWidth="0.5"/>
-								</box>
-								<imageExpression><![CDATA[($F{EducationAnswer}.equals("Yes") ? $P{YES_IMG} : $P{NO_IMG})]]></imageExpression>
-							</image>
-							<image hAlign="Center" vAlign="Middle">
-								<reportElement uuid="1b463ee3-b5a1-4871-a092-add2b9b8950b" x="0" y="150" width="110" height="25"/>
-								<box>
-									<pen lineWidth="0.5"/>
-									<topPen lineWidth="0.5"/>
-									<leftPen lineWidth="0.5"/>
-									<bottomPen lineWidth="0.5"/>
-									<rightPen lineWidth="0.5"/>
-								</box>
-								<imageExpression><![CDATA[($F{BreaksAnswer}.equals("Yes") ? $P{YES_IMG} : $P{NO_IMG})]]></imageExpression>
-							</image>
-							<image hAlign="Center" vAlign="Middle">
-								<reportElement uuid="e8a3e184-e21f-4b98-bea1-b9cde26e4a15" x="0" y="175" width="110" height="25"/>
-								<box>
-									<pen lineWidth="0.5"/>
-									<topPen lineWidth="0.5"/>
-									<leftPen lineWidth="0.5"/>
-									<bottomPen lineWidth="0.5"/>
-									<rightPen lineWidth="0.5"/>
-								</box>
-								<imageExpression><![CDATA[($F{HavePartnerAnswer}.equals("Yes") ? $P{YES_IMG} : $P{NO_IMG})]]></imageExpression>
-							</image>
-							<image scaleImage="RetainShape" hAlign="Center" vAlign="Middle" isUsingCache="true">
-								<reportElement uuid="16dba156-9f7c-40c2-b395-6f491662a4ce" x="0" y="200" width="110" height="30"/>
-								<box>
-									<pen lineWidth="0.5"/>
-									<topPen lineWidth="0.5"/>
-									<leftPen lineWidth="0.5"/>
-									<bottomPen lineWidth="0.5"/>
-									<rightPen lineWidth="0.5"/>
-								</box>
-								<imageExpression><![CDATA[($F{ClaimantReceiveEEAPensionsBenefitsAnswer}.equals("Yes") ? $P{YES_IMG} : $P{NO_IMG})]]></imageExpression>
-							</image>
-							<image scaleImage="RetainShape" hAlign="Center" vAlign="Middle" isUsingCache="true">
-								<reportElement uuid="76432cdc-8214-42d2-a07e-087f1db29f92" x="0" y="230" width="110" height="30"/>
-								<box>
-									<pen lineWidth="0.5"/>
-									<topPen lineWidth="0.5"/>
-									<leftPen lineWidth="0.5"/>
-									<bottomPen lineWidth="0.5"/>
-									<rightPen lineWidth="0.5"/>
-								</box>
-								<imageExpression><![CDATA[($F{ClaimantTimeOutsideGBLast3YearsAnswer}.equals("Yes") ? $P{YES_IMG} : $P{NO_IMG})]]></imageExpression>
-							</image>
-							<image hAlign="Center" vAlign="Middle" isUsingCache="true">
-								<reportElement uuid="f1defe4d-2079-46ec-b521-dceb56e66dd3" x="0" y="260" width="110" height="25"/>
-								<box>
-									<pen lineWidth="0.5"/>
-									<topPen lineWidth="0.5"/>
-									<leftPen lineWidth="0.5"/>
-									<bottomPen lineWidth="0.5"/>
-									<rightPen lineWidth="0.5"/>
-								</box>
-								<imageExpression><![CDATA[($F{StatePensionAnswer}.equals("Yes") ? $P{YES_IMG} : $P{NO_IMG})]]></imageExpression>
-							</image>
-							<image hAlign="Center" vAlign="Middle" isUsingCache="true">
-								<reportElement uuid="df6c2881-8e7e-4762-ac6a-fd45d134ff19" x="0" y="285" width="110" height="25"/>
-								<box>
-									<pen lineWidth="0.5"/>
-									<topPen lineWidth="0.5"/>
-									<leftPen lineWidth="0.5"/>
-									<bottomPen lineWidth="0.5"/>
-									<rightPen lineWidth="0.5"/>
-								</box>
-								<imageExpression><![CDATA[($F{OtherMoneySSPAnswer}.equals("Yes") ? $P{YES_IMG} : $P{NO_IMG})]]></imageExpression>
-							</image>
-							<image hAlign="Center" vAlign="Middle">
-								<reportElement uuid="8ddda277-6573-4296-8421-b3003c9dce39" x="0" y="310" width="110" height="25"/>
-								<box>
-									<pen lineWidth="0.5"/>
-									<topPen lineWidth="0.5"/>
-									<leftPen lineWidth="0.5"/>
-									<bottomPen lineWidth="0.5"/>
-									<rightPen lineWidth="0.5"/>
-								</box>
-								<imageExpression><![CDATA[($F{welshAnswer}.equals("Yes") ? $P{YES_IMG} : $P{NO_IMG})]]></imageExpression>
-							</image>
-						</jr:detailCell>
-					</jr:column>
-				</jr:table>
-			</componentElement>
+			<staticText>
+				<reportElement uuid="a3fda3d7-37fc-4369-8a30-97f41b0393b0" x="0" y="18" width="348" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[Nationality]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="3c37fe2c-b14b-4cfa-abc0-72e4332b04f0" x="348" y="18" width="204" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ClaimantNationality}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="cb9c6055-9c08-42e2-8596-1641bffa5ddf" x="0" y="38" width="348" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{AFIPQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center" vAlign="Middle" isUsingCache="true">
+				<reportElement uuid="c8a45691-c86d-49c1-90e6-599ec9148d5c" x="348" y="38" width="204" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<imageExpression><![CDATA[($F{AFIPAnswer}.equals("Yes") ? $P{YES_DECODED} : $P{NO_DECODED})]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement uuid="a627b115-ca71-4dd7-a342-1d1b91d4ec72" x="0" y="58" width="348" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Caree35HoursQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center" vAlign="Middle" isUsingCache="true">
+				<reportElement uuid="2e62f885-c4a3-46bc-a4d4-4e53e3f89e57" x="348" y="58" width="204" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<imageExpression><![CDATA[($F{Caree35HoursAnswer}.equals("Yes") ? $P{YES_DECODED} : $P{NO_DECODED})]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement uuid="8f2320de-5af3-4ccb-acb2-adcb9fb98ba9" x="0" y="78" width="348" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EmployedQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center" vAlign="Middle" isUsingCache="true">
+				<reportElement uuid="0fad14ed-7f48-4b6a-ac29-d47294d8dd9e" x="348" y="78" width="204" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<imageExpression><![CDATA[($F{EmployedAnswer}.equals("Yes") ? $P{YES_DECODED} : $P{NO_DECODED})]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement uuid="4e20203a-179a-4484-878b-7892fb5fc232" x="0" y="98" width="348" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SelfEmployedQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center" vAlign="Middle" isUsingCache="true">
+				<reportElement uuid="2a034693-c743-4ab3-af29-07ec70b6ff2e" x="348" y="98" width="204" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<imageExpression><![CDATA[($F{SelfEmployedAnswer}.equals("Yes") ? $P{YES_DECODED} : $P{NO_DECODED})]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement uuid="27205464-5cda-4cee-a4b0-ca3b2c4ff304" x="0" y="118" width="348" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EducationQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center" vAlign="Middle" isUsingCache="true">
+				<reportElement uuid="2583c148-a495-45fa-9702-7922b4cf9764" x="348" y="118" width="204" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<imageExpression><![CDATA[($F{EducationAnswer}.equals("Yes") ? $P{YES_DECODED} : $P{NO_DECODED})]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement uuid="8f2f7315-1233-4c4f-a917-e3515aa55d70" x="0" y="138" width="348" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BreaksQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center" vAlign="Middle" isUsingCache="true">
+				<reportElement uuid="eb4ebfa6-8f4e-4079-9997-17029e2e3316" x="348" y="138" width="204" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<imageExpression><![CDATA[($F{BreaksAnswer}.equals("Yes") ? $P{YES_DECODED} : $P{NO_DECODED})]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement uuid="b330d32a-43b3-4faf-8e99-4d973dada339" x="0" y="158" width="348" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{HavePartnerQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center" vAlign="Middle" isUsingCache="true">
+				<reportElement uuid="f1897bd7-ca46-4a8d-8855-920a9937aaca" x="348" y="158" width="204" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<imageExpression><![CDATA[($F{HavePartnerAnswer}.equals("Yes") ? $P{YES_DECODED} : $P{NO_DECODED})]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement uuid="06c31623-c0a0-4cca-b130-5a2e77914a0f" x="0" y="178" width="348" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ClaimantReceiveEEAPensionsBenefitsQuestion}]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center" vAlign="Middle" isUsingCache="true">
+				<reportElement uuid="a01361bc-71ad-4bb2-9330-2c81d352dbea" x="348" y="178" width="204" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<imageExpression><![CDATA[($F{ClaimantReceiveEEAPensionsBenefitsAnswer}.equals("Yes") ? $P{YES_DECODED} : $P{NO_DECODED})]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement uuid="cf7fe3d0-c6dc-4a19-98d2-fc8dba3ef872" x="0" y="198" width="348" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ClaimantTimeOutsideGBLast3YearsQuestion}]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center" vAlign="Middle" isUsingCache="true">
+				<reportElement uuid="0e845ac5-eaa2-46dc-a922-5b53c5ee5e46" x="348" y="198" width="204" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<imageExpression><![CDATA[($F{ClaimantTimeOutsideGBLast3YearsAnswer}.equals("Yes") ? $P{YES_DECODED} : $P{NO_DECODED})]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement uuid="920b5cf8-6403-461e-82ad-df84c0832c5f" x="0" y="218" width="348" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{StatePensionQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center" vAlign="Middle" isUsingCache="true">
+				<reportElement uuid="e5ed7cc5-4e11-4335-83a7-9e00d03707b4" x="348" y="218" width="204" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<imageExpression><![CDATA[($F{StatePensionAnswer}.equals("Yes") ? $P{YES_DECODED} : $P{NO_DECODED})]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement uuid="431a0140-6292-433f-af75-6be276febe9a" x="0" y="238" width="348" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{OtherMoneySSPQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center" vAlign="Middle" isUsingCache="true">
+				<reportElement uuid="4ed4140b-9b45-4478-91ae-5c446030dee8" x="348" y="238" width="204" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<imageExpression><![CDATA[($F{OtherMoneySSPAnswer}.equals("Yes") ? $P{YES_DECODED} : $P{NO_DECODED})]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement uuid="31c37ec7-2f95-45f3-8464-d8d24a67dff8" x="0" y="258" width="348" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{welshQuestion}]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center" vAlign="Middle" isUsingCache="true">
+				<reportElement uuid="0cec6145-8e24-4ef1-a41e-22b46f428681" x="348" y="258" width="204" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<imageExpression><![CDATA[($F{welshAnswer}.equals("Yes") ? $P{YES_DECODED} : $P{NO_DECODED})]]></imageExpression>
+			</image>
 		</band>
 	</detail>
 	<pageFooter>
-		<band height="28" splitType="Stretch">
+		<band height="126" splitType="Stretch">
 			<staticText>
 				<reportElement uuid="14290dee-dea6-41aa-85d5-6eabdea0be6f" x="0" y="0" width="66" height="20"/>
 				<textElement verticalAlignment="Middle"/>
