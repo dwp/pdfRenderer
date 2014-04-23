@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="560" pageHeight="872" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="497"/>
+	<property name="ireport.y" value="474"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<import value="org.apache.commons.codec.binary.Base64"/>
 	<style name="table">
@@ -749,7 +749,7 @@
 				<textFieldExpression><![CDATA[$F{ClaimDateAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="295" splitType="Stretch">
+		<band height="352" splitType="Stretch">
 			<rectangle>
 				<reportElement uuid="dc663a2b-f58b-45c1-8a4a-0ca78b8a969b" x="0" y="0" width="553" height="18" backcolor="#999999"/>
 				<graphicElement>
@@ -764,7 +764,7 @@
 				<text><![CDATA[Claim Summary]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="a3fda3d7-37fc-4369-8a30-97f41b0393b0" x="0" y="18" width="348" height="20"/>
+				<reportElement uuid="a3fda3d7-37fc-4369-8a30-97f41b0393b0" x="0" y="18" width="467" height="25"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -778,7 +778,7 @@
 				<text><![CDATA[Nationality]]></text>
 			</staticText>
 			<textField>
-				<reportElement uuid="3c37fe2c-b14b-4cfa-abc0-72e4332b04f0" x="348" y="18" width="204" height="20"/>
+				<reportElement uuid="3c37fe2c-b14b-4cfa-abc0-72e4332b04f0" x="467" y="18" width="85" height="25"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -789,8 +789,8 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{ClaimantNationality}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement uuid="cb9c6055-9c08-42e2-8596-1641bffa5ddf" x="0" y="38" width="348" height="20"/>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="cb9c6055-9c08-42e2-8596-1641bffa5ddf" x="0" y="43" width="467" height="25"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -803,8 +803,8 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$F{AFIPQuestionLabel}]]></textFieldExpression>
 			</textField>
-			<image hAlign="Center" vAlign="Middle" isUsingCache="true">
-				<reportElement uuid="c8a45691-c86d-49c1-90e6-599ec9148d5c" x="348" y="38" width="204" height="20"/>
+			<image scaleImage="RetainShape" hAlign="Center" vAlign="Middle" isUsingCache="true">
+				<reportElement uuid="c8a45691-c86d-49c1-90e6-599ec9148d5c" x="467" y="43" width="85" height="25"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -814,8 +814,8 @@
 				</box>
 				<imageExpression><![CDATA[($F{AFIPAnswer}.equals("Yes") ? $P{YES_DECODED} : $P{NO_DECODED})]]></imageExpression>
 			</image>
-			<textField>
-				<reportElement uuid="a627b115-ca71-4dd7-a342-1d1b91d4ec72" x="0" y="58" width="348" height="20"/>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="a627b115-ca71-4dd7-a342-1d1b91d4ec72" x="0" y="68" width="467" height="25"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -829,7 +829,7 @@
 				<textFieldExpression><![CDATA[$F{Caree35HoursQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<image hAlign="Center" vAlign="Middle" isUsingCache="true">
-				<reportElement uuid="2e62f885-c4a3-46bc-a4d4-4e53e3f89e57" x="348" y="58" width="204" height="20"/>
+				<reportElement uuid="2e62f885-c4a3-46bc-a4d4-4e53e3f89e57" x="467" y="68" width="85" height="25"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -839,8 +839,8 @@
 				</box>
 				<imageExpression><![CDATA[($F{Caree35HoursAnswer}.equals("Yes") ? $P{YES_DECODED} : $P{NO_DECODED})]]></imageExpression>
 			</image>
-			<textField>
-				<reportElement uuid="8f2320de-5af3-4ccb-acb2-adcb9fb98ba9" x="0" y="78" width="348" height="20"/>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="8f2320de-5af3-4ccb-acb2-adcb9fb98ba9" x="0" y="93" width="467" height="25"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -854,7 +854,7 @@
 				<textFieldExpression><![CDATA[$F{EmployedQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<image hAlign="Center" vAlign="Middle" isUsingCache="true">
-				<reportElement uuid="0fad14ed-7f48-4b6a-ac29-d47294d8dd9e" x="348" y="78" width="204" height="20"/>
+				<reportElement uuid="0fad14ed-7f48-4b6a-ac29-d47294d8dd9e" x="467" y="93" width="85" height="25"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -864,8 +864,8 @@
 				</box>
 				<imageExpression><![CDATA[($F{EmployedAnswer}.equals("Yes") ? $P{YES_DECODED} : $P{NO_DECODED})]]></imageExpression>
 			</image>
-			<textField>
-				<reportElement uuid="4e20203a-179a-4484-878b-7892fb5fc232" x="0" y="98" width="348" height="20"/>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="4e20203a-179a-4484-878b-7892fb5fc232" x="0" y="118" width="467" height="25"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -879,7 +879,7 @@
 				<textFieldExpression><![CDATA[$F{SelfEmployedQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<image hAlign="Center" vAlign="Middle" isUsingCache="true">
-				<reportElement uuid="2a034693-c743-4ab3-af29-07ec70b6ff2e" x="348" y="98" width="204" height="20"/>
+				<reportElement uuid="2a034693-c743-4ab3-af29-07ec70b6ff2e" x="467" y="118" width="85" height="25"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -889,8 +889,8 @@
 				</box>
 				<imageExpression><![CDATA[($F{SelfEmployedAnswer}.equals("Yes") ? $P{YES_DECODED} : $P{NO_DECODED})]]></imageExpression>
 			</image>
-			<textField>
-				<reportElement uuid="27205464-5cda-4cee-a4b0-ca3b2c4ff304" x="0" y="118" width="348" height="20"/>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="27205464-5cda-4cee-a4b0-ca3b2c4ff304" x="0" y="143" width="467" height="25"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -904,7 +904,7 @@
 				<textFieldExpression><![CDATA[$F{EducationQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<image hAlign="Center" vAlign="Middle" isUsingCache="true">
-				<reportElement uuid="2583c148-a495-45fa-9702-7922b4cf9764" x="348" y="118" width="204" height="20"/>
+				<reportElement uuid="2583c148-a495-45fa-9702-7922b4cf9764" x="467" y="143" width="85" height="25"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -914,8 +914,8 @@
 				</box>
 				<imageExpression><![CDATA[($F{EducationAnswer}.equals("Yes") ? $P{YES_DECODED} : $P{NO_DECODED})]]></imageExpression>
 			</image>
-			<textField>
-				<reportElement uuid="8f2f7315-1233-4c4f-a917-e3515aa55d70" x="0" y="138" width="348" height="20"/>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="8f2f7315-1233-4c4f-a917-e3515aa55d70" x="0" y="168" width="467" height="25"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -929,7 +929,7 @@
 				<textFieldExpression><![CDATA[$F{BreaksQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<image hAlign="Center" vAlign="Middle" isUsingCache="true">
-				<reportElement uuid="eb4ebfa6-8f4e-4079-9997-17029e2e3316" x="348" y="138" width="204" height="20"/>
+				<reportElement uuid="eb4ebfa6-8f4e-4079-9997-17029e2e3316" x="467" y="168" width="85" height="25"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -939,8 +939,8 @@
 				</box>
 				<imageExpression><![CDATA[($F{BreaksAnswer}.equals("Yes") ? $P{YES_DECODED} : $P{NO_DECODED})]]></imageExpression>
 			</image>
-			<textField>
-				<reportElement uuid="b330d32a-43b3-4faf-8e99-4d973dada339" x="0" y="158" width="348" height="20"/>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="b330d32a-43b3-4faf-8e99-4d973dada339" x="0" y="193" width="467" height="25" isPrintWhenDetailOverflows="true"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -954,7 +954,7 @@
 				<textFieldExpression><![CDATA[$F{HavePartnerQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<image hAlign="Center" vAlign="Middle" isUsingCache="true">
-				<reportElement uuid="f1897bd7-ca46-4a8d-8855-920a9937aaca" x="348" y="158" width="204" height="20"/>
+				<reportElement uuid="f1897bd7-ca46-4a8d-8855-920a9937aaca" x="467" y="193" width="85" height="25"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -964,8 +964,8 @@
 				</box>
 				<imageExpression><![CDATA[($F{HavePartnerAnswer}.equals("Yes") ? $P{YES_DECODED} : $P{NO_DECODED})]]></imageExpression>
 			</image>
-			<textField>
-				<reportElement uuid="06c31623-c0a0-4cca-b130-5a2e77914a0f" x="0" y="178" width="348" height="20"/>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="06c31623-c0a0-4cca-b130-5a2e77914a0f" x="0" y="218" width="467" height="25" isPrintWhenDetailOverflows="true"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -979,7 +979,7 @@
 				<textFieldExpression><![CDATA[$F{ClaimantReceiveEEAPensionsBenefitsQuestion}]]></textFieldExpression>
 			</textField>
 			<image hAlign="Center" vAlign="Middle" isUsingCache="true">
-				<reportElement uuid="a01361bc-71ad-4bb2-9330-2c81d352dbea" x="348" y="178" width="204" height="20"/>
+				<reportElement uuid="a01361bc-71ad-4bb2-9330-2c81d352dbea" x="467" y="218" width="85" height="25"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -989,8 +989,8 @@
 				</box>
 				<imageExpression><![CDATA[($F{ClaimantReceiveEEAPensionsBenefitsAnswer}.equals("Yes") ? $P{YES_DECODED} : $P{NO_DECODED})]]></imageExpression>
 			</image>
-			<textField>
-				<reportElement uuid="cf7fe3d0-c6dc-4a19-98d2-fc8dba3ef872" x="0" y="198" width="348" height="20"/>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="cf7fe3d0-c6dc-4a19-98d2-fc8dba3ef872" x="0" y="243" width="467" height="25" isPrintWhenDetailOverflows="true"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -1004,7 +1004,7 @@
 				<textFieldExpression><![CDATA[$F{ClaimantTimeOutsideGBLast3YearsQuestion}]]></textFieldExpression>
 			</textField>
 			<image hAlign="Center" vAlign="Middle" isUsingCache="true">
-				<reportElement uuid="0e845ac5-eaa2-46dc-a922-5b53c5ee5e46" x="348" y="198" width="204" height="20"/>
+				<reportElement uuid="0e845ac5-eaa2-46dc-a922-5b53c5ee5e46" x="467" y="243" width="85" height="25"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -1014,8 +1014,8 @@
 				</box>
 				<imageExpression><![CDATA[($F{ClaimantTimeOutsideGBLast3YearsAnswer}.equals("Yes") ? $P{YES_DECODED} : $P{NO_DECODED})]]></imageExpression>
 			</image>
-			<textField>
-				<reportElement uuid="920b5cf8-6403-461e-82ad-df84c0832c5f" x="0" y="218" width="348" height="20"/>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="920b5cf8-6403-461e-82ad-df84c0832c5f" x="0" y="268" width="467" height="25"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -1029,7 +1029,7 @@
 				<textFieldExpression><![CDATA[$F{StatePensionQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<image hAlign="Center" vAlign="Middle" isUsingCache="true">
-				<reportElement uuid="e5ed7cc5-4e11-4335-83a7-9e00d03707b4" x="348" y="218" width="204" height="20"/>
+				<reportElement uuid="e5ed7cc5-4e11-4335-83a7-9e00d03707b4" x="467" y="268" width="85" height="25"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -1039,8 +1039,8 @@
 				</box>
 				<imageExpression><![CDATA[($F{StatePensionAnswer}.equals("Yes") ? $P{YES_DECODED} : $P{NO_DECODED})]]></imageExpression>
 			</image>
-			<textField>
-				<reportElement uuid="431a0140-6292-433f-af75-6be276febe9a" x="0" y="238" width="348" height="20"/>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="431a0140-6292-433f-af75-6be276febe9a" x="0" y="293" width="467" height="25"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -1054,7 +1054,7 @@
 				<textFieldExpression><![CDATA[$F{OtherMoneySSPQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<image hAlign="Center" vAlign="Middle" isUsingCache="true">
-				<reportElement uuid="4ed4140b-9b45-4478-91ae-5c446030dee8" x="348" y="238" width="204" height="20"/>
+				<reportElement uuid="4ed4140b-9b45-4478-91ae-5c446030dee8" x="467" y="293" width="85" height="25"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -1064,8 +1064,8 @@
 				</box>
 				<imageExpression><![CDATA[($F{OtherMoneySSPAnswer}.equals("Yes") ? $P{YES_DECODED} : $P{NO_DECODED})]]></imageExpression>
 			</image>
-			<textField>
-				<reportElement uuid="31c37ec7-2f95-45f3-8464-d8d24a67dff8" x="0" y="258" width="348" height="20"/>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="31c37ec7-2f95-45f3-8464-d8d24a67dff8" x="0" y="318" width="467" height="25"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -1079,7 +1079,7 @@
 				<textFieldExpression><![CDATA[$F{welshQuestion}]]></textFieldExpression>
 			</textField>
 			<image hAlign="Center" vAlign="Middle" isUsingCache="true">
-				<reportElement uuid="0cec6145-8e24-4ef1-a41e-22b46f428681" x="348" y="258" width="204" height="20"/>
+				<reportElement uuid="0cec6145-8e24-4ef1-a41e-22b46f428681" x="467" y="318" width="85" height="25"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -1092,7 +1092,7 @@
 		</band>
 	</detail>
 	<pageFooter>
-		<band height="126" splitType="Stretch">
+		<band height="46" splitType="Stretch">
 			<staticText>
 				<reportElement uuid="14290dee-dea6-41aa-85d5-6eabdea0be6f" x="0" y="0" width="66" height="20"/>
 				<textElement verticalAlignment="Middle"/>
