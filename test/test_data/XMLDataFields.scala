@@ -10,43 +10,67 @@ case class XMLDataFields(xml: Elem) extends TestUtils{
 
   val transactionPath = xml \\ "DWPCATransaction" \\ "TransactionId"
 
-  val title = rootPath \\ "Claimant" \\ "Title"
+  val titleQuestion = rootPath \\ "Claimant" \\ "Title" \\ "QuestionLabel"
 
-  val claimantOtherSurnames = rootPath \\ "Claimant" \\ "OtherSurnames"
+  val titleAnswer = rootPath \\ "Claimant" \\ "Title" \\ "Answer"
 
-  val surName = rootPath \\ "Claimant" \\ "Surname"
+  val claimantOtherSurnamesAnswer = rootPath \\ "Claimant" \\ "OtherSurnames" \\ "Answer"
 
-  val nationalInsuranceNumber = rootPath \\ "Claimant" \\ "NationalInsuranceNumber"
+  val claimantOtherSurnamesQuestion = rootPath \\ "Claimant" \\ "OtherSurnames" \\ "QuestionLabel"
 
-  val firstName = rootPath \\ "Claimant" \\ "OtherNames"
+  val surNameAnswer = rootPath \\ "Claimant" \\ "Surname" \\ "Answer"
 
-  val careeLastName = rootPath \\ "Caree" \\ "Surname"
+  val surNameQuestion = rootPath \\ "Claimant" \\ "Surname" \\ "QuestionLabel"
 
-  val careeFirstName = rootPath \\ "Caree" \\ "OtherNames"
+  val nationalInsuranceNumberAnswer = rootPath \\ "Claimant" \\ "NationalInsuranceNumber" \\ "Answer"
 
-  val careeTitle = rootPath \\ "Caree" \\ "Title"
+  val nationalInsuranceNumberQuestion = rootPath \\ "Claimant" \\ "NationalInsuranceNumber" \\ "QuestionLabel"
+
+  val firstNameAnswer = rootPath \\ "Claimant" \\ "OtherNames" \\ "Answer"
+
+  val firstNameQuestion = rootPath \\ "Claimant" \\ "OtherNames" \\ "QuestionLabel"
+
+  val careeLastNameAnswer = rootPath \\ "Caree" \\ "Surname" \\ "Answer"
+
+  val careeFirstNameAnswer = rootPath \\ "Caree" \\ "OtherNames" \\ "Answer"
+
+  val careeTitleAnswer = rootPath \\ "Caree" \\ "Title" \\ "Answer"
 
   val dateClaimReceived = xml \\ "DWPCATransaction" \\ "DateTimeGenerated"
 
-  val addressCarer = (rootPath \\ "Claimant" \\ "Address" \\ "Line").map(x => x.text).filterNot(x => x.isEmpty).mkString(" ")
+  val addressCarerAnswer = (rootPath \\ "Claimant" \\ "Address" \\ "Answer" \\ "Line").map(x => x.text).filterNot(x => x.isEmpty).mkString(" ")
+
+  val addressCarerQuestion = (rootPath \\ "Claimant" \\ "Address" \\ "QuestionLabel")
 
   val postCodeCarer = rootPath \\ "Claimant" \\ "Address" \\ "PostCode"
 
-  val addressCaree = (rootPath \\ "Caree" \\ "Address" \\ "Line").map(x => x.text).filterNot(x => x.isEmpty).mkString(" ")
+  val addressCareeAnswer = (rootPath \\ "Caree" \\ "Address" \\ "Line" \\ "Answer").map(x => x.text).filterNot(x => x.isEmpty).mkString(" ")
 
   val postCodeCaree = rootPath \\ "Caree" \\ "Address" \\ "PostCode"
 
-  val parnerNINO = rootPath \\ "Partner" \\ "NationalInsuranceNumber"
+  val parnerNINOAnswer = rootPath \\ "Partner" \\ "NationalInsuranceNumber" \\ "Answer"
 
-  val partnerSurname = rootPath \\ "Partner" \\ "Surname"
+  val parnerNINOQuestion = rootPath \\ "Partner" \\ "NationalInsuranceNumber" \\ "QuestionLabel"
 
-  val partnerOtherNames = rootPath \\ "Partner" \\ "OtherNames"
+  val partnerSurnameAnswer = rootPath \\ "Partner" \\ "Surname" \\ "Answer"
 
-  val partnerTitle = rootPath \\ "Partner" \\ "Title"
+  val partnerSurnameQuestion = rootPath \\ "Partner" \\ "Surname" \\ "QuestionLabel"
 
-  val partnerOtherSurnames = rootPath \\ "Partner" \\ "OtherSurnames"
+  val partnerOtherNamesAnswer = rootPath \\ "Partner" \\ "OtherNames" \\ "Answer"
 
-  val nationality = SectionPart1AboutYouTheCarer(xml: Elem).nationality
+  val partnerOtherNamesQuestion = rootPath \\ "Partner" \\ "OtherNames" \\ "QuestionLabel"
+
+  val partnerTitleAnswer = rootPath \\ "Partner" \\ "Title" \\ "Answer"
+
+  val partnerTitleQuestion = rootPath \\ "Partner" \\ "Title" \\ "QuestionLabel"
+
+  val partnerOtherSurnamesAnswer = rootPath \\ "Partner" \\ "OtherSurnames" \\ "Answer"
+
+  val partnerOtherSurnamesQuestion = rootPath \\ "Partner" \\ "OtherSurnames" \\ "QuestionLabel"
+
+  val nationalityAnswer = SectionPart1AboutYouTheCarer(xml: Elem).nationalityAnswer
+
+  val nationalityQuestion = SectionPart1AboutYouTheCarer(xml: Elem).nationalityQuestion
 
   val receiveEEAPensionsBenefitsQuestion = SectionPart1AboutYouTheCarer(xml: Elem).receiveEEAPensionsBenefitsQuestion
 
@@ -67,14 +91,14 @@ case class XMLDataFields(xml: Elem) extends TestUtils{
   val careBreak: Seq[String] = {
     (rootPath \\ "Caree" \\ "CareBreak").
       map(x => {
-      val fromDate: Seq[String] = Seq("From date and time " + (x \\ "StartDateTime").text)
+      val fromDate: Seq[String] = Seq((x \\ "StartDateTime" \\ "QuestionLabel").text + " " + (x \\ "StartDateTime" \\ "Answer").text)
       val toDate: Seq[String] = (x \\ "EndDateTime").text.isEmpty match {
         case true => Seq()
-        case false => Seq("To date and time " + (x \\ "EndDateTime").text)
+        case false => Seq((x \\ "EndDateTime" \\ "QuestionLabel").text + " " + (x \\ "EndDateTime" \\ "Answer").text)
       }
       val otherData = Seq(
          buildQuestion((x \\ "ReasonClaimant" \\ "QuestionLabel").text,(x \\ "ReasonClaimant" \\ "Answer").text),
-         (x \\ "ReasonClaimant" \\ "Other").text,
+         (x \\ "ReasonClaimant" \\ "Other" \\ "Answer").text,
         buildQuestion((x \\ "ReasonCaree" \\ "QuestionLabel").text,(x \\ "ReasonCaree" \\ "Answer").text),
         buildQuestion((x \\ "MedicalCare" \\ "QuestionLabel").text,(x \\ "MedicalCare" \\ "Answer").text)
       )

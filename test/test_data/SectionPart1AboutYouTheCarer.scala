@@ -10,11 +10,17 @@ case class SectionPart1AboutYouTheCarer(xml: Elem) {
 
   val rootPathResidency = xml \\ "DWPCATransaction" \\ "DWPCAClaim" \\ "Residency"
 
-  val title = rootPathClaimant \\ "Title"
+  val titleAnswer = rootPathClaimant \\ "Title" \\ "Answer"
 
-  val firstName = rootPathClaimant  \\ "OtherNames"
+  val titleQuestion = rootPathClaimant \\ "Title" \\ "QuestionLabel"
 
-  val lastName = rootPathClaimant  \\ "Surname"
+  val firstNameAnswer = rootPathClaimant  \\ "OtherNames" \\ "Answer"
+
+  val firstNameQuestion = rootPathClaimant  \\ "OtherNames" \\ "QuestionLabel"
+
+  val lastNameAnswer = rootPathClaimant  \\ "Surname" \\ "Answer"
+
+  val lastNameQuestion = rootPathClaimant  \\ "Surname" \\ "QuestionLabel"
 
   val otherSurnameOrMaidenName = rootPathClaimant  \\ "OtherSurnames"
 
@@ -40,7 +46,9 @@ case class SectionPart1AboutYouTheCarer(xml: Elem) {
 
   val speechOrHearingDifficultyAnswer = rootPathClaimant \\ "TextPhoneContact" \\ "Answer"
 
-  val nationality =  rootPathResidency \\ "Nationality"
+  val nationalityAnswer =  rootPathResidency \\ "Nationality" \\ "Answer"
+
+  val nationalityQuestion =  rootPathResidency \\ "Nationality" \\ "QuestionLabel"
 
   val doYouLiveEnglandScotlandWalesQuestion = rootPathResidency \\ "NormallyLiveInGB" \\ "QuestionLabel"
 

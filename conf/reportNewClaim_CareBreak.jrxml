@@ -7,17 +7,17 @@
 	<queryString language="xPath">
 		<![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/CareBreak]]>
 	</queryString>
-	<field name="StartDateTime" class="java.lang.String">
-		<fieldDescription><![CDATA[StartDateTime]]></fieldDescription>
+	<field name="StartDateTimeAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[StartDateTime/Answer]]></fieldDescription>
 	</field>
-	<field name="EndDateTime" class="java.lang.String">
-		<fieldDescription><![CDATA[EndDateTime]]></fieldDescription>
+	<field name="EndDateTimeAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[EndDateTime/Answer]]></fieldDescription>
 	</field>
 	<field name="ReasonClaimantQuestionLabel" class="java.lang.String">
 		<fieldDescription><![CDATA[ReasonClaimant/QuestionLabel]]></fieldDescription>
 	</field>
-	<field name="ReasonClaimantOther" class="java.lang.String">
-		<fieldDescription><![CDATA[ReasonClaimant/Other]]></fieldDescription>
+	<field name="ReasonClaimantOtherAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[ReasonClaimant/Other/Answer]]></fieldDescription>
 	</field>
 	<field name="ReasonClaimantAnswer" class="java.lang.String">
 		<fieldDescription><![CDATA[ReasonClaimant/Answer]]></fieldDescription>
@@ -40,12 +40,21 @@
 	<field name="BreaksSinceClaimAnswer" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/BreaksSinceClaim/Answer]]></fieldDescription>
 	</field>
+	<field name="StartDateTimeQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[StartDateTime/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="EndDateTimeQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[EndDateTime/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="ReasonClaimantOtherQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[ReasonClaimant/Other/QuestionLabel]]></fieldDescription>
+	</field>
 	<variable name="variable1" class="java.lang.Integer" incrementType="Group" incrementGroup="Break">
 		<variableExpression><![CDATA[$V{variable1}+1]]></variableExpression>
 		<initialValueExpression><![CDATA[1]]></initialValueExpression>
 	</variable>
 	<group name="Break">
-		<groupExpression><![CDATA[$F{StartDateTime}]]></groupExpression>
+		<groupExpression><![CDATA[$F{StartDateTimeAnswer}]]></groupExpression>
 		<groupHeader>
 			<band height="22" splitType="Prevent">
 				<textField isBlankWhenNull="true">
@@ -87,29 +96,27 @@
 	</pageHeader>
 	<detail>
 		<band height="132" splitType="Prevent">
-			<staticText>
-				<reportElement uuid="dc478e1f-5c6e-4f3e-bac4-b386f0503472" x="20" y="1" width="330" height="18"/>
+			<textField>
+				<reportElement uuid="111c129f-a7b9-4827-bd88-0d8d0478c093" x="20" y="1" width="330" height="18"/>
 				<textElement/>
-				<text><![CDATA[From date and time]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA[$F{StartDateTimeQuestionLabel}]]></textFieldExpression>
+			</textField>
 			<textField>
 				<reportElement uuid="218f2dc4-631a-44bc-b575-c5358348e9ea" x="355" y="1" width="197" height="18"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{StartDateTime}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{StartDateTimeAnswer}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement uuid="10c13715-86ee-409d-a59a-16c4c9acada8" x="20" y="22" width="330" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{EndDateTime} != null]]></printWhenExpression>
-				</reportElement>
+			<textField>
+				<reportElement uuid="e03c71c0-bdd9-450c-bdbb-5b5e4c68a024" x="20" y="22" width="330" height="18"/>
 				<textElement/>
-				<text><![CDATA[To date and time]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA[$F{EndDateTimeQuestionLabel}]]></textFieldExpression>
+			</textField>
 			<textField>
 				<reportElement uuid="ae1699e8-0023-4c15-81b8-44ecdfbd3a0d" x="355" y="22" width="197" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{EndDateTime} != null]]></printWhenExpression>
+					<printWhenExpression><![CDATA[$F{EndDateTimeAnswer} != null]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{EndDateTime}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{EndDateTimeAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
 				<reportElement uuid="b15a6344-b09e-4634-b2bc-4d81c2bf1d0d" x="20" y="44" width="330" height="18" isRemoveLineWhenBlank="true">
@@ -125,19 +132,17 @@
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{ReasonClaimantAnswer}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement uuid="8f14bcdc-90ac-4c47-b79e-f3ee991dc9d5" x="20" y="63" width="330" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{ReasonClaimantOther} != null]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Middle"/>
-				<text><![CDATA[Other]]></text>
-			</staticText>
+			<textField>
+				<reportElement uuid="41271743-50db-490d-80e5-53ee557e82dd" x="20" y="63" width="330" height="18"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{ReasonClaimantOtherQuestionLabel}]]></textFieldExpression>
+			</textField>
 			<textField isStretchWithOverflow="true">
 				<reportElement uuid="193b9430-bdc2-43a1-9cc9-c099401fdaa5" x="355" y="63" width="197" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{ReasonClaimantOther} != null]]></printWhenExpression>
+					<printWhenExpression><![CDATA[$F{ReasonClaimantOtherAnswer} != null]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{ReasonClaimantOther}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{ReasonClaimantOtherAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="6928b9ab-0492-4afc-af0a-7c29241cf924" mode="Opaque" x="20" y="84" width="330" height="18" isRemoveLineWhenBlank="true"/>

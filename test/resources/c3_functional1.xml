@@ -1,32 +1,38 @@
-<DWPBody xsi:schemaLocation="http://www.govtalk.gov.uk/dwp/carers-allowance file:/xsdfiles/schema/ca/CarersAllowance_Schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns="http://www.govtalk.gov.uk/dwp/carers-allowance">
+<DWPBody xsi:schemaLocation="http://www.govtalk.gov.uk/dwp/carers-allowance file:/future/schema/ca/CarersAllowance_Schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns="http://www.govtalk.gov.uk/dwp/carers-allowance">
     <Version>0.1</Version>
     <DWPCATransaction id="TEST432">
         <TransactionId>TEST432</TransactionId>
-        <DateTimeGenerated>27-03-2014 10:44</DateTimeGenerated>
+        <DateTimeGenerated>24-04-2014 10:51</DateTimeGenerated>
         <DWPCAClaim>
             <DateOfClaim><QuestionLabel>When do you want your Carer's Allowance claim to start?</QuestionLabel><Answer>21-07-2013</Answer></DateOfClaim>
             <Claimant>
-                <Surname>Caseone</Surname>
-                <OtherNames>Test </OtherNames>
+                <Surname><QuestionLabel>Last name</QuestionLabel><Answer>Caseone</Answer></Surname>
+                <OtherNames><QuestionLabel>First name</QuestionLabel><Answer>Test </Answer></OtherNames>
 
-                <Title>Mr</Title>
-                <DateOfBirth>28-09-1976</DateOfBirth>
-                <NationalInsuranceNumber>AB123456C</NationalInsuranceNumber>
+                <Title><QuestionLabel>Title</QuestionLabel><Answer>Mr</Answer></Title>
+                <DateOfBirth><QuestionLabel>Date of birth</QuestionLabel><Answer>28-09-1976</Answer></DateOfBirth>
+                <NationalInsuranceNumber><QuestionLabel>National Insurance number</QuestionLabel><Answer>AB123456C</Answer></NationalInsuranceNumber>
                 <Address>
-                    <Line>1 Preston Road</Line><Line>Preston</Line><PostCode>PR1 1HB</PostCode>
+                    <QuestionLabel>Address</QuestionLabel>
+                    <Answer>
+                        <Line>1 Preston Road</Line><Line>Preston</Line><PostCode>PR1 1HB</PostCode>
+                    </Answer>
                 </Address>
-                <DayTimePhoneNumber>07111 111 111</DayTimePhoneNumber>
-                <MaritalStatus>Single</MaritalStatus>
+                <DayTimePhoneNumber><QuestionLabel>How we can contact you</QuestionLabel><Answer>07111 111 111</Answer></DayTimePhoneNumber>
+                <MaritalStatus><QuestionLabel>What is your marital status?</QuestionLabel><Answer>Single</Answer></MaritalStatus>
 
             </Claimant>
             <Caree>
-                <Surname>Caseone</Surname>
-                <OtherNames>Test </OtherNames>
-                <Title>Dame</Title>
-                <DateOfBirth>12-09-1980</DateOfBirth>
+                <Surname><QuestionLabel>Last name</QuestionLabel><Answer>Caseone</Answer></Surname>
+                <OtherNames><QuestionLabel>First name</QuestionLabel><Answer>Test </Answer></OtherNames>
+                <Title><QuestionLabel>Title</QuestionLabel><Answer>Dame</Answer></Title>
+                <DateOfBirth><QuestionLabel>Date of birth</QuestionLabel><Answer>12-09-1980</Answer></DateOfBirth>
 
                 <Address>
-                    <Line>1 Preston Road</Line><Line>Preston</Line><PostCode>PR1 1HB</PostCode>
+                    <QuestionLabel>Address</QuestionLabel>
+                    <Answer>
+                        <Line>1 Preston Road</Line><Line>Preston</Line><PostCode>PR1 1HB</PostCode>
+                    </Answer>
                 </Address>
 
                 <RelationToClaimant><QuestionLabel>What's their relationship to you?</QuestionLabel><Answer>Partner</Answer></RelationToClaimant>
@@ -43,7 +49,7 @@
 
 
 
-                <Nationality>British</Nationality>
+                <Nationality><QuestionLabel>What is your nationality?</QuestionLabel><Answer>British</Answer></Nationality>
 
                 <PeriodAbroad>
                     <TimeOutsideGBLast3Years><QuestionLabel>Have you been out of England, Scotland or Wales for more than 52 weeks in the last 3 years before your claim date?</QuestionLabel><Answer>No</Answer></TimeOutsideGBLast3Years>
@@ -85,7 +91,7 @@
                     <Title>The declarations below sets out your legal responsibilities in respect of your claim.</Title>
                     <Content>I declare that I understand the Carer's Allowance Claim Notes and that the information provided on this claim form is correct and complete.</Content>
                     <Content>I understand that I must report all changes in my circumstances or that of the person that I am caring for which may affect my entitlement promptly and by failing to do so I may be liable to prosecution or face a financial penalty.</Content>
-                    <Content>I will use the online service or phone 0845 6084321 or write to Carer's Allowance Unit, Palatine House, Lancaster Road, Preston, PR1 1HB to report a change in my circumstances or that of the person that I am caring for.</Content>
+                    <Content>I will use the online service or phone 0345 608 4321 or write to Carer's Allowance Unit, Palatine House, Lancaster Road, Preston, PR1 1HB to report a change in my circumstances or that of the person that I am caring for.</Content>
                     <Content>If I give false or incomplete information or fail to report changes in my circumstances or that of the person that I am caring for promptly, I understand that my Carer's Allowance may be stopped or reduced and any overpayment of Carer's Allowance may be recovered. In addition I may be prosecuted or face a financial penalty.</Content>
                 </DeclarationStatement>
                 <DeclarationQuestion><QuestionLabel>Please tick this box if this claim form has been filled in by someone else, if so, please ensure that you understand the declarations above as another person cannot make the declarations on your behalf.</QuestionLabel><Answer>Yes</Answer></DeclarationQuestion>
@@ -124,8 +130,8 @@
             <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
             <ds:Reference URI="#TEST432">
                 <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
-                <ds:DigestValue>a6oCueAXYgb19usBbXrV3BL5GVk=</ds:DigestValue>
+                <ds:DigestValue>LgZvN3Or9N2d/V4etZomg/U1qCE=</ds:DigestValue>
             </ds:Reference>
         </ds:SignedInfo>
-        <ds:SignatureValue>TbZltuSP1x8VKWklQ/Cs9XvzZ0JMEtrgRklRvT0fKoa//g7Fu97SQQ==</ds:SignatureValue>
+        <ds:SignatureValue>UuPAGy+NvvekNZso44y1NRpq8HdIQXOVDu0XYxVIEFdYYEYzQxNO9A==</ds:SignatureValue>
     </ds:Signature></DWPBody>

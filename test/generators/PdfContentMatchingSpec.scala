@@ -5,6 +5,7 @@ import generators.Helper._
 import java.io.File
 import com.itextpdf.text.pdf.parser.{SimpleTextExtractionStrategy, PdfReaderContentParser}
 import org.specs2.mutable.Specification
+import play.Logger
 
 trait PdfContentMatchingSpec extends Specification{
 
@@ -37,11 +38,12 @@ trait PdfContentMatchingSpec extends Specification{
 
   def foundMustBeTrue(testData: Seq[String], totalContent: String) = {
     testData.forall(x => {
+      Logger.trace(s"x : $x")
       val found = totalContent.toLowerCase.contains(x.toLowerCase)
       if (!found) {
-        println("TotalContent " + totalContent)
-        println("*** Cannot find: " + x.toLowerCase)
-        println("*** End ***")
+        Logger.debug("TotalContent " + totalContent)
+        Logger.debug("*** Cannot find: " + x.toLowerCase)
+        Logger.debug("*** End ***")
       }
       found
     })

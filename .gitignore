@@ -24,3 +24,5 @@ bin
 logfile
 *.jasper
 *.pdf
+*.html
+public/images/img_*

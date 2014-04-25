@@ -23,23 +23,23 @@ object XMLData extends TestUtils{
   def functionalTestCase2(xml: Elem) = {
     val fields = XMLDataFields(xml)
     Seq(
-      "Other surname or maiden name " + fields.claimantOtherSurnames.text,
-      "Other surname or maiden name " + fields.partnerOtherSurnames.text
+      buildQuestion(fields.claimantOtherSurnamesQuestion.text, fields.claimantOtherSurnamesAnswer.text),
+      buildQuestion(fields.partnerOtherSurnamesQuestion.text, fields.partnerOtherSurnamesAnswer.text)
     ) ++ functionalTestCaseMandatoryFields(xml) ++ aboutYourPartner(fields)
   }
 
   def functionalTestCase3(xml: Elem) = {
     val fields = XMLDataFields(xml)
     Seq(
-      "Other surname or maiden name " + fields.claimantOtherSurnames.text,
-      "Other surname or maiden name " + fields.partnerOtherSurnames.text
+      buildQuestion(fields.claimantOtherSurnamesQuestion.text, fields.claimantOtherSurnamesAnswer.text),
+      buildQuestion(fields.partnerOtherSurnamesQuestion.text, fields.partnerOtherSurnamesAnswer.text)
     ) ++ functionalTestCaseMandatoryFields(xml) ++ aboutYourPartner(fields) ++ careBreaks(fields)
   }
 
   def functionalTestCase4(xml: Elem): Seq[String] = {
     val fields = XMLDataFields(xml)
     Seq(
-      "Other surname or maiden name " + fields.claimantOtherSurnames.text
+      buildQuestion(fields.claimantOtherSurnamesQuestion.text, fields.claimantOtherSurnamesAnswer.text)
     ) ++ functionalTestCaseMandatoryFields(xml) ++ careBreaks(fields)
   }
 
@@ -76,7 +76,7 @@ object XMLData extends TestUtils{
   def functionalTestCaseMandatoryFields(xml: Elem) = {
     val fields = XMLDataFields(xml)
     Seq(
-      "Transaction: " + fields.transactionPath.text + " " + fields.title.text + " " + fields.surName.text + " " + fields.nationalInsuranceNumber.text,
+      "Transaction: " + fields.transactionPath.text + " " + fields.titleAnswer.text + " " + fields.surNameAnswer.text + " " + fields.nationalInsuranceNumberAnswer.text,
       "Summary",
       "About the care you provide"
     ) ++ aboutYouTheCarer(fields) ++ aboutTheCareYouProvide(fields) ++ claimDates(fields) ++ claimSummary(fields)
@@ -84,21 +84,21 @@ object XMLData extends TestUtils{
 
   def aboutYouTheCarer(fields: XMLDataFields) = {
     Seq("About you - the carer",
-      "National Insurance Number " + fields.nationalInsuranceNumber.text,
-      "Last name " + fields.surName.text,
-      "First name(s) " + fields.firstName.text,
-      "Title " + fields.title.text,
-       fields.addressCarer,
-       fields.postCodeCarer.text
+      buildQuestion(fields.nationalInsuranceNumberQuestion.text, fields.nationalInsuranceNumberAnswer.text.trim),
+      buildQuestion(fields.surNameQuestion.text, fields.surNameAnswer.text.trim),
+      buildQuestion(fields.firstNameQuestion.text, fields.firstNameAnswer.text.trim),
+      buildQuestion(fields.titleQuestion.text, fields.titleAnswer.text.trim),
+      fields.addressCarerAnswer,
+      fields.postCodeCarer.text
     )
   }
 
   def aboutTheCareYouProvide(fields: XMLDataFields) = {
     Seq(
-      "Last name " + fields.careeLastName.text,
-      "First name(s) " + fields.careeFirstName.text,
-      "Title " + fields.careeTitle.text,
-      fields.addressCaree,
+      fields.surNameQuestion.text + " " + fields.surNameAnswer.text.trim + " " + fields.careeLastNameAnswer.text.trim,
+      fields.firstNameQuestion.text + " " + fields.firstNameAnswer.text.trim + " " + fields.careeFirstNameAnswer.text.trim,
+      fields.titleQuestion.text + " " + fields.titleAnswer.text + " " + fields.careeTitleAnswer.text,
+      fields.addressCareeAnswer,
       fields.postCodeCaree.text
     )
   }
@@ -111,7 +111,7 @@ object XMLData extends TestUtils{
 
   def claimSummary(fields: XMLDataFields) = {
     Seq("Claim Summary",
-      "What is your nationality "+fields.nationality.text,
+      fields.nationalityAnswer.text,
       buildQuestion(fields.receiveEEAPensionsBenefitsQuestion.text, fields.receiveEEAPensionsBenefitsAnswer.text),
       buildQuestion(fields.timeOutsideGBLast3YearsQuestion.text, fields.timeOutsideGBLast3YearsAnswer.text),
       buildQuestion(fields.statePensionQuestion.text, fields.statePensionAnswer.text),
@@ -121,10 +121,10 @@ object XMLData extends TestUtils{
   }
 
   def aboutYourPartner(fields: XMLDataFields) = Seq(
-    "National Insurance Number " + fields.parnerNINO.text,
-    "Last name " + fields.partnerSurname.text,
-    "First name(s) " + fields.partnerOtherNames.text,
-    "Title " + fields.partnerTitle.text
+    buildQuestion(fields.parnerNINOQuestion.text, fields.parnerNINOAnswer.text),
+    buildQuestion(fields.partnerSurnameQuestion.text,fields.partnerSurnameAnswer.text),
+    buildQuestion(fields.partnerOtherNamesQuestion.text,fields.partnerOtherNamesAnswer.text),
+    buildQuestion(fields.partnerTitleQuestion.text,fields.partnerTitleAnswer.text)
   )
 
   def careBreaks(fields: XMLDataFields) = fields.careBreak
@@ -133,9 +133,9 @@ object XMLData extends TestUtils{
     val fields = SectionPart1AboutYouTheCarer(xml)
     Seq("Part 1 - About you - the carer",
       "Your details",
-      "Title " + fields.title.text,
-      "First Name " + fields.firstName.text,
-      "Last Name "+ fields.lastName.text,
+      buildQuestion(fields.titleQuestion.text, fields.titleAnswer.text),
+      buildQuestion(fields.firstNameQuestion.text, fields.firstNameAnswer.text),
+      buildQuestion(fields.lastNameQuestion.text, fields.lastNameAnswer.text),
       "Other surname or maiden name " + fields.otherSurnameOrMaidenName.text,
       "National Insurance number " + fields.nationalInsuranceNumber.text,
       "Date of Birth " + fields.dateOfBirth.text,
@@ -148,7 +148,7 @@ object XMLData extends TestUtils{
       "Mobile number " + fields.mobileNumber.text,
       fields.speechOrHearingDifficultyQuestion.text +" "+ fields.speechOrHearingDifficultyAnswer.text,
       "Your nationality and residency",
-      "What is your nationality "+fields.nationality.text,
+      fields.nationalityAnswer.text,
       fields.doYouLiveEnglandScotlandWalesQuestion.text +" "+fields.doYouLiveEnglandScotlandWalesAnswer.text,
       fields.countryNormallyLiveInQuestion.text +" "+fields.countryNormallyLiveInAnswer.text,
       "Time outside of England, Scotland or Wales",
