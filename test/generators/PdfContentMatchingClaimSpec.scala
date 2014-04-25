@@ -87,7 +87,6 @@ class PdfContentMatchingClaimSpec extends PdfContentMatchingSpec {
     }
 
     "extract PDF for functionalTestCase7 and match contents" in new WithApplication{
-      pending
       val pdfFileLocation = "functionalTestCase7_contentTestPDF.pdf"
       val source = getClass.getResource("/c3_functional7.xml")
       val textCaseXml = XML.load(source)
