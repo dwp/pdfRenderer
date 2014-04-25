@@ -1,94 +1,100 @@
-<DWPBody xsi:schemaLocation="http://www.govtalk.gov.uk/dwp/carers-allowance file:/xsdfiles/schema/ca/CarersAllowance_Schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns="http://www.govtalk.gov.uk/dwp/carers-allowance">
+<DWPBody xsi:schemaLocation="http://www.govtalk.gov.uk/dwp/carers-allowance file:/future/schema/ca/CarersAllowance_Schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns="http://www.govtalk.gov.uk/dwp/carers-allowance">
     <Version>0.1</Version>
     <DWPCATransaction id="TEST432">
         <TransactionId>TEST432</TransactionId>
-        <DateTimeGenerated>27-03-2014 11:09</DateTimeGenerated>
+        <DateTimeGenerated>25-04-2014 11:11</DateTimeGenerated>
         <DWPCAClaim>
             <DateOfClaim><QuestionLabel>When do you want your Carer's Allowance claim to start?</QuestionLabel><Answer>10-02-2013</Answer></DateOfClaim>
             <Claimant>
-                <Surname>CaseFive</Surname>
-                <OtherNames>Test Middle</OtherNames>
-                <OtherSurnames>Donaldson</OtherSurnames>
-                <Title>Mr</Title>
-                <DateOfBirth>01-01-1981</DateOfBirth>
-                <NationalInsuranceNumber>XB486248C</NationalInsuranceNumber>
+                <Surname><QuestionLabel>Last name</QuestionLabel><Answer>CaseFive</Answer></Surname>
+                <OtherNames><QuestionLabel>First name</QuestionLabel><Answer>Test Middle</Answer></OtherNames>
+                <OtherSurnames><QuestionLabel>Other surname or maiden name</QuestionLabel><Answer>Donaldson</Answer></OtherSurnames>
+                <Title><QuestionLabel>Title</QuestionLabel><Answer>Mr</Answer></Title>
+                <DateOfBirth><QuestionLabel>Date of birth</QuestionLabel><Answer>01-01-1981</Answer></DateOfBirth>
+                <NationalInsuranceNumber><QuestionLabel>National Insurance number</QuestionLabel><Answer>XB486248C</Answer></NationalInsuranceNumber>
                 <Address>
-                    <Line>5 Preston Road</Line><Line>Preston</Line><Line>Lancashire</Line><PostCode>PR1 2TH</PostCode>
+                    <QuestionLabel>Address</QuestionLabel>
+                    <Answer>
+                        <Line>5 Preston Road</Line><Line>Preston</Line><Line>Lancashire</Line><PostCode>PR1 2TH</PostCode>
+                    </Answer>
                 </Address>
-                <DayTimePhoneNumber>01772 888901</DayTimePhoneNumber>
-                <MaritalStatus>Married or civil partner</MaritalStatus>
+                <DayTimePhoneNumber><QuestionLabel>How we can contact you</QuestionLabel><Answer>01772 888901</Answer></DayTimePhoneNumber>
+                <MaritalStatus><QuestionLabel>What is your marital status?</QuestionLabel><Answer>Married or civil partner</Answer></MaritalStatus>
                 <TextPhoneContact><QuestionLabel>If you have speech or hearing difficulties, would you like us to contact you by textphone?</QuestionLabel><Answer>No</Answer></TextPhoneContact>
             </Claimant>
             <Caree>
-                <Surname>Forfive</Surname>
-                <OtherNames>Person Cared</OtherNames>
-                <Title>Mrs</Title>
-                <DateOfBirth>12-09-1933</DateOfBirth>
-                <NationalInsuranceNumber>JA789871C</NationalInsuranceNumber>
+                <Surname><QuestionLabel>Last name</QuestionLabel><Answer>Forfive</Answer></Surname>
+                <OtherNames><QuestionLabel>First name</QuestionLabel><Answer>Person Cared</Answer></OtherNames>
+                <Title><QuestionLabel>Title</QuestionLabel><Answer>Mrs</Answer></Title>
+                <DateOfBirth><QuestionLabel>Date of birth</QuestionLabel><Answer>12-09-1933</Answer></DateOfBirth>
+                <NationalInsuranceNumber><QuestionLabel>National Insurance number</QuestionLabel><Answer>JA789871C</Answer></NationalInsuranceNumber>
                 <Address>
-                    <Line>5 Preston Road</Line><Line>Preston</Line><Line>Lancashire</Line><PostCode>PR1 2TH</PostCode>
+                    <QuestionLabel>Address</QuestionLabel>
+                    <Answer>
+                        <Line>5 Preston Road</Line><Line>Preston</Line><Line>Lancashire</Line><PostCode>PR1 2TH</PostCode>
+                    </Answer>
                 </Address>
 
                 <RelationToClaimant><QuestionLabel>What's their relationship to you?</QuestionLabel><Answer>Sister</Answer></RelationToClaimant>
                 <Cared35Hours><QuestionLabel>Do you spend 35 hours or more each week caring for the person you care for?</QuestionLabel><Answer>Yes</Answer></Cared35Hours>
                 <BreaksSinceClaim><QuestionLabel>Have you had any breaks in caring for this person since 10/02/2013?</QuestionLabel><Answer>Yes</Answer></BreaksSinceClaim>
                 <CareBreak>
-                    <StartDateTime>10-01-2010 10:15</StartDateTime>
-                    <EndDateTime>17-01-2010 17:30</EndDateTime>
+                    <StartDateTime><QuestionLabel>When did the break start?</QuestionLabel><Answer>10-01-2010 10:15</Answer></StartDateTime>
+                    <EndDateTime><QuestionLabel>When did the break end?</QuestionLabel><Answer>17-01-2010 17:30</Answer></EndDateTime>
                     <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>Yes</Answer></MedicalCare>
                     <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Answer>Home</Answer></ReasonClaimant>
                     <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Answer>Hospital</Answer></ReasonCaree>
                 </CareBreak><CareBreak>
-                <StartDateTime>20-01-2010 00:00</StartDateTime>
-                <EndDateTime>27-01-2010 00:00</EndDateTime>
+                <StartDateTime><QuestionLabel>When did the break start?</QuestionLabel><Answer>20-01-2010 00:00</Answer></StartDateTime>
+                <EndDateTime><QuestionLabel>When did the break end?</QuestionLabel><Answer>27-01-2010 00:00</Answer></EndDateTime>
                 <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>Yes</Answer></MedicalCare>
                 <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Answer>Holiday</Answer></ReasonClaimant>
                 <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Answer>Nursing Home</Answer></ReasonCaree>
             </CareBreak><CareBreak>
-                <StartDateTime>20-02-2010 12:15</StartDateTime>
+                <StartDateTime><QuestionLabel>When did the break start?</QuestionLabel><Answer>20-02-2010 12:15</Answer></StartDateTime>
 
                 <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>Yes</Answer></MedicalCare>
                 <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Answer>Respite Care</Answer></ReasonClaimant>
                 <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Answer>Care Home</Answer></ReasonCaree>
             </CareBreak><CareBreak>
-                <StartDateTime>20-03-2010 00:00</StartDateTime>
+                <StartDateTime><QuestionLabel>When did the break start?</QuestionLabel><Answer>20-03-2010 00:00</Answer></StartDateTime>
 
                 <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>Yes</Answer></MedicalCare>
                 <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Answer>Holiday</Answer></ReasonClaimant>
                 <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Answer>Nursing Home</Answer></ReasonCaree>
             </CareBreak><CareBreak>
-                <StartDateTime>20-03-2013 12:00</StartDateTime>
-                <EndDateTime>21-02-2013 00:00</EndDateTime>
+                <StartDateTime><QuestionLabel>When did the break start?</QuestionLabel><Answer>20-03-2013 12:00</Answer></StartDateTime>
+                <EndDateTime><QuestionLabel>When did the break end?</QuestionLabel><Answer>21-02-2013 00:00</Answer></EndDateTime>
                 <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>No</Answer></MedicalCare>
                 <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Other>Other Place 5a</Other><Answer>Other</Answer></ReasonClaimant>
                 <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Other>Other place 5b</Other><Answer>Other</Answer></ReasonCaree>
             </CareBreak><CareBreak>
-                <StartDateTime>10-01-2010 10:30</StartDateTime>
-                <EndDateTime>17-01-2010 16:45</EndDateTime>
+                <StartDateTime><QuestionLabel>When did the break start?</QuestionLabel><Answer>10-01-2010 10:30</Answer></StartDateTime>
+                <EndDateTime><QuestionLabel>When did the break end?</QuestionLabel><Answer>17-01-2010 16:45</Answer></EndDateTime>
                 <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>Yes</Answer></MedicalCare>
                 <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Answer>Home</Answer></ReasonClaimant>
                 <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Answer>Hospital</Answer></ReasonCaree>
             </CareBreak><CareBreak>
-                <StartDateTime>20-01-2010 10:15</StartDateTime>
-                <EndDateTime>27-01-2010 18:30</EndDateTime>
+                <StartDateTime><QuestionLabel>When did the break start?</QuestionLabel><Answer>20-01-2010 10:15</Answer></StartDateTime>
+                <EndDateTime><QuestionLabel>When did the break end?</QuestionLabel><Answer>27-01-2010 18:30</Answer></EndDateTime>
                 <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>Yes</Answer></MedicalCare>
                 <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Answer>Holiday</Answer></ReasonClaimant>
                 <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Answer>Nursing Home</Answer></ReasonCaree>
             </CareBreak><CareBreak>
-                <StartDateTime>20-02-2010 12:00</StartDateTime>
-                <EndDateTime>27-02-2010 13:45</EndDateTime>
+                <StartDateTime><QuestionLabel>When did the break start?</QuestionLabel><Answer>20-02-2010 12:00</Answer></StartDateTime>
+                <EndDateTime><QuestionLabel>When did the break end?</QuestionLabel><Answer>27-02-2010 13:45</Answer></EndDateTime>
                 <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>Yes</Answer></MedicalCare>
                 <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Answer>Respite Care</Answer></ReasonClaimant>
                 <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Answer>Care Home</Answer></ReasonCaree>
             </CareBreak><CareBreak>
-                <StartDateTime>20-03-2010 12:15</StartDateTime>
-                <EndDateTime>21-02-2010 13:30</EndDateTime>
+                <StartDateTime><QuestionLabel>When did the break start?</QuestionLabel><Answer>20-03-2010 12:15</Answer></StartDateTime>
+                <EndDateTime><QuestionLabel>When did the break end?</QuestionLabel><Answer>21-02-2010 13:30</Answer></EndDateTime>
                 <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>Yes</Answer></MedicalCare>
                 <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Answer>Holiday</Answer></ReasonClaimant>
                 <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Answer>Nursing Home</Answer></ReasonCaree>
             </CareBreak><CareBreak>
-                <StartDateTime>20-03-2013 12:00</StartDateTime>
-                <EndDateTime>21-02-2013 13:45</EndDateTime>
+                <StartDateTime><QuestionLabel>When did the break start?</QuestionLabel><Answer>20-03-2013 12:00</Answer></StartDateTime>
+                <EndDateTime><QuestionLabel>When did the break end?</QuestionLabel><Answer>21-02-2013 13:45</Answer></EndDateTime>
                 <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>No</Answer></MedicalCare>
                 <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Other>Other place 10a</Other><Answer>Other</Answer></ReasonClaimant>
                 <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Other>Other place 10b</Other><Answer>Other</Answer></ReasonCaree>
@@ -103,7 +109,7 @@
 
 
 
-                <Nationality>British</Nationality>
+                <Nationality><QuestionLabel>What is your nationality?</QuestionLabel><Answer>British</Answer></Nationality>
 
                 <PeriodAbroad>
                     <TimeOutsideGBLast3Years><QuestionLabel>Have you been out of England, Scotland or Wales for more than 52 weeks in the last 3 years before your claim date?</QuestionLabel><Answer>Yes</Answer></TimeOutsideGBLast3Years>
@@ -157,18 +163,18 @@
             <FullTimeEducation>
                 <CourseDetails>
 
-                    <Title>Bussines Studies</Title>
+                    <Title><QuestionLabel>Course title</QuestionLabel><Answer>Bussines Studies</Answer></Title>
                     <DateStarted><QuestionLabel>When did you start the course?</QuestionLabel><Answer>01-01-2013</Answer></DateStarted>
 
                     <ExpectedEndDate><QuestionLabel>When did the course end or when will you finish?</QuestionLabel><Answer>01-01-2014</Answer></ExpectedEndDate>
                 </CourseDetails>
                 <LocationDetails>
-                    <Name>Oxford College</Name>
+                    <Name><QuestionLabel>Name of school, college or university</QuestionLabel><Answer>Oxford College</Answer></Name>
 
-                    <PhoneNumber>01776 829920</PhoneNumber>
+                    <PhoneNumber><QuestionLabel>Course contact number</QuestionLabel><Answer>01776 829920</Answer></PhoneNumber>
 
 
-                    <Tutor>Edward Mansfield</Tutor>
+                    <Tutor><QuestionLabel>Name of main teacher or tutor</QuestionLabel><Answer>Edward Mansfield</Answer></Tutor>
                 </LocationDetails>
             </FullTimeEducation>
             <SelfEmployed><QuestionLabel>Have you been self-employed at any time since 03/02/2013?</QuestionLabel><Answer>No</Answer></SelfEmployed>
@@ -177,13 +183,13 @@
 
             <HavePartner><QuestionLabel>Have you had a partner/spouse living with you since your claim date: 10/02/2013?</QuestionLabel><Answer>Yes</Answer></HavePartner>
             <Partner>
-                <Surname>Casefive</Surname>
-                <OtherNames>Test Middle</OtherNames>
+                <Surname><QuestionLabel>Last name</QuestionLabel><Answer>Casefive</Answer></Surname>
+                <OtherNames><QuestionLabel>First name</QuestionLabel><Answer>Test Middle</Answer></OtherNames>
 
-                <Title>Mrs</Title>
-                <DateOfBirth>28-09-1977</DateOfBirth>
-                <NationalInsuranceNumber>TA234567A</NationalInsuranceNumber>
-                <NationalityPartner>Spanish</NationalityPartner>
+                <Title><QuestionLabel>Title</QuestionLabel><Answer>Mrs</Answer></Title>
+                <DateOfBirth><QuestionLabel>Date of birth</QuestionLabel><Answer>28-09-1977</Answer></DateOfBirth>
+                <NationalInsuranceNumber><QuestionLabel>National Insurance number</QuestionLabel><Answer>TA234567A</Answer></NationalInsuranceNumber>
+                <NationalityPartner><QuestionLabel>Nationality?</QuestionLabel><Answer>Spanish</Answer></NationalityPartner>
                 <RelationshipStatus>
                     <SeparatedFromPartner><QuestionLabel>Have you separated from your partner/spouse since the date you want to claim from: 10/02/2013?</QuestionLabel><Answer>Yes</Answer></SeparatedFromPartner>
                 </RelationshipStatus>
@@ -210,13 +216,13 @@
                 <PaymentFrequency><QuestionLabel>How often do you want to get paid?</QuestionLabel><Answer>Four-Weekly</Answer></PaymentFrequency>
                 <InitialAccountQuestion><QuestionLabel>How would you like to get paid?</QuestionLabel><Answer>UK bank or building society account</Answer></InitialAccountQuestion>
                 <Account>
-                    <AccountHolder>Both you and your partner</AccountHolder>
-                    <HolderName>Mr Test Casefive</HolderName>
+                    <AccountHolder><QuestionLabel>Whose name or names is the account in?</QuestionLabel><Answer>Both you and your partner</Answer></AccountHolder>
+                    <HolderName><QuestionLabel>Name of account holder</QuestionLabel><Answer>Mr Test Casefive</Answer></HolderName>
                     <BuildingSocietyDetails>
-                        <AccountNumber>12345678</AccountNumber>
-                        <RollNumber>1240000001</RollNumber>
-                        <SortCode>090120</SortCode>
-                        <Name>Givemecash Bank</Name>
+                        <AccountNumber><QuestionLabel>Account number</QuestionLabel><Answer>12345678</Answer></AccountNumber>
+                        <RollNumber><QuestionLabel>Building society roll or reference number</QuestionLabel><Answer>1240000001</Answer></RollNumber>
+                        <SortCode><QuestionLabel>Sort code</QuestionLabel><Answer>090120</Answer></SortCode>
+                        <Name><QuestionLabel>Full name of bank or building society</QuestionLabel><Answer>Givemecash Bank</Answer></Name>
                     </BuildingSocietyDetails>
                 </Account>
             </Payment>
@@ -229,7 +235,7 @@
                     <Title>The declarations below sets out your legal responsibilities in respect of your claim.</Title>
                     <Content>I declare that I understand the Carer's Allowance Claim Notes and that the information provided on this claim form is correct and complete.</Content>
                     <Content>I understand that I must report all changes in my circumstances or that of the person that I am caring for which may affect my entitlement promptly and by failing to do so I may be liable to prosecution or face a financial penalty.</Content>
-                    <Content>I will use the online service or phone 0845 6084321 or write to Carer's Allowance Unit, Palatine House, Lancaster Road, Preston, PR1 1HB to report a change in my circumstances or that of the person that I am caring for.</Content>
+                    <Content>I will use the online service or phone 0345 608 4321 or write to Carer's Allowance Unit, Palatine House, Lancaster Road, Preston, PR1 1HB to report a change in my circumstances or that of the person that I am caring for.</Content>
                     <Content>If I give false or incomplete information or fail to report changes in my circumstances or that of the person that I am caring for promptly, I understand that my Carer's Allowance may be stopped or reduced and any overpayment of Carer's Allowance may be recovered. In addition I may be prosecuted or face a financial penalty.</Content>
                 </DeclarationStatement>
                 <DeclarationQuestion><QuestionLabel>Please tick this box if this claim form has been filled in by someone else, if so, please ensure that you understand the declarations above as another person cannot make the declarations on your behalf.</QuestionLabel><Answer>Yes</Answer></DeclarationQuestion>
@@ -268,8 +274,8 @@
             <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
             <ds:Reference URI="#TEST432">
                 <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
-                <ds:DigestValue>kk49Kuu/e0+KXRpEvd596/RV2HQ=</ds:DigestValue>
+                <ds:DigestValue>Rwq6I0f44XjS9HhLtpVw8Gaa3Ng=</ds:DigestValue>
             </ds:Reference>
         </ds:SignedInfo>
-        <ds:SignatureValue>BLUfxIRdoq581AbWN5+uYjkcQf1A5h2PuXzlrjroYztnDgV22QOD0g==</ds:SignatureValue>
+        <ds:SignatureValue>V3TAWYQyGJ0F4VAq1UgoeO1dVc1CtrGXf8Q4qVqJ+l0QVl7L+4SEvQ==</ds:SignatureValue>
     </ds:Signature></DWPBody>
