@@ -8,19 +8,23 @@
 		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
 	</parameter>
 	<parameter name="XPATH_ADDRESS" class="java.lang.String"/>
+	<parameter name="postCode" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["PostCode"]]></defaultValueExpression>
+	</parameter>
 	<queryString language="xPath">
 		<![CDATA[$P{XPATH_ADDRESS}]]>
 	</queryString>
 	<field name="PostCode" class="java.lang.String">
 		<fieldDescription><![CDATA[Answer/PostCode]]></fieldDescription>
 	</field>
+	<field name="AddressLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="PostCodeLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[PostCode]]></fieldDescription>
+	</field>
 	<detail>
 		<band height="20" splitType="Stretch">
-			<staticText>
-				<reportElement uuid="5bf1e7ac-4166-4043-967d-614bcb5338fc" x="0" y="0" width="350" height="18"/>
-				<textElement/>
-				<text><![CDATA[Address]]></text>
-			</staticText>
 			<subreport>
 				<reportElement uuid="1e3e4155-43bc-444e-b78b-c05e69c14019" x="355" y="0" width="197" height="18"/>
 				<subreportParameter name="XPATH_ADDRESS">
@@ -29,18 +33,23 @@
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/Address/Answer/Line")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Street.jasper"]]></subreportExpression>
 			</subreport>
+			<textField>
+				<reportElement uuid="18e0bbea-661e-4dac-a8f5-afeeb3f93df1" x="0" y="0" width="350" height="18"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AddressLabel}]]></textFieldExpression>
+			</textField>
 		</band>
 		<band height="19" splitType="Prevent">
 			<printWhenExpression><![CDATA[$F{PostCode} != null]]></printWhenExpression>
-			<staticText>
-				<reportElement uuid="c89a47b6-166a-41d0-800c-7ae95827ec24" x="0" y="0" width="350" height="18"/>
-				<textElement/>
-				<text><![CDATA[Postcode]]></text>
-			</staticText>
 			<textField>
 				<reportElement uuid="fcb11e07-7e2a-4fdf-89e8-2eed4992fed3" x="355" y="0" width="197" height="18"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PostCode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2eca1c28-d098-44ad-90fe-06ed095f36ad" x="0" y="0" width="350" height="18"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{postCode}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>

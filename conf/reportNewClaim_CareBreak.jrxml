@@ -17,7 +17,7 @@
 		<fieldDescription><![CDATA[ReasonClaimant/QuestionLabel]]></fieldDescription>
 	</field>
 	<field name="ReasonClaimantOtherAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[ReasonClaimant/Other/Answer]]></fieldDescription>
+		<fieldDescription><![CDATA[ReasonClaimant/Other]]></fieldDescription>
 	</field>
 	<field name="ReasonClaimantAnswer" class="java.lang.String">
 		<fieldDescription><![CDATA[ReasonClaimant/Answer]]></fieldDescription>
@@ -45,9 +45,6 @@
 	</field>
 	<field name="EndDateTimeQuestionLabel" class="java.lang.String">
 		<fieldDescription><![CDATA[EndDateTime/QuestionLabel]]></fieldDescription>
-	</field>
-	<field name="ReasonClaimantOtherQuestionLabel" class="java.lang.String">
-		<fieldDescription><![CDATA[ReasonClaimant/Other/QuestionLabel]]></fieldDescription>
 	</field>
 	<variable name="variable1" class="java.lang.Integer" incrementType="Group" incrementGroup="Break">
 		<variableExpression><![CDATA[$V{variable1}+1]]></variableExpression>
@@ -131,11 +128,6 @@
 				</reportElement>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{ReasonClaimantAnswer}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="41271743-50db-490d-80e5-53ee557e82dd" x="20" y="63" width="330" height="18"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{ReasonClaimantOtherQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
 				<reportElement uuid="193b9430-bdc2-43a1-9cc9-c099401fdaa5" x="355" y="63" width="197" height="18" isRemoveLineWhenBlank="true">

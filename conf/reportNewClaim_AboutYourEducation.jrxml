@@ -15,8 +15,8 @@
 	<field name="AboutYourEducationCourseDetailsType" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/FullTimeEducation/CourseDetails/Type]]></fieldDescription>
 	</field>
-	<field name="AboutYourEducationCourseDetailsTitle" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/FullTimeEducation/CourseDetails/Title]]></fieldDescription>
+	<field name="AboutYourEducationCourseDetailsTitleAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/FullTimeEducation/CourseDetails/Title/Answer]]></fieldDescription>
 	</field>
 	<field name="AboutYourEducationCourseDetailsDateStartedQuestion" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/FullTimeEducation/CourseDetails/DateStarted/QuestionLabel]]></fieldDescription>
@@ -39,20 +39,32 @@
 	<field name="AboutYourEducationLocationDetailsStudentReferenceNumber" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/FullTimeEducation/LocationDetails/StudentReferenceNumber]]></fieldDescription>
 	</field>
-	<field name="AboutYourEducationLocationDetailsNameOfUniversity" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/FullTimeEducation/LocationDetails/Name]]></fieldDescription>
+	<field name="AboutYourEducationLocationDetailsNameOfUniversityAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/FullTimeEducation/LocationDetails/Name/Answer]]></fieldDescription>
 	</field>
-	<field name="AboutYourEducationLocationDetailsNameOfTutor" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/FullTimeEducation/LocationDetails/Tutor]]></fieldDescription>
+	<field name="AboutYourEducationLocationDetailsNameOfTutorAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/FullTimeEducation/LocationDetails/Tutor/Answer]]></fieldDescription>
 	</field>
 	<field name="AboutYourEducationLocationDetailsPostcode" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/FullTimeEducation/LocationDetails/Address/PostCode]]></fieldDescription>
 	</field>
-	<field name="AboutYourEducationLocationDetailsPhonenumber" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/FullTimeEducation/LocationDetails/PhoneNumber]]></fieldDescription>
+	<field name="AboutYourEducationLocationDetailsPhonenumberAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/FullTimeEducation/LocationDetails/PhoneNumber/Answer]]></fieldDescription>
 	</field>
 	<field name="AboutYourEducationLocationDetailsFaxnumber" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/FullTimeEducation/LocationDetails/FaxNumber]]></fieldDescription>
+	</field>
+	<field name="AboutYourEducationCourseDetailsTitleQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/FullTimeEducation/CourseDetails/Title/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutYourEducationLocationDetailsNameOfUniversityQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/FullTimeEducation/LocationDetails/Name/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutYourEducationLocationDetailsNameOfTutorQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/FullTimeEducation/LocationDetails/Tutor/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutYourEducationLocationDetailsPhonenumberQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/FullTimeEducation/LocationDetails/PhoneNumber/QuestionLabel]]></fieldDescription>
 	</field>
 	<background>
 		<band splitType="Stretch"/>
@@ -84,45 +96,45 @@
 				</textElement>
 				<text><![CDATA[Your course details]]></text>
 			</staticText>
-			<staticText>
-				<reportElement uuid="71992b1f-83b1-4abe-9cf3-d7cdd0bfd32f" x="0" y="22" width="350" height="18" isRemoveLineWhenBlank="true"/>
+			<textField>
+				<reportElement uuid="83781158-3ddb-409b-bdb1-f1fc564fdd8e" x="0" y="22" width="350" height="18"/>
 				<textElement/>
-				<text><![CDATA[Course title]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA[$F{AboutYourEducationCourseDetailsTitleQuestionLabel}]]></textFieldExpression>
+			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="9b62df6f-cded-4336-aff7-9c2cb880ce51" x="355" y="22" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutYourEducationCourseDetailsTitle}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{AboutYourEducationCourseDetailsTitleAnswer}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement uuid="627962b9-bd0c-4f41-a9af-225882954cd3" x="0" y="42" width="350" height="18" isRemoveLineWhenBlank="true"/>
+			<textField>
+				<reportElement uuid="e6a57117-b1e2-458d-9302-e46aadfb7296" x="0" y="42" width="350" height="18"/>
 				<textElement/>
-				<text><![CDATA[Name of school, college or university]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA[$F{AboutYourEducationLocationDetailsNameOfUniversityQuestionLabel}]]></textFieldExpression>
+			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="5b641e33-8b16-4ffa-9b44-de8d66208cc3" x="355" y="42" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutYourEducationLocationDetailsNameOfUniversity}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{AboutYourEducationLocationDetailsNameOfUniversityAnswer}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement uuid="4de3d6e9-b4f3-4ac4-aba8-10f0f7b90095" x="0" y="62" width="350" height="18" isRemoveLineWhenBlank="true"/>
+			<textField>
+				<reportElement uuid="447b86ac-93ec-4843-b7b8-655f3fdd60f3" x="0" y="62" width="350" height="18"/>
 				<textElement/>
-				<text><![CDATA[Name of main Teacher or Tutor]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA[$F{AboutYourEducationLocationDetailsNameOfTutorQuestionLabel}]]></textFieldExpression>
+			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="d027512b-759d-483e-a22b-abca19e49424" x="355" y="62" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutYourEducationLocationDetailsNameOfTutor}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{AboutYourEducationLocationDetailsNameOfTutorAnswer}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement uuid="d6c35c1d-2ce1-415a-a609-df65ee9cc358" x="0" y="82" width="350" height="18" isRemoveLineWhenBlank="true"/>
+			<textField>
+				<reportElement uuid="14bd6e7d-4943-4d30-b8a6-53ec2dc8312b" x="0" y="82" width="350" height="18"/>
 				<textElement/>
-				<text><![CDATA[Course contact number]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA[$F{AboutYourEducationLocationDetailsPhonenumberQuestionLabel}]]></textFieldExpression>
+			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="091bf1f0-6e13-40b6-82dd-c5dd8170d0b0" x="355" y="82" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutYourEducationLocationDetailsPhonenumber}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{AboutYourEducationLocationDetailsPhonenumberAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="c2a98357-060c-4f64-b845-45ace075225a" x="0" y="101" width="350" height="18" isRemoveLineWhenBlank="true"/>

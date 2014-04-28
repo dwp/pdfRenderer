@@ -2,10 +2,16 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_employmentJobDetails" language="groovy" pageWidth="555" pageHeight="872" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isSummaryNewPage="true" isIgnorePagination="true" uuid="d2b233ab-6178-4bb0-9059-17e24879fcd8">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="1247"/>
+	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="postCode" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["Employer's Postcode"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Address" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["Employer's Address"]]></defaultValueExpression>
 	</parameter>
 	<queryString language="xPath">
 		<![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Employment/JobDetails]]>
@@ -43,23 +49,23 @@
 	<field name="JobDetailsPayWeeklyHoursWorkedAnswer" class="java.lang.String">
 		<fieldDescription><![CDATA[Pay/WeeklyHoursWorked/Answer]]></fieldDescription>
 	</field>
-	<field name="JobDetailsPayrollOrEmployeeNumber" class="java.lang.String">
-		<fieldDescription><![CDATA[Employer/ClockPayrollNumber]]></fieldDescription>
+	<field name="JobDetailsPayrollOrEmployeeNumberAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[Employer/ClockPayrollNumber/Answer]]></fieldDescription>
 	</field>
 	<field name="Line1" class="java.lang.String">
-		<fieldDescription><![CDATA[Employer/Address/Line[1]]]></fieldDescription>
+		<fieldDescription><![CDATA[Employer/Address/Answer/Line[1]]]></fieldDescription>
 	</field>
 	<field name="Line2" class="java.lang.String">
-		<fieldDescription><![CDATA[Employer/Address/Line[2]]]></fieldDescription>
+		<fieldDescription><![CDATA[Employer/Address/Answer/Line[2]]]></fieldDescription>
 	</field>
 	<field name="Line3" class="java.lang.String">
-		<fieldDescription><![CDATA[Employer/Address/Line[3]]]></fieldDescription>
+		<fieldDescription><![CDATA[Employer/Address/Answer/Line[3]]]></fieldDescription>
 	</field>
-	<field name="JobDetailsEmployerPostCode" class="java.lang.String">
-		<fieldDescription><![CDATA[Employer/Address/PostCode]]></fieldDescription>
+	<field name="JobDetailsEmployerPostCodeAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[Employer/Address/Answer/PostCode]]></fieldDescription>
 	</field>
-	<field name="JobDetailsEmployerPhoneNumber" class="java.lang.String">
-		<fieldDescription><![CDATA[Employer/EmployersPhoneNumber]]></fieldDescription>
+	<field name="JobDetailsEmployerPhoneNumberAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[Employer/EmployersPhoneNumber/Answer]]></fieldDescription>
 	</field>
 	<field name="JobDetailsPayDateLastPaidQuestion" class="java.lang.String">
 		<fieldDescription><![CDATA[Pay/DateLastPaid/QuestionLabel]]></fieldDescription>
@@ -298,6 +304,12 @@
 	<field name="displayPensionScheme" class="java.lang.String">
 		<fieldDescription><![CDATA[PaidForOccupationalPension/Answer]]></fieldDescription>
 	</field>
+	<field name="JobDetailsEmployerPhoneNumberQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[Employer/EmployersPhoneNumber/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="JobDetailsPayrollOrEmployeeNumberQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[Employer/ClockPayrollNumber/QuestionLabel]]></fieldDescription>
+	</field>
 	<variable name="variable1" class="java.lang.Integer" incrementType="Group" incrementGroup="Break">
 		<variableExpression><![CDATA[$V{variable1}+1]]></variableExpression>
 		<initialValueExpression><![CDATA[1]]></initialValueExpression>
@@ -386,15 +398,15 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsPayWeeklyHoursWorkedAnswer}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement uuid="243e04e9-83d4-496d-96e5-82805b78f488" x="20" y="120" width="330" height="18" isRemoveLineWhenBlank="true"/>
+			<textField>
+				<reportElement uuid="660f5427-2063-4342-afc5-e71113384678" x="20" y="120" width="330" height="18"/>
 				<textElement/>
-				<text><![CDATA[Payroll or Employee number]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA[$F{JobDetailsPayrollOrEmployeeNumberQuestionLabel}]]></textFieldExpression>
+			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="0f0ede36-5495-4297-8bc0-5e7aab3949bd" x="355" y="120" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{JobDetailsPayrollOrEmployeeNumber}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{JobDetailsPayrollOrEmployeeNumberAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement uuid="b4a9203f-5961-46e5-ab81-e5c11f85a3ed" x="20" y="140" width="533" height="20" isRemoveLineWhenBlank="true"/>
@@ -403,11 +415,11 @@
 				</textElement>
 				<text><![CDATA[Employer's contact details]]></text>
 			</staticText>
-			<staticText>
-				<reportElement uuid="2657ea80-6d75-44fb-8a2e-2f2a26fb1c7f" x="20" y="160" width="330" height="18" isRemoveLineWhenBlank="true"/>
+			<textField>
+				<reportElement uuid="f27e5cdb-9643-4772-a5e0-d75130c67a46" x="20" y="160" width="330" height="18"/>
 				<textElement/>
-				<text><![CDATA[Employer's Address]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA[$P{Address}]]></textFieldExpression>
+			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="d83e9980-c54a-4008-b5b5-c9804e6c26f0" x="355" y="160" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
@@ -423,25 +435,25 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{Line3}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement uuid="d22ac702-bf34-444a-98d6-6d4191841ad0" x="20" y="220" width="330" height="18" isRemoveLineWhenBlank="true"/>
+			<textField>
+				<reportElement uuid="0c0f040e-c1b7-46ea-a06e-57ebe04457c5" x="20" y="220" width="330" height="18"/>
 				<textElement/>
-				<text><![CDATA[Employer's Postcode]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA[$P{postCode}]]></textFieldExpression>
+			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="4fff7fd3-9006-4322-a49e-fd7bd4c38aca" x="355" y="220" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{JobDetailsEmployerPostCode}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{JobDetailsEmployerPostCodeAnswer}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement uuid="d27afea5-d757-46a6-8210-cac524840b3c" x="20" y="240" width="330" height="18" isRemoveLineWhenBlank="true"/>
+			<textField>
+				<reportElement uuid="1947a636-1d78-47cd-92fd-f6993a51f134" x="20" y="240" width="330" height="18"/>
 				<textElement/>
-				<text><![CDATA[Phone number]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA[$F{JobDetailsEmployerPhoneNumberQuestionLabel}]]></textFieldExpression>
+			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="f64f69b6-274d-4fdc-be90-1a5a3ceea4c7" x="355" y="240" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{JobDetailsEmployerPhoneNumber}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{JobDetailsEmployerPhoneNumberAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement uuid="a52b0ad8-c419-44a1-aa18-2c7f79cbbb8c" x="20" y="260" width="533" height="20" isRemoveLineWhenBlank="true"/>
