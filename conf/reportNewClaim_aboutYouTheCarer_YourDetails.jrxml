@@ -10,90 +10,96 @@
 	<queryString language="xPath">
 		<![CDATA[/]]>
 	</queryString>
-	<field name="AboutYouTheCarerClaimantTitle" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Title]]></fieldDescription>
+	<field name="AboutYouTheCarerClaimantTitleAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Title/Answer]]></fieldDescription>
 	</field>
-	<field name="AboutYouTheCarerClaimantFirstName" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/OtherNames]]></fieldDescription>
+	<field name="AboutYouTheCarerClaimantFirstNameAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/OtherNames/Answer]]></fieldDescription>
 	</field>
-	<field name="AboutYouTheCarerClaimantLastName" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Surname]]></fieldDescription>
+	<field name="AboutYouTheCarerClaimantLastNameAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Surname/Answer]]></fieldDescription>
 	</field>
-	<field name="AboutYouTheCarerOtherSurname" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/OtherSurnames]]></fieldDescription>
+	<field name="AboutYouTheCarerOtherSurnameAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/OtherSurnames/Answer]]></fieldDescription>
 	</field>
-	<field name="AboutYouTheCarerNationalInsuranceNumber" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/NationalInsuranceNumber]]></fieldDescription>
+	<field name="AboutYouTheCarerNationalInsuranceNumberAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/NationalInsuranceNumber/Answer]]></fieldDescription>
 	</field>
-	<field name="AboutYouTheCarerDateOfBirth" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/DateOfBirth]]></fieldDescription>
+	<field name="AboutYouTheCarerDateOfBirthAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/DateOfBirth/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerClaimantTitleQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Title/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerClaimantFirstNameQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/OtherNames/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerClaimantLastNameQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Surname/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerOtherSurnameQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/OtherSurnames/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerNationalInsuranceNumberQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/NationalInsuranceNumber/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerDateOfBirthQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/DateOfBirth/QuestionLabel]]></fieldDescription>
 	</field>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
 		<band height="131" splitType="Stretch">
-			<staticText>
-				<reportElement uuid="0973cf93-60f0-4416-a85b-43c88ff3aab0" x="0" y="21" width="350" height="18" isRemoveLineWhenBlank="true"/>
+			<textField>
+				<reportElement uuid="9415ec90-b8b5-40d0-b5ea-8983fd33549e" x="0" y="21" width="350" height="18"/>
 				<textElement/>
-				<text><![CDATA[Title]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantTitleQuestionLabel}]]></textFieldExpression>
+			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="false">
 				<reportElement uuid="0f00aab9-bd9c-417b-8e32-a61a0b7c360c" x="355" y="21" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantTitle}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantTitleAnswer}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement uuid="c41b5149-9597-4864-bc97-f697bd8e8cf1" x="0" y="39" width="350" height="18" isRemoveLineWhenBlank="true"/>
+			<textField>
+				<reportElement uuid="f6bc7857-d513-406a-8e3d-5aa5901d49e2" x="0" y="39" width="350" height="18"/>
 				<textElement/>
-				<text><![CDATA[First Name]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantFirstNameQuestionLabel}]]></textFieldExpression>
+			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="false">
 				<reportElement uuid="7fb7a342-d9f3-42ba-86f2-7f418864f0f4" x="355" y="39" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantFirstName}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantFirstNameAnswer}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement uuid="ab08d812-19ab-4191-96bf-7b8aa6914cfb" x="0" y="57" width="350" height="18" isRemoveLineWhenBlank="true"/>
+			<textField>
+				<reportElement uuid="3aa7b2f8-c0c3-4bc7-83bd-394da404d049" x="0" y="57" width="350" height="18"/>
 				<textElement/>
-				<text><![CDATA[Last Name]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantLastNameQuestionLabel}]]></textFieldExpression>
+			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="false">
 				<reportElement uuid="8c75e471-dd48-4837-99a1-ec82c69b2d40" x="355" y="57" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantLastName}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantLastNameAnswer}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement uuid="f850d128-dc33-4720-8f5c-853e9bcd628b" x="0" y="75" width="350" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[!$F{AboutYouTheCarerOtherSurname}.isEmpty()]]></printWhenExpression>
-				</reportElement>
-				<textElement/>
-				<text><![CDATA[Other surname or maiden name]]></text>
-			</staticText>
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="3d1b0b06-5f74-4a2e-b01d-749dc81b3ff6" x="355" y="75" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutYouTheCarerOtherSurname}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerOtherSurnameAnswer}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement uuid="03ea1d1c-6387-4815-9375-55e97a8b6ee0" x="0" y="93" width="350" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<text><![CDATA[National Insurance number]]></text>
-			</staticText>
 			<textField isStretchWithOverflow="true">
 				<reportElement uuid="2aa6b536-54b9-4d3e-b3d3-a79e9df0173c" x="355" y="93" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutYouTheCarerNationalInsuranceNumber}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerNationalInsuranceNumberAnswer}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement uuid="3defe712-f6b6-4864-912a-ff78ee45f208" x="0" y="111" width="350" height="18" isRemoveLineWhenBlank="true"/>
+			<textField>
+				<reportElement uuid="ef9a8048-a9eb-472d-b1e8-64c10bde3fcf" x="0" y="111" width="350" height="18"/>
 				<textElement/>
-				<text><![CDATA[Date of Birth]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerDateOfBirthQuestionLabel}]]></textFieldExpression>
+			</textField>
 			<textField>
 				<reportElement uuid="79f5aba9-3547-4f6e-862f-cdb7dfc7c27a" x="355" y="111" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutYouTheCarerDateOfBirth}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerDateOfBirthAnswer}]]></textFieldExpression>
 			</textField>
 			<rectangle>
 				<reportElement uuid="e388dac2-7163-41cd-9a7c-adfdbf1531b1" x="0" y="0" width="553" height="21" backcolor="#CCCCCC"/>
@@ -108,6 +114,16 @@
 				</textElement>
 				<text><![CDATA[Your Details]]></text>
 			</staticText>
+			<textField>
+				<reportElement uuid="ba841462-9f2a-410d-b552-19d0aa0fc9d5" x="0" y="75" width="350" height="18"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerOtherSurnameQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3b10bf4b-22b8-4920-9cf2-dc3670497676" x="0" y="93" width="350" height="18"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerNationalInsuranceNumberQuestionLabel}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 </jasperReport>
