@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYouTheCarer" language="groovy" pageWidth="555" pageHeight="872" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a66aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="1053"/>
+	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
@@ -10,8 +10,8 @@
 	<queryString language="xPath">
 		<![CDATA[/]]>
 	</queryString>
-	<field name="AbouYouTheCarerDayTimeTelephoneNumber" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/DayTimePhoneNumber]]></fieldDescription>
+	<field name="AbouYouTheCarerDayTimeTelephoneNumberAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/DayTimePhoneNumber/Answer]]></fieldDescription>
 	</field>
 	<field name="AboutYouTheCarerSpeechOrHearingDifficultyQuestion" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/TextPhoneContact/QuestionLabel]]></fieldDescription>
@@ -19,8 +19,8 @@
 	<field name="AboutYouTheCarerSpeechOrHearingDifficultyAnswer" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/TextPhoneContact/Answer]]></fieldDescription>
 	</field>
-	<field name="AboutYouTheCarerNationality" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/Nationality]]></fieldDescription>
+	<field name="AboutYouTheCarerNationalityAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/Nationality/Answer]]></fieldDescription>
 	</field>
 	<field name="AboutYouTheCarerNormallyLiveInGBQuestion" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/NormallyLiveInGB/QuestionLabel]]></fieldDescription>
@@ -97,8 +97,17 @@
 	<field name="AboutYouTheCarerClaimDateAnswer" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/DateOfClaim/Answer]]></fieldDescription>
 	</field>
-	<field name="AbouYouTheCarerMaritalStatus" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/MaritalStatus]]></fieldDescription>
+	<field name="AbouYouTheCarerMaritalStatusAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/MaritalStatus/Answer]]></fieldDescription>
+	</field>
+	<field name="AbouYouTheCarerDayTimeTelephoneNumberQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/DayTimePhoneNumber/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerNationalityQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/Nationality/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AbouYouTheCarerMaritalStatusQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/MaritalStatus/QuestionLabel]]></fieldDescription>
 	</field>
 	<background>
 		<band splitType="Stretch"/>
@@ -149,17 +158,15 @@
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource) $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Address")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Address.jasper"]]></subreportExpression>
 			</subreport>
-			<staticText>
-				<reportElement uuid="c4625070-c52a-454b-8a4f-c2a501aa38cf" x="0" y="121" width="350" height="18">
-					<printWhenExpression><![CDATA[!$F{AbouYouTheCarerDayTimeTelephoneNumber}.isEmpty()]]></printWhenExpression>
-				</reportElement>
+			<textField>
+				<reportElement uuid="b6b48e2b-db12-45a5-887a-3c88bcae4893" x="0" y="121" width="350" height="18"/>
 				<textElement/>
-				<text><![CDATA[Contact phone or mobile number]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA[$F{AbouYouTheCarerDayTimeTelephoneNumberQuestionLabel}]]></textFieldExpression>
+			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="0cc3309a-996b-48fb-a96b-48857a605f39" x="355" y="121" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{AbouYouTheCarerDayTimeTelephoneNumber}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{AbouYouTheCarerDayTimeTelephoneNumberAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="a3503460-4846-4b36-9cd7-3196914e4dcb" x="0" y="139" width="350" height="36" isRemoveLineWhenBlank="true"/>
@@ -224,15 +231,15 @@
 				</textElement>
 				<text><![CDATA[Your nationality and residency]]></text>
 			</staticText>
-			<staticText>
-				<reportElement uuid="96edeba4-6496-4e27-8021-54579254e9a8" x="0" y="23" width="350" height="18" isRemoveLineWhenBlank="true"/>
+			<textField>
+				<reportElement uuid="590422b4-d0b9-41bc-9175-a9a5eef8d1a7" x="0" y="23" width="350" height="18"/>
 				<textElement/>
-				<text><![CDATA[What is your nationality]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerNationalityQuestionLabel}]]></textFieldExpression>
+			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="4a186ab4-1950-4c0c-95a1-3a9b27096e2d" x="355" y="23" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutYouTheCarerNationality}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerNationalityAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="2e065a0b-a510-4baa-baa7-d98f99140d69" x="0" y="43" width="350" height="18" isRemoveLineWhenBlank="true"/>
@@ -353,15 +360,15 @@
 				</textElement>
 				<text><![CDATA[Marital Status]]></text>
 			</staticText>
-			<staticText>
-				<reportElement uuid="d59b39f7-ee1b-447a-826f-9b62e7ba45dc" x="0" y="146" width="350" height="18"/>
+			<textField>
+				<reportElement uuid="e104909a-47f9-46d7-a59a-7fdc28aa6a38" x="0" y="146" width="350" height="18"/>
 				<textElement/>
-				<text><![CDATA[What is your marital status]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA[$F{AbouYouTheCarerMaritalStatusQuestionLabel}]]></textFieldExpression>
+			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="771cb2d1-54f2-42b7-9743-74b57d507655" x="355" y="146" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{AbouYouTheCarerMaritalStatus}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{AbouYouTheCarerMaritalStatusAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="2be6a8fc-e060-44d4-8480-aa6cfa350798" x="0" y="164" width="350" height="30" isRemoveLineWhenBlank="true"/>

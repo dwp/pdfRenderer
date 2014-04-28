@@ -38,7 +38,9 @@ case class SectionPart1AboutYouTheCarer(xml: Elem) {
 
   val postCode = rootPathClaimant \\ "Address" \\ "PostCode"
 
-  val dayTimeTelephoneNumber	= rootPathClaimant \\ "DayTimePhoneNumber"
+  val dayTimeTelephoneNumberAnswer = rootPathClaimant \\ "DayTimePhoneNumber" \\ "Answer"
+
+  val dayTimeTelephoneNumberQuestion	= rootPathClaimant \\ "DayTimePhoneNumber" \\ "QuestionLabel"
 
   val mobileNumber = rootPathClaimant \\ "MobileNumber"
 

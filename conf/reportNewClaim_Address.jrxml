@@ -12,7 +12,7 @@
 		<![CDATA[$P{XPATH_ADDRESS}]]>
 	</queryString>
 	<field name="PostCode" class="java.lang.String">
-		<fieldDescription><![CDATA[PostCode]]></fieldDescription>
+		<fieldDescription><![CDATA[Answer/PostCode]]></fieldDescription>
 	</field>
 	<detail>
 		<band height="20" splitType="Stretch">
@@ -26,7 +26,7 @@
 				<subreportParameter name="XPATH_ADDRESS">
 					<subreportParameterExpression><![CDATA[$P{XPATH_ADDRESS}]]></subreportParameterExpression>
 				</subreportParameter>
-				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/Address/Line")]]></dataSourceExpression>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/Address/Answer/Line")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Street.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
