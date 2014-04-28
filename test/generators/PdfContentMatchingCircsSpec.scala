@@ -125,6 +125,30 @@ class PdfContentMatchingCircsSpec extends PdfContentMatchingSpec{
       testContentMatches(pdfFileLocation, textCaseXml, XMLCircsData.functionalTestDataPaymentBankDetails, foundMustBeTrue)
     }
 
+    // Address Details section with 'is Same Address' 'no'
+    "extract PDF for functionalTestCase25 and match contents" in new WithApplication{
+      val pdfFileLocation = "functionalTestCase25_circs_contentTestPDF.pdf"
+      val source = getClass.getResource("/circs/c3_functional25_circs.xml")
+      val textCaseXml = XML.load(source)
+      testContentMatches(pdfFileLocation, textCaseXml, XMLCircsData.functionalTestDataAddressChangeDetails, foundMustBeTrue)
+    }
+
+    // Address Details section with 'is Same Address' 'yes'
+    "extract PDF for functionalTestCase26 and match contents" in new WithApplication{
+      val pdfFileLocation = "functionalTestCase26_circs_contentTestPDF.pdf"
+      val source = getClass.getResource("/circs/c3_functional26_circs.xml")
+      val textCaseXml = XML.load(source)
+      testContentMatches(pdfFileLocation, textCaseXml, XMLCircsData.functionalTestDataAddressChangeDetails, foundMustBeTrue)
+    }
+
+    // Address Details section with 'Tell us more about your changes' answered
+    "extract PDF for functionalTestCase27 and match contents" in new WithApplication{
+      val pdfFileLocation = "functionalTestCase27_circs_contentTestPDF.pdf"
+      val source = getClass.getResource("/circs/c3_functional27_circs.xml")
+      val textCaseXml = XML.load(source)
+      testContentMatches(pdfFileLocation, textCaseXml, XMLCircsData.functionalTestDataAddressChangeDetails, foundMustBeTrue)
+    }
+
   }
 
 }

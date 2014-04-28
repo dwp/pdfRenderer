@@ -66,3 +66,13 @@ case class ConsentsQuestionPath(xml:Elem) extends CircsUtils(xml \ "DWPCATransac
 case class ConsentsWhyQuestionPath(xml:Elem) extends CircsUtils(xml \ "DWPCATransaction" \ "DWPCAChangeOfCircumstances" \ "Consents" \ "Consent"){
   val consentsWhyQuestionPath = prepareTestData(Seq("Why"))
 }
+
+case class ChangeAddressDetails(xml:Elem) extends CircsUtils(xml \ "DWPCATransaction" \ "DWPCAChangeOfCircumstances" \ "AddressChange"){
+  val previousAddressQuestion = (xml \ "DWPCATransaction" \ "DWPCAChangeOfCircumstances" \ "AddressChange" \ "PreviousAddress" \ "QuestionLabel")
+  val previousAddressAnswer = (xml \ "DWPCATransaction" \ "DWPCAChangeOfCircumstances" \ "AddressChange" \ "PreviousAddress" \ "Answer" \ "Line").map(x => x.text).filterNot(x => x.isEmpty).mkString(" ")
+  val newAddressQuestion = (xml \ "DWPCATransaction" \ "DWPCAChangeOfCircumstances" \ "AddressChange" \ "NewAddress" \ "QuestionLabel")
+  val newAddressAnswer = (xml \ "DWPCATransaction" \ "DWPCAChangeOfCircumstances" \ "AddressChange" \ "NewAddress" \ "Answer" \ "Line").map(x => x.text).filterNot(x => x.isEmpty).mkString(" ")
+  val personYouCareForAddressQuestion = (xml \ "DWPCATransaction" \ "DWPCAChangeOfCircumstances" \ "AddressChange" \ "CareeAddress" \ "QuestionLabel")
+  val personYouCareForAddressAnswer = (xml \ "DWPCATransaction" \ "DWPCAChangeOfCircumstances" \ "AddressChange" \ "CareeAddress" \ "Answer" \ "Line").map(x => x.text).filterNot(x => x.isEmpty).mkString(" ")
+  val changeAddressData = prepareTestData(Seq("Caring35Hours", "DateStoppedCaring35Hours", "CareeChangedAddress", "CareeSameAddress", "OtherChanges"))
+}
