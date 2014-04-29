@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYourPartner" language="groovy" pageWidth="555" pageHeight="872" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="2c76a7f8-deb9-45af-83f2-c12559d20c72">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="167"/>
+	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
@@ -70,8 +70,8 @@
 	<field name="otherMoneySSPPaymentFrequencyOther" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySSPDetails/Payment/Frequency/Other]]></fieldDescription>
 	</field>
-	<field name="otherMoneySSPEmployerName" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySSPDetails/Name]]></fieldDescription>
+	<field name="otherMoneySSPEmployerNameAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySSPDetails/Name/Answer]]></fieldDescription>
 	</field>
 	<field name="otherMoneySPQuestion" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySP/QuestionLabel]]></fieldDescription>
@@ -97,8 +97,8 @@
 	<field name="otherMoneySPPaymentFrequencyOther" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySPDetails/Payment/Frequency/Other]]></fieldDescription>
 	</field>
-	<field name="otherMoneySPEmployerName" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySPDetails/Name]]></fieldDescription>
+	<field name="otherMoneySPEmployerNameAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySPDetails/Name/Answer]]></fieldDescription>
 	</field>
 	<field name="Line1" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySPDetails/Address/Line[1]]]></fieldDescription>
@@ -111,6 +111,12 @@
 	</field>
 	<field name="otherMoneySSPEmployersPostCode" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySPDetails/Address/PostCode]]></fieldDescription>
+	</field>
+	<field name="otherMoneySSPEmployerNameQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySSPDetails/Name/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="otherMoneySPEmployerNameQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySPDetails/Name/QuestionLabel]]></fieldDescription>
 	</field>
 	<background>
 		<band splitType="Stretch"/>
@@ -241,17 +247,15 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{otherMoneySSPPaymentFrequencyAnswer}=="Other" ? $F{otherMoneySSPPaymentFrequencyOther} : ""]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement uuid="708d14ba-594a-40ce-84c4-add4c1d3aa13" x="0" y="111" width="350" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[!$F{otherMoneySSPEmployerName}.isEmpty()]]></printWhenExpression>
-				</reportElement>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="18d2c3f6-23c0-45a3-ba95-d15c235f8d81" x="0" y="111" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<text><![CDATA[Employer's Name]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA[$F{otherMoneySSPEmployerNameQuestionLabel}]]></textFieldExpression>
+			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="404fcccc-145c-45bc-a500-a1da771b3949" x="355" y="111" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{otherMoneySSPEmployerName}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{otherMoneySSPEmployerNameAnswer}]]></textFieldExpression>
 			</textField>
 			<subreport>
 				<reportElement uuid="3a1885f4-3c9e-4131-aa43-af61f05e274b" x="0" y="129" width="555" height="60" isRemoveLineWhenBlank="true">
@@ -266,7 +270,7 @@
 				<subreportParameter name="addressLabel">
 					<subreportParameterExpression><![CDATA["Employer's Address"]]></subreportParameterExpression>
 				</subreportParameter>
-				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySPDetails/Address")]]></dataSourceExpression>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySPDetails/Address/Answer")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_addressForNestedReports.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
@@ -309,17 +313,15 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{otherMoneySPPaymentFrequencyAnswer}=="Other" ? $F{otherMoneySPPaymentFrequencyOther} : ""]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement uuid="811dfe96-7440-4968-b749-b41bd9f68280" x="0" y="105" width="350" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[!$F{otherMoneySPEmployerName}.isEmpty()]]></printWhenExpression>
-				</reportElement>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="0dbaa7c2-f7d9-4344-b330-7d45ee76ccc2" x="0" y="105" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<text><![CDATA[Employer's Name]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA[$F{otherMoneySPEmployerNameQuestionLabel}]]></textFieldExpression>
+			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="5e9d566e-7099-43fc-a64d-6c3c7883343a" x="355" y="105" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{otherMoneySPEmployerName}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{otherMoneySPEmployerNameAnswer}]]></textFieldExpression>
 			</textField>
 			<subreport>
 				<reportElement uuid="35137a21-8cdc-4abb-8133-c3754e88b753" x="0" y="123" width="555" height="60"/>
@@ -332,7 +334,7 @@
 				<subreportParameter name="addressLabel">
 					<subreportParameterExpression><![CDATA["Employer's Address"]]></subreportParameterExpression>
 				</subreportParameter>
-				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySPDetails/Address")]]></dataSourceExpression>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySPDetails/Address/Answer")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_addressForNestedReports.jasper"]]></subreportExpression>
 			</subreport>
 		</band>

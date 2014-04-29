@@ -25,20 +25,35 @@
 	<field name="howOftenGetPaidOther" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Payment/PaymentFrequency/Other]]></fieldDescription>
 	</field>
-	<field name="bankAccountHolderName" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Payment/Account/HolderName]]></fieldDescription>
+	<field name="bankAccountHolderNameAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Payment/Account/HolderName/Answer]]></fieldDescription>
 	</field>
-	<field name="bankAccountBankName" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Payment/Account/BuildingSocietyDetails/Name]]></fieldDescription>
+	<field name="bankAccountBankNameAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Payment/Account/BuildingSocietyDetails/Name/Answer]]></fieldDescription>
 	</field>
-	<field name="bankAccountSortCode" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Payment/Account/BuildingSocietyDetails/Sortcode]]></fieldDescription>
+	<field name="bankAccountSortCodeAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Payment/Account/BuildingSocietyDetails/SortCode/Answer]]></fieldDescription>
 	</field>
-	<field name="bankAccountNumber" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Payment/Account/BuildingSocietyDetails/AccountNumber]]></fieldDescription>
+	<field name="bankAccountNumberAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Payment/Account/BuildingSocietyDetails/AccountNumber/Answer]]></fieldDescription>
 	</field>
-	<field name="bankAccountReferenceNumber" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Payment/Account/BuildingSocietyDetails/RollNumber]]></fieldDescription>
+	<field name="bankAccountReferenceNumberAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Payment/Account/BuildingSocietyDetails/RollNumber/Answer]]></fieldDescription>
+	</field>
+	<field name="bankAccountHolderNameQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Payment/Account/HolderName/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="bankAccountBankNameQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Payment/Account/BuildingSocietyDetails/Name/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="bankAccountSortCodeQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Payment/Account/BuildingSocietyDetails/SortCode/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="bankAccountNumberQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Payment/Account/BuildingSocietyDetails/AccountNumber/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="bankAccountReferenceNumberQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Payment/Account/BuildingSocietyDetails/RollNumber/QuestionLabel]]></fieldDescription>
 	</field>
 	<background>
 		<band splitType="Stretch"/>
@@ -90,7 +105,7 @@
 			</textField>
 		</band>
 		<band height="124" splitType="Stretch">
-			<printWhenExpression><![CDATA[!$F{bankAccountHolderName}.isEmpty() || !$F{bankAccountBankName}.isEmpty() || !$F{bankAccountSortCode}.isEmpty() || !$F{bankAccountNumber}.isEmpty() || !$F{bankAccountReferenceNumber}.isEmpty()]]></printWhenExpression>
+			<printWhenExpression><![CDATA[!$F{bankAccountHolderNameAnswer}.isEmpty() || !$F{bankAccountBankNameAnswer}.isEmpty() || !$F{bankAccountSortCodeAnswer}.isEmpty() || !$F{bankAccountNumberAnswer}.isEmpty() || !$F{bankAccountReferenceNumberAnswer}.isEmpty()]]></printWhenExpression>
 			<staticText>
 				<reportElement uuid="682874b6-bfe4-439f-8bb8-4abdfe329111" mode="Opaque" x="0" y="0" width="555" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
 				<textElement>
@@ -98,65 +113,55 @@
 				</textElement>
 				<text><![CDATA[Bank/Building Society Details]]></text>
 			</staticText>
-			<staticText>
-				<reportElement uuid="ac563e30-beb3-4063-b697-5ee47e8da1b0" x="0" y="20" width="350" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[!$F{bankAccountHolderName}.isEmpty()]]></printWhenExpression>
-				</reportElement>
+			<textField>
+				<reportElement uuid="435b6de5-d41d-40df-8485-e2c19154020d" x="0" y="20" width="350" height="18"/>
 				<textElement/>
-				<text><![CDATA[Name of account holder]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA[$F{bankAccountHolderNameQuestionLabel}]]></textFieldExpression>
+			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="3585c88b-ad07-47d0-b172-d609bf404eeb" x="355" y="20" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{bankAccountHolderName}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{bankAccountHolderNameAnswer}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement uuid="48642e96-81a1-4387-928c-02f25596ccfa" x="0" y="40" width="350" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[!$F{bankAccountBankName}.isEmpty()]]></printWhenExpression>
-				</reportElement>
+			<textField>
+				<reportElement uuid="6d961b8f-2b5b-4ebc-bb6b-48bb40c9c684" x="0" y="40" width="350" height="18"/>
 				<textElement/>
-				<text><![CDATA[Full name of bank or building society]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA[$F{bankAccountBankNameQuestionLabel}]]></textFieldExpression>
+			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="be49c075-e8db-4d27-8a30-f5414761027e" x="355" y="40" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{bankAccountBankName}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{bankAccountBankNameAnswer}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement uuid="32e1525f-abb6-4b62-8960-4b0ae6a82fde" x="0" y="60" width="350" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[!$F{bankAccountSortCode}.isEmpty()]]></printWhenExpression>
-				</reportElement>
+			<textField>
+				<reportElement uuid="ac5d7f60-2d42-481c-9177-0e1dff247bf8" x="0" y="60" width="350" height="18"/>
 				<textElement/>
-				<text><![CDATA[Sort code]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA[$F{bankAccountSortCodeQuestionLabel}]]></textFieldExpression>
+			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="12f94aa2-1e66-40c4-8916-2990ca93e937" x="355" y="60" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{bankAccountSortCode}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{bankAccountSortCodeAnswer}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement uuid="31199384-fd54-4e89-a19e-d01d9fccd46f" x="0" y="80" width="350" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[!$F{bankAccountNumber}.isEmpty()]]></printWhenExpression>
-				</reportElement>
+			<textField>
+				<reportElement uuid="ef58f6eb-cbbf-4bd1-af0b-b5a3d167171d" x="0" y="80" width="350" height="18"/>
 				<textElement/>
-				<text><![CDATA[Account number]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA[$F{bankAccountNumberQuestionLabel}]]></textFieldExpression>
+			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="a7591379-f58d-46ba-877b-a488f1fdd851" x="355" y="80" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{bankAccountNumber}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{bankAccountNumberAnswer}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement uuid="3c5423d0-aa23-4b73-a833-a6f6c226b230" x="0" y="100" width="350" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[!$F{bankAccountReferenceNumber}.isEmpty()]]></printWhenExpression>
-				</reportElement>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="8ef1d95f-57e8-4c38-9cdc-efafee196bb1" x="0" y="100" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<text><![CDATA[Building society roll or reference number]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA[$F{bankAccountReferenceNumberQuestionLabel}]]></textFieldExpression>
+			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="2c435d18-b073-4b27-9f62-609d1d035aec" x="355" y="100" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{bankAccountReferenceNumber}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{bankAccountReferenceNumberAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>

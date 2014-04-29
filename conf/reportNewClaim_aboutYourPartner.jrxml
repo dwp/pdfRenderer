@@ -129,8 +129,8 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYourPartnerLastNameAnswer}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement uuid="cd0955cd-f3cc-41c2-b6ed-43b58e136c23" x="0" y="55" width="350" height="18"/>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="cd0955cd-f3cc-41c2-b6ed-43b58e136c23" x="0" y="55" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYourPartnerOtherSurnameOrMaidenNameQuestionLabel}]]></textFieldExpression>
 			</textField>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="560" pageHeight="872" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
-	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="881"/>
+	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<import value="org.apache.commons.codec.binary.Base64"/>
 	<subDataset name="Claim Summary Table Dataset" uuid="602a0adc-bcd8-4850-9a30-0352c480fa13">
@@ -482,8 +482,8 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{CareeTitleAnswer}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement uuid="1c36b483-0ec4-4d9b-ab4b-11bd3638a19c" x="0" y="93" width="162" height="18"/>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="1c36b483-0ec4-4d9b-ab4b-11bd3638a19c" x="0" y="93" width="162" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ClaimantOtherSurnamesQuestionLabel}]]></textFieldExpression>
 			</textField>
@@ -620,8 +620,8 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{HavePartnerAnswer}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement uuid="e3086a2c-2aee-486c-a760-0e281b32f062" x="0" y="48" width="350" height="18"/>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="e3086a2c-2aee-486c-a760-0e281b32f062" x="0" y="48" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PartnerNINOQuestionLabel}]]></textFieldExpression>
 			</textField>
@@ -630,8 +630,8 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PartnerNINOAnswer}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement uuid="287dbfa6-e2d6-44f9-92c2-b0610be86fb9" x="0" y="66" width="350" height="18"/>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="287dbfa6-e2d6-44f9-92c2-b0610be86fb9" x="0" y="66" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PartnerSurnameQuestionLabel}]]></textFieldExpression>
 			</textField>
@@ -640,8 +640,8 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PartnerSurnameAnswer}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement uuid="4781cb26-e86b-430b-8a3a-8c273d709ada" x="0" y="84" width="350" height="18"/>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="4781cb26-e86b-430b-8a3a-8c273d709ada" x="0" y="84" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PartnerOtherNamesQuestionLabel}]]></textFieldExpression>
 			</textField>
@@ -650,8 +650,8 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PartnerOtherNamesAnswer}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement uuid="82e81c14-546b-485f-8eaf-0f99be789334" x="0" y="102" width="350" height="18"/>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="82e81c14-546b-485f-8eaf-0f99be789334" x="0" y="102" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PartnerTitleQuestionLabel}]]></textFieldExpression>
 			</textField>
@@ -660,8 +660,8 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PartnerTitleAnswer}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement uuid="254e6d57-80c4-4342-a1ce-7c332b11a9d0" x="0" y="120" width="350" height="18"/>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="254e6d57-80c4-4342-a1ce-7c332b11a9d0" x="0" y="120" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PartnerOtherSurnamesQuestionLabel}]]></textFieldExpression>
 			</textField>

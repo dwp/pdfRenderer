@@ -93,7 +93,7 @@
 	</pageHeader>
 	<detail>
 		<band height="132" splitType="Prevent">
-			<textField>
+			<textField isBlankWhenNull="false">
 				<reportElement uuid="111c129f-a7b9-4827-bd88-0d8d0478c093" x="20" y="1" width="330" height="18"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{StartDateTimeQuestionLabel}]]></textFieldExpression>
@@ -103,8 +103,8 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{StartDateTimeAnswer}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement uuid="e03c71c0-bdd9-450c-bdbb-5b5e4c68a024" x="20" y="22" width="330" height="18"/>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="e03c71c0-bdd9-450c-bdbb-5b5e4c68a024" x="20" y="22" width="330" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EndDateTimeQuestionLabel}]]></textFieldExpression>
 			</textField>

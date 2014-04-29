@@ -2,21 +2,24 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_evidenceList" language="groovy" pageWidth="555" pageHeight="872" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="b9646490-04e2-4d9d-9171-d5b8ba44bbb4">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="7"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/valtechuk/carers-dev-pdf/pdfService/pdfService/conf/"]]></defaultValueExpression>
 	</parameter>
 	<field name="EvidenceListAddressLine1" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/EvidenceList/RecipientAddress/Line[1]]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/EvidenceList/RecipientAddress/Answer/Line[1]]]></fieldDescription>
 	</field>
 	<field name="EvidenceListAddressLine2" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/EvidenceList/RecipientAddress/Line[2]]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/EvidenceList/RecipientAddress/Answer/Line[2]]]></fieldDescription>
 	</field>
 	<field name="EvidenceListAddressLine3" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/EvidenceList/RecipientAddress/Line[3]]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/EvidenceList/RecipientAddress/Answer/Line[3]]]></fieldDescription>
 	</field>
 	<field name="EvidenceListAddressPostcode" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/EvidenceList/RecipientAddress/PostCode]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/EvidenceList/RecipientAddress/Answer/PostCode]]></fieldDescription>
+	</field>
+	<field name="AddressLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/EvidenceList/RecipientAddress/QuestionLabel]]></fieldDescription>
 	</field>
 	<background>
 		<band splitType="Stretch"/>
@@ -50,23 +53,28 @@
 			</subreport>
 		</band>
 		<band height="152">
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="fa94d49d-1eab-4c18-a6df-70b5c3ec49b8" x="0" y="0" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AddressLabel}]]></textFieldExpression>
+			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="ca47f04c-5f78-4523-80b3-0fad318b0849" x="0" y="0" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="ca47f04c-5f78-4523-80b3-0fad318b0849" x="0" y="18" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EvidenceListAddressLine1}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="dcfdbee9-72c3-4992-a8ec-0909fc2c0a6a" x="1" y="18" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="dcfdbee9-72c3-4992-a8ec-0909fc2c0a6a" x="1" y="36" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EvidenceListAddressLine2}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="a57c785b-5469-4919-a0e5-823b36f92ff0" x="1" y="36" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="a57c785b-5469-4919-a0e5-823b36f92ff0" x="1" y="54" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EvidenceListAddressLine3}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="e470daa1-453e-48a4-9a5d-9bc30257fe19" x="1" y="54" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="e470daa1-453e-48a4-9a5d-9bc30257fe19" x="1" y="78" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EvidenceListAddressPostcode}]]></textFieldExpression>
 			</textField>
@@ -76,13 +84,6 @@
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[*************************END OF PRINT**********************]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="86935128-1b18-4c58-9e3e-15df1fee782b" x="0" y="78" width="530" height="21"/>
-				<textElement>
-					<font size="12" isBold="false"/>
-				</textElement>
-				<text><![CDATA[The Carers Allowance unit will contact you if they need any further information.]]></text>
 			</staticText>
 		</band>
 	</detail>

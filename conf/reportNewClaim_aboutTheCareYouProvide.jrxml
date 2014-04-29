@@ -149,8 +149,8 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeSurnameAnswer}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement uuid="a0012086-cd9c-437b-ac4f-1b5c97c1b2e6" x="0" y="55" width="350" height="18"/>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="a0012086-cd9c-437b-ac4f-1b5c97c1b2e6" x="0" y="55" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeNationalInsuranceNumberQuestionLabel}]]></textFieldExpression>
 			</textField>
@@ -194,8 +194,8 @@
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Address/Answer")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_addressForNestedReports.jasper"]]></subreportExpression>
 			</subreport>
-			<textField>
-				<reportElement uuid="f9fcd57d-9f3a-414a-9787-9151c5d61c71" x="0" y="230" width="350" height="18"/>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f9fcd57d-9f3a-414a-9787-9151c5d61c71" x="0" y="230" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeDayTimeTelephoneNumberQuestionLabel}]]></textFieldExpression>
 			</textField>

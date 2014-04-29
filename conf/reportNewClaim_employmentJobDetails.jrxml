@@ -398,8 +398,8 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsPayWeeklyHoursWorkedAnswer}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement uuid="660f5427-2063-4342-afc5-e71113384678" x="20" y="120" width="330" height="18"/>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="660f5427-2063-4342-afc5-e71113384678" x="20" y="120" width="330" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsPayrollOrEmployeeNumberQuestionLabel}]]></textFieldExpression>
 			</textField>
@@ -435,8 +435,8 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{Line3}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement uuid="0c0f040e-c1b7-46ea-a06e-57ebe04457c5" x="20" y="220" width="330" height="18"/>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="0c0f040e-c1b7-46ea-a06e-57ebe04457c5" x="20" y="220" width="330" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$P{postCode}]]></textFieldExpression>
 			</textField>
@@ -445,8 +445,8 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsEmployerPostCodeAnswer}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement uuid="1947a636-1d78-47cd-92fd-f6993a51f134" x="20" y="240" width="330" height="18"/>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="1947a636-1d78-47cd-92fd-f6993a51f134" x="20" y="240" width="330" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsEmployerPhoneNumberQuestionLabel}]]></textFieldExpression>
 			</textField>
