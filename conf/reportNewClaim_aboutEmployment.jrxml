@@ -24,7 +24,7 @@
 				</graphicElement>
 			</rectangle>
 			<staticText>
-				<reportElement uuid="9163d5b5-37f2-46da-ad34-c67dad4d385d" x="0" y="1" width="213" height="20" forecolor="#FFFFFF"/>
+				<reportElement uuid="9163d5b5-37f2-46da-ad34-c67dad4d385d" x="0" y="1" width="298" height="20" forecolor="#FFFFFF"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>

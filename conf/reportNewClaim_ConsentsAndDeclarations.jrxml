@@ -26,7 +26,7 @@
 				</graphicElement>
 			</rectangle>
 			<staticText>
-				<reportElement uuid="c6fb5c1e-aac1-4fcd-b4ff-655479a6a68e" mode="Transparent" x="0" y="1" width="289" height="18" forecolor="#FFFFFF" backcolor="#FFFFFF"/>
+				<reportElement uuid="c6fb5c1e-aac1-4fcd-b4ff-655479a6a68e" mode="Transparent" x="0" y="1" width="430" height="18" forecolor="#FFFFFF" backcolor="#FFFFFF"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
