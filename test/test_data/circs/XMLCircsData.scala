@@ -28,6 +28,10 @@ object XMLCircsData extends TestUtils{
     claimantDetails(xml) ++ careeDetails(xml) ++ paymentBankDetails(xml) ++ declaration(xml:Elem)
   }
 
+  def functionalTestDataAddressChangeDetails(xml: Elem) = {
+    claimantDetails(xml) ++ careeDetails(xml) ++ addressChangeDetails(xml) ++ declaration(xml:Elem)
+  }
+
   def claimantDetails(xml:Elem) = {
     val claimantDetails = ClaimantDetails(xml).claimantDetails.map(s => buildQuestion(s._1.text, s._2.text))
     Seq(
@@ -66,6 +70,20 @@ object XMLCircsData extends TestUtils{
       "New payment details"
     ) ++ details ++ PaymentBankDetailsAccountDetails(xml).accountDetailsData.map(s => buildQuestion(s._1.text, s._2.text)) ++
       PaymentBankDetailsBuildingSocietyDetails(xml).buildingSocietyDetailsData.map(s => buildQuestion(s._1.text, s._2.text))
+  }
+
+  def addressChangeDetails(xml:Elem) = {
+    val details = ChangeAddressDetails(xml).changeAddressData.map(s => buildQuestion(s._1.text, s._2.text))
+    Seq(
+      "Part 2 - Change in Circumstance - Change of address",
+      "For security, we also need you to confirm your previous address.",
+      ChangeAddressDetails(xml).previousAddressQuestion.text,
+      ChangeAddressDetails(xml).previousAddressAnswer,
+      ChangeAddressDetails(xml).newAddressQuestion.text,
+      ChangeAddressDetails(xml).newAddressAnswer,
+      ChangeAddressDetails(xml).personYouCareForAddressQuestion.text,
+      ChangeAddressDetails(xml).personYouCareForAddressAnswer
+    ) ++ details
   }
 
   def declaration(xml:Elem):Seq[String] = {
