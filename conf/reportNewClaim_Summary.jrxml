@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="560" pageHeight="872" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="3"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<import value="org.apache.commons.codec.binary.Base64"/>
 	<subDataset name="Claim Summary Table Dataset" uuid="602a0adc-bcd8-4850-9a30-0352c480fa13">
@@ -110,6 +110,12 @@
 	</parameter>
 	<parameter name="NO_DECODED" class="java.io.InputStream">
 		<defaultValueExpression><![CDATA[new ByteArrayInputStream(new Base64().decodeBase64($P{NO_IMG}.getBytes("UTF-8")))]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dateClaimReceived" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["Date claim received"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="postCode" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["Postcode"]]></defaultValueExpression>
 	</parameter>
 	<queryString language="xPath">
 		<![CDATA[/]]>
@@ -583,11 +589,11 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{CareePostCode}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement uuid="0c1719c8-7a22-4434-8c75-120031d92aad" x="0" y="0" width="162" height="18"/>
+			<textField>
+				<reportElement uuid="1c022b13-a731-49e7-b787-845312b84f38" x="0" y="0" width="162" height="18"/>
 				<textElement/>
-				<text><![CDATA[Postcode]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA[$P{postCode}]]></textFieldExpression>
+			</textField>
 			<textField>
 				<reportElement uuid="359f7e57-7caa-4137-b0c5-77eff0bc1fb4" x="170" y="0" width="180" height="18"/>
 				<textElement/>
@@ -697,11 +703,11 @@
 				</textElement>
 				<text><![CDATA[Claim Dates]]></text>
 			</staticText>
-			<staticText>
-				<reportElement uuid="f8966fa1-e7ed-41b1-a537-5d43a821be81" x="0" y="19" width="350" height="18"/>
+			<textField>
+				<reportElement uuid="a11c198b-5ffe-476c-8c4d-2bec4f82a5a1" x="0" y="19" width="350" height="18"/>
 				<textElement/>
-				<text><![CDATA[Date claim received]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA[$P{dateClaimReceived}]]></textFieldExpression>
+			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="e09708fd-1261-4e2e-b0a3-eca8d159d5bf" x="367" y="19" width="180" height="18"/>
 				<textElement/>
