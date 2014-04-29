@@ -32,6 +32,7 @@ trait RenderService {
 
           generator.exportReportToStream(print, outputStream) match {
             case GenerationSuccess() =>
+              Logger.info("Generation success with content size:"+content.length)
               Results.Ok(content)
 
             case GenerationFailure() =>
