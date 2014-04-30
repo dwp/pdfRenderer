@@ -76,3 +76,13 @@ case class ChangeAddressDetails(xml:Elem) extends CircsUtils(xml \ "DWPCATransac
   val personYouCareForAddressAnswer = (xml \ "DWPCATransaction" \ "DWPCAChangeOfCircumstances" \ "AddressChange" \ "CareeAddress" \ "Answer" \ "Line").map(x => x.text).filterNot(x => x.isEmpty).mkString(" ")
   val changeAddressData = prepareTestData(Seq("Caring35Hours", "DateStoppedCaring35Hours", "CareeChangedAddress", "CareeSameAddress", "OtherChanges"))
 }
+
+case class BreaksInCareDetails(xml:Elem) extends CircsUtils(xml \ "DWPCATransaction" \ "DWPCAChangeOfCircumstances" \ "BreakFromCaring"){
+  val wherePersonYouCareSomeWhereElse = (xml \ "DWPCATransaction" \ "DWPCAChangeOfCircumstances" \ "BreakFromCaring" \ "WherePersonYouCare" \ "Other")
+  val whereWereYouSomeWhereElse = (xml \ "DWPCATransaction" \ "DWPCAChangeOfCircumstances" \ "BreakFromCaring" \ "WhereWereYou" \ "Other")
+  val breaksInCareData = prepareTestData(Seq("RecentBreakStartDate", "RecentBreakStartTime", "WherePersonYouCare","WhereWereYou","MedicalTreatmentDuringBreak", "MoreChanges", "AdditionalBreaksNotReported","AdditionalBreaksNotReportedDesc"))
+}
+
+case class BreaksFromCaringEnded(xml:Elem) extends CircsUtils(xml \ "DWPCATransaction" \ "DWPCAChangeOfCircumstances" \ "BreakFromCaring" \ "BreakFromCaringEnded"){
+  val breaksFromCaringEndedData = prepareTestData(Seq("HasBreakFromCaringEnded", "EndDate", "EndTime", "ExpectStartCaringAgain", "ExpectStartCaringAgainDate", "PermanentBreakDate"))
+}
