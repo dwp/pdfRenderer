@@ -90,7 +90,7 @@
 		<band splitType="Stretch"/>
 	</title>
 	<pageHeader>
-		<band height="20" splitType="Stretch">
+		<band height="46" splitType="Stretch">
 			<rectangle>
 				<reportElement uuid="75f637d8-0398-4c9a-a01e-46db988c9bf3" x="0" y="0" width="560" height="20" backcolor="#666666"/>
 			</rectangle>
@@ -122,6 +122,13 @@
 				<reportElement uuid="fa8df42d-d92f-4051-a603-d9108427489c" x="460" y="0" width="80" height="20" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{NationalInsuranceNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="464748e3-a9c3-42ef-bba3-786703772695" mode="Opaque" x="0" y="22" width="560" height="22" forecolor="#FFFFFF" backcolor="#666666"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Date Claim Received "+$F{DateTimeGenerated}]]></textFieldExpression>
 			</textField>
 		</band>
 	</pageHeader>
@@ -274,16 +281,6 @@
 				<reportElement uuid="0133ea8a-e3b4-4d1b-ae6b-918fecfcdd07" x="66" y="0" width="96" height="20"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{TransactionId}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement uuid="6063e8ee-92b9-44aa-b97d-37bad5da42f5" x="181" y="0" width="81" height="20"/>
-				<textElement verticalAlignment="Middle"/>
-				<text><![CDATA[Claim received:]]></text>
-			</staticText>
-			<textField>
-				<reportElement uuid="c2c2df57-21e4-40c1-9059-1985d6986f09" x="262" y="0" width="126" height="20"/>
-				<textElement verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{DateTimeGenerated}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="fb0d9e43-5827-4ea3-a9c3-df5752f30646" x="404" y="0" width="121" height="20"/>

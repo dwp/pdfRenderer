@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version last-->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="560" pageHeight="872" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
@@ -362,7 +361,7 @@
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/DayTimePhoneNumber/QuestionLabel]]></fieldDescription>
 	</field>
 	<pageHeader>
-		<band height="44" splitType="Stretch">
+		<band height="68" splitType="Stretch">
 			<rectangle>
 				<reportElement uuid="63cde76c-0ddc-4360-a8f6-924cf278352a" x="0" y="0" width="560" height="20" backcolor="#666666"/>
 			</rectangle>
@@ -396,18 +395,25 @@
 				<textFieldExpression><![CDATA[$F{NationalInsuranceNumberAnswer}]]></textFieldExpression>
 			</textField>
 			<rectangle>
-				<reportElement uuid="3b2bd46e-03fc-4904-bfcd-18081183bdbf" x="0" y="22" width="560" height="21" backcolor="#666666"/>
+				<reportElement uuid="3b2bd46e-03fc-4904-bfcd-18081183bdbf" x="0" y="46" width="560" height="21" backcolor="#666666"/>
 				<graphicElement>
 					<pen lineWidth="0.0"/>
 				</graphicElement>
 			</rectangle>
 			<staticText>
-				<reportElement uuid="58ddea3b-1ba8-4b66-a709-2f5f94a3de80" x="227" y="22" width="100" height="21" forecolor="#FFFFFF"/>
+				<reportElement uuid="58ddea3b-1ba8-4b66-a709-2f5f94a3de80" x="227" y="46" width="100" height="21" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Summary]]></text>
 			</staticText>
+			<textField>
+				<reportElement uuid="a7b7c4cc-3137-4f63-ae67-b6c1f92f2fc5" mode="Opaque" x="0" y="23" width="560" height="22" forecolor="#FFFFFF" backcolor="#666666"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Date Claim Received "+$F{DateTimeGenerated}]]></textFieldExpression>
+			</textField>
 		</band>
 	</pageHeader>
 	<detail>
@@ -1149,16 +1155,6 @@
 				<reportElement uuid="566ef208-2dca-4d5e-8c42-d71d93344caf" x="66" y="0" width="96" height="20"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{TransactionId}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement uuid="a3f36535-bda4-4fd0-b74c-b80d88b4b100" x="181" y="0" width="81" height="20"/>
-				<textElement verticalAlignment="Middle"/>
-				<text><![CDATA[Claim received:]]></text>
-			</staticText>
-			<textField>
-				<reportElement uuid="ee0f5965-d285-4c54-b789-cf469a9eda08" x="262" y="0" width="126" height="20"/>
-				<textElement verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{DateTimeGenerated}]]></textFieldExpression>
 			</textField>
 		</band>
 	</pageFooter>
