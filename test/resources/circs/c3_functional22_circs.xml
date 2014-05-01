@@ -29,8 +29,9 @@
                 </BreakFromCaringEnded>
                 <MedicalTreatmentDuringBreak><QuestionLabel>Did you or the person you care for receive any medical treatment or professional care during the break?</QuestionLabel><Answer>No</Answer></MedicalTreatmentDuringBreak>
                 <MoreChanges><QuestionLabel>Tell us more about your changes</QuestionLabel>
-                    <Answer>Other changes</Answer></MoreChanges>
-                <AdditionalBreaksNotReported><QuestionLabel>Are there any additional breaks in care that you have not already reported to us?</QuestionLabel><Answer>Yes</Answer></AdditionalBreaksNotReported><AdditionalBreaksNotReportedDesc><QuestionLabel>Tell us about the additional breaks</QuestionLabel><Answer>Other Changes</Answer></AdditionalBreaksNotReportedDesc>
+                    <Answer>Other changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther chanend</Answer></MoreChanges>
+                <AdditionalBreaksNotReported><QuestionLabel>Are there any additional breaks in care that you have not already reported to us?</QuestionLabel><Answer>Yes</Answer></AdditionalBreaksNotReported><AdditionalBreaksNotReportedDesc><QuestionLabel>Tell us about the additional breaks</QuestionLabel>
+                <Answer>Other changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther chanend</Answer></AdditionalBreaksNotReportedDesc>
             </BreakFromCaring>
 
 

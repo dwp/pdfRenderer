@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewCircsBreaksInCare" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="6995e436-52bd-4ce4-966d-188e2b70830b">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="267"/>
+	<property name="ireport.y" value="197"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
@@ -115,7 +115,7 @@
 		</band>
 	</pageHeader>
 	<detail>
-		<band height="572" splitType="Stretch">
+		<band height="479" splitType="Stretch">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="59a010e4-a3c4-4e34-bbb6-7867de7dfd97" x="0" y="1" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
@@ -237,32 +237,32 @@
 				<textFieldExpression><![CDATA[$F{MedicalTreatmentDuringBreakAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="c4099582-efcb-4d9d-abfc-56a6a7e717cb" x="0" y="284" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="c4099582-efcb-4d9d-abfc-56a6a7e717cb" x="0" y="284" width="555" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{MoreChangesQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="f3f722a0-bf0a-489e-bd14-13ec6bbcc3a4" x="355" y="286" width="197" height="129" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="f3f722a0-bf0a-489e-bd14-13ec6bbcc3a4" x="0" y="303" width="555" height="62" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{MoreChangesAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="9f07f3b4-81e0-475a-b243-053bbafc288a" x="0" y="416" width="350" height="23" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="9f07f3b4-81e0-475a-b243-053bbafc288a" x="0" y="368" width="350" height="25" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AdditionalBreaksNotReportedQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="6eead6c1-18ed-49fc-a79a-f40d6f3b6a8a" x="355" y="416" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="6eead6c1-18ed-49fc-a79a-f40d6f3b6a8a" x="355" y="368" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AdditionalBreaksNotReportedAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="d40b8aaa-ac4c-4057-b6c9-24c73d5bc16d" x="0" y="440" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="d40b8aaa-ac4c-4057-b6c9-24c73d5bc16d" x="0" y="395" width="555" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AdditionalBreaksNotReportedDescQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="961a1a4d-6a05-4aae-a70d-4f50be655caf" x="355" y="440" width="197" height="129" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="961a1a4d-6a05-4aae-a70d-4f50be655caf" x="0" y="415" width="555" height="62" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AdditionalBreaksNotReportedDescAnswer}]]></textFieldExpression>
 			</textField>
