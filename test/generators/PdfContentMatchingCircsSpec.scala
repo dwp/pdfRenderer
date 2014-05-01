@@ -125,6 +125,30 @@ class PdfContentMatchingCircsSpec extends PdfContentMatchingSpec{
       testContentMatches(pdfFileLocation, textCaseXml, XMLCircsData.functionalTestDataPaymentBankDetails, foundMustBeTrue)
     }
 
+    // Breaks in care section without 'Somewhere else'
+    "extract PDF for functionalTestCase22 and match contents" in new WithApplication{
+      val pdfFileLocation = "functionalTestCase22_BreaksInCare_circs_contentTestPDF.pdf"
+      val source = getClass.getResource("/circs/c3_functional22_circs.xml")
+      val textCaseXml = XML.load(source)
+      testContentMatches(pdfFileLocation, textCaseXml, XMLCircsData.functionalTestDataBreaksInCareChangeDetails, foundMustBeTrue)
+    }
+
+    // Breaks in care section with 'Somewhere else'
+    "extract PDF for functionalTestCase23 and match contents" in new WithApplication{
+      val pdfFileLocation = "functionalTestCase23_BreaksInCare_circs_contentTestPDF.pdf"
+      val source = getClass.getResource("/circs/c3_functional23_circs.xml")
+      val textCaseXml = XML.load(source)
+      testContentMatches(pdfFileLocation, textCaseXml, XMLCircsData.functionalTestDataBreaksInCareChangeDetails, foundMustBeTrue)
+    }
+
+    // Breaks in care section with 'permanent break date'
+    "extract PDF for functionalTestCase24 and match contents" in new WithApplication{
+      val pdfFileLocation = "functionalTestCase24_BreaksInCare_circs_contentTestPDF.pdf"
+      val source = getClass.getResource("/circs/c3_functional24_circs.xml")
+      val textCaseXml = XML.load(source)
+      testContentMatches(pdfFileLocation, textCaseXml, XMLCircsData.functionalTestDataBreaksInCareChangeDetails, foundMustBeTrue)
+    }
+
     // Address Details section with 'is Same Address' 'no'
     "extract PDF for functionalTestCase25 and match contents" in new WithApplication{
       val pdfFileLocation = "functionalTestCase25_circs_contentTestPDF.pdf"
@@ -148,7 +172,5 @@ class PdfContentMatchingCircsSpec extends PdfContentMatchingSpec{
       val textCaseXml = XML.load(source)
       testContentMatches(pdfFileLocation, textCaseXml, XMLCircsData.functionalTestDataAddressChangeDetails, foundMustBeTrue)
     }
-
   }
-
 }

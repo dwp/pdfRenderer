@@ -32,6 +32,10 @@ object XMLCircsData extends TestUtils{
     claimantDetails(xml) ++ careeDetails(xml) ++ addressChangeDetails(xml) ++ declaration(xml:Elem)
   }
 
+  def functionalTestDataBreaksInCareChangeDetails(xml: Elem) = {
+    claimantDetails(xml) ++ careeDetails(xml) ++ breaksInCareChangeDetails(xml) ++ declaration(xml:Elem)
+  }
+
   def claimantDetails(xml:Elem) = {
     val claimantDetails = ClaimantDetails(xml).claimantDetails.map(s => buildQuestion(s._1.text, s._2.text))
     Seq(
@@ -84,6 +88,16 @@ object XMLCircsData extends TestUtils{
       ChangeAddressDetails(xml).personYouCareForAddressQuestion.text,
       ChangeAddressDetails(xml).personYouCareForAddressAnswer
     ) ++ details
+  }
+
+  def breaksInCareChangeDetails(xml:Elem) = {
+    val details = BreaksInCareDetails(xml).breaksInCareData.map(s => buildQuestion(s._1.text, s._2.text))
+    val breaksFromCaringEnded = BreaksFromCaringEnded(xml).breaksFromCaringEndedData.map(s => buildQuestion(s._1.text, s._2.text))
+    Seq(
+      "Part 2 - Change in Circumstance - Breaks From Caring",
+      BreaksInCareDetails(xml).wherePersonYouCareSomeWhereElse.text,
+      BreaksInCareDetails(xml).whereWereYouSomeWhereElse.text
+    ) ++ details ++ breaksFromCaringEnded
   }
 
   def declaration(xml:Elem):Seq[String] = {
