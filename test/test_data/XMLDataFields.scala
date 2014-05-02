@@ -88,6 +88,10 @@ case class XMLDataFields(xml: Elem) extends TestUtils{
 
   val otherInformationWelshCommunicationAnswer = SectionConsentAndDeclaration(xml).otherInformationWelshCommunicationAnswer
 
+  val otherInformationAddtionalInformationQuestion = SectionConsentAndDeclaration(xml).otherInformationAdditionalInformationQuestion
+
+  val otherInformationAddtionalInformationAnswer = SectionConsentAndDeclaration(xml).otherInformationAdditionalInformationAnswer
+
   val careBreak: Seq[String] = {
     (rootPath \\ "Caree" \\ "CareBreak").
       map(x => {

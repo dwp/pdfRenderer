@@ -70,7 +70,7 @@
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="22" splitType="Immediate">
+		<band height="44" splitType="Immediate">
 			<rectangle>
 				<reportElement uuid="2bddbe50-2a0f-485e-ae29-8cad31555792" x="0" y="1" width="555" height="21" isRemoveLineWhenBlank="true" backcolor="#999999"/>
 				<graphicElement>
@@ -84,6 +84,16 @@
 				</textElement>
 				<text><![CDATA[Part 4 - About Your Education]]></text>
 			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="88693a80-4f12-4554-916f-ddf7f189638d" x="0" y="24" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYourEducationCourseofEducationQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="bcb23db5-1781-4312-bf52-139de97ea95b" x="355" y="24" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYourEducationCourseofEducationAnswer}]]></textFieldExpression>
+			</textField>
 		</band>
 	</title>
 	<detail>
