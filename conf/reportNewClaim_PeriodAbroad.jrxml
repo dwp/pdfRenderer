@@ -50,7 +50,7 @@
 	<group name="Break">
 		<groupExpression><![CDATA[$F{AboutYouTheCarerPeriodAbroadDateFromAnswer}]]></groupExpression>
 		<groupHeader>
-			<band height="72">
+			<band height="68">
 				<textField isBlankWhenNull="false">
 					<reportElement uuid="3d091f97-47b6-4819-b5bb-c919c8560721" x="20" y="8" width="330" height="32"/>
 					<textElement/>
@@ -77,8 +77,8 @@
 	<background>
 		<band splitType="Stretch"/>
 	</background>
-	<pageHeader>
-		<band height="23" splitType="Stretch">
+	<title>
+		<band height="23">
 			<staticText>
 				<reportElement uuid="a415a243-c2e6-483a-8f49-31a568e887ae" mode="Opaque" x="0" y="0" width="555" height="21" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
 				<textElement verticalAlignment="Middle">
@@ -87,7 +87,7 @@
 				<text><![CDATA[Periods Abroad]]></text>
 			</staticText>
 		</band>
-	</pageHeader>
+	</title>
 	<detail>
 		<band height="187" splitType="Stretch">
 			<staticText>
