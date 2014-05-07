@@ -102,15 +102,6 @@
 	<parameter name="SUBREPORT_DIR" class="java.lang.String">
 		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
 	</parameter>
-	<parameter name="YES_IMG" class="java.lang.String"/>
-	<parameter name="NO_IMG" class="java.lang.String"/>
-	<parameter name="YES_DECODED" class="java.io.InputStream">
-		<property name="new ByteArrayInputStream(new Base64().decodeBase64($P{YES_IMG}.getBytes(&quot;UTF-8&quot;)))" value=""/>
-		<defaultValueExpression><![CDATA[new ByteArrayInputStream(new Base64().decodeBase64($P{YES_IMG}.getBytes("UTF-8")))]]></defaultValueExpression>
-	</parameter>
-	<parameter name="NO_DECODED" class="java.io.InputStream">
-		<defaultValueExpression><![CDATA[new ByteArrayInputStream(new Base64().decodeBase64($P{NO_IMG}.getBytes("UTF-8")))]]></defaultValueExpression>
-	</parameter>
 	<parameter name="dateClaimReceived" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["Date claim received"]]></defaultValueExpression>
 	</parameter>

@@ -10,8 +10,6 @@ import net.sf.jasperreports.engine.util.{JRElementsVisitor, JRSaver}
 import java.io.{File, OutputStream}
 import java.util
 import scala.language.postfixOps
-import controllers.Assets
-import play.api.Play.resource
 
 /**
  * Interface of the report generators.
@@ -35,12 +33,7 @@ trait ReportGenerator {
       }
       val parameter:util.Map[String,Object] = new util.HashMap[String,Object]()
 
-      val encodeImgYes = encodeImageFile(yesImage)
-      val encodeImgNo = encodeImageFile(noImage)
-
       parameter.put("SUBREPORT_DIR",jasperLocation)
-      parameter.put("YES_IMG",encodeImgYes)
-      parameter.put("NO_IMG",encodeImgNo)
 
       val jasperPrint = JasperFillManager.fillReport(jasperFilename, parameter, source.convertToJRDataSource())
       if (null != jasperPrint) Some(jasperPrint) else None
@@ -54,22 +47,6 @@ trait ReportGenerator {
         Logger.error(e.getMessage,e)
         throw e
       }
-    }
-  }
-
-  def encodeImageFile(imageFile: String): String = {
-    import Play.current
-
-    val urlResource = resource("public/"+imageFile)
-    urlResource match{
-      case Some(url) =>
-        val bis = new java.io.BufferedInputStream(url.openStream())
-        val bArray = Stream.continually(bis.read).takeWhile(-1 !=).map(_.toByte).toArray
-        val encodedImage = new sun.misc.BASE64Encoder().encode(bArray)
-        new String(encodedImage)
-      case None =>
-        Logger.error(s"$imageFile could not be found")
-        ""
     }
   }
 

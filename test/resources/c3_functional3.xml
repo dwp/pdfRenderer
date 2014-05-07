@@ -2,7 +2,7 @@
     <Version>0.1</Version>
     <DWPCATransaction id="TEST432">
         <TransactionId>TEST432</TransactionId>
-        <DateTimeGenerated>25-04-2014 08:51</DateTimeGenerated>
+        <DateTimeGenerated>06-05-2014 13:22</DateTimeGenerated>
         <DWPCAClaim>
             <DateOfClaim><QuestionLabel>When do you want your Carer's Allowance claim to start?</QuestionLabel><Answer>01-01-2010</Answer></DateOfClaim>
             <Claimant>
@@ -72,7 +72,7 @@
                 <Cared35HoursBefore><QuestionLabel>Did you care for this person for 35 hours or more each week before your claim date?</QuestionLabel><Answer>No</Answer></Cared35HoursBefore>
 
                 <LiveSameAddress><QuestionLabel>Do they live at the same address as you?</QuestionLabel><Answer>No</Answer></LiveSameAddress>
-                <ArmedForcesIndependencePayment><QuestionLabel>Does this person get Armed Forces Independence Payment (AFIP)?</QuestionLabel><Answer>No</Answer></ArmedForcesIndependencePayment>
+                <ArmedForcesIndependencePayment><QuestionLabel>Does this person get Armed Forces Independence Payment AFIP?</QuestionLabel><Answer>No</Answer></ArmedForcesIndependencePayment>
             </Caree>
             <Residency>
                 <NormallyLiveInGB><QuestionLabel>Do you normally live in England, Scotland or Wales?</QuestionLabel><Answer>Yes</Answer></NormallyLiveInGB>
@@ -173,7 +173,7 @@
 
                         <GrossPayment><QuestionLabel>What was the gross pay for this period?</QuestionLabel><Answer><Currency>GBP</Currency><Amount>600</Amount></Answer></GrossPayment>
                         <IncludedInWage><QuestionLabel>What was included in this pay?</QuestionLabel><Answer>All amounts due</Answer></IncludedInWage>
-                        <PayFrequency><QuestionLabel>How often do you want to get paid?</QuestionLabel><Answer>Four-Weekly</Answer></PayFrequency>
+                        <PayFrequency><QuestionLabel>How often were you paid?</QuestionLabel><Answer>Four-Weekly</Answer></PayFrequency>
                         <UsualPayDay><QuestionLabel>When did you get paid?</QuestionLabel><Answer>two weeks ago</Answer></UsualPayDay>
 
                     </Pay>
@@ -227,7 +227,7 @@
                     <DateLastPaid><QuestionLabel>When were you last paid?</QuestionLabel><Answer>08-07-2013</Answer></DateLastPaid>
                     <GrossPayment><QuestionLabel>What was the gross pay for this period?</QuestionLabel><Answer><Currency>GBP</Currency><Amount>600</Amount></Answer></GrossPayment>
 
-                    <PayFrequency><QuestionLabel>How often do you want to get paid?</QuestionLabel><Answer>Weekly</Answer></PayFrequency>
+                    <PayFrequency><QuestionLabel>How often were you paid?</QuestionLabel><Answer>Weekly</Answer></PayFrequency>
 
                     <ConstantEarnings><QuestionLabel>Did you get the same amount each time?</QuestionLabel><Answer>No</Answer></ConstantEarnings>
                 </Pay>
@@ -280,9 +280,9 @@
                 <ClaimantBenefits>
                     <StatePension><QuestionLabel>Do you get State Pension?</QuestionLabel><Answer>No</Answer></StatePension>
                 </ClaimantBenefits>
-                <OtherMoneySSP><QuestionLabel>Have you had any Statutory Sick Pay (SSP) since the date you want to claim from 01/01/2010?</QuestionLabel><Answer>No</Answer></OtherMoneySSP>
+                <OtherMoneySSP><QuestionLabel>Have you had any Statutory Sick Pay SSP since the date you want to claim from 01/01/2010?</QuestionLabel><Answer>No</Answer></OtherMoneySSP>
 
-                <OtherMoneySP><QuestionLabel>Have you had any Statutory Maternity Pay (SMP), Statutory Paternity Pay (SPP) or Statutory Adoption Pay (SAP) since the date you want to claim from 01/01/2010?</QuestionLabel><Answer>Yes</Answer></OtherMoneySP>
+                <OtherMoneySP><QuestionLabel>Have you had any Statutory Maternity Pay SMP, Statutory Paternity Pay SPP or Statutory Adoption Pay SAP since the date you want to claim from 01/01/2010?</QuestionLabel><Answer>Yes</Answer></OtherMoneySP>
                 <OtherMoneySPDetails>
                     <Payment>
                         <Payment><QuestionLabel>How much</QuestionLabel><Answer><Currency>GBP</Currency><Amount>145</Amount></Answer></Payment>
@@ -300,9 +300,9 @@
                 <OtherMoneyPayments><QuestionLabel>Have you received any payments for the person you care for or any other person since your claim date 01/01/2010</QuestionLabel><Answer>No</Answer></OtherMoneyPayments>
 
                 <EEA>
-                    <EEAReceivePensionsBenefits><QuestionLabel>Do you, or any member of your family, receive any benefits or pensions from any other European Economic Area (EEA) state or Switzerland?</QuestionLabel><Answer>No</Answer></EEAReceivePensionsBenefits>
-                    <EEAClaimPensionsBenefits><QuestionLabel>Have you, or a member of your family, made a claim for any benefits or pensions from any other European Economic Area (EEA) state or Switzerland?</QuestionLabel><Answer>No</Answer></EEAClaimPensionsBenefits>
-                    <EEAWorkingInsurance><QuestionLabel>Are you, or a member of your family, working in or paying insurance to, another European Economic Area (EEA) state or Switzerland?</QuestionLabel><Answer>No</Answer></EEAWorkingInsurance>
+                    <EEAReceivePensionsBenefits><QuestionLabel>Do you, or any member of your family, receive any benefits or pensions from any other European Economic Area EEA state or Switzerland?</QuestionLabel><Answer>No</Answer></EEAReceivePensionsBenefits>
+                    <EEAClaimPensionsBenefits><QuestionLabel>Have you, or a member of your family, made a claim for any benefits or pensions from any other European Economic Area EEA state or Switzerland?</QuestionLabel><Answer>No</Answer></EEAClaimPensionsBenefits>
+                    <EEAWorkingInsurance><QuestionLabel>Are you, or a member of your family, working in or paying insurance to, another European Economic Area EEA state or Switzerland?</QuestionLabel><Answer>No</Answer></EEAWorkingInsurance>
                 </EEA>
             </OtherBenefits>
             <Payment>
@@ -369,8 +369,8 @@
             <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
             <ds:Reference URI="#TEST432">
                 <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
-                <ds:DigestValue>D1935sp66qS/oDpk2AFS7Frl4Q0=</ds:DigestValue>
+                <ds:DigestValue>8fOvJUVTcOkO23usERhxd39a2ds=</ds:DigestValue>
             </ds:Reference>
         </ds:SignedInfo>
-        <ds:SignatureValue>LChRNAvSUYrUK6huwcCrBN4nXIJwXWSzI4+cBBL1YwY954/DUC8Ycw==</ds:SignatureValue>
+        <ds:SignatureValue>lO1l88/AR3NqUTXC6+XDLM8yWbsxfj7VynNszai5PljXvpwROD6bsA==</ds:SignatureValue>
     </ds:Signature></DWPBody>
