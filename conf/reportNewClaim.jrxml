@@ -2,8 +2,9 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim" language="groovy" pageWidth="560" pageHeight="872" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="90378acd-33ad-413e-ad03-6f54642cad18">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="707"/>
+	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<property name="net.sf.jasperreports.export.html.remove.emtpy.space.between.rows" value="true"/>
 	<style name="table">
 		<box>
 			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
@@ -86,9 +87,6 @@
 	<background>
 		<band splitType="Stretch"/>
 	</background>
-	<title>
-		<band splitType="Stretch"/>
-	</title>
 	<pageHeader>
 		<band height="46" splitType="Stretch">
 			<rectangle>
