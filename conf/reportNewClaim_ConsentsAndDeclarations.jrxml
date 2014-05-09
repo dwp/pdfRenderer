@@ -78,7 +78,7 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Disclaimer.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="80">
+		<band height="112">
 			<staticText>
 				<reportElement uuid="fe6f19f7-59d4-4d8b-a7e7-9cff92db0fb7" mode="Opaque" x="0" y="0" width="555" height="21" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
 				<textElement verticalAlignment="Middle">
@@ -87,7 +87,7 @@
 				<text><![CDATA[Declaration]]></text>
 			</staticText>
 			<subreport>
-				<reportElement uuid="6ad6aef0-be4f-4dc0-9bcc-45b625ce4ee2" x="0" y="21" width="555" height="59"/>
+				<reportElement uuid="6ad6aef0-be4f-4dc0-9bcc-45b625ce4ee2" x="0" y="21" width="555" height="91"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>

@@ -16,7 +16,7 @@
 		<band splitType="Stretch"/>
 	</background>
 	<pageHeader>
-		<band height="43" splitType="Stretch">
+		<band height="22" splitType="Stretch">
 			<rectangle>
 				<reportElement uuid="7d35266a-048b-4bf0-9160-1dffa50dc2a7" x="0" y="1" width="553" height="21" backcolor="#999999"/>
 				<graphicElement>
@@ -30,23 +30,24 @@
 				</textElement>
 				<text><![CDATA[Part 5 - About Your Employment ]]></text>
 			</staticText>
-			<textField isStretchWithOverflow="true">
-				<reportElement uuid="eb266188-59cb-419c-a0f8-91a681fa3220" x="0" y="24" width="350" height="18" isRemoveLineWhenBlank="true"/>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="121" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="eb266188-59cb-419c-a0f8-91a681fa3220" x="0" y="1" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutEmploymentAreYouEmployedQuestion}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement uuid="611415b6-f512-4ac4-b6c1-518bb947d854" x="355" y="24" width="197" height="18"/>
+				<reportElement uuid="611415b6-f512-4ac4-b6c1-518bb947d854" x="355" y="1" width="197" height="18"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutEmploymentAreYouEmployedAnswer}]]></textFieldExpression>
 			</textField>
-		</band>
-	</pageHeader>
-	<detail>
-		<band height="102" splitType="Stretch">
-			<printWhenExpression><![CDATA[$F{AboutEmploymentAreYouEmployedAnswer}.equals("Yes")]]></printWhenExpression>
 			<subreport>
-				<reportElement uuid="05913b57-31c0-4e7f-91bd-95a159dbf9bb" x="0" y="1" width="552" height="100" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="05913b57-31c0-4e7f-91bd-95a159dbf9bb" x="0" y="20" width="552" height="100" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{AboutEmploymentAreYouEmployedAnswer}.equals("Yes")]]></printWhenExpression>
+				</reportElement>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
