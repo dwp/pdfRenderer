@@ -11,16 +11,16 @@
 	<queryString language="xPath">
 		<![CDATA[$P{XPATH_ADDRESS}]]>
 	</queryString>
+	<field name="Line" class="java.lang.String">
+		<fieldDescription><![CDATA[.]]></fieldDescription>
+	</field>
 	<detail>
 		<band height="20" splitType="Stretch">
-			<subreport>
-				<reportElement uuid="1e3e4155-43bc-444e-b78b-c05e69c14019" x="0" y="0" width="180" height="18"/>
-				<subreportParameter name="XPATH_ADDRESS">
-					<subreportParameterExpression><![CDATA[$P{XPATH_ADDRESS}]]></subreportParameterExpression>
-				</subreportParameter>
-				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/Address/Answer/Line")]]></dataSourceExpression>
-				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Street.jasper"]]></subreportExpression>
-			</subreport>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="33120e0b-5572-4883-8f94-d6ea89a6c19e" x="0" y="0" width="203" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Line}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 </jasperReport>
