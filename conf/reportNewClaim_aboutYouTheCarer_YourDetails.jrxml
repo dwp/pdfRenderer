@@ -51,32 +51,32 @@
 	</background>
 	<detail>
 		<band height="131" splitType="Stretch">
-			<textField>
-				<reportElement uuid="9415ec90-b8b5-40d0-b5ea-8983fd33549e" x="0" y="21" width="350" height="18"/>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="9415ec90-b8b5-40d0-b5ea-8983fd33549e" x="0" y="21" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantTitleQuestionLabel}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="0f00aab9-bd9c-417b-8e32-a61a0b7c360c" x="355" y="21" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantTitleAnswer}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement uuid="f6bc7857-d513-406a-8e3d-5aa5901d49e2" x="0" y="39" width="350" height="18"/>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f6bc7857-d513-406a-8e3d-5aa5901d49e2" x="0" y="39" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantFirstNameQuestionLabel}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="7fb7a342-d9f3-42ba-86f2-7f418864f0f4" x="355" y="39" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantFirstNameAnswer}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement uuid="3aa7b2f8-c0c3-4bc7-83bd-394da404d049" x="0" y="57" width="350" height="18"/>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="3aa7b2f8-c0c3-4bc7-83bd-394da404d049" x="0" y="57" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantSurnameQuestionLabel}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="8c75e471-dd48-4837-99a1-ec82c69b2d40" x="355" y="57" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantSurnameAnswer}]]></textFieldExpression>
@@ -91,22 +91,22 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerOtherSurnamesAnswer}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement uuid="3b10bf4b-22b8-4920-9cf2-dc3670497676" x="0" y="93" width="350" height="18"/>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="3b10bf4b-22b8-4920-9cf2-dc3670497676" x="0" y="93" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerNationalInsuranceNumberQuestionLabel}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="2aa6b536-54b9-4d3e-b3d3-a79e9df0173c" x="355" y="93" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerNationalInsuranceNumberAnswer}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement uuid="ef9a8048-a9eb-472d-b1e8-64c10bde3fcf" x="0" y="111" width="350" height="18"/>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="ef9a8048-a9eb-472d-b1e8-64c10bde3fcf" x="0" y="111" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerDateOfBirthQuestionLabel}]]></textFieldExpression>
 			</textField>
-			<textField>
+			<textField isBlankWhenNull="true">
 				<reportElement uuid="79f5aba9-3547-4f6e-862f-cdb7dfc7c27a" x="355" y="111" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerDateOfBirthAnswer}]]></textFieldExpression>
