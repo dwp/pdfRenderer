@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYouTheCarer" language="groovy" pageWidth="555" pageHeight="872" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a66aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="382"/>
+	<property name="ireport.y" value="73"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<property name="net.sf.jasperreports.export.html.remove.emtpy.space.between.rows" value="true"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
@@ -137,7 +137,7 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_aboutYouTheCarer_YourDetails.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="216" splitType="Stretch">
+		<band height="138" splitType="Stretch">
 			<rectangle>
 				<reportElement uuid="84e9a3a2-2fa1-4fa3-9d4c-a493978ebf9e" x="0" y="1" width="553" height="21" isRemoveLineWhenBlank="true" backcolor="#CCCCCC"/>
 				<graphicElement>
@@ -152,69 +152,57 @@
 				<text><![CDATA[Your Contact Details]]></text>
 			</staticText>
 			<subreport>
-				<reportElement uuid="86c767c0-52a4-498e-93cf-7c3ab6dd5cba" positionType="Float" x="0" y="23" width="553" height="78" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="86c767c0-52a4-498e-93cf-7c3ab6dd5cba" positionType="Float" x="0" y="23" width="553" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource) $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Address/Answer")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_addressForNestedReports.jasper"]]></subreportExpression>
 			</subreport>
-			<rectangle>
-				<reportElement uuid="d22a98cb-7ad9-4a69-9f6c-78acc302aa47" x="0" y="102" width="552" height="21" isRemoveLineWhenBlank="true" backcolor="#CCCCCC"/>
-				<graphicElement>
-					<pen lineWidth="0.0"/>
-				</graphicElement>
-			</rectangle>
-			<staticText>
-				<reportElement uuid="3c5d2677-901e-4257-8c4f-78ccaa69004b" x="0" y="101" width="229" height="20" forecolor="#FFFFFF"/>
-				<textElement>
-					<font size="12" isBold="true"/>
-				</textElement>
-				<text><![CDATA[How we can contact you]]></text>
-			</staticText>
 			<textField>
-				<reportElement uuid="b6b48e2b-db12-45a5-887a-3c88bcae4893" x="0" y="123" width="350" height="18"/>
+				<reportElement uuid="b6b48e2b-db12-45a5-887a-3c88bcae4893" positionType="Float" x="0" y="45" width="350" height="18"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AbouYouTheCarerDayTimeTelephoneNumberQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="0cc3309a-996b-48fb-a96b-48857a605f39" x="355" y="123" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="0cc3309a-996b-48fb-a96b-48857a605f39" positionType="Float" x="355" y="45" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AbouYouTheCarerDayTimeTelephoneNumberAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="a3503460-4846-4b36-9cd7-3196914e4dcb" x="0" y="141" width="350" height="36" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="a3503460-4846-4b36-9cd7-3196914e4dcb" positionType="Float" x="0" y="63" width="350" height="36" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerSpeechOrHearingDifficultyQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="08474f6d-a180-4641-a3f4-0b477843d386" x="355" y="141" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="08474f6d-a180-4641-a3f4-0b477843d386" positionType="Float" x="355" y="63" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerSpeechOrHearingDifficultyAnswer}]]></textFieldExpression>
 			</textField>
-			<rectangle>
-				<reportElement uuid="592b0bd7-64a5-4e26-b68f-51173e743f25" x="0" y="177" width="552" height="21" backcolor="#CCCCCC"/>
-				<graphicElement>
-					<pen lineWidth="0.0"/>
-				</graphicElement>
-			</rectangle>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="5b4d1eca-9216-4389-849e-14c074093a3b" positionType="Float" x="0" y="119" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimDateQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="4f2b464f-d57e-4053-a5e8-9e65da71d763" positionType="Float" x="355" y="119" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimDateAnswer}]]></textFieldExpression>
+			</textField>
 			<staticText>
-				<reportElement uuid="2e7291b0-81be-45a4-9549-ce3f6812f4b4" x="-1" y="178" width="172" height="20" forecolor="#FFFFFF"/>
-				<textElement>
+				<reportElement uuid="8da1d0de-ce96-4d52-9ec3-3901d19e6aaf" positionType="Float" mode="Opaque" x="0" y="25" width="553" height="20" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[How we can contact you]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="11925ae7-8287-429b-9d41-e4b447f228fd" positionType="Float" mode="Opaque" x="0" y="99" width="553" height="20" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
+				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Your claim date]]></text>
 			</staticText>
-			<textField>
-				<reportElement uuid="5b4d1eca-9216-4389-849e-14c074093a3b" x="-1" y="198" width="350" height="18"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimDateQuestion}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="4f2b464f-d57e-4053-a5e8-9e65da71d763" x="355" y="198" width="197" height="18"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimDateAnswer}]]></textFieldExpression>
-			</textField>
 		</band>
 		<band height="82" splitType="Stretch">
 			<rectangle>
