@@ -61,16 +61,16 @@
 		<fieldDescription><![CDATA[/DWPBody/Version]]></fieldDescription>
 	</field>
 	<field name="ClaimantSurname" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Surname]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Surname/Answer]]></fieldDescription>
 	</field>
 	<field name="NationalInsuranceNumber" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/NationalInsuranceNumber]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/NationalInsuranceNumber/Answer]]></fieldDescription>
 	</field>
 	<field name="TransactionId" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/TransactionId]]></fieldDescription>
 	</field>
 	<field name="ClaimantTitle" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Title]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Title/Answer]]></fieldDescription>
 	</field>
 	<field name="DateTimeGenerated" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DateTimeGenerated]]></fieldDescription>
@@ -88,44 +88,48 @@
 		<band splitType="Stretch"/>
 	</background>
 	<pageHeader>
-		<band height="46" splitType="Stretch">
-			<rectangle>
-				<reportElement uuid="75f637d8-0398-4c9a-a01e-46db988c9bf3" x="0" y="0" width="560" height="20" forecolor="#FFFFFF" backcolor="#000000"/>
-				<graphicElement>
-					<pen lineWidth="0.0"/>
-				</graphicElement>
-			</rectangle>
-			<staticText>
-				<reportElement uuid="eb8201ef-3319-4f71-ba4a-434848230663" x="2" y="0" width="90" height="20" forecolor="#FFFFFF"/>
-				<textElement verticalAlignment="Middle">
-					<font fontName="SansSerif" size="14" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Transaction:]]></text>
-			</staticText>
+		<band height="45" splitType="Stretch">
+			<frame>
+				<reportElement uuid="5dabe915-84d3-4dcd-a312-966736875aa2" x="0" y="0" width="560" height="23" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" backcolor="#FFFFFF"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#000000"/>
+					<topPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineColor="#000000"/>
+				</box>
+				<staticText>
+					<reportElement uuid="eb8201ef-3319-4f71-ba4a-434848230663" x="0" y="0" width="90" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="SansSerif" size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Transaction:]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="97b2efa8-c290-4b0e-b5d1-0ddc084d45e0" x="90" y="0" width="126" height="20" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{TransactionId}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="413555f5-6e37-46fa-9f7b-00d6dd12b626" x="215" y="0" width="30" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{ClaimantTitle}.toUpperCase()]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="f611597b-ca9e-4eee-b245-2214c1573ce9" x="247" y="0" width="193" height="20" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{ClaimantSurname}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="fa8df42d-d92f-4051-a603-d9108427489c" x="457" y="0" width="80" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{NationalInsuranceNumber}]]></textFieldExpression>
+				</textField>
+			</frame>
 			<textField>
-				<reportElement uuid="97b2efa8-c290-4b0e-b5d1-0ddc084d45e0" x="93" y="0" width="126" height="20" forecolor="#FFFFFF"/>
-				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{TransactionId}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="413555f5-6e37-46fa-9f7b-00d6dd12b626" x="218" y="0" width="30" height="20" forecolor="#FFFFFF"/>
-				<textElement textAlignment="Right" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{ClaimantTitle}.toUpperCase()]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="f611597b-ca9e-4eee-b245-2214c1573ce9" x="250" y="0" width="193" height="20" forecolor="#FFFFFF"/>
-				<textElement verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{ClaimantSurname}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="fa8df42d-d92f-4051-a603-d9108427489c" x="460" y="0" width="80" height="20" forecolor="#FFFFFF"/>
-				<textElement textAlignment="Right" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{NationalInsuranceNumber}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="464748e3-a9c3-42ef-bba3-786703772695" mode="Opaque" x="0" y="22" width="560" height="22" forecolor="#FFFFFF" backcolor="#FFFFFF"/>
+				<reportElement uuid="464748e3-a9c3-42ef-bba3-786703772695" mode="Opaque" x="0" y="23" width="560" height="22" forecolor="#000000" backcolor="#FFFFFF"/>
 				<textElement verticalAlignment="Middle">
 					<font size="12"/>
 				</textElement>
