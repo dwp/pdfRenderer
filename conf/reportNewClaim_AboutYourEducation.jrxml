@@ -3,6 +3,8 @@
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
+	<property name="net.sf.jasperreports.export.html.remove.emtpy.space.between.rows" value="true"/>
+	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/valtechuk/carers-dev-pdf/pdfService/pdfService/conf/"]]></defaultValueExpression>
 	</parameter>
@@ -71,15 +73,9 @@
 	</background>
 	<title>
 		<band height="41" splitType="Immediate">
-			<rectangle>
-				<reportElement uuid="2bddbe50-2a0f-485e-ae29-8cad31555792" x="0" y="1" width="555" height="21" isRemoveLineWhenBlank="true" backcolor="#999999"/>
-				<graphicElement>
-					<pen lineWidth="0.0"/>
-				</graphicElement>
-			</rectangle>
 			<staticText>
-				<reportElement uuid="130411b3-59f9-4c8b-b394-99a8644d6960" mode="Transparent" x="0" y="1" width="307" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" backcolor="#FFFFFF"/>
-				<textElement>
+				<reportElement uuid="130411b3-59f9-4c8b-b394-99a8644d6960" style="HeadingClaim" mode="Opaque" x="0" y="1" width="555" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement markup="styled">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Part 4 - About Your Education]]></text>
@@ -100,8 +96,8 @@
 		<band height="131" splitType="Immediate">
 			<printWhenExpression><![CDATA[$F{AboutYourEducationCourseofEducationAnswer}.equals("Yes")]]></printWhenExpression>
 			<staticText>
-				<reportElement uuid="3fb60df5-93bc-41b9-bf47-616798b1b63d" mode="Opaque" x="0" y="1" width="555" height="21" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
-				<textElement>
+				<reportElement uuid="3fb60df5-93bc-41b9-bf47-616798b1b63d" style="SubHeadingClaim" mode="Opaque" x="0" y="1" width="555" height="21" isRemoveLineWhenBlank="true"/>
+				<textElement markup="styled">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Your course details]]></text>

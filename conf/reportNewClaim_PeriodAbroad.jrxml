@@ -4,6 +4,8 @@
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<property name="net.sf.jasperreports.export.html.remove.emtpy.space.between.rows" value="true"/>
+	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
 	<queryString language="xPath">
 		<![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/CareBreak]]>
 	</queryString>
@@ -62,9 +64,9 @@
 					<textFieldExpression><![CDATA[$F{AboutYouTheCarerTimeOutsideGBLast3YearsAnswer}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement uuid="546e57b0-0c10-4b4b-b768-1f3cea76fdc0" mode="Opaque" x="20" y="34" width="535" height="20" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
-					<textElement verticalAlignment="Middle">
-						<font isBold="true"/>
+					<reportElement uuid="546e57b0-0c10-4b4b-b768-1f3cea76fdc0" mode="Opaque" x="20" y="34" width="535" height="20" forecolor="#000000" backcolor="#E6E6E6"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font size="14" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA["Period Abroad " + $V{variable1}]]></textFieldExpression>
 				</textField>
@@ -80,7 +82,7 @@
 	<title>
 		<band height="21">
 			<staticText>
-				<reportElement uuid="a415a243-c2e6-483a-8f49-31a568e887ae" mode="Opaque" x="0" y="0" width="555" height="21" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
+				<reportElement uuid="a415a243-c2e6-483a-8f49-31a568e887ae" style="SubHeadingClaim" mode="Opaque" x="0" y="0" width="555" height="21"/>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>

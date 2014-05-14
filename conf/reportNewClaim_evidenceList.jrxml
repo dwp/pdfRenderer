@@ -3,6 +3,8 @@
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
+	<property name="net.sf.jasperreports.export.html.remove.emtpy.space.between.rows" value="true"/>
+	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/valtechuk/carers-dev-pdf/pdfService/pdfService/conf/"]]></defaultValueExpression>
 	</parameter>
@@ -25,16 +27,10 @@
 		<band splitType="Stretch"/>
 	</background>
 	<pageHeader>
-		<band height="24" splitType="Stretch">
-			<rectangle>
-				<reportElement uuid="a48b6c47-3c14-4c86-9fd6-a3eef7ca5547" x="0" y="3" width="555" height="20" backcolor="#999999"/>
-				<graphicElement>
-					<pen lineWidth="0.0"/>
-				</graphicElement>
-			</rectangle>
+		<band height="23" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="f3b5dff4-39c9-4ce1-91fe-15e640d4d715" x="0" y="0" width="220" height="18" forecolor="#FFFFFF"/>
-				<textElement verticalAlignment="Middle">
+				<reportElement uuid="f3b5dff4-39c9-4ce1-91fe-15e640d4d715" style="HeadingClaim" mode="Opaque" x="0" y="3" width="555" height="18"/>
+				<textElement verticalAlignment="Middle" markup="styled">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Part 10 - Customer Evidence List]]></text>

@@ -3,6 +3,7 @@
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
+	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
 	</parameter>
@@ -17,15 +18,9 @@
 	</background>
 	<pageHeader>
 		<band height="22" splitType="Stretch">
-			<rectangle>
-				<reportElement uuid="7d35266a-048b-4bf0-9160-1dffa50dc2a7" x="0" y="1" width="553" height="21" backcolor="#999999"/>
-				<graphicElement>
-					<pen lineWidth="0.0"/>
-				</graphicElement>
-			</rectangle>
 			<staticText>
-				<reportElement uuid="9163d5b5-37f2-46da-ad34-c67dad4d385d" x="0" y="1" width="298" height="20" forecolor="#FFFFFF"/>
-				<textElement>
+				<reportElement uuid="9163d5b5-37f2-46da-ad34-c67dad4d385d" style="HeadingClaim" mode="Opaque" x="0" y="1" width="553" height="20" forecolor="#000000"/>
+				<textElement markup="styled">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Part 5 - About Your Employment ]]></text>

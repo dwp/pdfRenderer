@@ -3,6 +3,8 @@
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
+	<property name="net.sf.jasperreports.export.html.remove.emtpy.space.between.rows" value="true"/>
+	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/valtechuk/carers-dev-pdf/pdfService/pdfService/conf/"]]></defaultValueExpression>
 	</parameter>
@@ -89,15 +91,9 @@
 	</background>
 	<pageHeader>
 		<band height="22" splitType="Immediate">
-			<rectangle>
-				<reportElement uuid="29685526-ed8b-4544-8b43-a2693c8a827d" mode="Opaque" x="0" y="1" width="555" height="21" isRemoveLineWhenBlank="true" forecolor="#999999" backcolor="#999999"/>
-				<graphicElement>
-					<pen lineWidth="0.0"/>
-				</graphicElement>
-			</rectangle>
 			<staticText>
-				<reportElement uuid="0352c26e-c945-465d-a87d-c2030a5dc51d" x="0" y="1" width="280" height="20" forecolor="#FFFFFF"/>
-				<textElement>
+				<reportElement uuid="0352c26e-c945-465d-a87d-c2030a5dc51d" style="HeadingClaim" mode="Opaque" x="0" y="1" width="553" height="20"/>
+				<textElement markup="styled">
 					<font size="12" isBold="true" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[Part 3 - About the care you provide]]></text>
@@ -106,15 +102,9 @@
 	</pageHeader>
 	<detail>
 		<band height="315" splitType="Immediate">
-			<rectangle>
-				<reportElement uuid="a6e048eb-084e-4e60-b36c-d3856e62a036" x="0" y="1" width="555" height="20" isRemoveLineWhenBlank="true" backcolor="#CCCCCC"/>
-				<graphicElement>
-					<pen lineWidth="0.0"/>
-				</graphicElement>
-			</rectangle>
 			<staticText>
-				<reportElement uuid="1cbce792-112d-4e39-8088-39c855728d3b" mode="Transparent" x="0" y="1" width="234" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" backcolor="#FFFFFF"/>
-				<textElement>
+				<reportElement uuid="1cbce792-112d-4e39-8088-39c855728d3b" style="SubHeadingClaim" mode="Opaque" x="0" y="1" width="553" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement markup="styled">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Details of the person you care for]]></text>
@@ -180,7 +170,7 @@
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeLiveSameAddressAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="1c5d9726-b4ef-44ce-9a67-6874d77320ab" positionType="Float" mode="Opaque" x="0" y="129" width="555" height="21" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
+				<reportElement uuid="1c5d9726-b4ef-44ce-9a67-6874d77320ab" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="129" width="555" height="21"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -205,7 +195,7 @@
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeDayTimeTelephoneNumberAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="35fde8b7-2c4f-4011-8ded-e1e3ebf084f0" positionType="Float" mode="Opaque" x="0" y="169" width="555" height="21" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" backcolor="#CCCCCC">
+				<reportElement uuid="35fde8b7-2c4f-4011-8ded-e1e3ebf084f0" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="169" width="555" height="21" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[!$F{displayRelationShipOtherClaims}.isEmpty()]]></printWhenExpression>
 				</reportElement>
 				<textElement>
@@ -234,7 +224,7 @@
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeArmedForcesAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="c9913d36-dbcf-4fdc-841b-9a496f3d3f0f" positionType="Float" mode="Opaque" x="0" y="226" width="555" height="21" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" backcolor="#CCCCCC">
+				<reportElement uuid="c9913d36-dbcf-4fdc-841b-9a496f3d3f0f" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="226" width="555" height="21" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[!$F{displayCareYouProvide}.isEmpty()]]></printWhenExpression>
 				</reportElement>
 				<textElement>
