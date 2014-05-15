@@ -4,8 +4,8 @@
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
-    <property name="net.sf.jasperreports.export.html.remove.emtpy.space.between.rows" value="true"/>
-    <template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
+	<property name="net.sf.jasperreports.export.html.remove.emtpy.space.between.rows" value="true"/>
+	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
 	</parameter>
@@ -115,7 +115,9 @@
 			</textField>
 			<staticText>
 				<reportElement uuid="76ae28bc-b80c-4a97-a183-7b7eb19f2f8d" style="SubHeadingClaim" mode="Opaque" x="0" y="1" width="553" height="20"/>
-				<textElement verticalAlignment="Middle" markup="styled"/>
+				<textElement verticalAlignment="Middle" markup="styled">
+					<font isBold="true"/>
+				</textElement>
 				<text><![CDATA[Your Details]]></text>
 			</staticText>
 		</band>
