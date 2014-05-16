@@ -25,26 +25,26 @@
 	<field name="EvidenceListAddressPostcode" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/EvidenceList/RecipientAddress/PostCode]]></fieldDescription>
 	</field>
+	<field name="Content" class="java.lang.String">
+		<fieldDescription><![CDATA[Content]]></fieldDescription>
+	</field>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="40" splitType="Stretch">
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="fcd3ab37-4374-45fc-bfd2-b8f2313382c1" x="0" y="0" width="555" height="18" isRemoveLineWhenBlank="true"/>
+		<band height="41" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="fcd3ab37-4374-45fc-bfd2-b8f2313382c1" positionType="Float" x="0" y="0" width="555" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{Title}]]></textFieldExpression>
 			</textField>
-			<subreport>
-				<reportElement uuid="468b0525-7ca5-465f-9703-0e5b4110ced4" x="0" y="18" width="555" height="20" isRemoveLineWhenBlank="true"/>
-				<subreportParameter name="SUBREPORT_DIR">
-					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
-				</subreportParameter>
-				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource) $P{REPORT_DATA_SOURCE}).subDataSource("//Evidence/Content")]]></dataSourceExpression>
-				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_subreportEvidenceContent.jasper"]]></subreportExpression>
-			</subreport>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="7a11494d-7643-4342-aa68-ce43ccfb5cd8" positionType="Float" x="0" y="18" width="555" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Content}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 </jasperReport>
