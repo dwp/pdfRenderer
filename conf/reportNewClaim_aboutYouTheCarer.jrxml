@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYouTheCarer" language="groovy" pageWidth="555" pageHeight="872" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a66aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="259"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<property name="net.sf.jasperreports.export.html.remove.emtpy.space.between.rows" value="true"/>
 	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
@@ -276,37 +276,37 @@
 				<text><![CDATA[Money you get from other European Economic Area (EEA) countries or Switzerland]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="2ee48a2a-af42-4f38-a3e4-cc17663ca86e" x="0" y="30" width="350" height="25" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="2ee48a2a-af42-4f38-a3e4-cc17663ca86e" positionType="Float" x="0" y="30" width="350" height="25" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerReceiveEEAPensionsBenefitsQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="8fa3ef39-6d2c-4298-9282-8ceeac0f04fb" x="355" y="30" width="197" height="25" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="8fa3ef39-6d2c-4298-9282-8ceeac0f04fb" positionType="Float" x="355" y="30" width="197" height="25" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerReceiveEEAPensionsBenefitsAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="a15519d2-3bab-496d-b3d7-b52864e929b5" x="0" y="55" width="350" height="31" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="a15519d2-3bab-496d-b3d7-b52864e929b5" positionType="Float" x="0" y="55" width="350" height="31" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimEEAPensionsBenefitsQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="f26fe4de-e1de-4e6e-9d29-e2c9d682f29c" x="355" y="55" width="197" height="30" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="f26fe4de-e1de-4e6e-9d29-e2c9d682f29c" positionType="Float" x="355" y="55" width="197" height="30" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerWorkingEEAInsuranceAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="6c8a52e6-05ef-4ac9-9de7-e3a8261ba2ff" x="0" y="86" width="350" height="25" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="6c8a52e6-05ef-4ac9-9de7-e3a8261ba2ff" positionType="Float" x="0" y="86" width="350" height="25" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerWorkingEEAInsuranceQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="42e462db-6f31-4e2f-89de-627b9fdb58a5" x="355" y="86" width="197" height="25" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="42e462db-6f31-4e2f-89de-627b9fdb58a5" positionType="Float" x="355" y="86" width="197" height="25" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerWorkingEEAInsuranceAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="e6f266ef-a89c-4838-8827-f094edabe302" style="SubHeadingClaim" positionType="Float" x="0" y="111" width="553" height="18" forecolor="#FFFFFF"/>
+				<reportElement uuid="e6f266ef-a89c-4838-8827-f094edabe302" style="SubHeadingClaim" positionType="Float" x="0" y="111" width="553" height="18" forecolor="#000000"/>
 				<textElement markup="styled">
 					<font size="12" isBold="true"/>
 				</textElement>

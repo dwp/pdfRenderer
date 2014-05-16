@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="560" pageHeight="872" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="560" pageHeight="872" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isIgnorePagination="true" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="576"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<property name="net.sf.jasperreports.export.html.remove.emtpy.space.between.rows" value="true"/>
 	<import value="org.apache.commons.codec.binary.Base64"/>
@@ -420,8 +420,10 @@
 				<textFieldExpression><![CDATA["Date Claim Received "+$F{DateTimeGenerated}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="58ddea3b-1ba8-4b66-a709-2f5f94a3de80" mode="Opaque" x="0" y="45" width="560" height="21" forecolor="#000000" backcolor="#CCCCCC"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
+				<reportElement uuid="58ddea3b-1ba8-4b66-a709-2f5f94a3de80" style="HeadingClaim" mode="Opaque" x="0" y="45" width="560" height="21" forecolor="#000000" backcolor="#CCCCCC">
+					<property name="net.sf.jasperreports.export.html.id" value="Heading1"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="styled">
 					<font size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Summary]]></text>
@@ -444,7 +446,7 @@
 				<text><![CDATA[About you - the carer]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="f152a887-ec97-4593-8af7-db0c754ba16b" x="367" y="0" width="193" height="18" forecolor="#FFFFFF"/>
+				<reportElement uuid="f152a887-ec97-4593-8af7-db0c754ba16b" x="360" y="1" width="200" height="18" forecolor="#FFFFFF"/>
 				<textElement verticalAlignment="Middle">
 					<font size="14" isBold="true"/>
 				</textElement>
@@ -618,11 +620,12 @@
 				<textFieldExpression><![CDATA[$F{CareeRelOther}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="151" splitType="Stretch">
+		<band height="152" splitType="Stretch">
 			<staticText>
 				<reportElement uuid="a5a0ab64-4b38-4f97-b49b-c75691cc3f54" mode="Opaque" x="0" y="0" width="550" height="18" forecolor="#FFFFFF" backcolor="#E6E6E6"/>
 				<textElement>
 					<font size="14" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
 				</textElement>
 				<text><![CDATA[About your partner]]></text>
 			</staticText>
@@ -707,7 +710,7 @@
 				</graphicElement>
 			</rectangle>
 			<staticText>
-				<reportElement uuid="933986e3-9239-450a-8b58-ea0bf55d46aa" mode="Opaque" x="2" y="0" width="550" height="18" forecolor="#FFFFFF" backcolor="#E6E6E6"/>
+				<reportElement uuid="933986e3-9239-450a-8b58-ea0bf55d46aa" mode="Opaque" x="0" y="0" width="553" height="18" forecolor="#FFFFFF" backcolor="#E6E6E6"/>
 				<textElement verticalAlignment="Middle">
 					<font size="14" isBold="true"/>
 				</textElement>
@@ -746,10 +749,8 @@
 						<bottomPen lineWidth="0.5"/>
 						<rightPen lineWidth="0.5"/>
 					</box>
-					<textElement textAlignment="Left" verticalAlignment="Middle">
-						<paragraph leftIndent="5"/>
-					</textElement>
-					<text><![CDATA[Nationality]]></text>
+					<textElement textAlignment="Left" verticalAlignment="Middle"/>
+					<text><![CDATA[  Nationality]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
 					<reportElement uuid="3c37fe2c-b14b-4cfa-abc0-72e4332b04f0" x="356" y="18" width="196" height="23" isRemoveLineWhenBlank="true"/>
@@ -772,10 +773,8 @@
 						<bottomPen lineWidth="0.5"/>
 						<rightPen lineWidth="0.5"/>
 					</box>
-					<textElement verticalAlignment="Middle">
-						<paragraph leftIndent="5"/>
-					</textElement>
-					<text><![CDATA[Armed Forces Independence Payment (AFIP)]]></text>
+					<textElement verticalAlignment="Middle"/>
+					<text><![CDATA[  Armed Forces Independence Payment (AFIP)]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
 					<reportElement uuid="94af47e2-7d51-412d-acd6-381539274f14" x="356" y="41" width="196" height="23" isRemoveLineWhenBlank="true">
@@ -801,10 +800,8 @@
 						<bottomPen lineWidth="0.5"/>
 						<rightPen lineWidth="0.5"/>
 					</box>
-					<textElement verticalAlignment="Middle">
-						<paragraph leftIndent="5"/>
-					</textElement>
-					<text><![CDATA[35 hours a week care]]></text>
+					<textElement verticalAlignment="Middle"/>
+					<text><![CDATA[  35 hours a week care]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
 					<reportElement uuid="c7594839-7142-4760-bbf0-517a5078447b" x="356" y="64" width="196" height="23" isRemoveLineWhenBlank="true">
@@ -833,10 +830,8 @@
 						<bottomPen lineWidth="0.5"/>
 						<rightPen lineWidth="0.5"/>
 					</box>
-					<textElement verticalAlignment="Middle">
-						<paragraph leftIndent="5"/>
-					</textElement>
-					<text><![CDATA[Employed]]></text>
+					<textElement verticalAlignment="Middle"/>
+					<text><![CDATA[  Employed]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
 					<reportElement uuid="4897073f-7fbf-4933-b242-df1242364567" x="356" y="87" width="196" height="23" isRemoveLineWhenBlank="true">
@@ -866,10 +861,8 @@
 						<bottomPen lineWidth="0.5"/>
 						<rightPen lineWidth="0.5"/>
 					</box>
-					<textElement verticalAlignment="Middle">
-						<paragraph leftIndent="5"/>
-					</textElement>
-					<text><![CDATA[Self Employed]]></text>
+					<textElement verticalAlignment="Middle"/>
+					<text><![CDATA[  Self Employed]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
 					<reportElement uuid="a3eb35b0-8200-4844-8093-d25a613b2221" x="356" y="110" width="196" height="23" isRemoveLineWhenBlank="true">
@@ -898,10 +891,8 @@
 						<bottomPen lineWidth="0.5"/>
 						<rightPen lineWidth="0.5"/>
 					</box>
-					<textElement verticalAlignment="Middle">
-						<paragraph leftIndent="5"/>
-					</textElement>
-					<text><![CDATA[Education]]></text>
+					<textElement verticalAlignment="Middle"/>
+					<text><![CDATA[  Education]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
 					<reportElement uuid="1e2ebcba-6066-4186-bea3-9b04ee46e2c1" x="356" y="133" width="196" height="23" isRemoveLineWhenBlank="true">
@@ -931,10 +922,8 @@
 						<bottomPen lineWidth="0.5"/>
 						<rightPen lineWidth="0.5"/>
 					</box>
-					<textElement verticalAlignment="Middle">
-						<paragraph leftIndent="5"/>
-					</textElement>
-					<text><![CDATA[Breaks in Care]]></text>
+					<textElement verticalAlignment="Middle"/>
+					<text><![CDATA[  Breaks in Care]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
 					<reportElement uuid="a296b77f-9a7d-42e2-a190-2013fcc43468" x="356" y="156" width="196" height="23" isRemoveLineWhenBlank="true">
@@ -964,10 +953,8 @@
 						<bottomPen lineWidth="0.5"/>
 						<rightPen lineWidth="0.5"/>
 					</box>
-					<textElement verticalAlignment="Middle">
-						<paragraph leftIndent="5"/>
-					</textElement>
-					<text><![CDATA[Partner]]></text>
+					<textElement verticalAlignment="Middle"/>
+					<text><![CDATA[  Partner]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
 					<reportElement uuid="c4e3527d-c160-49d7-a449-ccd9238d076a" x="356" y="179" width="196" height="23" isRemoveLineWhenBlank="true">
@@ -995,10 +982,8 @@
 						<bottomPen lineWidth="0.5"/>
 						<rightPen lineWidth="0.5"/>
 					</box>
-					<textElement verticalAlignment="Middle">
-						<paragraph leftIndent="5"/>
-					</textElement>
-					<text><![CDATA[EEA Money]]></text>
+					<textElement verticalAlignment="Middle"/>
+					<text><![CDATA[  EEA Money]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
 					<reportElement uuid="de0176ef-0443-41ac-a099-466a7f089213" x="356" y="202" width="196" height="23" isRemoveLineWhenBlank="true">
@@ -1029,10 +1014,8 @@
 						<bottomPen lineWidth="0.5"/>
 						<rightPen lineWidth="0.5"/>
 					</box>
-					<textElement verticalAlignment="Middle">
-						<paragraph leftIndent="5"/>
-					</textElement>
-					<text><![CDATA[Outside England, Scotland or Wales]]></text>
+					<textElement verticalAlignment="Middle"/>
+					<text><![CDATA[  Outside England, Scotland or Wales]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
 					<reportElement uuid="87eb9562-e4aa-4953-80aa-0a199ddec59a" x="356" y="225" width="196" height="23" isRemoveLineWhenBlank="true">
@@ -1061,10 +1044,8 @@
 						<bottomPen lineWidth="0.5"/>
 						<rightPen lineWidth="0.5"/>
 					</box>
-					<textElement verticalAlignment="Middle">
-						<paragraph leftIndent="5"/>
-					</textElement>
-					<text><![CDATA[State Pension]]></text>
+					<textElement verticalAlignment="Middle"/>
+					<text><![CDATA[  State Pension]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
 					<reportElement uuid="265d5cbd-d9af-446a-8097-d4f96a59ad92" x="356" y="248" width="196" height="23" isRemoveLineWhenBlank="true">
@@ -1094,10 +1075,8 @@
 						<bottomPen lineWidth="0.5"/>
 						<rightPen lineWidth="0.5"/>
 					</box>
-					<textElement verticalAlignment="Middle">
-						<paragraph leftIndent="5"/>
-					</textElement>
-					<text><![CDATA[Statutory Sick Pay]]></text>
+					<textElement verticalAlignment="Middle"/>
+					<text><![CDATA[  Statutory Sick Pay]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
 					<reportElement uuid="aa52bdd1-edfe-4c4a-9833-f4d03f46b751" x="356" y="271" width="196" height="23" isRemoveLineWhenBlank="true">
@@ -1125,10 +1104,8 @@
 						<bottomPen lineWidth="0.5"/>
 						<rightPen lineWidth="0.5"/>
 					</box>
-					<textElement verticalAlignment="Middle">
-						<paragraph leftIndent="5"/>
-					</textElement>
-					<text><![CDATA[Welsh Comms]]></text>
+					<textElement verticalAlignment="Middle"/>
+					<text><![CDATA[  Welsh Comms]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
 					<reportElement uuid="b9343c5b-77ab-48b9-8b45-0a2f7cb8860b" x="356" y="294" width="196" height="23" isRemoveLineWhenBlank="true">
