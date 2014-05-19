@@ -72,14 +72,18 @@
 	<pageHeader>
 		<band height="39" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="c4993f7a-b987-4a99-9fbd-21415dcc29ce" style="HeadingClaim" mode="Opaque" x="0" y="1" width="553" height="18" forecolor="#FFFFFF"/>
+				<reportElement uuid="c4993f7a-b987-4a99-9fbd-21415dcc29ce" style="HeadingClaim" mode="Opaque" x="0" y="1" width="553" height="18" forecolor="#FFFFFF">
+                    <property name="net.sf.jasperreports.export.html.id" value="HeadingPart2AboutYourPartner"/>
+                </reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Part 2 - About your partner]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="682874b6-bfe4-439f-8bb8-4abdfe329111" style="SubHeadingClaim" x="0" y="19" width="553" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF"/>
+				<reportElement uuid="682874b6-bfe4-439f-8bb8-4abdfe329111" style="SubHeadingClaim" x="0" y="19" width="553" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF">
+                    <property name="net.sf.jasperreports.export.html.id" value="SubHeadingPartnerSpouseDetails"/>
+                </reportElement>
 				<textElement markup="styled">
 					<font size="12" isBold="true"/>
 				</textElement>

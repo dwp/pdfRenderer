@@ -29,7 +29,9 @@
 	<pageHeader>
 		<band height="23" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="f3b5dff4-39c9-4ce1-91fe-15e640d4d715" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="3" width="555" height="18"/>
+				<reportElement uuid="f3b5dff4-39c9-4ce1-91fe-15e640d4d715" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="3" width="555" height="18">
+                    <property name="net.sf.jasperreports.export.html.id" value="HeadingCustomerEvidenceList"/>
+                </reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
 					<font size="12" isBold="true"/>
 				</textElement>

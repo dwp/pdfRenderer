@@ -33,7 +33,9 @@
 	<detail>
 		<band height="292">
 			<staticText>
-				<reportElement uuid="22c02e51-e13c-42cc-86e4-f2af124afd5e" style="SubHeadingClaim" mode="Opaque" x="0" y="0" width="553" height="21" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="22c02e51-e13c-42cc-86e4-f2af124afd5e" style="SubHeadingClaim" mode="Opaque" x="0" y="0" width="553" height="21" isRemoveLineWhenBlank="true">
+                    <property name="net.sf.jasperreports.export.html.id" value="SubHeadingAdditionalInformation"/>
+                </reportElement>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>

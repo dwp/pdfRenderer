@@ -75,7 +75,9 @@
 	<pageHeader>
 		<band height="44" splitType="Prevent">
 			<staticText>
-				<reportElement uuid="a415a243-c2e6-483a-8f49-31a568e887ae" style="SubHeadingClaim" mode="Opaque" x="0" y="0" width="555" height="21" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="a415a243-c2e6-483a-8f49-31a568e887ae" style="SubHeadingClaim" mode="Opaque" x="0" y="0" width="555" height="21" isRemoveLineWhenBlank="true">
+                    <property name="net.sf.jasperreports.export.html.id" value="SubHeadingBreaksInCare"/>
+                </reportElement>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>

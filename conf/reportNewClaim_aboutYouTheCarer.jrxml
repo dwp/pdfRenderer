@@ -117,7 +117,9 @@
 	<detail>
 		<band height="118" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="4174c253-6428-4e9c-b5d7-a74b83203f95" style="HeadingClaim" mode="Opaque" x="0" y="0" width="550" height="18" forecolor="#FFFFFF"/>
+				<reportElement uuid="4174c253-6428-4e9c-b5d7-a74b83203f95" style="HeadingClaim" mode="Opaque" x="0" y="0" width="550" height="18" forecolor="#FFFFFF">
+                    <property name="net.sf.jasperreports.export.html.id" value="HeadingPart1AboutYouTheCarer"/>
+                </reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -134,7 +136,9 @@
 		</band>
 		<band height="119" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="b5b52f77-e6bb-4d7e-8b20-6dc4cab23a22" style="SubHeadingClaim" mode="Opaque" x="0" y="3" width="550" height="20" forecolor="#000000"/>
+				<reportElement uuid="b5b52f77-e6bb-4d7e-8b20-6dc4cab23a22" style="SubHeadingClaim" mode="Opaque" x="0" y="3" width="550" height="20" forecolor="#000000">
+                    <property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourContactDetails"/>
+                </reportElement>
 				<textElement markup="styled">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -149,7 +153,9 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_addressForNestedReports.jasper"]]></subreportExpression>
 			</subreport>
 			<staticText>
-				<reportElement uuid="8da1d0de-ce96-4d52-9ec3-3901d19e6aaf" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="25" width="553" height="20" forecolor="#000000" backcolor="#E6E6E6"/>
+				<reportElement uuid="8da1d0de-ce96-4d52-9ec3-3901d19e6aaf" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="25" width="553" height="20" forecolor="#000000" backcolor="#E6E6E6">
+                    <property name="net.sf.jasperreports.export.html.id" value="SubHeadingHowWeCanContactYou"/>
+                </reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -176,7 +182,9 @@
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerSpeechOrHearingDifficultyAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="11925ae7-8287-429b-9d41-e4b447f228fd" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="81" width="553" height="20" forecolor="#000000" backcolor="#E6E6E6"/>
+				<reportElement uuid="11925ae7-8287-429b-9d41-e4b447f228fd" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="81" width="553" height="20" forecolor="#000000" backcolor="#E6E6E6">
+                    <property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourClaimDate"/>
+                </reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -195,7 +203,9 @@
 		</band>
 		<band height="82" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="f647fa16-31cd-4b73-8c88-855fe67cf124" style="SubHeadingClaim" mode="Opaque" x="0" y="1" width="553" height="20" forecolor="#000000"/>
+				<reportElement uuid="f647fa16-31cd-4b73-8c88-855fe67cf124" style="SubHeadingClaim" mode="Opaque" x="0" y="1" width="553" height="20" forecolor="#000000">
+                    <property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourNationalityAndResidency"/>
+                </reportElement>
 				<textElement markup="styled">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -234,7 +244,9 @@
 		</band>
 		<band height="142" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="ec6ad3bc-6469-4ef5-9ebd-878ccf50b1da" style="SubHeadingClaim" x="0" y="1" width="553" height="20" forecolor="#000000"/>
+				<reportElement uuid="ec6ad3bc-6469-4ef5-9ebd-878ccf50b1da" style="SubHeadingClaim" x="0" y="1" width="553" height="20" forecolor="#000000">
+                    <property name="net.sf.jasperreports.export.html.id" value="SubHeadingTimeOutsideOfEnglandScotlandWales"/>
+                </reportElement>
 				<textElement markup="styled">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -268,6 +280,7 @@
 		<band height="172" splitType="Stretch">
 			<staticText>
 				<reportElement uuid="badfdb41-025e-422b-9da8-49bb6e64b71c" style="SubHeadingClaim" mode="Opaque" x="0" y="0" width="552" height="30" isRemoveLineWhenBlank="true" forecolor="#000000">
+                    <property name="net.sf.jasperreports.export.html.id" value="SubHeadingMoneyEEA"/>
 					<printWhenExpression><![CDATA[!$F{displayMoneyEEA}.isEmpty()]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
@@ -306,7 +319,9 @@
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerWorkingEEAInsuranceAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="e6f266ef-a89c-4838-8827-f094edabe302" style="SubHeadingClaim" positionType="Float" x="0" y="111" width="553" height="18" forecolor="#000000"/>
+				<reportElement uuid="e6f266ef-a89c-4838-8827-f094edabe302" style="SubHeadingClaim" positionType="Float" x="0" y="111" width="553" height="18" forecolor="#000000">
+                    <property name="net.sf.jasperreports.export.html.id" value="SubHeadingMaritalStatus"/>
+                </reportElement>
 				<textElement markup="styled">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -335,7 +350,9 @@
 		</band>
 		<band height="63" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="1a208c61-db28-4e54-9366-9e33e27eeb50" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="553" height="20"/>
+				<reportElement uuid="1a208c61-db28-4e54-9366-9e33e27eeb50" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="553" height="20">
+                    <property name="net.sf.jasperreports.export.html.id" value="SubHeadingMoreAboutYou"/>
+                </reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
 					<font size="12" isBold="true"/>
 				</textElement>

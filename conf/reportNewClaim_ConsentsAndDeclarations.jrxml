@@ -22,7 +22,9 @@
 	<detail>
 		<band height="22" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="c6fb5c1e-aac1-4fcd-b4ff-655479a6a68e" style="HeadingClaim" mode="Opaque" x="0" y="3" width="555" height="18"/>
+				<reportElement uuid="c6fb5c1e-aac1-4fcd-b4ff-655479a6a68e" style="HeadingClaim" mode="Opaque" x="0" y="3" width="555" height="18">
+                    <property name="net.sf.jasperreports.export.html.id" value="HeadingCustomerConsentAndDeclaration"/>
+                 </reportElement>
 				<textElement markup="styled">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -41,7 +43,9 @@
 		</band>
 		<band height="63">
 			<staticText>
-				<reportElement uuid="afcf6426-9227-4d64-990d-ccfec2ad7acb" style="SubHeadingClaim" mode="Opaque" x="0" y="0" width="555" height="21"/>
+				<reportElement uuid="afcf6426-9227-4d64-990d-ccfec2ad7acb" style="SubHeadingClaim" mode="Opaque" x="0" y="0" width="555" height="21">
+                    <property name="net.sf.jasperreports.export.html.id" value="SubHeadingConsent"/>
+                </reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -59,7 +63,9 @@
 		<band height="70" splitType="Stretch">
 			<printWhenExpression><![CDATA[!$F{displayDisclaimer}.isEmpty()]]></printWhenExpression>
 			<staticText>
-				<reportElement uuid="149c37e2-57ad-46d1-89bb-f9f30959fc13" style="SubHeadingClaim" mode="Opaque" x="0" y="0" width="555" height="21"/>
+				<reportElement uuid="149c37e2-57ad-46d1-89bb-f9f30959fc13" style="SubHeadingClaim" mode="Opaque" x="0" y="0" width="555" height="21">
+                    <property name="net.sf.jasperreports.export.html.id" value="SubHeadingDisclaimer"/>
+                </reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -76,7 +82,9 @@
 		</band>
 		<band height="112">
 			<staticText>
-				<reportElement uuid="fe6f19f7-59d4-4d8b-a7e7-9cff92db0fb7" style="SubHeadingClaim" mode="Opaque" x="0" y="0" width="555" height="21"/>
+				<reportElement uuid="fe6f19f7-59d4-4d8b-a7e7-9cff92db0fb7" style="SubHeadingClaim" mode="Opaque" x="0" y="0" width="555" height="21">
+                    <property name="net.sf.jasperreports.export.html.id" value="SubHeadingDeclaration"/>
+                </reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
 					<font size="12" isBold="true"/>
 				</textElement>

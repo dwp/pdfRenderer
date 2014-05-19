@@ -114,7 +114,9 @@
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerDateOfBirthAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="76ae28bc-b80c-4a97-a183-7b7eb19f2f8d" style="SubHeadingClaim" mode="Opaque" x="0" y="1" width="553" height="20"/>
+				<reportElement uuid="76ae28bc-b80c-4a97-a183-7b7eb19f2f8d" style="SubHeadingClaim" mode="Opaque" x="0" y="1" width="553" height="20">
+                    <property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourDetails"/>
+                 </reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
 					<font isBold="true"/>
 				</textElement>

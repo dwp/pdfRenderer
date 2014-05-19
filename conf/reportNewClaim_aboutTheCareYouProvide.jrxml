@@ -92,7 +92,9 @@
 	<pageHeader>
 		<band height="22" splitType="Immediate">
 			<staticText>
-				<reportElement uuid="0352c26e-c945-465d-a87d-c2030a5dc51d" style="HeadingClaim" mode="Opaque" x="0" y="1" width="553" height="20"/>
+				<reportElement uuid="0352c26e-c945-465d-a87d-c2030a5dc51d" style="HeadingClaim" mode="Opaque" x="0" y="1" width="553" height="20">
+                    <property name="net.sf.jasperreports.export.html.id" value="HeadingPart3AboutTheCareYouProvide"/>
+                </reportElement>
 				<textElement markup="styled">
 					<font size="12" isBold="true" isItalic="false"/>
 				</textElement>
@@ -103,7 +105,9 @@
 	<detail>
 		<band height="315" splitType="Immediate">
 			<staticText>
-				<reportElement uuid="1cbce792-112d-4e39-8088-39c855728d3b" style="SubHeadingClaim" mode="Opaque" x="0" y="1" width="553" height="20" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="1cbce792-112d-4e39-8088-39c855728d3b" style="SubHeadingClaim" mode="Opaque" x="0" y="1" width="553" height="20" isRemoveLineWhenBlank="true">
+                    <property name="net.sf.jasperreports.export.html.id" value="SubHeadingDetailsOfThePersonYouCareFor"/>
+                </reportElement>
 				<textElement markup="styled">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -170,7 +174,9 @@
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeLiveSameAddressAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="1c5d9726-b4ef-44ce-9a67-6874d77320ab" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="129" width="555" height="21"/>
+				<reportElement uuid="1c5d9726-b4ef-44ce-9a67-6874d77320ab" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="129" width="555" height="21">
+                    <property name="net.sf.jasperreports.export.html.id" value="SubHeadingContactDetailsOfThePersonYouCareFor"/>
+                </reportElement>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -196,6 +202,7 @@
 			</textField>
 			<staticText>
 				<reportElement uuid="35fde8b7-2c4f-4011-8ded-e1e3ebf084f0" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="169" width="555" height="21" isRemoveLineWhenBlank="true">
+                    <property name="net.sf.jasperreports.export.html.id" value="SubHeadingRelationshipAndOtherClaims"/>
 					<printWhenExpression><![CDATA[!$F{displayRelationShipOtherClaims}.isEmpty()]]></printWhenExpression>
 				</reportElement>
 				<textElement>
@@ -225,6 +232,7 @@
 			</textField>
 			<staticText>
 				<reportElement uuid="c9913d36-dbcf-4fdc-841b-9a496f3d3f0f" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="226" width="555" height="21" isRemoveLineWhenBlank="true">
+                    <property name="net.sf.jasperreports.export.html.id" value="SubHeadingMoreAboutTheCareYouProvide"/>
 					<printWhenExpression><![CDATA[!$F{displayCareYouProvide}.isEmpty()]]></printWhenExpression>
 				</reportElement>
 				<textElement>

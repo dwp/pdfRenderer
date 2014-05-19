@@ -439,14 +439,18 @@
 				</graphicElement>
 			</rectangle>
 			<staticText>
-				<reportElement uuid="0862ee85-65ff-482c-a03e-6c62d78f2833" x="168" y="1" width="180" height="18" forecolor="#FFFFFF"/>
+				<reportElement uuid="0862ee85-65ff-482c-a03e-6c62d78f2833" x="168" y="1" width="180" height="18" forecolor="#FFFFFF">
+                    <property name="net.sf.jasperreports.export.html.id" value="SubHeadingSummaryAboutYouTheCarer"/>
+                 </reportElement>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Helvetica" size="14" isBold="true" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
 				</textElement>
 				<text><![CDATA[About you - the carer]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="f152a887-ec97-4593-8af7-db0c754ba16b" x="360" y="1" width="200" height="18" forecolor="#FFFFFF"/>
+				<reportElement uuid="f152a887-ec97-4593-8af7-db0c754ba16b" x="360" y="1" width="200" height="18" forecolor="#FFFFFF">
+                    <property name="net.sf.jasperreports.export.html.id" value="SubHeadingSummaryAboutTheCareYouProvide"/>
+                </reportElement>
 				<textElement verticalAlignment="Middle">
 					<font size="14" isBold="true"/>
 				</textElement>
@@ -622,7 +626,9 @@
 		</band>
 		<band height="152" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="a5a0ab64-4b38-4f97-b49b-c75691cc3f54" mode="Opaque" x="0" y="0" width="550" height="18" forecolor="#FFFFFF" backcolor="#E6E6E6"/>
+				<reportElement uuid="a5a0ab64-4b38-4f97-b49b-c75691cc3f54" mode="Opaque" x="0" y="0" width="550" height="18" forecolor="#FFFFFF" backcolor="#E6E6E6">
+                    <property name="net.sf.jasperreports.export.html.id" value="SubHeadingSummaryAboutYourPartner"/>
+                </reportElement>
 				<textElement>
 					<font size="14" isBold="true"/>
 					<paragraph lineSpacing="Single"/>
@@ -710,7 +716,9 @@
 				</graphicElement>
 			</rectangle>
 			<staticText>
-				<reportElement uuid="933986e3-9239-450a-8b58-ea0bf55d46aa" mode="Opaque" x="0" y="0" width="553" height="18" forecolor="#FFFFFF" backcolor="#E6E6E6"/>
+				<reportElement uuid="933986e3-9239-450a-8b58-ea0bf55d46aa" mode="Opaque" x="0" y="0" width="553" height="18" forecolor="#FFFFFF" backcolor="#E6E6E6">
+                    <property name="net.sf.jasperreports.export.html.id" value="SubHeadingSummaryClaimDates"/>
+                </reportElement>
 				<textElement verticalAlignment="Middle">
 					<font size="14" isBold="true"/>
 				</textElement>
@@ -733,7 +741,9 @@
 					<property name="net.sf.jasperreports.export.html.remove.emtpy.space.between.rows" value="true"/>
 				</reportElement>
 				<staticText>
-					<reportElement uuid="5235e441-eac8-4564-a092-4304954c961c" mode="Opaque" x="0" y="0" width="553" height="18" forecolor="#FFFFFF" backcolor="#E6E6E6"/>
+					<reportElement uuid="5235e441-eac8-4564-a092-4304954c961c" mode="Opaque" x="0" y="0" width="553" height="18" forecolor="#FFFFFF" backcolor="#E6E6E6">
+                        <property name="net.sf.jasperreports.export.html.id" value="SubHeadingSummaryClaimSummary"/>
+                    </reportElement>
 					<textElement verticalAlignment="Middle">
 						<font size="14" isBold="true"/>
 						<paragraph leftIndent="4"/>
