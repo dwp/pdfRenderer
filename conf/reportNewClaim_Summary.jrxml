@@ -439,7 +439,7 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="SansSerif" size="14" isBold="true" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
 				</textElement>
-				<text><![CDATA[		                        About you - the carer           About the care you provide]]></text>
+				<text><![CDATA[                                 About you - the carer      About the care you provide]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="eafce885-40b7-4aa2-9883-4ccd5538338c" x="0" y="19" width="162" height="18"/>
