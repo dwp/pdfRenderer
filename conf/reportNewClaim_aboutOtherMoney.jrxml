@@ -124,11 +124,11 @@
 		<band splitType="Stretch"/>
 	</background>
 	<pageHeader>
-		<band height="24">
+		<band height="24" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="c4993f7a-b987-4a99-9fbd-21415dcc29ce" style="HeadingClaim" mode="Opaque" x="0" y="4" width="555" height="18" forecolor="#000000">
-                    <property name="net.sf.jasperreports.export.html.id" value="HeadingPart7AboutOtherMoney"/>
-                </reportElement>
+				<reportElement uuid="c4993f7a-b987-4a99-9fbd-21415dcc29ce" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="4" width="555" height="18" forecolor="#000000">
+					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart7AboutOtherMoney"/>
+				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -139,9 +139,9 @@
 	<detail>
 		<band height="128" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="682874b6-bfe4-439f-8bb8-4abdfe329111" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="555" height="20" isPrintInFirstWholeBand="true">
-                    <property name="net.sf.jasperreports.export.html.id" value="SubHeadingBenefitsAndPayments"/>
-                </reportElement>
+				<reportElement uuid="682874b6-bfe4-439f-8bb8-4abdfe329111" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="555" height="20">
+					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingBenefitsAndPayments"/>
+				</reportElement>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -207,8 +207,8 @@
 			<printWhenExpression><![CDATA[$F{otherMoneyAnswer}.equals("Yes")]]></printWhenExpression>
 			<staticText>
 				<reportElement uuid="374b51ff-5b9a-4217-ae0b-bc874bbb71ac" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="555" height="20" isRemoveLineWhenBlank="true">
-                    <property name="net.sf.jasperreports.export.html.id" value="SubHeadingStatutoryPay"/>
-                </reportElement>
+					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingStatutoryPay"/>
+				</reportElement>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>

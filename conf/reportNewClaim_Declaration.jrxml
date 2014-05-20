@@ -28,9 +28,9 @@
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="88" splitType="Stretch">
+		<band height="2" splitType="Stretch">
 			<subreport>
-				<reportElement uuid="e9b10ce4-a2cc-4199-9cd5-2854b1554d31" x="0" y="0" width="595" height="87"/>
+				<reportElement uuid="e9b10ce4-a2cc-4199-9cd5-2854b1554d31" positionType="Float" x="0" y="0" width="595" height="1"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -38,38 +38,38 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Declaration_declarationStatement.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="106" splitType="Stretch">
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="c3c94047-8909-4057-8d7e-17a312bf5297" x="0" y="3" width="350" height="50" isRemoveLineWhenBlank="true"/>
+		<band height="60" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="c3c94047-8909-4057-8d7e-17a312bf5297" positionType="Float" x="0" y="3" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{DeclarationSomeOneElseQuestion}]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="d21db177-9611-4f48-acbe-52de28d65ae1" x="363" y="3" width="197" height="50" isRemoveLineWhenBlank="true"/>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="d21db177-9611-4f48-acbe-52de28d65ae1" positionType="Float" x="363" y="3" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{DeclarationSomeOneElseAnswer}]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="dd747e36-227c-4960-ae51-ec1a643b57e6" x="0" y="54" width="350" height="20" isRemoveLineWhenBlank="true">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="dd747e36-227c-4960-ae51-ec1a643b57e6" positionType="Float" x="0" y="21" width="350" height="20" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{DeclarationSomeOneElseAnswer}.equals("Yes")]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{DeclarationNameOrgQuestion}]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="066d6cf3-8dce-42ae-aaf5-8b2ed356c8e7" x="363" y="54" width="197" height="20" isRemoveLineWhenBlank="true">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="066d6cf3-8dce-42ae-aaf5-8b2ed356c8e7" positionType="Float" x="363" y="21" width="197" height="20" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{DeclarationSomeOneElseAnswer}.equals("Yes")]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{DeclarationNameOrgAnswer}]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="53fbb72c-cd89-4ff7-8297-2eadf311487e" x="0" y="75" width="350" height="30" isRemoveLineWhenBlank="true"/>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="53fbb72c-cd89-4ff7-8297-2eadf311487e" positionType="Float" x="0" y="41" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{DeclarationConfirmQuestion}]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="747dd6ab-3448-466e-a8ca-b24ab9649a60" x="363" y="75" width="197" height="30" isRemoveLineWhenBlank="true"/>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="747dd6ab-3448-466e-a8ca-b24ab9649a60" positionType="Float" x="363" y="41" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{DeclarationConfirmAnswer}]]></textFieldExpression>
 			</textField>

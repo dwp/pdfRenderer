@@ -8,6 +8,9 @@
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/valtechuk/carers-dev-pdf/pdfService/pdfService/conf/"]]></defaultValueExpression>
 	</parameter>
+	<queryString language="xPath">
+		<![CDATA[/]]>
+	</queryString>
 	<field name="EvidenceListAddressLine1" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/EvidenceList/RecipientAddress/Answer/Line[1]]]></fieldDescription>
 	</field>
@@ -30,8 +33,8 @@
 		<band height="23" splitType="Stretch">
 			<staticText>
 				<reportElement uuid="f3b5dff4-39c9-4ce1-91fe-15e640d4d715" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="3" width="555" height="18">
-                    <property name="net.sf.jasperreports.export.html.id" value="HeadingCustomerEvidenceList"/>
-                </reportElement>
+					<property name="net.sf.jasperreports.export.html.id" value="HeadingCustomerEvidenceList"/>
+				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -50,34 +53,34 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_subreportEvidenceList.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="113">
+		<band height="113" splitType="Stretch">
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="fa94d49d-1eab-4c18-a6df-70b5c3ec49b8" x="0" y="0" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="fa94d49d-1eab-4c18-a6df-70b5c3ec49b8" positionType="Float" x="0" y="0" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AddressLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="ca47f04c-5f78-4523-80b3-0fad318b0849" x="0" y="18" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="ca47f04c-5f78-4523-80b3-0fad318b0849" positionType="Float" x="0" y="18" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EvidenceListAddressLine1}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="dcfdbee9-72c3-4992-a8ec-0909fc2c0a6a" x="0" y="36" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="dcfdbee9-72c3-4992-a8ec-0909fc2c0a6a" positionType="Float" x="0" y="36" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EvidenceListAddressLine2}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="a57c785b-5469-4919-a0e5-823b36f92ff0" x="0" y="54" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="a57c785b-5469-4919-a0e5-823b36f92ff0" positionType="Float" x="0" y="54" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EvidenceListAddressLine3}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="e470daa1-453e-48a4-9a5d-9bc30257fe19" x="0" y="72" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="e470daa1-453e-48a4-9a5d-9bc30257fe19" positionType="Float" x="0" y="72" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EvidenceListAddressPostcode}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="fe0558c0-060a-461d-892b-3d613bcb38d7" x="1" y="90" width="530" height="21"/>
+				<reportElement uuid="fe0558c0-060a-461d-892b-3d613bcb38d7" positionType="Float" x="1" y="90" width="530" height="21"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
