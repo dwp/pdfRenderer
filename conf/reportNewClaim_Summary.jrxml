@@ -437,7 +437,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingSummaryAboutYouTheCarer"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="arial" size="14" isBold="true" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<font fontName="SansSerif" size="14" isBold="true" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
 				</textElement>
 				<text><![CDATA[		                        About you - the carer           About the care you provide]]></text>
 			</staticText>
@@ -464,7 +464,7 @@
 			<textField isStretchWithOverflow="true">
 				<reportElement uuid="79256d1b-93c2-4e6d-871d-9ad261188fb3" x="168" y="38" width="180" height="18"/>
 				<textElement>
-					<font fontName="Arial"/>
+					<font fontName="SansSerif"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ClaimantSurnameAnswer}]]></textFieldExpression>
 			</textField>
@@ -481,7 +481,7 @@
 			<textField isStretchWithOverflow="true">
 				<reportElement uuid="4252d74b-0fa3-43ac-a029-efa997d4c608" x="168" y="58" width="180" height="18"/>
 				<textElement>
-					<font fontName="Arial"/>
+					<font fontName="SansSerif"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ClaimantOtherNamesAnswer}]]></textFieldExpression>
 			</textField>
