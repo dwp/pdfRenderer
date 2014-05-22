@@ -52,7 +52,7 @@
 	<group name="Break">
 		<groupExpression><![CDATA[$F{AboutYouTheCarerPeriodAbroadDateFromAnswer}]]></groupExpression>
 		<groupHeader>
-			<band height="54">
+			<band height="54" splitType="Immediate">
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 					<reportElement uuid="3d091f97-47b6-4819-b5bb-c919c8560721" x="20" y="1" width="330" height="32" isRemoveLineWhenBlank="true"/>
 					<textElement/>
@@ -73,7 +73,7 @@
 			</band>
 		</groupHeader>
 		<groupFooter>
-			<band/>
+			<band splitType="Immediate"/>
 		</groupFooter>
 	</group>
 	<background>
@@ -83,8 +83,8 @@
 		<band height="21">
 			<staticText>
 				<reportElement uuid="a415a243-c2e6-483a-8f49-31a568e887ae" style="SubHeadingClaim" mode="Opaque" x="0" y="0" width="555" height="21">
-                    <property name="net.sf.jasperreports.export.html.id" value="SubHeadingPeriodAbroad"/>
-                </reportElement>
+					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingPeriodAbroad"/>
+				</reportElement>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -93,7 +93,7 @@
 		</band>
 	</title>
 	<detail>
-		<band height="96" splitType="Stretch">
+		<band height="96" splitType="Immediate">
 			<textField>
 				<reportElement uuid="3a0b8e90-5e92-4913-a464-26f141b8e53a" x="20" y="1" width="330" height="18"/>
 				<textElement/>

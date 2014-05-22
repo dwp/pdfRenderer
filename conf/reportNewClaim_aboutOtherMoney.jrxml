@@ -124,9 +124,9 @@
 		<band splitType="Stretch"/>
 	</background>
 	<pageHeader>
-		<band height="24" splitType="Stretch">
+		<band height="18" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="c4993f7a-b987-4a99-9fbd-21415dcc29ce" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="4" width="555" height="18" forecolor="#000000">
+				<reportElement uuid="c4993f7a-b987-4a99-9fbd-21415dcc29ce" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="555" height="18" forecolor="#000000">
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart7AboutOtherMoney"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
@@ -142,7 +142,7 @@
 				<reportElement uuid="682874b6-bfe4-439f-8bb8-4abdfe329111" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="555" height="20">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingBenefitsAndPayments"/>
 				</reportElement>
-				<textElement>
+				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Benefits and payments]]></text>

@@ -25,7 +25,7 @@
 				<reportElement uuid="c6fb5c1e-aac1-4fcd-b4ff-655479a6a68e" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="3" width="555" height="18">
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingCustomerConsentAndDeclaration"/>
 				</reportElement>
-				<textElement markup="styled">
+				<textElement verticalAlignment="Middle" markup="styled">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Part 9 - Customer Consent and Declaration]]></text>
