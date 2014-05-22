@@ -31,7 +31,7 @@
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="292">
+		<band height="99" splitType="Immediate">
 			<staticText>
 				<reportElement uuid="22c02e51-e13c-42cc-86e4-f2af124afd5e" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="553" height="21" isRemoveLineWhenBlank="true">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingAdditionalInformation"/>
@@ -59,17 +59,17 @@
 				<textFieldExpression><![CDATA[$F{additionalInformationWhyQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="8bb1352e-4350-47ef-9f29-c241f8e32afb" positionType="Float" x="0" y="59" width="552" height="214" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="8bb1352e-4350-47ef-9f29-c241f8e32afb" positionType="Float" x="0" y="59" width="552" height="20" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{additionalInformationWhyAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="53de5b37-2b0a-4074-9e5f-50eddf56e2bb" positionType="Float" x="0" y="273" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="53de5b37-2b0a-4074-9e5f-50eddf56e2bb" positionType="Float" x="0" y="79" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{welshQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="2013b6a7-5201-4e87-aec0-28c7521b86a6" positionType="Float" x="355" y="273" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="2013b6a7-5201-4e87-aec0-28c7521b86a6" positionType="Float" x="355" y="79" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{welshAnswer}]]></textFieldExpression>
 			</textField>

@@ -31,7 +31,7 @@
 				<text><![CDATA[Part 9 - Customer Consent and Declaration]]></text>
 			</staticText>
 		</band>
-		<band height="2" splitType="Stretch">
+		<band height="2" splitType="Immediate">
 			<subreport>
 				<reportElement uuid="922102db-53c1-4c3e-ada4-d9ce5d2b5a73" positionType="Float" x="0" y="0" width="555" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
