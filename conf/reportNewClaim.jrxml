@@ -88,9 +88,16 @@
 		<band splitType="Stretch"/>
 	</background>
 	<pageHeader>
-		<band height="45" splitType="Immediate">
+		<band height="50" splitType="Immediate">
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="464748e3-a9c3-42ef-bba3-786703772695" positionType="Float" mode="Opaque" x="0" y="26" width="560" height="22" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Date Claim Received "+$F{DateTimeGenerated}]]></textFieldExpression>
+			</textField>
 			<frame>
-				<reportElement uuid="5dabe915-84d3-4dcd-a312-966736875aa2" x="0" y="0" width="560" height="23" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" backcolor="#FFFFFF"/>
+				<reportElement uuid="7afb6c41-52be-4c63-89cd-61179a0fa915" positionType="Float" x="0" y="0" width="560" height="23"/>
 				<box>
 					<pen lineWidth="1.0" lineColor="#000000"/>
 					<topPen lineWidth="1.0" lineColor="#000000"/>
@@ -99,42 +106,35 @@
 					<rightPen lineWidth="1.0" lineColor="#000000"/>
 				</box>
 				<staticText>
-					<reportElement uuid="eb8201ef-3319-4f71-ba4a-434848230663" x="0" y="0" width="90" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF"/>
+					<reportElement uuid="eb8201ef-3319-4f71-ba4a-434848230663" x="1" y="1" width="90" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF"/>
 					<textElement verticalAlignment="Middle">
 						<font fontName="SansSerif" size="14" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Transaction:]]></text>
 				</staticText>
-				<textField>
-					<reportElement uuid="97b2efa8-c290-4b0e-b5d1-0ddc084d45e0" x="90" y="0" width="126" height="20" forecolor="#FFFFFF"/>
+				<textField isBlankWhenNull="true">
+					<reportElement uuid="97b2efa8-c290-4b0e-b5d1-0ddc084d45e0" positionType="Float" x="93" y="1" width="126" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF"/>
 					<textElement verticalAlignment="Middle">
 						<font size="12" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{TransactionId}]]></textFieldExpression>
 				</textField>
-				<textField>
-					<reportElement uuid="413555f5-6e37-46fa-9f7b-00d6dd12b626" x="215" y="0" width="30" height="20" forecolor="#FFFFFF"/>
+				<textField isBlankWhenNull="true">
+					<reportElement uuid="413555f5-6e37-46fa-9f7b-00d6dd12b626" positionType="Float" x="224" y="1" width="30" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF"/>
 					<textElement textAlignment="Right" verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[$F{ClaimantTitle}.toUpperCase()]]></textFieldExpression>
 				</textField>
-				<textField>
-					<reportElement uuid="f611597b-ca9e-4eee-b245-2214c1573ce9" x="247" y="0" width="193" height="20" forecolor="#FFFFFF"/>
+				<textField isBlankWhenNull="true">
+					<reportElement uuid="f611597b-ca9e-4eee-b245-2214c1573ce9" positionType="Float" x="260" y="1" width="193" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF"/>
 					<textElement verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[$F{ClaimantSurname}]]></textFieldExpression>
 				</textField>
-				<textField>
-					<reportElement uuid="fa8df42d-d92f-4051-a603-d9108427489c" x="457" y="0" width="80" height="20" forecolor="#FFFFFF"/>
+				<textField isBlankWhenNull="true">
+					<reportElement uuid="fa8df42d-d92f-4051-a603-d9108427489c" positionType="Float" x="460" y="1" width="80" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF"/>
 					<textElement textAlignment="Right" verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[$F{NationalInsuranceNumber}]]></textFieldExpression>
 				</textField>
 			</frame>
-			<textField>
-				<reportElement uuid="464748e3-a9c3-42ef-bba3-786703772695" mode="Opaque" x="0" y="23" width="560" height="22" forecolor="#000000" backcolor="#FFFFFF"/>
-				<textElement verticalAlignment="Middle">
-					<font size="12"/>
-				</textElement>
-				<textFieldExpression><![CDATA["Date Claim Received "+$F{DateTimeGenerated}]]></textFieldExpression>
-			</textField>
 		</band>
 	</pageHeader>
 	<detail>

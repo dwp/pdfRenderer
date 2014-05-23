@@ -11,7 +11,7 @@
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="3" splitType="Stretch">
+		<band height="1" splitType="Immediate">
 			<subreport>
 				<reportElement uuid="e9b10ce4-a2cc-4199-9cd5-2854b1554d31" positionType="Float" x="0" y="0" width="555" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
@@ -21,7 +21,7 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Disclaimer_disclaimerStatement.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="3" splitType="Stretch">
+		<band height="2" splitType="Immediate">
 			<subreport>
 				<reportElement uuid="e9b10ce4-a2cc-4199-9cd5-2854b1554d31" positionType="Float" x="0" y="0" width="555" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">

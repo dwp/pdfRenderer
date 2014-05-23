@@ -16,15 +16,15 @@
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="20" splitType="Stretch">
+		<band height="20" splitType="Immediate">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="da37dfe6-34e3-487b-83ba-f4bcbd593d68" x="0" y="0" width="330" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
+				<reportElement uuid="da37dfe6-34e3-487b-83ba-f4bcbd593d68" positionType="Float" x="0" y="0" width="330" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{Question}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="e1e6da2c-4b06-412f-abc3-78d85a5ef810" x="335" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
+				<reportElement uuid="e1e6da2c-4b06-412f-abc3-78d85a5ef810" positionType="Float" x="335" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{Answer}]]></textFieldExpression>
 			</textField>
 		</band>
