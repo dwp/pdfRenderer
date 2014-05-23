@@ -8,6 +8,9 @@
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/valtechuk/carers-dev-pdf/pdfService/pdfService/conf/"]]></defaultValueExpression>
 	</parameter>
+	<queryString language="xPath">
+		<![CDATA[/]]>
+	</queryString>
 	<field name="AboutCareYouProvideCareeTitleAnswer" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Title/Answer]]></fieldDescription>
 	</field>
