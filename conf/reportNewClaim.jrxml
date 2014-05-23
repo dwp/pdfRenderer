@@ -179,7 +179,7 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_aboutYouTheCarer.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="3" splitType="Stretch">
+		<band height="2" splitType="Stretch">
 			<printWhenExpression><![CDATA[$F{HavePartnerAnswer}.equals("Yes")]]></printWhenExpression>
 			<subreport>
 				<reportElement uuid="75564d7a-a29b-41fc-a89c-debc7307f3fb" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
@@ -272,24 +272,24 @@
 		</band>
 	</detail>
 	<pageFooter>
-		<band height="24" splitType="Stretch">
+		<band height="24" splitType="Immediate">
 			<staticText>
-				<reportElement uuid="dc7a0fce-ab52-46eb-ab11-ed9d6e023e1a" x="0" y="0" width="66" height="20"/>
+				<reportElement uuid="dc7a0fce-ab52-46eb-ab11-ed9d6e023e1a" positionType="Float" x="0" y="0" width="66" height="20"/>
 				<textElement verticalAlignment="Middle"/>
 				<text><![CDATA[Transaction:]]></text>
 			</staticText>
 			<textField>
-				<reportElement uuid="0133ea8a-e3b4-4d1b-ae6b-918fecfcdd07" x="66" y="0" width="96" height="20"/>
+				<reportElement uuid="0133ea8a-e3b4-4d1b-ae6b-918fecfcdd07" positionType="Float" x="66" y="0" width="96" height="20"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{TransactionId}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement uuid="fb0d9e43-5827-4ea3-a9c3-df5752f30646" x="404" y="0" width="121" height="20"/>
+				<reportElement uuid="fb0d9e43-5827-4ea3-a9c3-df5752f30646" positionType="Float" x="404" y="0" width="121" height="20"/>
 				<textElement textAlignment="Right" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+ " of "]]></textFieldExpression>
 			</textField>
 			<textField evaluationTime="Report">
-				<reportElement uuid="ff73e306-b40d-442d-98a9-1abf56267436" x="527" y="0" width="27" height="20"/>
+				<reportElement uuid="ff73e306-b40d-442d-98a9-1abf56267436" positionType="Float" x="527" y="0" width="27" height="20"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>
