@@ -38,7 +38,7 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Declaration_declarationStatement.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="60" splitType="Immediate">
+		<band height="59" splitType="Immediate">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="c3c94047-8909-4057-8d7e-17a312bf5297" positionType="Float" x="0" y="3" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>

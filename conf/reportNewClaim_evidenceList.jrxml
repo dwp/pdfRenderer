@@ -30,9 +30,9 @@
 		<band splitType="Stretch"/>
 	</background>
 	<pageHeader>
-		<band height="23" splitType="Immediate">
+		<band height="22" splitType="Immediate">
 			<staticText>
-				<reportElement uuid="f3b5dff4-39c9-4ce1-91fe-15e640d4d715" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="3" width="555" height="18">
+				<reportElement uuid="f3b5dff4-39c9-4ce1-91fe-15e640d4d715" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="555" height="18">
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingCustomerEvidenceList"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
@@ -53,7 +53,7 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_subreportEvidenceList.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="113" splitType="Immediate">
+		<band height="111" splitType="Immediate">
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="fa94d49d-1eab-4c18-a6df-70b5c3ec49b8" positionType="Float" x="0" y="0" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
