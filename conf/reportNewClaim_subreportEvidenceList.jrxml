@@ -25,14 +25,11 @@
 	<field name="EvidenceListAddressPostcode" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/EvidenceList/RecipientAddress/PostCode]]></fieldDescription>
 	</field>
-	<field name="Content" class="java.lang.String">
-		<fieldDescription><![CDATA[Content]]></fieldDescription>
-	</field>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="41" splitType="Stretch">
+		<band height="19" splitType="Stretch">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="fcd3ab37-4374-45fc-bfd2-b8f2313382c1" positionType="Float" x="0" y="0" width="555" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement>
@@ -40,11 +37,14 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$F{Title}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="7a11494d-7643-4342-aa68-ce43ccfb5cd8" positionType="Float" x="0" y="18" width="555" height="20" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{Content}]]></textFieldExpression>
-			</textField>
+			<subreport>
+				<reportElement uuid="1726b69b-3884-4ec3-9efa-7d50543f66a7" positionType="Float" x="0" y="18" width="555" height="1" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource) $P{REPORT_DATA_SOURCE}).subDataSource("//Evidence/Content")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_subreportEvidenceContent.jasper"]]></subreportExpression>
+			</subreport>
 		</band>
 	</detail>
 </jasperReport>

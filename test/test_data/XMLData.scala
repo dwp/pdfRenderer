@@ -89,7 +89,8 @@ object XMLData extends TestUtils{
       buildQuestion(fields.firstNameQuestion.text, fields.firstNameAnswer.text.trim),
       buildQuestion(fields.titleQuestion.text, fields.titleAnswer.text.trim),
       fields.addressCarerAnswer,
-      fields.postCodeCarer.text
+      fields.postCodeCarer.text,
+      fields.reasonTimeAbroadOther.text
     )
   }
 

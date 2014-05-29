@@ -80,6 +80,8 @@ case class XMLDataFields(xml: Elem) extends TestUtils{
 
   val timeOutsideGBLast3YearsAnswer = xml \\ "DWPCATransaction" \\ "DWPCAClaim" \\ "Residency" \\ "TimeOutsideGBLast3Years" \\ "Answer[0]"
 
+  val reasonTimeAbroadOther = xml \\ "DWPCATransaction" \\ "DWPCAClaim" \\ "Residency" \\ "Reason" \\ "Other"
+
   val statePensionQuestion = SectionPart1AboutYouTheCarer(xml: Elem).statePensionQuestion
 
   val statePensionAnswer = SectionPart1AboutYouTheCarer(xml: Elem).statePensionAnswer
