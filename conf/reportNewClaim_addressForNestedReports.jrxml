@@ -3,7 +3,7 @@
 	<property name="ireport.zoom" value="2.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
-    <property name="net.sf.jasperreports.export.html.remove.emtpy.space.between.rows" value="true"/>
+	<property name="net.sf.jasperreports.export.html.remove.emtpy.space.between.rows" value="true"/>
 	<parameter name="addressLabel" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["Address"]]></defaultValueExpression>
 	</parameter>
@@ -53,7 +53,9 @@
 				<textFieldExpression><![CDATA[$P{addressLabel}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement uuid="653f8379-d915-465b-9267-bda1f0d8d7b2" x="0" y="56" width="350" height="18"/>
+				<reportElement uuid="653f8379-d915-465b-9267-bda1f0d8d7b2" x="0" y="56" width="350" height="18">
+					<printWhenExpression><![CDATA[!$F{Postcode}.isEmpty()]]></printWhenExpression>
+				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$P{postCode}]]></textFieldExpression>
 			</textField>
