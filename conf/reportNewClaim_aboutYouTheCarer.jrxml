@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYouTheCarer" language="groovy" pageWidth="555" pageHeight="872" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a66aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="58"/>
+	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<property name="net.sf.jasperreports.export.html.remove.emtpy.space.between.rows" value="true"/>
 	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
@@ -246,7 +246,7 @@
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerCountryNormallyLiveAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="42" splitType="Immediate">
+		<band height="22" splitType="Immediate">
 			<staticText>
 				<reportElement uuid="ec6ad3bc-6469-4ef5-9ebd-878ccf50b1da" style="SubHeadingClaim" positionType="Float" x="0" y="1" width="553" height="20" forecolor="#000000">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingTimeOutsideOfEnglandScotlandWales"/>
@@ -256,24 +256,8 @@
 				</textElement>
 				<text><![CDATA[Time outside of England, Scotland or Wales]]></text>
 			</staticText>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="df4d2fb9-4b93-4082-bfd4-db07b791763f" positionType="Float" x="0" y="22" width="350" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{AboutYouTheCarerTimeOutsideGBLast3YearsAnswer}.equals("No")]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{AboutYouTheCarerTimeOutsideGBLast3YearsQuestion}]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="c6d1496d-fee4-4f86-9165-1d0c243a5aa2" positionType="Float" x="355" y="22" width="197" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{AboutYouTheCarerTimeOutsideGBLast3YearsAnswer}.equals("No")]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{AboutYouTheCarerTimeOutsideGBLast3YearsAnswer}]]></textFieldExpression>
-			</textField>
 			<subreport>
-				<reportElement uuid="d538e45b-212b-4289-87ee-79475f4df223" positionType="Float" x="0" y="41" width="553" height="1" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{AboutYouTheCarerTimeOutsideGBLast3YearsAnswer}.equals("Yes")]]></printWhenExpression>
-				</reportElement>
+				<reportElement uuid="d538e45b-212b-4289-87ee-79475f4df223" positionType="Float" x="0" y="21" width="553" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
