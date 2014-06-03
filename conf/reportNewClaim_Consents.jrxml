@@ -11,7 +11,7 @@
 		<fieldDescription><![CDATA[QuestionLabel]]></fieldDescription>
 	</field>
 	<field name="ConsentAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Consents/Consent/Answer]]></fieldDescription>
+		<fieldDescription><![CDATA[Answer]]></fieldDescription>
 	</field>
 	<background>
 		<band splitType="Stretch"/>

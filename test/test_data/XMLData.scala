@@ -73,6 +73,16 @@ object XMLData extends TestUtils{
     functionalTestCaseMandatoryFields(xml)
   }
 
+  def functionalTestCase11(xml: Elem) = {
+    val fields = XMLDataFields(xml)
+    functionalTestCaseMandatoryFields(xml) ++ sectionCustomerConsent(xml)
+  }
+
+  def functionalTestCase12(xml: Elem) = {
+    val fields = XMLDataFields(xml)
+    functionalTestCaseMandatoryFields(xml) ++ sectionCustomerConsent(xml)
+  }
+
   def functionalTestCaseMandatoryFields(xml: Elem) = {
     val fields = XMLDataFields(xml)
     Seq(
@@ -297,10 +307,23 @@ object XMLData extends TestUtils{
      )
   }
 
-  def sectionCustomerConsentAndDeclaration(xml:Elem) = {
+  def sectionCustomerConsent(xml:Elem) = {
     val fields = SectionConsentAndDeclaration(xml)
 
     val consentXml = fields.consent.map (c => buildQuestion((c \ "QuestionLabel").text, (c \ "Answer").text))
+
+    Seq ("Part 9 - Customer Consent And Declaration",
+         "Additional Information",
+         buildQuestion(fields.otherInformationAdditionalInformationQuestion.text,fields.otherInformationAdditionalInformationAnswer.text),
+         buildQuestion(fields.otherInformationWelshCommunicationQuestion.text,fields.otherInformationWelshCommunicationAnswer.text),
+         "Consent",
+         "Disclaimer",
+         "Declaration"
+    ) ++ consentXml
+  }
+
+  def sectionCustomerDeclaration(xml:Elem) = {
+    val fields = SectionConsentAndDeclaration(xml)
 
     val disclaimerQuestionXml = fields.disclaimerQuestion.map (d => buildQuestion((d \ "QuestionLabel").text, (d \ "Answer").text))
 
@@ -322,14 +345,7 @@ object XMLData extends TestUtils{
       }).flatten
     }
 
-    Seq ("Part 9 - Customer Consent And Declaration",
-         "Additional Information",
-         buildQuestion(fields.otherInformationAdditionalInformationQuestion.text,fields.otherInformationAdditionalInformationAnswer.text),
-         buildQuestion(fields.otherInformationWelshCommunicationQuestion.text,fields.otherInformationWelshCommunicationAnswer.text),
-         "Consent",
-         "Disclaimer",
-         "Declaration"
-    ) ++ consentXml ++ disclaimerStatementXml ++ disclaimerQuestionXml ++ declarationStatementXml ++ declarationQuestionXml
+    disclaimerStatementXml ++ disclaimerQuestionXml ++ declarationStatementXml ++ declarationQuestionXml
   }
 
   def sectionEvidenceList(xml:Elem) = {
