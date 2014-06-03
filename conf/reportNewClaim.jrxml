@@ -89,13 +89,6 @@
 	</background>
 	<pageHeader>
 		<band height="50" splitType="Immediate">
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="464748e3-a9c3-42ef-bba3-786703772695" positionType="Float" mode="Opaque" x="0" y="26" width="560" height="22" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#FFFFFF"/>
-				<textElement verticalAlignment="Middle">
-					<font size="12"/>
-				</textElement>
-				<textFieldExpression><![CDATA["Date Claim Received "+$F{DateTimeGenerated}]]></textFieldExpression>
-			</textField>
 			<frame>
 				<reportElement uuid="7afb6c41-52be-4c63-89cd-61179a0fa915" positionType="Float" x="0" y="0" width="560" height="23"/>
 				<box>
@@ -122,7 +115,7 @@
 				<textField isBlankWhenNull="true">
 					<reportElement uuid="413555f5-6e37-46fa-9f7b-00d6dd12b626" positionType="Float" x="224" y="1" width="30" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF"/>
 					<textElement textAlignment="Right" verticalAlignment="Middle"/>
-					<textFieldExpression><![CDATA[$F{ClaimantTitle}.toUpperCase()]]></textFieldExpression>
+					<textFieldExpression><![CDATA[$F{ClaimantTitle}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
 					<reportElement uuid="f611597b-ca9e-4eee-b245-2214c1573ce9" positionType="Float" x="260" y="1" width="193" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF"/>
@@ -135,6 +128,13 @@
 					<textFieldExpression><![CDATA[$F{NationalInsuranceNumber}]]></textFieldExpression>
 				</textField>
 			</frame>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="464748e3-a9c3-42ef-bba3-786703772695" positionType="Float" mode="Opaque" x="0" y="26" width="560" height="22" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Date Claim Received "+$F{DateTimeGenerated}]]></textFieldExpression>
+			</textField>
 		</band>
 	</pageHeader>
 	<detail>
@@ -273,16 +273,6 @@
 	</detail>
 	<pageFooter>
 		<band height="24" splitType="Immediate">
-			<staticText>
-				<reportElement uuid="dc7a0fce-ab52-46eb-ab11-ed9d6e023e1a" positionType="Float" x="0" y="0" width="66" height="20"/>
-				<textElement verticalAlignment="Middle"/>
-				<text><![CDATA[Transaction:]]></text>
-			</staticText>
-			<textField>
-				<reportElement uuid="0133ea8a-e3b4-4d1b-ae6b-918fecfcdd07" positionType="Float" x="66" y="0" width="96" height="20"/>
-				<textElement verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{TransactionId}]]></textFieldExpression>
-			</textField>
 			<textField>
 				<reportElement uuid="fb0d9e43-5827-4ea3-a9c3-df5752f30646" positionType="Float" x="404" y="0" width="121" height="20"/>
 				<textElement textAlignment="Right" verticalAlignment="Middle"/>
