@@ -15,7 +15,7 @@
                 <Address>
                     <QuestionLabel>Address</QuestionLabel>
                     <Answer>
-                        <Line>5 Preston Road</Line><Line>Preston</Line><Line>Lancashire</Line><PostCode>PR1 2TH</PostCode>
+                        <Line>5 Preston Road</Line><Line></Line><Line></Line><PostCode>PR1 2TH</PostCode>
                     </Answer>
                 </Address>
                 <DayTimePhoneNumber><QuestionLabel>How we can contact you</QuestionLabel><Answer>01772 888901</Answer></DayTimePhoneNumber>
@@ -31,7 +31,7 @@
                 <Address>
                     <QuestionLabel>Address</QuestionLabel>
                     <Answer>
-                        <Line>5 Preston Road</Line><Line>Preston</Line><Line>Lancashire</Line><PostCode>PR1 2TH</PostCode>
+                        <Line>5 Preston Road</Line><Line></Line><Line></Line><PostCode>PR1 2TH</PostCode>
                     </Answer>
                 </Address>
 
@@ -135,7 +135,8 @@
                     <DateFrom><QuestionLabel>Date you left?</QuestionLabel><Answer>14-06-2012</Answer></DateFrom>
                     <DateTo><QuestionLabel>Date you returned?</QuestionLabel><Answer>18-06-2012</Answer></DateTo>
                 </Period>
-                <Reason><QuestionLabel>Reason for being there?</QuestionLabel><Other>Testing Other with 60 characters Testing Other with 60 chara</Other><Answer>Other</Answer></Reason>
+                <Reason><QuestionLabel>Reason for being there?</QuestionLabel>
+                    <Other>Testing Other with 60 characters Testing Other with 60 chara</Other><Answer>Other</Answer></Reason>
                 <Country><QuestionLabel>Which country did you go to?</QuestionLabel><Answer>USA</Answer></Country>
                 <CareePresent><QuestionLabel>Was the person you care for with you?</QuestionLabel><Answer>No</Answer></CareePresent>
             </PeriodAbroad><PeriodAbroad>

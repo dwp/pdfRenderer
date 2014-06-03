@@ -15,7 +15,7 @@
                 <Address>
                     <QuestionLabel>Address</QuestionLabel>
                     <Answer>
-                        <Line>1 Preston Road</Line><Line>Preston</Line><PostCode>PR1 1HB</PostCode>
+                        <Line>1 Preston Road</Line><Line>Preston</Line><PostCode></PostCode>
                     </Answer>
                 </Address>
                 <DayTimePhoneNumber><QuestionLabel>How we can contact you</QuestionLabel><Answer>07111 111 111</Answer></DayTimePhoneNumber>
@@ -31,7 +31,7 @@
                 <Address>
                     <QuestionLabel>Address</QuestionLabel>
                     <Answer>
-                        <Line>1 Preston Road</Line><Line>Preston</Line><PostCode>PR1 1HB</PostCode>
+                        <Line>1 Preston Road</Line><Line>Preston</Line><PostCode></PostCode>
                     </Answer>
                 </Address>
 
