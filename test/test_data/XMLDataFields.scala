@@ -103,18 +103,13 @@ case class XMLDataFields(xml: Elem) extends TestUtils{
         case false => Seq((x \\ "EndDateTime" \\ "QuestionLabel").text + " " + (x \\ "EndDateTime" \\ "Answer").text)
       }
       val otherData = Seq(
+         buildQuestion((x \\ "BreaksSinceClaim" \\ "QuestionLabel").text, (x \\ "BreaksSinceClaim" \\ "Answer").text),
          buildQuestion((x \\ "ReasonClaimant" \\ "QuestionLabel").text,(x \\ "ReasonClaimant" \\ "Answer").text),
          (x \\ "ReasonClaimant" \\ "Other" \\ "Answer").text,
         buildQuestion((x \\ "ReasonCaree" \\ "QuestionLabel").text,(x \\ "ReasonCaree" \\ "Answer").text),
         buildQuestion((x \\ "MedicalCare" \\ "QuestionLabel").text,(x \\ "MedicalCare" \\ "Answer").text)
       )
       (fromDate ++ toDate).filterNot(x => x.isEmpty) ++ otherData
-    }).filterNot(x => x.isEmpty).flatten ++
-    (rootPath \\ "Caree").
-      map(x => {
-      Seq (
-        (x \\ "BreaksSinceClaim" \\ "QuestionLabel").text+" "+(x \\ "BreaksSinceClaim" \\ "Answer").text
-      )
-    }).flatten
+    }).filterNot(x => x.isEmpty).flatten
   }
 }
