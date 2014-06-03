@@ -26,3 +26,4 @@ logfile
 *.pdf
 *.html
 public/images/img_*
+conf/*/px
