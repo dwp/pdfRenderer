@@ -34,7 +34,7 @@ case class SectionAboutOtherMoney(xml: Elem) {
   val otherMoneySSPPaymentFrequencyAnswer = rootPath \ "OtherBenefits" \ "OtherMoneySSPDetails" \ "Payment" \ "Frequency" \ "Answer"
   val otherMoneySSPPaymentFrequencyOther = rootPath \ "OtherBenefits" \ "OtherMoneySSPDetails" \ "Payment" \ "Frequency" \ "Other"
 
-  val otherMoneySSPEmployerName = rootPath \ "OtherBenefits" \ "OtherMoneySSPDetails" \ "Name"
+  val otherMoneySSPEmployerName = rootPath \ "OtherBenefits" \ "OtherMoneySSPDetails" \ "Name" \ "Answer"
 
   val otherMoneySSPEmployerAddress = (rootPath \ "OtherBenefits" \ "OtherMoneySSPDetails" \ "Address" \ "Line").map(x => x.text).filterNot(x => x.isEmpty).mkString(" ")
 
@@ -51,7 +51,7 @@ case class SectionAboutOtherMoney(xml: Elem) {
   val otherMoneySPPaymentFrequencyAnswer = rootPath \ "OtherBenefits" \ "OtherMoneySPDetails" \ "Payment" \ "Frequency" \ "Answer"
   val otherMoneySPPaymentFrequencyOther = rootPath \ "OtherBenefits" \ "OtherMoneySPDetails" \ "Payment" \ "Frequency" \ "Other"
 
-  val otherMoneySPEmployerName = rootPath \ "OtherBenefits" \ "OtherMoneySPDetails" \ "Name"
+  val otherMoneySPEmployerName = rootPath \ "OtherBenefits" \ "OtherMoneySPDetails" \ "Name" \ "Answer"
 
   val otherMoneySPEmployerAddress = (rootPath \ "OtherBenefits" \ "OtherMoneySPDetails" \ "Address" \ "Line").map(x => x.text).filterNot(x => x.isEmpty).mkString(" ")
 
