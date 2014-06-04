@@ -33,7 +33,7 @@ object XMLData extends TestUtils{
     Seq(
       buildQuestion(fields.claimantOtherSurnamesQuestion.text, fields.claimantOtherSurnamesAnswer.text),
       buildQuestion(fields.partnerOtherSurnamesQuestion.text, fields.partnerOtherSurnamesAnswer.text)
-    ) ++ functionalTestCaseMandatoryFields(xml) ++ aboutYourPartner(fields) ++ careBreaks(fields)
+    ) ++ functionalTestCaseMandatoryFields(xml) ++ aboutYourPartner(fields) ++ careBreaks(fields) ++ sectionEvidenceList(xml)
   }
 
   def functionalTestCase4(xml: Elem): Seq[String] = {
