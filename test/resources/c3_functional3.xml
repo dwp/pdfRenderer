@@ -288,9 +288,9 @@
                 <ClaimantBenefits>
                     <StatePension><QuestionLabel>Do you get State Pension?</QuestionLabel><Answer>No</Answer></StatePension>
                 </ClaimantBenefits>
-                <OtherMoneySSP><QuestionLabel>Have you had any Statutory Sick Pay SSP since the date you want to claim from 01/01/2010?</QuestionLabel><Answer>No</Answer></OtherMoneySSP>
+                <OtherMoneySSP><QuestionLabel>Have you had any Statutory Sick Pay (SSP) since the date you want to claim from 01/01/2010?</QuestionLabel><Answer>No</Answer></OtherMoneySSP>
 
-                <OtherMoneySP><QuestionLabel>Have you had any Statutory Maternity Pay SMP, Statutory Paternity Pay SPP or Statutory Adoption Pay SAP since the date you want to claim from 01/01/2010?</QuestionLabel><Answer>Yes</Answer></OtherMoneySP>
+                <OtherMoneySP><QuestionLabel>Have you had any Statutory Maternity Pay (SMP), Statutory Paternity Pay (SPP) or Statutory Adoption Pay (SAP) since the date you want to claim from 01/01/2010?</QuestionLabel><Answer>Yes</Answer></OtherMoneySP>
                 <OtherMoneySPDetails>
                     <Payment>
                         <Payment><QuestionLabel>How much</QuestionLabel><Answer><Currency>GBP</Currency><Amount>145</Amount></Answer></Payment>

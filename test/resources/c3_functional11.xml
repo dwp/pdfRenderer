@@ -162,9 +162,9 @@
                 <ClaimantBenefits>
                     <StatePension><QuestionLabel>Do you get State Pension?</QuestionLabel><Answer>No</Answer></StatePension>
                 </ClaimantBenefits>
-                <OtherMoneySSP><QuestionLabel>Have you had any Statutory Sick Pay SSP since the date you want to claim from 05/01/2013?</QuestionLabel><Answer>No</Answer></OtherMoneySSP>
+                <OtherMoneySSP><QuestionLabel>Have you had any Statutory Sick Pay (SSP) since the date you want to claim from 05/01/2013?</QuestionLabel><Answer>No</Answer></OtherMoneySSP>
 
-                <OtherMoneySP><QuestionLabel>Have you had any Statutory Maternity Pay SMP, Statutory Paternity Pay SPP or Statutory Adoption Pay SAP since the date you want to claim from 05/01/2013?</QuestionLabel><Answer>No</Answer></OtherMoneySP>
+                <OtherMoneySP><QuestionLabel>Have you had any Statutory Maternity Pay (SMP), Statutory Paternity Pay (SPP) or Statutory Adoption Pay (SAP) since the date you want to claim from 05/01/2013?</QuestionLabel><Answer>No</Answer></OtherMoneySP>
 
                 <OtherMoney><QuestionLabel>Have you  claimed or received any other benefits since your claim date: 05/01/2013?</QuestionLabel><Answer>No</Answer></OtherMoney>
                 <OtherMoneyPayments><QuestionLabel>Have you received any payments for the person you care for or any other person since your claim date 05/01/2013</QuestionLabel><Answer>No</Answer></OtherMoneyPayments>
