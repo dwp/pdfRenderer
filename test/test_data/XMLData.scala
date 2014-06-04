@@ -50,7 +50,7 @@ object XMLData extends TestUtils{
 
   def functionalTestCase6(xml: Elem) = {
     val fields = XMLDataFields(xml)
-    functionalTestCaseMandatoryFields(xml)
+    functionalTestCaseMandatoryFields(xml) ++ sectionAboutOtherMoney(xml)
   }
 
   def functionalTestCase7(xml: Elem) = {
@@ -260,17 +260,17 @@ object XMLData extends TestUtils{
       buildQuestion(fields.otherMoneyQuestion.text, fields.otherMoneyAnswer.text),
       buildQuestion(fields.otherMoneyPaymentQuestion.text, fields.otherMoneyPaymentAnswer.text),
       buildQuestion(fields.otherMoneyPaymentNameQuestion.text, fields.otherMoneyPaymentNameAnswer.text),
-      buildAmount(fields.otherMoneyPaymentAmountQuestion.text, fields.otherMoneyPaymentAmountCurrency.text, fields.otherMoneyPaymentAmountAmount.text),
+      buildQuestion(fields.otherMoneyPaymentAmountQuestion.text, fields.otherMoneyPaymentAmountAmount.text),
       buildOther(fields.otherMoneyPaymentFrequencyQuestion.text, fields.otherMoneyPaymentFrequencyAnswer.text, fields.otherMoneyPaymentFrequencyOther.text),
       "Statutory Pay",
       buildQuestion(fields.otherMoneySSPQuestion.text, fields.otherMoneySSPAnswer.text),
-      buildAmount(fields.otherMoneySSPPaymentAmountQuestion.text, fields.otherMoneySSPPaymentAmountCurrency.text, fields.otherMoneySSPPaymentAmountAmount.text),
+      buildQuestion(fields.otherMoneySSPPaymentAmountQuestion.text, fields.otherMoneySSPPaymentAmountAmount.text),
       buildOther(fields.otherMoneySSPPaymentFrequencyQuestion.text, fields.otherMoneySSPPaymentFrequencyAnswer.text, fields.otherMoneySSPPaymentFrequencyOther.text),
       "Employer's Name" + " " + fields.otherMoneySSPEmployerName.text,
       "Employer's Address " + fields.otherMoneySSPEmployerAddress,
       "Employer's Postcode " + fields.otherMoneySSPEmployerPostcode.text,
       buildQuestion(fields.otherMoneySPQuestion.text, fields.otherMoneySPAnswer.text),
-      buildAmount(fields.otherMoneySPPaymentAmountQuestion.text, fields.otherMoneySPPaymentAmountCurrency.text, fields.otherMoneySPPaymentAmountAmount.text),
+      buildQuestion(fields.otherMoneySPPaymentAmountQuestion.text, fields.otherMoneySPPaymentAmountAmount.text),
       buildOther(fields.otherMoneySPPaymentFrequencyQuestion.text, fields.otherMoneySPPaymentFrequencyAnswer.text, fields.otherMoneySPPaymentFrequencyOther.text),
       "Employer's Name" + " " + fields.otherMoneySPEmployerName.text,
       "Employer's Address " + fields.otherMoneySPEmployerAddress,
