@@ -13,11 +13,17 @@
 	<field name="ConsentAnswer" class="java.lang.String">
 		<fieldDescription><![CDATA[Answer]]></fieldDescription>
 	</field>
+	<field name="ConsentWhyQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[Why/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="ConsentWhyAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[Why/Answer]]></fieldDescription>
+	</field>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="19" splitType="Stretch">
+		<band height="37" splitType="Stretch">
 			<textField isStretchWithOverflow="true">
 				<reportElement uuid="5f5b2185-9b5f-4d1e-858b-24852cd2757e" positionType="Float" x="0" y="0" width="330" height="18"/>
 				<textElement/>
@@ -27,6 +33,16 @@
 				<reportElement uuid="8a91fad2-9d40-45d2-84be-d2e058a1e540" positionType="Float" x="355" y="0" width="197" height="18"/>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{ConsentAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="2e1473c5-5820-429d-a8d0-be33b8e0ef10" positionType="Float" x="0" y="18" width="330" height="18"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{ConsentWhyQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="b9bbee5b-521f-4c04-b6aa-87a20f75b9e1" positionType="Float" x="358" y="18" width="197" height="18"/>
+				<textElement verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{ConsentWhyAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>

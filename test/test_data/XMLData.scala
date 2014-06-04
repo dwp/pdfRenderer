@@ -310,7 +310,14 @@ object XMLData extends TestUtils{
   def sectionCustomerConsent(xml:Elem) = {
     val fields = SectionConsentAndDeclaration(xml)
 
-    val consentXml = fields.consent.map (c => buildQuestion((c \ "QuestionLabel").text, (c \ "Answer").text))
+    val consentXml: Seq[String] = fields.consent.flatMap {
+      c => {
+        ((c \ "Answer").text.toLowerCase == "no") match {
+          case true => Seq(buildQuestion((c \ "QuestionLabel").text, (c \ "Answer").text), buildQuestion((c \ "Why" \ "QuestionLabel").text, (c \ "Why" \ "Answer").text))
+          case false => Seq(buildQuestion((c \ "QuestionLabel").text, (c \ "Answer").text))
+        }
+      }
+    }
 
     Seq ("Part 9 - Customer Consent And Declaration",
          "Additional Information",
