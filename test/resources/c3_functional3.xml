@@ -1,8 +1,8 @@
 <DWPBody xsi:schemaLocation="http://www.govtalk.gov.uk/dwp/carers-allowance file:/future/schema/ca/CarersAllowance_Schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns="http://www.govtalk.gov.uk/dwp/carers-allowance">
     <Version>0.1</Version>
-    <DWPCATransaction id="TEST223">
-        <TransactionId>TEST223</TransactionId>
-        <DateTimeGenerated>02-06-2014 13:09</DateTimeGenerated>
+    <DWPCATransaction id="TEST226">
+        <TransactionId>TEST226</TransactionId>
+        <DateTimeGenerated>04-06-2014 11:06</DateTimeGenerated>
         <DWPCAClaim>
             <DateOfClaim><QuestionLabel>When do you want your Carer's Allowance claim to start?</QuestionLabel><Answer>01-01-2010</Answer></DateOfClaim>
             <Claimant>
@@ -353,12 +353,16 @@
                     <Answer>
                         <Line>CA Freepost</Line><Line>Palatine House</Line><Line>Preston</Line><PostCode>PR1 1HN</PostCode>
                     </Answer>
-                </RecipientAddress><Evidence>
-                <Title>Your Employment documents.</Title>
-                <Content>Last payslip you got before your claim date:01-01-2010</Content><Content>Any payslips you have had since then.</Content><Content>Any pension statements you may have.</Content>
-            </Evidence><Evidence>
-                <Title>Your Self-employed documents.</Title>
-                <Content>Most recent finalised accounts you have for your business.</Content><Content>Any pension statements you may have.</Content>
+                </RecipientAddress>
+                <Evidence><Title>Remember to send us the following documents.</Title></Evidence>
+                <Evidence><Title>Failure to send us these documents may delay your claim.</Title></Evidence>
+                <Evidence><Title>Send us the documents below including your Name and National Insurance NI number.</Title></Evidence>
+                <Evidence>
+                    <Title>Your Employment documents</Title>
+                    <Content>Last payslip you got before your claim date:</Content><Content>Any payslips you have had since then</Content><Content>Any pension statements you may have</Content>
+                </Evidence><Evidence>
+                <Title>Your Self-employed documents</Title>
+                <Content>Most recent finalised accounts you have for your business</Content><Content>Any pension statements you may have</Content>
             </Evidence><Evidence>
                 <Title/>
                 <Content>The Carers Allowance unit will contact you if they need any further information.</Content>
@@ -375,10 +379,10 @@
         <ds:SignedInfo>
             <ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
             <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
-            <ds:Reference URI="#TEST223">
+            <ds:Reference URI="#TEST226">
                 <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
-                <ds:DigestValue>h3kLBOhcoC3yWbZH+JRakL6bPR8=</ds:DigestValue>
+                <ds:DigestValue>BD2FO4Df2qYXJ+PZMT9UIyKGP/c=</ds:DigestValue>
             </ds:Reference>
         </ds:SignedInfo>
-        <ds:SignatureValue>JRqHwZ9LBOCBZ78aLp3QNlBbmmY5VArIbKFJUu2dWye1ACjtaIWKGA==</ds:SignatureValue>
+        <ds:SignatureValue>ICzRd+O3B+DXxM7mCl+OLS9qFrVt00kox37pJ1zbyV8KnoD5vBF9sQ==</ds:SignatureValue>
     </ds:Signature></DWPBody>

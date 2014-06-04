@@ -26,6 +26,9 @@
 	<field name="AddressLabel" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/EvidenceList/RecipientAddress/QuestionLabel]]></fieldDescription>
 	</field>
+	<field name="EvidenceListContactInfoTitle" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim//Evidence[last()]/Content]]></fieldDescription>
+	</field>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -49,11 +52,11 @@
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
-				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource) $P{REPORT_DATA_SOURCE}).subDataSource("//Evidence")]]></dataSourceExpression>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource) $P{REPORT_DATA_SOURCE}).subDataSource("//Evidence[position()<last()]")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_subreportEvidenceList.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="111" splitType="Immediate">
+		<band height="133" splitType="Immediate">
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="fa94d49d-1eab-4c18-a6df-70b5c3ec49b8" positionType="Float" x="0" y="0" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
@@ -79,8 +82,13 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EvidenceListAddressPostcode}]]></textFieldExpression>
 			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="94cd8058-e281-4cfe-a5bb-f9b8ad51b98b" positionType="Float" x="1" y="91" width="530" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EvidenceListContactInfoTitle}]]></textFieldExpression>
+			</textField>
 			<staticText>
-				<reportElement uuid="fe0558c0-060a-461d-892b-3d613bcb38d7" positionType="Float" x="1" y="90" width="530" height="21"/>
+				<reportElement uuid="fe0558c0-060a-461d-892b-3d613bcb38d7" positionType="Float" x="1" y="111" width="530" height="21"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
