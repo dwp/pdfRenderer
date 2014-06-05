@@ -33,7 +33,7 @@ object XMLData extends TestUtils{
     Seq(
       buildQuestion(fields.claimantOtherSurnamesQuestion.text, fields.claimantOtherSurnamesAnswer.text),
       buildQuestion(fields.partnerOtherSurnamesQuestion.text, fields.partnerOtherSurnamesAnswer.text)
-    ) ++ functionalTestCaseMandatoryFields(xml) ++ aboutYourPartner(fields) ++ careBreaks(fields) ++ sectionEvidenceList(xml)
+    ) ++ functionalTestCaseMandatoryFields(xml) ++ aboutYourPartner(fields) ++ careBreaks(fields) ++ sectionAboutEmployment(xml) ++ sectionEvidenceList(xml)
   }
 
   def functionalTestCase4(xml: Elem): Seq[String] = {
@@ -193,7 +193,8 @@ object XMLData extends TestUtils{
   def sectionAboutEmployment(xml:Elem) = {
     val fields = SectionAboutEmployment(xml)
     Seq ("Part 5 - About Your Employment",
-         fields.areYouEmployedQuestion.text+" "+fields.areYouEmployedAnswer.text) ++ fields.employmentDetails
+         fields.areYouEmployedQuestion.text+" "+fields.areYouEmployedAnswer.text,
+        buildQuestion(fields.currentlyEmployedQuestion.text, fields.currentlyEmployedAnswer.text)) ++ fields.employmentDetails
   }
 
   def sectionAboutSelfEmployment(xml:Elem) = {

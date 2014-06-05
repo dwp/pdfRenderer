@@ -28,10 +28,10 @@
 		<fieldDescription><![CDATA[Employer/DateJobStarted/Answer]]></fieldDescription>
 	</field>
 	<field name="JobDetailsEmployerHaveFinishedJobQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[Employer/HaveFinishedJob/QuestionLabel]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Employment/CurrentlyEmployed/QuestionLabel]]></fieldDescription>
 	</field>
 	<field name="JobDetailsEmployerHaveFinishedJobAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[Employer/HaveFinishedJob/Answer]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Employment/CurrentlyEmployed/Answer]]></fieldDescription>
 	</field>
 	<field name="JobDetailsEmployerDateJobFinishedQuestion" class="java.lang.String">
 		<fieldDescription><![CDATA[Employer/DateJobEnded/QuestionLabel]]></fieldDescription>
@@ -350,6 +350,11 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsEmployerQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="251922ff-25ba-4482-a538-9bba0c77f9d7" positionType="Float" x="355" y="1" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsEmployerAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="d9cc82e0-5e8b-4f64-b404-d52ff843da47" positionType="Float" x="0" y="19" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsEmployerDateJobStartedQuestion}]]></textFieldExpression>
@@ -544,11 +549,6 @@
 				<reportElement uuid="436e2f7d-f215-47f6-9437-5a7de2605dd9" positionType="Float" x="355" y="403" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsOweMoneyAnswer}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="251922ff-25ba-4482-a538-9bba0c77f9d7" positionType="Float" x="355" y="1" width="197" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{JobDetailsEmployerAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
 		<band height="472" splitType="Immediate">

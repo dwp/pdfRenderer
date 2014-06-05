@@ -11,9 +11,13 @@ case class SectionAboutEmployment(xml: Elem) {
 
   val areYouEmployedAnswer = xml \\ "DWPCATransaction" \\ "DWPCAClaim" \\ "Employed" \\ "Answer"
 
-  val address = (rootPathJobDetails \\ "Employer" \\ "Address" \\ "Line").map(x => x.text).filterNot(x => x.isEmpty).mkString(" ")
+  val address = (rootPathJobDetails \\ "Employer" \\ "Address" \\ "Answer" \\"Line").map(x => x.text).filterNot(x => x.isEmpty).mkString(" ")
 
-  val postCode = rootPathJobDetails \\ "Employer" \\ "Address" \\ "PostCode"
+  val postCode = rootPathJobDetails \\ "Employer" \\ "Address" \\ "Answer" \\ "PostCode"
+
+  val currentlyEmployedQuestion = xml \ "DWPCATransaction" \ "DWPCAClaim" \ "Employment" \ "CurrentlyEmployed" \ "QuestionLabel"
+
+  val currentlyEmployedAnswer = xml \ "DWPCATransaction" \ "DWPCAClaim" \ "Employment" \ "CurrentlyEmployed" \ "Answer"
 
 
   val employmentDetails: Seq[String] = {
@@ -21,16 +25,15 @@ case class SectionAboutEmployment(xml: Elem) {
       map (y =>
       (y \\ "Employer").
         map(x => {
-        Seq("Your Job Details for "+(x \\ "Name").text,
+        Seq((x \\ "Name" \\ "QuestionLabel").text+ " "+(x \\ "Name" \\ "Answer").text,
           (x \\ "DateJobStarted" \\ "QuestionLabel").text+" "+(x \\ "DateJobStarted" \\ "Answer").text,
-          (x \\ "HaveFinishedJob" \\ "QuestionLabel").text+" "+(x \\ "HaveFinishedJob" \\ "Answer").text,
           (x \\ "DateJobEnded" \\ "QuestionLabel").text+" "+(x \\ "DateJobEnded" \\ "Answer").text,
           (x \\ "P45LeavingDate" \\ "QuestionLabel").text+" "+(x \\ "P45LeavingDate" \\ "Answer").text,
-          "Payroll or Employee number "+(x \\ "ClockPayrollNumber").text,
+          (x \\ "ClockPayrollNumber" \\ "QuestionLabel").text+" "+(x \\ "ClockPayrollNumber" \\ "Answer").text,
           "Employer's contact details",
-          "Address " + address,
-          "Postcode " + postCode.text,
-          "Phone number "+(x \\ "EmployersPhoneNumber").text,
+          (x \\ "Address" \\ "QuestionLabel").text+" "+(x \\ "Address" \\ "Answer" \\"Line").map(x => x.text).filterNot(x => x.isEmpty).mkString(" "),
+          (x \\ "Address" \\ "Answer" \\ "PostCode").text,
+          (x \\ "EmployersPhoneNumber" \\ "QuestionLabel").text+" "+(x \\ "EmployersPhoneNumber" \\ "Answer").text,
           (x \\ "JobType" \\ "QuestionLabel").text+" "+(x \\ "JobType" \\ "Answer").text
         )
       }).flatten ++
@@ -39,7 +42,7 @@ case class SectionAboutEmployment(xml: Elem) {
       Seq((x \\ "WeeklyHoursWorked" \\ "QuestionLabel").text+" "+(x \\ "WeeklyHoursWorked" \\ "Answer").text,
          "Your last wage",
         (x \\ "DateLastPaid" \\ "QuestionLabel").text+" "+(x \\ "DateLastPaid" \\ "Answer").text,
-        (x \\ "GrossPayment" \\ "QuestionLabel").text+" "+(x \\ "GrossPayment" \\ "Answer" \\ "Amount").text+" "+(x \\ "GrossPayment" \\ "Answer" \\ "Currency").text,
+        (x \\ "GrossPayment" \\ "QuestionLabel").text+" "+(x \\ "GrossPayment" \\ "Answer" \\ "Amount").text,
         (x \\ "IncludedInWage" \\ "QuestionLabel").text+" "+(x \\ "IncludedInWage" \\ "Answer").text,
         (x \\ "ConstantEarnings" \\ "QuestionLabel").text+" "+(x \\ "ConstantEarnings" \\ "Answer").text,
         "Additional details on your last wage",
@@ -52,26 +55,26 @@ case class SectionAboutEmployment(xml: Elem) {
         Seq((x \\ "OweMoney" \\ "QuestionLabel").text+" "+(x \\ "OweMoney" \\ "Answer").text,
             "Pension schemes",
             (x \\ "PaidForOccupationalPension" \\ "QuestionLabel").text+" "+(x \\ "PaidForOccupationalPension" \\ "Answer").text,
-            (x \\ "OccupationalPension" \\ "Payment" \\ "QuestionLabel").text+" "+(x \\ "OccupationalPension" \\ "Payment" \\ "Answer" \\ "Amount").text+" "+(x \\ "OccupationalPension" \\ "Payment" \\ "Answer" \\ "Currency").text,
+            (x \\ "OccupationalPension" \\ "Payment" \\ "QuestionLabel").text+" "+(x \\ "OccupationalPension" \\ "Payment" \\ "Answer" \\ "Amount").text,
             (x \\ "OccupationalPension" \\ "Frequency" \\ "QuestionLabel").text+" "+(x \\ "OccupationalPension" \\ "Frequency" \\ "Answer").text,
             (x \\ "OccupationalPension" \\ "Frequency" \\ "Other").text,
             (x \\ "PaidForPersonalPension" \\ "QuestionLabel").text+" "+(x \\ "PaidForPersonalPension" \\ "Answer").text,
-            (x \\ "PersonalPension" \\ "Payment" \\ "QuestionLabel").text+" "+(x \\ "PersonalPension" \\ "Payment" \\ "Answer" \\ "Amount").text+" "+(x \\ "PersonalPension" \\ "Payment" \\ "Answer" \\ "Currency").text,
+            (x \\ "PersonalPension" \\ "Payment" \\ "QuestionLabel").text+" "+(x \\ "PersonalPension" \\ "Payment" \\ "Answer" \\ "Amount").text,
             (x \\ "PersonalPension" \\ "Frequency" \\ "QuestionLabel").text+" "+(x \\ "PersonalPension" \\ "Frequency" \\ "Answer").text,
             (x \\ "PersonalPension" \\ "Frequency" \\ "Other").text,
             "About expenses to do with your employment",
             (x \\ "PaidForJobExpenses" \\ "QuestionLabel").text+" "+(x \\ "PaidForJobExpenses" \\ "Answer").text,
             (x \\ "CareExpensesChildren" \\ "QuestionLabel").text+" "+(x \\ "CareExpensesChildren" \\ "Answer").text,
             (x \\ "CareExpensesCaree" \\ "QuestionLabel").text+" "+(x \\ "CareExpensesCaree" \\ "Answer").text,
-            "-->>Necessary expenses to do your job",
+            "Necessary expenses to do your job",
             (x \\ "JobExpenses" \\ "Expense" \\ "QuestionLabel").text+" "+(x \\ "JobExpenses" \\ "Expense" \\ "Answer").text
            )
       }).flatten ++
         (y \\ "ChildCareExpenses").
           map(x => {
-           Seq("-->>Childcare expenses while you are at work",
+           Seq("Childcare expenses while you are at work",
              (x \\ "CarerName" \\ "QuestionLabel").text+" "+(x \\ "CarerName" \\ "Answer").text,
-             (x \\ "Expense" \\ "Payment" \\ "QuestionLabel").text+" "+(x \\ "Expense" \\ "Payment" \\ "Answer" \\ "Amount").text+" "+(x \\ "Expense" \\ "Payment" \\ "Answer" \\ "Currency").text,
+             (x \\ "Expense" \\ "Payment" \\ "QuestionLabel").text+" "+(x \\ "Expense" \\ "Payment" \\ "Answer" \\ "Amount").text,
              (x \\ "Expense" \\ "Frequency" \\ "QuestionLabel").text+" "+(x \\ "Expense" \\ "Frequency" \\ "Answer").text,
              (x \\ "Expense" \\ "Frequency" \\ "Other").text,
              (x \\ "RelationshipCarerToClaimant" \\ "QuestionLabel").text+" "+(x \\ "RelationshipCarerToClaimant" \\ "Answer").text,
@@ -82,9 +85,9 @@ case class SectionAboutEmployment(xml: Elem) {
         }).flatten ++
         (y \\ "CareExpenses").
          map(x =>{
-          Seq("-->>Expenses related to the person you care for, while you are at work",
+          Seq("Expenses related to the person you care for, while you are at work",
             (x \\ "CarerName" \\ "QuestionLabel").text+" "+(x \\ "CarerName" \\ "Answer").text,
-            (x \\ "Expense" \\ "Payment" \\ "QuestionLabel").text+" "+(x \\ "Expense" \\ "Payment" \\ "Answer" \\ "Amount").text+" "+(x \\ "Expense" \\ "Payment" \\ "Answer" \\ "Currency").text,
+            (x \\ "Expense" \\ "Payment" \\ "QuestionLabel").text+" "+(x \\ "Expense" \\ "Payment" \\ "Answer" \\ "Amount").text,
             (x \\ "Expense" \\ "Frequency" \\ "QuestionLabel").text+" "+(x \\ "Expense" \\ "Frequency" \\ "Answer").text,
             (x \\ "Expense" \\ "Frequency" \\ "Other").text,
             (x \\ "RelationshipCarerToClaimant" \\ "QuestionLabel").text+" "+(x \\ "RelationshipCarerToClaimant" \\ "Answer").text,
