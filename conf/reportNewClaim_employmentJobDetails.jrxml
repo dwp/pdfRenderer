@@ -323,11 +323,11 @@
 		<initialValueExpression><![CDATA[1]]></initialValueExpression>
 	</variable>
 	<group name="EmployerDetails">
-		<groupExpression><![CDATA[$F{GroupExpressionField}]]></groupExpression>
+		<groupExpression><![CDATA[$V{EmployerDetails_COUNT}==1]]></groupExpression>
 		<groupHeader>
 			<band height="20" splitType="Prevent">
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="546e57b0-0c10-4b4b-b768-1f3cea76fdc0" positionType="Float" mode="Opaque" x="0" y="0" width="555" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="EmployerDetails" forecolor="#000000" backcolor="#E6E6E6"/>
+					<reportElement uuid="546e57b0-0c10-4b4b-b768-1f3cea76fdc0" positionType="Float" mode="Opaque" x="0" y="0" width="555" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#E6E6E6"/>
 					<textElement verticalAlignment="Middle">
 						<font isBold="true"/>
 					</textElement>
