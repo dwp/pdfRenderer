@@ -25,28 +25,28 @@
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/SelfEmployedNow/Answer]]></fieldDescription>
 	</field>
 	<field name="selfEmployedStartedQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/RecentJobDetails/DateStarted/QuestionLabel]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/CurrentJobDetails/DateStarted/QuestionLabel]]></fieldDescription>
 	</field>
 	<field name="selfEmployedStartedAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/RecentJobDetails/DateStarted/Answer]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/CurrentJobDetails/DateStarted/Answer]]></fieldDescription>
 	</field>
 	<field name="selfEmployedEndedQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/RecentJobDetails/DateEnded/QuestionLabel]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/CurrentJobDetails/DateEnded/QuestionLabel]]></fieldDescription>
 	</field>
 	<field name="selfEmployedEndedAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/RecentJobDetails/DateEnded/Answer]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/CurrentJobDetails/DateEnded/Answer]]></fieldDescription>
 	</field>
 	<field name="ceasedTradingQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/RecentJobDetails/TradingCeased/QuestionLabel]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/CurrentJobDetails/TradingCeased/QuestionLabel]]></fieldDescription>
 	</field>
 	<field name="ceasedTradingAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/RecentJobDetails/TradingCeased/Answer]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/CurrentJobDetails/TradingCeased/Answer]]></fieldDescription>
 	</field>
 	<field name="natureOfBusinessQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/RecentJobDetails/NatureBusiness/QuestionLabel]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/CurrentJobDetails/NatureBusiness/QuestionLabel]]></fieldDescription>
 	</field>
 	<field name="natureOfBusinessAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/RecentJobDetails/NatureBusiness/Answer]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/CurrentJobDetails/NatureBusiness/Answer]]></fieldDescription>
 	</field>
 	<field name="tradingYearStartedQuestion" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/RecentJobDetails/TradingYear/DateFrom/QuestionLabel]]></fieldDescription>
@@ -139,10 +139,10 @@
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/ChildCareExpenses/RelationshipCarerToPartner/Answer]]></fieldDescription>
 	</field>
 	<field name="careExpensesChildrenRelationshipToChildQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/ChildCareExpenses/RelationshipCarerToChild/QuestionLabel]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/ChildCareExpenses/RelationshipCarerToCaree/QuestionLabel]]></fieldDescription>
 	</field>
 	<field name="careExpensesChildrenRelationshipToChildAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/ChildCareExpenses/RelationshipCarerToChild/Answer]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/ChildCareExpenses/RelationshipCarerToCaree/Answer]]></fieldDescription>
 	</field>
 	<field name="careExpensesCareeQuestion" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/CareExpensesCaree/QuestionLabel]]></fieldDescription>
@@ -223,8 +223,8 @@
 		<band height="23" splitType="Stretch">
 			<staticText>
 				<reportElement uuid="c4993f7a-b987-4a99-9fbd-21415dcc29ce" style="HeadingClaim" mode="Opaque" x="0" y="3" width="555" height="18">
-                    <property name="net.sf.jasperreports.export.html.id" value="HeadingPart6AboutSelfEmployment"/>
-                </reportElement>
+					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart6AboutSelfEmployment"/>
+				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -249,8 +249,8 @@
 			<printWhenExpression><![CDATA[$F{haveBeenSelfEmployedAnswer}.equals("Yes")]]></printWhenExpression>
 			<staticText>
 				<reportElement uuid="682874b6-bfe4-439f-8bb8-4abdfe329111" style="SubHeadingClaim" mode="Opaque" x="0" y="0" width="555" height="21" isPrintInFirstWholeBand="true">
-                    <property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourJob"/>
-                </reportElement>
+					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourJob"/>
+				</reportElement>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -311,8 +311,8 @@
 			<printWhenExpression><![CDATA[$F{selfEmployedNowAnswer}.equals("Yes")]]></printWhenExpression>
 			<staticText>
 				<reportElement uuid="52392fc1-1198-49d5-81cc-98d3752e4379" style="SubHeadingClaim" mode="Opaque" x="0" y="1" width="555" height="20" isRemoveLineWhenBlank="true">
-                    <property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourAccounts"/>
-                </reportElement>
+					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourAccounts"/>
+				</reportElement>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -363,8 +363,8 @@
 			<printWhenExpression><![CDATA[$F{haveBeenSelfEmployedAnswer}.equals("Yes")]]></printWhenExpression>
 			<staticText>
 				<reportElement uuid="3e35e067-9af8-4ceb-9abf-e2d152a1e24b" style="SubHeadingClaim" mode="Opaque" x="0" y="1" width="555" height="20" isPrintInFirstWholeBand="true">
-                    <property name="net.sf.jasperreports.export.html.id" value="SubHeadingPensionAndExpenses"/>
-                </reportElement>
+					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingPensionAndExpenses"/>
+				</reportElement>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -388,7 +388,7 @@
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="abfc6877-def1-4003-9f0b-0ee56eb99b2c" x="355" y="53" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[(null == $F{pensionSchemeAnswerAmount}?"":$F{pensionSchemeAnswerAmount}) + " " + (null == $F{pensionSchemeAnswerCurrency}?"":$F{pensionSchemeAnswerCurrency})]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{pensionSchemeAnswerAmount}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="e8fd6b41-aca1-4c3d-8138-ad77b5cfc491" x="0" y="71" width="350" height="18" isRemoveLineWhenBlank="true"/>
@@ -410,8 +410,8 @@
 			<printWhenExpression><![CDATA[$F{haveBeenSelfEmployedAnswer}.equals("Yes")]]></printWhenExpression>
 			<staticText>
 				<reportElement uuid="c2181e86-d16c-40e2-af56-2c702260e4ee" style="SubHeadingClaim" mode="Opaque" x="0" y="1" width="555" height="20" isPrintInFirstWholeBand="true">
-                    <property name="net.sf.jasperreports.export.html.id" value="SubHeadingChildcareExpensesWhileYouAreAtWork"/>
-                </reportElement>
+					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingChildcareExpensesWhileYouAreAtWork"/>
+				</reportElement>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -445,7 +445,7 @@
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="1d492067-dbc2-49c2-90c6-36f7e6006e65" x="355" y="58" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[($F{careExpensesChildrenPaymentAnswerAmount}.isEmpty()?"":$F{careExpensesChildrenPaymentAnswerAmount})+ " " + ($F{careExpensesChildrenPaymentAnswerCurrency}.isEmpty()?"":$F{careExpensesChildrenPaymentAnswerCurrency})]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{careExpensesChildrenPaymentAnswerAmount}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="c1cdfeb9-6f0c-4eeb-9700-518ba39268f1" x="0" y="76" width="350" height="18" isRemoveLineWhenBlank="true"/>
@@ -502,8 +502,8 @@
 			<printWhenExpression><![CDATA[$F{haveBeenSelfEmployedAnswer}.equals("Yes")]]></printWhenExpression>
 			<staticText>
 				<reportElement uuid="8556a719-4317-47f5-afbd-70abd9427ae0" style="SubHeadingClaim" mode="Opaque" x="0" y="1" width="555" height="20" isPrintInFirstWholeBand="true">
-                    <property name="net.sf.jasperreports.export.html.id" value="SubHeadingExpensesRelatedToThePersonYouCareForWhileAtWork"/>
-                </reportElement>
+					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingExpensesRelatedToThePersonYouCareForWhileAtWork"/>
+				</reportElement>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -537,7 +537,7 @@
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="cabdb09b-4966-40ff-954c-ce197f9008e9" x="355" y="58" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[($F{careExpensesCareePaymentAnswerAmount}.isEmpty()?"":$F{careExpensesCareePaymentAnswerAmount})+ " " + ($F{careExpensesChildrenPaymentAnswerCurrency}.isEmpty()?"":$F{careExpensesChildrenPaymentAnswerCurrency})]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{careExpensesCareePaymentAnswerAmount}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="86373726-dcf9-4826-89a3-fe7e0f10c94e" x="0" y="76" width="350" height="18" isRemoveLineWhenBlank="true"/>
