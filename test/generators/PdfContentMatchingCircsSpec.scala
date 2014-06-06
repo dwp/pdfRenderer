@@ -125,6 +125,22 @@ class PdfContentMatchingCircsSpec extends PdfContentMatchingSpec{
       testContentMatches(pdfFileLocation, textCaseXml, XMLCircsData.functionalTestDataPaymentBankDetails, foundMustBeTrue)
     }
 
+    // Payment Details section with 'Are you currently paid into a bank or building society' answered 'yes'
+    "extract PDF for functionalTestCase21 and match contents" in new WithApplication{
+      val pdfFileLocation = "functionalTestCase21_circs_contentTestPDF.pdf"
+      val source = getClass.getResource("/circs/c3_functional21_circs.xml")
+      val textCaseXml = XML.load(source)
+      testContentMatches(pdfFileLocation, textCaseXml, XMLCircsData.functionalTestDataPaymentBankDetails, foundMustBeTrue)
+    }
+
+    // Payment Details section with 'Are you currently paid into a bank or building society' answered 'no'
+    "extract PDF for functionalTestCase28 and match contents" in new WithApplication{
+      val pdfFileLocation = "functionalTestCase28_circs_contentTestPDF.pdf"
+      val source = getClass.getResource("/circs/c3_functional28_circs.xml")
+      val textCaseXml = XML.load(source)
+      testContentMatches(pdfFileLocation, textCaseXml, XMLCircsData.functionalTestDataPaymentBankDetails, foundMustBeTrue)
+    }
+
     // Breaks in care section without 'Somewhere else'
     "extract PDF for functionalTestCase22 and match contents" in new WithApplication{
       val pdfFileLocation = "functionalTestCase22_BreaksInCare_circs_contentTestPDF.pdf"
