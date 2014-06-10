@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_employmentJobDetails" language="groovy" pageWidth="555" pageHeight="872" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isIgnorePagination="true" uuid="d2b233ab-6178-4bb0-9059-17e24879fcd8">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="464"/>
+	<property name="ireport.y" value="274"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<property name="net.sf.jasperreports.export.html.remove.emtpy.space.between.rows" value="true"/>
 	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
@@ -235,10 +235,10 @@
 		<fieldDescription><![CDATA[ChildCareExpenses/RelationshipCarerToPartner/Other]]></fieldDescription>
 	</field>
 	<field name="JobDetailsChildCareExpensesRelationToChildQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[ChildCareExpenses/RelationToChild/QuestionLabel]]></fieldDescription>
+		<fieldDescription><![CDATA[ChildCareExpenses/RelationshipCarerToPersonYouCare/QuestionLabel]]></fieldDescription>
 	</field>
 	<field name="JobDetailsChildCareExpensesRelationToChildAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[ChildCareExpenses/RelationToChild/Answer]]></fieldDescription>
+		<fieldDescription><![CDATA[ChildCareExpenses/RelationshipCarerToPersonYouCare/Answer]]></fieldDescription>
 	</field>
 	<field name="JobDetailsCareExpensesCarerNameQuestion" class="java.lang.String">
 		<fieldDescription><![CDATA[CareExpenses/CarerName/QuestionLabel]]></fieldDescription>

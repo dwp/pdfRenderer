@@ -139,10 +139,10 @@
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/ChildCareExpenses/RelationshipCarerToPartner/Answer]]></fieldDescription>
 	</field>
 	<field name="careExpensesChildrenRelationshipToChildQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/ChildCareExpenses/RelationshipCarerToCaree/QuestionLabel]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/ChildCareExpenses/RelationshipCarerToPersonYouCare/QuestionLabel]]></fieldDescription>
 	</field>
 	<field name="careExpensesChildrenRelationshipToChildAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/ChildCareExpenses/RelationshipCarerToCaree/Answer]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/ChildCareExpenses/RelationshipCarerToPersonYouCare/Answer]]></fieldDescription>
 	</field>
 	<field name="careExpensesCareeQuestion" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/CareExpensesCaree/QuestionLabel]]></fieldDescription>
