@@ -60,7 +60,7 @@ object XMLData extends TestUtils{
 
   def functionalTestCase8(xml: Elem) = {
     val fields = XMLDataFields(xml)
-    functionalTestCaseMandatoryFields(xml)
+    functionalTestCaseMandatoryFields(xml) ++ sectionAboutSelfEmployment(xml)
   }
 
   def functionalTestCase9(xml: Elem) = {
@@ -199,6 +199,16 @@ object XMLData extends TestUtils{
 
   def sectionAboutSelfEmployment(xml:Elem) = {
     val fields = SectionAboutSelfEmployment(xml)
+
+    val yourAccounts: Seq[String] = if (fields.haveBeenSelfEmployedAnswer.text == "yes")
+      Seq("Your accounts",
+          buildQuestion(fields.tradingYearStartedQuestion.text, fields.tradingYearStartedAnswer.text),
+          buildQuestion(fields.tradingYearEndedQuestion.text, fields.tradingYearEndedAnswer.text),
+          buildQuestion(fields.sameIncomeOutgoingLevelsQuestion.text, fields.sameIncomeOutgoingLevelsAnswer.text),
+          buildQuestion(fields.whyWhenChangeQuestion.text, fields.whyWhenChangeAnswer.text))
+      else Seq()
+
+
     Seq ("Part 6 - About Self Employment",
          buildQuestion(fields.haveBeenSelfEmployedQuestion.text, fields.haveBeenSelfEmployedAnswer.text),
          "Your job",
@@ -206,20 +216,16 @@ object XMLData extends TestUtils{
          buildQuestion(fields.selfEmployedStartedQuestion.text, fields.selfEmployedStartedAnswer.text),
          buildQuestion(fields.selfEmployedEndedQuestion.text, fields.selfEmployedEndedAnswer.text),
          buildQuestion(fields.ceasedTradingQuestion.text, fields.ceasedTradingAnswer.text),
-         buildQuestion(fields.natureOfBusinessQuestion.text, fields.natureOfBusinessAnswer.text),
-         "Your accounts",
-         buildQuestion(fields.tradingYearStartedQuestion.text, fields.tradingYearStartedAnswer.text),
-         buildQuestion(fields.tradingYearEndedQuestion.text, fields.tradingYearEndedAnswer.text),
-         buildQuestion(fields.sameIncomeOutgoingLevelsQuestion.text, fields.sameIncomeOutgoingLevelsAnswer.text),
-         buildQuestion(fields.whyWhenChangeQuestion.text, fields.whyWhenChangeAnswer.text),
-         "Pension and expenses",
+         buildQuestion(fields.natureOfBusinessQuestion.text, fields.natureOfBusinessAnswer.text)) ++
+    yourAccounts ++
+    Seq ("Pension and expenses",
          buildQuestion(fields.paidForPensionQuestion.text, fields.paidForPensionAnswer.text),
-         buildAmount(fields.pensionSchemeAmountQuestion.text, fields.pensionSchemeAmountAnswerCurrency.text, fields.pensionSchemeAmountAnswerAmount.text),
+         buildQuestion(fields.pensionSchemeAmountQuestion.text, fields.pensionSchemeAmountAnswerAmount.text),
          buildOther(fields.pensionSchemeFrequencyQuestion.text, fields.pensionSchemeFrequencyAnswer.text, fields.pensionSchemeFrequencyOther.text),
          "Childcare expenses while you are at work",
          buildQuestion(fields.careExpensesChildrenQuestion.text, fields.careExpensesChildrenAnswer.text),
          buildQuestion(fields.careExpensesChildrenCarerNameQuestion.text, fields.careExpensesChildrenCarerNameAnswer.text),
-         buildAmount(fields.careExpensesChildrenPaymentQuestion.text, fields.careExpensesChildrenPaymentAnswerCurrency.text, fields.careExpensesChildrenPaymentAnswerAmount.text),
+         buildQuestion(fields.careExpensesChildrenPaymentQuestion.text, fields.careExpensesChildrenPaymentAnswerAmount.text),
          buildOther(fields.careExpensesChildrenPaymentFrequencyQuestion.text, fields.careExpensesChildrenPaymentFrequencyAnswer.text, fields.careExpensesChildrenPaymentFrequencyOther.text),
          buildQuestion(fields.careExpensesChildrenRelationshipToCarerQuestion.text, fields.careExpensesChildrenRelationshipToCarerAnswer.text),
          buildQuestion(fields.careExpensesChildrenRelationshipToPartnerQuestion.text, fields.careExpensesChildrenRelationshipToPartnerAnswer.text),
@@ -227,11 +233,11 @@ object XMLData extends TestUtils{
          "Expenses related to the person you care for while at work",
          buildQuestion(fields.careExpensesCareeQuestion.text, fields.careExpensesCareeAnswer.text),
          buildQuestion(fields.careExpensesCareeCarerNameQuestion.text, fields.careExpensesCareeCarerNameAnswer.text),
-         buildAmount(fields.careExpensesCareePaymentQuestion.text, fields.careExpensesCareePaymentAnswerCurrency.text, fields.careExpensesCareePaymentAnswerAmount.text),
+         buildQuestion(fields.careExpensesCareePaymentQuestion.text, fields.careExpensesCareePaymentAnswerAmount.text),
          buildOther(fields.careExpensesCareePaymentFrequencyQuestion.text, fields.careExpensesCareePaymentFrequencyAnswer.text, fields.careExpensesCareePaymentFrequencyOther.text),
          buildQuestion(fields.careExpensesRelationshipCarerToClaimantQuestion.text, fields.careExpensesRelationshipCarerToClaimantAnswer.text),
          buildQuestion(fields.careExpensesRelationshipCarerToPartnerQuestion.text, fields.careExpensesRelationshipCarerToPartnerAnswer.text),
-         buildQuestion(fields.careExpensesRelationshipCarerToCareeQuestion.text, fields.careExpensesRelationshipCarerToCareeAnswer.text)
+         buildQuestion(fields.careExpensesRelationshipCarerToPersonYouCareQuestion.text, fields.careExpensesRelationshipCarerToPersonYouCareAnswer.text)
       )
   }
 

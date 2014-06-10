@@ -90,6 +90,6 @@ case class SectionAboutSelfEmployment(xml: Elem) {
   val careExpensesRelationshipCarerToPartnerQuestion = rootPath  \\ "SelfEmployment" \\ "CareExpenses" \\ "RelationshipCarerToPartner" \\ "QuestionLabel"
   val careExpensesRelationshipCarerToPartnerAnswer = rootPath  \\ "SelfEmployment" \\ "CareExpenses" \\ "RelationshipCarerToPartner" \\ "Answer"
 
-  val careExpensesRelationshipCarerToCareeQuestion = rootPath  \\ "SelfEmployment" \\ "CareExpenses" \\ "RelationToCaree" \\ "QuestionLabel"
-  val careExpensesRelationshipCarerToCareeAnswer = rootPath  \\ "SelfEmployment" \\ "CareExpenses" \\ "RelationToCaree" \\ "Answer"
+  val careExpensesRelationshipCarerToPersonYouCareQuestion = rootPath  \\ "SelfEmployment" \\ "CareExpenses" \\ "RelationshipCarerToPersonYouCare" \\ "QuestionLabel"
+  val careExpensesRelationshipCarerToPersonYouCareAnswer = rootPath  \\ "SelfEmployment" \\ "CareExpenses" \\ "RelationshipCarerToPersonYouCare" \\ "Answer"
 }
