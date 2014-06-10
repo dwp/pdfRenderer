@@ -89,7 +89,7 @@ object XMLData extends TestUtils{
       "Transaction: " + fields.transactionPath.text + " " + fields.titleAnswer.text + " " + fields.surNameAnswer.text + " " + fields.nationalInsuranceNumberAnswer.text,
       "Summary",
       "About the care you provide"
-    ) ++ aboutYouTheCarer(fields) ++ aboutTheCareYouProvide(fields) ++ claimDates(fields) ++ claimSummary(fields)
+    ) ++ aboutYouTheCarer(fields) ++ sectionAboutTheCareYouProvide(xml) ++ claimDates(fields) ++ claimSummary(fields)
   }
 
   def aboutYouTheCarer(fields: XMLDataFields) = {
@@ -245,12 +245,11 @@ object XMLData extends TestUtils{
     val fields = SectionAboutTheCareYouProvide(xml)
     Seq("Part 3 - About the care you provide",
         "Details of the person you care for",
-        "National Insurance number "+fields.nationalInsuranceNumber.text,
-        "Date of Birth "+fields.dateOfBirth.text,
+        buildQuestion((fields.nationalInsuranceNumber \\ "QuestionLabel").text, (fields.nationalInsuranceNumber \\ "Answer").text),
+        buildQuestion((fields.dateOfBirth \\ "QuestionLabel").text, (fields.dateOfBirth \\ "Answer").text),
         buildQuestion(fields.liveSameAddressQuestion.text,fields.liveSameAddressAnswer.text),
         "Contact details of the person you care for",
-        "Daytime telephone number "+fields.dayTimeTelephoneNumber.text,
-        "Relationship and other claims",
+        buildQuestion((fields.dayTimeTelephoneNumber \\ "QuestionLabel").text, (fields.dayTimeTelephoneNumber \\ "Answer").text),
         buildQuestion(fields.relationToClaimantQuestion.text, fields.relationToClaimantAnswer.text),
         buildQuestion(fields.armedForcesIndependantPaymentQuestion.text, fields.armedForcesIndependantPaymentAnswer.text),
         "More about the care you provide",

@@ -97,17 +97,19 @@ case class XMLDataFields(xml: Elem) extends TestUtils{
   val careBreak: Seq[String] = {
     (rootPath \\ "Caree" \\ "CareBreak").
       map(x => {
-      val fromDate: Seq[String] = Seq((x \\ "StartDateTime" \\ "QuestionLabel").text + " " + (x \\ "StartDateTime" \\ "Answer").text)
-      val toDate: Seq[String] = (x \\ "EndDateTime").text.isEmpty match {
+      val fromDate: Seq[String] = Seq((x \\ "StartDate" \\ "QuestionLabel").text + " " + (x \\ "StartDate" \\ "Answer").text)
+      val toDate: Seq[String] = (x \\ "EndDate").text.isEmpty match {
         case true => Seq()
-        case false => Seq((x \\ "EndDateTime" \\ "QuestionLabel").text + " " + (x \\ "EndDateTime" \\ "Answer").text)
+        case false => Seq((x \\ "EndDate" \\ "QuestionLabel").text + " " + (x \\ "EndDate" \\ "Answer").text)
       }
       val otherData = Seq(
          buildQuestion((x \\ "BreaksSinceClaim" \\ "QuestionLabel").text, (x \\ "BreaksSinceClaim" \\ "Answer").text),
          buildQuestion((x \\ "ReasonClaimant" \\ "QuestionLabel").text,(x \\ "ReasonClaimant" \\ "Answer").text),
          (x \\ "ReasonClaimant" \\ "Other" \\ "Answer").text,
         buildQuestion((x \\ "ReasonCaree" \\ "QuestionLabel").text,(x \\ "ReasonCaree" \\ "Answer").text),
-        buildQuestion((x \\ "MedicalCare" \\ "QuestionLabel").text,(x \\ "MedicalCare" \\ "Answer").text)
+        buildQuestion((x \\ "MedicalCare" \\ "QuestionLabel").text,(x \\ "MedicalCare" \\ "Answer").text),
+        buildQuestion((x \\ "StartTime" \\ "QuestionLabel").text, (x \\ "StartTime" \\ "Answer").text),
+        buildQuestion((x \\ "EndTime" \\ "QuestionLabel").text, (x \\ "EndTime" \\ "Answer").text)
       )
       (fromDate ++ toDate).filterNot(x => x.isEmpty) ++ otherData
     }).filterNot(x => x.isEmpty).flatten

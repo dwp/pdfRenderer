@@ -177,22 +177,22 @@
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeDateOfBirthAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="d4744d43-d6c7-4045-b2a5-b062d711e814" positionType="Float" x="0" y="129" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="d4744d43-d6c7-4045-b2a5-b062d711e814" positionType="Float" x="0" y="147" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeLiveSameAddressQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="718738d6-adca-4d1e-bc8f-78362a787b96" positionType="Float" x="355" y="129" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="718738d6-adca-4d1e-bc8f-78362a787b96" positionType="Float" x="355" y="147" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeLiveSameAddressAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="792b07e2-716c-4b4d-949b-1b2d6715b5dc" positionType="Float" x="0" y="147" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="792b07e2-716c-4b4d-949b-1b2d6715b5dc" positionType="Float" x="0" y="129" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeArmedForcesQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="11cf1072-b32e-4944-bfdd-aa67a3251be5" positionType="Float" x="355" y="147" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="11cf1072-b32e-4944-bfdd-aa67a3251be5" positionType="Float" x="355" y="129" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeArmedForcesAnswer}]]></textFieldExpression>
 			</textField>
