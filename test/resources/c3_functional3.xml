@@ -1,8 +1,8 @@
 <DWPBody xsi:schemaLocation="http://www.govtalk.gov.uk/dwp/carers-allowance file:/future/schema/ca/CarersAllowance_Schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns="http://www.govtalk.gov.uk/dwp/carers-allowance">
     <Version>0.1</Version>
-    <DWPCATransaction id="TEST226">
-        <TransactionId>TEST226</TransactionId>
-        <DateTimeGenerated>04-06-2014 11:06</DateTimeGenerated>
+    <DWPCATransaction id="TEST247">
+        <TransactionId>TEST247</TransactionId>
+        <DateTimeGenerated>10-06-2014 11:49</DateTimeGenerated>
         <DWPCAClaim>
             <DateOfClaim><QuestionLabel>When do you want your Carer's Allowance claim to start?</QuestionLabel><Answer>01-01-2010</Answer></DateOfClaim>
             <Claimant>
@@ -39,36 +39,36 @@
                 <Cared35Hours><QuestionLabel>Do you spend 35 hours or more each week caring for the person you care for?</QuestionLabel><Answer>Yes</Answer></Cared35Hours>
                 <CareBreak>
                     <BreaksSinceClaim><QuestionLabel>Have you had any breaks in caring for this person since 01/01/2010?</QuestionLabel><Answer>Yes</Answer></BreaksSinceClaim>
-                    <StartDateTime><QuestionLabel>When did the break start?</QuestionLabel><Answer>10-01-2010 10:00</Answer></StartDateTime>
-                    <EndDateTime><QuestionLabel>When did the break end?</QuestionLabel><Answer>17-01-2010 17:00</Answer></EndDateTime>
+                    <StartDate><QuestionLabel>When did the break start?</QuestionLabel><Answer>10-01-2010</Answer></StartDate>
+                    <EndDate><QuestionLabel>When did the break end?</QuestionLabel><Answer>17-01-2010</Answer></EndDate>
                     <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>Yes</Answer></MedicalCare>
                     <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Answer>Home</Answer></ReasonClaimant>
                     <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Answer>Hospital</Answer></ReasonCaree>
                 </CareBreak><CareBreak>
                 <BreaksSinceClaim><QuestionLabel>Have you had any more breaks in caring for this person since 01/01/2010?</QuestionLabel><Answer>Yes</Answer></BreaksSinceClaim>
-                <StartDateTime><QuestionLabel>When did the break start?</QuestionLabel><Answer>20-01-2010 10:00</Answer></StartDateTime>
-                <EndDateTime><QuestionLabel>When did the break end?</QuestionLabel><Answer>27-01-2010 17:00</Answer></EndDateTime>
+                <StartDate><QuestionLabel>When did the break start?</QuestionLabel><Answer>20-01-2010</Answer></StartDate><StartTime><QuestionLabel>Break start time?</QuestionLabel><Answer>10:00</Answer></StartTime>
+                <EndDate><QuestionLabel>When did the break end?</QuestionLabel><Answer>27-01-2010</Answer></EndDate><EndTime><QuestionLabel>Break end time?</QuestionLabel><Answer>17:00</Answer></EndTime>
                 <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>Yes</Answer></MedicalCare>
                 <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Answer>Holiday</Answer></ReasonClaimant>
                 <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Answer>Nursing Home</Answer></ReasonCaree>
             </CareBreak><CareBreak>
                 <BreaksSinceClaim><QuestionLabel>Have you had any more breaks in caring for this person since 01/01/2010?</QuestionLabel><Answer>Yes</Answer></BreaksSinceClaim>
-                <StartDateTime><QuestionLabel>When did the break start?</QuestionLabel><Answer>20-02-2010 12:00</Answer></StartDateTime>
-                <EndDateTime><QuestionLabel>When did the break end?</QuestionLabel><Answer>27-02-2010 13:00</Answer></EndDateTime>
+                <StartDate><QuestionLabel>When did the break start?</QuestionLabel><Answer>20-02-2010</Answer></StartDate><StartTime><QuestionLabel>Break start time?</QuestionLabel><Answer>12:00</Answer></StartTime>
+                <EndDate><QuestionLabel>When did the break end?</QuestionLabel><Answer>27-02-2010</Answer></EndDate><EndTime><QuestionLabel>Break end time?</QuestionLabel><Answer>13:00</Answer></EndTime>
                 <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>Yes</Answer></MedicalCare>
                 <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Answer>Respite Care</Answer></ReasonClaimant>
                 <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Answer>Care Home</Answer></ReasonCaree>
             </CareBreak><CareBreak>
                 <BreaksSinceClaim><QuestionLabel>Have you had any more breaks in caring for this person since 01/01/2010?</QuestionLabel><Answer>Yes</Answer></BreaksSinceClaim>
-                <StartDateTime><QuestionLabel>When did the break start?</QuestionLabel><Answer>20-03-2010 12:00</Answer></StartDateTime>
-                <EndDateTime><QuestionLabel>When did the break end?</QuestionLabel><Answer>21-02-2010 13:00</Answer></EndDateTime>
+                <StartDate><QuestionLabel>When did the break start?</QuestionLabel><Answer>20-03-2010</Answer></StartDate><StartTime><QuestionLabel>Break start time?</QuestionLabel><Answer>12:00</Answer></StartTime>
+                <EndDate><QuestionLabel>When did the break end?</QuestionLabel><Answer>21-02-2010</Answer></EndDate><EndTime><QuestionLabel>Break end time?</QuestionLabel><Answer>13:00</Answer></EndTime>
                 <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>Yes</Answer></MedicalCare>
                 <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Answer>Holiday</Answer></ReasonClaimant>
                 <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Answer>Nursing Home</Answer></ReasonCaree>
             </CareBreak><CareBreak>
                 <BreaksSinceClaim><QuestionLabel>Have you had any more breaks in caring for this person since 01/01/2010?</QuestionLabel><Answer>Yes</Answer></BreaksSinceClaim>
-                <StartDateTime><QuestionLabel>When did the break start?</QuestionLabel><Answer>20-03-2013 12:15</Answer></StartDateTime>
-                <EndDateTime><QuestionLabel>When did the break end?</QuestionLabel><Answer>21-02-2013 13:15</Answer></EndDateTime>
+                <StartDate><QuestionLabel>When did the break start?</QuestionLabel><Answer>20-03-2013</Answer></StartDate><StartTime><QuestionLabel>Break start time?</QuestionLabel><Answer>12:15</Answer></StartTime>
+                <EndDate><QuestionLabel>When did the break end?</QuestionLabel><Answer>21-02-2013</Answer></EndDate><EndTime><QuestionLabel>Break end time?</QuestionLabel><Answer>13:15</Answer></EndTime>
                 <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>No</Answer></MedicalCare>
                 <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Other>Other text</Other><Answer>Other</Answer></ReasonClaimant>
                 <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Other>Other text</Other><Answer>Other</Answer></ReasonCaree>
@@ -78,7 +78,7 @@
                 <Cared35HoursBefore><QuestionLabel>Did you care for this person for 35 hours or more each week before your claim date?</QuestionLabel><Answer>No</Answer></Cared35HoursBefore>
 
                 <LiveSameAddress><QuestionLabel>Do they live at the same address as you?</QuestionLabel><Answer>No</Answer></LiveSameAddress>
-                <ArmedForcesIndependencePayment><QuestionLabel>Does this person get Armed Forces Independence Payment AFIP?</QuestionLabel><Answer>No</Answer></ArmedForcesIndependencePayment>
+                <ArmedForcesIndependencePayment><QuestionLabel>Does this person get Armed Forces Independence Payment (AFIP)?</QuestionLabel><Answer>No</Answer></ArmedForcesIndependencePayment>
             </Caree>
             <Residency>
                 <NormallyLiveInGB><QuestionLabel>Do you normally live in England, Scotland or Wales?</QuestionLabel><Answer>Yes</Answer></NormallyLiveInGB>
@@ -143,6 +143,7 @@
                     </Expense>
                     <RelationshipCarerToClaimant><QuestionLabel>What relation, if any, is the person/organisation to you?</QuestionLabel><Answer>Uncle</Answer></RelationshipCarerToClaimant>
 
+                    <RelationshipCarerToPersonYouCare><QuestionLabel>What relation, if any, is this person/organisation to the person you care for?</QuestionLabel><Answer>Aunt</Answer></RelationshipCarerToPersonYouCare>
                 </ChildCareExpenses>
                 <CareExpensesCaree><QuestionLabel>While at work, do you pay anyone to care for the person you care for?</QuestionLabel><Answer>Yes</Answer></CareExpensesCaree>
                 <CareExpenses>
@@ -194,6 +195,7 @@
                     </Expense>
                     <RelationshipCarerToClaimant><QuestionLabel>What relation, if any, is the person/organisation to you?</QuestionLabel><Answer>Father</Answer></RelationshipCarerToClaimant>
 
+                    <RelationshipCarerToPersonYouCare><QuestionLabel>What relation, if any, is this person/organisation to the person you care for?</QuestionLabel><Answer>Grandfather</Answer></RelationshipCarerToPersonYouCare>
                 </ChildCareExpenses>
                     <CareExpensesCaree><QuestionLabel>While at work, did you pay anyone to look after the person you care for?</QuestionLabel><Answer>Yes</Answer></CareExpensesCaree><CareExpenses>
                     <CarerName><QuestionLabel>Name of the person/organisation who looks after your child/children</QuestionLabel><Answer>Carers UK Ltd</Answer></CarerName>
@@ -248,6 +250,7 @@
                 </Expense>
                 <RelationshipCarerToClaimant><QuestionLabel>What relation, if any, is the person/organisation to you?</QuestionLabel><Answer>Father</Answer></RelationshipCarerToClaimant>
 
+                <RelationshipCarerToPersonYouCare><QuestionLabel>What relation, if any, is this person/organisation to the person you care for?</QuestionLabel><Answer>Grandfather</Answer></RelationshipCarerToPersonYouCare>
             </ChildCareExpenses>
                 <CareExpensesCaree><QuestionLabel>While at work, did you pay anyone to look after the person you care for?</QuestionLabel><Answer>Yes</Answer></CareExpensesCaree><CareExpenses>
                 <CarerName><QuestionLabel>Name of the person/organisation who looks after your child/children</QuestionLabel><Answer>Age Concern K Ltd</Answer></CarerName>
@@ -308,9 +311,9 @@
                 <OtherMoneyPayments><QuestionLabel>Have you received any payments for the person you care for or any other person since your claim date 01/01/2010</QuestionLabel><Answer>No</Answer></OtherMoneyPayments>
 
                 <EEA>
-                    <EEAReceivePensionsBenefits><QuestionLabel>Do you, or any member of your family, receive any benefits or pensions from any other European Economic Area EEA state or Switzerland?</QuestionLabel><Answer>No</Answer></EEAReceivePensionsBenefits>
-                    <EEAClaimPensionsBenefits><QuestionLabel>Have you, or a member of your family, made a claim for any benefits or pensions from any other European Economic Area EEA state or Switzerland?</QuestionLabel><Answer>No</Answer></EEAClaimPensionsBenefits>
-                    <EEAWorkingInsurance><QuestionLabel>Are you, or a member of your family, working in or paying insurance to, another European Economic Area EEA state or Switzerland?</QuestionLabel><Answer>No</Answer></EEAWorkingInsurance>
+                    <EEAReceivePensionsBenefits><QuestionLabel>Do you, or any member of your family, receive any benefits or pensions from any other European Economic Area (EEA) state or Switzerland?</QuestionLabel><Answer>No</Answer></EEAReceivePensionsBenefits>
+                    <EEAClaimPensionsBenefits><QuestionLabel>Have you, or a member of your family, made a claim for any benefits or pensions from any other European Economic Area (EEA) state or Switzerland?</QuestionLabel><Answer>No</Answer></EEAClaimPensionsBenefits>
+                    <EEAWorkingInsurance><QuestionLabel>Are you, or a member of your family, working in or paying insurance to, another European Economic Area (EEA) state or Switzerland?</QuestionLabel><Answer>No</Answer></EEAWorkingInsurance>
                 </EEA>
             </OtherBenefits>
             <Payment>
@@ -353,14 +356,10 @@
                     <Answer>
                         <Line>CA Freepost</Line><Line>Palatine House</Line><Line>Preston</Line><PostCode>PR1 1HN</PostCode>
                     </Answer>
-                </RecipientAddress>
-                <Evidence><Title>Remember to send us the following documents.</Title></Evidence>
-                <Evidence><Title>Failure to send us these documents may delay your claim.</Title></Evidence>
-                <Evidence><Title>Send us the documents below including your Name and National Insurance NI number.</Title></Evidence>
-                <Evidence>
-                    <Title>Your Employment documents</Title>
-                    <Content>Last payslip you got before your claim date:</Content><Content>Any payslips you have had since then</Content><Content>Any pension statements you may have</Content>
-                </Evidence><Evidence>
+                </RecipientAddress><Evidence><Title>Remember to send us the following documents.</Title></Evidence><Evidence><Title>Failure to send us these documents may delay your claim.</Title></Evidence><Evidence><Title>Send us the documents below including your Name and National Insurance (NI) number.</Title></Evidence><Evidence>
+                <Title>Your Employment documents</Title>
+                <Content>Last payslip you got before your claim date:01-01-2010</Content><Content>Any payslips you have had since then</Content><Content>Any pension statements you may have</Content>
+            </Evidence><Evidence>
                 <Title>Your Self-employed documents</Title>
                 <Content>Most recent finalised accounts you have for your business</Content><Content>Any pension statements you may have</Content>
             </Evidence><Evidence>
@@ -379,10 +378,10 @@
         <ds:SignedInfo>
             <ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
             <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
-            <ds:Reference URI="#TEST226">
+            <ds:Reference URI="#TEST247">
                 <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
-                <ds:DigestValue>BD2FO4Df2qYXJ+PZMT9UIyKGP/c=</ds:DigestValue>
+                <ds:DigestValue>Vj7uArwAAPMN3GeQhnYDuHRjrqc=</ds:DigestValue>
             </ds:Reference>
         </ds:SignedInfo>
-        <ds:SignatureValue>ICzRd+O3B+DXxM7mCl+OLS9qFrVt00kox37pJ1zbyV8KnoD5vBF9sQ==</ds:SignatureValue>
+        <ds:SignatureValue>K4oinTR5hLO83++Yl1TcD0y2cpIXS1tk2uUQlewkzuOJILMt9FoLJg==</ds:SignatureValue>
     </ds:Signature></DWPBody>
