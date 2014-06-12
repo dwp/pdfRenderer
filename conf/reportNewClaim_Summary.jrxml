@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="560" pageHeight="872" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isIgnorePagination="true" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="455"/>
+	<property name="ireport.y" value="343"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<property name="net.sf.jasperreports.export.html.remove.emtpy.space.between.rows" value="true"/>
 	<import value="org.apache.commons.codec.binary.Base64"/>
@@ -62,7 +62,7 @@
 			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/BreaksSinceClaim/QuestionLabel]]></fieldDescription>
 		</field>
 		<field name="BreaksAnswer" class="java.lang.String">
-			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/BreaksSinceClaim/Answer]]></fieldDescription>
+			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/CareBreak/BreaksSinceClaim/Answer]]></fieldDescription>
 		</field>
 		<field name="HavePartnerAnswer" class="java.lang.String">
 			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/HavePartner/Answer]]></fieldDescription>
@@ -231,7 +231,7 @@
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/BreaksSinceClaim/QuestionLabel]]></fieldDescription>
 	</field>
 	<field name="BreaksAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/BreaksSinceClaim/Answer]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/CareBreak/BreaksSinceClaim/Answer]]></fieldDescription>
 	</field>
 	<field name="OtherBenefitsQuestionLabel" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoney/QuestionLabel]]></fieldDescription>
@@ -252,10 +252,10 @@
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/DateOfBirth/Answer]]></fieldDescription>
 	</field>
 	<field name="ClaimantPostCode" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Address/Answer/PostCode]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Address/Answer/PostCode]]></fieldDescription>
 	</field>
 	<field name="CareePostCode" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Address/Answer/PostCode]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Address/Answer/PostCode]]></fieldDescription>
 	</field>
 	<field name="ClaimantNationalityAnswer" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/Nationality/Answer]]></fieldDescription>
@@ -754,9 +754,9 @@
 				<textFieldExpression><![CDATA[$F{ClaimDateAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="321" splitType="Stretch">
+		<band height="344" splitType="Stretch">
 			<frame>
-				<reportElement uuid="77d199bf-1cc8-4b67-b300-42adcd92df38" x="0" y="0" width="555" height="321" isRemoveLineWhenBlank="true">
+				<reportElement uuid="77d199bf-1cc8-4b67-b300-42adcd92df38" x="0" y="0" width="555" height="343" isRemoveLineWhenBlank="true">
 					<property name="net.sf.jasperreports.export.html.remove.emtpy.space.between.rows" value="true"/>
 				</reportElement>
 				<staticText>
@@ -1151,39 +1151,31 @@
 					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none"/>
 					<textFieldExpression><![CDATA[($F{welshAnswer}.equals("Yes") ? "##CHECK##" : "##CROSS##")]]></textFieldExpression>
 				</textField>
+				<staticText>
+					<reportElement uuid="fe4c1ca4-b49d-45c1-a39e-525b108c5816" x="0" y="317" width="356" height="23"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement verticalAlignment="Middle"/>
+					<text><![CDATA[  Additional Information]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="18f19c91-0639-48c0-bb00-3f880f3177f4" x="356" y="317" width="196" height="23"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[($F{additionalInformationAnswer}.equals("Yes") ? "##CHECK##" : "##CROSS##")]]></textFieldExpression>
+				</textField>
 			</frame>
-		</band>
-		<band height="73" splitType="Prevent">
-			<printWhenExpression><![CDATA[$F{additionalInformationAnswer}.equals("Yes")]]></printWhenExpression>
-			<staticText>
-				<reportElement uuid="900d02e9-34f6-4b6d-b5bf-760eabb65c7a" positionType="Float" mode="Opaque" x="0" y="1" width="555" height="18" forecolor="#FFFFFF" backcolor="#E6E6E6">
-					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingAdditionalInfo"/>
-				</reportElement>
-				<textElement verticalAlignment="Middle">
-					<font size="14" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Additional Information]]></text>
-			</staticText>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="2e8fc81f-dd2a-46e5-b2b3-8d8fba394bf0" positionType="Float" x="0" y="19" width="350" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{additionalInformationQuestion}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="15f9ef52-fbed-4db2-b075-606f382db25e" positionType="Float" x="355" y="19" width="197" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{additionalInformationAnswer}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="7c53abb2-8553-46b7-8e5c-f7b40a013d86" positionType="Float" x="0" y="37" width="555" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{additionalInformationWhyQuestion}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="172ff0e6-974f-4ca3-a60a-a16c66a8de76" positionType="Float" x="0" y="55" width="555" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement verticalAlignment="Top"/>
-				<textFieldExpression><![CDATA[$F{additionalInformationWhyAnswer}]]></textFieldExpression>
-			</textField>
 		</band>
 	</detail>
 </jasperReport>
