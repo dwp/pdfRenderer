@@ -86,6 +86,7 @@ case class SectionAboutEmployment(xml: Elem) {
         (y \\ "CareExpenses").
          map(x =>{
           Seq("Expenses related to the person you care for, while you are at work",
+            (x \\ "CareExpensesCaree" \\ "QuestionLabel").text+" "+(x \\ "CareExpensesCaree" \\ "Answer").text,
             (x \\ "CarerName" \\ "QuestionLabel").text+" "+(x \\ "CarerName" \\ "Answer").text,
             (x \\ "Expense" \\ "Payment" \\ "QuestionLabel").text+" "+(x \\ "Expense" \\ "Payment" \\ "Answer" \\ "Amount").text,
             (x \\ "Expense" \\ "Frequency" \\ "QuestionLabel").text+" "+(x \\ "Expense" \\ "Frequency" \\ "Answer").text,
