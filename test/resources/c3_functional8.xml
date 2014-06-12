@@ -78,7 +78,7 @@
                     <CarerName><QuestionLabel>Name of the person/organisation who looks after your child/children</QuestionLabel><Answer>Mr Childcare</Answer></CarerName>
                     <Expense>
                         <Payment><QuestionLabel>How much did you pay them?</QuestionLabel><Answer><Currency>GBP</Currency><Amount>124.78</Amount></Answer></Payment>
-                        <Frequency><QuestionLabel>How often did you pay childcare expenses?</QuestionLabel><Other>Other childcare frequency</Other><Answer>Other</Answer></Frequency>
+                        <Frequency><QuestionLabel>How often did you pay childcare expenses?</QuestionLabel><Other>Other childcare frequencyOther childcare frequency123456789e</Other><Answer>Other</Answer></Frequency>
                     </Expense>
                     <RelationshipCarerToClaimant><QuestionLabel>What relation, if any, is the person/organisation to you?</QuestionLabel><Answer>Father</Answer></RelationshipCarerToClaimant>
 
