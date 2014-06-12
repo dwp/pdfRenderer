@@ -23,24 +23,24 @@
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="64" splitType="Stretch">
-			<textField isStretchWithOverflow="true">
-				<reportElement uuid="5f5b2185-9b5f-4d1e-858b-24852cd2757e" positionType="Float" x="0" y="0" width="330" height="18"/>
+		<band height="75" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="5f5b2185-9b5f-4d1e-858b-24852cd2757e" positionType="Float" x="0" y="0" width="330" height="28" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ConsentQuestionLabel}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement uuid="8a91fad2-9d40-45d2-84be-d2e058a1e540" positionType="Float" x="355" y="0" width="197" height="18"/>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="8a91fad2-9d40-45d2-84be-d2e058a1e540" positionType="Float" x="355" y="0" width="197" height="28" isRemoveLineWhenBlank="true"/>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{ConsentAnswer}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="2e1473c5-5820-429d-a8d0-be33b8e0ef10" positionType="Float" x="0" y="18" width="330" height="18"/>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="2e1473c5-5820-429d-a8d0-be33b8e0ef10" positionType="Float" x="0" y="28" width="330" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ConsentWhyQuestionLabel}]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="b9bbee5b-521f-4c04-b6aa-87a20f75b9e1" positionType="Float" x="355" y="18" width="197" height="46"/>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="b9bbee5b-521f-4c04-b6aa-87a20f75b9e1" positionType="Float" x="355" y="28" width="197" height="46" isRemoveLineWhenBlank="true"/>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{ConsentWhyAnswer}]]></textFieldExpression>
 			</textField>
