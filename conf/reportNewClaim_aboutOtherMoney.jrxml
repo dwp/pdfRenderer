@@ -239,7 +239,7 @@
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="0f1cc67d-4980-4359-95ac-4b0b2f91ee2f" positionType="Float" x="0" y="74" width="350" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{otherMoneyAnswer}.equals("Yes")]]></printWhenExpression>
+					<printWhenExpression><![CDATA[$F{otherMoneySSPAnswer}.equals("Yes")]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{otherMoneySSPPaymentFrequencyQuestion}]]></textFieldExpression>
