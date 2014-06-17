@@ -4,6 +4,7 @@
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
 	</parameter>
@@ -53,9 +54,9 @@
 		<band splitType="Stretch"/>
 	</background>
 	<pageHeader>
-		<band height="35" splitType="Stretch">
+		<band height="37" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="61d27c60-d23c-47b0-a56a-f72fe47dd241" mode="Opaque" x="0" y="0" width="555" height="35" forecolor="#FFFFFF" backcolor="#999999"/>
+				<reportElement uuid="61d27c60-d23c-47b0-a56a-f72fe47dd241" style="HeadingClaim" mode="Opaque" x="0" y="0" width="555" height="35" forecolor="#000000"/>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -66,7 +67,7 @@
 	<detail>
 		<band height="377" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="f8b07e72-4c24-4a2e-b083-d9eaae0b77cc" mode="Opaque" x="0" y="0" width="555" height="32" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
+				<reportElement uuid="f8b07e72-4c24-4a2e-b083-d9eaae0b77cc" style="SubHeadingClaim" mode="Opaque" x="0" y="0" width="555" height="32" forecolor="#000000"/>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>

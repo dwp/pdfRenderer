@@ -4,6 +4,7 @@
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
 	</parameter>
@@ -80,9 +81,9 @@
 		<band splitType="Stretch"/>
 	</background>
 	<pageHeader>
-		<band height="35" splitType="Stretch">
+		<band height="37" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="d65f4564-c706-43eb-bd70-f2744b086d8e" mode="Opaque" x="0" y="0" width="555" height="35" forecolor="#FFFFFF" backcolor="#999999"/>
+				<reportElement uuid="d65f4564-c706-43eb-bd70-f2744b086d8e" style="HeadingClaim" mode="Opaque" x="0" y="0" width="555" height="35" forecolor="#000000"/>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -93,7 +94,7 @@
 	<detail>
 		<band height="276" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="422f0b61-6463-412b-9944-554d5b3fc015" mode="Opaque" x="0" y="0" width="555" height="32" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
+				<reportElement uuid="422f0b61-6463-412b-9944-554d5b3fc015" style="SubHeadingClaim" mode="Opaque" x="0" y="0" width="555" height="32" forecolor="#000000"/>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -183,7 +184,7 @@
 				<textFieldExpression><![CDATA[$F{PaymentDetailsMethodOfPaymentAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="1d7271cb-443d-4192-be4b-4d1e7c5e231d" mode="Opaque" x="0" y="92" width="555" height="32" forecolor="#FFFFFF" backcolor="#CCCCCC">
+				<reportElement uuid="1d7271cb-443d-4192-be4b-4d1e7c5e231d" style="SubHeadingClaim" mode="Opaque" x="0" y="92" width="555" height="32" forecolor="#000000">
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="local_mesure_unitwidth" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>

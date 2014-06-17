@@ -4,6 +4,7 @@
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
 	</parameter>
@@ -44,15 +45,9 @@
 		<band splitType="Stretch"/>
 	</background>
 	<pageHeader>
-		<band height="35" splitType="Stretch">
-			<rectangle>
-				<reportElement uuid="1dd3b4b3-d340-4d54-928c-a6e302cea98f" x="0" y="0" width="555" height="35" isRemoveLineWhenBlank="true" backcolor="#999999"/>
-				<graphicElement>
-					<pen lineWidth="0.0"/>
-				</graphicElement>
-			</rectangle>
+		<band height="24" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="053a2fab-f18d-4813-bafc-26599d6f9738" x="1" y="0" width="332" height="35" forecolor="#FFFFFF"/>
+				<reportElement uuid="053a2fab-f18d-4813-bafc-26599d6f9738" style="HeadingClaim" mode="Opaque" x="1" y="0" width="551" height="20" forecolor="#000000"/>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -61,74 +56,68 @@
 		</band>
 	</pageHeader>
 	<detail>
-		<band height="165" splitType="Stretch">
-			<rectangle>
-				<reportElement uuid="a7559956-766c-40c7-9b73-27a3aa7e0d5e" x="0" y="0" width="555" height="32" backcolor="#BBBABD"/>
-				<graphicElement>
-					<pen lineWidth="0.0"/>
-				</graphicElement>
-			</rectangle>
+		<band height="133" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="e49cbec5-059c-4c17-af16-f8188c0f9ba6" x="0" y="0" width="172" height="32" forecolor="#FFFFFF"/>
-				<textElement verticalAlignment="Middle">
+				<reportElement uuid="e49cbec5-059c-4c17-af16-f8188c0f9ba6" style="SubHeadingClaim" mode="Opaque" x="0" y="0" width="552" height="21" forecolor="#000000"/>
+				<textElement verticalAlignment="Middle" markup="styled">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Your details]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="f349b8c4-1b96-43bc-8f0c-6cbc18a22536" x="0" y="32" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="f349b8c4-1b96-43bc-8f0c-6cbc18a22536" x="0" y="21" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{IdentificationFullNameQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="a026fc1f-2823-41d2-83fc-8e840d66f350" x="355" y="32" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="a026fc1f-2823-41d2-83fc-8e840d66f350" x="355" y="21" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{IdentificationFullNameAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="f41ab462-0729-488e-a371-d493ee00691f" x="0" y="70" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="f41ab462-0729-488e-a371-d493ee00691f" x="0" y="59" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{IdentificationDateOfBirthQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="a3f745f4-78d3-44c1-9aba-855bd93527a3" x="355" y="70" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="a3f745f4-78d3-44c1-9aba-855bd93527a3" x="355" y="59" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{IdentificationDateOfBirthAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="3c1bb6a4-1447-4f70-abf4-22b7b1f41700" x="0" y="51" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="3c1bb6a4-1447-4f70-abf4-22b7b1f41700" x="0" y="40" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{IdentificationNationalInsuranceNumberQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="7c808242-645d-42e6-9353-a8883ea097f8" x="355" y="51" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="7c808242-645d-42e6-9353-a8883ea097f8" x="355" y="40" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{IdentificationNationalInsuranceNumberAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="6f3d68b4-20df-434a-ad7a-f3fecdfd8852" mode="Opaque" x="1" y="89" width="555" height="32" forecolor="#FFFFFF" backcolor="#CCCCCC"/>
-				<textElement verticalAlignment="Middle" markup="none">
+				<reportElement uuid="6f3d68b4-20df-434a-ad7a-f3fecdfd8852" style="SubHeadingClaim" mode="Opaque" x="1" y="77" width="551" height="18" forecolor="#000000"/>
+				<textElement verticalAlignment="Middle" markup="styled">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Person you are caring for]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="8393c311-d36a-4588-b15f-340df86399d5" x="0" y="122" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="8393c311-d36a-4588-b15f-340df86399d5" x="0" y="95" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{IdentificationCareeFullNameQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="a9a53a85-98d8-4077-9ebf-48dcc41d1d43" x="355" y="122" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="a9a53a85-98d8-4077-9ebf-48dcc41d1d43" x="355" y="95" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{IdentificationCareeFullNameAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="8fe56eae-661b-4090-8d7d-7e7ee498807b" x="0" y="141" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="8fe56eae-661b-4090-8d7d-7e7ee498807b" x="0" y="114" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{IdentificationCareeRelationToClaimantQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="7bb71e0a-e3bd-46ef-979f-e0b206d33017" x="355" y="141" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="7bb71e0a-e3bd-46ef-979f-e0b206d33017" x="355" y="114" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{IdentificationCareeRelationToClaimantAnswer}]]></textFieldExpression>
 			</textField>

@@ -22,7 +22,14 @@ class HtmlFunctionalCasesSpec extends Specification {
     }
 
     "Change of circumstances Functional cases" in new WithApplication {
-      for (i <- 1 to 9) {
+      for (i <- 1 to 13) {
+        val fileLocation = s"functionalTestCase${i}_circs_testGeneratorResultIsSuccess.html"
+        val source = getClass.getResource(s"/circs/c3_functional${i}_circs.xml")
+        deleteFile(fileLocation)
+        generateHTML(fileLocation, XML.load(source))
+      }
+
+      for (i <- 20 to 28) {
         val fileLocation = s"functionalTestCase${i}_circs_testGeneratorResultIsSuccess.html"
         val source = getClass.getResource(s"/circs/c3_functional${i}_circs.xml")
         deleteFile(fileLocation)
