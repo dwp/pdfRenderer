@@ -16,8 +16,8 @@
 	<background>
 		<band splitType="Stretch"/>
 	</background>
-	<pageHeader>
-		<band height="22" splitType="Stretch">
+	<title>
+		<band height="24">
 			<staticText>
 				<reportElement uuid="9163d5b5-37f2-46da-ad34-c67dad4d385d" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="553" height="20" forecolor="#000000">
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart5AboutYourEmployment"/>
@@ -28,7 +28,7 @@
 				<text><![CDATA[Part 5 - About Your Employment]]></text>
 			</staticText>
 		</band>
-	</pageHeader>
+	</title>
 	<detail>
 		<band height="21" splitType="Stretch">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">

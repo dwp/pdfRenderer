@@ -92,8 +92,8 @@
 	<background>
 		<band splitType="Stretch"/>
 	</background>
-	<pageHeader>
-		<band height="20" splitType="Immediate">
+	<title>
+		<band height="22">
 			<staticText>
 				<reportElement uuid="0352c26e-c945-465d-a87d-c2030a5dc51d" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="553" height="20">
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart3AboutTheCareYouProvide"/>
@@ -104,7 +104,7 @@
 				<text><![CDATA[Part 3 - About the care you provide]]></text>
 			</staticText>
 		</band>
-	</pageHeader>
+	</title>
 	<detail>
 		<band height="296" splitType="Immediate">
 			<staticText>

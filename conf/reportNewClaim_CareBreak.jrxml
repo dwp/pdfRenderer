@@ -99,8 +99,8 @@
 	<background>
 		<band splitType="Stretch"/>
 	</background>
-	<pageHeader>
-		<band height="20" splitType="Prevent">
+	<title>
+		<band height="23">
 			<staticText>
 				<reportElement uuid="a415a243-c2e6-483a-8f49-31a568e887ae" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="555" height="20" isRemoveLineWhenBlank="true">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingBreaksInCare"/>
@@ -111,7 +111,7 @@
 				<text><![CDATA[Breaks in care]]></text>
 			</staticText>
 		</band>
-	</pageHeader>
+	</title>
 	<detail>
 		<band height="162" splitType="Prevent">
 			<textField isBlankWhenNull="true">
