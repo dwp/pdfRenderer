@@ -13,7 +13,7 @@ class HtmlFunctionalCasesSpec extends Specification {
 
   "The HTML generator should generate HTML from C3" should {
     "Claim Functional cases" in new WithApplication {
-      for (i <- 1 to 10) {
+      for (i <- 1 to 15) {
         val fileLocation = s"functionalTestCase${i}_testGeneratorResultIsSuccess.html"
         val source = getClass.getResource(s"/c3_functional$i.xml")
         deleteFile(fileLocation)
