@@ -114,8 +114,8 @@
 	<background>
 		<band splitType="Stretch"/>
 	</background>
-	<pageHeader>
-		<band height="18" splitType="Immediate">
+	<title>
+		<band height="21">
 			<staticText>
 				<reportElement uuid="4174c253-6428-4e9c-b5d7-a74b83203f95" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="550" height="18" forecolor="#000000">
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart1AboutYouTheCarer"/>
@@ -126,7 +126,7 @@
 				<text><![CDATA[Part 1 - About you - the carer]]></text>
 			</staticText>
 		</band>
-	</pageHeader>
+	</title>
 	<detail>
 		<band height="2" splitType="Immediate">
 			<subreport>
@@ -265,7 +265,7 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_PeriodAbroad.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="172" splitType="Immediate">
+		<band height="175" splitType="Immediate">
 			<staticText>
 				<reportElement uuid="badfdb41-025e-422b-9da8-49bb6e64b71c" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="552" height="30" isRemoveLineWhenBlank="true" forecolor="#000000">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingMoneyEEA"/>
