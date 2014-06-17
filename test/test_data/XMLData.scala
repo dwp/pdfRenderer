@@ -115,7 +115,7 @@ object XMLData extends TestUtils{
   }
 
   def claimDates(fields: XMLDataFields) = {
-    Seq("Claim Dates",
+    Seq("Claim Date",
       "Date claim received " + fields.dateClaimReceived.text
     )
   }
