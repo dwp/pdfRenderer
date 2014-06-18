@@ -392,7 +392,9 @@
 	<pageHeader>
 		<band height="66" splitType="Stretch">
 			<frame>
-				<reportElement uuid="5c510d56-ac5b-4822-a83c-f8a571b5d6e3" x="0" y="0" width="560" height="23" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" backcolor="#FFFFFF"/>
+				<reportElement uuid="5c510d56-ac5b-4822-a83c-f8a571b5d6e3" x="0" y="0" width="560" height="23" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" backcolor="#FFFFFF">
+					<property name="net.sf.jasperreports.export.html.class" value="SummaryPageHeader"/>
+				</reportElement>
 				<box>
 					<pen lineWidth="1.0" lineColor="#000000"/>
 					<topPen lineWidth="1.0" lineColor="#000000"/>
@@ -431,7 +433,9 @@
 				</textField>
 			</frame>
 			<textField>
-				<reportElement uuid="a7b7c4cc-3137-4f63-ae67-b6c1f92f2fc5" mode="Opaque" x="0" y="23" width="560" height="22" forecolor="#000000" backcolor="#FFFFFF"/>
+				<reportElement uuid="a7b7c4cc-3137-4f63-ae67-b6c1f92f2fc5" mode="Opaque" x="0" y="23" width="560" height="22" forecolor="#000000" backcolor="#FFFFFF">
+					<property name="net.sf.jasperreports.export.html.class" value="SummaryPageDateHeader"/>
+				</reportElement>
 				<textElement verticalAlignment="Middle">
 					<font size="14"/>
 				</textElement>
