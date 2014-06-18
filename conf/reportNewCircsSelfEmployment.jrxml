@@ -53,7 +53,9 @@
 	<pageHeader>
 		<band height="35" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="e1c2936c-494d-432d-a81e-f3b21017807e" style="HeadingClaim" mode="Opaque" x="0" y="0" width="555" height="35" forecolor="#000000"/>
+				<reportElement uuid="e1c2936c-494d-432d-a81e-f3b21017807e" style="HeadingClaim" mode="Opaque" x="0" y="0" width="555" height="35" forecolor="#000000">
+					<property name="net.sf.jasperreports.export.html.id" value="HeadingChangeOfStartedSelfEmployment"/>
+				</reportElement>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -64,7 +66,9 @@
 	<detail>
 		<band height="151" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="c6395922-d01d-4a0c-a44c-e9d8a488133f" style="SubHeadingClaim" mode="Opaque" x="0" y="2" width="552" height="35" forecolor="#000000"/>
+				<reportElement uuid="c6395922-d01d-4a0c-a44c-e9d8a488133f" style="SubHeadingClaim" mode="Opaque" x="0" y="2" width="552" height="35" forecolor="#000000">
+					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingAboutYourSelfEmployment"/>
+				</reportElement>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>

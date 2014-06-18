@@ -83,7 +83,9 @@
 	<pageHeader>
 		<band height="37" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="d65f4564-c706-43eb-bd70-f2744b086d8e" style="HeadingClaim" mode="Opaque" x="0" y="0" width="555" height="35" forecolor="#000000"/>
+				<reportElement uuid="d65f4564-c706-43eb-bd70-f2744b086d8e" style="HeadingClaim" mode="Opaque" x="0" y="0" width="555" height="35" forecolor="#000000">
+					<property name="net.sf.jasperreports.export.html.id" value="HeadingChangeOfPaymentAndBankDetails"/>
+				</reportElement>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -94,7 +96,9 @@
 	<detail>
 		<band height="276" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="422f0b61-6463-412b-9944-554d5b3fc015" style="SubHeadingClaim" mode="Opaque" x="0" y="0" width="555" height="32" forecolor="#000000"/>
+				<reportElement uuid="422f0b61-6463-412b-9944-554d5b3fc015" style="SubHeadingClaim" mode="Opaque" x="0" y="0" width="555" height="32" forecolor="#000000">
+					<property name="net.sf.jasperreports.export.html.id" value="SubheadingExistingPaymentDetails"/>
+				</reportElement>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -190,6 +194,7 @@
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingNewPaymentDetails"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>

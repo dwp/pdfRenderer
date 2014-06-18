@@ -29,7 +29,9 @@
 	<pageHeader>
 		<band height="18" splitType="Immediate">
 			<staticText>
-				<reportElement uuid="d8452cc6-e21e-46ff-9472-8100e8b2967c" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="555" height="18" forecolor="#000000"/>
+				<reportElement uuid="d8452cc6-e21e-46ff-9472-8100e8b2967c" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="555" height="18" forecolor="#000000">
+					<property name="net.sf.jasperreports.export.html.id" value="HeadingChangeOfStoppedCaring"/>
+				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
 					<font size="12" isBold="true"/>
 				</textElement>

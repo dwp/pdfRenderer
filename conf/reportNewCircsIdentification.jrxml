@@ -47,7 +47,9 @@
 	<pageHeader>
 		<band height="24" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="053a2fab-f18d-4813-bafc-26599d6f9738" style="HeadingClaim" mode="Opaque" x="1" y="0" width="551" height="20" forecolor="#000000"/>
+				<reportElement uuid="053a2fab-f18d-4813-bafc-26599d6f9738" style="HeadingClaim" mode="Opaque" x="1" y="0" width="551" height="20" forecolor="#000000">
+					<property name="net.sf.jasperreports.export.html.id" value="HeadingIdentificationCarerAndPersonCaredFor"/>
+				</reportElement>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -58,7 +60,9 @@
 	<detail>
 		<band height="133" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="e49cbec5-059c-4c17-af16-f8188c0f9ba6" style="SubHeadingClaim" mode="Opaque" x="0" y="0" width="552" height="21" forecolor="#000000"/>
+				<reportElement uuid="e49cbec5-059c-4c17-af16-f8188c0f9ba6" style="SubHeadingClaim" mode="Opaque" x="0" y="0" width="552" height="21" forecolor="#000000">
+					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourDetails"/>
+				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -95,7 +99,9 @@
 				<textFieldExpression><![CDATA[$F{IdentificationNationalInsuranceNumberAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="6f3d68b4-20df-434a-ad7a-f3fecdfd8852" style="SubHeadingClaim" mode="Opaque" x="1" y="77" width="551" height="18" forecolor="#000000"/>
+				<reportElement uuid="6f3d68b4-20df-434a-ad7a-f3fecdfd8852" style="SubHeadingClaim" mode="Opaque" x="1" y="77" width="551" height="18" forecolor="#000000">
+					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingPersonYouAreCaringFor"/>
+				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
 					<font size="12" isBold="true"/>
 				</textElement>

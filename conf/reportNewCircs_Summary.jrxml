@@ -164,7 +164,9 @@
 	<pageHeader>
 		<band height="23" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="58ddea3b-1ba8-4b66-a709-2f5f94a3de80" style="HeadingClaim" mode="Opaque" x="227" y="0" width="100" height="21" forecolor="#000000"/>
+				<reportElement uuid="58ddea3b-1ba8-4b66-a709-2f5f94a3de80" style="HeadingClaim" mode="Opaque" x="227" y="0" width="100" height="21" forecolor="#000000">
+					<property name="net.sf.jasperreports.export.html.id" value="HeadingSummary"/>
+				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="14" isBold="true"/>
 				</textElement>
@@ -178,6 +180,7 @@
 			<staticText>
 				<reportElement uuid="0862ee85-65ff-482c-a03e-6c62d78f2833" style="SubHeadingClaim" mode="Opaque" x="1" y="0" width="550" height="18" forecolor="#000000">
 					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingAboutYouTheCarer"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
@@ -302,7 +305,9 @@
 				</graphicElement>
 			</rectangle>
 			<staticText>
-				<reportElement uuid="f152a887-ec97-4593-8af7-db0c754ba16b" style="SubHeadingClaim" mode="Opaque" x="1" y="38" width="550" height="18" forecolor="#000000"/>
+				<reportElement uuid="f152a887-ec97-4593-8af7-db0c754ba16b" style="SubHeadingClaim" mode="Opaque" x="1" y="38" width="550" height="18" forecolor="#000000">
+					<property name="net.sf.jasperreports.export.html.id" value="SubHeaderingAboutTheCareYouProvide"/>
+				</reportElement>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -405,7 +410,9 @@
 				</graphicElement>
 			</rectangle>
 			<staticText>
-				<reportElement uuid="6c0b5710-e170-4bd1-8165-9525d19f0bd8" style="SubHeadingClaim" mode="Opaque" x="1" y="0" width="550" height="18" forecolor="#000000"/>
+				<reportElement uuid="6c0b5710-e170-4bd1-8165-9525d19f0bd8" style="SubHeadingClaim" mode="Opaque" x="1" y="0" width="550" height="18" forecolor="#000000">
+					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingChangeInCircumstances"/>
+				</reportElement>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -438,7 +445,9 @@
 				</graphicElement>
 			</rectangle>
 			<staticText>
-				<reportElement uuid="8cc57fe4-2171-4ffc-a306-4ec267e4bcf6" style="SubHeadingClaim" mode="Opaque" x="1" y="0" width="550" height="18" forecolor="#000000"/>
+				<reportElement uuid="8cc57fe4-2171-4ffc-a306-4ec267e4bcf6" style="SubHeadingClaim" mode="Opaque" x="1" y="0" width="550" height="18" forecolor="#000000">
+					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingDeclaration"/>
+				</reportElement>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
