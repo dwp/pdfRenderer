@@ -61,8 +61,8 @@
 					<textElement/>
 					<textFieldExpression><![CDATA[$F{AboutYouTheCarerTimeOutsideGBLast3YearsQuestion}]]></textFieldExpression>
 				</textField>
-				<textField>
-					<reportElement uuid="5a870f84-cae3-4556-ad18-dbf6def71f0b" x="355" y="0" width="197" height="18"/>
+				<textField isBlankWhenNull="true">
+					<reportElement uuid="5a870f84-cae3-4556-ad18-dbf6def71f0b" positionType="Float" x="355" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
 					<textElement/>
 					<textFieldExpression><![CDATA[$F{AboutYouTheCarerTimeOutsideGBLast3YearsAnswer}]]></textFieldExpression>
 				</textField>
