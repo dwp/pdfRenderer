@@ -264,7 +264,7 @@
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeDateStartCaringAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="3" splitType="Immediate">
+		<band height="2" splitType="Immediate">
 			<subreport>
 				<reportElement uuid="e023222c-36da-453b-8ec4-4d1faba787b3" positionType="Float" x="0" y="1" width="555" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">

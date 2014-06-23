@@ -70,7 +70,7 @@
 	<group name="Break">
 		<groupExpression><![CDATA[$F{StartDateAnswer}]]></groupExpression>
 		<groupHeader>
-			<band height="39" splitType="Prevent">
+			<band height="39" splitType="Immediate">
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 					<reportElement uuid="a9f4a284-7c57-49a6-9bb1-70b65bc07018" positionType="Float" x="0" y="1" width="350" height="18" isRemoveLineWhenBlank="true"/>
 					<textElement/>
@@ -93,14 +93,14 @@
 			</band>
 		</groupHeader>
 		<groupFooter>
-			<band splitType="Prevent"/>
+			<band splitType="Immediate"/>
 		</groupFooter>
 	</group>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="23">
+		<band height="21">
 			<staticText>
 				<reportElement uuid="a415a243-c2e6-483a-8f49-31a568e887ae" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="555" height="20" isRemoveLineWhenBlank="true">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingBreaksInCare"/>
@@ -113,7 +113,7 @@
 		</band>
 	</title>
 	<detail>
-		<band height="162" splitType="Prevent">
+		<band height="162" splitType="Immediate">
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="111c129f-a7b9-4827-bd88-0d8d0478c093" positionType="Float" x="0" y="72" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
