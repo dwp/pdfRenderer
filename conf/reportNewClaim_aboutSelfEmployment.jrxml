@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYourPartner" language="groovy" pageWidth="555" pageHeight="872" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="2c76a7f8-deb9-45af-83f2-c12559d20c72">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="256"/>
+	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<property name="net.sf.jasperreports.export.html.remove.emtpy.space.between.rows" value="true"/>
 	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
@@ -232,7 +232,7 @@
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="19">
+		<band height="19" splitType="Immediate">
 			<staticText>
 				<reportElement uuid="c4993f7a-b987-4a99-9fbd-21415dcc29ce" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="555" height="18">
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart6AboutSelfEmployment"/>
@@ -245,7 +245,7 @@
 		</band>
 	</title>
 	<detail>
-		<band height="18" splitType="Stretch">
+		<band height="18" splitType="Immediate">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="61c7218b-715a-4359-9449-ee3c564dbe6f" positionType="Float" x="0" y="0" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
@@ -257,7 +257,7 @@
 				<textFieldExpression><![CDATA[$F{haveBeenSelfEmployedAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="112" splitType="Stretch">
+		<band height="112" splitType="Immediate">
 			<printWhenExpression><![CDATA[$F{haveBeenSelfEmployedAnswer}.equals("Yes")]]></printWhenExpression>
 			<staticText>
 				<reportElement uuid="682874b6-bfe4-439f-8bb8-4abdfe329111" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="555" height="21" isPrintInFirstWholeBand="true">
@@ -319,7 +319,7 @@
 				<textFieldExpression><![CDATA[$F{natureOfBusinessAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="112" splitType="Stretch">
+		<band height="112" splitType="Immediate">
 			<printWhenExpression><![CDATA[$F{selfEmployedNowAnswer}.equals("Yes")]]></printWhenExpression>
 			<staticText>
 				<reportElement uuid="52392fc1-1198-49d5-81cc-98d3752e4379" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="555" height="20" isRemoveLineWhenBlank="true">
@@ -371,7 +371,7 @@
 				<textFieldExpression><![CDATA[$F{selfEmployedNowAnswer}.equals("Yes") ? $F{whyWhenChangeCurrentAnswer} : $F{whyWhenChangeAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="105" splitType="Stretch">
+		<band height="105" splitType="Immediate">
 			<printWhenExpression><![CDATA[$F{haveBeenSelfEmployedAnswer}.equals("Yes")]]></printWhenExpression>
 			<staticText>
 				<reportElement uuid="3e35e067-9af8-4ceb-9abf-e2d152a1e24b" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="555" height="20" isPrintInFirstWholeBand="true">
@@ -418,7 +418,7 @@
 				<textFieldExpression><![CDATA[$F{pensionSchemeFrequencyOther}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="178" splitType="Stretch">
+		<band height="178" splitType="Immediate">
 			<printWhenExpression><![CDATA[$F{haveBeenSelfEmployedAnswer}.equals("Yes")]]></printWhenExpression>
 			<staticText>
 				<reportElement uuid="c2181e86-d16c-40e2-af56-2c702260e4ee" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="555" height="20" isPrintInFirstWholeBand="true">
@@ -505,7 +505,7 @@
 				<textFieldExpression><![CDATA[$F{careExpensesChildrenRelationshipToChildAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="147" splitType="Stretch">
+		<band height="147" splitType="Immediate">
 			<printWhenExpression><![CDATA[$F{haveBeenSelfEmployedAnswer}.equals("Yes")]]></printWhenExpression>
 			<staticText>
 				<reportElement uuid="8556a719-4317-47f5-afbd-70abd9427ae0" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="555" height="20" isPrintInFirstWholeBand="true">
