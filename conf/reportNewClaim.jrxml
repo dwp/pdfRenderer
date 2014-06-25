@@ -5,6 +5,7 @@
 	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<property name="net.sf.jasperreports.export.html.remove.emtpy.space.between.rows" value="true"/>
+	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
 	<style name="table">
 		<box>
 			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
@@ -101,31 +102,31 @@
 					<rightPen lineWidth="1.0" lineColor="#000000"/>
 				</box>
 				<staticText>
-					<reportElement uuid="eb8201ef-3319-4f71-ba4a-434848230663" x="1" y="1" width="90" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF"/>
+					<reportElement uuid="eb8201ef-3319-4f71-ba4a-434848230663" x="1" y="1" width="90" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
 					<textElement verticalAlignment="Middle">
 						<font fontName="SansSerif" size="14" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Transaction:]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="97b2efa8-c290-4b0e-b5d1-0ddc084d45e0" positionType="Float" x="93" y="1" width="126" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF"/>
+					<reportElement uuid="97b2efa8-c290-4b0e-b5d1-0ddc084d45e0" positionType="Float" x="93" y="1" width="126" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
 					<textElement verticalAlignment="Middle">
 						<font size="12" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{TransactionId}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="413555f5-6e37-46fa-9f7b-00d6dd12b626" positionType="Float" x="224" y="1" width="30" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF"/>
+					<reportElement uuid="413555f5-6e37-46fa-9f7b-00d6dd12b626" positionType="Float" x="224" y="1" width="30" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
 					<textElement textAlignment="Right" verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[$F{ClaimantTitle}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="f611597b-ca9e-4eee-b245-2214c1573ce9" positionType="Float" x="260" y="1" width="193" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF"/>
+					<reportElement uuid="f611597b-ca9e-4eee-b245-2214c1573ce9" positionType="Float" x="260" y="1" width="193" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
 					<textElement verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[$F{ClaimantSurname}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="fa8df42d-d92f-4051-a603-d9108427489c" positionType="Float" x="460" y="1" width="80" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF"/>
+					<reportElement uuid="fa8df42d-d92f-4051-a603-d9108427489c" positionType="Float" x="460" y="1" width="80" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
 					<textElement textAlignment="Right" verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[$F{NationalInsuranceNumber}]]></textFieldExpression>
 				</textField>

@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="560" pageHeight="872" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="419"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<property name="net.sf.jasperreports.export.html.remove.emtpy.space.between.rows" value="true"/>
 	<import value="org.apache.commons.codec.binary.Base64"/>
@@ -403,31 +403,31 @@
 					<rightPen lineWidth="1.0" lineColor="#000000"/>
 				</box>
 				<staticText>
-					<reportElement uuid="5afd1804-f132-4c32-bbf5-6802d41a7ab2" positionType="Float" x="0" y="0" width="100" height="20" forecolor="#FFFFFF"/>
+					<reportElement uuid="5afd1804-f132-4c32-bbf5-6802d41a7ab2" positionType="Float" x="0" y="0" width="100" height="20" forecolor="#000000"/>
 					<textElement verticalAlignment="Middle">
 						<font fontName="SansSerif" size="14" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Transaction:]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="370cc313-2914-43e4-8b1b-1b618c568e88" positionType="Float" x="99" y="0" width="126" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF"/>
+					<reportElement uuid="370cc313-2914-43e4-8b1b-1b618c568e88" positionType="Float" x="99" y="0" width="126" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
 					<textElement verticalAlignment="Middle">
 						<font size="12" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{TransactionId}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="cb21fb00-2bac-47a9-8847-f1881125d4cd" positionType="Float" x="225" y="0" width="30" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF"/>
+					<reportElement uuid="cb21fb00-2bac-47a9-8847-f1881125d4cd" positionType="Float" x="225" y="0" width="30" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
 					<textElement textAlignment="Right" verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[$F{ClaimantTitleAnswer}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="8acdc596-efce-4ccd-8858-fc6ca8e18aee" positionType="Float" x="257" y="0" width="193" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF"/>
+					<reportElement uuid="8acdc596-efce-4ccd-8858-fc6ca8e18aee" positionType="Float" x="257" y="0" width="193" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
 					<textElement verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[$F{ClaimantSurnameAnswer}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="14cd9473-73fe-419a-849f-fd0f5014ac6a" positionType="Float" x="457" y="0" width="80" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF"/>
+					<reportElement uuid="14cd9473-73fe-419a-849f-fd0f5014ac6a" positionType="Float" x="457" y="0" width="80" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
 					<textElement textAlignment="Right" verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[$F{NationalInsuranceNumberAnswer}]]></textFieldExpression>
 				</textField>
@@ -649,7 +649,7 @@
 		</band>
 		<band height="151" splitType="Immediate">
 			<staticText>
-				<reportElement uuid="a5a0ab64-4b38-4f97-b49b-c75691cc3f54" positionType="Float" mode="Opaque" x="0" y="0" width="550" height="18" forecolor="#FFFFFF" backcolor="#E6E6E6">
+				<reportElement uuid="a5a0ab64-4b38-4f97-b49b-c75691cc3f54" positionType="Float" mode="Opaque" x="0" y="0" width="550" height="18" forecolor="#000000" backcolor="#E6E6E6">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingSummaryAboutYourPartner"/>
 				</reportElement>
 				<textElement>
@@ -739,7 +739,7 @@
 				</graphicElement>
 			</rectangle>
 			<staticText>
-				<reportElement uuid="933986e3-9239-450a-8b58-ea0bf55d46aa" positionType="Float" mode="Opaque" x="0" y="0" width="553" height="18" forecolor="#FFFFFF" backcolor="#E6E6E6">
+				<reportElement uuid="933986e3-9239-450a-8b58-ea0bf55d46aa" positionType="Float" mode="Opaque" x="0" y="0" width="553" height="18" forecolor="#000000" backcolor="#E6E6E6">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingSummaryClaimDates"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
@@ -764,7 +764,7 @@
 					<property name="net.sf.jasperreports.export.html.remove.emtpy.space.between.rows" value="true"/>
 				</reportElement>
 				<staticText>
-					<reportElement uuid="5235e441-eac8-4564-a092-4304954c961c" positionType="Float" mode="Opaque" x="0" y="0" width="553" height="18" forecolor="#FFFFFF" backcolor="#E6E6E6">
+					<reportElement uuid="5235e441-eac8-4564-a092-4304954c961c" positionType="Float" mode="Opaque" x="0" y="0" width="553" height="18" forecolor="#000000" backcolor="#E6E6E6">
 						<property name="net.sf.jasperreports.export.html.id" value="SubHeadingSummaryClaimSummary"/>
 					</reportElement>
 					<textElement verticalAlignment="Middle">
