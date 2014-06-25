@@ -4,7 +4,6 @@
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
-	<property name="net.sf.jasperreports.export.html.remove.emtpy.space.between.rows" value="true"/>
 	<import value="org.apache.commons.codec.binary.Base64"/>
 	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
 	<subDataset name="Claim Summary Table Dataset" uuid="602a0adc-bcd8-4850-9a30-0352c480fa13">
@@ -761,7 +760,6 @@
 		<band height="345" splitType="Immediate">
 			<frame>
 				<reportElement uuid="77d199bf-1cc8-4b67-b300-42adcd92df38" x="0" y="0" width="555" height="344" isRemoveLineWhenBlank="true">
-					<property name="net.sf.jasperreports.export.html.remove.emtpy.space.between.rows" value="true"/>
 				</reportElement>
 				<staticText>
 					<reportElement uuid="5235e441-eac8-4564-a092-4304954c961c" positionType="Float" mode="Opaque" x="0" y="0" width="553" height="18" forecolor="#000000" backcolor="#E6E6E6">
