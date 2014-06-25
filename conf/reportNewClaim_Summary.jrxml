@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="560" pageHeight="872" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="419"/>
+	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<property name="net.sf.jasperreports.export.html.remove.emtpy.space.between.rows" value="true"/>
 	<import value="org.apache.commons.codec.binary.Base64"/>
@@ -461,7 +461,7 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="SansSerif" size="14" isBold="true" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
 				</textElement>
-				<text><![CDATA[                                 About you - the carer      About the care you provide]]></text>
+				<text><![CDATA[                              About you - the carer          About the care you provide]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="eafce885-40b7-4aa2-9883-4ccd5538338c" positionType="Float" x="0" y="19" width="162" height="18"/>
