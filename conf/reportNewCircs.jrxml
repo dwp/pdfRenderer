@@ -245,7 +245,6 @@
 			</subreport>
 		</band>
 		<band height="3">
-			<printWhenExpression><![CDATA[!$F{ShowEmploymentChangeSection}.isEmpty()]]></printWhenExpression>
 			<subreport runToBottom="true">
 				<reportElement uuid="d93bb26d-8ca2-4293-bb4a-4c903868681c" positionType="Float" x="0" y="0" width="555" height="1"/>
 				<subreportParameter name="SUBREPORT_DIR">
