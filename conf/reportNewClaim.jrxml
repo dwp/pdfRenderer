@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim" language="groovy" pageWidth="560" pageHeight="872" whenNoDataType="AllSectionsNoDetail" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="90378acd-33ad-413e-ad03-6f54642cad18">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim" language="groovy" pageWidth="560" pageHeight="872" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="90378acd-33ad-413e-ad03-6f54642cad18">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
-	<property name="net.sf.jasperreports.export.html.remove.emtpy.space.between.rows" value="true"/>
+	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
 	<style name="table">
 		<box>
 			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
@@ -90,7 +90,9 @@
 	<pageHeader>
 		<band height="50" splitType="Immediate">
 			<frame>
-				<reportElement uuid="7afb6c41-52be-4c63-89cd-61179a0fa915" positionType="Float" x="0" y="0" width="560" height="23"/>
+				<reportElement uuid="7afb6c41-52be-4c63-89cd-61179a0fa915" positionType="Float" x="0" y="0" width="560" height="23">
+					<property name="net.sf.jasperreports.export.html.class" value="DetailPageHeader"/>
+				</reportElement>
 				<box>
 					<pen lineWidth="1.0" lineColor="#000000"/>
 					<topPen lineWidth="1.0" lineColor="#000000"/>
@@ -99,37 +101,39 @@
 					<rightPen lineWidth="1.0" lineColor="#000000"/>
 				</box>
 				<staticText>
-					<reportElement uuid="eb8201ef-3319-4f71-ba4a-434848230663" x="1" y="1" width="90" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF"/>
+					<reportElement uuid="eb8201ef-3319-4f71-ba4a-434848230663" x="1" y="1" width="90" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
 					<textElement verticalAlignment="Middle">
 						<font fontName="SansSerif" size="14" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Transaction:]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="97b2efa8-c290-4b0e-b5d1-0ddc084d45e0" positionType="Float" x="93" y="1" width="126" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF"/>
+					<reportElement uuid="97b2efa8-c290-4b0e-b5d1-0ddc084d45e0" positionType="Float" x="93" y="1" width="126" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
 					<textElement verticalAlignment="Middle">
 						<font size="12" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{TransactionId}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="413555f5-6e37-46fa-9f7b-00d6dd12b626" positionType="Float" x="224" y="1" width="30" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF"/>
+					<reportElement uuid="413555f5-6e37-46fa-9f7b-00d6dd12b626" positionType="Float" x="219" y="1" width="40" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
 					<textElement textAlignment="Right" verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[$F{ClaimantTitle}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="f611597b-ca9e-4eee-b245-2214c1573ce9" positionType="Float" x="260" y="1" width="193" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF"/>
+					<reportElement uuid="f611597b-ca9e-4eee-b245-2214c1573ce9" positionType="Float" x="264" y="1" width="180" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
 					<textElement verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[$F{ClaimantSurname}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="fa8df42d-d92f-4051-a603-d9108427489c" positionType="Float" x="460" y="1" width="80" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF"/>
+					<reportElement uuid="fa8df42d-d92f-4051-a603-d9108427489c" positionType="Float" x="460" y="1" width="90" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
 					<textElement textAlignment="Right" verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[$F{NationalInsuranceNumber}]]></textFieldExpression>
 				</textField>
 			</frame>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="464748e3-a9c3-42ef-bba3-786703772695" positionType="Float" mode="Opaque" x="0" y="26" width="560" height="22" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#FFFFFF"/>
+				<reportElement uuid="464748e3-a9c3-42ef-bba3-786703772695" positionType="Float" mode="Opaque" x="0" y="26" width="560" height="22" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#FFFFFF">
+					<property name="net.sf.jasperreports.export.html.class" value="DetailPageHeader"/>
+				</reportElement>
 				<textElement verticalAlignment="Middle">
 					<font size="12"/>
 				</textElement>
@@ -274,12 +278,16 @@
 	<pageFooter>
 		<band height="24" splitType="Immediate">
 			<textField>
-				<reportElement uuid="fb0d9e43-5827-4ea3-a9c3-df5752f30646" positionType="Float" x="404" y="0" width="121" height="20"/>
+				<reportElement uuid="fb0d9e43-5827-4ea3-a9c3-df5752f30646" positionType="Float" x="404" y="0" width="121" height="20">
+					<property name="net.sf.jasperreports.export.html.class" value="DetailPageFooter"/>
+				</reportElement>
 				<textElement textAlignment="Right" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+ " of "]]></textFieldExpression>
 			</textField>
 			<textField evaluationTime="Report">
-				<reportElement uuid="ff73e306-b40d-442d-98a9-1abf56267436" positionType="Float" x="527" y="0" width="27" height="20"/>
+				<reportElement uuid="ff73e306-b40d-442d-98a9-1abf56267436" positionType="Float" x="527" y="0" width="27" height="20">
+					<property name="net.sf.jasperreports.export.html.class" value="DetailPageFooter"/>
+				</reportElement>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>

@@ -7,7 +7,12 @@ case class SectionEvidenceList(xml:Elem) {
 
   val rootPath = xml \ "DWPCATransaction" \ "DWPCAClaim" \ "EvidenceList"
 
-  val address = (rootPath \ "RecipientAddress" \ "Answer" \ "Line").map(x => x.text).filterNot(x => x.isEmpty).mkString(" ")
+  val address:Seq[String] = {
+    val lines = (rootPath \ "RecipientAddress" \ "Answer" \ "Line")
+
+    val elems = (for( elements <- lines; element <- elements.child )yield { element.text.trim })(collection.breakOut)
+    elems
+  }
 
   val postCode = rootPath \ "RecipientAddress" \ "Answer" \ "PostCode"
 

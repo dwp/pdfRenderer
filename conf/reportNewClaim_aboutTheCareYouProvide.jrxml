@@ -3,7 +3,7 @@
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
-	<property name="net.sf.jasperreports.export.html.remove.emtpy.space.between.rows" value="true"/>
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/valtechuk/carers-dev-pdf/pdfService/pdfService/conf/"]]></defaultValueExpression>
@@ -233,7 +233,7 @@
 				</textElement>
 				<text><![CDATA[More about the care you provide]]></text>
 			</staticText>
-			<textField isBlankWhenNull="true">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="96e328c6-ee58-4244-9db5-3f7f90196bb8" positionType="Float" x="0" y="228" width="350" height="25" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeCared35HoursQuestion}]]></textFieldExpression>
@@ -243,7 +243,7 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeCared35HoursAnswer}]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="662d9f0a-3e4c-48d9-bc72-d0c8001cc579" positionType="Float" x="0" y="253" width="350" height="25" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeCared35HoursBeforeQuestion}]]></textFieldExpression>
@@ -253,7 +253,7 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeCared35HoursBeforeAnswer}]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="7f34ebef-d770-48a5-8c8a-37e63ad553ae" positionType="Float" x="0" y="278" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeDateStartCaringQuestion}]]></textFieldExpression>
@@ -264,7 +264,7 @@
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeDateStartCaringAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="3" splitType="Immediate">
+		<band height="2" splitType="Immediate">
 			<subreport>
 				<reportElement uuid="e023222c-36da-453b-8ec4-4d1faba787b3" positionType="Float" x="0" y="1" width="555" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">

@@ -219,7 +219,7 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ExpectStartCaringAgainDateAnswer}]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="d4c78e1e-4c27-4fb5-bc99-bc0e491a7b90" positionType="Float" x="0" y="198" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PermanentBreakDateQuestionLabel}]]></textFieldExpression>

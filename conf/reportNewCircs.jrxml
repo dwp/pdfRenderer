@@ -5,6 +5,7 @@
 	<property name="ireport.y" value="262"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CircsTestCase10"/>
+    <template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
 	<style name="table">
 		<box>
 			<pen lineWidth="1.0" lineColor="#FFFFFF"/>

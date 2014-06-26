@@ -4,6 +4,7 @@
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+    <template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
 	<queryString language="xPath">
 		<![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Declaration/DeclarationStatement]]>
 	</queryString>

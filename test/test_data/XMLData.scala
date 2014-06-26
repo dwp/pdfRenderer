@@ -364,9 +364,8 @@ object XMLData extends TestUtils{
   def sectionEvidenceList(xml:Elem) = {
     val fields = SectionEvidenceList(xml)
     Seq("Part 10 - Customer Evidence List",
-        fields.address,
         fields.postCode.text
-    ) ++ fields.evidenceList
+    ) ++ fields.evidenceList ++ fields.address
   }
 
 }

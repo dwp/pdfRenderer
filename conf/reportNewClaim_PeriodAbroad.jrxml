@@ -4,7 +4,6 @@
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
-	<property name="net.sf.jasperreports.export.html.remove.emtpy.space.between.rows" value="true"/>
 	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
 	<queryString language="xPath">
 		<![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/CareBreak]]>
@@ -55,22 +54,22 @@
 	<group name="Break">
 		<groupExpression><![CDATA[$F{AboutYouTheCarerPeriodAbroadDateFromAnswer}]]></groupExpression>
 		<groupHeader>
-			<band height="38" splitType="Immediate">
+			<band height="43" splitType="Immediate">
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-					<reportElement uuid="3d091f97-47b6-4819-b5bb-c919c8560721" positionType="Float" x="0" y="0" width="350" height="18" isRemoveLineWhenBlank="true"/>
+					<reportElement uuid="3d091f97-47b6-4819-b5bb-c919c8560721" positionType="Float" x="0" y="0" width="350" height="23" isRemoveLineWhenBlank="true"/>
 					<textElement/>
 					<textFieldExpression><![CDATA[$F{AboutYouTheCarerTimeOutsideGBLast3YearsQuestion}]]></textFieldExpression>
 				</textField>
-				<textField>
-					<reportElement uuid="5a870f84-cae3-4556-ad18-dbf6def71f0b" x="355" y="0" width="197" height="18"/>
+				<textField isBlankWhenNull="true">
+					<reportElement uuid="5a870f84-cae3-4556-ad18-dbf6def71f0b" positionType="Float" x="355" y="0" width="197" height="23" isRemoveLineWhenBlank="true"/>
 					<textElement/>
 					<textFieldExpression><![CDATA[$F{AboutYouTheCarerTimeOutsideGBLast3YearsAnswer}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="546e57b0-0c10-4b4b-b768-1f3cea76fdc0" positionType="Float" mode="Opaque" x="0" y="18" width="552" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#E6E6E6">
+					<reportElement uuid="546e57b0-0c10-4b4b-b768-1f3cea76fdc0" positionType="Float" mode="Opaque" x="0" y="23" width="552" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#E6E6E6">
 						<printWhenExpression><![CDATA[$F{AboutYouTheCarerTimeOutsideGBLast3YearsAnswer}.equals("Yes")]]></printWhenExpression>
 					</reportElement>
-					<textElement verticalAlignment="Middle" markup="none">
+					<textElement verticalAlignment="Top" markup="none">
 						<font size="14" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA["Period Abroad " + $V{variable1}]]></textFieldExpression>
@@ -85,7 +84,7 @@
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="111" splitType="Immediate">
+		<band height="109" splitType="Immediate">
 			<printWhenExpression><![CDATA[$F{AboutYouTheCarerTimeOutsideGBLast3YearsAnswer}.equals("Yes")]]></printWhenExpression>
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="3a0b8e90-5e92-4913-a464-26f141b8e53a" positionType="Float" x="0" y="0" width="350" height="18" isRemoveLineWhenBlank="true"/>
