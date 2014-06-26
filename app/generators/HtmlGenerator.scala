@@ -24,7 +24,7 @@ object HtmlGenerator extends ReportGenerator {
         exporter.setParameter(JRExporterParameter.IGNORE_PAGE_MARGINS, false)
         exporter.setParameter(JRHtmlExporterParameter.IS_USING_IMAGES_TO_ALIGN, false)
         exporter.setParameter(JRHtmlExporterParameter.IS_WRAP_BREAK_WORD, true)
-        exporter.setParameter(JRHtmlExporterParameter.SIZE_UNIT, JRHtmlExporterParameter.SIZE_UNIT_POINT)
+        exporter.setParameter(JRHtmlExporterParameter.SIZE_UNIT, JRHtmlExporterParameter.SIZE_UNIT_PIXEL)
         exporter.exportReport
         Logger.debug("HMTL Generated.")
         GenerationSuccess()

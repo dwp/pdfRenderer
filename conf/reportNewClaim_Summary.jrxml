@@ -409,24 +409,24 @@
 					<text><![CDATA[Transaction:]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="370cc313-2914-43e4-8b1b-1b618c568e88" positionType="Float" x="99" y="0" width="126" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
+					<reportElement uuid="370cc313-2914-43e4-8b1b-1b618c568e88" positionType="Float" x="99" y="0" width="124" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
 					<textElement verticalAlignment="Middle">
 						<font size="12" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{TransactionId}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="cb21fb00-2bac-47a9-8847-f1881125d4cd" positionType="Float" x="225" y="0" width="30" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
+					<reportElement uuid="cb21fb00-2bac-47a9-8847-f1881125d4cd" positionType="Float" x="224" y="0" width="40" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
 					<textElement textAlignment="Right" verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[$F{ClaimantTitleAnswer}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="8acdc596-efce-4ccd-8858-fc6ca8e18aee" positionType="Float" x="257" y="0" width="193" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
+					<reportElement uuid="8acdc596-efce-4ccd-8858-fc6ca8e18aee" positionType="Float" x="270" y="0" width="180" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
 					<textElement verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[$F{ClaimantSurnameAnswer}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="14cd9473-73fe-419a-849f-fd0f5014ac6a" positionType="Float" x="457" y="0" width="80" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
+					<reportElement uuid="14cd9473-73fe-419a-849f-fd0f5014ac6a" positionType="Float" x="460" y="0" width="90" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
 					<textElement textAlignment="Right" verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[$F{NationalInsuranceNumberAnswer}]]></textFieldExpression>
 				</textField>
@@ -759,8 +759,7 @@
 		</band>
 		<band height="345" splitType="Immediate">
 			<frame>
-				<reportElement uuid="77d199bf-1cc8-4b67-b300-42adcd92df38" x="0" y="0" width="555" height="344" isRemoveLineWhenBlank="true">
-				</reportElement>
+				<reportElement uuid="77d199bf-1cc8-4b67-b300-42adcd92df38" x="0" y="0" width="555" height="344" isRemoveLineWhenBlank="true"/>
 				<staticText>
 					<reportElement uuid="5235e441-eac8-4564-a092-4304954c961c" positionType="Float" mode="Opaque" x="0" y="0" width="553" height="18" forecolor="#000000" backcolor="#E6E6E6">
 						<property name="net.sf.jasperreports.export.html.id" value="SubHeadingSummaryClaimSummary"/>
