@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewCircsBreaksInCare" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="6995e436-52bd-4ce4-966d-188e2b70830b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="xPath">
+		<![CDATA[/]]>
+	</queryString>
+	<field name="EmpChangeStillCaringQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StillCaring/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="EmpChangeStillCaringAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StillCaring/Answer]]></fieldDescription>
+	</field>
+	<field name="EmpChangeDateStoppedCaringQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/DateStoppedCaring/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="EmpChangeDateStoppedCaringAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/DateStoppedCaring/Answer]]></fieldDescription>
+	</field>
+	<field name="EmpChangeHasWorkStartedYetQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/HasWorkStartedYet/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="EmpChangeHasWorkStartedYetAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/HasWorkStartedYet/Answer]]></fieldDescription>
+	</field>
+	<field name="EmpChangeDateWorkedStartedQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/DateWorkedStarted/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="EmpChangeDateWorkedStartedAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/DateWorkedStarted/Answer]]></fieldDescription>
+	</field>
+	<field name="EmpChangeDateWhenWillWorkStartQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/DateWhenWillWorkStart/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="EmpChangeDateWhenWillWorkStartAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/DateWhenWillWorkStart/Answer]]></fieldDescription>
+	</field>
+	<field name="EmpChangeHasWorkFinishedYetQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/HasWorkFinishedYet/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="EmpChangeHasWorkFinishedYetAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/HasWorkFinishedYet/Answer]]></fieldDescription>
+	</field>
+	<field name="EmpChangeDateWorkedFinishedQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/DateWorkedFinished/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="EmpChangeDateWorkedFinishedAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/DateWorkedFinished/Answer]]></fieldDescription>
+	</field>
+	<field name="EmpChangeTypeOfWorkQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/TypeOfWork/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="EmpChangeTypeOfWorkAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/TypeOfWork/Answer]]></fieldDescription>
+	</field>
+	<field name="SelfEmpTypeOfSelfEmploymentQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/SelfEmployment/TypeOfSelfEmployment/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="SelfEmpTypeOfSelfEmploymentAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/SelfEmployment/TypeOfSelfEmployment/Answer]]></fieldDescription>
+	</field>
+	<field name="SelfEmpTotalIncomeQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/SelfEmployment/TotalIncome/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="SelfEmpTotalIncomeAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/SelfEmployment/TotalIncome/Answer]]></fieldDescription>
+	</field>
+	<field name="SelfEmpMoreAboutChangesQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/SelfEmployment/MoreAboutChanges/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="SelfEmpMoreAboutChangesAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/SelfEmployment/MoreAboutChanges/Answer]]></fieldDescription>
+	</field>
+	<field name="OngoingEmpAddressQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/Address/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="OngoingEmpEmployerContactNumberQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/EmployerContactNumber/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="OngoingEmpEmployerContactNumberAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/EmployerContactNumber/Answer]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="179" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="8f62fb47-d0a6-49f5-a1db-957558ba51a8" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="555" height="18" forecolor="#000000">
+					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart2CircsBreaksFromCaring"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle" markup="styled">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Part 2 - Change in Circumstance - Employment Change]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="59a010e4-a3c4-4e34-bbb6-7867de7dfd97" positionType="Float" x="0" y="22" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EmpChangeStillCaringQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="4716f5e0-8640-41e3-9239-5abc3fa68a63" positionType="Float" x="355" y="22" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EmpChangeStillCaringAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="9c7b4ccd-9207-4c43-8932-32fab47a73d4" positionType="Float" x="0" y="40" width="350" height="18" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{EmpChangeStillCaringAnswer} == "No"]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EmpChangeDateStoppedCaringQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="394b3d45-6239-4a50-bf37-f1380335ecc2" positionType="Float" x="355" y="40" width="197" height="18" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{EmpChangeStillCaringAnswer} == "No"]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EmpChangeDateStoppedCaringAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="c448f030-31f2-46ff-87b2-1b7fef982acd" positionType="Float" x="355" y="58" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EmpChangeHasWorkStartedYetAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="0b835f93-40a3-4e67-80c2-cdb2342a387c" positionType="Float" x="0" y="58" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EmpChangeHasWorkStartedYetQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="46631c88-d64e-4842-b6d5-b2511c3f8750" positionType="Float" x="0" y="76" width="350" height="18" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{EmpChangeHasWorkStartedYetAnswer} == "Yes"]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EmpChangeDateWorkedStartedQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="4fcb136a-dbfb-482e-8285-07152bda1440" positionType="Float" x="355" y="76" width="197" height="18" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{EmpChangeHasWorkStartedYetAnswer} == "Yes"]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EmpChangeDateWorkedStartedAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="ddd5dc60-8ee4-4f36-9de3-a86c57774d6e" positionType="Float" x="0" y="94" width="350" height="18" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{EmpChangeHasWorkStartedYetAnswer} == "No"]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EmpChangeDateWhenWillWorkStartQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="4976a497-fe45-4ec9-8e83-760b798b4587" positionType="Float" x="355" y="94" width="197" height="18" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{EmpChangeHasWorkStartedYetAnswer} == "No"]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EmpChangeDateWhenWillWorkStartAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="ebd69bf3-4ca2-4001-b66b-417f4e37b4a4" positionType="Float" x="0" y="112" width="350" height="18" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{EmpChangeHasWorkStartedYetAnswer} == "Yes"]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EmpChangeHasWorkFinishedYetQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="c6d253b2-255f-4db3-8b7b-7fdd355dadca" positionType="Float" x="355" y="112" width="197" height="18" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{EmpChangeHasWorkStartedYetAnswer} == "Yes"]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EmpChangeHasWorkFinishedYetAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="75eb9208-a89b-4544-932a-9ab2a10741bb" positionType="Float" x="0" y="130" width="350" height="18" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{EmpChangeHasWorkFinishedYetAnswer} == "Yes"]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EmpChangeDateWorkedFinishedQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="72ef4b29-b024-482c-9fc4-5c27b6b68846" positionType="Float" x="355" y="130" width="197" height="18" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{EmpChangeHasWorkFinishedYetAnswer} == "Yes"]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EmpChangeDateWorkedFinishedAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="fa674ca7-c75b-4561-be98-ecce39e063f5" positionType="Float" x="0" y="148" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EmpChangeTypeOfWorkQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="e23bbebe-6b67-4c27-b5d3-49d8a4159ebe" positionType="Float" x="355" y="148" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EmpChangeTypeOfWorkAnswer}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="76">
+			<printWhenExpression><![CDATA[$F{EmpChangeTypeOfWorkAnswer} == "self-employed"]]></printWhenExpression>
+			<staticText>
+				<reportElement uuid="08c7b9ad-9096-49a4-834e-d6df80d37a6d" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="555" height="18" forecolor="#000000">
+					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart2CircsBreaksFromCaring"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle" markup="styled">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[About Your Self-Employment]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="0ccd7b92-d651-469a-803a-0e7a4d1f38c9" positionType="Float" x="0" y="20" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{SelfEmpTypeOfSelfEmploymentQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="c242b8f4-b43a-4324-ab72-f59eea041c64" positionType="Float" x="355" y="20" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{SelfEmpTypeOfSelfEmploymentAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="6499a26c-3bce-4949-b772-0fc12c0f3238" positionType="Float" x="0" y="38" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{SelfEmpTotalIncomeQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="2126a0aa-c51a-4f2c-a495-a5cb8cae21e3" positionType="Float" x="355" y="38" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{SelfEmpTotalIncomeAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="12c14cac-abc2-4912-a4e8-de48ef05b386" positionType="Float" x="0" y="56" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{SelfEmpMoreAboutChangesQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="0e40338d-7b88-44f0-8ba9-67c61d5b00d7" positionType="Float" x="355" y="56" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{SelfEmpMoreAboutChangesAnswer}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="149">
+			<printWhenExpression><![CDATA[$F{EmpChangeTypeOfWorkAnswer} == "employed"]]></printWhenExpression>
+			<staticText>
+				<reportElement uuid="b844a3a3-7c0b-4b86-a81f-69d0a0daf51d" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="555" height="18" forecolor="#000000">
+					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart2CircsBreaksFromCaring"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle" markup="styled">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Employment]]></text>
+			</staticText>
+			<subreport>
+				<reportElement uuid="00326627-c6ad-4692-8bf3-52b64ca89296" x="0" y="18" width="555" height="66"/>
+				<subreportParameter name="addressLabel">
+					<subreportParameterExpression><![CDATA[$F{OngoingEmpAddressQuestionLabel}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="postCode">
+					<subreportParameterExpression><![CDATA["Postcode"]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/Address/Answer")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_addressForNestedReports.jasper"]]></subreportExpression>
+			</subreport>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="43c48463-d859-4085-b4c8-53acc78a816d" positionType="Float" x="355" y="84" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{OngoingEmpEmployerContactNumberAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="7e3040b7-1924-43a2-a6a0-2b71db9e99bb" positionType="Float" x="0" y="84" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{OngoingEmpEmployerContactNumberQuestionLabel}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
