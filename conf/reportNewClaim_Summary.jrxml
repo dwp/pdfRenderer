@@ -2,104 +2,10 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="560" pageHeight="872" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="419"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<import value="org.apache.commons.codec.binary.Base64"/>
 	<template><![CDATA["StyleTemplateClaimSummary.jrtx"]]></template>
-	<subDataset name="Claim Summary Table Dataset" uuid="602a0adc-bcd8-4850-9a30-0352c480fa13">
-		<parameter name="NO_IMG" class="java.lang.String">
-			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
-		</parameter>
-		<parameter name="YES_IMG" class="java.lang.String">
-			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
-		</parameter>
-		<parameter name="YES_DECODED" class="java.io.InputStream">
-			<property name="new ByteArrayInputStream(new Base64().decodeBase64($P{YES_IMG}.getBytes(&quot;UTF-8&quot;)))" value=""/>
-			<defaultValueExpression><![CDATA[new ByteArrayInputStream(new Base64().decodeBase64($P{YES_IMG}.getBytes("UTF-8")))]]></defaultValueExpression>
-		</parameter>
-		<parameter name="NO_DECODED" class="java.io.InputStream">
-			<parameterDescription><![CDATA[]]></parameterDescription>
-			<defaultValueExpression><![CDATA[new ByteArrayInputStream(new Base64().decodeBase64($P{NO_IMG}.getBytes("UTF-8")))]]></defaultValueExpression>
-		</parameter>
-		<queryString language="xPath">
-			<![CDATA[/]]>
-		</queryString>
-		<field name="ClaimantNationalityAnswer" class="java.lang.String">
-			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/Nationality/Answer]]></fieldDescription>
-		</field>
-		<field name="AFIPQuestionLabel" class="java.lang.String">
-			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/ArmedForcesIndependencePayment/QuestionLabel]]></fieldDescription>
-		</field>
-		<field name="AFIPAnswer" class="java.lang.String">
-			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/ArmedForcesIndependencePayment/Answer]]></fieldDescription>
-		</field>
-		<field name="Caree35HoursAnswer" class="java.lang.String">
-			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Cared35Hours/Answer]]></fieldDescription>
-		</field>
-		<field name="Caree35HoursQuestionLabel" class="java.lang.String">
-			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Cared35Hours/QuestionLabel]]></fieldDescription>
-		</field>
-		<field name="EmployedQuestionLabel" class="java.lang.String">
-			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Employed/QuestionLabel]]></fieldDescription>
-		</field>
-		<field name="EmployedAnswer" class="java.lang.String">
-			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Employed/Answer]]></fieldDescription>
-		</field>
-		<field name="SelfEmployedQuestionLabel" class="java.lang.String">
-			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployed/QuestionLabel]]></fieldDescription>
-		</field>
-		<field name="SelfEmployedAnswer" class="java.lang.String">
-			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployed/Answer]]></fieldDescription>
-		</field>
-		<field name="EducationQuestionLabel" class="java.lang.String">
-			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/CourseOfEducation/QuestionLabel]]></fieldDescription>
-		</field>
-		<field name="EducationAnswer" class="java.lang.String">
-			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/CourseOfEducation/Answer]]></fieldDescription>
-		</field>
-		<field name="BreaksQuestionLabel" class="java.lang.String">
-			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/BreaksSinceClaim/QuestionLabel]]></fieldDescription>
-		</field>
-		<field name="BreaksAnswer" class="java.lang.String">
-			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/CareBreak/BreaksSinceClaim/Answer]]></fieldDescription>
-		</field>
-		<field name="HavePartnerAnswer" class="java.lang.String">
-			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/HavePartner/Answer]]></fieldDescription>
-		</field>
-		<field name="HavePartnerQuestionLabel" class="java.lang.String">
-			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/HavePartner/QuestionLabel]]></fieldDescription>
-		</field>
-		<field name="ClaimantReceiveEEAPensionsBenefitsQuestion" class="java.lang.String">
-			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/EEA/EEAReceivePensionsBenefits/QuestionLabel]]></fieldDescription>
-		</field>
-		<field name="ClaimantReceiveEEAPensionsBenefitsAnswer" class="java.lang.String">
-			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/EEA/EEAReceivePensionsBenefits/Answer]]></fieldDescription>
-		</field>
-		<field name="ClaimantTimeOutsideGBLast3YearsQuestion" class="java.lang.String">
-			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/PeriodAbroad/TimeOutsideGBLast3Years/QuestionLabel]]></fieldDescription>
-		</field>
-		<field name="ClaimantTimeOutsideGBLast3YearsAnswer" class="java.lang.String">
-			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/PeriodAbroad/TimeOutsideGBLast3Years/Answer]]></fieldDescription>
-		</field>
-		<field name="StatePensionQuestionLabel" class="java.lang.String">
-			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/ClaimantBenefits/StatePension/QuestionLabel]]></fieldDescription>
-		</field>
-		<field name="StatePensionAnswer" class="java.lang.String">
-			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/ClaimantBenefits/StatePension/Answer]]></fieldDescription>
-		</field>
-		<field name="welshAnswer" class="java.lang.String">
-			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherInformation/WelshCommunication/Answer]]></fieldDescription>
-		</field>
-		<field name="welshQuestion" class="java.lang.String">
-			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherInformation/WelshCommunication/QuestionLabel]]></fieldDescription>
-		</field>
-		<field name="OtherMoneySSPQuestionLabel" class="java.lang.String">
-			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySSP/QuestionLabel]]></fieldDescription>
-		</field>
-		<field name="OtherMoneySSPAnswer" class="java.lang.String">
-			<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySSP/Answer]]></fieldDescription>
-		</field>
-	</subDataset>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String">
 		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
 	</parameter>
@@ -732,7 +638,7 @@
 		</band>
 		<band height="36" splitType="Immediate">
 			<rectangle>
-				<reportElement uuid="f8741834-7c77-4a0b-864e-d7e76df3b578" x="0" y="0" width="553" height="18" backcolor="#999999"/>
+				<reportElement uuid="f8741834-7c77-4a0b-864e-d7e76df3b578" positionType="Float" x="0" y="0" width="553" height="18" backcolor="#999999"/>
 				<graphicElement>
 					<pen lineWidth="0.0"/>
 				</graphicElement>
@@ -759,7 +665,7 @@
 		</band>
 		<band height="345" splitType="Immediate">
 			<frame>
-				<reportElement uuid="77d199bf-1cc8-4b67-b300-42adcd92df38" x="0" y="0" width="555" height="344" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="77d199bf-1cc8-4b67-b300-42adcd92df38" positionType="Float" x="0" y="0" width="555" height="344" isRemoveLineWhenBlank="true"/>
 				<staticText>
 					<reportElement uuid="5235e441-eac8-4564-a092-4304954c961c" positionType="Float" mode="Opaque" x="0" y="0" width="553" height="18" forecolor="#000000" backcolor="#E6E6E6">
 						<property name="net.sf.jasperreports.export.html.id" value="SubHeadingSummaryClaimSummary"/>
@@ -771,7 +677,7 @@
 					<text><![CDATA[Claim Summary]]></text>
 				</staticText>
 				<staticText>
-					<reportElement uuid="a3fda3d7-37fc-4369-8a30-97f41b0393b0" positionType="Float" x="0" y="22" width="356" height="23" isRemoveLineWhenBlank="true"/>
+					<reportElement uuid="a3fda3d7-37fc-4369-8a30-97f41b0393b0" positionType="Float" x="0" y="19" width="356" height="23" isRemoveLineWhenBlank="true"/>
 					<box>
 						<pen lineWidth="0.5"/>
 						<topPen lineWidth="0.5"/>
@@ -783,7 +689,7 @@
 					<text><![CDATA[  Nationality]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="3c37fe2c-b14b-4cfa-abc0-72e4332b04f0" positionType="Float" x="356" y="22" width="196" height="23" isRemoveLineWhenBlank="true"/>
+					<reportElement uuid="3c37fe2c-b14b-4cfa-abc0-72e4332b04f0" positionType="Float" x="356" y="19" width="196" height="23" isRemoveLineWhenBlank="true"/>
 					<box>
 						<pen lineWidth="0.5"/>
 						<topPen lineWidth="0.5"/>
@@ -795,7 +701,7 @@
 					<textFieldExpression><![CDATA[$F{ClaimantNationalityAnswer}]]></textFieldExpression>
 				</textField>
 				<staticText>
-					<reportElement uuid="8b4cdebf-2471-4fdd-b4fc-ef3214ade416" positionType="Float" x="0" y="45" width="356" height="23" isRemoveLineWhenBlank="true"/>
+					<reportElement uuid="8b4cdebf-2471-4fdd-b4fc-ef3214ade416" positionType="Float" x="0" y="42" width="356" height="23" isRemoveLineWhenBlank="true"/>
 					<box>
 						<pen lineWidth="0.5"/>
 						<topPen lineWidth="0.5"/>
@@ -807,7 +713,7 @@
 					<text><![CDATA[  Armed Forces Independence Payment (AFIP)]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="94af47e2-7d51-412d-acd6-381539274f14" positionType="Float" x="356" y="45" width="196" height="23" isRemoveLineWhenBlank="true">
+					<reportElement uuid="94af47e2-7d51-412d-acd6-381539274f14" positionType="Float" x="356" y="42" width="196" height="23" isRemoveLineWhenBlank="true">
 						<property name="local_mesure_unity" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					</reportElement>
@@ -822,7 +728,7 @@
 					<textFieldExpression><![CDATA[($F{AFIPAnswer}.equals("Yes") ? "##CHECK##" : "##CROSS##")]]></textFieldExpression>
 				</textField>
 				<staticText>
-					<reportElement uuid="1df17865-4983-414f-9c23-49449e7a830d" positionType="Float" x="0" y="68" width="356" height="23" isRemoveLineWhenBlank="true"/>
+					<reportElement uuid="1df17865-4983-414f-9c23-49449e7a830d" positionType="Float" x="0" y="65" width="356" height="23" isRemoveLineWhenBlank="true"/>
 					<box>
 						<pen lineWidth="0.5"/>
 						<topPen lineWidth="0.5"/>
@@ -834,7 +740,7 @@
 					<text><![CDATA[  35 hours a week care]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="c7594839-7142-4760-bbf0-517a5078447b" positionType="Float" x="356" y="68" width="196" height="23" isRemoveLineWhenBlank="true">
+					<reportElement uuid="c7594839-7142-4760-bbf0-517a5078447b" positionType="Float" x="356" y="65" width="196" height="23" isRemoveLineWhenBlank="true">
 						<property name="local_mesure_unity" value="pixel"/>
 						<property name="local_mesure_unitx" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
@@ -850,7 +756,7 @@
 					<textFieldExpression><![CDATA[($F{Caree35HoursAnswer}.equals("Yes") ? "##CHECK##" : "##CROSS##")]]></textFieldExpression>
 				</textField>
 				<staticText>
-					<reportElement uuid="0e70fb97-4c56-45be-9a6e-056c65500df6" positionType="Float" x="0" y="91" width="356" height="23" isRemoveLineWhenBlank="true">
+					<reportElement uuid="0e70fb97-4c56-45be-9a6e-056c65500df6" positionType="Float" x="0" y="88" width="356" height="23" isRemoveLineWhenBlank="true">
 						<printWhenExpression><![CDATA[$F{EmployedAnswer}.equals("Yes")]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -864,7 +770,7 @@
 					<text><![CDATA[  Employed]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="4897073f-7fbf-4933-b242-df1242364567" positionType="Float" x="356" y="91" width="196" height="23" isRemoveLineWhenBlank="true">
+					<reportElement uuid="4897073f-7fbf-4933-b242-df1242364567" positionType="Float" x="356" y="88" width="196" height="23" isRemoveLineWhenBlank="true">
 						<property name="local_mesure_unity" value="pixel"/>
 						<property name="local_mesure_unitx" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
@@ -881,7 +787,7 @@
 					<textFieldExpression><![CDATA[($F{EmployedAnswer}.equals("Yes") ? "##CHECK##" : "##CROSS##")]]></textFieldExpression>
 				</textField>
 				<staticText>
-					<reportElement uuid="17c6d361-c1df-42ba-8869-f533abab674c" positionType="Float" x="0" y="114" width="356" height="23" isRemoveLineWhenBlank="true">
+					<reportElement uuid="17c6d361-c1df-42ba-8869-f533abab674c" positionType="Float" x="0" y="111" width="356" height="23" isRemoveLineWhenBlank="true">
 						<printWhenExpression><![CDATA[$F{SelfEmployedAnswer}.equals("Yes")]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -895,7 +801,7 @@
 					<text><![CDATA[  Self Employed]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="a3eb35b0-8200-4844-8093-d25a613b2221" positionType="Float" x="356" y="114" width="196" height="23" isRemoveLineWhenBlank="true">
+					<reportElement uuid="a3eb35b0-8200-4844-8093-d25a613b2221" positionType="Float" x="356" y="111" width="196" height="23" isRemoveLineWhenBlank="true">
 						<property name="local_mesure_unity" value="pixel"/>
 						<property name="local_mesure_unitx" value="pixel"/>
 						<printWhenExpression><![CDATA[$F{SelfEmployedAnswer}.equals("Yes")]]></printWhenExpression>
@@ -911,7 +817,7 @@
 					<textFieldExpression><![CDATA[($F{SelfEmployedAnswer}.equals("Yes") ? "##CHECK##" : "##CROSS##")]]></textFieldExpression>
 				</textField>
 				<staticText>
-					<reportElement uuid="9d546d33-a61d-43d9-8451-d9845f4b402d" positionType="Float" x="0" y="137" width="356" height="23" isRemoveLineWhenBlank="true">
+					<reportElement uuid="9d546d33-a61d-43d9-8451-d9845f4b402d" positionType="Float" x="0" y="134" width="356" height="23" isRemoveLineWhenBlank="true">
 						<printWhenExpression><![CDATA[$F{EducationAnswer}.equals("Yes")]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -925,7 +831,7 @@
 					<text><![CDATA[  Education]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="1e2ebcba-6066-4186-bea3-9b04ee46e2c1" positionType="Float" x="356" y="137" width="196" height="23" isRemoveLineWhenBlank="true">
+					<reportElement uuid="1e2ebcba-6066-4186-bea3-9b04ee46e2c1" positionType="Float" x="356" y="134" width="196" height="23" isRemoveLineWhenBlank="true">
 						<property name="local_mesure_unity" value="pixel"/>
 						<property name="local_mesure_unitx" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
@@ -942,7 +848,7 @@
 					<textFieldExpression><![CDATA[($F{EducationAnswer}.equals("Yes") ? "##CHECK##" : "##CROSS##")]]></textFieldExpression>
 				</textField>
 				<staticText>
-					<reportElement uuid="e021ca90-496f-405e-8f17-5fe8ba00adfe" positionType="Float" x="0" y="160" width="356" height="23" isRemoveLineWhenBlank="true">
+					<reportElement uuid="e021ca90-496f-405e-8f17-5fe8ba00adfe" positionType="Float" x="0" y="157" width="356" height="23" isRemoveLineWhenBlank="true">
 						<printWhenExpression><![CDATA[$F{BreaksAnswer}.equals("Yes")]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -956,7 +862,7 @@
 					<text><![CDATA[  Breaks in Care]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="a296b77f-9a7d-42e2-a190-2013fcc43468" positionType="Float" x="356" y="160" width="196" height="23" isRemoveLineWhenBlank="true">
+					<reportElement uuid="a296b77f-9a7d-42e2-a190-2013fcc43468" positionType="Float" x="356" y="157" width="196" height="23" isRemoveLineWhenBlank="true">
 						<property name="local_mesure_unity" value="pixel"/>
 						<property name="local_mesure_unitx" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
@@ -973,7 +879,7 @@
 					<textFieldExpression><![CDATA[($F{BreaksAnswer}.equals("Yes") ? "##CHECK##" : "##CROSS##")]]></textFieldExpression>
 				</textField>
 				<staticText>
-					<reportElement uuid="60a385ce-91e9-47e2-ba60-fff4872af576" positionType="Float" x="0" y="183" width="356" height="23" isRemoveLineWhenBlank="true">
+					<reportElement uuid="60a385ce-91e9-47e2-ba60-fff4872af576" positionType="Float" x="0" y="180" width="356" height="23" isRemoveLineWhenBlank="true">
 						<printWhenExpression><![CDATA[$F{HavePartnerAnswer}.equals("Yes")]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -987,7 +893,7 @@
 					<text><![CDATA[  Partner]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="c4e3527d-c160-49d7-a449-ccd9238d076a" positionType="Float" x="356" y="183" width="196" height="23" isRemoveLineWhenBlank="true">
+					<reportElement uuid="c4e3527d-c160-49d7-a449-ccd9238d076a" positionType="Float" x="356" y="180" width="196" height="23" isRemoveLineWhenBlank="true">
 						<property name="local_mesure_unity" value="pixel"/>
 						<property name="local_mesure_unitx" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
@@ -1004,7 +910,7 @@
 					<textFieldExpression><![CDATA[($F{HavePartnerAnswer}.equals("Yes") ? "##CHECK##" : "##CROSS##")]]></textFieldExpression>
 				</textField>
 				<staticText>
-					<reportElement uuid="66ee94a9-9077-43d7-940a-2a5876e12751" positionType="Float" x="0" y="206" width="356" height="23" isRemoveLineWhenBlank="true"/>
+					<reportElement uuid="66ee94a9-9077-43d7-940a-2a5876e12751" positionType="Float" x="0" y="203" width="356" height="23" isRemoveLineWhenBlank="true"/>
 					<box>
 						<pen lineWidth="0.5"/>
 						<topPen lineWidth="0.5"/>
@@ -1016,7 +922,7 @@
 					<text><![CDATA[  EEA Money]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="de0176ef-0443-41ac-a099-466a7f089213" positionType="Float" x="356" y="206" width="196" height="23" isRemoveLineWhenBlank="true">
+					<reportElement uuid="de0176ef-0443-41ac-a099-466a7f089213" positionType="Float" x="356" y="203" width="196" height="23" isRemoveLineWhenBlank="true">
 						<property name="local_mesure_unity" value="pixel"/>
 						<property name="local_mesure_unitx" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
@@ -1036,7 +942,7 @@
     ? "##CHECK##" : "##CROSS##")]]></textFieldExpression>
 				</textField>
 				<staticText>
-					<reportElement uuid="b632aa97-0a59-4952-9b22-7c0b4a85c0af" positionType="Float" x="0" y="229" width="356" height="23" isRemoveLineWhenBlank="true"/>
+					<reportElement uuid="b632aa97-0a59-4952-9b22-7c0b4a85c0af" positionType="Float" x="0" y="226" width="356" height="23" isRemoveLineWhenBlank="true"/>
 					<box>
 						<pen lineWidth="0.5"/>
 						<topPen lineWidth="0.5"/>
@@ -1048,7 +954,7 @@
 					<text><![CDATA[  Outside England, Scotland or Wales]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="87eb9562-e4aa-4953-80aa-0a199ddec59a" positionType="Float" x="356" y="229" width="196" height="23" isRemoveLineWhenBlank="true">
+					<reportElement uuid="87eb9562-e4aa-4953-80aa-0a199ddec59a" positionType="Float" x="356" y="226" width="196" height="23" isRemoveLineWhenBlank="true">
 						<property name="local_mesure_unity" value="pixel"/>
 						<property name="local_mesure_unitx" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
@@ -1064,7 +970,7 @@
 					<textFieldExpression><![CDATA[($F{ClaimantTimeOutsideGBLast3YearsAnswer}.equals("Yes") ? "##CHECK##" : "##CROSS##")]]></textFieldExpression>
 				</textField>
 				<staticText>
-					<reportElement uuid="6b543f5e-4334-494f-89da-c6838ceee267" positionType="Float" x="0" y="252" width="356" height="23" isRemoveLineWhenBlank="true">
+					<reportElement uuid="6b543f5e-4334-494f-89da-c6838ceee267" positionType="Float" x="0" y="249" width="356" height="23" isRemoveLineWhenBlank="true">
 						<printWhenExpression><![CDATA[$F{StatePensionAnswer}.equals("Yes")]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -1078,7 +984,7 @@
 					<text><![CDATA[  State Pension]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="265d5cbd-d9af-446a-8097-d4f96a59ad92" positionType="Float" x="356" y="252" width="196" height="23" isRemoveLineWhenBlank="true">
+					<reportElement uuid="265d5cbd-d9af-446a-8097-d4f96a59ad92" positionType="Float" x="356" y="249" width="196" height="23" isRemoveLineWhenBlank="true">
 						<property name="local_mesure_unity" value="pixel"/>
 						<property name="local_mesure_unitx" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
@@ -1095,7 +1001,7 @@
 					<textFieldExpression><![CDATA[($F{StatePensionAnswer}.equals("Yes") ? "##CHECK##" : "##CROSS##")]]></textFieldExpression>
 				</textField>
 				<staticText>
-					<reportElement uuid="0b856e39-b61f-412c-ba23-5a99c5a4e060" positionType="Float" x="0" y="275" width="356" height="23" isRemoveLineWhenBlank="true">
+					<reportElement uuid="0b856e39-b61f-412c-ba23-5a99c5a4e060" positionType="Float" x="0" y="272" width="356" height="23" isRemoveLineWhenBlank="true">
 						<printWhenExpression><![CDATA[$F{OtherMoneySSPAnswer}.equals("Yes")]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -1109,7 +1015,7 @@
 					<text><![CDATA[  Statutory Sick Pay]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="aa52bdd1-edfe-4c4a-9833-f4d03f46b751" positionType="Float" x="356" y="275" width="196" height="23" isRemoveLineWhenBlank="true">
+					<reportElement uuid="aa52bdd1-edfe-4c4a-9833-f4d03f46b751" positionType="Float" x="356" y="272" width="196" height="23" isRemoveLineWhenBlank="true">
 						<property name="local_mesure_unity" value="pixel"/>
 						<property name="local_mesure_unitx" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
@@ -1126,7 +1032,7 @@
 					<textFieldExpression><![CDATA[($F{OtherMoneySSPAnswer}.equals("Yes") ? "##CHECK##" : "##CROSS##")]]></textFieldExpression>
 				</textField>
 				<staticText>
-					<reportElement uuid="e896e00b-0da9-477d-bc71-accbf264bb12" positionType="Float" x="0" y="298" width="356" height="23" isRemoveLineWhenBlank="true"/>
+					<reportElement uuid="e896e00b-0da9-477d-bc71-accbf264bb12" positionType="Float" x="0" y="295" width="356" height="23" isRemoveLineWhenBlank="true"/>
 					<box>
 						<pen lineWidth="0.5"/>
 						<topPen lineWidth="0.5"/>
@@ -1138,7 +1044,7 @@
 					<text><![CDATA[  Welsh Comms]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="b9343c5b-77ab-48b9-8b45-0a2f7cb8860b" positionType="Float" x="356" y="298" width="196" height="23" isRemoveLineWhenBlank="true">
+					<reportElement uuid="b9343c5b-77ab-48b9-8b45-0a2f7cb8860b" positionType="Float" x="356" y="295" width="196" height="23" isRemoveLineWhenBlank="true">
 						<property name="local_mesure_unity" value="pixel"/>
 						<property name="local_mesure_unitx" value="pixel"/>
 					</reportElement>
@@ -1153,7 +1059,7 @@
 					<textFieldExpression><![CDATA[($F{welshAnswer}.equals("Yes") ? "##CHECK##" : "##CROSS##")]]></textFieldExpression>
 				</textField>
 				<staticText>
-					<reportElement uuid="fe4c1ca4-b49d-45c1-a39e-525b108c5816" positionType="Float" x="0" y="321" width="356" height="23"/>
+					<reportElement uuid="fe4c1ca4-b49d-45c1-a39e-525b108c5816" positionType="Float" x="0" y="318" width="356" height="23"/>
 					<box>
 						<pen lineWidth="0.5"/>
 						<topPen lineWidth="0.5"/>
@@ -1165,7 +1071,7 @@
 					<text><![CDATA[  Additional Information]]></text>
 				</staticText>
 				<textField>
-					<reportElement uuid="18f19c91-0639-48c0-bb00-3f880f3177f4" positionType="Float" x="356" y="321" width="196" height="23"/>
+					<reportElement uuid="18f19c91-0639-48c0-bb00-3f880f3177f4" positionType="Float" x="356" y="318" width="196" height="23"/>
 					<box>
 						<pen lineWidth="0.5"/>
 						<topPen lineWidth="0.5"/>
