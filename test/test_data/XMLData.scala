@@ -86,7 +86,7 @@ object XMLData extends TestUtils{
   def functionalTestCaseMandatoryFields(xml: Elem) = {
     val fields = XMLDataFields(xml)
     Seq(
-      "Transaction: " + fields.transactionPath.text + " " + fields.titleAnswer.text + " " + fields.surNameAnswer.text + " " + fields.nationalInsuranceNumberAnswer.text,
+      "Transaction " + fields.transactionPath.text + " " + fields.titleAnswer.text + " " + fields.surNameAnswer.text + " " + fields.nationalInsuranceNumberAnswer.text,
       "Summary",
       "About the care you provide"
     ) ++ aboutYouTheCarer(fields) ++ sectionAboutTheCareYouProvide(xml) ++ claimDates(fields) ++ claimSummary(fields)
