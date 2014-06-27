@@ -168,7 +168,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingSummary"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="14" isBold="true"/>
+					<font  isBold="true"/>
 				</textElement>
 				<text><![CDATA[Summary]]></text>
 			</staticText>
@@ -183,7 +183,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingAboutYouTheCarer"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Part 1 - About you - the carer]]></text>
 			</staticText>
@@ -309,7 +309,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeaderingAboutTheCareYouProvide"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Part 2 - About the care you provide]]></text>
 			</staticText>
@@ -414,7 +414,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingChangeInCircumstances"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Part 3 - Change in Circumstances]]></text>
 			</staticText>
@@ -449,7 +449,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingDeclaration"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Part 4 - Declaration]]></text>
 			</staticText>

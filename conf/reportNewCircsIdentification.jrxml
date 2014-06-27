@@ -51,7 +51,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingIdentificationCarerAndPersonCaredFor"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Part 1 - Identification - Carer and Person cared for.]]></text>
 			</staticText>
@@ -64,7 +64,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourDetails"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Your details]]></text>
 			</staticText>
@@ -103,7 +103,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingPersonYouAreCaringFor"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Person you are caring for]]></text>
 			</staticText>

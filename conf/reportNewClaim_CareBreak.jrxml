@@ -105,7 +105,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingBreaksInCare"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Breaks in care]]></text>
 			</staticText>

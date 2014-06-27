@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYouTheCarer" language="groovy" pageWidth="555" pageHeight="872" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a66aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="44"/>
+	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
@@ -120,7 +120,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart1AboutYouTheCarer"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Part 1 - About you - the carer]]></text>
 			</staticText>
@@ -143,7 +143,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourContactDetails"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Your Contact Details]]></text>
 			</staticText>
@@ -160,7 +160,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingHowWeCanContactYou"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[How we can contact you]]></text>
 			</staticText>
@@ -189,7 +189,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourClaimDate"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Your claim date]]></text>
 			</staticText>
@@ -210,7 +210,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourNationalityAndResidency"/>
 				</reportElement>
 				<textElement markup="styled">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Your nationality and residency]]></text>
 			</staticText>
@@ -251,7 +251,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingTimeOutsideOfEnglandScotlandWales"/>
 				</reportElement>
 				<textElement markup="styled">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Time outside of England, Scotland or Wales]]></text>
 			</staticText>
@@ -271,7 +271,7 @@
 					<printWhenExpression><![CDATA[!$F{displayMoneyEEA}.isEmpty()]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Money you get from other European Economic Area (EEA) countries or Switzerland]]></text>
 			</staticText>
@@ -310,7 +310,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingMaritalStatus"/>
 				</reportElement>
 				<textElement markup="styled">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Marital Status]]></text>
 			</staticText>
@@ -341,7 +341,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingMoreAboutYou"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[More about you]]></text>
 			</staticText>

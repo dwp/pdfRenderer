@@ -58,7 +58,7 @@
 			<staticText>
 				<reportElement uuid="61d27c60-d23c-47b0-a56a-f72fe47dd241" style="HeadingClaim" mode="Opaque" x="0" y="0" width="555" height="35" forecolor="#000000"/>
 				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Part 2 - Change in Circumstance - Change of address]]></text>
 			</staticText>
@@ -69,14 +69,14 @@
 			<staticText>
 				<reportElement uuid="f8b07e72-4c24-4a2e-b083-d9eaae0b77cc" style="SubHeadingClaim" mode="Opaque" x="0" y="0" width="555" height="32" forecolor="#000000"/>
 				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[For security, we also need you to confirm your previous address.]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="130cdd33-e9ba-470a-a5ca-16f1cf4a13a7" x="0" y="32" width="555" height="23"/>
 				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Previous address]]></text>
 			</staticText>
@@ -97,7 +97,7 @@
 			<staticText>
 				<reportElement uuid="77b07617-7c8a-48fa-aa28-26555541ac1b" x="0" y="122" width="555" height="23"/>
 				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Change of address]]></text>
 			</staticText>

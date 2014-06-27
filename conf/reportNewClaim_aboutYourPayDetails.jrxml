@@ -67,7 +67,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart8AboutYourPayDetails"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Part 8 - About Your Pay Details]]></text>
 			</staticText>
@@ -108,7 +108,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingBankBuildingSocietyDetails"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Bank/Building Society Details]]></text>
 			</staticText>

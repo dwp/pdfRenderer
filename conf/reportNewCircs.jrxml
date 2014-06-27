@@ -108,14 +108,14 @@
 			<staticText>
 				<reportElement uuid="eb8201ef-3319-4f71-ba4a-434848230663" x="2" y="0" width="90" height="20" forecolor="#FFFFFF"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="SansSerif" size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Transaction:]]></text>
 			</staticText>
 			<textField>
 				<reportElement uuid="97b2efa8-c290-4b0e-b5d1-0ddc084d45e0" x="93" y="0" width="126" height="20" forecolor="#FFFFFF"/>
 				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TransactionId}]]></textFieldExpression>
 			</textField>
@@ -149,14 +149,14 @@
 			<staticText>
 				<reportElement uuid="33f37f7e-ea89-47ec-9572-b60206334392" x="369" y="4" width="186" height="20"/>
 				<textElement textAlignment="Right">
-					<font size="14" isBold="true" isItalic="true"/>
+					<font  isBold="true" isItalic="true"/>
 				</textElement>
 				<text><![CDATA[Carer's Allowance]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="4c0f480a-90e9-4e9e-bd3a-20a48d069444" x="443" y="24" width="112" height="20"/>
 				<textElement textAlignment="Right">
-					<font size="14" isItalic="true"/>
+					<font  isItalic="true"/>
 				</textElement>
 				<text><![CDATA[Claim Form]]></text>
 			</staticText>

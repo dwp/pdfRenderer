@@ -75,7 +75,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart2AboutYourPartner"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Part 2 - About your partner]]></text>
 			</staticText>
@@ -88,7 +88,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingPartnerSpouseDetails"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Partner/Spouse details]]></text>
 			</staticText>

@@ -33,7 +33,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingChangeOfStoppedCaring"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Part 2 - Change in Circumstance - Stopped Caring]]></text>
 			</staticText>

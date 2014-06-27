@@ -237,7 +237,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart6AboutSelfEmployment"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Part 6 - About Self Employment]]></text>
 			</staticText>
@@ -263,7 +263,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourJob"/>
 				</reportElement>
 				<textElement>
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Your job]]></text>
 			</staticText>
@@ -325,7 +325,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourAccounts"/>
 				</reportElement>
 				<textElement>
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Your accounts]]></text>
 			</staticText>
@@ -377,7 +377,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingPensionAndExpenses"/>
 				</reportElement>
 				<textElement>
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Pension and expenses]]></text>
 			</staticText>
@@ -424,7 +424,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingChildcareExpensesWhileYouAreAtWork"/>
 				</reportElement>
 				<textElement>
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Childcare expenses while you are at work]]></text>
 			</staticText>
@@ -511,7 +511,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingExpensesRelatedToThePersonYouCareForWhileAtWork"/>
 				</reportElement>
 				<textElement>
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Expenses related to the person you care for while at work]]></text>
 			</staticText>
