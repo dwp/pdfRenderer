@@ -128,7 +128,7 @@ object XMLData extends TestUtils{
       buildQuestion(fields.statePensionQuestion.text, fields.statePensionAnswer.text),
       buildQuestion(fields.otherInformationWelshCommunicationQuestion.text, fields.otherInformationWelshCommunicationAnswer.text),
       buildQuestion(fields.otherInformationAddtionalInformationQuestion.text, fields.otherInformationAddtionalInformationAnswer.text),
-      "Transaction: " + fields.transactionPath.text
+      "Transaction " + fields.transactionPath.text
     )
   }
 
