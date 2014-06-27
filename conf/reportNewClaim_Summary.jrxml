@@ -294,6 +294,13 @@
 	<field name="CareeAddressLine3" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Address/Answer//Line[3]]]></fieldDescription>
 	</field>
+	<title>
+		<band height="5">
+			<break>
+				<reportElement uuid="afd3ae12-e5cf-4b47-9365-1706a666273f" x="0" y="3" width="100" height="1"/>
+			</break>
+		</band>
+	</title>
 	<pageHeader>
 		<band height="66" splitType="Immediate">
 			<frame>
