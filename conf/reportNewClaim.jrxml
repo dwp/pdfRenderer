@@ -274,16 +274,16 @@
 		</band>
 	</detail>
 	<pageFooter>
-		<band height="24" splitType="Immediate">
+		<band height="20" splitType="Immediate">
 			<textField>
-				<reportElement uuid="fb0d9e43-5827-4ea3-a9c3-df5752f30646" positionType="Float" x="404" y="0" width="121" height="20">
+				<reportElement uuid="fb0d9e43-5827-4ea3-a9c3-df5752f30646" positionType="FixRelativeToBottom" x="404" y="0" width="121" height="20">
 					<property name="net.sf.jasperreports.export.html.class" value="DetailPageFooter"/>
 				</reportElement>
 				<textElement textAlignment="Right" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+ " of "]]></textFieldExpression>
 			</textField>
 			<textField evaluationTime="Report">
-				<reportElement uuid="ff73e306-b40d-442d-98a9-1abf56267436" positionType="Float" x="527" y="0" width="27" height="20">
+				<reportElement uuid="ff73e306-b40d-442d-98a9-1abf56267436" positionType="FixRelativeToBottom" x="527" y="0" width="27" height="20">
 					<property name="net.sf.jasperreports.export.html.class" value="DetailPageFooter"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle"/>
