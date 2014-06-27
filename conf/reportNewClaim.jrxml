@@ -108,19 +108,19 @@
 					<text><![CDATA[Transaction:]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="97b2efa8-c290-4b0e-b5d1-0ddc084d45e0" positionType="Float" x="101" y="1" width="126" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
+					<reportElement uuid="97b2efa8-c290-4b0e-b5d1-0ddc084d45e0" positionType="Float" x="103" y="1" width="126" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
 					<textElement verticalAlignment="Middle">
 						<font isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{TransactionId}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="413555f5-6e37-46fa-9f7b-00d6dd12b626" positionType="Float" x="228" y="1" width="40" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
+					<reportElement uuid="413555f5-6e37-46fa-9f7b-00d6dd12b626" positionType="Float" x="231" y="1" width="40" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
 					<textElement textAlignment="Right" verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[$F{ClaimantTitle}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="f611597b-ca9e-4eee-b245-2214c1573ce9" positionType="Float" x="274" y="1" width="180" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
+					<reportElement uuid="f611597b-ca9e-4eee-b245-2214c1573ce9" positionType="Float" x="276" y="1" width="180" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
 					<textElement verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[$F{ClaimantSurname}]]></textFieldExpression>
 				</textField>
