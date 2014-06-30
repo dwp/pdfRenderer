@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYouTheCarer" language="groovy" pageWidth="555" pageHeight="872" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a66aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="133"/>
+	<property name="ireport.y" value="134"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
@@ -335,7 +335,7 @@
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerHavePartnerAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="63" splitType="Immediate">
+		<band height="64" splitType="Immediate">
 			<staticText>
 				<reportElement uuid="1a208c61-db28-4e54-9366-9e33e27eeb50" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="553" height="20">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingMoreAboutYou"/>
@@ -351,7 +351,7 @@
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerCourseOfEducationQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="f2df5d3a-a4c4-4c46-84ce-7d7079620434" positionType="Float" x="355" y="20" width="197" height="25" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="f2df5d3a-a4c4-4c46-84ce-7d7079620434" positionType="Float" stretchType="RelativeToTallestObject" x="355" y="20" width="197" height="25" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerCourseOfEducationInsuranceAnswer}]]></textFieldExpression>
 			</textField>
