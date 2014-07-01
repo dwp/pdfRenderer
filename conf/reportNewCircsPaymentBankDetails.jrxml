@@ -87,7 +87,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingChangeOfPaymentAndBankDetails"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Part 2 - Change in Circumstance - Change of payment and bank details]]></text>
 			</staticText>
@@ -100,7 +100,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="SubheadingExistingPaymentDetails"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Existing payment details]]></text>
 			</staticText>
@@ -197,7 +197,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingNewPaymentDetails"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[New payment details]]></text>
 			</staticText>

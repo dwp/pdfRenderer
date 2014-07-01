@@ -78,7 +78,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart4AboutYourEducation"/>
 				</reportElement>
 				<textElement markup="styled">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Part 4 - About Your Education]]></text>
 			</staticText>
@@ -102,7 +102,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourCourseDetails"/>
 				</reportElement>
 				<textElement markup="styled">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Your course details]]></text>
 			</staticText>

@@ -19,7 +19,7 @@ object HtmlGenerator extends ReportGenerator {
         exporter.setParameter(JRExporterParameter.JASPER_PRINT, print.get)
         exporter.setParameter(JRExporterParameter.OUTPUT_STREAM, stream)
         exporter.setParameter(JRHtmlExporterParameter.BETWEEN_PAGES_HTML, """<p class="htmlPageBreak" style="page-break-after: always"></p>""")
-        exporter.setParameter(JRHtmlExporterParameter.IS_REMOVE_EMPTY_SPACE_BETWEEN_ROWS, false)
+        exporter.setParameter(JRHtmlExporterParameter.IS_REMOVE_EMPTY_SPACE_BETWEEN_ROWS, true)
         exporter.setParameter(JRHtmlExporterParameter.FRAMES_AS_NESTED_TABLES, false)
         exporter.setParameter(JRExporterParameter.IGNORE_PAGE_MARGINS, false)
         exporter.setParameter(JRHtmlExporterParameter.IS_USING_IMAGES_TO_ALIGN, false)

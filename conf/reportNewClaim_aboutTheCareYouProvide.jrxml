@@ -99,7 +99,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart3AboutTheCareYouProvide"/>
 				</reportElement>
 				<textElement markup="styled">
-					<font size="12" isBold="true" isItalic="false"/>
+					<font isBold="true" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[Part 3 - About the care you provide]]></text>
 			</staticText>
@@ -112,7 +112,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingDetailsOfThePersonYouCareFor"/>
 				</reportElement>
 				<textElement markup="styled">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Details of the person you care for]]></text>
 			</staticText>
@@ -201,7 +201,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingContactDetailsOfThePersonYouCareFor"/>
 				</reportElement>
 				<textElement>
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Contact details of the person you care for]]></text>
 			</staticText>
@@ -229,7 +229,7 @@
 					<printWhenExpression><![CDATA[!$F{displayCareYouProvide}.isEmpty()]]></printWhenExpression>
 				</reportElement>
 				<textElement>
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[More about the care you provide]]></text>
 			</staticText>

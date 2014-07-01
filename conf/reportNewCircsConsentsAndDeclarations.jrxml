@@ -58,7 +58,7 @@
 			<staticText>
 				<reportElement uuid="596704e3-9e59-4fbb-9b16-80ada3080101" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="555" height="35" forecolor="#000000"/>
 				<textElement verticalAlignment="Middle" markup="styled">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Part 3 - Declaration]]></text>
 			</staticText>
@@ -69,7 +69,7 @@
 			<staticText>
 				<reportElement uuid="de1d3cb5-12c0-49c2-bcb6-284eee491c31" style="SubHeadingClaim" mode="Opaque" x="0" y="1" width="555" height="32" forecolor="#000000"/>
 				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Further Information]]></text>
 			</staticText>
@@ -86,7 +86,7 @@
 			<staticText>
 				<reportElement uuid="4f16af28-438e-480c-814c-5f1983e3871e" style="SubHeadingClaim" mode="Opaque" x="0" y="53" width="555" height="32" forecolor="#000000"/>
 				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Declaration]]></text>
 			</staticText>

@@ -416,7 +416,7 @@
 			<staticText>
 				<reportElement uuid="b4a9203f-5961-46e5-ab81-e5c11f85a3ed" positionType="Float" mode="Opaque" x="0" y="127" width="555" height="20" isRemoveLineWhenBlank="true" backcolor="#E6E6E6"/>
 				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true" isItalic="false"/>
+					<font isBold="true" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[Employer's contact details]]></text>
 			</staticText>
@@ -510,7 +510,7 @@
 			<staticText>
 				<reportElement uuid="9ece30f0-bf0a-43e6-b36c-9b642b323f4e" positionType="Float" mode="Opaque" x="0" y="329" width="555" height="20" isRemoveLineWhenBlank="true" backcolor="#E6E6E6"/>
 				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true" isItalic="false"/>
+					<font isBold="true" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[Additional details on your last wage]]></text>
 			</staticText>
@@ -556,7 +556,7 @@
 					<printWhenExpression><![CDATA[!$F{displayPensionScheme}.isEmpty()]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true" isItalic="false"/>
+					<font isBold="true" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[Pension Schemes]]></text>
 			</staticText>
@@ -635,7 +635,7 @@
 					<printWhenExpression><![CDATA[!$F{displayAboutExpensesToDoEmployment}.isEmpty()]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true" isItalic="false"/>
+					<font isBold="true" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[About expenses to do with your employment]]></text>
 			</staticText>
@@ -674,7 +674,7 @@
 					<printWhenExpression><![CDATA[!$F{displayJobExpenses}.isEmpty()]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true" isItalic="false"/>
+					<font isBold="true" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[Necessary expenses to do your job]]></text>
 			</staticText>
@@ -703,7 +703,7 @@
 					<printWhenExpression><![CDATA[!$F{displayChildCareExpensed}.isEmpty()]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true" isItalic="false"/>
+					<font isBold="true" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[Childcare expenses while you are at work]]></text>
 			</staticText>
@@ -784,7 +784,7 @@
 					<printWhenExpression><![CDATA[!$F{displayExpensesRelatedToPerson}.isEmpty()]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true" isItalic="false"/>
+					<font isBold="true" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[Expenses related to the person you care for, while you are at work]]></text>
 			</staticText>

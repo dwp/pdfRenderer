@@ -25,7 +25,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingCustomerConsentAndDeclaration"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Part 9 - Customer Consent and Declaration]]></text>
 			</staticText>
@@ -46,7 +46,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingConsent"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Consent]]></text>
 			</staticText>
@@ -66,7 +66,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingDisclaimer"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Disclaimer]]></text>
 			</staticText>
@@ -85,7 +85,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingDeclaration"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Declaration]]></text>
 			</staticText>

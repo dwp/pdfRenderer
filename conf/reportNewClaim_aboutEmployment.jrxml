@@ -24,7 +24,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart5AboutYourEmployment"/>
 				</reportElement>
 				<textElement markup="styled">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Part 5 - About Your Employment]]></text>
 			</staticText>

@@ -70,7 +70,7 @@
 						<printWhenExpression><![CDATA[$F{AboutYouTheCarerTimeOutsideGBLast3YearsAnswer}.equals("Yes")]]></printWhenExpression>
 					</reportElement>
 					<textElement verticalAlignment="Top" markup="none">
-						<font size="14" isBold="true"/>
+						<font  isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA["Period Abroad " + $V{variable1}]]></textFieldExpression>
 				</textField>

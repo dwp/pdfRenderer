@@ -129,7 +129,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart7AboutOtherMoney"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Part 7 - About Other Money]]></text>
 			</staticText>
@@ -142,7 +142,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingBenefitsAndPayments"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Benefits and payments]]></text>
 			</staticText>
@@ -208,7 +208,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingStatutoryPay"/>
 				</reportElement>
 				<textElement>
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Statutory Pay]]></text>
 			</staticText>

@@ -36,7 +36,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingAdditionalInformation"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Additional Information]]></text>
 			</staticText>

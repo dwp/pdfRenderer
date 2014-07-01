@@ -39,7 +39,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingCustomerEvidenceList"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Part 10 - Customer Evidence List]]></text>
 			</staticText>
@@ -90,7 +90,7 @@
 			<staticText>
 				<reportElement uuid="fe0558c0-060a-461d-892b-3d613bcb38d7" positionType="Float" x="1" y="111" width="530" height="21"/>
 				<textElement>
-					<font size="12" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[*************************END OF PRINT**********************]]></text>
 			</staticText>
