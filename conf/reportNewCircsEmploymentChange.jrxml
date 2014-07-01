@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewCircsBreaksInCare" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="6995e436-52bd-4ce4-966d-188e2b70830b">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="791"/>
+	<property name="ireport.y" value="71"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
@@ -459,7 +459,7 @@
 				<textFieldExpression><![CDATA[$F{EmpChangeTypeOfWorkAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="76">
+		<band height="114">
 			<printWhenExpression><![CDATA[$F{EmpChangeTypeOfWorkAnswer} == "self-employed"]]></printWhenExpression>
 			<staticText>
 				<reportElement uuid="08c7b9ad-9096-49a4-834e-d6df80d37a6d" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="555" height="18" forecolor="#000000">
@@ -481,22 +481,22 @@
 				<textFieldExpression><![CDATA[$F{SelfEmpTypeOfSelfEmploymentAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="6499a26c-3bce-4949-b772-0fc12c0f3238" positionType="Float" x="0" y="38" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="6499a26c-3bce-4949-b772-0fc12c0f3238" positionType="Float" x="0" y="38" width="350" height="40" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{SelfEmpTotalIncomeQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="2126a0aa-c51a-4f2c-a495-a5cb8cae21e3" positionType="Float" x="355" y="38" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="2126a0aa-c51a-4f2c-a495-a5cb8cae21e3" positionType="Float" x="355" y="38" width="197" height="40" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{SelfEmpTotalIncomeAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="12c14cac-abc2-4912-a4e8-de48ef05b386" positionType="Float" x="0" y="56" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="12c14cac-abc2-4912-a4e8-de48ef05b386" positionType="Float" x="0" y="78" width="350" height="36" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{SelfEmpMoreAboutChangesQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="0e40338d-7b88-44f0-8ba9-67c61d5b00d7" positionType="Float" x="355" y="56" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="0e40338d-7b88-44f0-8ba9-67c61d5b00d7" positionType="Float" x="355" y="78" width="197" height="36" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{SelfEmpMoreAboutChangesAnswer}]]></textFieldExpression>
 			</textField>
