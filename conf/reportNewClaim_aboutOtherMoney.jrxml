@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYourPartner" language="groovy" pageWidth="555" pageHeight="872" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="2c76a7f8-deb9-45af-83f2-c12559d20c72">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="35"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
@@ -288,68 +288,68 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_addressForNestedReports.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="117" splitType="Immediate">
+		<band height="146" splitType="Immediate">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="39a51b43-4cf7-4e12-a63d-a0127684aefc" positionType="Float" x="0" y="1" width="350" height="43" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="39a51b43-4cf7-4e12-a63d-a0127684aefc" positionType="Float" x="0" y="1" width="350" height="70" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{otherMoneySPQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="8e5b4a39-7fb9-4a3f-95d4-8cd9c55a7249" positionType="Float" x="355" y="1" width="197" height="43" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="8e5b4a39-7fb9-4a3f-95d4-8cd9c55a7249" positionType="Float" x="355" y="1" width="197" height="70" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{otherMoneySPAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="b768d1a4-4cf0-4bf1-a700-b1df02712cca" positionType="Float" x="0" y="44" width="350" height="18" isRemoveLineWhenBlank="true">
+				<reportElement uuid="b768d1a4-4cf0-4bf1-a700-b1df02712cca" positionType="Float" x="0" y="71" width="350" height="18" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{otherMoneySPAnswer}.equals("Yes")]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{otherMoneySPPaymentAmountQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="2156bb53-9ae4-4663-a71b-abdf4a2ab29f" positionType="Float" x="355" y="44" width="197" height="18" isRemoveLineWhenBlank="true">
+				<reportElement uuid="2156bb53-9ae4-4663-a71b-abdf4a2ab29f" positionType="Float" x="355" y="71" width="197" height="18" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{otherMoneySPAnswer}.equals("Yes")]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{otherMoneySPPaymentAmountAmount}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="c081e130-794f-485f-a8b7-5de9464d62b6" positionType="Float" x="0" y="62" width="350" height="18" isRemoveLineWhenBlank="true">
+				<reportElement uuid="c081e130-794f-485f-a8b7-5de9464d62b6" positionType="Float" x="0" y="89" width="350" height="18" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{otherMoneySPAnswer}.equals("Yes")]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{otherMoneySPPaymentFrequencyQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="27eba973-7502-486b-a601-b7b19b5ce18e" positionType="Float" x="355" y="62" width="197" height="18" isRemoveLineWhenBlank="true">
+				<reportElement uuid="27eba973-7502-486b-a601-b7b19b5ce18e" positionType="Float" x="355" y="89" width="197" height="18" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{otherMoneySPAnswer}.equals("Yes")]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{otherMoneySPPaymentFrequencyAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="cc35ed85-4dea-46b3-8685-7b854653e29e" positionType="Float" x="355" y="80" width="197" height="18" isRemoveLineWhenBlank="true">
+				<reportElement uuid="cc35ed85-4dea-46b3-8685-7b854653e29e" positionType="Float" x="355" y="107" width="197" height="18" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{otherMoneySPAnswer}.equals("Yes")]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{otherMoneySPPaymentFrequencyAnswer}=="Other" ? $F{otherMoneySPPaymentFrequencyOther} : ""]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="0dbaa7c2-f7d9-4344-b330-7d45ee76ccc2" positionType="Float" x="0" y="98" width="350" height="18" isRemoveLineWhenBlank="true">
+				<reportElement uuid="0dbaa7c2-f7d9-4344-b330-7d45ee76ccc2" positionType="Float" x="0" y="125" width="350" height="18" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{otherMoneySPAnswer}.equals("Yes")]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{otherMoneySPEmployerNameQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="5e9d566e-7099-43fc-a64d-6c3c7883343a" positionType="Float" x="355" y="98" width="197" height="18" isRemoveLineWhenBlank="true">
+				<reportElement uuid="5e9d566e-7099-43fc-a64d-6c3c7883343a" positionType="Float" x="355" y="125" width="197" height="18" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{otherMoneySPAnswer}.equals("Yes")]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{otherMoneySPEmployerNameAnswer}]]></textFieldExpression>
 			</textField>
 			<subreport>
-				<reportElement uuid="35137a21-8cdc-4abb-8133-c3754e88b753" positionType="Float" x="0" y="116" width="555" height="1" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="35137a21-8cdc-4abb-8133-c3754e88b753" positionType="Float" x="0" y="143" width="555" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
