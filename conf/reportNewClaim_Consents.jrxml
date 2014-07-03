@@ -4,7 +4,7 @@
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
-    <template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
+	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
 	<queryString language="xPath">
 		<![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Consents/Consent]]>
 	</queryString>
@@ -24,9 +24,9 @@
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="75" splitType="Stretch">
+		<band height="74" splitType="Immediate">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="5f5b2185-9b5f-4d1e-858b-24852cd2757e" positionType="Float" x="0" y="0" width="330" height="28" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="5f5b2185-9b5f-4d1e-858b-24852cd2757e" positionType="Float" x="0" y="0" width="350" height="28" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ConsentQuestionLabel}]]></textFieldExpression>
 			</textField>
@@ -36,7 +36,7 @@
 				<textFieldExpression><![CDATA[$F{ConsentAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="2e1473c5-5820-429d-a8d0-be33b8e0ef10" positionType="Float" x="0" y="28" width="330" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="2e1473c5-5820-429d-a8d0-be33b8e0ef10" positionType="Float" x="0" y="28" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ConsentWhyQuestionLabel}]]></textFieldExpression>
 			</textField>
