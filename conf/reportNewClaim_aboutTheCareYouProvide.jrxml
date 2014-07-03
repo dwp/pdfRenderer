@@ -106,7 +106,7 @@
 		</band>
 	</title>
 	<detail>
-		<band height="314" splitType="Immediate">
+		<band height="334" splitType="Immediate">
 			<staticText>
 				<reportElement uuid="1cbce792-112d-4e39-8088-39c855728d3b" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="553" height="20" isRemoveLineWhenBlank="true">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingDetailsOfThePersonYouCareFor"/>
@@ -234,32 +234,32 @@
 				<text><![CDATA[More about the care you provide]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="96e328c6-ee58-4244-9db5-3f7f90196bb8" positionType="Float" x="0" y="245" width="350" height="25" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="96e328c6-ee58-4244-9db5-3f7f90196bb8" positionType="Float" x="0" y="245" width="350" height="35" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeCared35HoursQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="afcdb5c2-bad5-4e6c-b9bb-bff1dd057fae" positionType="Float" x="355" y="245" width="197" height="25" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="afcdb5c2-bad5-4e6c-b9bb-bff1dd057fae" positionType="Float" x="355" y="245" width="197" height="35" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeCared35HoursAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="662d9f0a-3e4c-48d9-bc72-d0c8001cc579" positionType="Float" x="0" y="270" width="350" height="25" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="662d9f0a-3e4c-48d9-bc72-d0c8001cc579" positionType="Float" x="0" y="280" width="350" height="35" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeCared35HoursBeforeQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="bd95bc79-cf26-49ce-8996-1d11bf56dcf0" positionType="Float" x="355" y="270" width="197" height="25" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="bd95bc79-cf26-49ce-8996-1d11bf56dcf0" positionType="Float" x="355" y="280" width="197" height="35" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeCared35HoursBeforeAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="7f34ebef-d770-48a5-8c8a-37e63ad553ae" positionType="Float" x="0" y="295" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="7f34ebef-d770-48a5-8c8a-37e63ad553ae" positionType="Float" x="0" y="315" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeDateStartCaringQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="84b9ee90-aaf5-4962-a85c-bbfe277d7318" positionType="Float" x="355" y="295" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="84b9ee90-aaf5-4962-a85c-bbfe277d7318" positionType="Float" x="355" y="315" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeDateStartCaringAnswer}]]></textFieldExpression>
 			</textField>
