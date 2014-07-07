@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewCircs" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="90378acd-33ad-413e-ad03-6f54642cad18">
 	<property name="ireport.zoom" value="4.0"/>
-	<property name="ireport.x" value="0"/>
+	<property name="ireport.x" value="1392"/>
 	<property name="ireport.y" value="262"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CircsTestCase10"/>
-    <template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
+	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
 	<style name="table">
 		<box>
 			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
@@ -149,25 +149,22 @@
 			<staticText>
 				<reportElement uuid="33f37f7e-ea89-47ec-9572-b60206334392" x="369" y="4" width="186" height="20"/>
 				<textElement textAlignment="Right">
-					<font  isBold="true" isItalic="true"/>
+					<font isBold="true" isItalic="true"/>
 				</textElement>
 				<text><![CDATA[Carer's Allowance]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="4c0f480a-90e9-4e9e-bd3a-20a48d069444" x="443" y="24" width="112" height="20"/>
 				<textElement textAlignment="Right">
-					<font  isItalic="true"/>
+					<font isItalic="true"/>
 				</textElement>
 				<text><![CDATA[Claim Form]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="7fc54fa3-8e8e-49e3-b237-71e48d1d5de5" x="369" y="44" width="186" height="20"/>
-				<textElement textAlignment="Right"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
 				<text><![CDATA[This form was completed in English]]></text>
 			</staticText>
-			<break>
-				<reportElement uuid="ae481603-4ddd-43c8-a8d3-7287ea703788" x="0" y="3" width="540" height="1"/>
-			</break>
 		</band>
 		<band height="3">
 			<subreport>

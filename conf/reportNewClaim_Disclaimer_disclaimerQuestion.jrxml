@@ -3,8 +3,8 @@
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
-    <property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
-    <template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/valtechuk/carers-dev-pdf/pdfService/pdfService/conf/"]]></defaultValueExpression>
 	</parameter>
@@ -20,13 +20,13 @@
 	<detail>
 		<band height="20" splitType="Immediate">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="da37dfe6-34e3-487b-83ba-f4bcbd593d68" positionType="Float" x="0" y="0" width="330" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement verticalAlignment="Middle"/>
+				<reportElement uuid="da37dfe6-34e3-487b-83ba-f4bcbd593d68" positionType="Float" x="0" y="0" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{Question}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="e1e6da2c-4b06-412f-abc3-78d85a5ef810" positionType="Float" x="335" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement verticalAlignment="Middle"/>
+				<reportElement uuid="e1e6da2c-4b06-412f-abc3-78d85a5ef810" positionType="Float" x="355" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{Answer}]]></textFieldExpression>
 			</textField>
 		</band>
