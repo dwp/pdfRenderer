@@ -36,6 +36,10 @@ object XMLCircsData extends TestUtils{
     claimantDetails(xml) ++ careeDetails(xml) ++ breaksInCareChangeDetails(xml) ++ declaration(xml:Elem)
   }
 
+  def functionalTestDataOtherDetails(xml: Elem) = {
+    claimantDetails(xml) ++ careeDetails(xml) ++ otherChanges(xml) ++ declaration(xml:Elem)
+  }
+
   def claimantDetails(xml:Elem) = {
     val claimantDetails = ClaimantDetails(xml).claimantDetails.map(s => buildQuestion(s._1.text, s._2.text))
     Seq(
@@ -65,6 +69,14 @@ object XMLCircsData extends TestUtils{
       "About your self employment"
     ) ++ details
   }
+
+  def otherChanges(xml:Elem) = {
+    val details = OtherChangesDetails(xml).otherChangesData.map(s => buildQuestion(s._1.text, s._2.text))
+    Seq(
+      "Part 2 - Change in Circumstance - Other Changes"
+    ) ++ details
+  }
+
 
   def paymentBankDetails(xml:Elem) = {
     val details = PaymentBankDetailsPaidIntoAccount(xml).paidIntoAccountData.map(s => buildQuestion(s._1.text, s._2.text))

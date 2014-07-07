@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewCircs" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="90378acd-33ad-413e-ad03-6f54642cad18">
-	<property name="ireport.zoom" value="4.0"/>
-	<property name="ireport.x" value="1392"/>
-	<property name="ireport.y" value="262"/>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewCircs" language="groovy" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="90378acd-33ad-413e-ad03-6f54642cad18">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CircsTestCase10"/>
 	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
@@ -97,76 +97,70 @@
 	<background>
 		<band splitType="Stretch"/>
 	</background>
-	<title>
-		<band splitType="Stretch"/>
-	</title>
 	<pageHeader>
 		<band height="20" splitType="Stretch">
 			<rectangle>
-				<reportElement uuid="75f637d8-0398-4c9a-a01e-46db988c9bf3" x="0" y="0" width="555" height="20" backcolor="#666666"/>
+				<reportElement uuid="75f637d8-0398-4c9a-a01e-46db988c9bf3" x="0" y="0" width="595" height="20" backcolor="#666666"/>
 			</rectangle>
 			<staticText>
-				<reportElement uuid="eb8201ef-3319-4f71-ba4a-434848230663" x="2" y="0" width="90" height="20" forecolor="#FFFFFF"/>
+				<reportElement uuid="eb8201ef-3319-4f71-ba4a-434848230663" x="2" y="0" width="102" height="20" forecolor="#FFFFFF"/>
 				<textElement verticalAlignment="Middle">
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Transaction:]]></text>
 			</staticText>
 			<textField>
-				<reportElement uuid="97b2efa8-c290-4b0e-b5d1-0ddc084d45e0" x="93" y="0" width="126" height="20" forecolor="#FFFFFF"/>
+				<reportElement uuid="97b2efa8-c290-4b0e-b5d1-0ddc084d45e0" x="104" y="0" width="153" height="20" forecolor="#FFFFFF"/>
 				<textElement verticalAlignment="Middle">
 					<font isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TransactionId}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="f611597b-ca9e-4eee-b245-2214c1573ce9" x="250" y="0" width="193" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF"/>
+				<reportElement uuid="f611597b-ca9e-4eee-b245-2214c1573ce9" x="257" y="0" width="212" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{ClaimantSurname}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="fa8df42d-d92f-4051-a603-d9108427489c" x="469" y="0" width="85" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF"/>
+				<reportElement uuid="fa8df42d-d92f-4051-a603-d9108427489c" x="469" y="0" width="113" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{NationalInsuranceNumber}]]></textFieldExpression>
 			</textField>
 		</band>
 	</pageHeader>
-	<columnHeader>
-		<band height="12" splitType="Stretch"/>
-	</columnHeader>
 	<detail>
 		<band height="70" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="7928087b-40c5-44a2-a88b-033a02972ec2" x="0" y="4" width="79" height="20"/>
+				<reportElement uuid="7928087b-40c5-44a2-a88b-033a02972ec2" x="0" y="4" width="145" height="20"/>
 				<textElement/>
 				<text><![CDATA[Service version: ]]></text>
 			</staticText>
 			<textField>
-				<reportElement uuid="3205d842-c416-44c0-82fe-89f83bcb8739" x="81" y="4" width="100" height="17"/>
+				<reportElement uuid="3205d842-c416-44c0-82fe-89f83bcb8739" x="145" y="4" width="100" height="20"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{Version}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="33f37f7e-ea89-47ec-9572-b60206334392" x="369" y="4" width="186" height="20"/>
+				<reportElement uuid="33f37f7e-ea89-47ec-9572-b60206334392" x="408" y="4" width="186" height="20"/>
 				<textElement textAlignment="Right">
 					<font isBold="true" isItalic="true"/>
 				</textElement>
 				<text><![CDATA[Carer's Allowance]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="4c0f480a-90e9-4e9e-bd3a-20a48d069444" x="443" y="24" width="112" height="20"/>
+				<reportElement uuid="4c0f480a-90e9-4e9e-bd3a-20a48d069444" x="482" y="24" width="112" height="20"/>
 				<textElement textAlignment="Right">
 					<font isItalic="true"/>
 				</textElement>
 				<text><![CDATA[Claim Form]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="7fc54fa3-8e8e-49e3-b237-71e48d1d5de5" x="369" y="44" width="186" height="20"/>
-				<textElement textAlignment="Left" verticalAlignment="Middle"/>
-				<text><![CDATA[This form was completed in English]]></text>
+				<reportElement uuid="7fc54fa3-8e8e-49e3-b237-71e48d1d5de5" x="333" y="44" width="261" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<text><![CDATA[     This form was completed in English]]></text>
 			</staticText>
 		</band>
-		<band height="3">
+		<band height="1" splitType="Immediate">
 			<subreport>
 				<reportElement uuid="4710f3be-ed46-452c-9664-173aad5d1c8a" positionType="Float" x="0" y="0" width="555" height="1"/>
 				<subreportParameter name="SUBREPORT_DIR">
@@ -176,7 +170,7 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsIdentification.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="4">
+		<band height="1" splitType="Immediate">
 			<printWhenExpression><![CDATA[!$F{ShowStoppedCaringSection}.isEmpty()]]></printWhenExpression>
 			<subreport runToBottom="true">
 				<reportElement uuid="5bdc073c-2e2f-4019-a5f3-adb0b7895289" positionType="Float" x="0" y="0" width="555" height="1"/>
@@ -187,7 +181,7 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsStoppedCaring.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="3">
+		<band height="1" splitType="Immediate">
 			<printWhenExpression><![CDATA[!$F{ShowChangeOfAddressSection}.isEmpty()]]></printWhenExpression>
 			<subreport runToBottom="true">
 				<reportElement uuid="c85ab019-8300-4323-b094-9ea2beb74163" positionType="Float" x="0" y="0" width="555" height="1"/>
@@ -198,7 +192,7 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsChangeOfAddress.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="3">
+		<band height="1" splitType="Immediate">
 			<printWhenExpression><![CDATA[!$F{ShowPaymentBankDetailsSection}.isEmpty()]]></printWhenExpression>
 			<subreport runToBottom="true">
 				<reportElement uuid="e01f87d6-f598-42e2-8c0e-1f63d48f456a" positionType="Float" x="0" y="0" width="555" height="1"/>
@@ -209,7 +203,7 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsPaymentBankDetails.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="2">
+		<band height="1" splitType="Immediate">
 			<printWhenExpression><![CDATA[!$F{ShowSelfEmployedSection}.isEmpty()]]></printWhenExpression>
 			<subreport runToBottom="true">
 				<reportElement uuid="1a3f9bb2-c3ff-4ad2-a98d-a06f07866943" positionType="Float" x="0" y="0" width="555" height="1"/>
@@ -220,7 +214,7 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsSelfEmployment.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="2">
+		<band height="1" splitType="Immediate">
 			<printWhenExpression><![CDATA[!$F{ShowBreaksInCareSection}.isEmpty()]]></printWhenExpression>
 			<subreport runToBottom="true">
 				<reportElement uuid="03480f1a-abfb-4123-861f-0e5af4094c81" positionType="Float" x="0" y="0" width="555" height="1"/>
@@ -231,7 +225,7 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsBreaksInCare.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="2">
+		<band height="1" splitType="Immediate">
 			<printWhenExpression><![CDATA[!$F{ShowEmploymentChangeSection}.isEmpty()]]></printWhenExpression>
 			<subreport runToBottom="true">
 				<reportElement uuid="ce297c61-1e15-4922-94cc-50fb831cb95f" positionType="Float" x="0" y="0" width="555" height="1"/>
@@ -242,7 +236,17 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsEmploymentChange.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="3">
+		<band height="1" splitType="Immediate">
+			<subreport runToBottom="true">
+				<reportElement uuid="30b7c3cf-4e6b-45b6-8efd-5ad89f22cf8a" x="0" y="0" width="555" height="1"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsAdditionalInfo.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="1" splitType="Immediate">
 			<subreport runToBottom="true">
 				<reportElement uuid="d93bb26d-8ca2-4293-bb4a-4c903868681c" positionType="Float" x="0" y="0" width="555" height="1"/>
 				<subreportParameter name="SUBREPORT_DIR">

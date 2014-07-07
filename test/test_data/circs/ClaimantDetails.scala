@@ -86,3 +86,7 @@ case class BreaksInCareDetails(xml:Elem) extends CircsUtils(xml \ "DWPCATransact
 case class BreaksFromCaringEnded(xml:Elem) extends CircsUtils(xml \ "DWPCATransaction" \ "DWPCAChangeOfCircumstances" \ "BreakFromCaring" \ "BreakFromCaringEnded"){
   val breaksFromCaringEndedData = prepareTestData(Seq("HasBreakFromCaringEnded", "EndDate", "EndTime", "ExpectStartCaringAgain", "ExpectStartCaringAgainDate", "PermanentBreakDate"))
 }
+
+case class OtherChangesDetails(xml: Elem) extends CircsUtils(xml \ "DWPCATransaction" \ "DWPCAChangeOfCircumstances"){
+  val otherChangesData = prepareTestData(Seq("OtherChanges"))
+}
