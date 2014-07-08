@@ -7,8 +7,7 @@ object ApplicationBuild extends Build {
   val appName = "p1"
   val appVersion = "1.0-SNAPSHOT"
 
-  var repo: Seq[Project.Setting[_]] = Seq(resolvers += "Carers repo" at "http://build.3cbeta.co.uk:8080/artifactory/repo/",
-                                          resolvers += "Jasper Reports Repo" at "http://archiva.fdvs.com.ar/repository/public1/")
+  var repo: Seq[Project.Setting[_]] = Seq(resolvers += "Carers repo" at "http://build.3cbeta.co.uk:8080/artifactory/repo/")
 
 
   val appDependencies = Seq(
