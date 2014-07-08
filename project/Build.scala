@@ -17,7 +17,6 @@ object ApplicationBuild extends Build {
     "net.sf.jasperreports" % "jasperreports" % "5.2.0",
     "com.lowagie" % "itext" % "4.2.1",
     "com.itextpdf" % "itextpdf" % "5.4.4",
-    "ar.com.fdvs" % "DynamicJasper" % "4.0.0",
     "xalan" % "xalan" % "2.7.1",
     "org.codehaus.groovy" % "groovy-all" % "2.0.1"
   )
