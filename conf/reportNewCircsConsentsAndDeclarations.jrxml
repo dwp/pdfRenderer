@@ -65,7 +65,7 @@
 		</band>
 	</pageHeader>
 	<detail>
-		<band height="328" splitType="Immediate">
+		<band height="338" splitType="Immediate">
 			<staticText>
 				<reportElement uuid="de1d3cb5-12c0-49c2-bcb6-284eee491c31" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="555" height="32" forecolor="#000000"/>
 				<textElement verticalAlignment="Middle">
@@ -134,27 +134,27 @@
 				<textFieldExpression><![CDATA[$F{DeclarationConfirmAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="891a97f1-6f6f-4e7e-8c3a-fc680efe1776" positionType="Float" x="0" y="245" width="350" height="45" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="891a97f1-6f6f-4e7e-8c3a-fc680efe1776" positionType="Float" x="0" y="245" width="350" height="55" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ConsentQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="f839f0ea-ea95-4972-a716-cc62d023ca3f" positionType="Float" x="355" y="245" width="197" height="45" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="f839f0ea-ea95-4972-a716-cc62d023ca3f" positionType="Float" x="355" y="245" width="197" height="55" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ConsentAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="b0faa3f6-b0ec-43f4-b65f-5b83582a627e" positionType="Float" x="0" y="290" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="b0faa3f6-b0ec-43f4-b65f-5b83582a627e" positionType="Float" x="0" y="300" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ConsentWhyQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="e0c20ce0-7cc4-4431-8648-ae62bda7f9ff" positionType="Float" x="355" y="290" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="e0c20ce0-7cc4-4431-8648-ae62bda7f9ff" positionType="Float" x="355" y="300" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ConsentWhyAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="f181b4e2-8ba8-414f-8d70-abdd9116ff88" positionType="Float" x="0" y="308" width="555" height="20"/>
+				<reportElement uuid="f181b4e2-8ba8-414f-8d70-abdd9116ff88" positionType="Float" x="0" y="318" width="555" height="20"/>
 				<textElement textAlignment="Left"/>
 				<text><![CDATA[*************************END OF PRINT**********************]]></text>
 			</staticText>
