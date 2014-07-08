@@ -6,5 +6,6 @@
 		<pen lineStyle="Solid"/>
 	</style>
 	<style name="SubHeadingClaim" mode="Opaque" forecolor="#000000" backcolor="#E6E6E6" fontName="Arial" fontSize="15" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
-    <style name="Base" isDefault="true" fontName="Arial" fontSize="15"/>
+    <style name="Base" isDefault="true" fontName="Arial" fontSize="15">
+    </style>
 </jasperTemplate>

@@ -142,12 +142,12 @@
 	<detail>
 		<band height="70" splitType="Immediate">
 			<staticText>
-				<reportElement uuid="7928087b-40c5-44a2-a88b-033a02972ec2" positionType="Float" x="0" y="4" width="79" height="20"/>
+				<reportElement uuid="7928087b-40c5-44a2-a88b-033a02972ec2" positionType="Float" x="0" y="4" width="124" height="20"/>
 				<textElement verticalAlignment="Middle"/>
 				<text><![CDATA[Service version: ]]></text>
 			</staticText>
 			<textField>
-				<reportElement uuid="3205d842-c416-44c0-82fe-89f83bcb8739" positionType="Float" x="81" y="4" width="100" height="20"/>
+				<reportElement uuid="3205d842-c416-44c0-82fe-89f83bcb8739" positionType="Float" x="124" y="4" width="100" height="20"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{Version}]]></textFieldExpression>
 			</textField>
@@ -166,8 +166,8 @@
 				<text><![CDATA[Claim Form]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="7fc54fa3-8e8e-49e3-b237-71e48d1d5de5" positionType="Float" x="369" y="44" width="186" height="20"/>
-				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<reportElement uuid="7fc54fa3-8e8e-49e3-b237-71e48d1d5de5" positionType="Float" x="293" y="44" width="262" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
 				<text><![CDATA[This form was completed in English]]></text>
 			</staticText>
 		</band>

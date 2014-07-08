@@ -7,7 +7,9 @@ object ApplicationBuild extends Build {
   val appName = "p1"
   val appVersion = "1.0-SNAPSHOT"
 
-  var repo: Seq[Project.Setting[_]] = Seq(resolvers += "Carers repo" at "http://build.3cbeta.co.uk:8080/artifactory/repo/")
+  var repo: Seq[Project.Setting[_]] = Seq(resolvers += "Carers repo" at "http://build.3cbeta.co.uk:8080/artifactory/repo/",
+                                          resolvers += "Jasper Reports Repo" at "http://archiva.fdvs.com.ar/repository/public1/")
+
 
   val appDependencies = Seq(
     "me.moocar" % "logback-gelf" % "0.9.6p2",
@@ -15,6 +17,7 @@ object ApplicationBuild extends Build {
     "net.sf.jasperreports" % "jasperreports" % "5.2.0",
     "com.lowagie" % "itext" % "4.2.1",
     "com.itextpdf" % "itextpdf" % "5.4.4",
+    "ar.com.fdvs" % "DynamicJasper" % "4.0.0",
     "xalan" % "xalan" % "2.7.1",
     "org.codehaus.groovy" % "groovy-all" % "2.0.1"
   )

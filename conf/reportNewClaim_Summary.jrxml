@@ -396,7 +396,7 @@
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="79256d1b-93c2-4e6d-871d-9ad261188fb3" positionType="Float" x="168" y="37" width="180" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement>
-					<font fontName="SansSerif"/>
+					<font fontName="Arial" size="11"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ClaimantSurnameAnswer}]]></textFieldExpression>
 			</textField>
@@ -413,7 +413,7 @@
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="4252d74b-0fa3-43ac-a029-efa997d4c608" positionType="Float" x="168" y="55" width="180" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement>
-					<font fontName="SansSerif"/>
+					<font fontName="Arial" size="11"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ClaimantOtherNamesAnswer}]]></textFieldExpression>
 			</textField>
