@@ -24,7 +24,7 @@
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="74" splitType="Immediate">
+		<band height="114" splitType="Immediate">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="5f5b2185-9b5f-4d1e-858b-24852cd2757e" positionType="Float" x="0" y="0" width="350" height="28" isRemoveLineWhenBlank="true"/>
 				<textElement/>
@@ -36,12 +36,12 @@
 				<textFieldExpression><![CDATA[$F{ConsentAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="2e1473c5-5820-429d-a8d0-be33b8e0ef10" positionType="Float" x="0" y="28" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="2e1473c5-5820-429d-a8d0-be33b8e0ef10" positionType="Float" x="0" y="28" width="552" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ConsentWhyQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="b9bbee5b-521f-4c04-b6aa-87a20f75b9e1" positionType="Float" x="355" y="28" width="197" height="46" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="b9bbee5b-521f-4c04-b6aa-87a20f75b9e1" positionType="Float" x="0" y="46" width="552" height="68" isRemoveLineWhenBlank="true"/>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{ConsentWhyAnswer}]]></textFieldExpression>
 			</textField>
