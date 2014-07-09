@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYouTheCarer" language="groovy" pageWidth="555" pageHeight="872" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a66aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="154"/>
+	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
@@ -204,7 +204,7 @@
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimDateAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="77" splitType="Immediate">
+		<band height="89" splitType="Immediate">
 			<staticText>
 				<reportElement uuid="f647fa16-31cd-4b73-8c88-855fe67cf124" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="553" height="20" forecolor="#000000">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourNationalityAndResidency"/>
@@ -225,22 +225,22 @@
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerNationalityAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="2e065a0b-a510-4baa-baa7-d98f99140d69" positionType="Float" x="0" y="41" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="2e065a0b-a510-4baa-baa7-d98f99140d69" positionType="Float" x="0" y="41" width="350" height="30" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerNormallyLiveInGBQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="f51a4d7c-a6d1-4fe7-95e7-48e922675511" positionType="Float" x="355" y="41" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="f51a4d7c-a6d1-4fe7-95e7-48e922675511" positionType="Float" x="355" y="41" width="197" height="30" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerNormallyLiveInGBAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="247b8325-214f-49d6-9504-bd5f128ba8e0" positionType="Float" x="0" y="59" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="247b8325-214f-49d6-9504-bd5f128ba8e0" positionType="Float" x="0" y="71" width="350" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerCountryNormallyLiveQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="06829694-2b1a-45df-8b32-142988c3f223" positionType="Float" x="355" y="59" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="06829694-2b1a-45df-8b32-142988c3f223" positionType="Float" x="355" y="71" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerCountryNormallyLiveAnswer}]]></textFieldExpression>
 			</textField>
