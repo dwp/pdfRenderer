@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Address" language="groovy" pageWidth="555" pageHeight="872" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="ac31be84-fd90-4512-8a77-f66c41de4722">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Address" language="groovy" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="ac31be84-fd90-4512-8a77-f66c41de4722">
 	<property name="ireport.zoom" value="2.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
@@ -27,7 +27,7 @@
 	<detail>
 		<band height="20" splitType="Stretch">
 			<subreport>
-				<reportElement uuid="1e3e4155-43bc-444e-b78b-c05e69c14019" x="355" y="0" width="197" height="18"/>
+				<reportElement uuid="1e3e4155-43bc-444e-b78b-c05e69c14019" x="397" y="0" width="197" height="18"/>
 				<subreportParameter name="XPATH_ADDRESS">
 					<subreportParameterExpression><![CDATA[$P{XPATH_ADDRESS}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -35,7 +35,7 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Street.jasper"]]></subreportExpression>
 			</subreport>
 			<textField>
-				<reportElement uuid="18e0bbea-661e-4dac-a8f5-afeeb3f93df1" x="0" y="0" width="350" height="18"/>
+				<reportElement uuid="18e0bbea-661e-4dac-a8f5-afeeb3f93df1" x="0" y="0" width="392" height="18"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AddressLabel}]]></textFieldExpression>
 			</textField>
@@ -43,12 +43,12 @@
 		<band height="19" splitType="Prevent">
 			<printWhenExpression><![CDATA[$F{PostCode} != null]]></printWhenExpression>
 			<textField>
-				<reportElement uuid="fcb11e07-7e2a-4fdf-89e8-2eed4992fed3" x="355" y="0" width="197" height="18"/>
+				<reportElement uuid="fcb11e07-7e2a-4fdf-89e8-2eed4992fed3" x="397" y="0" width="197" height="18"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PostCode}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement uuid="2eca1c28-d098-44ad-90fe-06ed095f36ad" x="0" y="0" width="350" height="18"/>
+				<reportElement uuid="2eca1c28-d098-44ad-90fe-06ed095f36ad" x="0" y="0" width="392" height="18"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$P{postCode}]]></textFieldExpression>
 			</textField>

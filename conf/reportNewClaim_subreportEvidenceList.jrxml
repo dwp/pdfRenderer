@@ -32,14 +32,14 @@
 	<detail>
 		<band height="19" splitType="Stretch">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="fcd3ab37-4374-45fc-bfd2-b8f2313382c1" positionType="Float" x="0" y="0" width="555" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="fcd3ab37-4374-45fc-bfd2-b8f2313382c1" positionType="Float" x="0" y="0" width="595" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{Title}]]></textFieldExpression>
 			</textField>
 			<subreport>
-				<reportElement uuid="1726b69b-3884-4ec3-9efa-7d50543f66a7" positionType="Float" x="0" y="18" width="555" height="1" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="1726b69b-3884-4ec3-9efa-7d50543f66a7" positionType="Float" x="0" y="18" width="595" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>

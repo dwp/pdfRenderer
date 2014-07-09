@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="560" pageHeight="872" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="560" pageHeight="842" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
@@ -569,7 +569,7 @@
 				<text><![CDATA[About your partner]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="a63933cd-3a19-4890-988c-c85fb8726d9d" positionType="Float" x="0" y="18" width="350" height="25" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="a63933cd-3a19-4890-988c-c85fb8726d9d" positionType="Float" x="0" y="18" width="392" height="25" isRemoveLineWhenBlank="true"/>
 				<textElement>
 					<paragraph spacingAfter="2"/>
 				</textElement>
@@ -581,7 +581,7 @@
 				<textFieldExpression><![CDATA[$F{HavePartnerAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="e3086a2c-2aee-486c-a760-0e281b32f062" positionType="Float" x="0" y="43" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="e3086a2c-2aee-486c-a760-0e281b32f062" positionType="Float" x="0" y="43" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PartnerNINOQuestionLabel}]]></textFieldExpression>
 			</textField>
@@ -591,7 +591,7 @@
 				<textFieldExpression><![CDATA[$F{PartnerNINOAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="287dbfa6-e2d6-44f9-92c2-b0610be86fb9" positionType="Float" x="0" y="61" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="287dbfa6-e2d6-44f9-92c2-b0610be86fb9" positionType="Float" x="0" y="61" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PartnerSurnameQuestionLabel}]]></textFieldExpression>
 			</textField>
@@ -601,7 +601,7 @@
 				<textFieldExpression><![CDATA[$F{PartnerSurnameAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="4781cb26-e86b-430b-8a3a-8c273d709ada" positionType="Float" x="0" y="79" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="4781cb26-e86b-430b-8a3a-8c273d709ada" positionType="Float" x="0" y="79" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PartnerOtherNamesQuestionLabel}]]></textFieldExpression>
 			</textField>
@@ -611,7 +611,7 @@
 				<textFieldExpression><![CDATA[$F{PartnerOtherNamesAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="82e81c14-546b-485f-8eaf-0f99be789334" positionType="Float" x="0" y="97" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="82e81c14-546b-485f-8eaf-0f99be789334" positionType="Float" x="0" y="97" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PartnerTitleQuestionLabel}]]></textFieldExpression>
 			</textField>
@@ -621,7 +621,7 @@
 				<textFieldExpression><![CDATA[$F{PartnerTitleAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="77a1b017-e3e4-475f-8b6e-49b563928787" positionType="Float" x="0" y="115" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="77a1b017-e3e4-475f-8b6e-49b563928787" positionType="Float" x="0" y="115" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PartnerDateOfBirthQuestionLabel}]]></textFieldExpression>
 			</textField>
@@ -631,7 +631,7 @@
 				<textFieldExpression><![CDATA[$F{PartnerDateOfBirthAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="254e6d57-80c4-4342-a1ce-7c332b11a9d0" positionType="Float" x="0" y="133" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="254e6d57-80c4-4342-a1ce-7c332b11a9d0" positionType="Float" x="0" y="133" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PartnerOtherSurnamesQuestionLabel}]]></textFieldExpression>
 			</textField>
@@ -658,7 +658,7 @@
 				<text><![CDATA[Claim Date]]></text>
 			</staticText>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="984cf590-bf0c-4c23-bc4b-be9d40d4fb00" positionType="Float" x="0" y="18" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="984cf590-bf0c-4c23-bc4b-be9d40d4fb00" positionType="Float" x="0" y="18" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ClaimDateQuestionLabel}]]></textFieldExpression>
 			</textField>
@@ -670,7 +670,7 @@
 		</band>
 		<band height="345" splitType="Immediate">
 			<frame>
-				<reportElement uuid="77d199bf-1cc8-4b67-b300-42adcd92df38" positionType="Float" x="0" y="0" width="555" height="344" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="77d199bf-1cc8-4b67-b300-42adcd92df38" positionType="Float" x="0" y="0" width="595" height="344" isRemoveLineWhenBlank="true"/>
 				<staticText>
 					<reportElement uuid="5235e441-eac8-4564-a092-4304954c961c" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="553" height="18" forecolor="#000000" backcolor="#E6E6E6">
 						<property name="net.sf.jasperreports.export.html.id" value="SubHeadingSummaryClaimSummary"/>

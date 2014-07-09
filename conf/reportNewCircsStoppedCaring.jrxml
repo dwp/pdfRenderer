@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewCircsStoppedCaring" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="2f200ebd-758d-4cff-8ba8-95514c4ae846">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewCircsStoppedCaring" language="groovy" pageWidth="595" pageHeight="802" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="2f200ebd-758d-4cff-8ba8-95514c4ae846">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
@@ -29,7 +29,7 @@
 	<pageHeader>
 		<band height="18" splitType="Immediate">
 			<staticText>
-				<reportElement uuid="d8452cc6-e21e-46ff-9472-8100e8b2967c" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="555" height="18" forecolor="#000000">
+				<reportElement uuid="d8452cc6-e21e-46ff-9472-8100e8b2967c" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="595" height="18" forecolor="#000000">
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingChangeOfStoppedCaring"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
@@ -42,22 +42,22 @@
 	<detail>
 		<band height="36" splitType="Immediate">
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="561b3cf2-30b1-49b1-81af-70cbc565c40d" positionType="Float" x="0" y="0" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="561b3cf2-30b1-49b1-81af-70cbc565c40d" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{StoppedCaringDateStoppedCaringQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="d2ecb442-b0bb-4f64-91bf-ab1e428758ea" positionType="Float" x="355" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="d2ecb442-b0bb-4f64-91bf-ab1e428758ea" positionType="Float" x="397" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{StoppedCaringDateStoppedCaringAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="6100bd8a-6c45-4534-9b8f-e4cc208368f9" positionType="Float" x="0" y="18" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="6100bd8a-6c45-4534-9b8f-e4cc208368f9" positionType="Float" x="0" y="18" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{StoppedCaringOtherChangesQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="ee95f6ed-b85b-494d-af25-78cb2baf2050" positionType="Float" x="355" y="18" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="ee95f6ed-b85b-494d-af25-78cb2baf2050" positionType="Float" x="397" y="18" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{StoppedCaringOtherChangesAnswer}]]></textFieldExpression>
 			</textField>

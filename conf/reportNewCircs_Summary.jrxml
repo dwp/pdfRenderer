@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewCircs_Summary" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewCircs_Summary" language="groovy" pageWidth="595" pageHeight="802" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
@@ -188,7 +188,7 @@
 				<text><![CDATA[Part 1 - About you - the carer]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="74f0d526-ec67-46c9-9728-59156b7c8f16" x="0" y="72" width="350" height="18" isPrintInFirstWholeBand="true">
+				<reportElement uuid="74f0d526-ec67-46c9-9728-59156b7c8f16" x="0" y="72" width="392" height="18" isPrintInFirstWholeBand="true">
 					<property name="local_mesure_unity" value="pixel"/>
 					<printWhenExpression><![CDATA[$F{ClaimantDateOfBirth} != null]]></printWhenExpression>
 				</reportElement>
@@ -196,7 +196,7 @@
 				<text><![CDATA[Date of Birth]]></text>
 			</staticText>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="7e4d35a8-ffa9-47b7-945c-f6a459e2e8c9" x="355" y="72" width="197" height="18" isRemoveLineWhenBlank="true">
+				<reportElement uuid="7e4d35a8-ffa9-47b7-945c-f6a459e2e8c9" x="397" y="72" width="197" height="18" isRemoveLineWhenBlank="true">
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				</reportElement>
@@ -214,14 +214,14 @@
 				<text><![CDATA[Your details]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true">
-				<reportElement uuid="adfb6e4e-67bf-47ac-926b-82b398f62c0c" x="355" y="36" width="197" height="18">
+				<reportElement uuid="adfb6e4e-67bf-47ac-926b-82b398f62c0c" x="397" y="36" width="197" height="18">
 					<property name="local_mesure_unity" value="pixel"/>
 				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ClaimantFullname}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="07031404-52ee-4601-b54f-cc8172b95cba" x="0" y="36" width="350" height="18">
+				<reportElement uuid="07031404-52ee-4601-b54f-cc8172b95cba" x="0" y="36" width="392" height="18">
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
@@ -230,7 +230,7 @@
 				<text><![CDATA[Full name]]></text>
 			</staticText>
 			<textField>
-				<reportElement uuid="9ee29fcb-8fb5-496b-a342-3e1aff3509e2" x="355" y="54" width="197" height="18">
+				<reportElement uuid="9ee29fcb-8fb5-496b-a342-3e1aff3509e2" x="397" y="54" width="197" height="18">
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
@@ -239,7 +239,7 @@
 				<textFieldExpression><![CDATA[$F{ClaimantNationalInsuranceNumber}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="4efb8ede-3752-4bb5-99bb-1755217e5b4c" x="0" y="54" width="350" height="18">
+				<reportElement uuid="4efb8ede-3752-4bb5-99bb-1755217e5b4c" x="0" y="54" width="392" height="18">
 					<property name="local_mesure_unity" value="pixel"/>
 				</reportElement>
 				<textElement/>
@@ -272,7 +272,7 @@
 		</band>
 		<band height="146">
 			<staticText>
-				<reportElement uuid="fe544d49-bb35-466b-be0a-5bc430e999b6" x="0" y="0" width="350" height="18" isRemoveLineWhenBlank="true">
+				<reportElement uuid="fe544d49-bb35-466b-be0a-5bc430e999b6" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{ClaimantDayTimePhoneNumber} != null]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
@@ -314,7 +314,7 @@
 				<text><![CDATA[Part 2 - About the care you provide]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="acb87ba8-3f87-48ca-912a-e43f779b06b3" x="0" y="110" width="350" height="18" isRemoveLineWhenBlank="true">
+				<reportElement uuid="acb87ba8-3f87-48ca-912a-e43f779b06b3" x="0" y="110" width="392" height="18" isRemoveLineWhenBlank="true">
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="local_mesure_unity" value="pixel"/>
@@ -334,7 +334,7 @@
 				<textFieldExpression><![CDATA[$F{CareeNationalInsuranceNumber}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="8b97cc5a-7b31-43f7-8975-78bad22e319f" x="0" y="74" width="350" height="18" isRemoveLineWhenBlank="true">
+				<reportElement uuid="8b97cc5a-7b31-43f7-8975-78bad22e319f" x="0" y="74" width="392" height="18" isRemoveLineWhenBlank="true">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<printWhenExpression><![CDATA[$F{CareeLastName} != null]]></printWhenExpression>
 				</reportElement>
@@ -349,7 +349,7 @@
 				<textFieldExpression><![CDATA[$F{CareeLastName}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="4f73e645-4cd4-4660-990f-e3366563d49c" x="0" y="92" width="350" height="18" isRemoveLineWhenBlank="true">
+				<reportElement uuid="4f73e645-4cd4-4660-990f-e3366563d49c" x="0" y="92" width="392" height="18" isRemoveLineWhenBlank="true">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<printWhenExpression><![CDATA[$F{CareeOtherNames} != null]]></printWhenExpression>
 				</reportElement>
@@ -364,7 +364,7 @@
 				<textFieldExpression><![CDATA[$F{CareeOtherNames}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="43be788b-1a8d-4b35-a456-91b6463abe3b" x="0" y="128" width="350" height="18" isPrintInFirstWholeBand="true">
+				<reportElement uuid="43be788b-1a8d-4b35-a456-91b6463abe3b" x="0" y="128" width="392" height="18" isPrintInFirstWholeBand="true">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<printWhenExpression><![CDATA[$F{CareeDateOfBirth} != null]]></printWhenExpression>
 				</reportElement>
@@ -427,7 +427,7 @@
 				<textFieldExpression><![CDATA[$F{CircsOtherChangesAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="c528da55-d198-47a6-8439-0c07572d6423" x="0" y="18" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="c528da55-d198-47a6-8439-0c07572d6423" x="0" y="18" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{CircsOtherChangesQuestion}]]></textFieldExpression>
 			</textField>
@@ -475,7 +475,7 @@
 			<property name="local_mesure_unitheight" value="pixel"/>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="c5ac2087-adea-4e7c-ac3d-633622e13dad" x="0" y="0" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="c5ac2087-adea-4e7c-ac3d-633622e13dad" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{CircsDeclarationQuestion}]]></textFieldExpression>
 			</textField>

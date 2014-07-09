@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Declaration" language="groovy" pageWidth="555" pageHeight="842" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="9294c83c-2f9e-43be-be00-e5341b401111">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Declaration" language="groovy" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="9294c83c-2f9e-43be-be00-e5341b401111">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
@@ -35,7 +35,7 @@
 	<detail>
 		<band height="2" splitType="Immediate">
 			<subreport>
-				<reportElement uuid="e9b10ce4-a2cc-4199-9cd5-2854b1554d31" positionType="Float" x="0" y="0" width="555" height="1" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="e9b10ce4-a2cc-4199-9cd5-2854b1554d31" positionType="Float" x="0" y="0" width="595" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -45,36 +45,36 @@
 		</band>
 		<band height="109" splitType="Immediate">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="c3c94047-8909-4057-8d7e-17a312bf5297" positionType="Float" x="0" y="3" width="350" height="68" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="c3c94047-8909-4057-8d7e-17a312bf5297" positionType="Float" x="0" y="3" width="392" height="68" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{DeclarationSomeOneElseQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="d21db177-9611-4f48-acbe-52de28d65ae1" positionType="Float" x="355" y="3" width="197" height="68" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="d21db177-9611-4f48-acbe-52de28d65ae1" positionType="Float" x="397" y="3" width="197" height="68" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{DeclarationSomeOneElseAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="dd747e36-227c-4960-ae51-ec1a643b57e6" positionType="Float" x="0" y="71" width="350" height="20" isRemoveLineWhenBlank="true">
+				<reportElement uuid="dd747e36-227c-4960-ae51-ec1a643b57e6" positionType="Float" x="0" y="71" width="392" height="20" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{DeclarationSomeOneElseAnswer}.equals("Yes")]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{DeclarationNameOrgQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="066d6cf3-8dce-42ae-aaf5-8b2ed356c8e7" positionType="Float" x="355" y="71" width="197" height="20" isRemoveLineWhenBlank="true">
+				<reportElement uuid="066d6cf3-8dce-42ae-aaf5-8b2ed356c8e7" positionType="Float" x="397" y="71" width="197" height="20" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{DeclarationSomeOneElseAnswer}.equals("Yes")]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{DeclarationNameOrgAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="53fbb72c-cd89-4ff7-8297-2eadf311487e" positionType="Float" x="0" y="91" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="53fbb72c-cd89-4ff7-8297-2eadf311487e" positionType="Float" x="0" y="91" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{DeclarationConfirmQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="747dd6ab-3448-466e-a8ca-b24ab9649a60" positionType="Float" x="355" y="91" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="747dd6ab-3448-466e-a8ca-b24ab9649a60" positionType="Float" x="397" y="91" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{DeclarationConfirmAnswer}]]></textFieldExpression>
 			</textField>

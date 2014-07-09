@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Declaration_declarationStatement" language="groovy" pageWidth="555" pageHeight="872" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a0e98220-e1eb-421c-acfe-21fbefdfd0fa">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Declaration_declarationStatement" language="groovy" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a0e98220-e1eb-421c-acfe-21fbefdfd0fa">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
@@ -26,24 +26,24 @@
 	<detail>
 		<band height="48" splitType="Stretch">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="da37dfe6-34e3-487b-83ba-f4bcbd593d68" x="0" y="1" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="da37dfe6-34e3-487b-83ba-f4bcbd593d68" x="0" y="1" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{DeclarationSomeOneElseQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="e1e6da2c-4b06-412f-abc3-78d85a5ef810" x="355" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="e1e6da2c-4b06-412f-abc3-78d85a5ef810" x="397" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{DeclarationSomeOneElseAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="fdf71c14-3bb7-4e0c-b01b-798c24e135a5" x="0" y="19" width="350" height="20" isRemoveLineWhenBlank="true">
+				<reportElement uuid="fdf71c14-3bb7-4e0c-b01b-798c24e135a5" x="0" y="19" width="392" height="20" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{DeclarationSomeOneElseAnswer}.equals("Yes")]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{DeclarationNameOrgQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="0cd1bdbf-3221-4467-8702-16e296b6f6ea" x="355" y="19" width="197" height="20" isRemoveLineWhenBlank="true">
+				<reportElement uuid="0cd1bdbf-3221-4467-8702-16e296b6f6ea" x="397" y="19" width="197" height="20" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{DeclarationSomeOneElseAnswer}.equals("Yes")]]></printWhenExpression>
 				</reportElement>
 				<textElement/>

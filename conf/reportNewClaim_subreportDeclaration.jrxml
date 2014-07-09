@@ -33,14 +33,14 @@
 	<detail>
 		<band height="40" splitType="Stretch">
 			<textField>
-				<reportElement uuid="fcd3ab37-4374-45fc-bfd2-b8f2313382c1" x="0" y="0" width="555" height="18"/>
+				<reportElement uuid="fcd3ab37-4374-45fc-bfd2-b8f2313382c1" x="0" y="0" width="595" height="18"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{Title}]]></textFieldExpression>
 			</textField>
 			<subreport>
-				<reportElement uuid="468b0525-7ca5-465f-9703-0e5b4110ced4" x="0" y="18" width="555" height="20"/>
+				<reportElement uuid="468b0525-7ca5-465f-9703-0e5b4110ced4" x="0" y="18" width="595" height="20"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>

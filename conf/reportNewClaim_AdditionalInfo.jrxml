@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Consents" language="groovy" pageWidth="555" pageHeight="872" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="ce7b9f2b-d8a3-4228-abe5-88fb5d2f3eae">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Consents" language="groovy" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="ce7b9f2b-d8a3-4228-abe5-88fb5d2f3eae">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
@@ -41,14 +41,14 @@
 				<text><![CDATA[Additional Information]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="0f862337-92b2-479f-8e79-1dd536a16c4e" positionType="Float" x="0" y="21" width="350" height="18" isRemoveLineWhenBlank="true">
+				<reportElement uuid="0f862337-92b2-479f-8e79-1dd536a16c4e" positionType="Float" x="0" y="21" width="392" height="18" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[!$F{additionalInformationAnswer}.isEmpty()]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{additionalInformationQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="5b80a305-25fd-4fef-9c09-af2ce25c3858" positionType="Float" x="355" y="21" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="5b80a305-25fd-4fef-9c09-af2ce25c3858" positionType="Float" x="397" y="21" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{additionalInformationAnswer}]]></textFieldExpression>
 			</textField>
@@ -63,12 +63,12 @@
 				<textFieldExpression><![CDATA[$F{additionalInformationWhyAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="53de5b37-2b0a-4074-9e5f-50eddf56e2bb" positionType="Float" x="0" y="79" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="53de5b37-2b0a-4074-9e5f-50eddf56e2bb" positionType="Float" x="0" y="79" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{welshQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="2013b6a7-5201-4e87-aec0-28c7521b86a6" positionType="Float" x="355" y="79" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="2013b6a7-5201-4e87-aec0-28c7521b86a6" positionType="Float" x="397" y="79" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{welshAnswer}]]></textFieldExpression>
 			</textField>
