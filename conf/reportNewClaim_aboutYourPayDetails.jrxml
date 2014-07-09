@@ -77,27 +77,27 @@
 		<band height="71" splitType="Immediate">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="61c7218b-715a-4359-9449-ee3c564dbe6f" positionType="Float" x="0" y="0" width="350" height="35" isRemoveLineWhenBlank="true"/>
-				<textElement verticalAlignment="Middle"/>
+				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{howToGetPaidQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="57e79dc7-f890-477f-831c-ab6a643652c4" positionType="Float" x="355" y="0" width="197" height="35" isRemoveLineWhenBlank="true"/>
-				<textElement verticalAlignment="Middle"/>
+				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{howToGetPaidAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="0802ec1f-3436-47b0-9d4a-32035567b1c9" positionType="Float" x="0" y="35" width="350" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement verticalAlignment="Middle"/>
+				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{howOftenGetPaidQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="e8079ca6-0ec7-44e4-9c1a-e42b72da36db" positionType="Float" x="355" y="35" width="197" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement verticalAlignment="Middle"/>
+				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{howOftenGetPaidAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="38020387-0dc2-4f7f-bfe0-63dc81a0daf4" positionType="Float" x="355" y="53" width="197" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement verticalAlignment="Middle"/>
+				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{howOftenGetPaidAnswer}=="Other" ? $F{howOftenGetPaidOther} : null]]></textFieldExpression>
 			</textField>
 		</band>
@@ -114,52 +114,52 @@
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="435b6de5-d41d-40df-8485-e2c19154020d" positionType="Float" x="0" y="20" width="350" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement verticalAlignment="Middle"/>
+				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{bankAccountHolderNameQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="3585c88b-ad07-47d0-b172-d609bf404eeb" positionType="Float" x="355" y="20" width="197" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement verticalAlignment="Middle"/>
+				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{bankAccountHolderNameAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="6d961b8f-2b5b-4ebc-bb6b-48bb40c9c684" positionType="Float" x="0" y="38" width="350" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement verticalAlignment="Middle"/>
+				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{bankAccountBankNameQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="be49c075-e8db-4d27-8a30-f5414761027e" positionType="Float" x="355" y="38" width="197" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement verticalAlignment="Middle"/>
+				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{bankAccountBankNameAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="ac5d7f60-2d42-481c-9177-0e1dff247bf8" positionType="Float" x="0" y="56" width="350" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement verticalAlignment="Middle"/>
+				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{bankAccountSortCodeQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="12f94aa2-1e66-40c4-8916-2990ca93e937" positionType="Float" x="355" y="56" width="197" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement verticalAlignment="Middle"/>
+				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{bankAccountSortCodeAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="ef58f6eb-cbbf-4bd1-af0b-b5a3d167171d" positionType="Float" x="0" y="74" width="350" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement verticalAlignment="Middle"/>
+				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{bankAccountNumberQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="a7591379-f58d-46ba-877b-a488f1fdd851" positionType="Float" x="355" y="74" width="197" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement verticalAlignment="Middle"/>
+				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{bankAccountNumberAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="8ef1d95f-57e8-4c38-9cdc-efafee196bb1" positionType="Float" x="0" y="92" width="350" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement verticalAlignment="Middle"/>
+				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{bankAccountReferenceNumberQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="2c435d18-b073-4b27-9f62-609d1d035aec" positionType="Float" x="355" y="92" width="197" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement verticalAlignment="Middle"/>
+				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{bankAccountReferenceNumberAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
