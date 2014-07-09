@@ -77,12 +77,12 @@
 				<textElement verticalAlignment="Middle" markup="styled">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[Part 2 - About your partner]]></text>
+				<text><![CDATA[Part 2 - About your partner/spouse]]></text>
 			</staticText>
 		</band>
 	</title>
 	<detail>
-		<band height="199" splitType="Immediate">
+		<band height="211" splitType="Immediate">
 			<staticText>
 				<reportElement uuid="682874b6-bfe4-439f-8bb8-4abdfe329111" style="SubHeadingClaim" positionType="Float" x="0" y="0" width="553" height="20" isRemoveLineWhenBlank="true" forecolor="#000000">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingPartnerSpouseDetails"/>
@@ -173,12 +173,12 @@
 				<textFieldExpression><![CDATA[$F{AboutYourPartnerSeparatedFromPartnerAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="63d01e99-0927-43cc-9da9-1a95f93c6d54" positionType="Float" x="0" y="181" width="350" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="63d01e99-0927-43cc-9da9-1a95f93c6d54" positionType="Float" x="0" y="181" width="350" height="30" isRemoveLineWhenBlank="true"/>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{AboutYourPartnerIsCareeQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="1d9de7d4-795f-4c83-9fd9-a879ab205763" positionType="Float" x="355" y="181" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="1d9de7d4-795f-4c83-9fd9-a879ab205763" positionType="Float" x="355" y="181" width="197" height="30" isRemoveLineWhenBlank="true"/>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{AboutYourPartnerIsCareeAnswer}]]></textFieldExpression>
 			</textField>

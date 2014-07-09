@@ -224,7 +224,7 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerNationalityAnswer}]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="2e065a0b-a510-4baa-baa7-d98f99140d69" positionType="Float" x="0" y="41" width="350" height="30" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerNormallyLiveInGBQuestion}]]></textFieldExpression>
