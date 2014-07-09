@@ -7,13 +7,15 @@ object ApplicationBuild extends Build {
   val appName = "p1"
   val appVersion = "1.0-SNAPSHOT"
 
-  var repo: Seq[Project.Setting[_]] = Seq(resolvers += "Carers repo" at "http://build.3cbeta.co.uk:8080/artifactory/repo/")
+  var repo: Seq[Project.Setting[_]] = Seq(resolvers += "Carers repo" at "http://build.3cbeta.co.uk:8080/artifactory/repo/",
+                                          resolvers += "Jasper Artifactory" at "http://jaspersoft.artifactoryonline.com/jaspersoft/third-party-ce-artifacts/")
 
 
   val appDependencies = Seq(
     "me.moocar" % "logback-gelf" % "0.9.6p2",
     "org.specs2" %% "specs2" % "2.3.6" % "test",
-    "net.sf.jasperreports" % "jasperreports" % "5.2.0",
+    "net.sf.jasperreports" % "jasperreports" % "5.6.0",
+    "org.olap4j" % "olap4j" % "0.9.7.309-JS-3",
     "com.lowagie" % "itext" % "4.2.1",
     "com.itextpdf" % "itextpdf" % "5.4.4",
     "xalan" % "xalan" % "2.7.1",
