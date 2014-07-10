@@ -294,17 +294,10 @@
 	<field name="CareeAddressLine3" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Address/Answer//Line[3]]]></fieldDescription>
 	</field>
-	<title>
-		<band height="5">
-			<break>
-				<reportElement uuid="afd3ae12-e5cf-4b47-9365-1706a666273f" x="0" y="3" width="100" height="1"/>
-			</break>
-		</band>
-	</title>
 	<pageHeader>
 		<band height="66" splitType="Immediate">
 			<frame>
-				<reportElement uuid="5c510d56-ac5b-4822-a83c-f8a571b5d6e3" positionType="Float" x="0" y="0" width="560" height="23" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" backcolor="#FFFFFF">
+				<reportElement uuid="5c510d56-ac5b-4822-a83c-f8a571b5d6e3" positionType="Float" x="0" y="0" width="560" height="45" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" backcolor="#FFFFFF">
 					<property name="net.sf.jasperreports.export.html.class" value="SummaryPageHeader"/>
 				</reportElement>
 				<box>
@@ -314,43 +307,43 @@
 					<bottomPen lineWidth="1.0" lineColor="#000000"/>
 					<rightPen lineWidth="1.0" lineColor="#000000"/>
 				</box>
+				<textField>
+					<reportElement uuid="a7b7c4cc-3137-4f63-ae67-b6c1f92f2fc5" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="560" height="22" forecolor="#000000" backcolor="#FFFFFF">
+						<property name="net.sf.jasperreports.export.html.class" value="SummaryPageDateHeader"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle" markup="styled"/>
+					<textFieldExpression><![CDATA["Date Claim Received "+$F{DateTimeGenerated}]]></textFieldExpression>
+				</textField>
 				<staticText>
-					<reportElement uuid="5afd1804-f132-4c32-bbf5-6802d41a7ab2" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement uuid="5afd1804-f132-4c32-bbf5-6802d41a7ab2" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="24" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF"/>
 					<textElement verticalAlignment="Middle" markup="styled">
 						<font fontName="SansSerif" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Transaction:]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="370cc313-2914-43e4-8b1b-1b618c568e88" style="HeadingClaim" positionType="Float" x="99" y="0" width="124" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement uuid="370cc313-2914-43e4-8b1b-1b618c568e88" style="HeadingClaim" positionType="Float" x="99" y="24" width="124" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#FFFFFF"/>
 					<textElement verticalAlignment="Middle" markup="styled">
 						<font isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{TransactionId}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="cb21fb00-2bac-47a9-8847-f1881125d4cd" style="HeadingClaim" positionType="Float" x="224" y="0" width="40" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement uuid="cb21fb00-2bac-47a9-8847-f1881125d4cd" style="HeadingClaim" positionType="Float" x="224" y="24" width="40" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#FFFFFF"/>
 					<textElement textAlignment="Right" verticalAlignment="Middle" markup="styled"/>
 					<textFieldExpression><![CDATA[$F{ClaimantTitleAnswer}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="8acdc596-efce-4ccd-8858-fc6ca8e18aee" style="HeadingClaim" positionType="Float" x="270" y="0" width="180" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement uuid="8acdc596-efce-4ccd-8858-fc6ca8e18aee" style="HeadingClaim" positionType="Float" x="270" y="24" width="180" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#FFFFFF"/>
 					<textElement verticalAlignment="Middle" markup="styled"/>
 					<textFieldExpression><![CDATA[$F{ClaimantSurnameAnswer}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="14cd9473-73fe-419a-849f-fd0f5014ac6a" style="HeadingClaim" positionType="Float" x="460" y="0" width="90" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement uuid="14cd9473-73fe-419a-849f-fd0f5014ac6a" style="HeadingClaim" positionType="Float" x="460" y="24" width="90" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#FFFFFF"/>
 					<textElement textAlignment="Right" verticalAlignment="Middle" markup="styled"/>
 					<textFieldExpression><![CDATA[$F{NationalInsuranceNumberAnswer}]]></textFieldExpression>
 				</textField>
 			</frame>
-			<textField>
-				<reportElement uuid="a7b7c4cc-3137-4f63-ae67-b6c1f92f2fc5" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="23" width="560" height="22" forecolor="#000000" backcolor="#FFFFFF">
-					<property name="net.sf.jasperreports.export.html.class" value="SummaryPageDateHeader"/>
-				</reportElement>
-				<textElement verticalAlignment="Middle" markup="styled"/>
-				<textFieldExpression><![CDATA["Date Claim Received "+$F{DateTimeGenerated}]]></textFieldExpression>
-			</textField>
 			<staticText>
 				<reportElement uuid="58ddea3b-1ba8-4b66-a709-2f5f94a3de80" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="45" width="560" height="21" forecolor="#000000" backcolor="#CCCCCC">
 					<property name="net.sf.jasperreports.export.html.id" value="Heading1"/>
