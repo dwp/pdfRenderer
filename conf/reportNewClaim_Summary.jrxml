@@ -401,7 +401,7 @@
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="eb000c3b-aa1e-4642-9b10-1a2f487a4f92" positionType="Float" x="0" y="55" width="162" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{ClaimantOtherNamesQuestionLabel}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{ClaimantOtherNamesQuestionLabel}+"(s)"]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="4252d74b-0fa3-43ac-a029-efa997d4c608" positionType="Float" x="168" y="55" width="180" height="18" isRemoveLineWhenBlank="true"/>
