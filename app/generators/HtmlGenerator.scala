@@ -37,12 +37,4 @@ object HtmlGenerator extends ReportGenerator {
       }
     }
   }
-
-  def styleSheetForHtmlOutput = {
-    """<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script><script>$(document).ready(function() {$('tr').filter(
-          function(){
-              return $(this).find('td').length == $(this).find('td:empty').length;
-          }).attr('height', 0px)});</script>"""
-  }
-
 }

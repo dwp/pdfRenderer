@@ -113,14 +113,14 @@
 					<textFieldExpression><![CDATA["Service version : "+$F{Version}]]></textFieldExpression>
 				</textField>
 				<staticText>
-					<reportElement uuid="eb8201ef-3319-4f71-ba4a-434848230663" style="HeadingClaim" mode="Opaque" x="2" y="26" width="105" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
+					<reportElement uuid="eb8201ef-3319-4f71-ba4a-434848230663" style="HeadingClaim" mode="Transparent" x="2" y="26" width="105" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
 					<textElement verticalAlignment="Middle" markup="styled">
 						<font fontName="Arial" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Transaction:]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="97b2efa8-c290-4b0e-b5d1-0ddc084d45e0" style="HeadingClaim" positionType="Float" mode="Opaque" x="108" y="26" width="126" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
+					<reportElement uuid="97b2efa8-c290-4b0e-b5d1-0ddc084d45e0" style="HeadingClaim" positionType="Float" mode="Transparent" x="108" y="26" width="126" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
 					<textElement verticalAlignment="Middle" markup="styled">
 						<font isBold="true"/>
 					</textElement>
