@@ -15,9 +15,9 @@ case class SectionAboutEmployment(xml: Elem) {
 
   val postCode = rootPathJobDetails \\ "Employer" \\ "Address" \\ "Answer" \\ "PostCode"
 
-  val currentlyEmployedQuestion = xml \ "DWPCATransaction" \ "DWPCAClaim" \ "Employment" \ "CurrentlyEmployed" \ "QuestionLabel"
+  val currentlyEmployedQuestion = xml \ "DWPCATransaction" \ "DWPCAClaim" \ "Employment" \ "JobDetails" \ "Employer" \ "CurrentlyEmployed" \ "QuestionLabel"
 
-  val currentlyEmployedAnswer = xml \ "DWPCATransaction" \ "DWPCAClaim" \ "Employment" \ "CurrentlyEmployed" \ "Answer"
+  val currentlyEmployedAnswer = xml \ "DWPCATransaction" \ "DWPCAClaim" \ "Employment" \ "JobDetails" \ "Employer" \ "CurrentlyEmployed" \ "Answer"
 
 
   val employmentDetails: Seq[String] = {

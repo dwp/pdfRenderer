@@ -160,9 +160,9 @@
             </SelfEmployment>
             <Employed><QuestionLabel>Have you been employed at any time since 01/07/2009?</QuestionLabel><Answer>Yes</Answer></Employed>
             <Employment>
-                <CurrentlyEmployed><QuestionLabel>Have you finished this job?</QuestionLabel><Answer>No</Answer></CurrentlyEmployed>
                 <JobDetails>
                     <Employer>
+                        <CurrentlyEmployed><QuestionLabel>Have you finished this job?</QuestionLabel><Answer>No</Answer></CurrentlyEmployed>
                         <DateJobStarted><QuestionLabel>When did you start your job?</QuestionLabel><Answer>01-01-2013</Answer></DateJobStarted>
                         <DateJobEnded><QuestionLabel>What date did you last work?</QuestionLabel><Answer>01-07-2013</Answer></DateJobEnded>
                         <JobType><QuestionLabel>What was your job title?</QuestionLabel><Answer>Hacker</Answer></JobType>

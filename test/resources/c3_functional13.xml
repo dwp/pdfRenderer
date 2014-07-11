@@ -462,12 +462,12 @@
                 <Answer>Yes</Answer>
             </Employed>
             <Employment>
-                <CurrentlyEmployed>
-                    <QuestionLabel>Have you finished this job?</QuestionLabel>
-                    <Answer>No</Answer>
-                </CurrentlyEmployed>
                 <JobDetails>
                     <Employer>
+                        <CurrentlyEmployed>
+                            <QuestionLabel>Have you finished this job?</QuestionLabel>
+                            <Answer>No</Answer>
+                        </CurrentlyEmployed>
                         <DateJobStarted>
                             <QuestionLabel>When did you start your job?</QuestionLabel>
                             <Answer>21-09-2012</Answer>
