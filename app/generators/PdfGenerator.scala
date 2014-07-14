@@ -19,7 +19,10 @@ object PdfGenerator extends ReportGenerator {
         Logger.debug("PDF Generated.")
         GenerationSuccess()
       }
-      else GenerationFailure()
+      else {
+        Logger.error("Received an empty print object to convert to PDF.")
+        GenerationFailure()
+      }
     } catch {
       case e: Throwable => {
         Logger.error(e.getMessage,e)

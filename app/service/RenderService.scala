@@ -26,27 +26,32 @@ trait RenderService {
     request.body.asXml.map {
       xml =>
         val generator = reportGenerator
+        val node = xml \\ "TransactionId"
+        val transactionId = if (node.isEmpty) "" else node.text
         try {
           Logger.debug("treating XML received.")
           val print = generator.generateFrom(xml)
 
           generator.exportReportToStream(print, outputStream) match {
             case GenerationSuccess() =>
-              Logger.info("Generation success with content size:"+content.length)
+              Logger.info("Generation success for transactionId [${transactionId}] with content size:"+content.length)
               Results.Ok(content)
 
             case GenerationFailure() =>
+              Logger.error(s"Could not render XML for transactionId [${transactionId}]")
               Results.InternalServerError
 
             case e: Throwable =>
-              Logger.error("Unexpected result",e)
+              Logger.error("Unexpected result for transactionId [${transactionId}]",e)
               Results.InternalServerError
           }
         }
         catch {
-          case e: InvalidSourceFormatException => Results.BadRequest
+          case e: InvalidSourceFormatException =>
+            Logger.error(s"Could not render for transactionId [${transactionId}]")
+            Results.BadRequest // Error already logged by generator
           case t: Throwable => {
-            Logger.error(t.getMessage,t)
+            Logger.error(s"Could not render for transactionId [${transactionId}]. ${t.getMessage}",t)
             Results.InternalServerError
           }
         }
