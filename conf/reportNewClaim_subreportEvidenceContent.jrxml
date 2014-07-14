@@ -4,7 +4,7 @@
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
-    <template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
+	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
 	<queryString language="xPath">
 		<![CDATA[//Evidence/Content]]>
 	</queryString>
@@ -15,11 +15,11 @@
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="31" splitType="Stretch">
+		<band height="36" splitType="Stretch">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="d1f681c7-12c0-4696-afcf-2d7be4833b58" positionType="Float" x="0" y="0" width="595" height="30" isRemoveLineWhenBlank="true"/>
 				<textElement>
-					<paragraph spacingAfter="2"/>
+					<paragraph lineSpacing="1_1_2"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{Content}]]></textFieldExpression>
 			</textField>
