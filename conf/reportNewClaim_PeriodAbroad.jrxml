@@ -84,7 +84,7 @@
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="130" splitType="Immediate">
+		<band height="140" splitType="Immediate">
 			<printWhenExpression><![CDATA[$F{AboutYouTheCarerTimeOutsideGBLast3YearsAnswer}.equals("Yes")]]></printWhenExpression>
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="3a0b8e90-5e92-4913-a464-26f141b8e53a" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
@@ -127,17 +127,17 @@
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerPeriodAbroadReasonAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="2a7aee4f-94fe-49cb-bd7b-8efcce88dd77" positionType="Float" x="0" y="112" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="2a7aee4f-94fe-49cb-bd7b-8efcce88dd77" positionType="Float" x="0" y="122" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerPeriodAbroadCareePresentQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="84f02d3b-402e-4631-b757-f6678d948873" positionType="Float" x="397" y="112" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="84f02d3b-402e-4631-b757-f6678d948873" positionType="Float" x="397" y="122" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerPeriodAbroadCareePresentAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="26ea2930-d7eb-4bc0-a861-ac868a7b5649" positionType="Float" x="397" y="72" width="197" height="40" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="26ea2930-d7eb-4bc0-a861-ac868a7b5649" positionType="Float" x="397" y="72" width="197" height="50" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerPeriodAbroadReasonOther}]]></textFieldExpression>
 			</textField>
