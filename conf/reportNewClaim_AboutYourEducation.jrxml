@@ -74,7 +74,7 @@
 	<title>
 		<band height="38" splitType="Immediate">
 			<staticText>
-				<reportElement uuid="130411b3-59f9-4c8b-b394-99a8644d6960" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="595" height="20" isRemoveLineWhenBlank="true">
+				<reportElement uuid="130411b3-59f9-4c8b-b394-99a8644d6960" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="20" isRemoveLineWhenBlank="true">
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart4AboutYourEducation"/>
 				</reportElement>
 				<textElement markup="styled">
@@ -98,7 +98,7 @@
 		<band height="131" splitType="Immediate">
 			<printWhenExpression><![CDATA[$F{AboutYourEducationCourseofEducationAnswer}.equals("Yes")]]></printWhenExpression>
 			<staticText>
-				<reportElement uuid="3fb60df5-93bc-41b9-bf47-616798b1b63d" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="595" height="21" isRemoveLineWhenBlank="true">
+				<reportElement uuid="3fb60df5-93bc-41b9-bf47-616798b1b63d" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="594" height="21" isRemoveLineWhenBlank="true">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourCourseDetails"/>
 				</reportElement>
 				<textElement markup="styled">

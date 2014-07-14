@@ -20,7 +20,7 @@
 	<title>
 		<band height="24">
 			<staticText>
-				<reportElement uuid="9163d5b5-37f2-46da-ad34-c67dad4d385d" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="553" height="20" forecolor="#000000">
+				<reportElement uuid="9163d5b5-37f2-46da-ad34-c67dad4d385d" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="594" height="20" forecolor="#000000">
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart5AboutYourEmployment"/>
 				</reportElement>
 				<textElement markup="styled">

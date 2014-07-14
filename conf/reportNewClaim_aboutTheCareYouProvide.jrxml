@@ -95,7 +95,7 @@
 	<title>
 		<band height="22">
 			<staticText>
-				<reportElement uuid="0352c26e-c945-465d-a87d-c2030a5dc51d" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="553" height="20">
+				<reportElement uuid="0352c26e-c945-465d-a87d-c2030a5dc51d" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="20">
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart3AboutTheCareYouProvide"/>
 				</reportElement>
 				<textElement markup="styled">
@@ -108,7 +108,7 @@
 	<detail>
 		<band height="334" splitType="Immediate">
 			<staticText>
-				<reportElement uuid="1cbce792-112d-4e39-8088-39c855728d3b" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="553" height="20" isRemoveLineWhenBlank="true">
+				<reportElement uuid="1cbce792-112d-4e39-8088-39c855728d3b" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="594" height="20" isRemoveLineWhenBlank="true">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingDetailsOfThePersonYouCareFor"/>
 				</reportElement>
 				<textElement markup="styled">
@@ -197,7 +197,7 @@
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeLiveSameAddressAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="1c5d9726-b4ef-44ce-9a67-6874d77320ab" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="182" width="595" height="21">
+				<reportElement uuid="1c5d9726-b4ef-44ce-9a67-6874d77320ab" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="182" width="594" height="21">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingContactDetailsOfThePersonYouCareFor"/>
 				</reportElement>
 				<textElement>
@@ -224,7 +224,7 @@
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeDayTimeTelephoneNumberAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="c9913d36-dbcf-4fdc-841b-9a496f3d3f0f" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="224" width="595" height="21" isRemoveLineWhenBlank="true">
+				<reportElement uuid="c9913d36-dbcf-4fdc-841b-9a496f3d3f0f" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="224" width="594" height="21" isRemoveLineWhenBlank="true">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingMoreAboutTheCareYouProvide"/>
 					<printWhenExpression><![CDATA[!$F{displayCareYouProvide}.isEmpty()]]></printWhenExpression>
 				</reportElement>

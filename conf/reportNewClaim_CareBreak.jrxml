@@ -101,7 +101,7 @@
 	<title>
 		<band height="21">
 			<staticText>
-				<reportElement uuid="a415a243-c2e6-483a-8f49-31a568e887ae" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="595" height="20" isRemoveLineWhenBlank="true">
+				<reportElement uuid="a415a243-c2e6-483a-8f49-31a568e887ae" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="20" isRemoveLineWhenBlank="true">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingBreaksInCare"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">

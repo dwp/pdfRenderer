@@ -125,7 +125,7 @@
 	<title>
 		<band height="22" splitType="Immediate">
 			<staticText>
-				<reportElement uuid="c4993f7a-b987-4a99-9fbd-21415dcc29ce" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="595" height="18" forecolor="#000000">
+				<reportElement uuid="c4993f7a-b987-4a99-9fbd-21415dcc29ce" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="18" forecolor="#000000">
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart7AboutOtherMoney"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
@@ -138,7 +138,7 @@
 	<detail>
 		<band height="185" splitType="Immediate">
 			<staticText>
-				<reportElement uuid="682874b6-bfe4-439f-8bb8-4abdfe329111" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="595" height="20">
+				<reportElement uuid="682874b6-bfe4-439f-8bb8-4abdfe329111" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="20">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingBenefitsAndPayments"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
@@ -204,7 +204,7 @@
 		</band>
 		<band height="129" splitType="Immediate">
 			<staticText>
-				<reportElement uuid="374b51ff-5b9a-4217-ae0b-bc874bbb71ac" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="595" height="20" isRemoveLineWhenBlank="true">
+				<reportElement uuid="374b51ff-5b9a-4217-ae0b-bc874bbb71ac" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="20" isRemoveLineWhenBlank="true">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingStatutoryPay"/>
 				</reportElement>
 				<textElement>
