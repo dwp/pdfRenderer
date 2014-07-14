@@ -162,7 +162,7 @@
 				<text><![CDATA[Claim Form]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="7fc54fa3-8e8e-49e3-b237-71e48d1d5de5" x="333" y="44" width="261" height="20"/>
+				<reportElement uuid="7fc54fa3-8e8e-49e3-b237-71e48d1d5de5" x="277" y="44" width="317" height="20"/>
 				<textElement textAlignment="Right" verticalAlignment="Middle"/>
 				<text><![CDATA[     This form was completed in English]]></text>
 			</staticText>
