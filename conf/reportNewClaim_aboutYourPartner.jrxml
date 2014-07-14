@@ -71,7 +71,7 @@
 	<title>
 		<band height="21">
 			<staticText>
-				<reportElement uuid="c4993f7a-b987-4a99-9fbd-21415dcc29ce" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="553" height="18" isRemoveLineWhenBlank="true" forecolor="#000000">
+				<reportElement uuid="c4993f7a-b987-4a99-9fbd-21415dcc29ce" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="594" height="18" isRemoveLineWhenBlank="true" forecolor="#000000">
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart2AboutYourPartner"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
@@ -84,7 +84,7 @@
 	<detail>
 		<band height="211" splitType="Immediate">
 			<staticText>
-				<reportElement uuid="682874b6-bfe4-439f-8bb8-4abdfe329111" style="SubHeadingClaim" positionType="Float" x="0" y="0" width="553" height="20" isRemoveLineWhenBlank="true" forecolor="#000000">
+				<reportElement uuid="682874b6-bfe4-439f-8bb8-4abdfe329111" style="SubHeadingClaim" positionType="Float" x="0" y="0" width="594" height="20" isRemoveLineWhenBlank="true" forecolor="#000000">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingPartnerSpouseDetails"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">

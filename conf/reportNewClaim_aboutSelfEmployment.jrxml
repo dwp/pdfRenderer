@@ -239,7 +239,7 @@
 	<title>
 		<band height="19" splitType="Immediate">
 			<staticText>
-				<reportElement uuid="c4993f7a-b987-4a99-9fbd-21415dcc29ce" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="595" height="18">
+				<reportElement uuid="c4993f7a-b987-4a99-9fbd-21415dcc29ce" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="18">
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart6AboutSelfEmployment"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
@@ -265,7 +265,7 @@
 		<band height="112" splitType="Immediate">
 			<printWhenExpression><![CDATA[$F{haveBeenSelfEmployedAnswer}.equals("Yes")]]></printWhenExpression>
 			<staticText>
-				<reportElement uuid="682874b6-bfe4-439f-8bb8-4abdfe329111" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="595" height="21" isPrintInFirstWholeBand="true">
+				<reportElement uuid="682874b6-bfe4-439f-8bb8-4abdfe329111" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="21" isPrintInFirstWholeBand="true">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourJob"/>
 				</reportElement>
 				<textElement>
@@ -327,7 +327,7 @@
 		<band height="122" splitType="Immediate">
 			<printWhenExpression><![CDATA[$F{selfEmployedNowAnswer}.equals("Yes")]]></printWhenExpression>
 			<staticText>
-				<reportElement uuid="52392fc1-1198-49d5-81cc-98d3752e4379" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="595" height="20" isRemoveLineWhenBlank="true">
+				<reportElement uuid="52392fc1-1198-49d5-81cc-98d3752e4379" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="594" height="20" isRemoveLineWhenBlank="true">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourAccounts"/>
 				</reportElement>
 				<textElement>
@@ -379,7 +379,7 @@
 		<band height="110" splitType="Immediate">
 			<printWhenExpression><![CDATA[$F{haveBeenSelfEmployedAnswer}.equals("Yes")]]></printWhenExpression>
 			<staticText>
-				<reportElement uuid="3e35e067-9af8-4ceb-9abf-e2d152a1e24b" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="595" height="20" isPrintInFirstWholeBand="true">
+				<reportElement uuid="3e35e067-9af8-4ceb-9abf-e2d152a1e24b" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="594" height="20" isPrintInFirstWholeBand="true">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingPensionAndExpenses"/>
 				</reportElement>
 				<textElement>
@@ -426,7 +426,7 @@
 		<band height="243" splitType="Immediate">
 			<printWhenExpression><![CDATA[$F{haveBeenSelfEmployedAnswer}.equals("Yes")]]></printWhenExpression>
 			<staticText>
-				<reportElement uuid="c2181e86-d16c-40e2-af56-2c702260e4ee" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="595" height="20" isPrintInFirstWholeBand="true">
+				<reportElement uuid="c2181e86-d16c-40e2-af56-2c702260e4ee" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="594" height="20" isPrintInFirstWholeBand="true">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingChildcareExpensesWhileYouAreAtWork"/>
 				</reportElement>
 				<textElement>
@@ -513,7 +513,7 @@
 		<band height="215" splitType="Immediate">
 			<printWhenExpression><![CDATA[$F{haveBeenSelfEmployedAnswer}.equals("Yes")]]></printWhenExpression>
 			<staticText>
-				<reportElement uuid="8556a719-4317-47f5-afbd-70abd9427ae0" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="595" height="20" isPrintInFirstWholeBand="true">
+				<reportElement uuid="8556a719-4317-47f5-afbd-70abd9427ae0" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="594" height="20" isPrintInFirstWholeBand="true">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingExpensesRelatedToThePersonYouCareForWhileAtWork"/>
 				</reportElement>
 				<textElement>
