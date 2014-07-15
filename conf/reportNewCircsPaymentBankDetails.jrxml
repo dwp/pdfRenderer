@@ -80,8 +80,8 @@
 	<background>
 		<band splitType="Stretch"/>
 	</background>
-	<pageHeader>
-		<band height="37" splitType="Stretch">
+	<title>
+		<band height="36">
 			<staticText>
 				<reportElement uuid="d65f4564-c706-43eb-bd70-f2744b086d8e" style="HeadingClaim" mode="Opaque" x="0" y="0" width="595" height="35" forecolor="#000000">
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingChangeOfPaymentAndBankDetails"/>
@@ -92,7 +92,7 @@
 				<text><![CDATA[Part 2 - Change in Circumstance - Change of payment and bank details]]></text>
 			</staticText>
 		</band>
-	</pageHeader>
+	</title>
 	<detail>
 		<band height="276" splitType="Stretch">
 			<staticText>

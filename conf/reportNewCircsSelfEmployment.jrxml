@@ -50,8 +50,8 @@
 	<background>
 		<band splitType="Stretch"/>
 	</background>
-	<pageHeader>
-		<band height="35" splitType="Stretch">
+	<title>
+		<band height="36">
 			<staticText>
 				<reportElement uuid="e1c2936c-494d-432d-a81e-f3b21017807e" style="HeadingClaim" mode="Opaque" x="0" y="0" width="595" height="35" forecolor="#000000">
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingChangeOfStartedSelfEmployment"/>
@@ -62,7 +62,7 @@
 				<text><![CDATA[Part 2 - Change in Circumstance - Started self employment]]></text>
 			</staticText>
 		</band>
-	</pageHeader>
+	</title>
 	<detail>
 		<band height="151" splitType="Stretch">
 			<staticText>

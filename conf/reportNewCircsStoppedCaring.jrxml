@@ -26,8 +26,8 @@
 	<background>
 		<band splitType="Stretch"/>
 	</background>
-	<pageHeader>
-		<band height="18" splitType="Immediate">
+	<title>
+		<band height="19">
 			<staticText>
 				<reportElement uuid="d8452cc6-e21e-46ff-9472-8100e8b2967c" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="595" height="18" forecolor="#000000">
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingChangeOfStoppedCaring"/>
@@ -38,7 +38,7 @@
 				<text><![CDATA[Part 2 - Change in Circumstance - Stopped Caring]]></text>
 			</staticText>
 		</band>
-	</pageHeader>
+	</title>
 	<detail>
 		<band height="36" splitType="Immediate">
 			<textField isBlankWhenNull="true">
