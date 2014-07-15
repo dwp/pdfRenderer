@@ -14,6 +14,7 @@ object ApplicationBuild extends Build {
     "me.moocar" % "logback-gelf" % "0.9.6p2",
     "org.specs2" %% "specs2" % "2.3.6" % "test",
     "net.sf.jasperreports" % "jasperreports" % "5.2.0",
+    "com.dwp.carers" %%  "carerscommon" % "5.4",
     "com.lowagie" % "itext" % "4.2.1",
     "com.itextpdf" % "itextpdf" % "5.4.4",
     "xalan" % "xalan" % "2.7.1",
