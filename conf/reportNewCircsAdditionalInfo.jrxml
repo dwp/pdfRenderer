@@ -23,7 +23,7 @@
 	<title>
 		<band height="20" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="7a62d9f7-b450-48fb-a39d-bc6f01504e7c" style="HeadingClaim" mode="Opaque" x="0" y="0" width="590" height="20"/>
+				<reportElement uuid="7a62d9f7-b450-48fb-a39d-bc6f01504e7c" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="590" height="20"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
@@ -32,14 +32,14 @@
 		</band>
 	</title>
 	<detail>
-		<band height="125" splitType="Stretch">
+		<band height="38" splitType="Stretch">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="4cec8ba0-e1a6-48d5-937f-e565d34bf8ca" positionType="Float" x="0" y="0" width="590" height="20" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{OtherChangesQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="cfcfe0f4-935e-4ec5-9f70-f8402a77eedd" positionType="Float" x="0" y="20" width="590" height="105" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="cfcfe0f4-935e-4ec5-9f70-f8402a77eedd" positionType="Float" x="0" y="20" width="590" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{OtherChangesAnswer}]]></textFieldExpression>
 			</textField>
