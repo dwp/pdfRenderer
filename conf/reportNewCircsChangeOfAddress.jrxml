@@ -65,23 +65,23 @@
 		</band>
 	</title>
 	<detail>
-		<band height="375" splitType="Stretch">
+		<band height="176" splitType="Immediate">
 			<staticText>
-				<reportElement uuid="f8b07e72-4c24-4a2e-b083-d9eaae0b77cc" style="SubHeadingClaim" mode="Opaque" x="0" y="0" width="595" height="32" forecolor="#000000"/>
+				<reportElement uuid="f8b07e72-4c24-4a2e-b083-d9eaae0b77cc" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="595" height="32" forecolor="#000000"/>
 				<textElement verticalAlignment="Middle">
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[For security, we also need you to confirm your previous address.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="130cdd33-e9ba-470a-a5ca-16f1cf4a13a7" x="0" y="32" width="595" height="23"/>
+				<reportElement uuid="130cdd33-e9ba-470a-a5ca-16f1cf4a13a7" positionType="Float" x="0" y="32" width="595" height="23"/>
 				<textElement verticalAlignment="Middle">
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Previous address]]></text>
 			</staticText>
 			<subreport>
-				<reportElement uuid="29fd1c6d-2702-4983-bc1c-400f6ba459d7" x="0" y="55" width="595" height="66"/>
+				<reportElement uuid="29fd1c6d-2702-4983-bc1c-400f6ba459d7" positionType="Float" x="0" y="55" width="595" height="1"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -95,34 +95,34 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_addressForNestedReports.jasper"]]></subreportExpression>
 			</subreport>
 			<staticText>
-				<reportElement uuid="77b07617-7c8a-48fa-aa28-26555541ac1b" x="0" y="122" width="595" height="23"/>
+				<reportElement uuid="77b07617-7c8a-48fa-aa28-26555541ac1b" positionType="Float" x="0" y="56" width="595" height="23"/>
 				<textElement verticalAlignment="Middle">
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Change of address]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="ac801cd2-efb7-4e36-bfc8-b084b41307e7" x="0" y="146" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="ac801cd2-efb7-4e36-bfc8-b084b41307e7" positionType="Float" x="0" y="80" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{Caring35HoursQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="7f4ea2b9-240c-47d2-90bd-09a0b7304d30" x="397" y="146" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="7f4ea2b9-240c-47d2-90bd-09a0b7304d30" positionType="Float" x="397" y="80" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{Caring35HoursAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="706a6621-ec6e-4d96-81ce-48cd32471c1e" x="0" y="165" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="706a6621-ec6e-4d96-81ce-48cd32471c1e" positionType="Float" x="0" y="99" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{DateStoppedCaring35HoursQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="20941537-5b90-49f1-8e5f-4dbd17ca7049" x="397" y="165" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="20941537-5b90-49f1-8e5f-4dbd17ca7049" positionType="Float" x="397" y="99" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{DateStoppedCaring35HoursAnswer}]]></textFieldExpression>
 			</textField>
 			<subreport>
-				<reportElement uuid="e8aa6f4a-37d7-4e51-9c8a-82481c1cb020" x="0" y="184" width="552" height="66" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="e8aa6f4a-37d7-4e51-9c8a-82481c1cb020" positionType="Float" x="0" y="118" width="594" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -136,27 +136,27 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_addressForNestedReports.jasper"]]></subreportExpression>
 			</subreport>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="bee6fad1-3671-4c73-8502-6d4b88218d30" x="0" y="251" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="bee6fad1-3671-4c73-8502-6d4b88218d30" positionType="Float" x="0" y="119" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{CareeChangedAddressQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="eedbfa39-5eff-4985-86f2-2025f1e1ff27" x="397" y="251" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="eedbfa39-5eff-4985-86f2-2025f1e1ff27" positionType="Float" x="397" y="119" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{CareeChangedAddressAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="ff2c91e2-f3f9-425d-b7c0-eade9d85c7ad" x="0" y="270" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="ff2c91e2-f3f9-425d-b7c0-eade9d85c7ad" positionType="Float" x="0" y="138" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{CareeSameAddressQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="b878b345-b9a0-4b28-9a3b-a63402a42008" x="397" y="270" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="b878b345-b9a0-4b28-9a3b-a63402a42008" positionType="Float" x="397" y="138" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{CareeSameAddressAnswer}]]></textFieldExpression>
 			</textField>
 			<subreport>
-				<reportElement uuid="83c8d577-702e-4c84-8603-880b6ce7b710" x="0" y="289" width="552" height="66" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="83c8d577-702e-4c84-8603-880b6ce7b710" positionType="Float" x="0" y="157" width="594" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -170,12 +170,12 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_addressForNestedReports.jasper"]]></subreportExpression>
 			</subreport>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="57dd1158-5541-4368-bff9-0978e0b27431" x="0" y="356" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="57dd1158-5541-4368-bff9-0978e0b27431" positionType="Float" x="0" y="158" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{OtherChangesQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="6887c01b-0dd1-465d-94c4-b69a0161c590" x="397" y="356" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="6887c01b-0dd1-465d-94c4-b69a0161c590" positionType="Float" x="397" y="158" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{OtherChangesAnswer}]]></textFieldExpression>
 			</textField>
