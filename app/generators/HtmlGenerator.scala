@@ -31,7 +31,10 @@ object HtmlGenerator extends ReportGenerator {
         Logger.debug("HMTL Generated.")
         GenerationSuccess()
       }
-      else GenerationFailure()
+      else {
+        Logger.error("Received an empty print object to convert to HTML.")
+        GenerationFailure()
+      }
     } catch {
       case e: Throwable => {
         Logger.error(e.getMessage,e)
