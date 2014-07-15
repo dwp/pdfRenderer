@@ -104,8 +104,8 @@
 	<background>
 		<band splitType="Stretch"/>
 	</background>
-	<pageHeader>
-		<band height="18" splitType="Stretch">
+	<title>
+		<band height="19">
 			<staticText>
 				<reportElement uuid="8f62fb47-d0a6-49f5-a1db-957558ba51a8" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="595" height="18" forecolor="#000000">
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart2CircsBreaksFromCaring"/>
@@ -116,7 +116,7 @@
 				<text><![CDATA[Part 2 - Change in Circumstance - Breaks From Caring]]></text>
 			</staticText>
 		</band>
-	</pageHeader>
+	</title>
 	<detail>
 		<band height="324" splitType="Stretch">
 			<textField isBlankWhenNull="true">

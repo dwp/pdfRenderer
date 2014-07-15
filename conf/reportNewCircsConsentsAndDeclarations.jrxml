@@ -53,8 +53,8 @@
 	<background>
 		<band splitType="Stretch"/>
 	</background>
-	<pageHeader>
-		<band height="35" splitType="Immediate">
+	<title>
+		<band height="36">
 			<staticText>
 				<reportElement uuid="596704e3-9e59-4fbb-9b16-80ada3080101" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="595" height="35" forecolor="#000000"/>
 				<textElement verticalAlignment="Middle" markup="styled">
@@ -63,7 +63,7 @@
 				<text><![CDATA[Part 3 - Declaration]]></text>
 			</staticText>
 		</band>
-	</pageHeader>
+	</title>
 	<detail>
 		<band height="338" splitType="Immediate">
 			<staticText>

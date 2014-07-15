@@ -91,6 +91,9 @@
 	<field name="ShowEmploymentChangeSection" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange]]></fieldDescription>
 	</field>
+	<field name="showOtherChangesSection" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/OtherChanges/Answer]]></fieldDescription>
+	</field>
 	<variable name="ClaimantTitleUpper" class="java.lang.String">
 		<variableExpression><![CDATA[$F{ClaimantSurname}.toUpperCase()]]></variableExpression>
 	</variable>
@@ -169,7 +172,7 @@
 		</band>
 		<band height="1" splitType="Immediate">
 			<subreport>
-				<reportElement uuid="4710f3be-ed46-452c-9664-173aad5d1c8a" positionType="Float" x="0" y="0" width="560" height="1"/>
+				<reportElement uuid="4710f3be-ed46-452c-9664-173aad5d1c8a" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -179,8 +182,8 @@
 		</band>
 		<band height="1" splitType="Immediate">
 			<printWhenExpression><![CDATA[!$F{ShowStoppedCaringSection}.isEmpty()]]></printWhenExpression>
-			<subreport runToBottom="true">
-				<reportElement uuid="5bdc073c-2e2f-4019-a5f3-adb0b7895289" positionType="Float" x="0" y="0" width="560" height="1"/>
+			<subreport runToBottom="false">
+				<reportElement uuid="5bdc073c-2e2f-4019-a5f3-adb0b7895289" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -190,8 +193,8 @@
 		</band>
 		<band height="1" splitType="Immediate">
 			<printWhenExpression><![CDATA[!$F{ShowChangeOfAddressSection}.isEmpty()]]></printWhenExpression>
-			<subreport runToBottom="true">
-				<reportElement uuid="c85ab019-8300-4323-b094-9ea2beb74163" positionType="Float" x="0" y="0" width="560" height="1"/>
+			<subreport runToBottom="false">
+				<reportElement uuid="c85ab019-8300-4323-b094-9ea2beb74163" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -201,8 +204,8 @@
 		</band>
 		<band height="1" splitType="Immediate">
 			<printWhenExpression><![CDATA[!$F{ShowPaymentBankDetailsSection}.isEmpty()]]></printWhenExpression>
-			<subreport runToBottom="true">
-				<reportElement uuid="e01f87d6-f598-42e2-8c0e-1f63d48f456a" positionType="Float" x="0" y="0" width="560" height="1"/>
+			<subreport runToBottom="false">
+				<reportElement uuid="e01f87d6-f598-42e2-8c0e-1f63d48f456a" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -212,8 +215,8 @@
 		</band>
 		<band height="1" splitType="Immediate">
 			<printWhenExpression><![CDATA[!$F{ShowSelfEmployedSection}.isEmpty()]]></printWhenExpression>
-			<subreport runToBottom="true">
-				<reportElement uuid="1a3f9bb2-c3ff-4ad2-a98d-a06f07866943" positionType="Float" x="0" y="0" width="560" height="1"/>
+			<subreport runToBottom="false">
+				<reportElement uuid="1a3f9bb2-c3ff-4ad2-a98d-a06f07866943" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -223,8 +226,8 @@
 		</band>
 		<band height="1" splitType="Immediate">
 			<printWhenExpression><![CDATA[!$F{ShowBreaksInCareSection}.isEmpty()]]></printWhenExpression>
-			<subreport runToBottom="true">
-				<reportElement uuid="03480f1a-abfb-4123-861f-0e5af4094c81" positionType="Float" x="0" y="0" width="560" height="1"/>
+			<subreport runToBottom="false">
+				<reportElement uuid="03480f1a-abfb-4123-861f-0e5af4094c81" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -234,8 +237,8 @@
 		</band>
 		<band height="1" splitType="Immediate">
 			<printWhenExpression><![CDATA[!$F{ShowEmploymentChangeSection}.isEmpty()]]></printWhenExpression>
-			<subreport runToBottom="true">
-				<reportElement uuid="ce297c61-1e15-4922-94cc-50fb831cb95f" positionType="Float" x="0" y="0" width="560" height="1"/>
+			<subreport runToBottom="false">
+				<reportElement uuid="ce297c61-1e15-4922-94cc-50fb831cb95f" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -244,8 +247,9 @@
 			</subreport>
 		</band>
 		<band height="1" splitType="Immediate">
-			<subreport runToBottom="true">
-				<reportElement uuid="30b7c3cf-4e6b-45b6-8efd-5ad89f22cf8a" x="0" y="0" width="560" height="1"/>
+			<printWhenExpression><![CDATA[!$F{showOtherChangesSection}.isEmpty()]]></printWhenExpression>
+			<subreport runToBottom="false">
+				<reportElement uuid="30b7c3cf-4e6b-45b6-8efd-5ad89f22cf8a" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -254,8 +258,8 @@
 			</subreport>
 		</band>
 		<band height="1" splitType="Immediate">
-			<subreport runToBottom="true">
-				<reportElement uuid="d93bb26d-8ca2-4293-bb4a-4c903868681c" positionType="Float" x="0" y="0" width="560" height="1"/>
+			<subreport runToBottom="false">
+				<reportElement uuid="d93bb26d-8ca2-4293-bb4a-4c903868681c" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>

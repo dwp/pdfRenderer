@@ -53,8 +53,8 @@
 	<background>
 		<band splitType="Stretch"/>
 	</background>
-	<pageHeader>
-		<band height="37" splitType="Stretch">
+	<title>
+		<band height="36">
 			<staticText>
 				<reportElement uuid="61d27c60-d23c-47b0-a56a-f72fe47dd241" style="HeadingClaim" mode="Opaque" x="0" y="0" width="595" height="35" forecolor="#000000"/>
 				<textElement verticalAlignment="Middle">
@@ -63,9 +63,9 @@
 				<text><![CDATA[Part 2 - Change in Circumstance - Change of address]]></text>
 			</staticText>
 		</band>
-	</pageHeader>
+	</title>
 	<detail>
-		<band height="377" splitType="Stretch">
+		<band height="375" splitType="Stretch">
 			<staticText>
 				<reportElement uuid="f8b07e72-4c24-4a2e-b083-d9eaae0b77cc" style="SubHeadingClaim" mode="Opaque" x="0" y="0" width="595" height="32" forecolor="#000000"/>
 				<textElement verticalAlignment="Middle">
