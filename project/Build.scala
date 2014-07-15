@@ -7,18 +7,18 @@ object ApplicationBuild extends Build {
   val appName = "p1"
   val appVersion = "1.0-SNAPSHOT"
 
-  var repo: Seq[Project.Setting[_]] = Seq(resolvers += "Carers repo" at "http://build.3cbeta.co.uk:8080/artifactory/repo/")
+  var repo: Seq[Def.Setting[_]] = Seq(resolvers += "Carers repo" at "http://build.3cbeta.co.uk:8080/artifactory/repo/")
 
 
   val appDependencies = Seq(
-    "me.moocar" % "logback-gelf" % "0.9.6p2",
-    "org.specs2" %% "specs2" % "2.3.6" % "test",
-    "net.sf.jasperreports" % "jasperreports" % "5.2.0",
-    "com.dwp.carers" %%  "carerscommon" % "5.4",
-    "com.lowagie" % "itext" % "4.2.1",
-    "com.itextpdf" % "itextpdf" % "5.4.4",
-    "xalan" % "xalan" % "2.7.1",
-    "org.codehaus.groovy" % "groovy-all" % "2.0.1"
+    "me.moocar"             % "logback-gelf"          % "0.9.6p2",
+    "org.specs2"            %% "specs2"               % "2.3.6"     % "test",
+    "net.sf.jasperreports"  % "jasperreports"         % "5.2.0",
+    "com.lowagie"           % "itext"                 % "4.2.1",
+    "com.itextpdf"          % "itextpdf"              % "5.4.4",
+    "xalan"                 % "xalan"                 % "2.7.1",
+    "org.codehaus.groovy"   % "groovy-all"            % "2.0.1",
+    "com.dwp.carers"        %% "carerscommon"         % "5.4"
   )
 
   val conf = ConfigFactory.parseFile(new File("conf/application.conf")).resolve()
@@ -32,10 +32,10 @@ object ApplicationBuild extends Build {
     files map(p=>println(p))
   }
 
-  var sV: Seq[Project.Setting[_]] = Seq(scalaVersion := "2.10.3")
-  val compilerSettings: Seq[Project.Setting[_]] = Seq(scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8","-feature"))
+  var sV: Seq[Def.Setting[_]] = Seq(scalaVersion := "2.10.3")
+  val compilerSettings: Seq[Def.Setting[_]] = Seq(scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8","-feature"))
 
-  var appSettings: Seq[Project.Setting[_]] = repo ++ sV ++ compilerSettings ++ cleanjsprTask
+  var appSettings: Seq[Def.Setting[_]] = repo ++ sV ++ compilerSettings ++ cleanjsprTask
 
   val main = play.Project(appName, appVersion, appDependencies).settings(appSettings: _*)
 
