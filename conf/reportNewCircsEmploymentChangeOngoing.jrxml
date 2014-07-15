@@ -109,7 +109,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart2CircsBreaksFromCaring"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
-					<font size="10" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Employment]]></text>
 			</staticText>

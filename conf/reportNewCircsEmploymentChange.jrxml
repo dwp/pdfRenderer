@@ -354,7 +354,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart2CircsBreaksFromCaring"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
-					<font size="10" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Part 2 - Change in Circumstance - Employment Change]]></text>
 			</staticText>
@@ -466,7 +466,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart2CircsBreaksFromCaring"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
-					<font size="10" isBold="true"/>
+					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[About Your Self-Employment]]></text>
 			</staticText>
