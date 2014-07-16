@@ -384,12 +384,12 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsEmployerDateJobFinishedAnswer}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+			<textField isBlankWhenNull="true">
 				<reportElement uuid="8766c0f5-584e-41eb-930e-6bece1a26d34" positionType="Float" x="0" y="73" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsEmployerP45LeavingDateQuestion}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+			<textField isBlankWhenNull="true">
 				<reportElement uuid="01212d84-7bf5-41d2-8686-52497783eef7" positionType="Float" x="397" y="73" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsEmployerP45LeavingDateAnswer}]]></textFieldExpression>
