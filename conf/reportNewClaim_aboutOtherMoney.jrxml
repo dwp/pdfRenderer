@@ -123,7 +123,7 @@
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="22" splitType="Immediate">
+		<band height="20" splitType="Immediate">
 			<staticText>
 				<reportElement uuid="c4993f7a-b987-4a99-9fbd-21415dcc29ce" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="18" forecolor="#000000">
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart7AboutOtherMoney"/>
