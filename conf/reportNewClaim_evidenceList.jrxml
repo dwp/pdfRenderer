@@ -32,8 +32,8 @@
 	<background>
 		<band splitType="Stretch"/>
 	</background>
-	<pageHeader>
-		<band height="22" splitType="Immediate">
+	<title>
+		<band height="19">
 			<staticText>
 				<reportElement uuid="f3b5dff4-39c9-4ce1-91fe-15e640d4d715" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="18">
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingCustomerEvidenceList"/>
@@ -44,7 +44,7 @@
 				<text><![CDATA[Part 10 - Customer Evidence List]]></text>
 			</staticText>
 		</band>
-	</pageHeader>
+	</title>
 	<detail>
 		<band height="1" splitType="Immediate">
 			<subreport>
