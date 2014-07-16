@@ -114,7 +114,7 @@
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="21">
+		<band height="20">
 			<staticText>
 				<reportElement uuid="4174c253-6428-4e9c-b5d7-a74b83203f95" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="18" forecolor="#000000">
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart1AboutYouTheCarer"/>

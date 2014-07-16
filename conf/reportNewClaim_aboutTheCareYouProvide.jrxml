@@ -93,7 +93,7 @@
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="22">
+		<band height="21">
 			<staticText>
 				<reportElement uuid="0352c26e-c945-465d-a87d-c2030a5dc51d" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="20">
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart3AboutTheCareYouProvide"/>
