@@ -6,6 +6,7 @@ import pdfService.Implicits._
 import play.api.Logger
 import java.io.OutputStream
 import data_sources.InvalidSourceFormatException
+import monitoring.Counters
 
 /**
  * Entry point of the service. It consumes the HTTP request received, checks it is an XML request
@@ -22,7 +23,6 @@ trait RenderService {
 
   def outputGeneration(request: Request[AnyContent]) = {
 
-
     request.body.asXml.map {
       xml =>
         val generator = reportGenerator
@@ -35,6 +35,7 @@ trait RenderService {
           generator.exportReportToStream(print, outputStream) match {
             case GenerationSuccess() =>
               Logger.info("Generation success for transactionId [${transactionId}] with content size:"+content.length)
+              Counters.recordClaimRenderCount()
               Results.Ok(content)
 
             case GenerationFailure() =>
