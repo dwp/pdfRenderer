@@ -495,7 +495,7 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{SelfEmpMoreAboutChangesQuestionLabel}]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="0e40338d-7b88-44f0-8ba9-67c61d5b00d7" positionType="Float" x="397" y="78" width="197" height="36" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{SelfEmpMoreAboutChangesAnswer}]]></textFieldExpression>
