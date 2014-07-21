@@ -96,7 +96,7 @@
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="470">
+		<band height="511">
 			<printWhenExpression><![CDATA[!$F{showNotStartedEmpSection}.isEmpty()]]></printWhenExpression>
 			<staticText>
 				<reportElement uuid="b844a3a3-7c0b-4b86-a81f-69d0a0daf51d" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="595" height="18" forecolor="#000000">
@@ -178,76 +178,76 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{NotStartedPayFrequencyAnswer}]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="4d064dfa-0242-4e61-bca6-9c2c7f5efd17" positionType="Float" x="397" y="145" width="197" height="18" isRemoveLineWhenBlank="true"/>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="4d064dfa-0242-4e61-bca6-9c2c7f5efd17" positionType="Float" x="397" y="145" width="197" height="57" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{NotStartedPayFrequencyOtherAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="1d3a72b6-49bb-4740-a26a-18c387c988e8" positionType="Float" x="0" y="163" width="392" height="36" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="1d3a72b6-49bb-4740-a26a-18c387c988e8" positionType="Float" x="0" y="202" width="392" height="36" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{NotStartedUsuallyPaidSameAmountQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="77e4180d-3858-4979-bd9d-198b4658160a" positionType="Float" x="397" y="163" width="197" height="36" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="77e4180d-3858-4979-bd9d-198b4658160a" positionType="Float" x="397" y="202" width="197" height="36" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{NotStartedUsuallyPaidSameAmountAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="f588d94c-08bf-4db2-8939-0a86b55bacbc" positionType="Float" x="0" y="199" width="392" height="16" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="f588d94c-08bf-4db2-8939-0a86b55bacbc" positionType="Float" x="0" y="238" width="392" height="16" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{NotStartedPayIntoPensionQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="52000e0a-4939-4a15-9630-8462eb111f42" positionType="Float" x="397" y="199" width="197" height="16" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="52000e0a-4939-4a15-9630-8462eb111f42" positionType="Float" x="397" y="238" width="197" height="16" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{NotStartedPayIntoPensionAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="325987e0-c3db-4fbe-835f-14c81907b958" positionType="Float" x="0" y="215" width="594" height="15" isRemoveLineWhenBlank="true">
+				<reportElement uuid="325987e0-c3db-4fbe-835f-14c81907b958" positionType="Float" x="0" y="254" width="594" height="15" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{NotStartedPayIntoPensionAnswer} == "Yes"]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{NotStartedPayIntoPensionWhatForQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="92e7438a-4117-4a56-8687-6b3f0c0f04cb" positionType="Float" x="0" y="230" width="594" height="70" isRemoveLineWhenBlank="true">
+				<reportElement uuid="92e7438a-4117-4a56-8687-6b3f0c0f04cb" positionType="Float" x="0" y="269" width="594" height="70" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{NotStartedPayIntoPensionAnswer} == "Yes"]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{NotStartedPayIntoPensionWhatForAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="d8860fe9-d4e1-4b13-9d0b-3a33ea711f51" positionType="Float" x="0" y="300" width="392" height="15" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="d8860fe9-d4e1-4b13-9d0b-3a33ea711f51" positionType="Float" x="0" y="339" width="392" height="15" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{NotStartedCareCostsForThisWorkQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="78f63d80-3735-483b-8c94-8a41115f259a" positionType="Float" x="397" y="300" width="197" height="15" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="78f63d80-3735-483b-8c94-8a41115f259a" positionType="Float" x="397" y="339" width="197" height="15" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{NotStartedCareCostsForThisWorkAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="8338b452-38eb-45ea-b472-373e9cc98a40" positionType="Float" x="0" y="315" width="594" height="15" isRemoveLineWhenBlank="true">
+				<reportElement uuid="8338b452-38eb-45ea-b472-373e9cc98a40" positionType="Float" x="0" y="354" width="594" height="15" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{NotStartedCareCostsForThisWorkAnswer} == "Yes"]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{NotStartedCareCostsForThisWorkWhatCostsQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="d8fb4e33-755a-412b-9f60-fe8d06aea92d" positionType="Float" x="0" y="330" width="594" height="70" isRemoveLineWhenBlank="true">
+				<reportElement uuid="d8fb4e33-755a-412b-9f60-fe8d06aea92d" positionType="Float" x="0" y="369" width="594" height="70" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{NotStartedCareCostsForThisWorkAnswer} == "Yes"]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{NotStartedCareCostsForThisWorkWhatCostsAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="ce17ae3d-d6b4-40dc-9591-7747eb262225" positionType="Float" x="0" y="400" width="594" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="ce17ae3d-d6b4-40dc-9591-7747eb262225" positionType="Float" x="0" y="439" width="594" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{NotStartedMoreAboutChangesQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="d6359918-6256-4260-9f1d-6dc4d86d54ef" positionType="Float" x="0" y="418" width="594" height="52" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="d6359918-6256-4260-9f1d-6dc4d86d54ef" positionType="Float" x="0" y="457" width="594" height="52" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{NotStartedMoreAboutChangesAnswer}]]></textFieldExpression>
 			</textField>
