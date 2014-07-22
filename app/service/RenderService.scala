@@ -34,7 +34,7 @@ trait RenderService {
 
           generator.exportReportToStream(print, outputStream) match {
             case GenerationSuccess() =>
-              Logger.info("Generation success for transactionId [${transactionId}] with content size:"+content.length)
+              Logger.info(s"Generation success for transactionId [${transactionId}] with content size: ${content.length}")
               Counters.recordClaimRenderCount()
               Results.Ok(content)
 
@@ -43,7 +43,7 @@ trait RenderService {
               Results.InternalServerError
 
             case e: Throwable =>
-              Logger.error("Unexpected result for transactionId [${transactionId}]",e)
+              Logger.error(s"Unexpected result for transactionId [${transactionId}]",e)
               Results.InternalServerError
           }
         }
