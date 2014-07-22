@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="addressForNestedReports" language="groovy" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="5612b57e-df15-4e7b-8f55-17a1d4853ba9">
-	<property name="ireport.zoom" value="2.0"/>
-	<property name="ireport.x" value="56"/>
+	<property name="ireport.zoom" value="1.24184264611831"/>
+	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
-    <property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
-    <template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
 	<parameter name="addressLabel" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["Address"]]></defaultValueExpression>
 	</parameter>
@@ -27,7 +27,7 @@
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="74" splitType="Immediate">
+		<band height="76" splitType="Immediate">
 			<textField>
 				<reportElement uuid="fe31c064-9c6d-4657-8273-21794cb35f9d" positionType="Float" x="0" y="1" width="392" height="18"/>
 				<textElement/>
@@ -48,6 +48,11 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{Line3}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement uuid="7024972e-690f-4ca0-b36e-66ff9a4bc2a3" positionType="Float" x="0" y="55" width="594" height="1"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
 			<textField>
 				<reportElement uuid="653f8379-d915-465b-9267-bda1f0d8d7b2" positionType="Float" x="0" y="56" width="392" height="18">
 					<printWhenExpression><![CDATA[!$F{Postcode}.isEmpty()]]></printWhenExpression>
