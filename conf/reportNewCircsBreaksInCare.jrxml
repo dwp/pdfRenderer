@@ -250,12 +250,12 @@
 				<textFieldExpression><![CDATA[$F{MedicalTreatmentDuringBreakAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="c4099582-efcb-4d9d-abfc-56a6a7e717cb" positionType="Float" x="0" y="236" width="595" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="c4099582-efcb-4d9d-abfc-56a6a7e717cb" positionType="Float" x="0" y="236" width="594" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{MoreChangesQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="f3f722a0-bf0a-489e-bd14-13ec6bbcc3a4" positionType="Float" x="0" y="254" width="595" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="f3f722a0-bf0a-489e-bd14-13ec6bbcc3a4" positionType="Float" x="0" y="254" width="594" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{MoreChangesAnswer}]]></textFieldExpression>
 			</textField>
@@ -270,12 +270,12 @@
 				<textFieldExpression><![CDATA[$F{AdditionalBreaksNotReportedAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="d40b8aaa-ac4c-4057-b6c9-24c73d5bc16d" positionType="Float" x="0" y="290" width="595" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="d40b8aaa-ac4c-4057-b6c9-24c73d5bc16d" positionType="Float" x="0" y="290" width="594" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AdditionalBreaksNotReportedDescQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="961a1a4d-6a05-4aae-a70d-4f50be655caf" positionType="Float" x="0" y="308" width="595" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="961a1a4d-6a05-4aae-a70d-4f50be655caf" positionType="Float" x="0" y="308" width="594" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AdditionalBreaksNotReportedDescAnswer}]]></textFieldExpression>
 			</textField>
