@@ -14,6 +14,7 @@ object Global extends WithFilters(MonitorFilter) with PdfServiceMonitorRegistrat
     registerReporters()
 
     // compile jasper reports if they are not already compiled
+    Logger.info("Calling compile reports")
     compileAllReports()
   }
 

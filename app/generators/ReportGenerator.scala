@@ -23,13 +23,22 @@ trait ReportGenerator {
 
   def compileAllReports() = {
     try {
-      val files = new java.io.File(jrxmlLocation).listFiles.filter(_.getName.endsWith(".jrxml"))
-      Logger.info(s"Getting jrxml files from $jrxmlLocation. Files size is "+files.size)
-      for(file <- files){
-        // process the file
-        val reportNameArr = file.getName.split("""\.""")
-        if(reportNameArr.size>0) compileReport(reportNameArr(0))
-        else Logger.error("Error reading from directory /conf")
+      Logger.info(s"jrxmlLocation = $jrxmlLocation")
+      val allFiles = new File(jrxmlLocation)
+
+      if(allFiles!= null) {
+        if(allFiles.listFiles != null && allFiles.listFiles.size > 0) {
+          val files = allFiles.listFiles.filter(_.getName.endsWith(".jrxml"))
+          if(files!=null) {
+            Logger.info(s"Getting jrxml files from $jrxmlLocation. Files size is "+files.size)
+            for(file <- files){
+              // process the file
+              val reportNameArr = file.getName.split("""\.""")
+              if(reportNameArr.size>0) compileReport(reportNameArr(0))
+              else Logger.error("Error reading from directory /conf")
+            }
+          }
+        }
       }
     } catch {
       case e: InvalidSourceFormatException =>
