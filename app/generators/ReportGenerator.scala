@@ -11,13 +11,35 @@ import java.io.{File, OutputStream}
 import java.util
 import scala.language.postfixOps
 
+
 /**
  * Interface of the report generators.
  */
 trait ReportGenerator {
   lazy val jasperLocation = Try(Play.current.configuration.getString("jasper.folder").getOrElse("./")) match {case Success(s) => s; case _ => "./"}
+  lazy val jrxmlLocation = Try(Play.current.configuration.getString("jrxml.folder").getOrElse("/conf")) match {case Success(s) => s; case _ => "/conf"}
   lazy val yesImage = Play.current.configuration.getString("images.yes").getOrElse("./")
   lazy val noImage = Play.current.configuration.getString("images.no").getOrElse("./")
+
+  def compileAllReports() = {
+    try {
+      val files = new java.io.File(jrxmlLocation).listFiles.filter(_.getName.endsWith(".jrxml"))
+      Logger.info(s"Getting jrxml files from $jrxmlLocation. Files size is "+files.size)
+      for(file <- files){
+        // process the file
+        val reportNameArr = file.getName.split("""\.""")
+        if(reportNameArr.size>0) compileReport(reportNameArr(0))
+        else Logger.error("Error reading from directory /conf")
+      }
+    } catch {
+      case e: InvalidSourceFormatException =>
+        Logger.error(e.getMessage,e)
+        throw e
+      case e: Throwable =>
+        Logger.error(e.getMessage,e)
+        throw e
+    }
+  }
 
   def generateFrom(source: ReportDataSource): Option[JasperPrint] = {
     try {
@@ -26,11 +48,7 @@ trait ReportGenerator {
 
       // If we do not have the compiled report templates, then we need to compile them
       // before we can generate a report.
-      if (!new File(jasperFilename).exists()) {
-        Logger.info("No jasper files. Compiling them from JRXML files")
-        compileReportsRecursively(reportName)
-        Logger.info("Completed compilation of JRXML files.")
-      }
+      compileReport(reportName)
       val parameter:util.Map[String,Object] = new util.HashMap[String,Object]()
 
       parameter.put("SUBREPORT_DIR",jasperLocation)
@@ -39,18 +57,23 @@ trait ReportGenerator {
       if (null != jasperPrint) Some(jasperPrint) else None
     }
     catch {
-      case e: InvalidSourceFormatException => {
+      case e: InvalidSourceFormatException =>
         Logger.error(e.getMessage,e)
         throw e
-      }
-      case e: Throwable => {
+      case e: Throwable =>
         Logger.error(e.getMessage,e)
         throw e
-      }
     }
   }
 
-  def exportReportToStream(print: Option[JasperPrint], stream: OutputStream): SuccessOrFailure
+  def compileReport(reportName: String) {
+    val jasperFilename = s"$jasperLocation$reportName.jasper"
+    if (!new File(jasperFilename).exists()) {
+      Logger.info(s"No jasper file. Compiling from JRXML for $jasperFilename.")
+      compileReportsRecursively(reportName)
+      Logger.info(s"Completed compilation of JRXML files for $jasperFilename.")
+    }
+  }
 
   private def compileReportsRecursively(fileName: String): JasperReport = {
     val jasperFilename = s"$jasperLocation$fileName.jasper"
@@ -68,4 +91,6 @@ trait ReportGenerator {
     })
     jasperReport
   }
+
+  def exportReportToStream(print: Option[JasperPrint], stream: OutputStream): SuccessOrFailure = {GenerationSuccess()}
 }
