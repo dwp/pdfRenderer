@@ -96,7 +96,7 @@
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="314">
+		<band height="303">
 			<printWhenExpression><![CDATA[!$F{showNotStartedEmpSection}.isEmpty()]]></printWhenExpression>
 			<staticText>
 				<reportElement uuid="b844a3a3-7c0b-4b86-a81f-69d0a0daf51d" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="595" height="18" forecolor="#000000">
@@ -250,24 +250,24 @@
 				<textFieldExpression><![CDATA[$F{NotStartedCareCostsForThisWorkWhatCostsQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="d8fb4e33-755a-412b-9f60-fe8d06aea92d" positionType="Float" x="1" y="247" width="594" height="24" isRemoveLineWhenBlank="true">
+				<reportElement uuid="d8fb4e33-755a-412b-9f60-fe8d06aea92d" positionType="Float" x="1" y="247" width="594" height="18" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{NotStartedCareCostsForThisWorkAnswer} == "Yes"]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{NotStartedCareCostsForThisWorkWhatCostsAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="0dba6f4c-4d22-4ad4-b33d-8b08390aac01" positionType="Float" x="1" y="270" width="595" height="1"/>
+				<reportElement uuid="0dba6f4c-4d22-4ad4-b33d-8b08390aac01" positionType="Float" x="1" y="264" width="595" height="1"/>
 				<textElement/>
 				<text><![CDATA[]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="ce17ae3d-d6b4-40dc-9591-7747eb262225" positionType="Float" x="0" y="271" width="594" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="ce17ae3d-d6b4-40dc-9591-7747eb262225" positionType="Float" x="0" y="265" width="594" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{NotStartedMoreAboutChangesQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="d6359918-6256-4260-9f1d-6dc4d86d54ef" positionType="Float" x="0" y="289" width="594" height="22" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="d6359918-6256-4260-9f1d-6dc4d86d54ef" positionType="Float" x="0" y="283" width="594" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{NotStartedMoreAboutChangesAnswer}]]></textFieldExpression>
 			</textField>
