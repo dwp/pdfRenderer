@@ -118,7 +118,7 @@
 		</band>
 	</title>
 	<detail>
-		<band height="324" splitType="Stretch">
+		<band height="327" splitType="Stretch">
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="59a010e4-a3c4-4e34-bbb6-7867de7dfd97" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
@@ -154,118 +154,128 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{WherePersonYouCareSomewhereElse}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement uuid="7f3dd184-a8dd-4ffc-aeec-0b27a515b1fa" positionType="Float" x="0" y="72" width="594" height="1"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="0a314def-8206-43a9-b66b-cb930ec82b25" positionType="Float" x="0" y="72" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="0a314def-8206-43a9-b66b-cb930ec82b25" positionType="Float" x="0" y="73" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{WhereWereYouQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="2c06a93c-b262-4d8d-ba3e-dc50f6c596af" positionType="Float" x="397" y="72" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="2c06a93c-b262-4d8d-ba3e-dc50f6c596af" positionType="Float" x="397" y="73" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{WhereWereYouAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="97019eca-fcb9-40eb-a7e9-936a7a652ec7" positionType="Float" x="397" y="90" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="97019eca-fcb9-40eb-a7e9-936a7a652ec7" positionType="Float" x="397" y="91" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{WhereWereYouSomewhereElse}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement uuid="fd325857-9c42-4ebc-adae-6d1039e21c52" positionType="Float" x="0" y="109" width="594" height="1"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="eb4d73bb-2f8c-4988-989f-bce541090e8e" positionType="Float" x="0" y="108" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="eb4d73bb-2f8c-4988-989f-bce541090e8e" positionType="Float" x="0" y="110" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{HasBreakFromCaringEndedQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="1e378c01-739f-4379-94b2-5001f5c1a5bc" positionType="Float" x="397" y="108" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="1e378c01-739f-4379-94b2-5001f5c1a5bc" positionType="Float" x="397" y="110" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{HasBreakFromCaringEndedAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="9babfee1-6214-496d-acb8-61fdd9a34633" positionType="Float" x="0" y="126" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="9babfee1-6214-496d-acb8-61fdd9a34633" positionType="Float" x="0" y="128" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EndDateQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="00895092-18cb-424c-aeec-94e284caa6f8" positionType="Float" x="397" y="126" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="00895092-18cb-424c-aeec-94e284caa6f8" positionType="Float" x="397" y="128" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EndDateAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="aa6b2851-f69d-4074-8940-01baf439de61" positionType="Float" x="0" y="144" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="aa6b2851-f69d-4074-8940-01baf439de61" positionType="Float" x="0" y="146" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EndTimeQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="1980a2d4-1649-4b67-9f24-cd4db1ef839d" positionType="Float" x="397" y="144" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="1980a2d4-1649-4b67-9f24-cd4db1ef839d" positionType="Float" x="397" y="146" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EndTimeAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="00d98fde-0e0f-4069-9f2e-9effebf47860" positionType="Float" x="0" y="162" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="00d98fde-0e0f-4069-9f2e-9effebf47860" positionType="Float" x="0" y="164" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ExpectStartCaringAgainQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="f2d40ff9-9909-464a-a0a8-83e261265fa5" positionType="Float" x="397" y="162" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="f2d40ff9-9909-464a-a0a8-83e261265fa5" positionType="Float" x="397" y="164" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ExpectStartCaringAgainAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="8504caf8-2481-46ff-a264-5db7f757306d" positionType="Float" x="0" y="180" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="8504caf8-2481-46ff-a264-5db7f757306d" positionType="Float" x="0" y="182" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ExpectStartCaringAgainDateQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="85ac301f-08ee-4441-a94c-05edde66cc51" positionType="Float" x="397" y="180" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="85ac301f-08ee-4441-a94c-05edde66cc51" positionType="Float" x="397" y="182" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ExpectStartCaringAgainDateAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="d4c78e1e-4c27-4fb5-bc99-bc0e491a7b90" positionType="Float" x="0" y="198" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="d4c78e1e-4c27-4fb5-bc99-bc0e491a7b90" positionType="Float" x="0" y="200" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PermanentBreakDateQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="39cd73e1-a698-4dc9-a18a-18d2a2c5fc29" positionType="Float" x="397" y="198" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="39cd73e1-a698-4dc9-a18a-18d2a2c5fc29" positionType="Float" x="397" y="200" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PermanentBreakDateAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="47cc14c0-b411-4cc7-a14e-ed6e583a7b81" positionType="Float" x="0" y="216" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="47cc14c0-b411-4cc7-a14e-ed6e583a7b81" positionType="Float" x="0" y="218" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{MedicalTreatmentDuringBreakQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="4ce74b8f-ca9e-4c0b-82cb-cfcf085be5c1" positionType="Float" x="397" y="216" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="4ce74b8f-ca9e-4c0b-82cb-cfcf085be5c1" positionType="Float" x="397" y="218" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{MedicalTreatmentDuringBreakAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="c4099582-efcb-4d9d-abfc-56a6a7e717cb" positionType="Float" x="0" y="234" width="595" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="c4099582-efcb-4d9d-abfc-56a6a7e717cb" positionType="Float" x="0" y="236" width="595" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{MoreChangesQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="f3f722a0-bf0a-489e-bd14-13ec6bbcc3a4" positionType="Float" x="0" y="252" width="595" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="f3f722a0-bf0a-489e-bd14-13ec6bbcc3a4" positionType="Float" x="0" y="254" width="595" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{MoreChangesAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="9f07f3b4-81e0-475a-b243-053bbafc288a" positionType="Float" x="0" y="270" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="9f07f3b4-81e0-475a-b243-053bbafc288a" positionType="Float" x="0" y="272" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AdditionalBreaksNotReportedQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="6eead6c1-18ed-49fc-a79a-f40d6f3b6a8a" positionType="Float" x="397" y="270" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="6eead6c1-18ed-49fc-a79a-f40d6f3b6a8a" positionType="Float" x="397" y="272" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AdditionalBreaksNotReportedAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="d40b8aaa-ac4c-4057-b6c9-24c73d5bc16d" positionType="Float" x="0" y="288" width="595" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="d40b8aaa-ac4c-4057-b6c9-24c73d5bc16d" positionType="Float" x="0" y="290" width="595" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AdditionalBreaksNotReportedDescQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="961a1a4d-6a05-4aae-a70d-4f50be655caf" positionType="Float" x="0" y="306" width="595" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="961a1a4d-6a05-4aae-a70d-4f50be655caf" positionType="Float" x="0" y="308" width="595" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AdditionalBreaksNotReportedDescAnswer}]]></textFieldExpression>
 			</textField>
