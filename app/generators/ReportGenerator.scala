@@ -24,10 +24,12 @@ trait ReportGenerator {
   def compileAllReports() = {
     try {
       val files = new java.io.File(jrxmlLocation).listFiles.filter(_.getName.endsWith(".jrxml"))
+      Logger.info(s"Getting jrxml files from $jrxmlLocation. Files size is "+files.size)
       for(file <- files){
         // process the file
-        val reportName = file.getName.split("""\.""")(0)
-        compileReport(reportName)
+        val reportNameArr = file.getName.split("""\.""")
+        if(reportNameArr.size>0) compileReport(reportNameArr(0))
+        else Logger.error("Error reading from directory /conf")
       }
     } catch {
       case e: InvalidSourceFormatException =>
