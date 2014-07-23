@@ -101,9 +101,9 @@
 		<band splitType="Stretch"/>
 	</background>
 	<pageHeader>
-		<band height="23" splitType="Stretch">
+		<band height="42" splitType="Stretch">
 			<frame>
-				<reportElement uuid="f8b53fbe-5298-44b4-8221-8cb5fe105405" x="0" y="0" width="592" height="22"/>
+				<reportElement uuid="f8b53fbe-5298-44b4-8221-8cb5fe105405" x="0" y="0" width="592" height="41"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -111,63 +111,49 @@
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 				</box>
-				<staticText>
-					<reportElement uuid="eb8201ef-3319-4f71-ba4a-434848230663" x="0" y="0" width="102" height="20" forecolor="#000000"/>
-					<textElement verticalAlignment="Middle">
-						<font isBold="true"/>
-					</textElement>
-					<text><![CDATA[Transaction:]]></text>
-				</staticText>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-					<reportElement uuid="fa8df42d-d92f-4051-a603-d9108427489c" x="468" y="0" width="113" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
-					<textElement textAlignment="Right" verticalAlignment="Middle"/>
-					<textFieldExpression><![CDATA[$F{NationalInsuranceNumber}]]></textFieldExpression>
+				<textField>
+					<reportElement uuid="5c2d716d-3052-4233-ac3c-0c90ac6a3fad" x="2" y="1" width="433" height="20"/>
+					<textElement/>
+					<textFieldExpression><![CDATA["Date Received: "+$F{DateTimeGenerated}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement uuid="97b2efa8-c290-4b0e-b5d1-0ddc084d45e0" x="103" y="0" width="153" height="20" forecolor="#000000"/>
-					<textElement verticalAlignment="Middle">
+					<reportElement uuid="427f062f-b332-44e6-ace5-ebb66b995325" x="435" y="1" width="157" height="20"/>
+					<textElement textAlignment="Right" markup="none"/>
+					<textFieldExpression><![CDATA["Service version: "+$F{Version}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="a35eba91-2360-4f07-9422-13e675e718bc" x="2" y="20" width="201" height="20" forecolor="#000000"/>
+					<textElement verticalAlignment="Middle" markup="none">
 						<font isBold="true"/>
 					</textElement>
-					<textFieldExpression><![CDATA[$F{TransactionId}]]></textFieldExpression>
+					<textFieldExpression><![CDATA["Transaction:    "+$F{TransactionId}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="f611597b-ca9e-4eee-b245-2214c1573ce9" x="256" y="0" width="212" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
+					<reportElement uuid="f611597b-ca9e-4eee-b245-2214c1573ce9" x="220" y="20" width="248" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
 					<textElement verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[$F{ClaimantSurname}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="fa8df42d-d92f-4051-a603-d9108427489c" x="468" y="20" width="124" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{NationalInsuranceNumber}]]></textFieldExpression>
 				</textField>
 			</frame>
 		</band>
 	</pageHeader>
 	<detail>
-		<band height="70" splitType="Stretch">
+		<band height="45" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="7928087b-40c5-44a2-a88b-033a02972ec2" x="0" y="4" width="145" height="20"/>
-				<textElement/>
-				<text><![CDATA[Service version: ]]></text>
-			</staticText>
-			<textField>
-				<reportElement uuid="3205d842-c416-44c0-82fe-89f83bcb8739" x="145" y="4" width="100" height="20"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{Version}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement uuid="33f37f7e-ea89-47ec-9572-b60206334392" x="408" y="4" width="186" height="20"/>
-				<textElement textAlignment="Right">
-					<font isBold="true" isItalic="true"/>
+				<reportElement uuid="33f37f7e-ea89-47ec-9572-b60206334392" x="0" y="3" width="364" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true" isItalic="false"/>
 				</textElement>
-				<text><![CDATA[Carer's Allowance]]></text>
+				<text><![CDATA[Carer's Allowance Change of Circumstances Form]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="4c0f480a-90e9-4e9e-bd3a-20a48d069444" x="482" y="24" width="112" height="20"/>
-				<textElement textAlignment="Right">
-					<font isItalic="true"/>
-				</textElement>
-				<text><![CDATA[Claim Form]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="7fc54fa3-8e8e-49e3-b237-71e48d1d5de5" x="277" y="44" width="317" height="20"/>
+				<reportElement uuid="7fc54fa3-8e8e-49e3-b237-71e48d1d5de5" x="323" y="23" width="272" height="20"/>
 				<textElement textAlignment="Right" verticalAlignment="Middle"/>
-				<text><![CDATA[     This form was completed in English]]></text>
+				<text><![CDATA[This form was completed in English]]></text>
 			</staticText>
 		</band>
 		<band height="1" splitType="Immediate">
