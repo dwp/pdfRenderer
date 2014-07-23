@@ -24,6 +24,8 @@ trait ReportGenerator {
   def compileAllReports() = {
     try {
       Logger.info(s"jrxmlLocation = $jrxmlLocation")
+      Logger.info(s"jasperLocation = $jasperLocation")
+
       val allFiles = new File(jrxmlLocation)
 
       if(allFiles!= null) {
@@ -35,7 +37,7 @@ trait ReportGenerator {
               // process the file
               val reportNameArr = file.getName.split("""\.""")
               if(reportNameArr.size>0) compileReport(reportNameArr(0))
-              else Logger.error("Error reading from directory /conf")
+              else Logger.error("Error reading from jrxml directory")
             }
           }
         }
@@ -86,9 +88,16 @@ trait ReportGenerator {
 
   private def compileReportsRecursively(fileName: String): JasperReport = {
     val jasperFilename = s"$jasperLocation$fileName.jasper"
+    Logger.debug(s"jasperFileName is $jasperFilename")
+
     val jasperDesign: JasperDesign = JRXmlLoader.load(getClass getResourceAsStream s"/$fileName.jrxml")
+    Logger.debug(s"jasperDesign loaded: $jasperDesign")
+
     val jasperReport = JasperCompileManager.compileReport(jasperDesign)
+    Logger.debug("Report compiled")
+
     JRSaver.saveObject(jasperReport, jasperFilename)
+    Logger.debug("Report saved")
     //Compile sub reports
     JRElementsVisitor.visitReport(jasperReport, new ReportCompiler() {
       override def visitSubreport(subreport: JRSubreport): Unit = {
@@ -98,6 +107,7 @@ trait ReportGenerator {
         compileReportsRecursively(subReportName)
       }
     })
+    Logger.debug("Successfully compiled and saved jasper report ")
     jasperReport
   }
 
