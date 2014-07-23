@@ -12,7 +12,7 @@ import java.io.OutputStream
  */
 object PdfGenerator extends ReportGenerator {
 
-  def exportReportToStream(print: Option[JasperPrint], stream: OutputStream): SuccessOrFailure = {
+  override def exportReportToStream(print: Option[JasperPrint], stream: OutputStream): SuccessOrFailure = {
     try {
       if (print.isDefined) {
         JasperExportManager.exportReportToPdfStream(print.get,stream)
@@ -24,10 +24,9 @@ object PdfGenerator extends ReportGenerator {
         GenerationFailure()
       }
     } catch {
-      case e: Throwable => {
+      case e: Throwable =>
         Logger.error(e.getMessage,e)
         GenerationFailure()
-      }
     }
   }
 }
