@@ -5,13 +5,9 @@ import java.io.OutputStream
 import play.api.Logger
 import net.sf.jasperreports.engine.export.{JRHtmlExporterParameter, HtmlExporter}
 
-
-/**
- * Created by jmi on 07/04/2014.
- */
 object HtmlGenerator extends ReportGenerator {
 
-  def exportReportToStream(print: Option[JasperPrint], stream: OutputStream): SuccessOrFailure = {
+  override def exportReportToStream(print: Option[JasperPrint], stream: OutputStream): SuccessOrFailure = {
 
     try {
       if (print.isDefined) {
@@ -27,7 +23,7 @@ object HtmlGenerator extends ReportGenerator {
         exporter.setParameter(JRHtmlExporterParameter.IS_USING_IMAGES_TO_ALIGN, false)
         exporter.setParameter(JRHtmlExporterParameter.IS_WRAP_BREAK_WORD, true)
         exporter.setParameter(JRHtmlExporterParameter.SIZE_UNIT, JRHtmlExporterParameter.SIZE_UNIT_POINT)
-        exporter.exportReport
+        exporter.exportReport()
         Logger.debug("HMTL Generated.")
         GenerationSuccess()
       }
@@ -36,10 +32,9 @@ object HtmlGenerator extends ReportGenerator {
         GenerationFailure()
       }
     } catch {
-      case e: Throwable => {
+      case e: Throwable =>
         Logger.error(e.getMessage,e)
         GenerationFailure()
-      }
     }
   }
 }
