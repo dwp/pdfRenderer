@@ -504,6 +504,11 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{careExpensesChildrenPaymentFrequencyAnswer}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement uuid="dd9f0593-a239-4290-a5de-e30d378d326f" positionType="Float" x="2" y="95" width="593" height="1"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="d58c64be-edd9-4b25-88f3-038406d3cbb0" positionType="Float" x="398" y="95" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
@@ -616,6 +621,11 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{careExpensesCareePaymentFrequencyAnswer}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement uuid="b553bb18-2b4c-40d4-9373-93f0b9c64ab3" positionType="Float" x="2" y="94" width="593" height="1"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="b6a11c5b-8357-4a8d-8320-b4d053732953" positionType="Float" x="398" y="94" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
