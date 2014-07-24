@@ -8,7 +8,7 @@ import play.api.{Play, Logger}
 import net.sf.jasperreports.engine.design.JasperDesign
 import net.sf.jasperreports.engine.util.{JRElementsVisitor, JRSaver}
 import java.io.{File, OutputStream}
-import java.util
+import java.{io, util}
 import scala.language.postfixOps
 
 
@@ -32,11 +32,14 @@ trait ReportGenerator {
         if(allFiles.listFiles != null && allFiles.listFiles.size > 0) {
           val files = allFiles.listFiles.filter(_.getName.endsWith(".jrxml"))
           if(files!=null) {
-            Logger.info(s"Getting jrxml files from $jrxmlLocation. Files size is "+files.size)
-            for(file <- files){
+            Logger.info(s"Found ${files.size} Jasper templates in $jrxmlLocation")
+            for((file,index) <- files.zipWithIndex){
               // process the file
               val reportNameArr = file.getName.split("""\.""")
-              if(reportNameArr.size>0) compileReport(reportNameArr(0))
+              if(reportNameArr.size>0) {
+                Logger.info(s"[$index/${files.size}] Jasper template ${reportNameArr(0)}")
+                compileReport(reportNameArr(0))
+              }
               else Logger.error("Error reading from jrxml directory")
             }
           }
@@ -90,7 +93,9 @@ trait ReportGenerator {
     val jasperFilename = s"$jasperLocation$fileName.jasper"
     Logger.debug(s"jasperFileName is $jasperFilename")
 
-    val jasperDesign: JasperDesign = JRXmlLoader.load(getClass getResourceAsStream s"/$fileName.jrxml")
+//    val jasperDesign: JasperDesign = JRXmlLoader.load(getClass getResourceAsStream s"/$fileName.jrxml")
+    Logger.info(s"Loading jrxml for compilation: $jrxmlLocation/$fileName.jrxml")
+    val jasperDesign: JasperDesign = JRXmlLoader.load(s"$jrxmlLocation/$fileName.jrxml")
     Logger.debug(s"jasperDesign loaded: $jasperDesign")
 
     val jasperReport = JasperCompileManager.compileReport(jasperDesign)
