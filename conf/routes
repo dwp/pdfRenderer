@@ -7,3 +7,4 @@ POST     /print                           controllers.Application.generatePDF
 POST     /show                            controllers.Application.generateHTML
 
 GET      /ping                            controllers.HealthController.ping
+GET      /report/metrics                  com.kenshoo.play.metrics.MetricsController.metrics
