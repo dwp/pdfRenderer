@@ -94,7 +94,7 @@
 		</band>
 	</title>
 	<detail>
-		<band height="323" splitType="Stretch">
+		<band height="274" splitType="Stretch">
 			<staticText>
 				<reportElement uuid="422f0b61-6463-412b-9944-554d5b3fc015" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="595" height="32" forecolor="#000000">
 					<property name="net.sf.jasperreports.export.html.id" value="SubheadingExistingPaymentDetails"/>
@@ -131,6 +131,11 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PaymentDetailsPaidIntoAccountAnswer}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement uuid="bcad613b-89c5-4ec2-a10b-eb061c7987bf" positionType="Float" x="0" y="53" width="594" height="1"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="0d6d8e1c-b1da-4b7e-ae46-829068ab13ad" positionType="Float" x="0" y="54" width="392" height="18" isRemoveLineWhenBlank="true">
 					<property name="local_mesure_unitx" value="pixel"/>
@@ -159,8 +164,13 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PaymentDetailsBankNameAnswer}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement uuid="4d32c84a-6fde-4c80-8c1a-7133982a10c2" positionType="Float" x="0" y="72" width="594" height="1"/>
+				<textElement/>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="cebf5260-983c-48bb-b1fd-ce85ec2c072b" positionType="Float" x="0" y="72" width="392" height="18" isRemoveLineWhenBlank="true">
+				<reportElement uuid="cebf5260-983c-48bb-b1fd-ce85ec2c072b" positionType="Float" x="0" y="73" width="392" height="18" isRemoveLineWhenBlank="true">
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="local_mesure_unity" value="pixel"/>
@@ -174,7 +184,7 @@
 				<textFieldExpression><![CDATA[$F{PaymentDetailsMethodOfPaymentQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="8fbc49e7-bd1f-4fa9-8e35-a1330636a9bc" positionType="Float" x="397" y="72" width="197" height="18" isRemoveLineWhenBlank="true">
+				<reportElement uuid="8fbc49e7-bd1f-4fa9-8e35-a1330636a9bc" positionType="Float" x="397" y="73" width="197" height="18" isRemoveLineWhenBlank="true">
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="local_mesure_unity" value="pixel"/>
@@ -188,7 +198,7 @@
 				<textFieldExpression><![CDATA[$F{PaymentDetailsMethodOfPaymentAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="1d7271cb-443d-4192-be4b-4d1e7c5e231d" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="92" width="595" height="32" forecolor="#000000">
+				<reportElement uuid="1d7271cb-443d-4192-be4b-4d1e7c5e231d" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="91" width="595" height="32" forecolor="#000000">
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="local_mesure_unitwidth" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
@@ -202,82 +212,117 @@
 				<text><![CDATA[New payment details]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="3fe5f766-71db-4745-ba43-52a8b6906871" positionType="Float" x="0" y="125" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="3fe5f766-71db-4745-ba43-52a8b6906871" positionType="Float" x="0" y="123" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PaymentDetailsHolderNameQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="01a99847-b387-4634-99a1-6c7611385114" positionType="Float" x="397" y="125" width="197" height="36" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="01a99847-b387-4634-99a1-6c7611385114" positionType="Float" x="397" y="123" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PaymentDetailsHolderNameAnswer}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement uuid="d9ce375c-ad3d-4d57-af5a-5aa8055feab1" positionType="Float" x="0" y="141" width="594" height="1"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="677158a7-3839-4f1a-87ee-8e747ee230c5" positionType="Float" x="0" y="161" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="677158a7-3839-4f1a-87ee-8e747ee230c5" positionType="Float" x="0" y="142" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PaymentDetailsAccountHolderQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="710cd097-9f86-4820-8508-70064dcf041c" positionType="Float" x="397" y="161" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="710cd097-9f86-4820-8508-70064dcf041c" positionType="Float" x="397" y="142" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PaymentDetailsAccountHolderAnswer}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement uuid="6b37852a-1fdc-45d5-a5f5-b0e2d17845d9" positionType="Float" x="0" y="160" width="594" height="1"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="8184b9de-199e-4796-8009-7d1a66d2bb78" positionType="Float" x="0" y="179" width="392" height="54" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="8184b9de-199e-4796-8009-7d1a66d2bb78" positionType="Float" x="0" y="161" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PaymentDetailsBuildingSocietyNameQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="4663022d-6a35-4775-a940-ed32eb05b1d6" positionType="Float" x="397" y="179" width="197" height="54" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="4663022d-6a35-4775-a940-ed32eb05b1d6" positionType="Float" x="397" y="161" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PaymentDetailsBuildingSocietyNameAnswer}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement uuid="865571cb-0b7b-49af-9f34-498048b285c0" positionType="Float" x="0" y="179" width="594" height="1"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="65b2b63a-5150-4c48-8e8e-8979ed83dec9" positionType="Float" x="0" y="233" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="65b2b63a-5150-4c48-8e8e-8979ed83dec9" positionType="Float" x="0" y="180" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PaymentDetailsSortCodeQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="50ad4bee-011a-4cb3-a098-34be3e377d7f" positionType="Float" x="397" y="233" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="50ad4bee-011a-4cb3-a098-34be3e377d7f" positionType="Float" x="397" y="180" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PaymentDetailsSortCodeAnswer}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement uuid="5a1aa6d8-e31d-41aa-a670-083cec247011" positionType="Float" x="0" y="198" width="594" height="1"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="d9c55998-80d0-4bba-82d4-2e47683c9347" positionType="Float" x="0" y="251" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="d9c55998-80d0-4bba-82d4-2e47683c9347" positionType="Float" x="0" y="199" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PaymentDetailsAccountNumberQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="f245680d-e5ed-4da5-b724-335413e0e16f" positionType="Float" x="397" y="251" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="f245680d-e5ed-4da5-b724-335413e0e16f" positionType="Float" x="397" y="199" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PaymentDetailsAccountNumberAnswer}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement uuid="2875141a-4951-47db-a913-228da7c41f11" positionType="Float" x="0" y="217" width="594" height="1"/>
+				<textElement/>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="ad5ff319-4ff4-461f-a012-a67a5b1c736c" positionType="Float" x="0" y="269" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="ad5ff319-4ff4-461f-a012-a67a5b1c736c" positionType="Float" x="0" y="218" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PaymentDetailsPaymentFrequencyQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="f8be60bf-4b84-4148-80ea-4b83f20d5f7b" positionType="Float" x="397" y="269" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="f8be60bf-4b84-4148-80ea-4b83f20d5f7b" positionType="Float" x="397" y="218" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PaymentDetailsPaymentFrequencyAnswer}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement uuid="faa675d2-f4db-4c42-b0c4-7519bf8d8ec8" positionType="Float" x="0" y="236" width="594" height="1"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="d69b3ba7-59dd-4fb0-9805-43335563f06b" positionType="Float" x="0" y="287" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="d69b3ba7-59dd-4fb0-9805-43335563f06b" positionType="Float" x="0" y="237" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PaymentDetailsRollNumberQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="ce4f3a46-d004-4846-a90e-b6a9abfcb1b3" positionType="Float" x="397" y="287" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="ce4f3a46-d004-4846-a90e-b6a9abfcb1b3" positionType="Float" x="397" y="237" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PaymentDetailsRollNumberAnswer}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement uuid="184ed38f-8291-4d9e-b739-4f4645a95f95" positionType="Float" x="0" y="255" width="594" height="1"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="4c34fcb5-5296-4f8f-88a6-fe80fb8aad05" positionType="Float" x="0" y="305" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="4c34fcb5-5296-4f8f-88a6-fe80fb8aad05" positionType="Float" x="0" y="256" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PaymentDetailsOtherChangesQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="9ffaf2d2-21e9-406b-bbcf-d19a58d2b147" positionType="Float" x="397" y="305" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="9ffaf2d2-21e9-406b-bbcf-d19a58d2b147" positionType="Float" x="397" y="256" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{PaymentDetailsOtherChangesAnswer}]]></textFieldExpression>
 			</textField>
