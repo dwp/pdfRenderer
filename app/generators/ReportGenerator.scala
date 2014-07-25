@@ -93,7 +93,6 @@ trait ReportGenerator {
     val jasperFilename = s"$jasperLocation$fileName.jasper"
     Logger.debug(s"jasperFileName is $jasperFilename")
 
-//    val jasperDesign: JasperDesign = JRXmlLoader.load(getClass getResourceAsStream s"/$fileName.jrxml")
     Logger.info(s"Loading jrxml for compilation: $jrxmlLocation/$fileName.jrxml")
     val jasperDesign: JasperDesign = JRXmlLoader.load(s"$jrxmlLocation/$fileName.jrxml")
     Logger.debug(s"jasperDesign loaded: $jasperDesign")
@@ -109,10 +108,13 @@ trait ReportGenerator {
         val expression = subreport.getExpression.getText
         // expression looks like: $P{SUBREPORT_DIR} + "reportNewClaim_Summary.jasper"
         val subReportName = expression.substring(expression.indexOf('"') + 1, expression.length - 8)
-        compileReportsRecursively(subReportName)
+        if (!new File(subReportName).exists()) {
+          Logger.info(s"No jasper file. Compiling subreport from JRXML for $subReportName.")
+          compileReportsRecursively(subReportName)
+        }
       }
     })
-    Logger.debug("Successfully compiled and saved jasper report ")
+    Logger.debug("Successfully compiled and saved jasper report.")
     jasperReport
   }
 
