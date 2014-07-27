@@ -398,23 +398,33 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{CareeLastNameAnswer}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement uuid="9a587819-17fa-4b79-bd08-40f1873766e5" positionType="Float" x="0" y="55" width="547" height="1"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="eb000c3b-aa1e-4642-9b10-1a2f487a4f92" positionType="Float" x="0" y="55" width="162" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="eb000c3b-aa1e-4642-9b10-1a2f487a4f92" positionType="Float" x="0" y="56" width="162" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ClaimantOtherNamesQuestionLabel}+"(s)"]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="4252d74b-0fa3-43ac-a029-efa997d4c608" positionType="Float" x="168" y="55" width="180" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="4252d74b-0fa3-43ac-a029-efa997d4c608" positionType="Float" x="168" y="56" width="180" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement>
 					<font fontName="Arial" size="11"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ClaimantOtherNamesAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="7fa85fb1-35bb-4662-ad18-2fdb9257c635" positionType="Float" x="367" y="55" width="180" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="7fa85fb1-35bb-4662-ad18-2fdb9257c635" positionType="Float" x="367" y="56" width="180" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{CareeOtherNamesAnswer}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement uuid="6e705337-b910-4ef7-b520-909ae9b95ab8" positionType="Float" x="0" y="73" width="545" height="1"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="a42bbfc4-632c-4abd-a682-e27300bbef1d" positionType="Float" x="0" y="74" width="162" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
@@ -430,6 +440,11 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{CareeTitleAnswer}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement uuid="8e4faaec-e436-4952-9cea-f6d22a882a35" positionType="Float" x="0" y="91" width="547" height="1"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="1c36b483-0ec4-4d9b-ab4b-11bd3638a19c" positionType="Float" x="0" y="92" width="162" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
@@ -446,6 +461,11 @@
 				</reportElement>
 				<textElement/>
 			</textField>
+			<staticText>
+				<reportElement uuid="0bda8756-4a96-4510-b330-bd55f82e4c71" positionType="Float" x="0" y="110" width="547" height="1"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="8fd6959f-25c0-4f2d-963c-c55754674e8f" positionType="Float" x="0" y="110" width="162" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
@@ -461,21 +481,6 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{CareeDateOfBirthAnswer}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement uuid="6e705337-b910-4ef7-b520-909ae9b95ab8" positionType="Float" x="0" y="73" width="545" height="1"/>
-				<textElement/>
-				<text><![CDATA[]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="8e4faaec-e436-4952-9cea-f6d22a882a35" positionType="Float" x="0" y="91" width="547" height="1"/>
-				<textElement/>
-				<text><![CDATA[]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="0bda8756-4a96-4510-b330-bd55f82e4c71" positionType="Float" x="0" y="110" width="547" height="1"/>
-				<textElement/>
-				<text><![CDATA[]]></text>
-			</staticText>
 		</band>
 		<band height="54" splitType="Immediate">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
