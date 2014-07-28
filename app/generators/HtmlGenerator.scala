@@ -13,7 +13,7 @@ object HtmlGenerator extends ReportGenerator {
       if (print.isDefined) {
         val exporter = new HtmlExporter()
         val lineWriter = new CarersWriter(stream)
-        exporter.setParameter(JRExporterParameter.JASPER_PRINT, print.get)
+        exporter.setParameter(JRExporterParameter.JASPER_PRINT, removeBlankPage(print.get))
         exporter.setParameter(JRExporterParameter.OUTPUT_STREAM, stream)
         exporter.setParameter(JRExporterParameter.OUTPUT_WRITER, lineWriter)
         exporter.setParameter(JRHtmlExporterParameter.BETWEEN_PAGES_HTML, """<p class="htmlPageBreak" style="page-break-after: always"></p>""")
@@ -36,5 +36,19 @@ object HtmlGenerator extends ReportGenerator {
         Logger.error(e.getMessage,e)
         GenerationFailure()
     }
+  }
+
+  /**
+   * Remove the last empty page from the report
+   * @param print
+   * @return
+   */
+  def removeBlankPage (print:JasperPrint):JasperPrint = {
+      var pages = print.getPages
+      val lastPage = pages.get(pages.size()-1)
+      if (null != lastPage && lastPage.getElements.size() == 0){
+        pages.remove(lastPage)
+      }
+      print
   }
 }
