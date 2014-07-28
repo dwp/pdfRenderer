@@ -350,7 +350,7 @@
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerHavePartnerAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="62" splitType="Immediate">
+		<band height="61" splitType="Immediate">
 			<staticText>
 				<reportElement uuid="1a208c61-db28-4e54-9366-9e33e27eeb50" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="20">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingMoreAboutYou"/>
@@ -385,6 +385,11 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerStatePensionInsuranceAnswer}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement uuid="9fbc5b8c-fa12-4e67-b8ec-89a0b9d5ed91" positionType="Float" x="0" y="57" width="594" height="1"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
 		</band>
 	</detail>
 </jasperReport>
