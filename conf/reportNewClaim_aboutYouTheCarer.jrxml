@@ -350,7 +350,7 @@
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerHavePartnerAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="59" splitType="Immediate">
+		<band height="61" splitType="Immediate">
 			<staticText>
 				<reportElement uuid="1a208c61-db28-4e54-9366-9e33e27eeb50" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="20">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingMoreAboutYou"/>
@@ -371,20 +371,25 @@
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerCourseOfEducationInsuranceAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="c9ea62e9-3388-44bc-b5bf-60c295f4a415" x="0" y="38" width="594" height="1"/>
+				<reportElement uuid="c9ea62e9-3388-44bc-b5bf-60c295f4a415" positionType="Float" x="0" y="38" width="594" height="1"/>
 				<textElement/>
 				<text><![CDATA[]]></text>
 			</staticText>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="3dd440b4-e0ce-40fc-8dbd-77aa81001296" positionType="Float" x="0" y="41" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="3dd440b4-e0ce-40fc-8dbd-77aa81001296" positionType="Float" x="0" y="39" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerStatePensionQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="4c10d848-52e3-4a0b-8c1d-a9c48196fd33" positionType="Float" x="397" y="41" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="4c10d848-52e3-4a0b-8c1d-a9c48196fd33" positionType="Float" x="397" y="39" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerStatePensionInsuranceAnswer}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement uuid="9fbc5b8c-fa12-4e67-b8ec-89a0b9d5ed91" positionType="Float" x="0" y="57" width="594" height="1"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
 		</band>
 	</detail>
 </jasperReport>
