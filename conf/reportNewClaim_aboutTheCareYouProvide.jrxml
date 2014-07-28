@@ -172,7 +172,9 @@
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeSurnameAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="a0012086-cd9c-437b-ac4f-1b5c97c1b2e6" positionType="Float" x="0" y="96" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="a0012086-cd9c-437b-ac4f-1b5c97c1b2e6" positionType="Float" x="0" y="96" width="392" height="18" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[!$F{AboutCareYouProvideCareeNationalInsuranceNumberAnswer}.isEmpty()]]></printWhenExpression>
+				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeNationalInsuranceNumberQuestionLabel}]]></textFieldExpression>
 			</textField>
