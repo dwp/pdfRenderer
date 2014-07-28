@@ -386,7 +386,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 		</band>
-		<band height="97" splitType="Immediate">
+		<band height="95" splitType="Immediate">
 			<printWhenExpression><![CDATA[$F{haveBeenSelfEmployedAnswer}.equals("Yes")]]></printWhenExpression>
 			<staticText>
 				<reportElement uuid="3e35e067-9af8-4ceb-9abf-e2d152a1e24b" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="594" height="20" isPrintInFirstWholeBand="true">
@@ -423,7 +423,7 @@
 				<textFieldExpression><![CDATA[$F{pensionSchemeAnswerAmount}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="b2fe0218-e54d-4932-b31c-b0f40339d845" positionType="Float" x="397" y="58" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="b2fe0218-e54d-4932-b31c-b0f40339d845" positionType="Float" x="398" y="58" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{pensionSchemeFrequencyAnswer}]]></textFieldExpression>
 			</textField>
@@ -433,12 +433,12 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="e8fd6b41-aca1-4c3d-8138-ad77b5cfc491" positionType="Float" x="0" y="76" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="e8fd6b41-aca1-4c3d-8138-ad77b5cfc491" positionType="Float" x="0" y="58" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{pensionSchemeFrequencyQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="14124939-e11d-424f-ae13-256b9a7943d9" positionType="Float" x="397" y="78" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="14124939-e11d-424f-ae13-256b9a7943d9" positionType="Float" x="397" y="76" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{pensionSchemeFrequencyOther}]]></textFieldExpression>
 			</textField>
