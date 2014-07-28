@@ -28,7 +28,7 @@
 			</break>
 		</band>
 		<band height="4" splitType="Immediate">
-			<subreport runToBottom="false">
+			<subreport runToBottom="true">
 				<reportElement uuid="faf97e30-112f-4e5d-8186-0648f25acf29" positionType="Float" x="0" y="2" width="575" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
