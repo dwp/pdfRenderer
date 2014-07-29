@@ -80,7 +80,7 @@
 				<textElement markup="styled">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[Part 4 - About Your Education]]></text>
+				<text><![CDATA[PART 4 - ABOUT YOUR EDUCATION]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="88693a80-4f12-4554-916f-ddf7f189638d" positionType="Float" x="0" y="20" width="392" height="18" isRemoveLineWhenBlank="true"/>

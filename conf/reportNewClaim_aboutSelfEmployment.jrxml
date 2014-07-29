@@ -245,7 +245,7 @@
 				<textElement verticalAlignment="Middle" markup="styled">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[Part 6 - About Self Employment]]></text>
+				<text><![CDATA[PART 6 - ABOUT SELF EMPLOYMENT]]></text>
 			</staticText>
 		</band>
 	</title>

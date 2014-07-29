@@ -83,7 +83,7 @@
 				<textElement verticalAlignment="Middle" markup="styled">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[Part 2 - About your partner/spouse]]></text>
+				<text><![CDATA[PART 2 - ABOUT YOUR PARTNER/SPOUSE]]></text>
 			</staticText>
 		</band>
 	</title>
