@@ -122,7 +122,7 @@
 				<textElement verticalAlignment="Middle" markup="styled">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[Part 1 - About you - the carer]]></text>
+				<text><![CDATA[PART 1 - ABOUT YOU - THE CARER]]></text>
 			</staticText>
 		</band>
 	</title>

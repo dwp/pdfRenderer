@@ -131,7 +131,7 @@
 				<textElement verticalAlignment="Middle" markup="styled">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[Part 7 - About Other Money]]></text>
+				<text><![CDATA[PART 7 - ABOUT OTHER MONEY]]></text>
 			</staticText>
 		</band>
 	</title>

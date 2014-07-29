@@ -38,7 +38,7 @@
 				<textElement verticalAlignment="Middle" markup="styled">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[Part 10 - Customer Evidence List]]></text>
+				<text><![CDATA[PART 10 - CUSTOMER EVIDENCE LIST]]></text>
 			</staticText>
 		</band>
 	</title>

@@ -27,7 +27,7 @@
 				<textElement verticalAlignment="Middle" markup="styled">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[Part 9 - Customer Consent and Declaration]]></text>
+				<text><![CDATA[PART 9 - CUSTOMER CONSENT AND DECLARATION]]></text>
 			</staticText>
 		</band>
 		<band height="2" splitType="Immediate">

@@ -101,7 +101,7 @@
 				<textElement markup="styled">
 					<font isBold="true" isItalic="false"/>
 				</textElement>
-				<text><![CDATA[Part 3 - About the care you provide]]></text>
+				<text><![CDATA[PART 3 - ABOUT THE CARE YOU PROVIDE]]></text>
 			</staticText>
 		</band>
 	</title>
