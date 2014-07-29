@@ -156,7 +156,7 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_addressForNestedReports.jasper"]]></subreportExpression>
 			</subreport>
 			<staticText>
-				<reportElement uuid="8da1d0de-ce96-4d52-9ec3-3901d19e6aaf" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="24" width="594" height="20" forecolor="#000000" backcolor="#E6E6E6">
+				<reportElement uuid="8da1d0de-ce96-4d52-9ec3-3901d19e6aaf" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="24" width="594" height="20" forecolor="#000000" backcolor="#FFFFFF">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingHowWeCanContactYou"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
@@ -185,7 +185,7 @@
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerSpeechOrHearingDifficultyAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="11925ae7-8287-429b-9d41-e4b447f228fd" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="80" width="594" height="20" forecolor="#000000" backcolor="#E6E6E6">
+				<reportElement uuid="11925ae7-8287-429b-9d41-e4b447f228fd" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="80" width="594" height="20" forecolor="#000000" backcolor="#FFFFFF">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourClaimDate"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
