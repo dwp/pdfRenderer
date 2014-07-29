@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="560" pageHeight="858" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="114"/>
+	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<import value="org.apache.commons.codec.binary.Base64"/>
 	<template><![CDATA["StyleTemplateClaimSummary.jrtx"]]></template>
@@ -295,7 +295,7 @@
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Address/Answer//Line[3]]]></fieldDescription>
 	</field>
 	<pageHeader>
-		<band height="66" splitType="Immediate">
+		<band height="67" splitType="Immediate">
 			<frame>
 				<reportElement uuid="5c510d56-ac5b-4822-a83c-f8a571b5d6e3" positionType="Float" x="0" y="0" width="560" height="45" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" backcolor="#FFFFFF">
 					<property name="net.sf.jasperreports.export.html.class" value="SummaryPageHeader"/>
@@ -308,44 +308,37 @@
 					<rightPen lineWidth="1.0" lineColor="#000000"/>
 				</box>
 				<textField>
-					<reportElement uuid="a7b7c4cc-3137-4f63-ae67-b6c1f92f2fc5" style="HeadingClaim" positionType="Float" mode="Opaque" x="2" y="1" width="558" height="22" forecolor="#000000" backcolor="#FFFFFF">
+					<reportElement uuid="905dab3a-2029-46c5-a36e-392a200e1640" style="HeadingClaim" positionType="Float" mode="Transparent" x="0" y="1" width="560" height="20" forecolor="#000000" backcolor="#FFFFFF">
 						<property name="net.sf.jasperreports.export.html.class" value="SummaryPageDateHeader"/>
 					</reportElement>
 					<textElement verticalAlignment="Middle" markup="styled"/>
 					<textFieldExpression><![CDATA["Date Received: "+$F{DateTimeGenerated}]]></textFieldExpression>
 				</textField>
-				<staticText>
-					<reportElement uuid="5afd1804-f132-4c32-bbf5-6802d41a7ab2" style="HeadingClaim" positionType="Float" mode="Opaque" x="2" y="24" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF"/>
-					<textElement verticalAlignment="Middle" markup="styled">
-						<font fontName="Arial" isBold="true"/>
-					</textElement>
-					<text><![CDATA[Transaction:]]></text>
-				</staticText>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="370cc313-2914-43e4-8b1b-1b618c568e88" style="HeadingClaim" positionType="Float" mode="Opaque" x="104" y="24" width="124" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement uuid="1c0b0d22-180c-4cad-bcf1-5956c720dc6e" style="HeadingClaim" positionType="Float" mode="Transparent" x="0" y="21" width="226" height="23" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#FFFFFF"/>
 					<textElement verticalAlignment="Middle" markup="styled">
 						<font isBold="true"/>
 					</textElement>
-					<textFieldExpression><![CDATA[$F{TransactionId}]]></textFieldExpression>
+					<textFieldExpression><![CDATA["Transaction: "+$F{TransactionId}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="cb21fb00-2bac-47a9-8847-f1881125d4cd" style="HeadingClaim" positionType="Float" mode="Opaque" x="229" y="24" width="40" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement uuid="207cbe67-d7f6-407b-923d-678fc97b489e" style="HeadingClaim" positionType="Float" mode="Transparent" x="226" y="21" width="40" height="23" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#FFFFFF"/>
 					<textElement textAlignment="Right" verticalAlignment="Middle" markup="styled"/>
 					<textFieldExpression><![CDATA[$F{ClaimantTitleAnswer}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="8acdc596-efce-4ccd-8858-fc6ca8e18aee" style="HeadingClaim" positionType="Float" mode="Opaque" x="276" y="24" width="180" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement uuid="74acba65-67f4-401b-bb2b-667c7f678a70" style="HeadingClaim" positionType="Float" mode="Transparent" x="273" y="21" width="188" height="23" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#FFFFFF"/>
 					<textElement verticalAlignment="Middle" markup="styled"/>
 					<textFieldExpression><![CDATA[$F{ClaimantSurnameAnswer}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="14cd9473-73fe-419a-849f-fd0f5014ac6a" style="HeadingClaim" positionType="Float" mode="Opaque" x="460" y="24" width="100" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement uuid="f9f7ba5c-9429-4c21-b5a0-938141aa0860" style="HeadingClaim" positionType="Float" mode="Transparent" x="466" y="21" width="94" height="23" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#FFFFFF"/>
 					<textElement textAlignment="Right" verticalAlignment="Middle" markup="styled"/>
-					<textFieldExpression><![CDATA[$F{NationalInsuranceNumberAnswer}]]></textFieldExpression>
+					<textFieldExpression><![CDATA[$F{NationalInsuranceNumber}]]></textFieldExpression>
 				</textField>
 			</frame>
 			<staticText>
-				<reportElement uuid="58ddea3b-1ba8-4b66-a709-2f5f94a3de80" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="45" width="560" height="21" forecolor="#000000" backcolor="#CCCCCC">
+				<reportElement uuid="58ddea3b-1ba8-4b66-a709-2f5f94a3de80" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="46" width="560" height="21" forecolor="#000000" backcolor="#CCCCCC">
 					<property name="net.sf.jasperreports.export.html.id" value="Heading1"/>
 				</reportElement>
 				<textElement textAlignment="Left" verticalAlignment="Middle" markup="styled">
