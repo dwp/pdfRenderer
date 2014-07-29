@@ -117,7 +117,7 @@
 				<textFieldExpression><![CDATA[$F{howOftenGetPaidAnswer}=="Other" ? $F{howOftenGetPaidOther} : null]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="210" splitType="Immediate">
+		<band height="115" splitType="Immediate">
 			<printWhenExpression><![CDATA[!$F{bankAccountHolderNameAnswer}.isEmpty() || !$F{bankAccountBankNameAnswer}.isEmpty() || !$F{bankAccountSortCodeAnswer}.isEmpty() || !$F{bankAccountNumberAnswer}.isEmpty() || !$F{bankAccountReferenceNumberAnswer}.isEmpty()]]></printWhenExpression>
 			<staticText>
 				<reportElement uuid="682874b6-bfe4-439f-8bb8-4abdfe329111" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="20" isRemoveLineWhenBlank="true">

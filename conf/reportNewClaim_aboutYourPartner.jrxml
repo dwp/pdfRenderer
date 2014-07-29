@@ -98,7 +98,7 @@
 		</band>
 	</title>
 	<detail>
-		<band height="263" splitType="Immediate">
+		<band height="230" splitType="Immediate">
 			<staticText>
 				<reportElement uuid="682874b6-bfe4-439f-8bb8-4abdfe329111" style="SubHeadingClaim" positionType="Float" x="0" y="0" width="594" height="20" isRemoveLineWhenBlank="true" forecolor="#000000">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingPartnerSpouseDetails"/>
