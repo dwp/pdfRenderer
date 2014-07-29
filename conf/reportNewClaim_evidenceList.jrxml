@@ -53,7 +53,7 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_subreportEvidenceList.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="132" splitType="Immediate">
+		<band height="140" splitType="Immediate">
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="fa94d49d-1eab-4c18-a6df-70b5c3ec49b8" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
@@ -85,8 +85,8 @@
 				<textFieldExpression><![CDATA[$F{EvidenceListContactInfoTitle}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="fe0558c0-060a-461d-892b-3d613bcb38d7" positionType="Float" x="1" y="111" width="530" height="21"/>
-				<textElement>
+				<reportElement uuid="fe0558c0-060a-461d-892b-3d613bcb38d7" positionType="Float" x="1" y="119" width="593" height="21"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[*************************END OF PRINT**********************]]></text>
