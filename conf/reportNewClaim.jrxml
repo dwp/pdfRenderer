@@ -161,7 +161,6 @@
 			</subreport>
 		</band>
 		<band height="1" splitType="Immediate">
-			<printWhenExpression><![CDATA[$F{HavePartnerAnswer}.equals("Yes")]]></printWhenExpression>
 			<subreport>
 				<reportElement uuid="75564d7a-a29b-41fc-a89c-debc7307f3fb" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
