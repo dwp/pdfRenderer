@@ -85,16 +85,6 @@
 				</textElement>
 				<text><![CDATA[Part 2 - About your partner/spouse]]></text>
 			</staticText>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="8899f97c-0584-4116-88e0-062fff8d3911" positionType="Float" x="10" y="10" width="392" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutYouTheCarerCourseOfEducationQuestion}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="1cdc269a-cd90-4218-a93b-8915897aacf4" positionType="Float" stretchType="RelativeToTallestObject" x="407" y="10" width="197" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutYouTheCarerCourseOfEducationInsuranceAnswer}]]></textFieldExpression>
-			</textField>
 		</band>
 	</title>
 	<detail>
