@@ -92,7 +92,9 @@
 			</band>
 		</groupHeader>
 		<groupFooter>
-			<band splitType="Immediate"/>
+			<band splitType="Immediate">
+				<printWhenExpression><![CDATA[$F{BreaksSinceClaimAnswer}.equals("Yes")]]></printWhenExpression>
+			</band>
 		</groupFooter>
 	</group>
 	<background>
@@ -112,7 +114,7 @@
 		</band>
 	</title>
 	<detail>
-		<band height="169" splitType="Immediate">
+		<band height="165" splitType="Immediate">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="b15a6344-b09e-4634-b2bc-4d81c2bf1d0d" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{ReasonClaimantAnswer} != null]]></printWhenExpression>

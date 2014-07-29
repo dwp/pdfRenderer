@@ -65,7 +65,7 @@
 		</band>
 	</title>
 	<detail>
-		<band height="258" splitType="Immediate">
+		<band height="272" splitType="Immediate">
 			<staticText>
 				<reportElement uuid="de1d3cb5-12c0-49c2-bcb6-284eee491c31" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="595" height="32" forecolor="#000000"/>
 				<textElement verticalAlignment="Middle">
@@ -184,8 +184,10 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="f181b4e2-8ba8-414f-8d70-abdd9116ff88" positionType="Float" x="2" y="237" width="595" height="20"/>
-				<textElement textAlignment="Left"/>
+				<reportElement uuid="f181b4e2-8ba8-414f-8d70-abdd9116ff88" positionType="Float" x="0" y="252" width="595" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font isBold="true"/>
+				</textElement>
 				<text><![CDATA[*************************END OF PRINT**********************]]></text>
 			</staticText>
 		</band>
