@@ -3,7 +3,7 @@ package monitoring
 import app.ConfigProperties._
 import monitor.{MonitorRegistration, NoHealthCheck}
 
-trait PdfServiceMonitorRegistration extends MonitorRegistration with NoHealthCheck {
+trait RenderingServiceMonitorRegistration extends MonitorRegistration with NoHealthCheck {
 
   override def getFrequency: Int = getProperty("metrics.frequency", default = 1)
 
