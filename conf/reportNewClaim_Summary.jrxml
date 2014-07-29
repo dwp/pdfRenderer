@@ -334,7 +334,7 @@
 				<textField isBlankWhenNull="true">
 					<reportElement uuid="f9f7ba5c-9429-4c21-b5a0-938141aa0860" style="HeadingClaim" positionType="Float" mode="Transparent" x="466" y="21" width="94" height="23" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#FFFFFF"/>
 					<textElement textAlignment="Right" verticalAlignment="Middle" markup="styled"/>
-					<textFieldExpression><![CDATA[$F{NationalInsuranceNumber}]]></textFieldExpression>
+					<textFieldExpression><![CDATA[$F{NationalInsuranceNumberAnswer}]]></textFieldExpression>
 				</textField>
 			</frame>
 			<staticText>
