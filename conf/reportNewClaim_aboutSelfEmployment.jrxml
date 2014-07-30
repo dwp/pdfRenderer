@@ -348,7 +348,7 @@
 				<textFieldExpression><![CDATA[$F{selfEmployedNowAnswer}.equals("Yes") ? $F{tradingYearStartedCurrentAnswer} : $F{tradingYearStartedAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="55">
+		<band height="56">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="bfebe281-9297-42a1-9483-506f8bd3071a" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
