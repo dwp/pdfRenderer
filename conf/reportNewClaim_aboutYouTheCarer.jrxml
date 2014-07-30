@@ -155,15 +155,6 @@
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource) $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Address/Answer")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_addressForNestedReports.jasper"]]></subreportExpression>
 			</subreport>
-			<staticText>
-				<reportElement uuid="8da1d0de-ce96-4d52-9ec3-3901d19e6aaf" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="24" width="594" height="20" forecolor="#000000" backcolor="#FFFFFF">
-					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingHowWeCanContactYou"/>
-				</reportElement>
-				<textElement verticalAlignment="Middle" markup="styled">
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[How we can contact you]]></text>
-			</staticText>
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="b6b48e2b-db12-45a5-887a-3c88bcae4893" positionType="Float" x="0" y="44" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement verticalAlignment="Middle"/>
@@ -184,15 +175,6 @@
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerSpeechOrHearingDifficultyAnswer}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement uuid="11925ae7-8287-429b-9d41-e4b447f228fd" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="80" width="594" height="20" forecolor="#000000" backcolor="#FFFFFF">
-					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourClaimDate"/>
-				</reportElement>
-				<textElement verticalAlignment="Middle" markup="styled">
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[Your claim date]]></text>
-			</staticText>
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="5b4d1eca-9216-4389-849e-14c074093a3b" positionType="Float" x="0" y="100" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
@@ -203,6 +185,20 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimDateAnswer}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement uuid="ba6b4da5-4b62-4d9a-84a6-b66893b32ad7" style="SubHeadingClaim" x="0" y="24" width="594" height="20"/>
+				<textElement markup="styled">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[How we can contact you]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7d1978fb-8aa0-419f-ab98-1c502fe3d731" style="SubHeadingClaim" x="0" y="80" width="594" height="20"/>
+				<textElement markup="styled">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Your claim date]]></text>
+			</staticText>
 		</band>
 		<band height="77" splitType="Immediate">
 			<staticText>
