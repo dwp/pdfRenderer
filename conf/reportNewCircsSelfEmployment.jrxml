@@ -64,7 +64,7 @@
 		</band>
 	</title>
 	<detail>
-		<band height="151" splitType="Stretch">
+		<band height="55" splitType="Prevent">
 			<staticText>
 				<reportElement uuid="c6395922-d01d-4a0c-a44c-e9d8a488133f" style="SubHeadingClaim" mode="Opaque" x="0" y="2" width="552" height="35" forecolor="#000000">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingAboutYourSelfEmployment"/>
@@ -84,55 +84,57 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{SelfEmploymentCaring35HoursAnswer}]]></textFieldExpression>
 			</textField>
+		</band>
+		<band height="94">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="56f7aecd-23b8-4e6e-8af9-9945a2145c45" x="0" y="75" width="392" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{SelfEmploymentBusinessStartDateQuestion}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="4cfc638c-3bc2-44db-bcf5-5803e652a811" x="397" y="75" width="197" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{SelfEmploymentBusinessStartDateAnswer}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="b29c79df-4cfb-496c-997f-2b122da8b642" x="0" y="94" width="392" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{SelfEmploymentBusinessTypeQuestion}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="45a666d7-1501-4cc2-a766-7d568b66ab28" x="397" y="94" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="45a666d7-1501-4cc2-a766-7d568b66ab28" x="397" y="38" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{SelfEmploymentBusinessTypeAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="9b6d4393-413d-4ff5-9aaf-eb42497d2905" x="0" y="113" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="29c44d69-c105-4919-b026-8635de169a02" x="397" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{SelfEmploymentMoreThan100Question}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{SelfEmploymentDateStoppedCaring35HoursAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="e2fb8796-f738-4692-ad4b-8049dac44a5c" x="397" y="113" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="4cfc638c-3bc2-44db-bcf5-5803e652a811" x="397" y="19" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{SelfEmploymentMoreThan100Answer}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{SelfEmploymentBusinessStartDateAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="43126773-dd04-4a9d-8f61-87bced3b171c" x="0" y="132" width="392" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{SelfEmploymentOtherChangesQuestion}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="e83998f2-dcaf-4b30-99ea-dd9701d2f051" x="397" y="132" width="197" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{SelfEmploymentOtherChangesAnswer}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="625dfff0-1f6e-4163-9947-4870c6542e7e" x="0" y="56" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="625dfff0-1f6e-4163-9947-4870c6542e7e" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{SelfEmploymentDateStoppedCaring35HoursQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="29c44d69-c105-4919-b026-8635de169a02" x="397" y="56" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="43126773-dd04-4a9d-8f61-87bced3b171c" x="0" y="76" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{SelfEmploymentDateStoppedCaring35HoursAnswer}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{SelfEmploymentOtherChangesQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="e2fb8796-f738-4692-ad4b-8049dac44a5c" x="397" y="57" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{SelfEmploymentMoreThan100Answer}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="9b6d4393-413d-4ff5-9aaf-eb42497d2905" x="0" y="57" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{SelfEmploymentMoreThan100Question}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="56f7aecd-23b8-4e6e-8af9-9945a2145c45" x="0" y="19" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{SelfEmploymentBusinessStartDateQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="e83998f2-dcaf-4b30-99ea-dd9701d2f051" x="397" y="76" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{SelfEmploymentOtherChangesAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="b29c79df-4cfb-496c-997f-2b122da8b642" x="0" y="38" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{SelfEmploymentBusinessTypeQuestion}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
