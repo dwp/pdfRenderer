@@ -356,7 +356,7 @@
 				<textElement verticalAlignment="Middle" markup="styled">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[Part 2 - Change in Circumstance - Employment Change]]></text>
+				<text><![CDATA[PART 2 - CHANGE IN CIRCUMSTANCE - EMPLOYMENT CHANGE]]></text>
 			</staticText>
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="59a010e4-a3c4-4e34-bbb6-7867de7dfd97" positionType="Float" x="0" y="22" width="392" height="18" isRemoveLineWhenBlank="true"/>
