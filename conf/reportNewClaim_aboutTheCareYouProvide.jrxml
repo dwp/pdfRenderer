@@ -221,7 +221,7 @@
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeLiveSameAddressAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="79" splitType="Prevent">
+		<band height="40" splitType="Prevent">
 			<staticText>
 				<reportElement uuid="1c5d9726-b4ef-44ce-9a67-6874d77320ab" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="1" y="0" width="594" height="21">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingContactDetailsOfThePersonYouCareFor"/>
@@ -249,13 +249,8 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeDayTimeTelephoneNumberAnswer}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement uuid="e92f9fe2-751d-4767-9036-85332b75983b" positionType="Float" x="0" y="78" width="594" height="1"/>
-				<textElement/>
-				<text><![CDATA[]]></text>
-			</staticText>
 		</band>
-		<band height="39" splitType="Prevent">
+		<band height="40" splitType="Prevent">
 			<staticText>
 				<reportElement uuid="c9913d36-dbcf-4fdc-841b-9a496f3d3f0f" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="2" y="0" width="594" height="21" isRemoveLineWhenBlank="true">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingMoreAboutTheCareYouProvide"/>
@@ -284,7 +279,7 @@
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeCared35HoursBeforeQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="bd95bc79-cf26-49ce-8996-1d11bf56dcf0" positionType="Float" x="398" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="bd95bc79-cf26-49ce-8996-1d11bf56dcf0" positionType="Float" x="398" y="1" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeCared35HoursBeforeAnswer}]]></textFieldExpression>
 			</textField>
