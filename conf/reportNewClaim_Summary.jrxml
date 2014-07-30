@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="560" pageHeight="858" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="347"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<import value="org.apache.commons.codec.binary.Base64"/>
 	<template><![CDATA["StyleTemplateClaimSummary.jrtx"]]></template>
@@ -338,7 +338,7 @@
 				</textField>
 			</frame>
 			<staticText>
-				<reportElement uuid="58ddea3b-1ba8-4b66-a709-2f5f94a3de80" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="46" width="560" height="21" forecolor="#000000" backcolor="#CCCCCC">
+				<reportElement uuid="58ddea3b-1ba8-4b66-a709-2f5f94a3de80" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="46" width="560" height="21" forecolor="#000000" backcolor="#FFFFFF">
 					<property name="net.sf.jasperreports.export.html.id" value="Heading1"/>
 				</reportElement>
 				<textElement textAlignment="Left" verticalAlignment="Middle" markup="styled">
@@ -351,7 +351,7 @@
 	<detail>
 		<band height="130" splitType="Immediate">
 			<staticText>
-				<reportElement uuid="0862ee85-65ff-482c-a03e-6c62d78f2833" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="560" height="18" forecolor="#000000" backcolor="#CCCCCC">
+				<reportElement uuid="0862ee85-65ff-482c-a03e-6c62d78f2833" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="560" height="18" forecolor="#000000" backcolor="#FFFFFF">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingSummaryAboutYouTheCarer"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
@@ -565,7 +565,7 @@
 		</band>
 		<band height="153" splitType="Immediate">
 			<staticText>
-				<reportElement uuid="a5a0ab64-4b38-4f97-b49b-c75691cc3f54" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="550" height="18" forecolor="#000000" backcolor="#E6E6E6">
+				<reportElement uuid="a5a0ab64-4b38-4f97-b49b-c75691cc3f54" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="550" height="18" forecolor="#000000" backcolor="#FFFFFF">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingSummaryAboutYourPartner"/>
 				</reportElement>
 				<textElement markup="styled">
@@ -665,7 +665,7 @@
 				</graphicElement>
 			</rectangle>
 			<staticText>
-				<reportElement uuid="933986e3-9239-450a-8b58-ea0bf55d46aa" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="553" height="18" forecolor="#000000" backcolor="#E6E6E6">
+				<reportElement uuid="933986e3-9239-450a-8b58-ea0bf55d46aa" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="553" height="18" forecolor="#000000" backcolor="#FFFFFF">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingSummaryClaimDates"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
@@ -688,7 +688,7 @@
 			<frame>
 				<reportElement uuid="77d199bf-1cc8-4b67-b300-42adcd92df38" positionType="Float" x="0" y="0" width="595" height="344" isRemoveLineWhenBlank="true"/>
 				<staticText>
-					<reportElement uuid="5235e441-eac8-4564-a092-4304954c961c" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="553" height="18" forecolor="#000000" backcolor="#E6E6E6">
+					<reportElement uuid="5235e441-eac8-4564-a092-4304954c961c" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="553" height="18" forecolor="#000000" backcolor="#FFFFFF">
 						<property name="net.sf.jasperreports.export.html.id" value="SubHeadingSummaryClaimSummary"/>
 					</reportElement>
 					<textElement verticalAlignment="Middle" markup="styled">
