@@ -111,8 +111,8 @@
 					<textFieldExpression><![CDATA["Service version : "+$F{Version}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement uuid="d4ffb11d-8a42-4d0a-84bf-5a08db017d2f" style="HeadingClaim" mode="Opaque" x="2" y="23" width="233" height="26" forecolor="#000000"/>
-					<textElement verticalAlignment="Middle" markup="styled">
+					<reportElement uuid="d4ffb11d-8a42-4d0a-84bf-5a08db017d2f" mode="Opaque" x="2" y="23" width="233" height="26" forecolor="#000000"/>
+					<textElement verticalAlignment="Middle" markup="none">
 						<font fontName="SansSerif" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA["Transaction: "+$F{TransactionId}]]></textFieldExpression>
