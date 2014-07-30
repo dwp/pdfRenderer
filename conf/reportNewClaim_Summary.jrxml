@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="560" pageHeight="858" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="347"/>
+	<property name="ireport.y" value="320"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<import value="org.apache.commons.codec.binary.Base64"/>
 	<template><![CDATA["StyleTemplateClaimSummary.jrtx"]]></template>
@@ -295,7 +295,7 @@
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Address/Answer//Line[3]]]></fieldDescription>
 	</field>
 	<pageHeader>
-		<band height="67" splitType="Immediate">
+		<band height="66" splitType="Immediate">
 			<frame>
 				<reportElement uuid="5c510d56-ac5b-4822-a83c-f8a571b5d6e3" positionType="Float" x="0" y="0" width="560" height="45" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" backcolor="#FFFFFF">
 					<property name="net.sf.jasperreports.export.html.class" value="SummaryPageHeader"/>
@@ -338,10 +338,8 @@
 				</textField>
 			</frame>
 			<staticText>
-				<reportElement uuid="58ddea3b-1ba8-4b66-a709-2f5f94a3de80" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="46" width="560" height="21" forecolor="#000000" backcolor="#FFFFFF">
-					<property name="net.sf.jasperreports.export.html.id" value="Heading1"/>
-				</reportElement>
-				<textElement textAlignment="Left" verticalAlignment="Middle" markup="styled">
+				<reportElement uuid="7e065815-82c0-450f-8946-81991c6f06a1" style="HeadingClaim" x="0" y="45" width="560" height="21"/>
+				<textElement markup="styled">
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Summary]]></text>
@@ -350,15 +348,6 @@
 	</pageHeader>
 	<detail>
 		<band height="130" splitType="Immediate">
-			<staticText>
-				<reportElement uuid="0862ee85-65ff-482c-a03e-6c62d78f2833" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="560" height="18" forecolor="#000000" backcolor="#FFFFFF">
-					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingSummaryAboutYouTheCarer"/>
-				</reportElement>
-				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
-					<font fontName="Arial" isBold="true" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
-				</textElement>
-				<text><![CDATA[                     About you - the carer          About the care you provide]]></text>
-			</staticText>
 			<staticText>
 				<reportElement uuid="eafce885-40b7-4aa2-9883-4ccd5538338c" positionType="Float" x="0" y="19" width="162" height="18"/>
 				<textElement markup="none"/>
@@ -469,6 +458,13 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{CareeDateOfBirthAnswer}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement uuid="b2bb3cf3-e649-4539-9544-e42e4dda2dd3" style="SubHeadingClaim" x="0" y="0" width="560" height="20"/>
+				<textElement markup="styled">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[                                About you - the carer          About the care you provide]]></text>
+			</staticText>
 		</band>
 		<band height="54" splitType="Immediate">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
@@ -564,16 +560,6 @@
 			</staticText>
 		</band>
 		<band height="153" splitType="Immediate">
-			<staticText>
-				<reportElement uuid="a5a0ab64-4b38-4f97-b49b-c75691cc3f54" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="550" height="18" forecolor="#000000" backcolor="#FFFFFF">
-					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingSummaryAboutYourPartner"/>
-				</reportElement>
-				<textElement markup="styled">
-					<font isBold="true"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<text><![CDATA[About your partner]]></text>
-			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="a63933cd-3a19-4890-988c-c85fb8726d9d" positionType="Float" x="0" y="18" width="367" height="25" isRemoveLineWhenBlank="true"/>
 				<textElement>
@@ -656,23 +642,15 @@
 				<textElement/>
 				<text><![CDATA[]]></text>
 			</staticText>
-		</band>
-		<band height="36" splitType="Immediate">
-			<rectangle>
-				<reportElement uuid="f8741834-7c77-4a0b-864e-d7e76df3b578" positionType="Float" x="0" y="0" width="553" height="18" backcolor="#999999"/>
-				<graphicElement>
-					<pen lineWidth="0.0"/>
-				</graphicElement>
-			</rectangle>
 			<staticText>
-				<reportElement uuid="933986e3-9239-450a-8b58-ea0bf55d46aa" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="553" height="18" forecolor="#000000" backcolor="#FFFFFF">
-					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingSummaryClaimDates"/>
-				</reportElement>
-				<textElement verticalAlignment="Middle" markup="styled">
+				<reportElement uuid="562ea462-0def-46d2-9621-e33490395670" style="SubHeadingClaim" x="0" y="0" width="560" height="20"/>
+				<textElement markup="styled">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[Claim Date]]></text>
+				<text><![CDATA[About your partner]]></text>
 			</staticText>
+		</band>
+		<band height="36" splitType="Immediate">
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="984cf590-bf0c-4c23-bc4b-be9d40d4fb00" positionType="Float" x="0" y="18" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
@@ -683,20 +661,17 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ClaimDateAnswer}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement uuid="02d46fba-cc2b-476f-9355-3d434fb7678f" style="SubHeadingClaim" x="0" y="0" width="560" height="20"/>
+				<textElement markup="styled">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Claim Date]]></text>
+			</staticText>
 		</band>
 		<band height="345" splitType="Immediate">
 			<frame>
 				<reportElement uuid="77d199bf-1cc8-4b67-b300-42adcd92df38" positionType="Float" x="0" y="0" width="595" height="344" isRemoveLineWhenBlank="true"/>
-				<staticText>
-					<reportElement uuid="5235e441-eac8-4564-a092-4304954c961c" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="553" height="18" forecolor="#000000" backcolor="#FFFFFF">
-						<property name="net.sf.jasperreports.export.html.id" value="SubHeadingSummaryClaimSummary"/>
-					</reportElement>
-					<textElement verticalAlignment="Middle" markup="styled">
-						<font isBold="true"/>
-						<paragraph leftIndent="4"/>
-					</textElement>
-					<text><![CDATA[Claim Summary]]></text>
-				</staticText>
 				<staticText>
 					<reportElement uuid="a3fda3d7-37fc-4369-8a30-97f41b0393b0" positionType="Float" x="0" y="19" width="356" height="23" isRemoveLineWhenBlank="true"/>
 					<box>
@@ -1103,6 +1078,13 @@
 					<textElement textAlignment="Center" verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[($F{additionalInformationAnswer}.equals("Yes") ? "##CHECK##" : "##CROSS##")]]></textFieldExpression>
 				</textField>
+				<staticText>
+					<reportElement uuid="2ed48975-bda6-418b-b6f9-80103eaa1a2e" style="SubHeadingClaim" x="0" y="0" width="560" height="20"/>
+					<textElement markup="styled">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Claim Summary]]></text>
+				</staticText>
 			</frame>
 		</band>
 	</detail>
