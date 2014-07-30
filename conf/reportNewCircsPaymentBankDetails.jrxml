@@ -89,7 +89,7 @@
 				<textElement verticalAlignment="Middle">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[Part 2 - Change in Circumstance - Change of payment and bank details]]></text>
+				<text><![CDATA[PART 2 -CHANGE IN CIRCUMSTANCE - CHANGE OF PAYMENT AND BANK DETAILS]]></text>
 			</staticText>
 		</band>
 	</title>

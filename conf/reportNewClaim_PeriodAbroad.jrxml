@@ -54,7 +54,7 @@
 	<group name="Break">
 		<groupExpression><![CDATA[$F{AboutYouTheCarerPeriodAbroadDateFromAnswer}]]></groupExpression>
 		<groupHeader>
-			<band height="38" splitType="Immediate">
+			<band height="20" splitType="Immediate">
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 					<reportElement uuid="3d091f97-47b6-4819-b5bb-c919c8560721" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
 					<textElement/>
@@ -64,15 +64,6 @@
 					<reportElement uuid="5a870f84-cae3-4556-ad18-dbf6def71f0b" positionType="Float" x="397" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
 					<textElement/>
 					<textFieldExpression><![CDATA[$F{AboutYouTheCarerTimeOutsideGBLast3YearsAnswer}]]></textFieldExpression>
-				</textField>
-				<textField isBlankWhenNull="true">
-					<reportElement uuid="546e57b0-0c10-4b4b-b768-1f3cea76fdc0" positionType="Float" mode="Opaque" x="0" y="18" width="594" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#E6E6E6">
-						<printWhenExpression><![CDATA[$F{AboutYouTheCarerTimeOutsideGBLast3YearsAnswer}.equals("Yes")]]></printWhenExpression>
-					</reportElement>
-					<textElement verticalAlignment="Top" markup="none">
-						<font isBold="true"/>
-					</textElement>
-					<textFieldExpression><![CDATA["Period Abroad " + $V{variable1}]]></textFieldExpression>
 				</textField>
 			</band>
 		</groupHeader>
@@ -84,65 +75,76 @@
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="112" splitType="Immediate">
+		<band height="38" splitType="Prevent">
 			<printWhenExpression><![CDATA[$F{AboutYouTheCarerTimeOutsideGBLast3YearsAnswer}.equals("Yes")]]></printWhenExpression>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="3a0b8e90-5e92-4913-a464-26f141b8e53a" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutYouTheCarerCountryVisitedQuestion}]]></textFieldExpression>
+				<reportElement uuid="546e57b0-0c10-4b4b-b768-1f3cea76fdc0" positionType="Float" mode="Opaque" x="1" y="0" width="594" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#E6E6E6">
+					<printWhenExpression><![CDATA[$F{AboutYouTheCarerTimeOutsideGBLast3YearsAnswer}.equals("Yes")]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top" markup="none">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Period Abroad " + $V{variable1}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="05eeec83-a472-4684-81a3-758851dd4f6b" positionType="Float" x="397" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="05eeec83-a472-4684-81a3-758851dd4f6b" positionType="Float" x="398" y="20" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerCountryVisitedAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="1b310c3e-4d61-4907-b6d6-d7dac30f88d6" positionType="Float" x="0" y="18" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="3a0b8e90-5e92-4913-a464-26f141b8e53a" positionType="Float" x="1" y="20" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerCountryVisitedQuestion}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="92">
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="1b310c3e-4d61-4907-b6d6-d7dac30f88d6" positionType="Float" x="1" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerPeriodAbroadDateFromQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="7c44552e-cb23-4ff5-a937-0a9de1adcf59" positionType="Float" x="397" y="18" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="7c44552e-cb23-4ff5-a937-0a9de1adcf59" positionType="Float" x="398" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerPeriodAbroadDateFromAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="6d1d14e1-2361-48b5-b348-93f06688654b" positionType="Float" x="0" y="36" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="6d1d14e1-2361-48b5-b348-93f06688654b" positionType="Float" x="1" y="18" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerPeriodAbroadDateToQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="128b9b78-4709-4fe7-944f-c336a91d3c64" positionType="Float" x="397" y="36" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="128b9b78-4709-4fe7-944f-c336a91d3c64" positionType="Float" x="398" y="18" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerPeriodAbroadDateToAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="3490cb57-069c-47a9-82f4-97d443eda793" positionType="Float" x="0" y="54" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="3490cb57-069c-47a9-82f4-97d443eda793" positionType="Float" x="1" y="36" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerPeriodAbroadReasonQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="40a4a547-9f7e-4da4-b9a8-652676a6ff44" positionType="Float" x="397" y="54" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="40a4a547-9f7e-4da4-b9a8-652676a6ff44" positionType="Float" x="398" y="36" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerPeriodAbroadReasonAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="26ea2930-d7eb-4bc0-a861-ac868a7b5649" positionType="Float" x="397" y="72" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="26ea2930-d7eb-4bc0-a861-ac868a7b5649" positionType="Float" x="398" y="54" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerPeriodAbroadReasonOther}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="618434ea-7fee-4e93-817d-cff808afa53f" positionType="Float" x="0" y="90" width="594" height="1"/>
+				<reportElement uuid="618434ea-7fee-4e93-817d-cff808afa53f" positionType="Float" x="1" y="72" width="594" height="1"/>
 				<textElement/>
 				<text><![CDATA[]]></text>
 			</staticText>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="2a7aee4f-94fe-49cb-bd7b-8efcce88dd77" positionType="Float" x="0" y="91" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="2a7aee4f-94fe-49cb-bd7b-8efcce88dd77" positionType="Float" x="1" y="73" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerPeriodAbroadCareePresentQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="84f02d3b-402e-4631-b757-f6678d948873" positionType="Float" x="397" y="91" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="84f02d3b-402e-4631-b757-f6678d948873" positionType="Float" x="398" y="73" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerPeriodAbroadCareePresentAnswer}]]></textFieldExpression>
 			</textField>

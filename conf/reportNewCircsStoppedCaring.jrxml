@@ -35,7 +35,7 @@
 				<textElement verticalAlignment="Middle" markup="styled">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[Part 2 - Change in Circumstance - Stopped Caring]]></text>
+				<text><![CDATA[PART 2 - CHANGE IN CIRCUMSTANCE - STOPPED CARING]]></text>
 			</staticText>
 		</band>
 	</title>

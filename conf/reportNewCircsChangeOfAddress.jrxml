@@ -60,7 +60,7 @@
 				<textElement verticalAlignment="Middle">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[Part 2 - Change in Circumstance - Change of address]]></text>
+				<text><![CDATA[PART 2 - CHANGE IN CIRCUMSTANCE - CHANGE OF ADDRESS]]></text>
 			</staticText>
 		</band>
 	</title>
