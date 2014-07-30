@@ -53,7 +53,7 @@
 				<textElement verticalAlignment="Middle">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[Part 1 - Identification - Carer and Person cared for.]]></text>
+				<text><![CDATA[PART 1 - IDENTIFICATION - CARER AND PERSON CARED FOR]]></text>
 			</staticText>
 		</band>
 	</pageHeader>

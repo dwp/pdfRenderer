@@ -60,7 +60,7 @@
 				<textElement verticalAlignment="Middle" markup="styled">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[Part 3 - Declaration]]></text>
+				<text><![CDATA[PART 3 - DECLARATION]]></text>
 			</staticText>
 		</band>
 	</title>
