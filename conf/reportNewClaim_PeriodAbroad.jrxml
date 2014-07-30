@@ -78,10 +78,10 @@
 		<band height="38" splitType="Prevent">
 			<printWhenExpression><![CDATA[$F{AboutYouTheCarerTimeOutsideGBLast3YearsAnswer}.equals("Yes")]]></printWhenExpression>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="546e57b0-0c10-4b4b-b768-1f3cea76fdc0" positionType="Float" mode="Opaque" x="1" y="0" width="594" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#E6E6E6">
+				<reportElement uuid="546e57b0-0c10-4b4b-b768-1f3cea76fdc0" style="SubHeadingClaim" positionType="Float" x="1" y="0" width="594" height="20" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{AboutYouTheCarerTimeOutsideGBLast3YearsAnswer}.equals("Yes")]]></printWhenExpression>
 				</reportElement>
-				<textElement verticalAlignment="Top" markup="none">
+				<textElement verticalAlignment="Top" markup="styled">
 					<font isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Period Abroad " + $V{variable1}]]></textFieldExpression>
