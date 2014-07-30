@@ -129,7 +129,7 @@
 				<textFieldExpression><![CDATA[$F{NotStartedEmployerContactNumberAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="265">
+		<band height="264">
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="7037f9d7-a80c-44ca-b2cc-a54f81c6bebf" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
