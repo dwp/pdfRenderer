@@ -369,13 +369,6 @@
 				<textFieldExpression><![CDATA[$F{ClaimantSurnameQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="79256d1b-93c2-4e6d-871d-9ad261188fb3" positionType="Float" x="168" y="36" width="180" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement>
-					<font fontName="SansSerif" size="10"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{ClaimantSurnameAnswer}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="a03c8ac3-e688-481b-8ef2-10bdca40c98c" positionType="Float" x="367" y="36" width="180" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{CareeLastNameAnswer}]]></textFieldExpression>
@@ -389,13 +382,6 @@
 				<reportElement uuid="eb000c3b-aa1e-4642-9b10-1a2f487a4f92" positionType="Float" x="0" y="55" width="162" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ClaimantOtherNamesQuestionLabel}+"(s)"]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="4252d74b-0fa3-43ac-a029-efa997d4c608" positionType="Float" x="168" y="55" width="180" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement>
-					<font fontName="SansSerif" size="10"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{ClaimantOtherNamesAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="7fa85fb1-35bb-4662-ad18-2fdb9257c635" positionType="Float" x="367" y="55" width="180" height="18" isRemoveLineWhenBlank="true"/>
@@ -465,6 +451,16 @@
 				</textElement>
 				<text><![CDATA[                                About you - the carer          About the care you provide]]></text>
 			</staticText>
+			<textField>
+				<reportElement uuid="93e305b8-b811-4e7d-b7f6-1888dccfdff0" x="168" y="36" width="180" height="18"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{ClaimantSurnameAnswer}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e8d891e5-b790-45f4-b022-6d35305277ee" x="168" y="55" width="180" height="18"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CareeOtherNamesAnswer}]]></textFieldExpression>
+			</textField>
 		</band>
 		<band height="54" splitType="Immediate">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
