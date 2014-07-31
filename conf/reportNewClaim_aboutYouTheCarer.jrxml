@@ -289,7 +289,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 		</band>
-		<band height="93" splitType="Immediate">
+		<band height="39" splitType="Immediate">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="a15519d2-3bab-496d-b3d7-b52864e929b5" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement verticalAlignment="Top"/>
@@ -320,8 +320,10 @@
 				<textElement/>
 				<text><![CDATA[]]></text>
 			</staticText>
+		</band>
+		<band height="36" splitType="Prevent">
 			<staticText>
-				<reportElement uuid="e6f266ef-a89c-4838-8827-f094edabe302" style="SubHeadingClaim" positionType="Float" x="0" y="38" width="594" height="18" forecolor="#000000">
+				<reportElement uuid="e6f266ef-a89c-4838-8827-f094edabe302" style="SubHeadingClaim" positionType="Float" x="0" y="0" width="594" height="18" forecolor="#000000">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingMaritalStatus"/>
 				</reportElement>
 				<textElement markup="styled">
@@ -330,24 +332,26 @@
 				<text><![CDATA[Marital Status]]></text>
 			</staticText>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="e104909a-47f9-46d7-a59a-7fdc28aa6a38" positionType="Float" x="0" y="56" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="e104909a-47f9-46d7-a59a-7fdc28aa6a38" positionType="Float" x="0" y="18" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AbouYouTheCarerMaritalStatusQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="771cb2d1-54f2-42b7-9743-74b57d507655" positionType="Float" x="397" y="56" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="771cb2d1-54f2-42b7-9743-74b57d507655" positionType="Float" x="397" y="18" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AbouYouTheCarerMaritalStatusAnswer}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="2be6a8fc-e060-44d4-8480-aa6cfa350798" positionType="Float" x="0" y="74" width="392" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutYouTheCarerHavePartnerQuestion}]]></textFieldExpression>
-			</textField>
+		</band>
+		<band height="20">
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="42a03e9a-72ef-41c5-95af-f21d3f2111f5" positionType="Float" x="397" y="74" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="42a03e9a-72ef-41c5-95af-f21d3f2111f5" positionType="Float" x="397" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerHavePartnerAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="2be6a8fc-e060-44d4-8480-aa6cfa350798" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerHavePartnerQuestion}]]></textFieldExpression>
 			</textField>
 		</band>
 		<band height="39" splitType="Prevent">
