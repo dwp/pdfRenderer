@@ -40,7 +40,7 @@
 		</band>
 	</title>
 	<detail>
-		<band height="57" splitType="Immediate">
+		<band height="66" splitType="Immediate">
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="561b3cf2-30b1-49b1-81af-70cbc565c40d" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
@@ -57,7 +57,7 @@
 				<textFieldExpression><![CDATA[$F{StoppedCaringOtherChangesQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="ee95f6ed-b85b-494d-af25-78cb2baf2050" positionType="Float" x="0" y="36" width="594" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="ee95f6ed-b85b-494d-af25-78cb2baf2050" positionType="Float" x="0" y="42" width="594" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{StoppedCaringOtherChangesAnswer}]]></textFieldExpression>
 			</textField>

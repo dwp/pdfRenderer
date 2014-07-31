@@ -231,7 +231,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 		</band>
-		<band height="152">
+		<band height="115">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="677158a7-3839-4f1a-87ee-8e747ee230c5" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
@@ -322,16 +322,20 @@
 				<textElement/>
 				<text><![CDATA[]]></text>
 			</staticText>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="4c34fcb5-5296-4f8f-88a6-fe80fb8aad05" positionType="Float" x="0" y="114" width="594" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{PaymentDetailsOtherChangesQuestion}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="9ffaf2d2-21e9-406b-bbcf-d19a58d2b147" positionType="Float" x="0" y="134" width="594" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{PaymentDetailsOtherChangesAnswer}]]></textFieldExpression>
-			</textField>
+			<subreport>
+				<reportElement uuid="75d4befe-64a3-4c36-b3b6-264bbf15737e" positionType="Float" x="0" y="114" width="594" height="1" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OTHER_CHANGES_QUESTION">
+					<subreportParameterExpression><![CDATA[$F{PaymentDetailsOtherChangesQuestion}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OTHER_CHANGES_ANSWER">
+					<subreportParameterExpression><![CDATA[$F{PaymentDetailsOtherChangesAnswer}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsOtherChanges.jasper"]]></subreportExpression>
+			</subreport>
 		</band>
 	</detail>
 </jasperReport>

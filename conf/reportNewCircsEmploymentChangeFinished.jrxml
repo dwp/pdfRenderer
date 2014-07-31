@@ -147,7 +147,7 @@
 				<textFieldExpression><![CDATA[$F{FinishedEmpEmployerContactNumberAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="356" splitType="Immediate">
+		<band height="309" splitType="Immediate">
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="7037f9d7-a80c-44ca-b2cc-a54f81c6bebf" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
@@ -296,16 +296,20 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{FinishedEmpCareCostsForThisWorkWhatCostsAnswer}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="ce17ae3d-d6b4-40dc-9591-7747eb262225" positionType="Float" x="0" y="308" width="594" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{FinishedEmpMoreAboutChangesQuestionLabel}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="d6359918-6256-4260-9f1d-6dc4d86d54ef" positionType="Float" x="0" y="332" width="594" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{FinishedEmpMoreAboutChangesAnswer}]]></textFieldExpression>
-			</textField>
+			<subreport>
+				<reportElement uuid="348d1e17-042a-43e4-925e-89cc66bbd257" positionType="Float" x="0" y="307" width="594" height="1" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OTHER_CHANGES_QUESTION">
+					<subreportParameterExpression><![CDATA[$F{FinishedEmpMoreAboutChangesQuestionLabel}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OTHER_CHANGES_ANSWER">
+					<subreportParameterExpression><![CDATA[$F{FinishedEmpMoreAboutChangesAnswer}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsOtherChanges.jasper"]]></subreportExpression>
+			</subreport>
 		</band>
 	</detail>
 </jasperReport>

@@ -130,7 +130,7 @@
 				<textFieldExpression><![CDATA[$F{RecentBreakStartDateAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="312">
+		<band height="241" splitType="Immediate">
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="0ca184aa-d434-4280-8d35-ec8d6f2a640b" positionType="Float" x="2" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
@@ -256,46 +256,54 @@
 				<textElement/>
 				<text><![CDATA[]]></text>
 			</staticText>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="c4099582-efcb-4d9d-abfc-56a6a7e717cb" positionType="Float" x="5" y="219" width="591" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{MoreChangesQuestionLabel}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="f3f722a0-bf0a-489e-bd14-13ec6bbcc3a4" positionType="Float" x="3" y="237" width="591" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{MoreChangesAnswer}]]></textFieldExpression>
-			</textField>
+			<subreport>
+				<reportElement uuid="7034b353-8250-4cd7-b240-d215d75fbe8b" positionType="Float" x="2" y="219" width="592" height="1" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OTHER_CHANGES_QUESTION">
+					<subreportParameterExpression><![CDATA[$F{MoreChangesQuestionLabel}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OTHER_CHANGES_ANSWER">
+					<subreportParameterExpression><![CDATA[$F{MoreChangesAnswer}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsOtherChanges.jasper"]]></subreportExpression>
+			</subreport>
 			<staticText>
-				<reportElement uuid="c5c83d63-4a29-4556-9fef-307d597a635b" positionType="Float" x="3" y="255" width="593" height="1"/>
+				<reportElement uuid="c5c83d63-4a29-4556-9fef-307d597a635b" positionType="Float" x="3" y="220" width="593" height="1"/>
 				<textElement/>
 				<text><![CDATA[]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="9f07f3b4-81e0-475a-b243-053bbafc288a" positionType="Float" x="3" y="256" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="9f07f3b4-81e0-475a-b243-053bbafc288a" positionType="Float" x="3" y="221" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AdditionalBreaksNotReportedQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="6eead6c1-18ed-49fc-a79a-f40d6f3b6a8a" positionType="Float" x="399" y="256" width="195" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="6eead6c1-18ed-49fc-a79a-f40d6f3b6a8a" positionType="Float" x="399" y="221" width="195" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AdditionalBreaksNotReportedAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="430bfd45-7421-483a-812c-fa740ac77762" positionType="Float" x="4" y="274" width="593" height="1"/>
+				<reportElement uuid="430bfd45-7421-483a-812c-fa740ac77762" positionType="Float" x="4" y="239" width="593" height="1"/>
 				<textElement/>
 				<text><![CDATA[]]></text>
 			</staticText>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="d40b8aaa-ac4c-4057-b6c9-24c73d5bc16d" positionType="Float" x="0" y="275" width="594" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{AdditionalBreaksNotReportedDescQuestionLabel}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="961a1a4d-6a05-4aae-a70d-4f50be655caf" positionType="Float" x="0" y="293" width="594" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{AdditionalBreaksNotReportedDescAnswer}]]></textFieldExpression>
-			</textField>
+			<subreport>
+				<reportElement uuid="e3e59cb5-d7ca-4318-af56-835a79967d45" positionType="Float" x="2" y="240" width="592" height="1" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OTHER_CHANGES_QUESTION">
+					<subreportParameterExpression><![CDATA[$F{AdditionalBreaksNotReportedDescQuestionLabel}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OTHER_CHANGES_ANSWER">
+					<subreportParameterExpression><![CDATA[$F{AdditionalBreaksNotReportedDescAnswer}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsOtherChanges.jasper"]]></subreportExpression>
+			</subreport>
 		</band>
 	</detail>
 </jasperReport>

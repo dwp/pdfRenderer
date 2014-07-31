@@ -85,7 +85,7 @@
 				<textFieldExpression><![CDATA[$F{SelfEmploymentCaring35HoursAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="94">
+		<band height="77" splitType="Immediate">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="45a666d7-1501-4cc2-a766-7d568b66ab28" x="397" y="38" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
@@ -107,11 +107,6 @@
 				<textFieldExpression><![CDATA[$F{SelfEmploymentDateStoppedCaring35HoursQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="43126773-dd04-4a9d-8f61-87bced3b171c" x="0" y="76" width="392" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{SelfEmploymentOtherChangesQuestion}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="e2fb8796-f738-4692-ad4b-8049dac44a5c" x="397" y="57" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{SelfEmploymentMoreThan100Answer}]]></textFieldExpression>
@@ -127,15 +122,24 @@
 				<textFieldExpression><![CDATA[$F{SelfEmploymentBusinessStartDateQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="e83998f2-dcaf-4b30-99ea-dd9701d2f051" x="397" y="76" width="197" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{SelfEmploymentOtherChangesAnswer}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="b29c79df-4cfb-496c-997f-2b122da8b642" x="0" y="38" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{SelfEmploymentBusinessTypeQuestion}]]></textFieldExpression>
 			</textField>
+			<subreport>
+				<reportElement uuid="e32249ad-2b8e-44fa-8edb-714f02905b59" positionType="Float" x="0" y="75" width="594" height="1" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OTHER_CHANGES_QUESTION">
+					<subreportParameterExpression><![CDATA[$F{SelfEmploymentOtherChangesQuestion}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OTHER_CHANGES_ANSWER">
+					<subreportParameterExpression><![CDATA[$F{SelfEmploymentOtherChangesAnswer}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsOtherChanges.jasper"]]></subreportExpression>
+			</subreport>
 		</band>
 	</detail>
 </jasperReport>

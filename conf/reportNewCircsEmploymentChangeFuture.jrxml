@@ -129,7 +129,7 @@
 				<textFieldExpression><![CDATA[$F{NotStartedEmployerContactNumberAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="264">
+		<band height="242">
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="7037f9d7-a80c-44ca-b2cc-a54f81c6bebf" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
@@ -252,27 +252,31 @@
 				<textFieldExpression><![CDATA[$F{NotStartedCareCostsForThisWorkWhatCostsQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="d8fb4e33-755a-412b-9f60-fe8d06aea92d" positionType="Float" x="1" y="210" width="594" height="18" isRemoveLineWhenBlank="true">
+				<reportElement uuid="d8fb4e33-755a-412b-9f60-fe8d06aea92d" positionType="Float" x="1" y="216" width="594" height="18" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{NotStartedCareCostsForThisWorkAnswer} == "Yes"]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{NotStartedCareCostsForThisWorkWhatCostsAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="0dba6f4c-4d22-4ad4-b33d-8b08390aac01" positionType="Float" x="1" y="227" width="595" height="1"/>
+				<reportElement uuid="0dba6f4c-4d22-4ad4-b33d-8b08390aac01" positionType="Float" x="1" y="240" width="595" height="1"/>
 				<textElement/>
 				<text><![CDATA[]]></text>
 			</staticText>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="ce17ae3d-d6b4-40dc-9591-7747eb262225" positionType="Float" x="0" y="228" width="594" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{NotStartedMoreAboutChangesQuestionLabel}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="d6359918-6256-4260-9f1d-6dc4d86d54ef" positionType="Float" x="0" y="246" width="594" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{NotStartedMoreAboutChangesAnswer}]]></textFieldExpression>
-			</textField>
+			<subreport>
+				<reportElement uuid="8ead1cca-4a39-4878-805f-e9b3835251f3" positionType="Float" x="0" y="241" width="593" height="1" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OTHER_CHANGES_QUESTION">
+					<subreportParameterExpression><![CDATA[$F{NotStartedMoreAboutChangesQuestionLabel}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OTHER_CHANGES_ANSWER">
+					<subreportParameterExpression><![CDATA[$F{NotStartedMoreAboutChangesAnswer}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsOtherChanges.jasper"]]></subreportExpression>
+			</subreport>
 		</band>
 	</detail>
 </jasperReport>
