@@ -24,7 +24,7 @@
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="61" splitType="Immediate">
+		<band height="67" splitType="Immediate">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="5f5b2185-9b5f-4d1e-858b-24852cd2757e" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
