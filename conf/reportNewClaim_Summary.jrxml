@@ -308,14 +308,14 @@
 					<rightPen lineWidth="1.0" lineColor="#000000"/>
 				</box>
 				<textField>
-					<reportElement uuid="905dab3a-2029-46c5-a36e-392a200e1640" style="HeadingClaim" positionType="Float" mode="Opaque" x="2" y="1" width="550" height="20" forecolor="#000000" backcolor="#FFFFFF">
+					<reportElement uuid="905dab3a-2029-46c5-a36e-392a200e1640" style="HeadingClaim" positionType="Float" mode="Opaque" x="1" y="1" width="550" height="20" forecolor="#000000" backcolor="#FFFFFF">
 						<property name="net.sf.jasperreports.export.html.class" value="SummaryPageDateHeader"/>
 					</reportElement>
 					<textElement verticalAlignment="Middle" markup="styled"/>
 					<textFieldExpression><![CDATA["Date Received: "+$F{DateTimeGenerated}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
-					<reportElement uuid="1c0b0d22-180c-4cad-bcf1-5956c720dc6e" style="HeadingClaim" positionType="Float" mode="Opaque" x="2" y="21" width="226" height="23" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement uuid="1c0b0d22-180c-4cad-bcf1-5956c720dc6e" style="HeadingClaim" positionType="Float" mode="Opaque" x="1" y="21" width="226" height="23" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#FFFFFF"/>
 					<textElement verticalAlignment="Middle" markup="styled">
 						<font isBold="true"/>
 					</textElement>
