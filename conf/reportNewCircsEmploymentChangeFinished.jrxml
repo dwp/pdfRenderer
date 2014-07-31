@@ -147,7 +147,7 @@
 				<textFieldExpression><![CDATA[$F{FinishedEmpEmployerContactNumberAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="309" splitType="Immediate">
+		<band height="310" splitType="Immediate">
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="7037f9d7-a80c-44ca-b2cc-a54f81c6bebf" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
@@ -283,21 +283,21 @@
 				<textFieldExpression><![CDATA[$F{FinishedEmpCareCostsForThisWorkAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="8338b452-38eb-45ea-b472-373e9cc98a40" positionType="Float" x="0" y="260" width="594" height="18" isRemoveLineWhenBlank="true">
+				<reportElement uuid="8338b452-38eb-45ea-b472-373e9cc98a40" positionType="Float" x="0" y="261" width="594" height="18" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{FinishedEmpCareCostsForThisWorkAnswer} == "Yes"]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{FinishedEmpCareCostsForThisWorkWhatCostsQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="d8fb4e33-755a-412b-9f60-fe8d06aea92d" positionType="Float" x="0" y="284" width="594" height="18" isRemoveLineWhenBlank="true">
+				<reportElement uuid="d8fb4e33-755a-412b-9f60-fe8d06aea92d" positionType="Float" x="0" y="285" width="594" height="18" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{FinishedEmpCareCostsForThisWorkAnswer} == "Yes"]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{FinishedEmpCareCostsForThisWorkWhatCostsAnswer}]]></textFieldExpression>
 			</textField>
 			<subreport>
-				<reportElement uuid="348d1e17-042a-43e4-925e-89cc66bbd257" positionType="Float" x="0" y="307" width="594" height="1" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="348d1e17-042a-43e4-925e-89cc66bbd257" positionType="Float" x="0" y="309" width="594" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
