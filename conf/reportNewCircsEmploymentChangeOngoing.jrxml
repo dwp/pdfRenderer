@@ -140,7 +140,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 		</band>
-		<band height="262" splitType="Immediate">
+		<band height="191" splitType="Immediate">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="7037f9d7-a80c-44ca-b2cc-a54f81c6bebf" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
@@ -266,46 +266,46 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{OngoingEmpPayIntoPensionAnswer}]]></textFieldExpression>
 			</textField>
+			<subreport>
+				<reportElement uuid="c423d067-4805-46c1-8642-d66204ae6a14" positionType="Float" x="0" y="170" width="594" height="1"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OTHER_CHANGES_QUESTION">
+					<subreportParameterExpression><![CDATA[$F{OngoingEmpPayIntoPensionWhatForQuestionLabel}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OTHER_CHANGES_ANSWER">
+					<subreportParameterExpression><![CDATA[$F{OngoingEmpPayIntoPensionWhatForAnswer}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsOtherChanges.jasper"]]></subreportExpression>
+			</subreport>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="325987e0-c3db-4fbe-835f-14c81907b958" positionType="Float" x="0" y="170" width="594" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{OngoingEmpPayIntoPensionAnswer} == "Yes"]]></printWhenExpression>
-				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{OngoingEmpPayIntoPensionWhatForQuestionLabel}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="92e7438a-4117-4a56-8687-6b3f0c0f04cb" style="Answer" positionType="Float" x="0" y="188" width="594" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{OngoingEmpPayIntoPensionAnswer} == "Yes"]]></printWhenExpression>
-				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{OngoingEmpPayIntoPensionWhatForAnswer}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="d8860fe9-d4e1-4b13-9d0b-3a33ea711f51" positionType="Float" x="0" y="206" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="d8860fe9-d4e1-4b13-9d0b-3a33ea711f51" positionType="Float" x="0" y="171" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{OngoingEmpCareCostsForThisWorkQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="78f63d80-3735-483b-8c94-8a41115f259a" style="Answer" positionType="Float" x="397" y="206" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="78f63d80-3735-483b-8c94-8a41115f259a" style="Answer" positionType="Float" x="397" y="171" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{OngoingEmpCareCostsForThisWorkAnswer}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="8338b452-38eb-45ea-b472-373e9cc98a40" positionType="Float" x="0" y="224" width="594" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{OngoingEmpCareCostsForThisWorkAnswer} == "Yes"]]></printWhenExpression>
-				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{OngoingEmpCareCostsForThisWorkWhatCostsQuestionLabel}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="d8fb4e33-755a-412b-9f60-fe8d06aea92d" style="Answer" positionType="Float" x="0" y="242" width="594" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{OngoingEmpCareCostsForThisWorkAnswer} == "Yes"]]></printWhenExpression>
-				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{OngoingEmpCareCostsForThisWorkWhatCostsAnswer}]]></textFieldExpression>
-			</textField>
 			<subreport>
-				<reportElement uuid="ca32667a-15f2-488a-9a3b-e04e3f426e34" positionType="Float" x="0" y="260" width="594" height="1"/>
+				<reportElement uuid="8aa9f828-eb13-4254-87eb-0a393d8c6f23" positionType="Float" x="0" y="189" width="594" height="1"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OTHER_CHANGES_QUESTION">
+					<subreportParameterExpression><![CDATA[$F{OngoingEmpCareCostsForThisWorkWhatCostsQuestionLabel}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OTHER_CHANGES_ANSWER">
+					<subreportParameterExpression><![CDATA[$F{OngoingEmpCareCostsForThisWorkWhatCostsAnswer}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsOtherChanges.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement uuid="ca32667a-15f2-488a-9a3b-e04e3f426e34" positionType="Float" x="0" y="190" width="594" height="1"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
