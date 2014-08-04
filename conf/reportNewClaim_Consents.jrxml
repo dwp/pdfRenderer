@@ -31,7 +31,7 @@
 				<textFieldExpression><![CDATA[$F{ConsentQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="8a91fad2-9d40-45d2-84be-d2e058a1e540" positionType="Float" x="397" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="8a91fad2-9d40-45d2-84be-d2e058a1e540" style="Answer" positionType="Float" x="397" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{ConsentAnswer}]]></textFieldExpression>
 			</textField>
@@ -41,7 +41,7 @@
 				<textFieldExpression><![CDATA[$F{ConsentWhyQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="b9bbee5b-521f-4c04-b6aa-87a20f75b9e1" positionType="Float" x="0" y="43" width="552" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="b9bbee5b-521f-4c04-b6aa-87a20f75b9e1" style="Answer" positionType="Float" x="0" y="43" width="552" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{ConsentWhyAnswer}]]></textFieldExpression>
 			</textField>

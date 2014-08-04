@@ -79,7 +79,7 @@
 				<textFieldExpression><![CDATA[$F{DeclarationContactPreferenceQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="189e5fd1-a549-4097-b0cd-2b1b95171632" positionType="Float" x="397" y="34" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="189e5fd1-a549-4097-b0cd-2b1b95171632" style="Answer" positionType="Float" x="397" y="34" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{DeclarationContactPreferenceAnswer}]]></textFieldExpression>
 			</textField>
@@ -118,7 +118,7 @@
 				<textFieldExpression><![CDATA[$F{DeclarationSomeOneElseQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="e7c1434d-ad02-4f93-abc8-9b18d0eccafa" positionType="Float" x="397" y="1" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="e7c1434d-ad02-4f93-abc8-9b18d0eccafa" style="Answer" positionType="Float" x="397" y="1" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{DeclarationSomeOneElseAnswer}]]></textFieldExpression>
 			</textField>
@@ -133,7 +133,7 @@
 				<textFieldExpression><![CDATA[$F{DeclarationNameOrOrgQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="2cee7d1a-cbb2-44c4-960a-64a434d8de98" positionType="Float" x="397" y="20" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="2cee7d1a-cbb2-44c4-960a-64a434d8de98" style="Answer" positionType="Float" x="397" y="20" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{DeclarationNameOrOrgAnswer}]]></textFieldExpression>
 			</textField>
@@ -148,7 +148,7 @@
 				<textFieldExpression><![CDATA[$F{DeclarationConfirmQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="ea1d1099-fcf6-488a-a956-ac5976d55183" positionType="Float" x="397" y="39" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="ea1d1099-fcf6-488a-a956-ac5976d55183" style="Answer" positionType="Float" x="397" y="39" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{DeclarationConfirmAnswer}]]></textFieldExpression>
 			</textField>
@@ -163,7 +163,7 @@
 				<textFieldExpression><![CDATA[$F{ConsentQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="f839f0ea-ea95-4972-a716-cc62d023ca3f" positionType="Float" x="1" y="77" width="593" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="f839f0ea-ea95-4972-a716-cc62d023ca3f" style="Answer" positionType="Float" x="1" y="77" width="593" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ConsentAnswer}]]></textFieldExpression>
 			</textField>
@@ -178,7 +178,7 @@
 				<textFieldExpression><![CDATA[$F{ConsentWhyQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="e0c20ce0-7cc4-4431-8648-ae62bda7f9ff" positionType="Float" x="2" y="119" width="592" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="e0c20ce0-7cc4-4431-8648-ae62bda7f9ff" style="Answer" positionType="Float" x="2" y="119" width="592" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ConsentWhyAnswer}]]></textFieldExpression>
 			</textField>

@@ -109,7 +109,7 @@
 				<textFieldExpression><![CDATA[$F{Caring35HoursQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="7f4ea2b9-240c-47d2-90bd-09a0b7304d30" positionType="Float" x="397" y="24" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="7f4ea2b9-240c-47d2-90bd-09a0b7304d30" style="Answer" positionType="Float" x="397" y="24" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{Caring35HoursAnswer}]]></textFieldExpression>
 			</textField>
@@ -121,7 +121,7 @@
 				<textFieldExpression><![CDATA[$F{DateStoppedCaring35HoursQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="20941537-5b90-49f1-8e5f-4dbd17ca7049" positionType="Float" x="397" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="20941537-5b90-49f1-8e5f-4dbd17ca7049" style="Answer" positionType="Float" x="397" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{DateStoppedCaring35HoursAnswer}]]></textFieldExpression>
 			</textField>
@@ -145,7 +145,7 @@
 				<textFieldExpression><![CDATA[$F{CareeChangedAddressQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="eedbfa39-5eff-4985-86f2-2025f1e1ff27" positionType="Float" x="397" y="20" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="eedbfa39-5eff-4985-86f2-2025f1e1ff27" style="Answer" positionType="Float" x="397" y="20" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{CareeChangedAddressAnswer}]]></textFieldExpression>
 			</textField>
@@ -155,7 +155,7 @@
 				<textFieldExpression><![CDATA[$F{CareeSameAddressQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="b878b345-b9a0-4b28-9a3b-a63402a42008" positionType="Float" x="397" y="39" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="b878b345-b9a0-4b28-9a3b-a63402a42008" style="Answer" positionType="Float" x="397" y="39" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{CareeSameAddressAnswer}]]></textFieldExpression>
 			</textField>
