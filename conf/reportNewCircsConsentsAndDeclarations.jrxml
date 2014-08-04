@@ -103,7 +103,7 @@
 				<text><![CDATA[Declaration]]></text>
 			</staticText>
 		</band>
-		<band height="165">
+		<band height="147">
 			<subreport>
 				<reportElement uuid="b34c7529-e4cf-4415-96ce-15753a6ec93d" positionType="Float" x="0" y="0" width="595" height="1"/>
 				<subreportParameter name="SUBREPORT_DIR">
@@ -158,12 +158,12 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="891a97f1-6f6f-4e7e-8c3a-fc680efe1776" positionType="Float" x="0" y="58" width="594" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="891a97f1-6f6f-4e7e-8c3a-fc680efe1776" positionType="Float" x="0" y="58" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ConsentQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="f839f0ea-ea95-4972-a716-cc62d023ca3f" style="Answer" positionType="Float" x="1" y="77" width="593" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="f839f0ea-ea95-4972-a716-cc62d023ca3f" style="Answer" positionType="Float" x="397" y="58" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ConsentAnswer}]]></textFieldExpression>
 			</textField>
@@ -173,12 +173,12 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="b0faa3f6-b0ec-43f4-b65f-5b83582a627e" positionType="Float" x="0" y="95" width="594" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="b0faa3f6-b0ec-43f4-b65f-5b83582a627e" positionType="Float" x="0" y="77" width="594" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ConsentWhyQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="e0c20ce0-7cc4-4431-8648-ae62bda7f9ff" style="Answer" positionType="Float" x="2" y="119" width="592" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="e0c20ce0-7cc4-4431-8648-ae62bda7f9ff" style="Answer" positionType="Float" x="0" y="95" width="594" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ConsentWhyAnswer}]]></textFieldExpression>
 			</textField>
@@ -188,7 +188,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="f181b4e2-8ba8-414f-8d70-abdd9116ff88" positionType="Float" x="0" y="144" width="595" height="20"/>
+				<reportElement uuid="f181b4e2-8ba8-414f-8d70-abdd9116ff88" positionType="Float" x="-1" y="113" width="595" height="20"/>
 				<textElement textAlignment="Center" verticalAlignment="Bottom">
 					<font isBold="true"/>
 				</textElement>
