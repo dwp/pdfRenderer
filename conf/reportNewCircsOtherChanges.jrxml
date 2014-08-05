@@ -7,14 +7,14 @@
 	<parameter name="OTHER_CHANGES_QUESTION" class="java.lang.String"/>
 	<parameter name="OTHER_CHANGES_ANSWER" class="java.lang.String"/>
 	<detail>
-		<band height="49" splitType="Immediate">
+		<band height="39" splitType="Immediate">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="f4e34909-1e62-43b4-a047-f9078e7a19fb" positionType="Float" x="0" y="1" width="594" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$P{OTHER_CHANGES_QUESTION}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="4c46ffe5-42e7-4218-8fc0-35f073214302" positionType="Float" x="0" y="25" width="594" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="4c46ffe5-42e7-4218-8fc0-35f073214302" style="Answer" positionType="Float" x="0" y="19" width="594" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$P{OTHER_CHANGES_ANSWER}]]></textFieldExpression>
 			</textField>

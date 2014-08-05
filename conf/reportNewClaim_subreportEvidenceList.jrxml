@@ -4,7 +4,7 @@
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
-    <template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
+	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String">
 		<defaultValueExpression><![CDATA["/Users/valtechuk/Dropbox/JasperReports/"]]></defaultValueExpression>
 	</parameter>
@@ -30,16 +30,16 @@
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="19" splitType="Stretch">
+		<band height="21" splitType="Stretch">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="fcd3ab37-4374-45fc-bfd2-b8f2313382c1" positionType="Float" x="0" y="0" width="595" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement>
-					<font isBold="true"/>
+					<font isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{Title}]]></textFieldExpression>
 			</textField>
 			<subreport>
-				<reportElement uuid="1726b69b-3884-4ec3-9efa-7d50543f66a7" positionType="Float" x="0" y="18" width="595" height="1" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="1726b69b-3884-4ec3-9efa-7d50543f66a7" positionType="Float" x="0" y="19" width="595" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>

@@ -41,7 +41,7 @@
 		</band>
 		<band height="50">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="cfcfe0f4-935e-4ec5-9f70-f8402a77eedd" positionType="Float" x="0" y="0" width="590" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="cfcfe0f4-935e-4ec5-9f70-f8402a77eedd" style="Answer" positionType="Float" x="0" y="0" width="590" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{OtherChangesAnswer}]]></textFieldExpression>
 			</textField>
