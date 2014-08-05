@@ -1,14 +1,16 @@
 package generators
 
-import scala.util.{Success, Try}
+import java.io.{File, OutputStream}
+import java.util
+
+import app.ConfigProperties._
 import data_sources.{InvalidSourceFormatException, ReportDataSource}
 import net.sf.jasperreports.engine._
-import net.sf.jasperreports.engine.xml.JRXmlLoader
-import play.api.{Play, Logger}
 import net.sf.jasperreports.engine.design.JasperDesign
 import net.sf.jasperreports.engine.util.{JRElementsVisitor, JRSaver}
-import java.io.{File, OutputStream}
-import java.{io, util}
+import net.sf.jasperreports.engine.xml.JRXmlLoader
+import play.api.Logger
+
 import scala.language.postfixOps
 
 
@@ -16,10 +18,10 @@ import scala.language.postfixOps
  * Interface of the report generators.
  */
 trait ReportGenerator {
-  lazy val jasperLocation = Try(Play.current.configuration.getString("jasper.folder").getOrElse("./")) match {case Success(s) => s; case _ => "./"}
-  lazy val jrxmlLocation = Try(Play.current.configuration.getString("jrxml.folder").getOrElse("/conf")) match {case Success(s) => s; case _ => "/conf"}
-  lazy val yesImage = Play.current.configuration.getString("images.yes").getOrElse("./")
-  lazy val noImage = Play.current.configuration.getString("images.no").getOrElse("./")
+  lazy val jasperLocation = getProperty("jasper.folder","./")
+  lazy val jrxmlLocation = getProperty("jrxml.folder","/conf")
+  lazy val yesImage = getProperty("images.yes","./")
+  lazy val noImage = getProperty("images.no","./")
 
   def compileAllReports() = {
     try {
