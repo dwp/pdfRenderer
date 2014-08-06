@@ -50,7 +50,7 @@
 				<textFieldExpression><![CDATA[$F{DeclarationSomeOneElseQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="d21db177-9611-4f48-acbe-52de28d65ae1" positionType="Float" x="397" y="3" width="197" height="68" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="d21db177-9611-4f48-acbe-52de28d65ae1" style="Answer" positionType="Float" x="397" y="3" width="197" height="68" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{DeclarationSomeOneElseAnswer}]]></textFieldExpression>
 			</textField>
@@ -62,7 +62,7 @@
 				<textFieldExpression><![CDATA[$F{DeclarationNameOrgQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="066d6cf3-8dce-42ae-aaf5-8b2ed356c8e7" positionType="Float" x="397" y="77" width="197" height="20" isRemoveLineWhenBlank="true">
+				<reportElement uuid="066d6cf3-8dce-42ae-aaf5-8b2ed356c8e7" style="Answer" positionType="Float" x="397" y="77" width="197" height="20" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{DeclarationSomeOneElseAnswer}.equals("Yes")]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
@@ -79,7 +79,7 @@
 				<textFieldExpression><![CDATA[$F{DeclarationConfirmQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="747dd6ab-3448-466e-a8ca-b24ab9649a60" positionType="Float" x="397" y="98" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="747dd6ab-3448-466e-a8ca-b24ab9649a60" style="Answer" positionType="Float" x="397" y="98" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{DeclarationConfirmAnswer}]]></textFieldExpression>
 			</textField>

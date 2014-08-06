@@ -88,7 +88,7 @@
 		<band splitType="Stretch"/>
 	</background>
 	<pageHeader>
-		<band height="53" splitType="Immediate">
+		<band height="54" splitType="Immediate">
 			<frame>
 				<reportElement uuid="7afb6c41-52be-4c63-89cd-61179a0fa915" positionType="Float" x="0" y="0" width="594" height="52">
 					<property name="net.sf.jasperreports.export.html.class" value="DetailPageHeader"/>
@@ -101,34 +101,34 @@
 					<rightPen lineWidth="1.0" lineColor="#000000"/>
 				</box>
 				<textField>
-					<reportElement uuid="2b597163-946a-4982-9320-135afb766d57" x="2" y="2" width="422" height="23"/>
+					<reportElement uuid="2b597163-946a-4982-9320-135afb766d57" mode="Opaque" x="1" y="1" width="423" height="23"/>
 					<textElement/>
 					<textFieldExpression><![CDATA["Date Received: "+$F{DateTimeGenerated}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement uuid="3205d842-c416-44c0-82fe-89f83bcb8739" x="426" y="2" width="167" height="23"/>
+					<reportElement uuid="3205d842-c416-44c0-82fe-89f83bcb8739" mode="Opaque" x="425" y="1" width="168" height="23"/>
 					<textElement textAlignment="Right" verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA["Service version : "+$F{Version}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement uuid="d4ffb11d-8a42-4d0a-84bf-5a08db017d2f" style="HeadingClaim" mode="Transparent" x="2" y="25" width="233" height="26" forecolor="#000000"/>
-					<textElement verticalAlignment="Middle" markup="styled">
+					<reportElement uuid="d4ffb11d-8a42-4d0a-84bf-5a08db017d2f" mode="Opaque" x="1" y="24" width="233" height="27" forecolor="#000000"/>
+					<textElement verticalAlignment="Middle" markup="none">
 						<font fontName="SansSerif" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA["Transaction: "+$F{TransactionId}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="false">
-					<reportElement uuid="413555f5-6e37-46fa-9f7b-00d6dd12b626" x="235" y="25" width="40" height="26" forecolor="#000000"/>
+					<reportElement uuid="413555f5-6e37-46fa-9f7b-00d6dd12b626" mode="Opaque" x="235" y="24" width="40" height="27" forecolor="#000000"/>
 					<textElement textAlignment="Right" verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[$F{ClaimantTitle}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="false">
-					<reportElement uuid="f611597b-ca9e-4eee-b245-2214c1573ce9" x="282" y="25" width="188" height="26" forecolor="#000000"/>
+					<reportElement uuid="f611597b-ca9e-4eee-b245-2214c1573ce9" mode="Opaque" x="282" y="24" width="188" height="27" forecolor="#000000"/>
 					<textElement verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[$F{ClaimantSurname}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="false">
-					<reportElement uuid="fa8df42d-d92f-4051-a603-d9108427489c" x="499" y="25" width="94" height="26" forecolor="#000000"/>
+					<reportElement uuid="fa8df42d-d92f-4051-a603-d9108427489c" mode="Opaque" x="498" y="24" width="95" height="27" forecolor="#000000"/>
 					<textElement textAlignment="Right" verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[$F{NationalInsuranceNumber}]]></textFieldExpression>
 				</textField>
@@ -161,7 +161,6 @@
 			</subreport>
 		</band>
 		<band height="1" splitType="Immediate">
-			<printWhenExpression><![CDATA[$F{HavePartnerAnswer}.equals("Yes")]]></printWhenExpression>
 			<subreport>
 				<reportElement uuid="75564d7a-a29b-41fc-a89c-debc7307f3fb" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">

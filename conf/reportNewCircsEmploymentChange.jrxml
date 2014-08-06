@@ -348,7 +348,7 @@
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="179" splitType="Stretch">
+		<band height="41" splitType="Prevent">
 			<staticText>
 				<reportElement uuid="8f62fb47-d0a6-49f5-a1db-957558ba51a8" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="595" height="18" forecolor="#000000">
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart2CircsBreaksFromCaring"/>
@@ -356,7 +356,7 @@
 				<textElement verticalAlignment="Middle" markup="styled">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[Part 2 - Change in Circumstance - Employment Change]]></text>
+				<text><![CDATA[PART 2 - CHANGE IN CIRCUMSTANCE - EMPLOYMENT CHANGE]]></text>
 			</staticText>
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="59a010e4-a3c4-4e34-bbb6-7867de7dfd97" positionType="Float" x="0" y="22" width="392" height="18" isRemoveLineWhenBlank="true"/>
@@ -364,102 +364,104 @@
 				<textFieldExpression><![CDATA[$F{EmpChangeStillCaringQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="4716f5e0-8640-41e3-9239-5abc3fa68a63" positionType="Float" x="397" y="22" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="4716f5e0-8640-41e3-9239-5abc3fa68a63" style="Answer" positionType="Float" x="397" y="22" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EmpChangeStillCaringAnswer}]]></textFieldExpression>
 			</textField>
+		</band>
+		<band height="127">
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="9c7b4ccd-9207-4c43-8932-32fab47a73d4" positionType="Float" x="0" y="40" width="392" height="18" isRemoveLineWhenBlank="true">
+				<reportElement uuid="9c7b4ccd-9207-4c43-8932-32fab47a73d4" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{EmpChangeStillCaringAnswer} == "No"]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EmpChangeDateStoppedCaringQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="394b3d45-6239-4a50-bf37-f1380335ecc2" positionType="Float" x="397" y="40" width="197" height="18" isRemoveLineWhenBlank="true">
+				<reportElement uuid="394b3d45-6239-4a50-bf37-f1380335ecc2" style="Answer" positionType="Float" x="397" y="0" width="197" height="18" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{EmpChangeStillCaringAnswer} == "No"]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EmpChangeDateStoppedCaringAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="c448f030-31f2-46ff-87b2-1b7fef982acd" positionType="Float" x="397" y="58" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="c448f030-31f2-46ff-87b2-1b7fef982acd" style="Answer" positionType="Float" x="397" y="18" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EmpChangeHasWorkStartedYetAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="0b835f93-40a3-4e67-80c2-cdb2342a387c" positionType="Float" x="0" y="58" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="0b835f93-40a3-4e67-80c2-cdb2342a387c" positionType="Float" x="0" y="18" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EmpChangeHasWorkStartedYetQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="46631c88-d64e-4842-b6d5-b2511c3f8750" positionType="Float" x="0" y="76" width="392" height="18" isRemoveLineWhenBlank="true">
+				<reportElement uuid="46631c88-d64e-4842-b6d5-b2511c3f8750" positionType="Float" x="0" y="36" width="392" height="18" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{EmpChangeHasWorkStartedYetAnswer} == "Yes"]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EmpChangeDateWorkedStartedQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="4fcb136a-dbfb-482e-8285-07152bda1440" positionType="Float" x="397" y="76" width="197" height="18" isRemoveLineWhenBlank="true">
+				<reportElement uuid="4fcb136a-dbfb-482e-8285-07152bda1440" style="Answer" positionType="Float" x="397" y="36" width="197" height="18" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{EmpChangeHasWorkStartedYetAnswer} == "Yes"]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EmpChangeDateWorkedStartedAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="ddd5dc60-8ee4-4f36-9de3-a86c57774d6e" positionType="Float" x="0" y="94" width="392" height="18" isRemoveLineWhenBlank="true">
+				<reportElement uuid="ddd5dc60-8ee4-4f36-9de3-a86c57774d6e" positionType="Float" x="0" y="54" width="392" height="18" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{EmpChangeHasWorkStartedYetAnswer} == "No"]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EmpChangeDateWhenWillWorkStartQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="4976a497-fe45-4ec9-8e83-760b798b4587" positionType="Float" x="397" y="94" width="197" height="18" isRemoveLineWhenBlank="true">
+				<reportElement uuid="4976a497-fe45-4ec9-8e83-760b798b4587" style="Answer" positionType="Float" x="397" y="54" width="197" height="18" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{EmpChangeHasWorkStartedYetAnswer} == "No"]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EmpChangeDateWhenWillWorkStartAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="ebd69bf3-4ca2-4001-b66b-417f4e37b4a4" positionType="Float" x="0" y="112" width="392" height="18" isRemoveLineWhenBlank="true">
+				<reportElement uuid="ebd69bf3-4ca2-4001-b66b-417f4e37b4a4" positionType="Float" x="0" y="72" width="392" height="18" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{EmpChangeHasWorkStartedYetAnswer} == "Yes"]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EmpChangeHasWorkFinishedYetQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="c6d253b2-255f-4db3-8b7b-7fdd355dadca" positionType="Float" x="397" y="112" width="197" height="18" isRemoveLineWhenBlank="true">
+				<reportElement uuid="c6d253b2-255f-4db3-8b7b-7fdd355dadca" style="Answer" positionType="Float" x="397" y="72" width="197" height="18" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{EmpChangeHasWorkStartedYetAnswer} == "Yes"]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EmpChangeHasWorkFinishedYetAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="75eb9208-a89b-4544-932a-9ab2a10741bb" positionType="Float" x="0" y="130" width="392" height="18" isRemoveLineWhenBlank="true">
+				<reportElement uuid="75eb9208-a89b-4544-932a-9ab2a10741bb" positionType="Float" x="0" y="90" width="392" height="18" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{EmpChangeHasWorkFinishedYetAnswer} == "Yes"]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EmpChangeDateWorkedFinishedQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="72ef4b29-b024-482c-9fc4-5c27b6b68846" positionType="Float" x="397" y="130" width="197" height="18" isRemoveLineWhenBlank="true">
+				<reportElement uuid="72ef4b29-b024-482c-9fc4-5c27b6b68846" style="Answer" positionType="Float" x="397" y="90" width="197" height="18" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{EmpChangeHasWorkFinishedYetAnswer} == "Yes"]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EmpChangeDateWorkedFinishedAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="fa674ca7-c75b-4561-be98-ecce39e063f5" positionType="Float" x="0" y="148" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="fa674ca7-c75b-4561-be98-ecce39e063f5" positionType="Float" x="0" y="108" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EmpChangeTypeOfWorkQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="e23bbebe-6b67-4c27-b5d3-49d8a4159ebe" positionType="Float" x="397" y="148" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="e23bbebe-6b67-4c27-b5d3-49d8a4159ebe" style="Answer" positionType="Float" x="397" y="108" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EmpChangeTypeOfWorkAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="114">
+		<band height="36" splitType="Prevent">
 			<printWhenExpression><![CDATA[$F{EmpChangeTypeOfWorkAnswer} == "self-employed"]]></printWhenExpression>
 			<staticText>
 				<reportElement uuid="08c7b9ad-9096-49a4-834e-d6df80d37a6d" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="595" height="18" forecolor="#000000">
@@ -476,40 +478,41 @@
 				<textFieldExpression><![CDATA[$F{SelfEmpTypeOfSelfEmploymentQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="c242b8f4-b43a-4324-ab72-f59eea041c64" positionType="Float" x="397" y="18" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="c242b8f4-b43a-4324-ab72-f59eea041c64" style="Answer" positionType="Float" x="397" y="18" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{SelfEmpTypeOfSelfEmploymentAnswer}]]></textFieldExpression>
 			</textField>
+		</band>
+		<band height="20" splitType="Immediate">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="6499a26c-3bce-4949-b772-0fc12c0f3238" positionType="Float" x="0" y="36" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="6499a26c-3bce-4949-b772-0fc12c0f3238" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{SelfEmpTotalIncomeQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="2126a0aa-c51a-4f2c-a495-a5cb8cae21e3" positionType="Float" x="397" y="36" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="2126a0aa-c51a-4f2c-a495-a5cb8cae21e3" style="Answer" positionType="Float" x="397" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{SelfEmpTotalIncomeAnswer}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="12c14cac-abc2-4912-a4e8-de48ef05b386" positionType="Float" x="0" y="55" width="392" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{SelfEmpMoreAboutChangesQuestionLabel}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="0e40338d-7b88-44f0-8ba9-67c61d5b00d7" positionType="Float" x="397" y="55" width="197" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{SelfEmpMoreAboutChangesAnswer}]]></textFieldExpression>
-			</textField>
 			<staticText>
-				<reportElement uuid="e7051554-4156-4e3b-8866-381c18b5ac30" positionType="Float" x="0" y="54" width="594" height="1"/>
+				<reportElement uuid="e7051554-4156-4e3b-8866-381c18b5ac30" positionType="Float" x="0" y="18" width="594" height="1"/>
 				<textElement/>
 				<text><![CDATA[]]></text>
 			</staticText>
-			<staticText>
-				<reportElement uuid="cfc6d605-b047-4c3a-a3da-90f5fc7b1987" positionType="Float" x="0" y="73" width="594" height="1"/>
-				<textElement/>
-				<text><![CDATA[]]></text>
-			</staticText>
+			<subreport>
+				<reportElement uuid="71c9e80f-09ae-4664-98d3-70a325d32e77" positionType="Float" x="0" y="19" width="594" height="1" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OTHER_CHANGES_QUESTION">
+					<subreportParameterExpression><![CDATA[$F{SelfEmpMoreAboutChangesQuestionLabel}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OTHER_CHANGES_ANSWER">
+					<subreportParameterExpression><![CDATA[$F{SelfEmpMoreAboutChangesAnswer}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsOtherChanges.jasper"]]></subreportExpression>
+			</subreport>
 		</band>
 		<band height="6" splitType="Immediate">
 			<printWhenExpression><![CDATA[!$F{showOngoingEmpSection}.isEmpty()]]></printWhenExpression>

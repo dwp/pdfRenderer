@@ -27,9 +27,11 @@ object ApplicationBuild extends Build {
 
   val cleanjsprTask = cleanjspr := {
     val jasperFolder    = conf.getString("jasper.folder")
-    val files = new File(jasperFolder).listFiles().filter(_.name.endsWith(".jasper")).filter(_.delete)
-    println("Removed files:")
-    files map(p=>println(p))
+//    val files =
+      new File(jasperFolder).listFiles().filter(_.name.endsWith(".jasper")).filter(_.delete)
+    // No printlns in code - JMI
+//    println("Removed files:")
+//    files map(p=>println(p))
   }
 
   var sV: Seq[Def.Setting[_]] = Seq(scalaVersion := "2.10.3")

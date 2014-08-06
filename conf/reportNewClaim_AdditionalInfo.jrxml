@@ -30,7 +30,7 @@
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="99" splitType="Immediate">
+		<band height="39" splitType="Prevent">
 			<staticText>
 				<reportElement uuid="22c02e51-e13c-42cc-86e4-f2af124afd5e" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="21" isRemoveLineWhenBlank="true">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingAdditionalInformation"/>
@@ -48,27 +48,29 @@
 				<textFieldExpression><![CDATA[$F{additionalInformationQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="5b80a305-25fd-4fef-9c09-af2ce25c3858" positionType="Float" x="397" y="21" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="5b80a305-25fd-4fef-9c09-af2ce25c3858" style="Answer" positionType="Float" x="397" y="21" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{additionalInformationAnswer}]]></textFieldExpression>
 			</textField>
+		</band>
+		<band height="66">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="3543a269-a583-48c2-882c-f5501701ae00" positionType="Float" x="0" y="39" width="552" height="20" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="3543a269-a583-48c2-882c-f5501701ae00" positionType="Float" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{additionalInformationWhyQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="8bb1352e-4350-47ef-9f29-c241f8e32afb" positionType="Float" x="0" y="59" width="552" height="20" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="8bb1352e-4350-47ef-9f29-c241f8e32afb" style="Answer" positionType="Float" x="0" y="24" width="594" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{additionalInformationWhyAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="53de5b37-2b0a-4074-9e5f-50eddf56e2bb" positionType="Float" x="0" y="79" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="53de5b37-2b0a-4074-9e5f-50eddf56e2bb" positionType="Float" x="0" y="48" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{welshQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="2013b6a7-5201-4e87-aec0-28c7521b86a6" positionType="Float" x="397" y="79" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="2013b6a7-5201-4e87-aec0-28c7521b86a6" style="Answer" positionType="Float" x="397" y="48" width="197" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{welshAnswer}]]></textFieldExpression>
 			</textField>
