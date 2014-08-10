@@ -123,7 +123,7 @@
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="64ccc0a0-3a49-4d88-ac41-d508f014b08e" positionType="Float" x="0" y="18" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement verticalAlignment="Top"/>
-				<textFieldExpression><![CDATA[$F{AboutYourPartnerFirstNameQuestionLabel}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{AboutYourPartnerFirstNameQuestionLabel}+"(s)"]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="b931e16c-e246-412f-8033-e1004ec17574" style="Answer" positionType="Float" x="397" y="18" width="197" height="18" isRemoveLineWhenBlank="true"/>

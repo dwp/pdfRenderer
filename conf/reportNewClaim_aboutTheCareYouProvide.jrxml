@@ -156,7 +156,7 @@
 			<textField>
 				<reportElement uuid="dc9e637e-86be-4f52-8118-56b591c236b8" positionType="Float" x="0" y="18" width="392" height="18"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeOtherNamesQuestionLabel}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeOtherNamesQuestionLabel}+"(s)"]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="8e02da51-c788-4d38-a074-3a564548d64b" style="Answer" positionType="Float" x="397" y="18" width="197" height="18" isRemoveLineWhenBlank="true"/>
