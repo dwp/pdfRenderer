@@ -64,7 +64,7 @@
 	</field>
 	<variable name="variable1" class="java.lang.Integer" incrementType="Group" incrementGroup="Break">
 		<variableExpression><![CDATA[$V{variable1}+1]]></variableExpression>
-		<initialValueExpression><![CDATA[1]]></initialValueExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
 	</variable>
 	<group name="Break">
 		<groupExpression><![CDATA[$V{Break_COUNT}==1]]></groupExpression>
