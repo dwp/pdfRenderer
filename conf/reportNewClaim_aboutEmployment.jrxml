@@ -38,7 +38,7 @@
 				<textFieldExpression><![CDATA[$F{AboutEmploymentAreYouEmployedQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="611415b6-f512-4ac4-b6c1-518bb947d854" style="Answer" positionType="Float" x="397" y="1" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="611415b6-f512-4ac4-b6c1-518bb947d854" style="Answer" positionType="Float" x="420" y="1" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutEmploymentAreYouEmployedAnswer}]]></textFieldExpression>
 			</textField>

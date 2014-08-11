@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_employmentJobDetails" language="groovy" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="d2b233ab-6178-4bb0-9059-17e24879fcd8">
 	<property name="ireport.zoom" value="0.9090909090909092"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="654"/>
+	<property name="ireport.y" value="528"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<property name="net.sf.jasperreports.export.html.remove.emtpy.space.between.rows" value="true"/>
 	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
@@ -350,7 +350,7 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsEmployerQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="251922ff-25ba-4482-a538-9bba0c77f9d7" style="Answer" positionType="Float" x="397" y="1" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="251922ff-25ba-4482-a538-9bba0c77f9d7" style="Answer" positionType="Float" x="420" y="1" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsEmployerAnswer}]]></textFieldExpression>
 			</textField>
@@ -365,7 +365,7 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsEmployerDateJobStartedQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="f0d2d654-fa7d-40c1-a8a6-e15a0da13e3b" style="Answer" positionType="Float" x="397" y="20" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="f0d2d654-fa7d-40c1-a8a6-e15a0da13e3b" style="Answer" positionType="Float" x="420" y="20" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsEmployerDateJobStartedAnswer}]]></textFieldExpression>
 			</textField>
@@ -375,7 +375,7 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsEmployerHaveFinishedJobQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="9d1a78e6-5f86-42e7-b081-06ae72f8cdc9" style="Answer" positionType="Float" x="397" y="38" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="9d1a78e6-5f86-42e7-b081-06ae72f8cdc9" style="Answer" positionType="Float" x="420" y="38" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsEmployerHaveFinishedJobAnswer}]]></textFieldExpression>
 			</textField>
@@ -385,7 +385,7 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsEmployerDateJobFinishedQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="4fffe116-5fe8-41ca-b64d-4eeac448c9da" style="Answer" positionType="Float" x="397" y="56" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="4fffe116-5fe8-41ca-b64d-4eeac448c9da" style="Answer" positionType="Float" x="420" y="56" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsEmployerDateJobFinishedAnswer}]]></textFieldExpression>
 			</textField>
@@ -395,7 +395,7 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsEmployerP45LeavingDateQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="01212d84-7bf5-41d2-8686-52497783eef7" style="Answer" positionType="Float" x="397" y="74" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="01212d84-7bf5-41d2-8686-52497783eef7" style="Answer" positionType="Float" x="420" y="74" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsEmployerP45LeavingDateAnswer}]]></textFieldExpression>
 			</textField>
@@ -410,7 +410,7 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsPayWeeklyHoursWorkedQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="781aa652-82ce-43bb-8443-7f8cbfdb9442" style="Answer" positionType="Float" x="397" y="93" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="781aa652-82ce-43bb-8443-7f8cbfdb9442" style="Answer" positionType="Float" x="420" y="93" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsPayWeeklyHoursWorkedAnswer}]]></textFieldExpression>
 			</textField>
@@ -420,7 +420,7 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsPayrollOrEmployeeNumberQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="0f0ede36-5495-4297-8bc0-5e7aab3949bd" style="Answer" positionType="Float" x="397" y="111" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="0f0ede36-5495-4297-8bc0-5e7aab3949bd" style="Answer" positionType="Float" x="420" y="111" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsPayrollOrEmployeeNumberAnswer}]]></textFieldExpression>
 			</textField>
@@ -439,19 +439,19 @@
 				<textFieldExpression><![CDATA[$P{Address}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="d83e9980-c54a-4008-b5b5-c9804e6c26f0" style="Answer" positionType="Float" x="397" y="20" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="d83e9980-c54a-4008-b5b5-c9804e6c26f0" style="Answer" positionType="Float" x="420" y="20" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{Line1}]]></textFieldExpression>
 			</textField>
 		</band>
 		<band height="73">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="6bae534a-cfb3-4a2b-b753-d56e701d74e5" style="Answer" positionType="Float" x="397" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="6bae534a-cfb3-4a2b-b753-d56e701d74e5" style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{Line2}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="6ab9dd5f-e44d-4b23-98f7-b4b8cb1922df" style="Answer" positionType="Float" x="397" y="18" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="6ab9dd5f-e44d-4b23-98f7-b4b8cb1922df" style="Answer" positionType="Float" x="420" y="18" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{Line3}]]></textFieldExpression>
 			</textField>
@@ -468,7 +468,7 @@
 				<textFieldExpression><![CDATA[$P{postCode}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="4fff7fd3-9006-4322-a49e-fd7bd4c38aca" style="Answer" positionType="Float" x="398" y="37" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="4fff7fd3-9006-4322-a49e-fd7bd4c38aca" style="Answer" positionType="Float" x="421" y="37" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsEmployerPostCodeAnswer}]]></textFieldExpression>
 			</textField>
@@ -478,14 +478,14 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsEmployerPhoneNumberQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="f64f69b6-274d-4fdc-be90-1a5a3ceea4c7" style="Answer" positionType="Float" x="398" y="55" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="f64f69b6-274d-4fdc-be90-1a5a3ceea4c7" style="Answer" positionType="Float" x="420" y="55" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsEmployerPhoneNumberAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
 		<band height="40" splitType="Prevent">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="01bdf01b-d916-46f6-8edd-0a847732938c" style="Answer" positionType="Float" x="397" y="20" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="01bdf01b-d916-46f6-8edd-0a847732938c" style="Answer" positionType="Float" x="420" y="20" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsPayDateLastPaidAnswer}]]></textFieldExpression>
 			</textField>
@@ -509,7 +509,7 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsPayGrossPaymentQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="208f7160-2bb2-4d16-8346-d289ee05762b" style="Answer" positionType="Float" x="397" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="208f7160-2bb2-4d16-8346-d289ee05762b" style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsPayGrossPaymentAnswerAmount}]]></textFieldExpression>
 			</textField>
@@ -519,7 +519,7 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsPayConstantEarningsQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="0a87ab1f-0d6f-4973-bf67-fbacf18d9bf3" style="Answer" positionType="Float" x="397" y="37" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="0a87ab1f-0d6f-4973-bf67-fbacf18d9bf3" style="Answer" positionType="Float" x="420" y="37" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsPayConstantEarningsAnswer}]]></textFieldExpression>
 			</textField>
@@ -529,7 +529,7 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsPayIncludedInWageQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="d934431a-0a35-4f23-8566-8f0c5ca72026" style="Answer" positionType="Float" x="397" y="18" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="d934431a-0a35-4f23-8566-8f0c5ca72026" style="Answer" positionType="Float" x="420" y="18" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsPayIncludedInWageAnswer}]]></textFieldExpression>
 			</textField>
@@ -553,14 +553,14 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsPayFrequencyQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="59d5b4cf-4802-48c8-84bc-60f688cc606e" style="Answer" positionType="Float" x="397" y="20" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="59d5b4cf-4802-48c8-84bc-60f688cc606e" style="Answer" positionType="Float" x="420" y="20" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsPayFrequencyAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
 		<band height="59">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="fc0c44c4-1752-4a63-b736-4b06ebc21026" style="Answer" positionType="Float" x="397" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="fc0c44c4-1752-4a63-b736-4b06ebc21026" style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsPayFrequencyOther}]]></textFieldExpression>
 			</textField>
@@ -575,12 +575,12 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsPayUsualPayDayQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="436e2f7d-f215-47f6-9437-5a7de2605dd9" style="Answer" positionType="Float" x="397" y="38" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="436e2f7d-f215-47f6-9437-5a7de2605dd9" style="Answer" positionType="Float" x="420" y="38" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsOweMoneyAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="666e5cd6-6b0c-4f58-9ec6-49ae5d0b409c" style="Answer" positionType="Float" x="397" y="19" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="666e5cd6-6b0c-4f58-9ec6-49ae5d0b409c" style="Answer" positionType="Float" x="420" y="19" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsPayUsualPayDayAnswer}]]></textFieldExpression>
 			</textField>
@@ -611,7 +611,7 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsPaidForOccupationalPensionQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="6e76bb06-41e1-4720-bac5-027dd9c03051" style="Answer" positionType="Float" x="397" y="21" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="6e76bb06-41e1-4720-bac5-027dd9c03051" style="Answer" positionType="Float" x="420" y="21" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsPaidForOccupationalPensionAnswer}]]></textFieldExpression>
 			</textField>
@@ -628,7 +628,7 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsOccupationalPensionQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="93347356-6068-4b9a-af41-fac409b71d38" style="Answer" positionType="Float" x="397" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="93347356-6068-4b9a-af41-fac409b71d38" style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsOccupationalPensionAnswerAmount}]]></textFieldExpression>
 			</textField>
@@ -638,12 +638,12 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsOccupationalPensionFrequencyQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="b1f78dd6-2abe-418b-9d75-6c02ffd834ea" style="Answer" positionType="Float" x="397" y="18" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="b1f78dd6-2abe-418b-9d75-6c02ffd834ea" style="Answer" positionType="Float" x="420" y="18" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsOccupationalPensionFrequencyAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="887263c3-16f8-4e4c-a700-fff575d1054d" style="Answer" positionType="Float" x="397" y="36" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="887263c3-16f8-4e4c-a700-fff575d1054d" style="Answer" positionType="Float" x="420" y="36" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsOccupationalPensionFrequencyOther}]]></textFieldExpression>
 			</textField>
@@ -658,7 +658,7 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsPaidForPersonalPensionQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="7a2bde4e-2c72-4669-a7c8-7cd742aef85a" style="Answer" positionType="Float" x="397" y="55" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="7a2bde4e-2c72-4669-a7c8-7cd742aef85a" style="Answer" positionType="Float" x="420" y="55" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsPaidForPersonalPensionAnswer}]]></textFieldExpression>
 			</textField>
@@ -673,7 +673,7 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsPersonalPensionQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="1cf956c7-3644-49c7-ad18-e8483476bfdb" style="Answer" positionType="Float" x="397" y="74" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="1cf956c7-3644-49c7-ad18-e8483476bfdb" style="Answer" positionType="Float" x="420" y="74" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsPersonalPensionAnswerAmount}]]></textFieldExpression>
 			</textField>
@@ -683,12 +683,12 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsPersonalPensionFrequencyQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="124cbff7-e85a-47ab-a97e-bde37b79cfd2" style="Answer" positionType="Float" x="397" y="92" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="124cbff7-e85a-47ab-a97e-bde37b79cfd2" style="Answer" positionType="Float" x="420" y="92" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsPersonalPensionFrequencyAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="1b7dfde4-d89b-4738-b6ef-572c976fc78c" style="Answer" positionType="Float" x="397" y="110" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="1b7dfde4-d89b-4738-b6ef-572c976fc78c" style="Answer" positionType="Float" x="420" y="110" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsPersonalPensionFrequencyOther}]]></textFieldExpression>
 			</textField>
@@ -705,7 +705,7 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsPaidForJobExpensesQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="1903a7da-d06d-4d78-9ce0-752e55e74ad0" style="Answer" positionType="Float" x="397" y="21" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="1903a7da-d06d-4d78-9ce0-752e55e74ad0" style="Answer" positionType="Float" x="420" y="21" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsPaidForJobExpensesAnswer}]]></textFieldExpression>
 			</textField>
@@ -726,12 +726,12 @@
 		</band>
 		<band height="40">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="19fbc265-a2a5-4674-bb4b-8fc9699375a7" style="Answer" positionType="Float" x="398" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="19fbc265-a2a5-4674-bb4b-8fc9699375a7" style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsCareExpensesChildrenAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="e7b8cd46-d3e8-4120-96dd-30c947b2332e" style="Answer" positionType="Float" x="397" y="20" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="e7b8cd46-d3e8-4120-96dd-30c947b2332e" style="Answer" positionType="Float" x="420" y="20" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsCareExpensesCareeAnswer}]]></textFieldExpression>
 			</textField>
@@ -758,7 +758,7 @@
 		</band>
 		<band height="41" splitType="Prevent">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="0504b297-73c1-4964-a3c3-d92aa3d1c2c2" style="Answer" positionType="Float" x="398" y="21" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="0504b297-73c1-4964-a3c3-d92aa3d1c2c2" style="Answer" positionType="Float" x="420" y="21" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsEmployerJobTypeAnswer}]]></textFieldExpression>
 			</textField>
@@ -789,7 +789,7 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsJobExpensesQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="722f01f9-2add-453a-8216-ff4a20d1a467" style="Answer" positionType="Float" x="398" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="722f01f9-2add-453a-8216-ff4a20d1a467" style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsJobExpensesAnswer}]]></textFieldExpression>
 			</textField>
@@ -810,7 +810,7 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsChildCareExpensesCarerNameQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="6a672e51-abaa-40b0-af65-d31ae1adad54" style="Answer" positionType="Float" x="397" y="21" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="6a672e51-abaa-40b0-af65-d31ae1adad54" style="Answer" positionType="Float" x="420" y="21" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsChildCareExpensesCarerNameAnswer}]]></textFieldExpression>
 			</textField>
@@ -827,7 +827,7 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsChildCareExpensesQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="ddfbfbda-1a68-4bf4-a5ae-9106b9990c62" style="Answer" positionType="Float" x="398" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="ddfbfbda-1a68-4bf4-a5ae-9106b9990c62" style="Answer" positionType="Float" x="420" y="0" width="175" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsChildCareExpensesAnswerAmount}!=null?$F{JobDetailsChildCareExpensesAnswerAmount}:""+" "+$F{JobDetailsChildCareExpensesAnswerCurrency}!=null?$F{JobDetailsChildCareExpensesAnswerCurrency}:""]]></textFieldExpression>
 			</textField>
@@ -837,12 +837,12 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsChildCareExpensesFrequencyQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="7c93738e-1699-4c68-a93a-a8f7185d8af4" style="Answer" positionType="Float" x="398" y="18" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="7c93738e-1699-4c68-a93a-a8f7185d8af4" style="Answer" positionType="Float" x="420" y="18" width="175" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsChildCareExpensesFrequencyAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="0f4eef20-4039-4f29-beac-bac0f5c98c92" style="Answer" positionType="Float" x="398" y="36" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="0f4eef20-4039-4f29-beac-bac0f5c98c92" style="Answer" positionType="Float" x="420" y="36" width="175" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsChildCareExpensesFrequencyAnswerOther}]]></textFieldExpression>
 			</textField>
@@ -857,7 +857,7 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsChildCareExpensesRelationshipCarerToClaimantQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="304252ad-644d-4360-9d86-b459d7682832" style="Answer" positionType="Float" x="398" y="55" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="304252ad-644d-4360-9d86-b459d7682832" style="Answer" positionType="Float" x="420" y="55" width="175" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsChildCareExpensesRelationshipCarerToClaimantAnswer}]]></textFieldExpression>
 			</textField>
@@ -872,12 +872,12 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsChildCareExpensesRelationshipCarerToPartnerQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="810d1ac5-6e16-4675-b43a-d56c1815fe34" style="Answer" positionType="Float" x="399" y="74" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="810d1ac5-6e16-4675-b43a-d56c1815fe34" style="Answer" positionType="Float" x="420" y="74" width="176" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsChildCareExpensesRelationshipCarerToPartnerAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="9e811c4f-d3e1-420a-9ba3-dc4c9e7f252c" style="Answer" positionType="Float" x="399" y="92" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="9e811c4f-d3e1-420a-9ba3-dc4c9e7f252c" style="Answer" positionType="Float" x="420" y="92" width="176" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsChildCareExpensesRelationshipCarerToPartnerOther}]]></textFieldExpression>
 			</textField>
@@ -892,7 +892,7 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsChildCareExpensesRelationToChildQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="2a9e926f-b086-4e94-a002-a93aae0f8d13" style="Answer" positionType="Float" x="399" y="111" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="2a9e926f-b086-4e94-a002-a93aae0f8d13" style="Answer" positionType="Float" x="420" y="111" width="176" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsChildCareExpensesRelationToChildAnswer}]]></textFieldExpression>
 			</textField>
@@ -913,7 +913,7 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsCareExpensesCarerNameQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="ace208c3-02bc-4946-8f87-ba50ccec9b7f" style="Answer" positionType="Float" x="397" y="21" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="ace208c3-02bc-4946-8f87-ba50ccec9b7f" style="Answer" positionType="Float" x="420" y="21" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsCareExpensesCarerNameAnswer}]]></textFieldExpression>
 			</textField>
@@ -925,7 +925,7 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsCareExpensesPaymentQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="deddf7b0-1131-423d-9bcb-56d1192c1995" style="Answer" positionType="Float" x="397" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="deddf7b0-1131-423d-9bcb-56d1192c1995" style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsCareExpensesPaymentAnswerAmount}!=null?$F{JobDetailsCareExpensesPaymentAnswerAmount}:""+" "+$F{JobDetailsCareExpensesPaymentAnswerCurrency}!=null?$F{JobDetailsCareExpensesPaymentAnswerCurrency}:""]]></textFieldExpression>
 			</textField>
@@ -935,12 +935,12 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsCareExpensesFrequencyQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="6e8f0a0d-f8e6-47f2-bd1e-07b2d4a5596f" style="Answer" positionType="Float" x="397" y="18" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="6e8f0a0d-f8e6-47f2-bd1e-07b2d4a5596f" style="Answer" positionType="Float" x="420" y="18" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsCareExpensesFrequencyAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="b984d2bf-4401-4d0b-9bb7-efe0a5dfc084" style="Answer" positionType="Float" x="397" y="36" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="b984d2bf-4401-4d0b-9bb7-efe0a5dfc084" style="Answer" positionType="Float" x="420" y="36" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsCareExpensesFrequencyOther}]]></textFieldExpression>
 			</textField>
@@ -955,12 +955,12 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsCareExpensesRelationshipCarerToClaimantQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="acef55f6-69cb-4056-906a-654de17fe600" style="Answer" positionType="Float" x="397" y="55" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="acef55f6-69cb-4056-906a-654de17fe600" style="Answer" positionType="Float" x="420" y="55" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsCareExpensesRelationshipCarerToClaimantAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="a232e2da-2816-42be-84c4-358fd2fea347" style="Answer" positionType="Float" x="399" y="73" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="a232e2da-2816-42be-84c4-358fd2fea347" style="Answer" positionType="Float" x="420" y="73" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsCareExpensesRelationshipCarerToClaimantOther}]]></textFieldExpression>
 			</textField>
@@ -975,12 +975,12 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsCareExpensesRelationshipCarerToPartnerQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="8ba0d565-8ad3-473c-99ab-623a4c7268d8" style="Answer" positionType="Float" x="397" y="92" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="8ba0d565-8ad3-473c-99ab-623a4c7268d8" style="Answer" positionType="Float" x="420" y="92" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsCareExpensesRelationshipCarerToPartnerAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="7a79d538-1e0d-420d-a1c4-d6a67f1e055a" style="Answer" positionType="Float" x="397" y="110" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="7a79d538-1e0d-420d-a1c4-d6a67f1e055a" style="Answer" positionType="Float" x="420" y="110" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsCareExpensesRelationshipCarerToPartnerOther}]]></textFieldExpression>
 			</textField>
@@ -995,12 +995,12 @@
 				<textFieldExpression><![CDATA[$F{JobDetailsCareExpensesRelationshipCarerToCareeQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="59d07067-ecbc-496e-8e44-2034155d44db" style="Answer" positionType="Float" x="397" y="129" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="59d07067-ecbc-496e-8e44-2034155d44db" style="Answer" positionType="Float" x="420" y="129" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsCareExpensesRelationshipCarerToCareeAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="9d4dd92e-8745-4b64-bced-7487cca97f6a" style="Answer" positionType="Float" x="397" y="147" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="9d4dd92e-8745-4b64-bced-7487cca97f6a" style="Answer" positionType="Float" x="420" y="147" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsCareExpensesRelationshipCarerToCareeOther}]]></textFieldExpression>
 			</textField>

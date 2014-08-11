@@ -48,7 +48,7 @@
 				<textFieldExpression><![CDATA[$F{additionalInformationQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="5b80a305-25fd-4fef-9c09-af2ce25c3858" style="Answer" positionType="Float" x="397" y="21" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="5b80a305-25fd-4fef-9c09-af2ce25c3858" style="Answer" positionType="Float" x="420" y="21" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{additionalInformationAnswer}]]></textFieldExpression>
 			</textField>
@@ -70,7 +70,7 @@
 				<textFieldExpression><![CDATA[$F{welshQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="2013b6a7-5201-4e87-aec0-28c7521b86a6" style="Answer" positionType="Float" x="397" y="48" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="2013b6a7-5201-4e87-aec0-28c7521b86a6" style="Answer" positionType="Float" x="420" y="48" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{welshAnswer}]]></textFieldExpression>
 			</textField>

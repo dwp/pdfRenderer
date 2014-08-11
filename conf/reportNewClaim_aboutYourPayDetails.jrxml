@@ -86,7 +86,7 @@
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerStatePensionQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="f63a0bae-c42d-4082-8413-fcdbe20a70b5" style="Answer" positionType="Float" x="397" y="1" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="f63a0bae-c42d-4082-8413-fcdbe20a70b5" style="Answer" positionType="Float" x="420" y="1" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerStatePensionInsuranceAnswer}]]></textFieldExpression>
 			</textField>
@@ -103,7 +103,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="57e79dc7-f890-477f-831c-ab6a643652c4" style="Answer" positionType="Float" x="397" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="57e79dc7-f890-477f-831c-ab6a643652c4" style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{howToGetPaidAnswer}]]></textFieldExpression>
 			</textField>
@@ -113,12 +113,12 @@
 				<textFieldExpression><![CDATA[$F{howOftenGetPaidQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="e8079ca6-0ec7-44e4-9c1a-e42b72da36db" style="Answer" positionType="Float" x="397" y="19" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="e8079ca6-0ec7-44e4-9c1a-e42b72da36db" style="Answer" positionType="Float" x="420" y="19" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{howOftenGetPaidAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="38020387-0dc2-4f7f-bfe0-63dc81a0daf4" style="Answer" positionType="Float" x="397" y="37" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="38020387-0dc2-4f7f-bfe0-63dc81a0daf4" style="Answer" positionType="Float" x="420" y="37" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{howOftenGetPaidAnswer}=="Other" ? $F{howOftenGetPaidOther} : null]]></textFieldExpression>
 			</textField>
@@ -145,7 +145,7 @@
 				<textFieldExpression><![CDATA[$F{bankAccountHolderNameQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="3585c88b-ad07-47d0-b172-d609bf404eeb" style="Answer" positionType="Float" x="397" y="20" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="3585c88b-ad07-47d0-b172-d609bf404eeb" style="Answer" positionType="Float" x="420" y="20" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{bankAccountHolderNameAnswer}]]></textFieldExpression>
 			</textField>
@@ -162,7 +162,7 @@
 				<textFieldExpression><![CDATA[$F{bankAccountBankNameQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="be49c075-e8db-4d27-8a30-f5414761027e" style="Answer" positionType="Float" x="397" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="be49c075-e8db-4d27-8a30-f5414761027e" style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{bankAccountBankNameAnswer}]]></textFieldExpression>
 			</textField>
@@ -172,7 +172,7 @@
 				<textFieldExpression><![CDATA[$F{bankAccountSortCodeQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="12f94aa2-1e66-40c4-8916-2990ca93e937" style="Answer" positionType="Float" x="397" y="19" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="12f94aa2-1e66-40c4-8916-2990ca93e937" style="Answer" positionType="Float" x="420" y="19" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{bankAccountSortCodeAnswer}]]></textFieldExpression>
 			</textField>
@@ -182,7 +182,7 @@
 				<textFieldExpression><![CDATA[$F{bankAccountNumberQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="a7591379-f58d-46ba-877b-a488f1fdd851" style="Answer" positionType="Float" x="397" y="37" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="a7591379-f58d-46ba-877b-a488f1fdd851" style="Answer" positionType="Float" x="420" y="37" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{bankAccountNumberAnswer}]]></textFieldExpression>
 			</textField>
@@ -192,7 +192,7 @@
 				<textFieldExpression><![CDATA[$F{bankAccountReferenceNumberQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="2c435d18-b073-4b27-9f62-609d1d035aec" style="Answer" positionType="Float" x="397" y="55" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="2c435d18-b073-4b27-9f62-609d1d035aec" style="Answer" positionType="Float" x="420" y="55" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{bankAccountReferenceNumberAnswer}]]></textFieldExpression>
 			</textField>

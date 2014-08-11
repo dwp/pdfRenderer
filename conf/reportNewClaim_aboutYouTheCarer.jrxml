@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYouTheCarer" language="groovy" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a66aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="9"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
@@ -168,7 +168,7 @@
 				<textFieldExpression><![CDATA[$F{AbouYouTheCarerDayTimeTelephoneNumberQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="0cc3309a-996b-48fb-a96b-48857a605f39" style="Answer" positionType="Float" x="397" y="44" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="0cc3309a-996b-48fb-a96b-48857a605f39" style="Answer" positionType="Float" x="420" y="44" width="175" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{AbouYouTheCarerDayTimeTelephoneNumberAnswer}]]></textFieldExpression>
 			</textField>
@@ -178,7 +178,7 @@
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerSpeechOrHearingDifficultyQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="08474f6d-a180-4641-a3f4-0b477843d386" style="Answer" positionType="Float" x="397" y="62" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="08474f6d-a180-4641-a3f4-0b477843d386" style="Answer" positionType="Float" x="420" y="62" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerSpeechOrHearingDifficultyAnswer}]]></textFieldExpression>
 			</textField>
@@ -197,7 +197,7 @@
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimDateQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="4f2b464f-d57e-4053-a5e8-9e65da71d763" style="Answer" positionType="Float" x="397" y="100" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="4f2b464f-d57e-4053-a5e8-9e65da71d763" style="Answer" positionType="Float" x="420" y="100" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimDateAnswer}]]></textFieldExpression>
 			</textField>
@@ -218,7 +218,7 @@
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerNationalityQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="4a186ab4-1950-4c0c-95a1-3a9b27096e2d" style="Answer" positionType="Float" x="397" y="23" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="4a186ab4-1950-4c0c-95a1-3a9b27096e2d" style="Answer" positionType="Float" x="420" y="23" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerNationalityAnswer}]]></textFieldExpression>
 			</textField>
@@ -228,7 +228,7 @@
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerNormallyLiveInGBQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="f51a4d7c-a6d1-4fe7-95e7-48e922675511" style="Answer" positionType="Float" x="397" y="41" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="f51a4d7c-a6d1-4fe7-95e7-48e922675511" style="Answer" positionType="Float" x="420" y="41" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerNormallyLiveInGBAnswer}]]></textFieldExpression>
 			</textField>
@@ -238,7 +238,7 @@
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerCountryNormallyLiveQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="06829694-2b1a-45df-8b32-142988c3f223" style="Answer" positionType="Float" x="397" y="59" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="06829694-2b1a-45df-8b32-142988c3f223" style="Answer" positionType="Float" x="420" y="59" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerCountryNormallyLiveAnswer}]]></textFieldExpression>
 			</textField>
@@ -279,7 +279,7 @@
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerReceiveEEAPensionsBenefitsQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="8fa3ef39-6d2c-4298-9282-8ceeac0f04fb" style="Answer" positionType="Float" x="397" y="18" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="8fa3ef39-6d2c-4298-9282-8ceeac0f04fb" style="Answer" positionType="Float" x="420" y="18" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerReceiveEEAPensionsBenefitsAnswer}]]></textFieldExpression>
 			</textField>
@@ -301,7 +301,7 @@
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerWorkingEEAInsuranceQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="42e462db-6f31-4e2f-89de-627b9fdb58a5" style="Answer" positionType="Float" x="397" y="1" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="42e462db-6f31-4e2f-89de-627b9fdb58a5" style="Answer" positionType="Float" x="420" y="1" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerWorkingEEAInsuranceAnswer}]]></textFieldExpression>
 			</textField>
@@ -327,14 +327,14 @@
 				<textFieldExpression><![CDATA[$F{AbouYouTheCarerMaritalStatusQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="771cb2d1-54f2-42b7-9743-74b57d507655" style="Answer" positionType="Float" x="397" y="18" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="771cb2d1-54f2-42b7-9743-74b57d507655" style="Answer" positionType="Float" x="420" y="18" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AbouYouTheCarerMaritalStatusAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
 		<band height="20">
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="42a03e9a-72ef-41c5-95af-f21d3f2111f5" style="Answer" positionType="Float" x="397" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="42a03e9a-72ef-41c5-95af-f21d3f2111f5" style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerHavePartnerAnswer}]]></textFieldExpression>
 			</textField>
@@ -360,7 +360,7 @@
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerCourseOfEducationQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="f2df5d3a-a4c4-4c46-84ce-7d7079620434" style="Answer" positionType="Float" stretchType="RelativeToTallestObject" x="397" y="20" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="f2df5d3a-a4c4-4c46-84ce-7d7079620434" style="Answer" positionType="Float" stretchType="RelativeToTallestObject" x="420" y="20" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerCourseOfEducationInsuranceAnswer}]]></textFieldExpression>
 			</textField>
@@ -377,7 +377,7 @@
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerStatePensionQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="4c10d848-52e3-4a0b-8c1d-a9c48196fd33" style="Answer" positionType="Float" x="397" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="4c10d848-52e3-4a0b-8c1d-a9c48196fd33" style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerStatePensionInsuranceAnswer}]]></textFieldExpression>
 			</textField>

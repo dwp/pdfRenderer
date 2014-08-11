@@ -18,7 +18,7 @@
                         <Line>3 Preston Road</Line><Line>Preston</Line><Line>Lancashire</Line><PostCode>PR1 2TH</PostCode>
                     </Answer>
                 </Address>
-                <DayTimePhoneNumber><QuestionLabel>How we can contact you</QuestionLabel><Answer>01772 888901</Answer></DayTimePhoneNumber>
+                <DayTimePhoneNumber><QuestionLabel>Contact phone or mobile number</QuestionLabel><Answer>01772 888901</Answer></DayTimePhoneNumber>
                 <MaritalStatus><QuestionLabel>What is your marital status?</QuestionLabel><Answer>Married or civil partner</Answer></MaritalStatus>
 
             </Claimant>
