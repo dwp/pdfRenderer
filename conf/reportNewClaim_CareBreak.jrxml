@@ -69,14 +69,23 @@
 	<group name="Break">
 		<groupExpression><![CDATA[$V{Break_COUNT}==1]]></groupExpression>
 		<groupHeader>
-			<band height="20" splitType="Immediate">
+			<band height="40" splitType="Prevent">
+				<staticText>
+					<reportElement uuid="a415a243-c2e6-483a-8f49-31a568e887ae" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="20" isRemoveLineWhenBlank="true">
+						<property name="net.sf.jasperreports.export.html.id" value="SubHeadingBreaksInCare"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Breaks in care]]></text>
+				</staticText>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-					<reportElement uuid="a9f4a284-7c57-49a6-9bb1-70b65bc07018" positionType="Float" x="0" y="1" width="392" height="18" isRemoveLineWhenBlank="true"/>
+					<reportElement uuid="a9f4a284-7c57-49a6-9bb1-70b65bc07018" positionType="Float" x="0" y="22" width="392" height="18" isRemoveLineWhenBlank="true"/>
 					<textElement/>
 					<textFieldExpression><![CDATA[$F{BreaksSinceClaimQuestion}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-					<reportElement uuid="ac1e911a-07ae-4ed0-a9f3-a5f9b1d4c251" style="Answer" positionType="Float" x="397" y="1" width="197" height="18" isRemoveLineWhenBlank="true"/>
+					<reportElement uuid="ac1e911a-07ae-4ed0-a9f3-a5f9b1d4c251" style="Answer" positionType="Float" x="397" y="22" width="197" height="18" isRemoveLineWhenBlank="true"/>
 					<textElement/>
 					<textFieldExpression><![CDATA[$F{BreaksSinceClaimAnswer}]]></textFieldExpression>
 				</textField>
@@ -91,19 +100,6 @@
 	<background>
 		<band splitType="Stretch"/>
 	</background>
-	<title>
-		<band height="21">
-			<staticText>
-				<reportElement uuid="a415a243-c2e6-483a-8f49-31a568e887ae" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="20" isRemoveLineWhenBlank="true">
-					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingBreaksInCare"/>
-				</reportElement>
-				<textElement verticalAlignment="Middle">
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[Breaks in care]]></text>
-			</staticText>
-		</band>
-	</title>
 	<detail>
 		<band height="38" splitType="Prevent">
 			<textField isBlankWhenNull="true">
