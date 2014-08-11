@@ -258,7 +258,7 @@
 				<textFieldExpression><![CDATA[$F{haveBeenSelfEmployedAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="41" splitType="Prevent">
+		<band height="40" splitType="Prevent">
 			<printWhenExpression><![CDATA[$F{haveBeenSelfEmployedAnswer}.equals("Yes")]]></printWhenExpression>
 			<staticText>
 				<reportElement uuid="682874b6-bfe4-439f-8bb8-4abdfe329111" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="21" isPrintInFirstWholeBand="true">
@@ -280,7 +280,7 @@
 				<textFieldExpression><![CDATA[$F{selfEmployedNowAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="75">
+		<band height="72">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="935b590f-00b8-4d19-afb0-4700532b9e07" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
@@ -386,7 +386,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 		</band>
-		<band height="41" splitType="Prevent">
+		<band height="40" splitType="Prevent">
 			<printWhenExpression><![CDATA[$F{haveBeenSelfEmployedAnswer}.equals("Yes")]]></printWhenExpression>
 			<staticText>
 				<reportElement uuid="3e35e067-9af8-4ceb-9abf-e2d152a1e24b" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="594" height="20" isPrintInFirstWholeBand="true">
@@ -450,7 +450,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 		</band>
-		<band height="41" splitType="Prevent">
+		<band height="40" splitType="Prevent">
 			<printWhenExpression><![CDATA[$F{haveBeenSelfEmployedAnswer}.equals("Yes")]]></printWhenExpression>
 			<staticText>
 				<reportElement uuid="c2181e86-d16c-40e2-af56-2c702260e4ee" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="594" height="20" isPrintInFirstWholeBand="true">
@@ -477,7 +477,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 		</band>
-		<band height="133">
+		<band height="131">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="0da89b3e-d1d7-4b3f-8323-74969eec2189" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
@@ -569,7 +569,7 @@
 				<textFieldExpression><![CDATA[$F{careExpensesChildrenRelationshipToChildAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="42" splitType="Prevent">
+		<band height="40" splitType="Prevent">
 			<printWhenExpression><![CDATA[$F{haveBeenSelfEmployedAnswer}.equals("Yes")]]></printWhenExpression>
 			<staticText>
 				<reportElement uuid="8556a719-4317-47f5-afbd-70abd9427ae0" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="594" height="20" isPrintInFirstWholeBand="true">
@@ -596,7 +596,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 		</band>
-		<band height="114">
+		<band height="112">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="cd17e083-811a-4b7c-a559-e58b9d11659a" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
