@@ -80,24 +80,24 @@
 				<textFieldExpression><![CDATA[$F{SelfEmploymentCaring35HoursQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="2f197a15-b83e-4cd6-b0c2-dffa10544d0a" style="Answer" x="397" y="37" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="2f197a15-b83e-4cd6-b0c2-dffa10544d0a" style="Answer" x="420" y="37" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{SelfEmploymentCaring35HoursAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
 		<band height="77" splitType="Immediate">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="45a666d7-1501-4cc2-a766-7d568b66ab28" style="Answer" x="397" y="38" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="45a666d7-1501-4cc2-a766-7d568b66ab28" style="Answer" x="420" y="38" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{SelfEmploymentBusinessTypeAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="29c44d69-c105-4919-b026-8635de169a02" style="Answer" x="397" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="29c44d69-c105-4919-b026-8635de169a02" style="Answer" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{SelfEmploymentDateStoppedCaring35HoursAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="4cfc638c-3bc2-44db-bcf5-5803e652a811" style="Answer" x="397" y="19" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="4cfc638c-3bc2-44db-bcf5-5803e652a811" style="Answer" x="420" y="19" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{SelfEmploymentBusinessStartDateAnswer}]]></textFieldExpression>
 			</textField>
@@ -107,7 +107,7 @@
 				<textFieldExpression><![CDATA[$F{SelfEmploymentDateStoppedCaring35HoursQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="e2fb8796-f738-4692-ad4b-8049dac44a5c" style="Answer" x="397" y="57" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="e2fb8796-f738-4692-ad4b-8049dac44a5c" style="Answer" x="420" y="57" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{SelfEmploymentMoreThan100Answer}]]></textFieldExpression>
 			</textField>

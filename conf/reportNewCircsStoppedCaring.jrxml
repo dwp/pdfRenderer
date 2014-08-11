@@ -47,7 +47,7 @@
 				<textFieldExpression><![CDATA[$F{StoppedCaringDateStoppedCaringQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="d2ecb442-b0bb-4f64-91bf-ab1e428758ea" style="Answer" positionType="Float" x="397" y="0" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="d2ecb442-b0bb-4f64-91bf-ab1e428758ea" style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{StoppedCaringDateStoppedCaringAnswer}]]></textFieldExpression>
 			</textField>

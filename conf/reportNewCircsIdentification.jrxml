@@ -74,7 +74,7 @@
 				<textFieldExpression><![CDATA[$F{IdentificationFullNameQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="a026fc1f-2823-41d2-83fc-8e840d66f350" style="Answer" positionType="Float" x="397" y="21" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="a026fc1f-2823-41d2-83fc-8e840d66f350" style="Answer" positionType="Float" x="420" y="21" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{IdentificationFullNameAnswer}]]></textFieldExpression>
 			</textField>
@@ -89,7 +89,7 @@
 				<textFieldExpression><![CDATA[$F{IdentificationNationalInsuranceNumberQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="7c808242-645d-42e6-9353-a8883ea097f8" style="Answer" positionType="Float" x="397" y="40" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="7c808242-645d-42e6-9353-a8883ea097f8" style="Answer" positionType="Float" x="420" y="40" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{IdentificationNationalInsuranceNumberAnswer}]]></textFieldExpression>
 			</textField>
@@ -99,7 +99,7 @@
 				<textFieldExpression><![CDATA[$F{IdentificationDateOfBirthQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="a3f745f4-78d3-44c1-9aba-855bd93527a3" style="Answer" positionType="Float" x="397" y="59" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="a3f745f4-78d3-44c1-9aba-855bd93527a3" style="Answer" positionType="Float" x="420" y="59" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{IdentificationDateOfBirthAnswer}]]></textFieldExpression>
 			</textField>
@@ -118,7 +118,7 @@
 				<textFieldExpression><![CDATA[$F{IdentificationCareeFullNameQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="a9a53a85-98d8-4077-9ebf-48dcc41d1d43" style="Answer" positionType="Float" x="397" y="95" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="a9a53a85-98d8-4077-9ebf-48dcc41d1d43" style="Answer" positionType="Float" x="420" y="95" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{IdentificationCareeFullNameAnswer}]]></textFieldExpression>
 			</textField>
@@ -133,7 +133,7 @@
 				<textFieldExpression><![CDATA[$F{IdentificationCareeRelationToClaimantQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="7bb71e0a-e3bd-46ef-979f-e0b206d33017" style="Answer" positionType="Float" x="397" y="114" width="197" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="7bb71e0a-e3bd-46ef-979f-e0b206d33017" style="Answer" positionType="Float" x="420" y="114" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{IdentificationCareeRelationToClaimantAnswer}]]></textFieldExpression>
 			</textField>
