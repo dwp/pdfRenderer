@@ -29,6 +29,18 @@
 	<field name="AboutYouTheCarerNationalResidencyAnswer" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/NationalResidency/Answer]]></fieldDescription>
 	</field>
+	<field name="AboutYouTheCarerNormallyLiveInGBQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/NormallyLiveInGB/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerNormallyLiveInGBAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/NormallyLiveInGB/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerCountryNormallyLiveQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/CountryNormallyLive/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerCountryNormallyLiveAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/CountryNormallyLive/Answer]]></fieldDescription>
+	</field>
 	<field name="AboutYouTheCarerTimeOutsideGBLast3YearsQuestion" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/PeriodAbroad/TimeOutsideGBLast3Years/QuestionLabel]]></fieldDescription>
 	</field>
@@ -196,7 +208,7 @@
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimDateAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="60" splitType="Immediate">
+		<band height="95" splitType="Immediate">
 			<staticText>
 				<reportElement uuid="f647fa16-31cd-4b73-8c88-855fe67cf124" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="594" height="20" forecolor="#000000">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourNationalityAndResidency"/>
@@ -225,6 +237,26 @@
 				<reportElement uuid="06829694-2b1a-45df-8b32-142988c3f223" style="Answer" positionType="Float" x="420" y="41" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerNationalResidencyAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="fb7cb4b4-057c-4381-af97-8395205cf558" style="Answer" positionType="Float" x="420" y="59" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerNormallyLiveInGBAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="e46a6700-90d5-4a33-b0b8-0e84625d2876" positionType="Float" x="0" y="77" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerCountryNormallyLiveQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="8e24def6-dca2-4117-b5f5-0155c5113e3a" style="Answer" positionType="Float" x="420" y="77" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerCountryNormallyLiveAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="98949a21-b7a9-446a-bf41-217859dd07f1" positionType="Float" x="0" y="59" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerNormallyLiveInGBQuestion}]]></textFieldExpression>
 			</textField>
 		</band>
 		<band height="22" splitType="Immediate">
