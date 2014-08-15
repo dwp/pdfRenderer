@@ -166,7 +166,6 @@
                         <DateJobStarted><QuestionLabel>When did you start your job?</QuestionLabel><Answer>01-01-2013</Answer></DateJobStarted>
                         <DateJobEnded><QuestionLabel>What date did you last work?</QuestionLabel><Answer>01-07-2013</Answer></DateJobEnded>
                         <JobType><QuestionLabel>What was your job title?</QuestionLabel><Answer>Hacker</Answer></JobType>
-                        <ClockPayrollNumber><QuestionLabel>Payroll or Employee number</QuestionLabel><Answer>12345678</Answer></ClockPayrollNumber>
                         <Name><QuestionLabel>Employer's name</QuestionLabel><Answer>Tesco's</Answer></Name>
                         <Address>
                             <QuestionLabel>Address</QuestionLabel>
@@ -221,7 +220,6 @@
                     <DateJobStarted><QuestionLabel>When did you start your job?</QuestionLabel><Answer>01-01-2013</Answer></DateJobStarted>
                     <DateJobEnded><QuestionLabel>What date did you last work?</QuestionLabel><Answer>01-01-2001</Answer></DateJobEnded>
                     <JobType><QuestionLabel>What was your job title?</QuestionLabel><Answer>Hacker</Answer></JobType>
-                    <ClockPayrollNumber><QuestionLabel>Payroll or Employee number</QuestionLabel><Answer>12345678</Answer></ClockPayrollNumber>
                     <Name><QuestionLabel>Employer's name</QuestionLabel><Answer>Tesco's</Answer></Name>
                     <Address>
                         <QuestionLabel>Address</QuestionLabel>
