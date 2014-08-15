@@ -23,11 +23,11 @@
 	<field name="AboutYouTheCarerNationalityAnswer" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/Nationality/Answer]]></fieldDescription>
 	</field>
-	<field name="AboutYouTheCarerNationalResidencyQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/NationalResidency/QuestionLabel]]></fieldDescription>
+	<field name="AboutYouTheCarerActualNationalityQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/ActualNationality/QuestionLabel]]></fieldDescription>
 	</field>
-	<field name="AboutYouTheCarerNationalResidencyAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/NationalResidency/Answer]]></fieldDescription>
+	<field name="AboutYouTheCarerActualNationalityAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/ActualNationality/Answer]]></fieldDescription>
 	</field>
 	<field name="AboutYouTheCarerNormallyLiveInGBQuestion" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/NormallyLiveInGB/QuestionLabel]]></fieldDescription>
@@ -231,12 +231,12 @@
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="247b8325-214f-49d6-9504-bd5f128ba8e0" positionType="Float" x="0" y="41" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutYouTheCarerNationalResidencyQuestion}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerActualNationalityQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="06829694-2b1a-45df-8b32-142988c3f223" style="Answer" positionType="Float" x="420" y="41" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutYouTheCarerNationalResidencyAnswer}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerActualNationalityAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="fb7cb4b4-057c-4381-af97-8395205cf558" style="Answer" positionType="Float" x="420" y="59" width="174" height="18" isRemoveLineWhenBlank="true"/>
