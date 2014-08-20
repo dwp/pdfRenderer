@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="560" pageHeight="842" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
-	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.zoom" value="1.366026910730141"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="102"/>
+	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<import value="org.apache.commons.codec.binary.Base64"/>
 	<template><![CDATA["StyleTemplateClaimSummary.jrtx"]]></template>
@@ -391,7 +391,7 @@
 			<textField>
 				<reportElement uuid="e8d891e5-b790-45f4-b022-6d35305277ee" style="Answer" positionType="Float" x="168" y="55" width="180" height="18"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{CareeOtherNamesAnswer}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{ClaimantOtherNamesAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="7fa85fb1-35bb-4662-ad18-2fdb9257c635" style="Answer" positionType="Float" x="367" y="55" width="180" height="18" isRemoveLineWhenBlank="true"/>
