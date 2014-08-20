@@ -143,7 +143,7 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_aboutYouTheCarer_YourDetails.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="118" splitType="Immediate">
+		<band height="119" splitType="Immediate">
 			<staticText>
 				<reportElement uuid="b5b52f77-e6bb-4d7e-8b20-6dc4cab23a22" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="3" width="594" height="20" forecolor="#000000">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourContactDetails"/>
@@ -173,23 +173,28 @@
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{AbouYouTheCarerDayTimeTelephoneNumberQuestionLabel}]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="0cc3309a-996b-48fb-a96b-48857a605f39" style="Answer" positionType="Float" x="420" y="44" width="175" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{AbouYouTheCarerDayTimeTelephoneNumberAnswer}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement uuid="609b0cd2-f467-4e31-98cf-829851318841" positionType="Float" x="0" y="62" width="594" height="1"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="a3503460-4846-4b36-9cd7-3196914e4dcb" positionType="Float" x="0" y="62" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="a3503460-4846-4b36-9cd7-3196914e4dcb" positionType="Float" x="0" y="63" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerSpeechOrHearingDifficultyQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="08474f6d-a180-4641-a3f4-0b477843d386" style="Answer" positionType="Float" x="420" y="62" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="08474f6d-a180-4641-a3f4-0b477843d386" style="Answer" positionType="Float" x="420" y="63" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerSpeechOrHearingDifficultyAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="11925ae7-8287-429b-9d41-e4b447f228fd" style="SubHeadingClaim" positionType="Float" x="0" y="80" width="594" height="20">
+				<reportElement uuid="11925ae7-8287-429b-9d41-e4b447f228fd" style="SubHeadingClaim" positionType="Float" x="0" y="81" width="594" height="20">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourClaimDate"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
@@ -198,12 +203,12 @@
 				<text><![CDATA[Your claim date]]></text>
 			</staticText>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="5b4d1eca-9216-4389-849e-14c074093a3b" positionType="Float" x="0" y="100" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="5b4d1eca-9216-4389-849e-14c074093a3b" positionType="Float" x="0" y="101" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimDateQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="4f2b464f-d57e-4053-a5e8-9e65da71d763" style="Answer" positionType="Float" x="420" y="100" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="4f2b464f-d57e-4053-a5e8-9e65da71d763" style="Answer" positionType="Float" x="420" y="101" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimDateAnswer}]]></textFieldExpression>
 			</textField>
@@ -386,7 +391,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 		</band>
-		<band height="19">
+		<band height="65">
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="3dd440b4-e0ce-40fc-8dbd-77aa81001296" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
