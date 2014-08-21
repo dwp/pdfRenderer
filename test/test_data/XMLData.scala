@@ -193,8 +193,7 @@ object XMLData extends TestUtils{
   def sectionAboutEmployment(xml:Elem) = {
     val fields = SectionAboutEmployment(xml)
     Seq ("Part 5 - About Your Employment",
-         fields.areYouEmployedQuestion.text+" "+fields.areYouEmployedAnswer.text,
-        buildQuestion(fields.currentlyEmployedQuestion.text, fields.currentlyEmployedAnswer.text)) ++ fields.employmentDetails
+         fields.areYouEmployedQuestion.text+" "+fields.areYouEmployedAnswer.text) ++ fields.employmentDetails
   }
 
   def sectionAboutSelfEmployment(xml:Elem) = {

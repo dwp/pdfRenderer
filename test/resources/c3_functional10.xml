@@ -1,10 +1,10 @@
 <DWPBody xsi:schemaLocation="http://www.govtalk.gov.uk/dwp/carers-allowance file:/future/schema/ca/CarersAllowance_Schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns="http://www.govtalk.gov.uk/dwp/carers-allowance">
     <Version>0.1</Version>
-    <DWPCATransaction id="TEST432">
-        <TransactionId>TEST432</TransactionId>
-        <DateTimeGenerated>25-04-2014 11:25</DateTimeGenerated>
+    <DWPCATransaction id="1408TEST432">
+        <TransactionId>1408TEST432</TransactionId>
+        <DateTimeGenerated>21-08-2014 15:10</DateTimeGenerated>
         <DWPCAClaim>
-            <DateOfClaim><QuestionLabel>When do you want your Carer's Allowance claim to start?</QuestionLabel><Answer>23-07-2013</Answer></DateOfClaim>
+            <DateOfClaim><QuestionLabel>Claim date</QuestionLabel><Answer>23-07-2013</Answer></DateOfClaim>
             <Claimant>
                 <Surname><QuestionLabel>Last name</QuestionLabel><Answer>CaseSeven</Answer></Surname>
                 <OtherNames><QuestionLabel>First name</QuestionLabel><Answer>Test </Answer></OtherNames>
@@ -18,7 +18,7 @@
                         <Line>6 Preston Road</Line><Line>Preston</Line><Line>Lancashire</Line><PostCode>PR1 2TH</PostCode>
                     </Answer>
                 </Address>
-                <DayTimePhoneNumber><QuestionLabel>How we can contact you</QuestionLabel><Answer>01772 888901</Answer></DayTimePhoneNumber>
+                <DayTimePhoneNumber><QuestionLabel>Contact phone or mobile number</QuestionLabel><Answer>01772 888901</Answer></DayTimePhoneNumber>
                 <MaritalStatus><QuestionLabel>What is your marital status?</QuestionLabel><Answer>Married or civil partner</Answer></MaritalStatus>
 
             </Claimant>
@@ -34,35 +34,38 @@
                         <Line>6 Preston Road</Line><Line>Preston</Line><Line>Lancashire</Line><PostCode>PR1 2TH</PostCode>
                     </Answer>
                 </Address>
-
                 <RelationToClaimant><QuestionLabel>What's their relationship to you?</QuestionLabel><Answer>Father</Answer></RelationToClaimant>
                 <Cared35Hours><QuestionLabel>Do you spend 35 hours or more each week caring for the person you care for?</QuestionLabel><Answer>No</Answer></Cared35Hours>
-                <BreaksSinceClaim><QuestionLabel>Have you had any breaks in caring for this person since 23/07/2013?</QuestionLabel><Answer>Yes</Answer></BreaksSinceClaim>
                 <CareBreak>
-                    <StartDateTime><QuestionLabel>When did the break start?</QuestionLabel><Answer>10-01-2010 10:15</Answer></StartDateTime>
-                    <EndDateTime><QuestionLabel>When did the break end?</QuestionLabel><Answer>17-01-2010 17:45</Answer></EndDateTime>
+                    <BreaksSinceClaim><QuestionLabel>Have you had any breaks from caring for this person since 23/07/2013?</QuestionLabel><Answer>Yes</Answer></BreaksSinceClaim>
+                    <StartDate><QuestionLabel>When did the break start?</QuestionLabel><Answer>10-01-2010</Answer></StartDate><StartTime><QuestionLabel>Break start time?</QuestionLabel><Answer>10:15</Answer></StartTime>
+                    <EndDate><QuestionLabel>When did the break end?</QuestionLabel><Answer>17-01-2010</Answer></EndDate><EndTime><QuestionLabel>Break end time?</QuestionLabel><Answer>17:45</Answer></EndTime>
                     <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>Yes</Answer></MedicalCare>
                     <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Answer>Hospital</Answer></ReasonClaimant>
                     <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Answer>Nursing Home</Answer></ReasonCaree>
-                </CareBreak>
+                </CareBreak><CareBreak>
+                <BreaksSinceClaim><QuestionLabel>Have you had any more breaks from caring for this person since 23/07/2013?</QuestionLabel><Answer>No</Answer></BreaksSinceClaim>
+            </CareBreak>
                 <Cared35HoursBefore><QuestionLabel>Did you care for this person for 35 hours or more each week before your claim date?</QuestionLabel><Answer>No</Answer></Cared35HoursBefore>
 
                 <LiveSameAddress><QuestionLabel>Do they live at the same address as you?</QuestionLabel><Answer>Yes</Answer></LiveSameAddress>
                 <ArmedForcesIndependencePayment><QuestionLabel>Does this person get Armed Forces Independence Payment (AFIP)?</QuestionLabel><Answer>No</Answer></ArmedForcesIndependencePayment>
             </Caree>
             <Residency>
+                <Nationality><QuestionLabel>What is your nationality?</QuestionLabel><Answer>Another Country</Answer></Nationality>
+
+                <ActualNationality><QuestionLabel>Enter your nationality</QuestionLabel><Answer>French</Answer></ActualNationality>
+
                 <NormallyLiveInGB><QuestionLabel>Do you normally live in England, Scotland or Wales?</QuestionLabel><Answer>No</Answer></NormallyLiveInGB>
 
                 <CountryNormallyLive><QuestionLabel>Which country do you normally live in?</QuestionLabel><Answer>France</Answer></CountryNormallyLive>
-
-                <Nationality><QuestionLabel>What is your nationality?</QuestionLabel><Answer>British</Answer></Nationality>
 
                 <PeriodAbroad>
                     <TimeOutsideGBLast3Years><QuestionLabel>Have you been out of England, Scotland or Wales for more than 52 weeks in the last 3 years before your claim date?</QuestionLabel><Answer>No</Answer></TimeOutsideGBLast3Years>
                 </PeriodAbroad>
 
             </Residency>
-            <CourseOfEducation><QuestionLabel>Have you been on a course of education since your claim date: 23/07/2013?</QuestionLabel><Answer>No</Answer></CourseOfEducation>
+            <CourseOfEducation><QuestionLabel>Have you been on a course of education since your claim date?</QuestionLabel><Answer>No</Answer></CourseOfEducation>
 
             <SelfEmployed><QuestionLabel>Have you been self-employed at any time since 16/07/2013?</QuestionLabel><Answer>Yes</Answer></SelfEmployed>
             <SelfEmployment>
@@ -79,13 +82,14 @@
                 </CurrentJobDetails>
                 <CareExpensesChildren><QuestionLabel>While at work, do you pay anyone to care for your children?</QuestionLabel><Answer>Yes</Answer></CareExpensesChildren>
                 <ChildCareExpenses>
-                    <CarerName><QuestionLabel>Name of the person/organisation who looks after your child/children</QuestionLabel><Answer>Mr John Johnson</Answer></CarerName>
+                    <CarerName><QuestionLabel>whoLooksAfterChildren</QuestionLabel><Answer>Mr John Johnson</Answer></CarerName>
                     <Expense>
-                        <Payment><QuestionLabel>How much do you pay them?</QuestionLabel><Answer><Currency>GBP</Currency><Amount>234</Amount></Answer></Payment>
+                        <Payment><QuestionLabel>howMuchCostChildcare</QuestionLabel><Answer><Currency>GBP</Currency><Amount>234</Amount></Answer></Payment>
                         <Frequency><QuestionLabel>How often do you pay childcare expenses?</QuestionLabel><Answer>Fortnightly</Answer></Frequency>
                     </Expense>
-                    <RelationshipCarerToClaimant><QuestionLabel>What relation, if any, is the person/organisation to you?</QuestionLabel><Answer>Brother</Answer></RelationshipCarerToClaimant>
-                    <RelationshipCarerToPartner><QuestionLabel>What relation, if any, is the person/organisation to your Partner/Spouse?</QuestionLabel><Answer>Other</Answer></RelationshipCarerToPartner>
+                    <RelationshipCarerToClaimant><QuestionLabel>relationToYou</QuestionLabel><Answer>Brother</Answer></RelationshipCarerToClaimant>
+                    <RelationshipCarerToPartner><QuestionLabel>relationToPartner</QuestionLabel><Answer>Other</Answer></RelationshipCarerToPartner>
+                    <RelationshipCarerToPersonYouCare><QuestionLabel>relationToPersonYouCare</QuestionLabel><Answer>Stepbrother</Answer></RelationshipCarerToPersonYouCare>
                 </ChildCareExpenses>
                 <CareExpensesCaree><QuestionLabel>While at work, do you pay anyone to care for the person you care for?</QuestionLabel><Answer>No</Answer></CareExpensesCaree>
 
@@ -97,13 +101,12 @@
             </SelfEmployment>
             <Employed><QuestionLabel>Have you been employed at any time since 23/01/2013?</QuestionLabel><Answer>Yes</Answer></Employed>
             <Employment>
+
                 <JobDetails>
                     <Employer>
-                        <CurrentlyEmployed><QuestionLabel>Have you finished this job?</QuestionLabel><Answer>No</Answer></CurrentlyEmployed>
+                        <CurrentlyEmployed><QuestionLabel>Have you finished this job?</QuestionLabel><Answer>Yes</Answer></CurrentlyEmployed>
                         <DateJobStarted><QuestionLabel>When did you start your job?</QuestionLabel><Answer>03-05-2010</Answer></DateJobStarted>
                         <DateJobEnded><QuestionLabel>What date did you last work?</QuestionLabel><Answer>24-12-2010</Answer></DateJobEnded>
-
-                        <ClockPayrollNumber><QuestionLabel>Payroll or Employee number</QuestionLabel><Answer>987656788</Answer></ClockPayrollNumber>
                         <Name><QuestionLabel>Employer's name</QuestionLabel><Answer>DWP</Answer></Name>
                         <Address>
                             <QuestionLabel>Address</QuestionLabel>
@@ -111,7 +114,7 @@
                                 <Line>9923 Yeadon Way</Line><Line>Blackpool</Line><Line>Lancashire</Line><PostCode>FY8 5TH</PostCode>
                             </Answer>
                         </Address>
-
+                        <EmployersPhoneNumber><QuestionLabel>Phone number</QuestionLabel><Answer>12345678</Answer></EmployersPhoneNumber>
                         <P45LeavingDate><QuestionLabel>What is the leaving date on your P45, if you have one?</QuestionLabel><Answer>25-12-2010</Answer></P45LeavingDate>
                     </Employer>
                     <Pay>
@@ -119,29 +122,16 @@
                         <DateLastPaid><QuestionLabel>When were you last paid?</QuestionLabel><Answer>24-12-2010</Answer></DateLastPaid>
                         <GrossPayment><QuestionLabel>What was the gross pay for this period?</QuestionLabel><Answer><Currency>GBP</Currency><Amount>600</Amount></Answer></GrossPayment>
                         <IncludedInWage><QuestionLabel>What was included in this pay?</QuestionLabel><Answer>Everything including christmas bonus !!?</Answer></IncludedInWage>
-                        <PayFrequency><QuestionLabel>How often do you want to get paid?</QuestionLabel><Answer>Four-Weekly</Answer></PayFrequency>
-
+                        <PayFrequency><QuestionLabel>How often were you paid?</QuestionLabel><Answer>Four-Weekly</Answer></PayFrequency>
+                        <UsualPayDay><QuestionLabel>When did you get paid?</QuestionLabel><Answer>Monday</Answer></UsualPayDay>
                         <ConstantEarnings><QuestionLabel>Did you get the same amount each time?</QuestionLabel><Answer>No</Answer></ConstantEarnings>
                     </Pay>
                     <OweMoney><QuestionLabel>Does your employer owe you any money?</QuestionLabel><Answer>No</Answer></OweMoney>
-                    <CareExpensesChildren><QuestionLabel>While at work, did you pay anyone to look after your children?</QuestionLabel><Answer>Yes</Answer></CareExpensesChildren><ChildCareExpenses>
-                    <CarerName><QuestionLabel>Name of the person/organisation who looks after your child/children</QuestionLabel><Answer>Gustave</Answer></CarerName>
-                    <Expense>
-                        <Payment><QuestionLabel>How much did you pay them?</QuestionLabel><Answer><Currency>GBP</Currency><Amount>123.04</Amount></Answer></Payment>
-                        <Frequency><QuestionLabel>How often did you pay childcare expenses?</QuestionLabel><Other>really Other</Other><Answer>Other</Answer></Frequency>
-                    </Expense>
-                    <RelationshipCarerToClaimant><QuestionLabel>What relation, if any, is the person/organisation to you?</QuestionLabel><Answer>Friend</Answer></RelationshipCarerToClaimant>
-                    <RelationshipCarerToPartner><QuestionLabel>What relation, if any, is the person/organisation to your Partner/Spouse?</QuestionLabel><Answer>Friend</Answer></RelationshipCarerToPartner>
-                </ChildCareExpenses>
-                    <CareExpensesCaree><QuestionLabel>While at work, did you pay anyone to look after the person you care for?</QuestionLabel><Answer>No</Answer></CareExpensesCaree>
-                    <PaidForOccupationalPension><QuestionLabel>Did you pay towards an occupational pension scheme?</QuestionLabel><Answer>Yes</Answer></PaidForOccupationalPension><OccupationalPension>
-                    <Payment><QuestionLabel>How much did you pay?</QuestionLabel><Answer><Currency>GBP</Currency><Amount>100</Amount></Answer></Payment>
-                    <Frequency><QuestionLabel>How often?</QuestionLabel><Answer>Weekly</Answer></Frequency>
-                </OccupationalPension><PaidForPersonalPension><QuestionLabel>Did you pay towards a personal or stakeholder pension scheme or a retirement annuity scheme?</QuestionLabel><Answer>No</Answer></PaidForPersonalPension>
+                    <PaidForPension><QuestionLabel>Did you pay into a pension and/or have any work related expenses?</QuestionLabel><Answer>No</Answer></PaidForPension>
                     <PaidForJobExpenses><QuestionLabel>Did you pay for anything necessary to do your job?</QuestionLabel><Answer>No</Answer></PaidForJobExpenses>
                 </JobDetails>
             </Employment>
-            <HavePartner><QuestionLabel>Have you had a partner/spouse living with you since your claim date: 23/07/2013?</QuestionLabel><Answer>Yes</Answer></HavePartner>
+            <HavePartner><QuestionLabel>Have you lived with a partner at any time since your claim date?</QuestionLabel><Answer>Yes</Answer></HavePartner>
             <Partner>
                 <Surname><QuestionLabel>Last name</QuestionLabel><Answer>Caseseven</Answer></Surname>
                 <OtherNames><QuestionLabel>First name</QuestionLabel><Answer>Partner Middle</Answer></OtherNames>
@@ -151,9 +141,9 @@
                 <NationalInsuranceNumber><QuestionLabel>National Insurance number</QuestionLabel><Answer>WA234567A</Answer></NationalInsuranceNumber>
                 <NationalityPartner><QuestionLabel>Nationality?</QuestionLabel><Answer>Spanish</Answer></NationalityPartner>
                 <RelationshipStatus>
-                    <SeparatedFromPartner><QuestionLabel>Have you separated from your partner/spouse since the date you want to claim from: 23/07/2013?</QuestionLabel><Answer>No</Answer></SeparatedFromPartner>
+                    <SeparatedFromPartner><QuestionLabel>Have you separated from your partner since the date you want to claim from: 23/07/2013?</QuestionLabel><Answer>No</Answer></SeparatedFromPartner>
                 </RelationshipStatus>
-                <IsCaree><QuestionLabel>Is your partner/spouse the person you are claiming Carer's Allowance for?</QuestionLabel><Answer>No</Answer></IsCaree>
+                <IsCaree><QuestionLabel>Is your partner the person you are claiming Carer's Allowance for?</QuestionLabel><Answer>No</Answer></IsCaree>
             </Partner>
             <OtherBenefits>
                 <ClaimantBenefits>
@@ -163,13 +153,11 @@
 
                 <OtherMoneySP><QuestionLabel>Have you had any Statutory Maternity Pay (SMP), Statutory Paternity Pay (SPP) or Statutory Adoption Pay (SAP) since the date you want to claim from 23/07/2013?</QuestionLabel><Answer>No</Answer></OtherMoneySP>
 
-                <OtherMoney><QuestionLabel>Have you  claimed or received any other benefits since your claim date: 23/07/2013?</QuestionLabel><Answer>No</Answer></OtherMoney>
                 <OtherMoneyPayments><QuestionLabel>Have you received any payments for the person you care for or any other person since your claim date 23/07/2013</QuestionLabel><Answer>No</Answer></OtherMoneyPayments>
 
                 <EEA>
-                    <EEAReceivePensionsBenefits><QuestionLabel>Do you, or any member of your family, receive any benefits or pensions from any other European Economic Area (EEA) state or Switzerland?</QuestionLabel><Answer>No</Answer></EEAReceivePensionsBenefits>
-                    <EEAClaimPensionsBenefits><QuestionLabel>Have you, or a member of your family, made a claim for any benefits or pensions from any other European Economic Area (EEA) state or Switzerland?</QuestionLabel><Answer>No</Answer></EEAClaimPensionsBenefits>
-                    <EEAWorkingInsurance><QuestionLabel>Are you, or a member of your family, working in or paying insurance to, another European Economic Area (EEA) state or Switzerland?</QuestionLabel><Answer>No</Answer></EEAWorkingInsurance>
+                    <EEAReceivePensionsBenefits><QuestionLabel>Have you or anyone in your family claimed or been paid any benefits or pensions from any of these countries?</QuestionLabel><Answer>No</Answer></EEAReceivePensionsBenefits>
+                    <EEAWorkingInsurance><QuestionLabel>Do you or anyone in your family work or pay insurance in any of these countries?</QuestionLabel><Answer>No</Answer></EEAWorkingInsurance>
                 </EEA>
             </OtherBenefits>
             <Payment>
@@ -221,32 +209,32 @@
                     <Answer>
                         <Line>CA Freepost</Line><Line>Palatine House</Line><Line>Preston</Line><PostCode>PR1 1HN</PostCode>
                     </Answer>
-                </RecipientAddress><Evidence>
-                <Title>Your Employment documents.</Title>
-                <Content>Last payslip you got before your claim date:23-07-2013</Content><Content>Any payslips you have had since then.</Content><Content>Any pension statements you may have.</Content>
+                </RecipientAddress><Evidence><Title>Remember to send us the following documents.</Title></Evidence><Evidence><Title>Failure to send us these documents may delay your claim.</Title></Evidence><Evidence><Title>Send us the documents below including your Name and National Insurance (NI) number.</Title></Evidence><Evidence>
+                <Title>Your Employment documents</Title>
+                <Content>Last payslip you got before your claim date:23-07-2013</Content><Content>Any payslips you have had since then</Content><Content>Any pension statements you may have</Content>
             </Evidence><Evidence>
-                <Title>Your Self-employed documents.</Title>
-                <Content>Most recent finalised accounts you have for your business.</Content><Content>Any pension statements you may have.</Content>
+                <Title>Your Self-employed documents</Title>
+                <Content>Most recent finalised accounts you have for your business</Content><Content>Any pension statements you may have</Content>
             </Evidence><Evidence>
                 <Title/>
-                <Content>The Carer's Allowance unit will contact you if they need any further information.</Content>
+                <Content>The Carer's Allowance Unit will contact you if they need any further information.</Content>
             </Evidence>
             </EvidenceList>
             <Consents>
                 <Consent><QuestionLabel>Do you agree to us getting information from any current or previous employer you have told us about on this form?</QuestionLabel><Answer>Yes</Answer></Consent>
                 <Consent><QuestionLabel>Do you agree to us getting information from any other person or organisation you have told us about on this claim?</QuestionLabel><Answer>Yes</Answer></Consent>
             </Consents>
-            <AssistedDecisions><AssistedDecision><Reason>Person does not normally live in England, Scotland or Wales.</Reason><RecommendedDecision>Transfer to Exportability team.</RecommendedDecision></AssistedDecision></AssistedDecisions>
+            <AssistedDecisions><AssistedDecision><Reason>Person is not British.</Reason><RecommendedDecision>Transfer to Exportability team.</RecommendedDecision></AssistedDecision><AssistedDecision><Reason>Person does not normally live in England, Scotland or Wales.</Reason><RecommendedDecision>Transfer to Exportability team.</RecommendedDecision></AssistedDecision></AssistedDecisions>
         </DWPCAClaim>
     </DWPCATransaction>
     <ds:Signature>
         <ds:SignedInfo>
             <ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
             <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
-            <ds:Reference URI="#TEST432">
+            <ds:Reference URI="#1408TEST432">
                 <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
-                <ds:DigestValue>xCIzHnznelpISo3IvgZApAY3Bqs=</ds:DigestValue>
+                <ds:DigestValue>MrSN3ydORvxFIS4Zex6Ne7uK/pE=</ds:DigestValue>
             </ds:Reference>
         </ds:SignedInfo>
-        <ds:SignatureValue>QCIBeAgLlCxv1amOI18XrH8K+/0774P73zAmXGyVYDovXnguspru1g==</ds:SignatureValue>
+        <ds:SignatureValue>Tw5O9q5tIa68zhoM+pcsU9K9xb5etxGgzW2rnMWw6hqK8FwwWnmY/Q==</ds:SignatureValue>
     </ds:Signature></DWPBody>

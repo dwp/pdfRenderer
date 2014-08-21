@@ -1,10 +1,10 @@
 <DWPBody xsi:schemaLocation="http://www.govtalk.gov.uk/dwp/carers-allowance file:/future/schema/ca/CarersAllowance_Schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns="http://www.govtalk.gov.uk/dwp/carers-allowance">
     <Version>0.1</Version>
-    <DWPCATransaction id="TEST432">
-        <TransactionId>TEST432</TransactionId>
-        <DateTimeGenerated>24-04-2014 15:56</DateTimeGenerated>
+    <DWPCATransaction id="1408TEST432">
+        <TransactionId>1408TEST432</TransactionId>
+        <DateTimeGenerated>21-08-2014 15:01</DateTimeGenerated>
         <DWPCAClaim>
-            <DateOfClaim><QuestionLabel>When do you want your Carer's Allowance claim to start?</QuestionLabel><Answer>22-03-2013</Answer></DateOfClaim>
+            <DateOfClaim><QuestionLabel>Claim date</QuestionLabel><Answer>22-03-2013</Answer></DateOfClaim>
             <Claimant>
                 <Surname><QuestionLabel>Last name</QuestionLabel><Answer>CaseTwo</Answer></Surname>
                 <OtherNames><QuestionLabel>First name</QuestionLabel><Answer>Test Middle</Answer></OtherNames>
@@ -18,8 +18,8 @@
                         <Line>2 Preston Road</Line><Line>Preston</Line><Line>Lancashire</Line><PostCode>PR1 2TH</PostCode>
                     </Answer>
                 </Address>
-                <DayTimePhoneNumber><QuestionLabel>How we can contact you</QuestionLabel><Answer>01772 888901</Answer></DayTimePhoneNumber>
-                <MaritalStatus><QuestionLabel>What is your marital status?</QuestionLabel><Answer>Widowed or surviving civil partner</Answer></MaritalStatus>
+                <DayTimePhoneNumber><QuestionLabel>Contact phone or mobile number</QuestionLabel><Answer>01772 888901</Answer></DayTimePhoneNumber>
+
                 <TextPhoneContact><QuestionLabel>If you have speech or hearing difficulties, would you like us to contact you by textphone?</QuestionLabel><Answer>Yes</Answer></TextPhoneContact>
             </Claimant>
             <Caree>
@@ -34,22 +34,24 @@
                         <Line>12 Preston Road</Line><Line>Preston</Line><Line>Lancashire</Line><PostCode>PR1 2TH</PostCode>
                     </Answer>
                 </Address>
-                <DayTimePhoneNumber><QuestionLabel>Phone number</QuestionLabel><Answer>01772 998761</Answer></DayTimePhoneNumber>
                 <RelationToClaimant><QuestionLabel>What's their relationship to you?</QuestionLabel><Answer>Father</Answer></RelationToClaimant>
                 <Cared35Hours><QuestionLabel>Do you spend 35 hours or more each week caring for the person you care for?</QuestionLabel><Answer>Yes</Answer></Cared35Hours>
-                <BreaksSinceClaim><QuestionLabel>Have you had any breaks in caring for this person since 22/03/2013?</QuestionLabel><Answer>No</Answer></BreaksSinceClaim>
-
+                <CareBreak>
+                    <BreaksSinceClaim><QuestionLabel>Have you had any breaks from caring for this person since 22/03/2013?</QuestionLabel><Answer>No</Answer></BreaksSinceClaim>
+                </CareBreak>
                 <Cared35HoursBefore><QuestionLabel>Did you care for this person for 35 hours or more each week before your claim date?</QuestionLabel><Answer>No</Answer></Cared35HoursBefore>
 
                 <LiveSameAddress><QuestionLabel>Do they live at the same address as you?</QuestionLabel><Answer>No</Answer></LiveSameAddress>
                 <ArmedForcesIndependencePayment><QuestionLabel>Does this person get Armed Forces Independence Payment (AFIP)?</QuestionLabel><Answer>No</Answer></ArmedForcesIndependencePayment>
             </Caree>
             <Residency>
+                <Nationality><QuestionLabel>What is your nationality?</QuestionLabel><Answer>British</Answer></Nationality>
+
+
+
                 <NormallyLiveInGB><QuestionLabel>Do you normally live in England, Scotland or Wales?</QuestionLabel><Answer>Yes</Answer></NormallyLiveInGB>
 
 
-
-                <Nationality><QuestionLabel>What is your nationality?</QuestionLabel><Answer>British</Answer></Nationality>
 
                 <PeriodAbroad>
                     <TimeOutsideGBLast3Years><QuestionLabel>Have you been out of England, Scotland or Wales for more than 52 weeks in the last 3 years before your claim date?</QuestionLabel><Answer>Yes</Answer></TimeOutsideGBLast3Years>
@@ -58,12 +60,14 @@
                         <DateTo><QuestionLabel>Date you returned?</QuestionLabel><Answer>01-06-2012</Answer></DateTo>
                     </Period>
                     <Reason><QuestionLabel>Reason for being there?</QuestionLabel><Answer>Holiday</Answer></Reason>
-                    <Country><QuestionLabel>Which country did you go to?</QuestionLabel><Answer>Spain</Answer></Country>
+                    <Country><QuestionLabel>Which country did you go to?</QuestionLabel><Answer>Some country I went to that i don't</Answer></Country>
                     <CareePresent><QuestionLabel>Was the person you care for with you?</QuestionLabel><Answer>No</Answer></CareePresent>
-                </PeriodAbroad>
+                </PeriodAbroad><PeriodAbroad>
+                <TimeOutsideGBLast3Years><QuestionLabel>Have you been out of England, Scotland or Wales at any other time in the last 3 years before your claim date?</QuestionLabel><Answer>No</Answer></TimeOutsideGBLast3Years>
+            </PeriodAbroad>
 
             </Residency>
-            <CourseOfEducation><QuestionLabel>Have you been on a course of education since your claim date: 22/03/2013?</QuestionLabel><Answer>Yes</Answer></CourseOfEducation>
+            <CourseOfEducation><QuestionLabel>Have you been on a course of education since your claim date?</QuestionLabel><Answer>Yes</Answer></CourseOfEducation>
             <FullTimeEducation>
                 <CourseDetails>
 
@@ -85,19 +89,19 @@
 
             <Employed><QuestionLabel>Have you been employed at any time since 22/09/2012?</QuestionLabel><Answer>No</Answer></Employed>
 
-            <HavePartner><QuestionLabel>Have you had a partner/spouse living with you since your claim date: 22/03/2013?</QuestionLabel><Answer>Yes</Answer></HavePartner>
+            <HavePartner><QuestionLabel>Have you lived with a partner at any time since your claim date?</QuestionLabel><Answer>Yes</Answer></HavePartner>
             <Partner>
-                <Surname><QuestionLabel>Last name</QuestionLabel><Answer>Case</Answer></Surname>
-                <OtherNames><QuestionLabel>First name</QuestionLabel><Answer>Test Middle</Answer></OtherNames>
-                <OtherSurnames><QuestionLabel>Other surname or maiden name</QuestionLabel><Answer>Dixon</Answer></OtherSurnames>
+                <Surname><QuestionLabel>Last name</QuestionLabel><Answer>Caseone</Answer></Surname>
+                <OtherNames><QuestionLabel>First name</QuestionLabel><Answer>Firstname</Answer></OtherNames>
+                <OtherSurnames><QuestionLabel>Other surname or maiden name</QuestionLabel><Answer>Other name</Answer></OtherSurnames>
                 <Title><QuestionLabel>Title</QuestionLabel><Answer>Mrs</Answer></Title>
                 <DateOfBirth><QuestionLabel>Date of birth</QuestionLabel><Answer>28-09-1977</Answer></DateOfBirth>
                 <NationalInsuranceNumber><QuestionLabel>National Insurance number</QuestionLabel><Answer>JA234567B</Answer></NationalInsuranceNumber>
                 <NationalityPartner><QuestionLabel>Nationality?</QuestionLabel><Answer>French</Answer></NationalityPartner>
                 <RelationshipStatus>
-                    <SeparatedFromPartner><QuestionLabel>Have you separated from your partner/spouse since the date you want to claim from: 22/03/2013?</QuestionLabel><Answer>No</Answer></SeparatedFromPartner>
+                    <SeparatedFromPartner><QuestionLabel>Have you separated from your partner since the date you want to claim from: 22/03/2013?</QuestionLabel><Answer>No</Answer></SeparatedFromPartner>
                 </RelationshipStatus>
-                <IsCaree><QuestionLabel>Is your partner/spouse the person you are claiming Carer's Allowance for?</QuestionLabel><Answer>No</Answer></IsCaree>
+                <IsCaree><QuestionLabel>Is your partner the person you are claiming Carer's Allowance for?</QuestionLabel><Answer>No</Answer></IsCaree>
             </Partner>
             <OtherBenefits>
                 <ClaimantBenefits>
@@ -115,17 +119,15 @@
                     <Address>
                         <QuestionLabel>Employer's address</QuestionLabel>
                         <Answer>
-                            <Line>1012 Preston  Road</Line><Line>Preston</Line><Line>Lancashure</Line><PostCode>PR45 6YH</PostCode>
+                            <Line>this is a very large address line$$</Line><Line>another absurd large address line%</Line><PostCode>PR45 6YH</PostCode>
                         </Answer>
                     </Address>
                 </OtherMoneySPDetails>
-                <OtherMoney><QuestionLabel>Have you  claimed or received any other benefits since your claim date: 22/03/2013?</QuestionLabel><Answer>Yes</Answer></OtherMoney>
                 <OtherMoneyPayments><QuestionLabel>Have you received any payments for the person you care for or any other person since your claim date 22/03/2013</QuestionLabel><Answer>No</Answer></OtherMoneyPayments>
 
                 <EEA>
-                    <EEAReceivePensionsBenefits><QuestionLabel>Do you, or any member of your family, receive any benefits or pensions from any other European Economic Area (EEA) state or Switzerland?</QuestionLabel><Answer>Yes</Answer></EEAReceivePensionsBenefits>
-                    <EEAClaimPensionsBenefits><QuestionLabel>Have you, or a member of your family, made a claim for any benefits or pensions from any other European Economic Area (EEA) state or Switzerland?</QuestionLabel><Answer>Yes</Answer></EEAClaimPensionsBenefits>
-                    <EEAWorkingInsurance><QuestionLabel>Are you, or a member of your family, working in or paying insurance to, another European Economic Area (EEA) state or Switzerland?</QuestionLabel><Answer>Yes</Answer></EEAWorkingInsurance>
+                    <EEAReceivePensionsBenefits><QuestionLabel>Have you or anyone in your family claimed or been paid any benefits or pensions from any of these countries?</QuestionLabel><Answer>Yes</Answer></EEAReceivePensionsBenefits>
+                    <EEAWorkingInsurance><QuestionLabel>Do you or anyone in your family work or pay insurance in any of these countries?</QuestionLabel><Answer>Yes</Answer></EEAWorkingInsurance>
                 </EEA>
             </OtherBenefits>
             <Payment>
@@ -133,12 +135,12 @@
                 <InitialAccountQuestion><QuestionLabel>How would you like to get paid?</QuestionLabel><Answer>UK bank or building society account</Answer></InitialAccountQuestion>
                 <Account>
                     <AccountHolder><QuestionLabel>Whose name or names is the account in?</QuestionLabel><Answer>Your partner's name</Answer></AccountHolder>
-                    <HolderName><QuestionLabel>Name of account holder</QuestionLabel><Answer>Mr Test Casetwo</Answer></HolderName>
+                    <HolderName><QuestionLabel>Name of account holder</QuestionLabel><Answer>I've got a rather large name you know $&amp;</Answer></HolderName>
                     <BuildingSocietyDetails>
-                        <AccountNumber><QuestionLabel>Account number</QuestionLabel><Answer>12345678</Answer></AccountNumber>
+                        <AccountNumber><QuestionLabel>Account number</QuestionLabel><Answer>1234567890</Answer></AccountNumber>
 
                         <SortCode><QuestionLabel>Sort code</QuestionLabel><Answer>090126</Answer></SortCode>
-                        <Name><QuestionLabel>Full name of bank or building society</QuestionLabel><Answer>Santander</Answer></Name>
+                        <Name><QuestionLabel>Full name of bank or building society</QuestionLabel><Answer>I don't actually remember the bank's name</Answer></Name>
                     </BuildingSocietyDetails>
                 </Account>
             </Payment>
@@ -174,24 +176,24 @@
             <EvidenceList>
                 <Evidence>
                     <Title/>
-                    <Content>The Carer's Allowance unit will contact you if they need any further information.</Content>
+                    <Content>The Carer's Allowance Unit will contact you if they need any further information.</Content>
                 </Evidence>
             </EvidenceList>
             <Consents>
                 <Consent><QuestionLabel>Do you agree to us getting information from any current or previous employer you have told us about on this form?</QuestionLabel><Answer>Yes</Answer></Consent>
                 <Consent><QuestionLabel>Do you agree to us getting information from any other person or organisation you have told us about on this claim?</QuestionLabel><Answer>Yes</Answer></Consent>
             </Consents>
-            <AssistedDecisions><AssistedDecision><Reason>Claimant or partner dependent on EEA pensions or benefits.</Reason><RecommendedDecision>Transfer to Exportability team.</RecommendedDecision></AssistedDecision><AssistedDecision><Reason>Claimant or partner dependent on EEA pensions or benefits.</Reason><RecommendedDecision>Transfer to Exportability team.</RecommendedDecision></AssistedDecision><AssistedDecision><Reason>Claimant or partner dependent on EEA insurance or work.</Reason><RecommendedDecision>Transfer to Exportability team.</RecommendedDecision></AssistedDecision></AssistedDecisions>
+            <AssistedDecisions><AssistedDecision><Reason>Claimant or partner dependent on EEA pensions or benefits.</Reason><RecommendedDecision>Transfer to Exportability team.</RecommendedDecision></AssistedDecision><AssistedDecision><Reason>Claimant or partner dependent on EEA insurance or work.</Reason><RecommendedDecision>Transfer to Exportability team.</RecommendedDecision></AssistedDecision></AssistedDecisions>
         </DWPCAClaim>
     </DWPCATransaction>
     <ds:Signature>
         <ds:SignedInfo>
             <ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
             <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
-            <ds:Reference URI="#TEST432">
+            <ds:Reference URI="#1408TEST432">
                 <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
-                <ds:DigestValue>6iIN/b+e5+Gf+Hln5y7IOyZ3dIo=</ds:DigestValue>
+                <ds:DigestValue>bPyuWYe+JpRwDMCxx/W4/oud1WQ=</ds:DigestValue>
             </ds:Reference>
         </ds:SignedInfo>
-        <ds:SignatureValue>OavKW0doAyMWvVb3qB28L7Byml1bxjTFl3STGGIps1scVuBXKyKhJw==</ds:SignatureValue>
+        <ds:SignatureValue>kpfS3SqrNSqjwYSPmnI42RwA439+jGe5ql+6za4XoHvLcuiJh3/wXQ==</ds:SignatureValue>
     </ds:Signature></DWPBody>

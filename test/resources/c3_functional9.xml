@@ -1,10 +1,10 @@
 <DWPBody xsi:schemaLocation="http://www.govtalk.gov.uk/dwp/carers-allowance file:/future/schema/ca/CarersAllowance_Schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns="http://www.govtalk.gov.uk/dwp/carers-allowance">
     <Version>0.1</Version>
-    <DWPCATransaction id="TEST432">
-        <TransactionId>TEST432</TransactionId>
-        <DateTimeGenerated>25-04-2014 11:22</DateTimeGenerated>
+    <DWPCATransaction id="1408TEST432">
+        <TransactionId>1408TEST432</TransactionId>
+        <DateTimeGenerated>21-08-2014 15:08</DateTimeGenerated>
         <DWPCAClaim>
-            <DateOfClaim><QuestionLabel>When do you want your Carer's Allowance claim to start?</QuestionLabel><Answer>21-07-2013</Answer></DateOfClaim>
+            <DateOfClaim><QuestionLabel>Claim date</QuestionLabel><Answer>21-07-2013</Answer></DateOfClaim>
             <Claimant>
                 <Surname><QuestionLabel>Last name</QuestionLabel><Answer>Casenine</Answer></Surname>
                 <OtherNames><QuestionLabel>First name</QuestionLabel><Answer>Test </Answer></OtherNames>
@@ -18,8 +18,8 @@
                         <Line>1 Preston Road</Line><Line>Preston</Line><PostCode>PR1 1HB</PostCode>
                     </Answer>
                 </Address>
-                <DayTimePhoneNumber><QuestionLabel>How we can contact you</QuestionLabel><Answer>I do not have a contact number</Answer></DayTimePhoneNumber>
-                <MaritalStatus><QuestionLabel>What is your marital status?</QuestionLabel><Answer>Widowed or surviving civil partner</Answer></MaritalStatus>
+                <DayTimePhoneNumber><QuestionLabel>Contact phone or mobile number</QuestionLabel><Answer>I do not have a contact number</Answer></DayTimePhoneNumber>
+
 
             </Claimant>
             <Caree>
@@ -34,35 +34,37 @@
                         <Line>1 Preston Road</Line><Line>Preston</Line><PostCode>PR1 1HB</PostCode>
                     </Answer>
                 </Address>
-
                 <RelationToClaimant><QuestionLabel>What's their relationship to you?</QuestionLabel><Answer>Partner</Answer></RelationToClaimant>
                 <Cared35Hours><QuestionLabel>Do you spend 35 hours or more each week caring for the person you care for?</QuestionLabel><Answer>Yes</Answer></Cared35Hours>
-                <BreaksSinceClaim><QuestionLabel>Have you had any breaks in caring for this person since 21/07/2013?</QuestionLabel><Answer>No</Answer></BreaksSinceClaim>
-
+                <CareBreak>
+                    <BreaksSinceClaim><QuestionLabel>Have you had any breaks from caring for this person since 21/07/2013?</QuestionLabel><Answer>No</Answer></BreaksSinceClaim>
+                </CareBreak>
                 <Cared35HoursBefore><QuestionLabel>Did you care for this person for 35 hours or more each week before your claim date?</QuestionLabel><Answer>Yes</Answer></Cared35HoursBefore>
                 <DateStartCaring><QuestionLabel>When did you start to care for this person?</QuestionLabel><Answer>21-01-2012</Answer></DateStartCaring>
                 <LiveSameAddress><QuestionLabel>Do they live at the same address as you?</QuestionLabel><Answer>Yes</Answer></LiveSameAddress>
                 <ArmedForcesIndependencePayment><QuestionLabel>Does this person get Armed Forces Independence Payment (AFIP)?</QuestionLabel><Answer>Yes</Answer></ArmedForcesIndependencePayment>
             </Caree>
             <Residency>
+                <Nationality><QuestionLabel>What is your nationality?</QuestionLabel><Answer>British</Answer></Nationality>
+
+
+
                 <NormallyLiveInGB><QuestionLabel>Do you normally live in England, Scotland or Wales?</QuestionLabel><Answer>Yes</Answer></NormallyLiveInGB>
 
 
-
-                <Nationality><QuestionLabel>What is your nationality?</QuestionLabel><Answer>British</Answer></Nationality>
 
                 <PeriodAbroad>
                     <TimeOutsideGBLast3Years><QuestionLabel>Have you been out of England, Scotland or Wales for more than 52 weeks in the last 3 years before your claim date?</QuestionLabel><Answer>No</Answer></TimeOutsideGBLast3Years>
                 </PeriodAbroad>
 
             </Residency>
-            <CourseOfEducation><QuestionLabel>Have you been on a course of education since your claim date: 21/07/2013?</QuestionLabel><Answer>No</Answer></CourseOfEducation>
+            <CourseOfEducation><QuestionLabel>Have you been on a course of education since your claim date?</QuestionLabel><Answer>No</Answer></CourseOfEducation>
 
             <SelfEmployed><QuestionLabel>Have you been self-employed at any time since 14/07/2013?</QuestionLabel><Answer>No</Answer></SelfEmployed>
 
             <Employed><QuestionLabel>Have you been employed at any time since 21/01/2013?</QuestionLabel><Answer>No</Answer></Employed>
 
-            <HavePartner><QuestionLabel>Have you had a partner/spouse living with you since your claim date: 21/07/2013?</QuestionLabel><Answer>No</Answer></HavePartner>
+            <HavePartner><QuestionLabel>Have you lived with a partner at any time since your claim date?</QuestionLabel><Answer>No</Answer></HavePartner>
 
             <OtherBenefits>
                 <ClaimantBenefits>
@@ -72,13 +74,11 @@
 
                 <OtherMoneySP><QuestionLabel>Have you had any Statutory Maternity Pay (SMP), Statutory Paternity Pay (SPP) or Statutory Adoption Pay (SAP) since the date you want to claim from 21/07/2013?</QuestionLabel><Answer>No</Answer></OtherMoneySP>
 
-                <OtherMoney><QuestionLabel>Have you  claimed or received any other benefits since your claim date: 21/07/2013?</QuestionLabel><Answer>No</Answer></OtherMoney>
                 <OtherMoneyPayments><QuestionLabel>Have you received any payments for the person you care for or any other person since your claim date 21/07/2013</QuestionLabel><Answer>No</Answer></OtherMoneyPayments>
 
                 <EEA>
-                    <EEAReceivePensionsBenefits><QuestionLabel>Do you, or any member of your family, receive any benefits or pensions from any other European Economic Area (EEA) state or Switzerland?</QuestionLabel><Answer>No</Answer></EEAReceivePensionsBenefits>
-                    <EEAClaimPensionsBenefits><QuestionLabel>Have you, or a member of your family, made a claim for any benefits or pensions from any other European Economic Area (EEA) state or Switzerland?</QuestionLabel><Answer>No</Answer></EEAClaimPensionsBenefits>
-                    <EEAWorkingInsurance><QuestionLabel>Are you, or a member of your family, working in or paying insurance to, another European Economic Area (EEA) state or Switzerland?</QuestionLabel><Answer>No</Answer></EEAWorkingInsurance>
+                    <EEAReceivePensionsBenefits><QuestionLabel>Have you or anyone in your family claimed or been paid any benefits or pensions from any of these countries?</QuestionLabel><Answer>No</Answer></EEAReceivePensionsBenefits>
+                    <EEAWorkingInsurance><QuestionLabel>Do you or anyone in your family work or pay insurance in any of these countries?</QuestionLabel><Answer>No</Answer></EEAWorkingInsurance>
                 </EEA>
             </OtherBenefits>
 
@@ -114,7 +114,7 @@
             <EvidenceList>
                 <Evidence>
                     <Title/>
-                    <Content>The Carer's Allowance unit will contact you if they need any further information.</Content>
+                    <Content>The Carer's Allowance Unit will contact you if they need any further information.</Content>
                 </Evidence>
             </EvidenceList>
             <Consents>
@@ -128,10 +128,10 @@
         <ds:SignedInfo>
             <ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
             <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
-            <ds:Reference URI="#TEST432">
+            <ds:Reference URI="#1408TEST432">
                 <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
-                <ds:DigestValue>bClW85zguVUg36mBg5lSm2hkzFk=</ds:DigestValue>
+                <ds:DigestValue>hjiHIRAWVu6/kYNSgNUC+Jy0rAw=</ds:DigestValue>
             </ds:Reference>
         </ds:SignedInfo>
-        <ds:SignatureValue>FIKyP7K0MvQ2L8HdFiW1PWzi/BMcDGqezMhXfA0p2RmDbCqRHMxJ2w==</ds:SignatureValue>
+        <ds:SignatureValue>GqpAOCPMc/oWe4DpbKf1Xx9j78A7odIimbhHlcbczVGRrdbi87Eumg==</ds:SignatureValue>
     </ds:Signature></DWPBody>

@@ -62,6 +62,7 @@ class PdfContentMatchingClaimSpec extends PdfContentMatchingSpec {
       val pdfFileLocation = "functionalTestCase3_contentTestPDF.pdf"
       val source = getClass.getResource("/c3_functional3.xml")
       val textCaseXml = XML.load(source)
+
       testContentMatches(pdfFileLocation, textCaseXml, XMLData.functionalTestCase3, foundMustBeTrue)
     }
 

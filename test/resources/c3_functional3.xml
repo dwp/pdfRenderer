@@ -2,20 +2,20 @@
     <Version>0.1</Version>
     <DWPCATransaction id="1408TEST432">
         <TransactionId>1408TEST432</TransactionId>
-        <DateTimeGenerated>21-08-2014 13:10</DateTimeGenerated>
+        <DateTimeGenerated>21-08-2014 14:21</DateTimeGenerated>
         <DWPCAClaim>
             <DateOfClaim><QuestionLabel>Claim date</QuestionLabel><Answer>01-01-2010</Answer></DateOfClaim>
             <Claimant>
-                <Surname><QuestionLabel>Last name</QuestionLabel><Answer>H4e2idbeDIS0I0Vcu51ahTiB9qwbJaS8QSBpr2PpZGc0A4oJJyJYAr+dlkn3HzJf</Answer></Surname>
+                <Surname><QuestionLabel>Last name</QuestionLabel><Answer>CaseThree</Answer></Surname>
                 <OtherNames><QuestionLabel>First name</QuestionLabel><Answer>Test Middle</Answer></OtherNames>
                 <OtherSurnames><QuestionLabel>Other surname or maiden name</QuestionLabel><Answer>Smithson</Answer></OtherSurnames>
                 <Title><QuestionLabel>Title</QuestionLabel><Answer>Mr</Answer></Title>
                 <DateOfBirth><QuestionLabel>Date of birth</QuestionLabel><Answer>01-01-1931</Answer></DateOfBirth>
-                <NationalInsuranceNumber><QuestionLabel>National Insurance number</QuestionLabel><Answer>JZBwcG38x3odKqk03LD9EOZtJgfvIgj6HvBHlMSKm1XA5HZkvsyFBf5QxsttKN5P</Answer></NationalInsuranceNumber>
+                <NationalInsuranceNumber><QuestionLabel>National Insurance number</QuestionLabel><Answer>JB486278C</Answer></NationalInsuranceNumber>
                 <Address>
                     <QuestionLabel>Address</QuestionLabel>
                     <Answer>
-                        <Line>3 Preston Road</Line><Line>Preston</Line><Line>Lancashire</Line><PostCode>LtN6QKyk0Q6yRlFapGMbHbtlZDOZjwwRwLmkb/d7NsjjaAudDgATnfMH7H97AeY6</PostCode>
+                        <Line>3 Preston Road</Line><Line>Preston</Line><Line>Lancashire</Line><PostCode>PR1 2TH</PostCode>
                     </Answer>
                 </Address>
                 <DayTimePhoneNumber><QuestionLabel>Contact phone or mobile number</QuestionLabel><Answer>01772 888901</Answer></DayTimePhoneNumber>
@@ -23,15 +23,15 @@
 
             </Claimant>
             <Caree>
-                <Surname><QuestionLabel>Last name</QuestionLabel><Answer>TgmEa4ACuwuaIlvFGI5HZudQVmp295AGcnD20JO9hYwP0Ib2fkV9N110CQX2F8rs</Answer></Surname>
+                <Surname><QuestionLabel>Last name</QuestionLabel><Answer>CaseThree</Answer></Surname>
                 <OtherNames><QuestionLabel>First name</QuestionLabel><Answer>Test Middle</Answer></OtherNames>
                 <Title><QuestionLabel>Title</QuestionLabel><Answer>Mrs</Answer></Title>
                 <DateOfBirth><QuestionLabel>Date of birth</QuestionLabel><Answer>28-09-1937</Answer></DateOfBirth>
-                <NationalInsuranceNumber><QuestionLabel>National Insurance number</QuestionLabel><Answer>Q0gqs7OmSPOht3By8Q4EAoeLr6knl0QR1H6xn6QGYB6x/pdL+rWPrcXum/astljh</Answer></NationalInsuranceNumber>
+                <NationalInsuranceNumber><QuestionLabel>National Insurance number</QuestionLabel><Answer>BA234567A</Answer></NationalInsuranceNumber>
                 <Address>
                     <QuestionLabel>Address</QuestionLabel>
                     <Answer>
-                        <Line>12 Preston Road</Line><Line>Preston</Line><Line>Lancashire</Line><PostCode>idaqgIRSUagpOOBzg6701wDwSfh50ZG442DyAPO3dBYj9FzLCHiPY/woGehANzaP</PostCode>
+                        <Line>12 Preston Road</Line><Line>Preston</Line><Line>Lancashire</Line><PostCode>PR1 2TH</PostCode>
                     </Answer>
                 </Address>
                 <RelationToClaimant><QuestionLabel>What's their relationship to you?</QuestionLabel><Answer>Wife or civil partner</Answer></RelationToClaimant>
@@ -228,12 +228,12 @@
             </Employment>
             <HavePartner><QuestionLabel>Have you lived with a partner at any time since your claim date?</QuestionLabel><Answer>Yes</Answer></HavePartner>
             <Partner>
-                <Surname><QuestionLabel>Last name</QuestionLabel><Answer>u7He79HEGei6zTFVWdrMK8fxtl5ZUTLqmwgz1CNPugRsxRNr84ISfHwsl2UH2Kni</Answer></Surname>
+                <Surname><QuestionLabel>Last name</QuestionLabel><Answer>CaseThree</Answer></Surname>
                 <OtherNames><QuestionLabel>First name</QuestionLabel><Answer>Test Middle</Answer></OtherNames>
                 <OtherSurnames><QuestionLabel>Other surname or maiden name</QuestionLabel><Answer>Dixon</Answer></OtherSurnames>
                 <Title><QuestionLabel>Title</QuestionLabel><Answer>Mrs</Answer></Title>
                 <DateOfBirth><QuestionLabel>Date of birth</QuestionLabel><Answer>28-09-1937</Answer></DateOfBirth>
-                <NationalInsuranceNumber><QuestionLabel>National Insurance number</QuestionLabel><Answer>NfN5/6pHrcq1skve7pfKhMLxVoN6qpWsPKjOc2vKJtRV81FwEhlv90s14k+E5xrN</Answer></NationalInsuranceNumber>
+                <NationalInsuranceNumber><QuestionLabel>National Insurance number</QuestionLabel><Answer>BA234567A</Answer></NationalInsuranceNumber>
                 <NationalityPartner><QuestionLabel>Nationality?</QuestionLabel><Answer>British</Answer></NationalityPartner>
                 <RelationshipStatus>
                     <SeparatedFromPartner><QuestionLabel>Have you separated from your partner since the date you want to claim from: 01/01/2010?</QuestionLabel><Answer>No</Answer></SeparatedFromPartner>
@@ -331,8 +331,8 @@
             <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
             <ds:Reference URI="#1408TEST432">
                 <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
-                <ds:DigestValue>ggnNzNu5W4jjW3MnF/ADTB/cpsg=</ds:DigestValue>
+                <ds:DigestValue>UHs8pClSDbEuv3xBiUxkk1sxtXA=</ds:DigestValue>
             </ds:Reference>
         </ds:SignedInfo>
-        <ds:SignatureValue>imM9UsskW9zKO8bSEOPmHrWxGNI/9ztOoAIJWawZGaKOlbAoSQ6C9g==</ds:SignatureValue>
+        <ds:SignatureValue>co+Lc6Q0FXhdK6C6E+qA9GEDF1EI82HmNrCzHfJH2vR7+Uudrri59A==</ds:SignatureValue>
     </ds:Signature></DWPBody>
