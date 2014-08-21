@@ -424,7 +424,9 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="c795dfb7-1651-4cc3-a1aa-2acf50b404e8" positionType="Float" x="0" y="93" width="162" height="18"/>
+				<reportElement uuid="c795dfb7-1651-4cc3-a1aa-2acf50b404e8" positionType="Float" x="0" y="93" width="162" height="18">
+					<printWhenExpression><![CDATA[$F{ClaimantOtherSurnamesAnswer}.length() > 0]]></printWhenExpression>
+				</reportElement>
 				<textElement/>
 				<text><![CDATA[Other surname]]></text>
 			</staticText>
