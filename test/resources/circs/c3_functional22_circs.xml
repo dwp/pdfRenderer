@@ -1,8 +1,8 @@
 <DWPBody xsi:schemaLocation="http://www.govtalk.gov.uk/dwp/carers-allowance file:/future/schema/ca/CarersAllowance_Schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns="http://www.govtalk.gov.uk/dwp/carers-allowance">
     <Version>0.1</Version>
-    <DWPCATransaction id="TEST432">
-        <TransactionId>TEST432</TransactionId>
-        <DateTimeGenerated>30-04-2014 13:50</DateTimeGenerated>
+    <DWPCATransaction id="1408TEST432">
+        <TransactionId>1408TEST432</TransactionId>
+        <DateTimeGenerated>21-08-2014 16:45</DateTimeGenerated>
         <DWPCAChangeOfCircumstances>
             <ClaimantDetails>
                 <FullName><QuestionLabel>Full name</QuestionLabel><Answer>Mr John Roger Smith</Answer></FullName>
@@ -28,11 +28,10 @@
 
                 </BreakFromCaringEnded>
                 <MedicalTreatmentDuringBreak><QuestionLabel>Did you or the person you care for receive any medical treatment or professional care during the break?</QuestionLabel><Answer>No</Answer></MedicalTreatmentDuringBreak>
-                <MoreChanges><QuestionLabel>Tell us more about your changes</QuestionLabel>
-                    <Answer>Other changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther chanend</Answer></MoreChanges>
-                <AdditionalBreaksNotReported><QuestionLabel>Are there any additional breaks in care that you have not already reported to us?</QuestionLabel><Answer>Yes</Answer></AdditionalBreaksNotReported><AdditionalBreaksNotReportedDesc><QuestionLabel>Tell us about the additional breaks</QuestionLabel>
-                <Answer>Other changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther changesOther chanend</Answer></AdditionalBreaksNotReportedDesc>
+                <MoreChanges><QuestionLabel>Tell us more about your changes</QuestionLabel><Answer>Some other info about the change</Answer></MoreChanges>
+                <AdditionalBreaksNotReported><QuestionLabel>Are there any additional breaks from caring that you have not already reported to us?</QuestionLabel><Answer>Yes</Answer></AdditionalBreaksNotReported><AdditionalBreaksNotReportedDesc><QuestionLabel>Tell us about the additional breaks</QuestionLabel><Answer>Other Changes</Answer></AdditionalBreaksNotReportedDesc>
             </BreakFromCaring>
+
 
 
 
@@ -59,10 +58,10 @@
         <ds:SignedInfo>
             <ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
             <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
-            <ds:Reference URI="#TEST432">
+            <ds:Reference URI="#1408TEST432">
                 <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
-                <ds:DigestValue>aODG6jKHB81MYc08zxQhGQMQEZ4=</ds:DigestValue>
+                <ds:DigestValue>ymUW5YICSeFyfW3Ckui6njW5wSk=</ds:DigestValue>
             </ds:Reference>
         </ds:SignedInfo>
-        <ds:SignatureValue>Z6NFjRehuHF+UaK96hyQ0MLncCCVbCKFKm9SMy92NrkLAobDjlB8aw==</ds:SignatureValue>
+        <ds:SignatureValue>N1WSMgOTsBLhnMWvu2XDSP/y/cBAHWbakqrWll3iatgKXMnE04wRNw==</ds:SignatureValue>
     </ds:Signature></DWPBody>

@@ -1,8 +1,8 @@
 <DWPBody xsi:schemaLocation="http://www.govtalk.gov.uk/dwp/carers-allowance file:/future/schema/ca/CarersAllowance_Schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns="http://www.govtalk.gov.uk/dwp/carers-allowance">
     <Version>0.1</Version>
-    <DWPCATransaction id="TEST432">
-        <TransactionId>TEST432</TransactionId>
-        <DateTimeGenerated>28-04-2014 16:21</DateTimeGenerated>
+    <DWPCATransaction id="1408TEST432">
+        <TransactionId>1408TEST432</TransactionId>
+        <DateTimeGenerated>21-08-2014 16:49</DateTimeGenerated>
         <DWPCAChangeOfCircumstances>
             <ClaimantDetails>
                 <FullName><QuestionLabel>Full name</QuestionLabel><Answer>Mr John Roger Smith</Answer></FullName>
@@ -14,6 +14,7 @@
                 <FullName><QuestionLabel>Their full name</QuestionLabel><Answer>Mrs Jane Smith</Answer></FullName>
                 <RelationToClaimant><QuestionLabel>Their relationship to you</QuestionLabel><Answer>Wife</Answer></RelationToClaimant>
             </CareeDetails>
+
 
             <AddressChange>
                 <PreviousAddress>
@@ -45,6 +46,7 @@
 
 
 
+
             <Declaration>
                 <DeclarationStatement>
                     <Title>The declarations below sets out your legal responsibilities in respect of your claim.</Title>
@@ -66,10 +68,10 @@
         <ds:SignedInfo>
             <ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
             <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
-            <ds:Reference URI="#TEST432">
+            <ds:Reference URI="#1408TEST432">
                 <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
-                <ds:DigestValue>R4Glmr8AL2xgpe7cbkLU5a0WVqE=</ds:DigestValue>
+                <ds:DigestValue>VN3gyjq9Ynr/W7fOgGEogRTfhtE=</ds:DigestValue>
             </ds:Reference>
         </ds:SignedInfo>
-        <ds:SignatureValue>giBFnDuIyv8RnkZvfTQe76GMJgBLoiaXOy69DhQHlyVV/or+erTA8g==</ds:SignatureValue>
+        <ds:SignatureValue>eSzG3wts02vwdL2DphJ9a1vz5tl3QGQufVnEfN8/uFZms3ofROimvw==</ds:SignatureValue>
     </ds:Signature></DWPBody>

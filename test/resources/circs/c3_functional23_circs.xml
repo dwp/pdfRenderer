@@ -1,8 +1,8 @@
 <DWPBody xsi:schemaLocation="http://www.govtalk.gov.uk/dwp/carers-allowance file:/future/schema/ca/CarersAllowance_Schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns="http://www.govtalk.gov.uk/dwp/carers-allowance">
     <Version>0.1</Version>
-    <DWPCATransaction id="TEST432">
-        <TransactionId>TEST432</TransactionId>
-        <DateTimeGenerated>30-04-2014 15:57</DateTimeGenerated>
+    <DWPCATransaction id="1408TEST432">
+        <TransactionId>1408TEST432</TransactionId>
+        <DateTimeGenerated>21-08-2014 16:46</DateTimeGenerated>
         <DWPCAChangeOfCircumstances>
             <ClaimantDetails>
                 <FullName><QuestionLabel>Full name</QuestionLabel><Answer>Mr John Roger Smith</Answer></FullName>
@@ -17,8 +17,8 @@
             <BreakFromCaring>
                 <RecentBreakStartDate><QuestionLabel>When did your most recent break from caring start?</QuestionLabel><Answer>03-04-1950</Answer></RecentBreakStartDate>
                 <RecentBreakStartTime><QuestionLabel>Start time</QuestionLabel><Answer>10 am</Answer></RecentBreakStartTime>
-                <WherePersonYouCare><QuestionLabel>Where was the person you care for?</QuestionLabel><Other>In Japan</Other><Answer>Somewhere else</Answer></WherePersonYouCare>
-                <WhereWereYou><QuestionLabel>Where were you?</QuestionLabel><Other>In France</Other><Answer>Somewhere else</Answer></WhereWereYou>
+                <WherePersonYouCare><QuestionLabel>Where was the person you care for?</QuestionLabel><Other>Some other info about the change</Other><Answer>Somewhere else</Answer></WherePersonYouCare>
+                <WhereWereYou><QuestionLabel>Where were you?</QuestionLabel><Other>Some other info about the change</Other><Answer>Somewhere else</Answer></WhereWereYou>
                 <BreakFromCaringEnded>
                     <HasBreakFromCaringEnded><QuestionLabel>Has this break from caring ended?</QuestionLabel><Answer>No</Answer></HasBreakFromCaringEnded>
 
@@ -29,8 +29,9 @@
                 </BreakFromCaringEnded>
                 <MedicalTreatmentDuringBreak><QuestionLabel>Did you or the person you care for receive any medical treatment or professional care during the break?</QuestionLabel><Answer>No</Answer></MedicalTreatmentDuringBreak>
 
-                <AdditionalBreaksNotReported><QuestionLabel>Are there any additional breaks in care that you have not already reported to us?</QuestionLabel><Answer>No</Answer></AdditionalBreaksNotReported>
+                <AdditionalBreaksNotReported><QuestionLabel>Are there any additional breaks from caring that you have not already reported to us?</QuestionLabel><Answer>No</Answer></AdditionalBreaksNotReported>
             </BreakFromCaring>
+
 
 
 
@@ -57,10 +58,10 @@
         <ds:SignedInfo>
             <ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
             <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
-            <ds:Reference URI="#TEST432">
+            <ds:Reference URI="#1408TEST432">
                 <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
-                <ds:DigestValue>PSRJgCOa5HpVHh9eaNVHcbKvNJU=</ds:DigestValue>
+                <ds:DigestValue>YyS0Nf5IqvMRN8AFpYELc7yCqtE=</ds:DigestValue>
             </ds:Reference>
         </ds:SignedInfo>
-        <ds:SignatureValue>DkY/mdqZXwWwXErxXWzwoKDmoMFhUf//PPL2dZ4leQahHlOHNZu/1A==</ds:SignatureValue>
+        <ds:SignatureValue>jaQ5G/zwlWD4Hxpqg+naojDCRT9CCdHsN2pSoKLyU0BoB9dgOMV0RQ==</ds:SignatureValue>
     </ds:Signature></DWPBody>
