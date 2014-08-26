@@ -253,6 +253,16 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsConsentsAndDeclarations.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
+		<band height="50">
+			<subreport>
+				<reportElement uuid="c226320f-849f-42fb-9722-634cac389fcb" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircs_evidenceList.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
 	</detail>
 	<pageFooter>
 		<band height="22" splitType="Stretch">

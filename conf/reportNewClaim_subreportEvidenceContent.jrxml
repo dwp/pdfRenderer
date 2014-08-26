@@ -15,9 +15,9 @@
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="36" splitType="Stretch">
+		<band height="19" splitType="Stretch">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="d1f681c7-12c0-4696-afcf-2d7be4833b58" positionType="Float" x="0" y="0" width="595" height="30" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="d1f681c7-12c0-4696-afcf-2d7be4833b58" positionType="Float" x="0" y="0" width="595" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement>
 					<paragraph lineSpacing="1_1_2"/>
 				</textElement>
