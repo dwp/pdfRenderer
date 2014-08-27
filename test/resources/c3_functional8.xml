@@ -75,32 +75,14 @@
                     <DateEnded><QuestionLabel>When did you finish this job?</QuestionLabel><Answer>31-03-2013</Answer></DateEnded>
 
                 </RecentJobDetails>
-                <CareExpensesChildren><QuestionLabel>While at work, did you pay anyone to care for your children?</QuestionLabel><Answer>Yes</Answer></CareExpensesChildren>
-                <ChildCareExpenses>
-                    <CarerName><QuestionLabel>whoLooksAfterChildren</QuestionLabel><Answer>Mr Childcare</Answer></CarerName>
-                    <Expense>
-                        <Payment><QuestionLabel>howMuchCostChildcare</QuestionLabel><Answer><Currency>GBP</Currency><Amount>124.78</Amount></Answer></Payment>
-                        <Frequency><QuestionLabel>How often did you pay childcare expenses?</QuestionLabel><Other>Other childcare frequency</Other><Answer>Other</Answer></Frequency>
-                    </Expense>
-                    <RelationshipCarerToClaimant><QuestionLabel>relationToYou</QuestionLabel><Answer>Father</Answer></RelationshipCarerToClaimant>
-
-                    <RelationshipCarerToPersonYouCare><QuestionLabel>relationToPersonYouCare</QuestionLabel><Answer>Grandfather</Answer></RelationshipCarerToPersonYouCare>
-                </ChildCareExpenses>
-                <CareExpensesCaree><QuestionLabel>While at work, did you pay anyone to care for the person you care for?</QuestionLabel><Answer>Yes</Answer></CareExpensesCaree>
-                <CareExpenses>
-                    <CarerName><QuestionLabel>whoDoYouPay</QuestionLabel><Answer>Mr Smith</Answer></CarerName>
-                    <Expense>
-                        <Payment><QuestionLabel>howMuchCostCare</QuestionLabel><Answer><Currency>GBP</Currency><Amount>1124.78</Amount></Answer></Payment>
-                        <Frequency><QuestionLabel>How often did you pay expenses related to the person you care for?</QuestionLabel><Answer>Weekly</Answer></Frequency>
-                    </Expense>
-                    <RelationshipCarerToClaimant><QuestionLabel>What relation, if any, is the person/organisation to you?</QuestionLabel><Answer>Father</Answer></RelationshipCarerToClaimant>
-                    <RelationshipCarerToCaree><QuestionLabel>What relation, if any, is this person/organisation to the person you care for?</QuestionLabel><Answer>Grandfather</Answer></RelationshipCarerToCaree>
-                </CareExpenses>
-                <PaidForPension><QuestionLabel>Did you pay towards a personal or stakeholder pension scheme or a retirement annuity scheme?</QuestionLabel><Answer>Yes</Answer></PaidForPension>
-                <PensionScheme>
-                    <Payment><QuestionLabel>How much did you pay?</QuestionLabel><Answer><Currency>GBP</Currency><Amount>400.03</Amount></Answer></Payment>
-                    <Frequency><QuestionLabel>How often did you pay into a Pension?</QuestionLabel><Answer>Fortnightly</Answer></Frequency>
-                </PensionScheme>
+                <PaidForPension><QuestionLabel>Did you pay into a pension and/or have any work related expenses?</QuestionLabel><Answer>Yes</Answer></PaidForPension>
+                <PensionExpenses>
+                    <Expense><QuestionLabel>Tell us what these were for, how much and how often</QuestionLabel><Answer>Some pension expenses paying 200 a week for xyz</Answer></Expense>
+                </PensionExpenses>
+                <PaidForJobExpenses><QuestionLabel>Did you pay for anything necessary to do your job?</QuestionLabel><Answer>Yes</Answer></PaidForJobExpenses>
+                <JobExpenses>
+                    <Expense><QuestionLabel>Tell us what the cost was for, how much, how often and who to.</QuestionLabel><Answer>Some job expenses paying 200 a week for xyz</Answer></Expense>
+                </JobExpenses>
             </SelfEmployment>
             <Employed><QuestionLabel>Have you been employed at any time since 20/12/2012?</QuestionLabel><Answer>Yes</Answer></Employed>
             <Employment>

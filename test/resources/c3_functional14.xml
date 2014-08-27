@@ -190,94 +190,14 @@
                         <Answer>No</Answer>
                     </TradingCeased>
                 </RecentJobDetails>
-                <CareExpensesChildren>
-                    <QuestionLabel>While at work, did you pay anyone to care for your children?</QuestionLabel>
-                    <Answer>Yes</Answer>
-                </CareExpensesChildren>
-                <ChildCareExpenses>
-                    <CarerName>
-                        <QuestionLabel>Name of the person/organisation who looks after your child/children
-                        </QuestionLabel>
-                        <Answer>Tots Nursery</Answer>
-                    </CarerName>
-                    <Expense>
-                        <Payment>
-                            <QuestionLabel>How much did you pay them?</QuestionLabel>
-                            <Answer>
-                                <Currency>GBP</Currency>
-                                <Amount>12.33</Amount>
-                            </Answer>
-                        </Payment>
-                        <Frequency>
-                            <QuestionLabel>How often did you pay childcare expenses?</QuestionLabel>
-                            <Other>as when child is needed to be cared for</Other>
-                            <Answer>Other</Answer>
-                        </Frequency>
-                    </Expense>
-                    <RelationshipCarerToClaimant>
-                        <QuestionLabel>What relation, if any, is the person/organisation to you?</QuestionLabel>
-                        <Answer>Sister</Answer>
-                    </RelationshipCarerToClaimant>
-                    <RelationshipCarerToPartner>
-                        <QuestionLabel>What relation, if any, is the person/organisation to your Partner/Spouse?
-                        </QuestionLabel>
-                        <Answer>Sister-In-Law</Answer>
-                    </RelationshipCarerToPartner>
-                </ChildCareExpenses>
-                <CareExpensesCaree>
-                    <QuestionLabel>While at work, did you pay anyone to care for the person you care for?
-                    </QuestionLabel>
-                    <Answer>Yes</Answer>
-                </CareExpensesCaree>
-                <CareExpenses>
-                    <CarerName>
-                        <QuestionLabel>Name of the person/organisation you did pay</QuestionLabel>
-                        <Answer>Carer's UK</Answer>
-                    </CarerName>
-                    <Expense>
-                        <Payment>
-                            <QuestionLabel>How much did you pay them?</QuestionLabel>
-                            <Answer>
-                                <Currency>GBP</Currency>
-                                <Amount>1234.88</Amount>
-                            </Answer>
-                        </Payment>
-                        <Frequency>
-                            <QuestionLabel>How often did you pay expenses related to the person you care for?
-                            </QuestionLabel>
-                            <Other>test</Other>
-                            <Answer>Other</Answer>
-                        </Frequency>
-                    </Expense>
-                    <RelationshipCarerToClaimant>
-                        <QuestionLabel>What relation, if any, is the person/organisation to you?</QuestionLabel>
-                        <Answer>Brother-In-Law</Answer>
-                    </RelationshipCarerToClaimant>
-                    <RelationshipCarerToCaree>
-                        <QuestionLabel>What relation, if any, is this person/organisation to the person you care for?
-                        </QuestionLabel>
-                        <Answer>Uncle</Answer>
-                    </RelationshipCarerToCaree>
-                </CareExpenses>
-                <PaidForPension>
-                    <QuestionLabel>Did you pay towards a personal or stakeholder pension scheme or a retirement annuity scheme?
-                    </QuestionLabel>
-                    <Answer>Yes</Answer>
-                </PaidForPension>
-                <PensionScheme>
-                    <Payment>
-                        <QuestionLabel>How much did you pay?</QuestionLabel>
-                        <Answer>
-                            <Currency>GBP</Currency>
-                            <Amount>12.76</Amount>
-                        </Answer>
-                    </Payment>
-                    <Frequency>
-                        <QuestionLabel>How often did you pay into a Pension?</QuestionLabel>
-                        <Other>Infrequently</Other>
-                        <Answer>Other</Answer>
-                    </Frequency>
-                </PensionScheme>
+                <PaidForPension><QuestionLabel>Do you pay into a pension and/or have any work related expenses?</QuestionLabel><Answer>Yes</Answer></PaidForPension>
+                <PensionExpenses>
+                    <Expense><QuestionLabel>Tell us what these are for, how much and how often</QuestionLabel><Answer>Some pension expenses paying 200 a week for xyz</Answer></Expense>
+                </PensionExpenses>
+                <PaidForJobExpenses><QuestionLabel>Do you pay for anything necessary to do your job?</QuestionLabel><Answer>Yes</Answer></PaidForJobExpenses>
+                <JobExpenses>
+                    <Expense><QuestionLabel>Tell us what the cost is for, how much, how often and who to.</QuestionLabel><Answer>Some job expenses paying 200 a week for xyz</Answer></Expense>
+                </JobExpenses>
             </SelfEmployment>
             <Employed>
                 <QuestionLabel>Have you been employed at any time since 03/07/2013?</QuestionLabel>

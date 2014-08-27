@@ -135,29 +135,8 @@
                     <SameIncomeOutgoingLevels><QuestionLabel>Are the income, outgoings and profit in these accounts similar to your current level of trading?</QuestionLabel><Answer>No</Answer></SameIncomeOutgoingLevels>
                     <WhyWhenChange><QuestionLabel>Please tell us why and when the change happened</QuestionLabel><Answer>All happened one night34567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890</Answer></WhyWhenChange>
                 </CurrentJobDetails>
-                <CareExpensesChildren><QuestionLabel>While at work, do you pay anyone to care for your children?</QuestionLabel><Answer>Yes</Answer></CareExpensesChildren>
-                <ChildCareExpenses>
-                    <CarerName><QuestionLabel>whoLooksAfterChildren</QuestionLabel><Answer>Mr John Smith</Answer></CarerName>
-                    <Expense>
-                        <Payment><QuestionLabel>howMuchCostChildcare</QuestionLabel><Answer><Currency>GBP</Currency><Amount>12345.99</Amount></Answer></Payment>
-                        <Frequency><QuestionLabel>How often do you pay childcare expenses?</QuestionLabel><Answer>Weekly</Answer></Frequency>
-                    </Expense>
-                    <RelationshipCarerToClaimant><QuestionLabel>relationToYou</QuestionLabel><Answer>Uncle</Answer></RelationshipCarerToClaimant>
-
-                    <RelationshipCarerToPersonYouCare><QuestionLabel>relationToPersonYouCare</QuestionLabel><Answer>Aunt</Answer></RelationshipCarerToPersonYouCare>
-                </ChildCareExpenses>
-                <CareExpensesCaree><QuestionLabel>While at work, do you pay anyone to care for the person you care for?</QuestionLabel><Answer>Yes</Answer></CareExpensesCaree>
-                <CareExpenses>
-                    <CarerName><QuestionLabel>whoDoYouPay</QuestionLabel><Answer>I've got a pretty large name you know? is just for testing p</Answer></CarerName>
-                    <Expense>
-                        <Payment><QuestionLabel>howMuchCostCare</QuestionLabel><Answer><Currency>GBP</Currency><Amount>12345.98</Amount></Answer></Payment>
-                        <Frequency><QuestionLabel>How often do you pay expenses related to the person you care for?</QuestionLabel><Other>Other expenses frequency</Other><Answer>Other</Answer></Frequency>
-                    </Expense>
-                    <RelationshipCarerToClaimant><QuestionLabel>What relation, if any, is the person/organisation to you?</QuestionLabel><Answer>Aunt</Answer></RelationshipCarerToClaimant>
-                    <RelationshipCarerToCaree><QuestionLabel>What relation, if any, is this person/organisation to the person you care for?</QuestionLabel><Answer>Aunt</Answer></RelationshipCarerToCaree>
-                </CareExpenses>
                 <PaidForPension><QuestionLabel>Do you pay towards a personal or stakeholder pension scheme or a retirement annuity scheme?</QuestionLabel><Answer>No</Answer></PaidForPension>
-
+                <PaidForJobExpenses><QuestionLabel>Did you pay for anything necessary to do your job?</QuestionLabel><Answer>No</Answer></PaidForJobExpenses>
             </SelfEmployment>
             <Employed><QuestionLabel>Have you been employed at any time since 01/07/2009?</QuestionLabel><Answer>Yes</Answer></Employed>
             <Employment>
@@ -187,12 +166,14 @@
                         <ConstantEarnings><QuestionLabel>Did you get the same amount each time?</QuestionLabel><Answer>No</Answer></ConstantEarnings>
                     </Pay>
                     <OweMoney><QuestionLabel>Does your employer owe you any money?</QuestionLabel><Answer>No</Answer></OweMoney>
-                    <PaidForPension><QuestionLabel>Did you pay into a pension and/or have any work related expenses?</QuestionLabel><Answer>Yes</Answer></PaidForPension><PensionExpenses>
-                    <Expense><QuestionLabel>Tell us what these were for, how much and how often</QuestionLabel><Answer>Some pension expenses paying 200 a week for xyz</Answer></Expense>
-                </PensionExpenses>
-                    <PaidForJobExpenses><QuestionLabel>Did you pay for anything necessary to do your job?</QuestionLabel><Answer>Yes</Answer></PaidForJobExpenses><JobExpenses>
-                    <Expense><QuestionLabel>Tell us what the cost was for, how much, how often and who to.</QuestionLabel><Answer>Some job expenses paying 200 a week for xyz</Answer></Expense>
-                </JobExpenses>
+                    <PaidForPension><QuestionLabel>Did you pay into a pension and/or have any work related expenses?</QuestionLabel><Answer>Yes</Answer></PaidForPension>
+                    <PensionExpenses>
+                     <Expense><QuestionLabel>Tell us what these were for, how much and how often</QuestionLabel><Answer>Some pension expenses paying 200 a week for xyz</Answer></Expense>
+                    </PensionExpenses>
+                    <PaidForJobExpenses><QuestionLabel>Did you pay for anything necessary to do your job?</QuestionLabel><Answer>Yes</Answer></PaidForJobExpenses>
+                    <JobExpenses>
+                        <Expense><QuestionLabel>Tell us what the cost was for, how much, how often and who to.</QuestionLabel><Answer>Some job expenses paying 200 a week for xyz</Answer></Expense>
+                    </JobExpenses>
                 </JobDetails><JobDetails>
                 <Employer>
                     <CurrentlyEmployed><QuestionLabel>Have you finished this job?</QuestionLabel><Answer>Yes</Answer></CurrentlyEmployed>
@@ -218,12 +199,14 @@
                     <ConstantEarnings><QuestionLabel>Did you get the same amount each time?</QuestionLabel><Answer>No</Answer></ConstantEarnings>
                 </Pay>
                 <OweMoney><QuestionLabel>Does your employer owe you any money?</QuestionLabel><Answer>Yes</Answer></OweMoney>
-                <PaidForPension><QuestionLabel>Did you pay into a pension and/or have any work related expenses?</QuestionLabel><Answer>Yes</Answer></PaidForPension><PensionExpenses>
-                <Expense><QuestionLabel>Tell us what these were for, how much and how often</QuestionLabel><Answer>Some pension expenses paying 200 a week for xyz</Answer></Expense>
-            </PensionExpenses>
-                <PaidForJobExpenses><QuestionLabel>Did you pay for anything necessary to do your job?</QuestionLabel><Answer>Yes</Answer></PaidForJobExpenses><JobExpenses>
-                <Expense><QuestionLabel>Tell us what the cost was for, how much, how often and who to.</QuestionLabel><Answer>Some job expenses paying 200 a week for xyz</Answer></Expense>
-            </JobExpenses>
+                <PaidForPension><QuestionLabel>Did you pay into a pension and/or have any work related expenses?</QuestionLabel><Answer>Yes</Answer></PaidForPension>
+                <PensionExpenses>
+                  <Expense><QuestionLabel>Tell us what these were for, how much and how often</QuestionLabel><Answer>Some pension expenses paying 200 a week for xyz</Answer></Expense>
+                </PensionExpenses>
+                <PaidForJobExpenses><QuestionLabel>Did you pay for anything necessary to do your job?</QuestionLabel><Answer>Yes</Answer></PaidForJobExpenses>
+                <JobExpenses>
+                    <Expense><QuestionLabel>Tell us what the cost was for, how much, how often and who to.</QuestionLabel><Answer>Some job expenses paying 200 a week for xyz</Answer></Expense>
+                </JobExpenses>
             </JobDetails>
             </Employment>
             <HavePartner><QuestionLabel>Have you lived with a partner at any time since your claim date?</QuestionLabel><Answer>Yes</Answer></HavePartner>
