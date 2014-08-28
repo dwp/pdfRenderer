@@ -136,28 +136,19 @@
 		</band>
 	</title>
 	<detail>
-		<band height="40" splitType="Prevent">
-			<staticText>
-				<reportElement uuid="682874b6-bfe4-439f-8bb8-4abdfe329111" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="20">
-					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingBenefitsAndPayments"/>
-				</reportElement>
-				<textElement verticalAlignment="Middle">
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[Benefits and payments]]></text>
-			</staticText>
+		<band height="20" splitType="Prevent">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="61c7218b-715a-4359-9449-ee3c564dbe6f" positionType="Float" x="0" y="20" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="61c7218b-715a-4359-9449-ee3c564dbe6f" positionType="Float" x="0" y="1" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{otherMoneyQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="57e79dc7-f890-477f-831c-ab6a643652c4" style="Answer" positionType="Float" x="420" y="20" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="57e79dc7-f890-477f-831c-ab6a643652c4" style="Answer" positionType="Float" x="420" y="1" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{otherMoneyAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="9bc07f73-bd6f-4c0f-95e5-cc133110592e" positionType="Float" x="0" y="38" width="594" height="1"/>
+				<reportElement uuid="9bc07f73-bd6f-4c0f-95e5-cc133110592e" positionType="Float" x="0" y="19" width="594" height="1"/>
 				<textElement/>
 				<text><![CDATA[]]></text>
 			</staticText>
@@ -224,23 +215,14 @@
 				<textFieldExpression><![CDATA[$F{otherMoneyPaymentFrequencyAnswer}=="Other" ? $F{otherMoneyPaymentFrequencyOther} : ""]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="38" splitType="Prevent">
-			<staticText>
-				<reportElement uuid="374b51ff-5b9a-4217-ae0b-bc874bbb71ac" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="20" isRemoveLineWhenBlank="true">
-					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingStatutoryPay"/>
-				</reportElement>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[Statutory Pay]]></text>
-			</staticText>
+		<band height="19" splitType="Prevent">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="12143880-f4e6-403b-99ba-b142cdbe1dec" positionType="Float" x="0" y="20" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="12143880-f4e6-403b-99ba-b142cdbe1dec" positionType="Float" x="0" y="1" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{otherMoneySSPQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="596d7de4-e047-4f40-95d5-940aaed36461" style="Answer" positionType="Float" x="420" y="20" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="596d7de4-e047-4f40-95d5-940aaed36461" style="Answer" positionType="Float" x="420" y="1" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{otherMoneySSPAnswer}]]></textFieldExpression>
 			</textField>

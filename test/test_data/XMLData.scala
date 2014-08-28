@@ -219,24 +219,10 @@ object XMLData extends TestUtils{
     yourAccounts ++
     Seq ("Pension and expenses",
          buildQuestion(fields.paidForPensionQuestion.text, fields.paidForPensionAnswer.text),
-         buildQuestion(fields.pensionSchemeAmountQuestion.text, fields.pensionSchemeAmountAnswerAmount.text),
-         buildOther(fields.pensionSchemeFrequencyQuestion.text, fields.pensionSchemeFrequencyAnswer.text, fields.pensionSchemeFrequencyOther.text),
-         "Childcare expenses while you are at work",
-         buildQuestion(fields.careExpensesChildrenQuestion.text, fields.careExpensesChildrenAnswer.text),
-         buildQuestion(fields.careExpensesChildrenCarerNameQuestion.text, fields.careExpensesChildrenCarerNameAnswer.text),
-         buildQuestion(fields.careExpensesChildrenPaymentQuestion.text, fields.careExpensesChildrenPaymentAnswerAmount.text),
-         buildOther(fields.careExpensesChildrenPaymentFrequencyQuestion.text, fields.careExpensesChildrenPaymentFrequencyAnswer.text, fields.careExpensesChildrenPaymentFrequencyOther.text),
-         buildQuestion(fields.careExpensesChildrenRelationshipToCarerQuestion.text, fields.careExpensesChildrenRelationshipToCarerAnswer.text),
-         buildQuestion(fields.careExpensesChildrenRelationshipToPartnerQuestion.text, fields.careExpensesChildrenRelationshipToPartnerAnswer.text),
-         buildQuestion(fields.careExpensesChildrenRelationshipToChildQuestion.text, fields.careExpensesChildrenRelationshipToChildAnswer.text),
-         "Expenses related to the person you care for while at work",
-         buildQuestion(fields.careExpensesCareeQuestion.text, fields.careExpensesCareeAnswer.text),
-         buildQuestion(fields.careExpensesCareeCarerNameQuestion.text, fields.careExpensesCareeCarerNameAnswer.text),
-         buildQuestion(fields.careExpensesCareePaymentQuestion.text, fields.careExpensesCareePaymentAnswerAmount.text),
-         buildOther(fields.careExpensesCareePaymentFrequencyQuestion.text, fields.careExpensesCareePaymentFrequencyAnswer.text, fields.careExpensesCareePaymentFrequencyOther.text),
-         buildQuestion(fields.careExpensesRelationshipCarerToClaimantQuestion.text, fields.careExpensesRelationshipCarerToClaimantAnswer.text),
-         buildQuestion(fields.careExpensesRelationshipCarerToPartnerQuestion.text, fields.careExpensesRelationshipCarerToPartnerAnswer.text),
-         buildQuestion(fields.careExpensesRelationshipCarerToPersonYouCareQuestion.text, fields.careExpensesRelationshipCarerToPersonYouCareAnswer.text)
+         buildQuestion(fields.paidForPensionQuestion.text, fields.paidForPensionAnswer.text),
+         buildQuestion(fields.pensionExpensesQuestion.text, fields.pensionExpensesAnswer.text),
+         buildQuestion(fields.paidForJobExpensesQuestion.text, fields.paidForJobExpensesAnswer.text),
+         buildQuestion(fields.jobExpensesQuestion.text, fields.jobExpensesAnswer.text)
       )
   }
 
@@ -261,13 +247,11 @@ object XMLData extends TestUtils{
   def sectionAboutOtherMoney(xml:Elem) = {
     val fields = SectionAboutOtherMoney(xml)
     Seq ("Part 7 - About Other Money",
-      "Benefits and Payments",
       buildQuestion(fields.otherMoneyQuestion.text, fields.otherMoneyAnswer.text),
       buildQuestion(fields.otherMoneyPaymentQuestion.text, fields.otherMoneyPaymentAnswer.text),
       buildQuestion(fields.otherMoneyPaymentNameQuestion.text, fields.otherMoneyPaymentNameAnswer.text),
       buildQuestion(fields.otherMoneyPaymentAmountQuestion.text, fields.otherMoneyPaymentAmountAmount.text),
       buildOther(fields.otherMoneyPaymentFrequencyQuestion.text, fields.otherMoneyPaymentFrequencyAnswer.text, fields.otherMoneyPaymentFrequencyOther.text),
-      "Statutory Pay",
       buildQuestion(fields.otherMoneySSPQuestion.text, fields.otherMoneySSPAnswer.text),
       buildQuestion(fields.otherMoneySSPPaymentAmountQuestion.text, fields.otherMoneySSPPaymentAmountAmount.text),
       buildOther(fields.otherMoneySSPPaymentFrequencyQuestion.text, fields.otherMoneySSPPaymentFrequencyAnswer.text, fields.otherMoneySSPPaymentFrequencyOther.text),
