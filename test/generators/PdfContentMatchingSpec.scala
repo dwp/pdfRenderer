@@ -39,12 +39,10 @@ trait PdfContentMatchingSpec extends Specification{
   def foundMustBeTrue(testData: Seq[String], totalContent: String) = {
     testData.forall(x => {
       Logger.trace(s"x : $x")
-      //println("*************************************************************")
-      //println(s"x : $x")
       val found = matchIndividualContent (x.toLowerCase, totalContent.toLowerCase)
       if (!found) {
         Logger.error("TotalContent " + totalContent)
-        Logger.debug("*** Cannot find: " + x.toLowerCase)
+        Logger.error("*** Cannot find: " + x.toLowerCase)
         Logger.debug("*** End ***")
       }
       found

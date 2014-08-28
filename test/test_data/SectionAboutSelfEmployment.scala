@@ -39,57 +39,13 @@ case class SectionAboutSelfEmployment(xml: Elem) {
   val paidForPensionQuestion = rootPath  \\ "SelfEmployment" \\ "PaidForPension" \\ "QuestionLabel"
   val paidForPensionAnswer = rootPath  \\ "SelfEmployment" \\ "PaidForPension" \\ "Answer"
 
-  val pensionSchemeAmountQuestion = rootPath  \\ "SelfEmployment" \\ "PensionScheme" \\ "Payment" \\ "QuestionLabel"
-  val pensionSchemeAmountAnswerAmount = rootPath  \\ "SelfEmployment" \\ "PensionScheme" \\ "Payment" \\ "Answer" \\ "Amount"
-  val pensionSchemeAmountAnswerCurrency = rootPath  \\ "SelfEmployment" \\ "PensionScheme" \\ "Payment" \\ "Answer" \\ "Currency"
+  val pensionExpensesQuestion = rootPath  \\ "SelfEmployment" \\"PensionExpenses" \\ "Expense" \\ "QuestionLabel"
+  val pensionExpensesAnswer = rootPath \\ "SelfEmployment" \\"PensionExpenses" \\ "Expense" \\ "Answer"
 
-  val pensionSchemeFrequencyQuestion = rootPath  \\ "SelfEmployment" \\ "PensionScheme" \\ "Frequency" \\ "QuestionLabel"
-  val pensionSchemeFrequencyAnswer = rootPath  \\ "SelfEmployment" \\ "PensionScheme" \\ "Frequency" \\ "Answer"
-  val pensionSchemeFrequencyOther = rootPath  \\ "SelfEmployment" \\ "PensionScheme" \\ "Frequency" \\ "Other"
+  val paidForJobExpensesQuestion = rootPath  \\ "SelfEmployment" \\ "PaidForJobExpenses" \\ "QuestionLabel"
+  val paidForJobExpensesAnswer = rootPath  \\ "SelfEmployment" \\ "PaidForJobExpenses" \\ "Answer"
 
-  val careExpensesChildrenQuestion = rootPath  \\ "SelfEmployment" \\ "CareExpensesChildren" \\ "QuestionLabel"
-  val careExpensesChildrenAnswer = rootPath  \\ "SelfEmployment" \\ "CareExpensesChildren" \\ "Answer"
+  val jobExpensesQuestion = rootPath  \\ "SelfEmployment" \\"JobExpenses" \\ "Expense" \\ "QuestionLabel"
+  val jobExpensesAnswer = rootPath \\ "SelfEmployment" \\"JobExpenses" \\ "Expense" \\ "Answer"
 
-  val careExpensesChildrenCarerNameQuestion = rootPath  \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "CarerName" \\ "QuestionLabel"
-  val careExpensesChildrenCarerNameAnswer = rootPath  \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "CarerName" \\ "Answer"
-
-  val careExpensesChildrenPaymentQuestion = rootPath  \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "Expense" \\ "Payment" \\ "Amount" \\ "QuestionLabel"
-  val careExpensesChildrenPaymentAnswerAmount = rootPath  \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "Expense" \\ "Payment" \\ "Answer" \\ "Amount"
-  val careExpensesChildrenPaymentAnswerCurrency = rootPath  \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "Expense" \\ "Payment" \\ "Answer" \\ "Currency"
-
-  val careExpensesChildrenPaymentFrequencyQuestion = rootPath  \\ "SelfEmployment" \\ "ChildCareExpenses"  \\ "Expense" \\ "Frequency" \\ "QuestionLabel"
-  val careExpensesChildrenPaymentFrequencyAnswer = rootPath  \\ "SelfEmployment" \\ "ChildCareExpenses"  \\ "Expense" \\ "Frequency" \\ "Answer"
-  val careExpensesChildrenPaymentFrequencyOther = rootPath  \\ "SelfEmployment" \\ "ChildCareExpenses"  \\ "Expense" \\ "Frequency" \\ "Other"
-
-  val careExpensesChildrenRelationshipToCarerQuestion = rootPath  \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "RelationshipCarerToClaimant" \\ "QuestionLabel"
-  val careExpensesChildrenRelationshipToCarerAnswer = rootPath  \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "RelationshipCarerToClaimant" \\ "Answer"
-
-  val careExpensesChildrenRelationshipToPartnerQuestion = rootPath  \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "RelationshipCarerToPartner" \\ "QuestionLabel"
-  val careExpensesChildrenRelationshipToPartnerAnswer = rootPath  \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "RelationshipCarerToPartner" \\ "Answer"
-
-  val careExpensesChildrenRelationshipToChildQuestion = rootPath  \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "RelationshipCarerToChild" \\ "QuestionLabel"
-  val careExpensesChildrenRelationshipToChildAnswer = rootPath  \\ "SelfEmployment" \\ "ChildCareExpenses" \\ "RelationshipCarerToChild" \\ "Answer"
-
-  val careExpensesCareeQuestion = rootPath  \\ "SelfEmployment" \\ "CareExpensesCaree" \\ "QuestionLabel"
-  val careExpensesCareeAnswer = rootPath  \\ "SelfEmployment" \\ "CareExpensesCaree" \\ "Answer"
-
-  val careExpensesCareeCarerNameQuestion = rootPath  \\ "SelfEmployment" \\ "CareExpenses" \\ "CarerName" \\ "QuestionLabel"
-  val careExpensesCareeCarerNameAnswer = rootPath  \\ "SelfEmployment" \\ "CareExpenses" \\ "CarerName" \\ "Answer"
-
-  val careExpensesCareePaymentQuestion = rootPath  \\ "SelfEmployment" \\ "CareExpenses"  \\ "Expense" \\ "Payment" \\ "Amount" \\ "QuestionLabel"
-  val careExpensesCareePaymentAnswerAmount = rootPath  \\ "SelfEmployment" \\ "CareExpenses"  \\ "Expense" \\ "Payment" \\ "Answer" \\ "Amount"
-  val careExpensesCareePaymentAnswerCurrency = rootPath  \\ "SelfEmployment" \\ "CareExpenses"  \\ "Expense" \\ "Payment" \\ "Answer" \\ "Currency"
-
-  val careExpensesCareePaymentFrequencyQuestion = rootPath  \\ "SelfEmployment" \\ "CareExpenses"  \\ "Expense" \\ "Payment" \\ "Frequency" \\ "QuestionLabel"
-  val careExpensesCareePaymentFrequencyAnswer = rootPath  \\ "SelfEmployment" \\ "CareExpenses"  \\ "Expense" \\ "Payment" \\ "Frequency" \\ "Answer"
-  val careExpensesCareePaymentFrequencyOther = rootPath  \\ "SelfEmployment" \\ "CareExpenses"  \\ "Expense" \\ "Payment" \\ "Frequency" \\ "Other"
-
-  val careExpensesRelationshipCarerToClaimantQuestion = rootPath  \\ "SelfEmployment" \\ "CareExpenses" \\ "RelationshipCarerToClaimant" \\ "QuestionLabel"
-  val careExpensesRelationshipCarerToClaimantAnswer = rootPath  \\ "SelfEmployment" \\ "CareExpenses" \\ "RelationshipCarerToClaimant" \\ "Answer"
-
-  val careExpensesRelationshipCarerToPartnerQuestion = rootPath  \\ "SelfEmployment" \\ "CareExpenses" \\ "RelationshipCarerToPartner" \\ "QuestionLabel"
-  val careExpensesRelationshipCarerToPartnerAnswer = rootPath  \\ "SelfEmployment" \\ "CareExpenses" \\ "RelationshipCarerToPartner" \\ "Answer"
-
-  val careExpensesRelationshipCarerToPersonYouCareQuestion = rootPath  \\ "SelfEmployment" \\ "CareExpenses" \\ "RelationshipCarerToPersonYouCare" \\ "QuestionLabel"
-  val careExpensesRelationshipCarerToPersonYouCareAnswer = rootPath  \\ "SelfEmployment" \\ "CareExpenses" \\ "RelationshipCarerToPersonYouCare" \\ "Answer"
 }
