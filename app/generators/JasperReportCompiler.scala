@@ -25,11 +25,8 @@ object JasperReportCompiler {
       Logger.info(s"jrxmlLocation = $jrxmlLocation - jasperLocation = $jasperLocation")
       val allFiles = new File(jrxmlLocation)
       if (allFiles != null && allFiles.listFiles != null) {
-        val folders = allFiles.listFiles.filter(_.isDirectory)
-        if (folders != null) {
-          for (folder <- folders) {
+        allFiles.listFiles.filter(_.isDirectory).foreach { folder =>
             compileReportsInFolder(folder.getName)
-          }
         }
       }
     } catch {
