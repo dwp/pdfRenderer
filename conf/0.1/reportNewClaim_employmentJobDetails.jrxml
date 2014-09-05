@@ -5,7 +5,7 @@
 	<property name="ireport.y" value="124"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<property name="net.sf.jasperreports.export.html.remove.emtpy.space.between.rows" value="true"/>
-	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
+	<template><![CDATA[$P{SUBREPORT_DIR} + "StyleTemplateClaim.jrtx"]]></template>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
 	</parameter>
