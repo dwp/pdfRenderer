@@ -1,13 +1,12 @@
 import java.net.InetAddress
 
-import generators.ReportGenerator
-import org.slf4j.MDC
-import play.api.{Logger, Application, GlobalSettings}
-import play.api.mvc._
-import monitoring.RenderingServiceMonitorRegistration
-import monitor.MonitorFilter
-import monitor._
 import app.ConfigProperties._
+import generators.{JasperReportCompiler, ReportGenerator}
+import monitor.MonitorFilter
+import monitoring.RenderingServiceMonitorRegistration
+import org.slf4j.MDC
+import play.api.mvc._
+import play.api.{Application, GlobalSettings, Logger}
 
 object Global extends WithFilters(MonitorFilter) with RenderingServiceMonitorRegistration with GlobalSettings with ReportGenerator {
 
@@ -22,8 +21,8 @@ object Global extends WithFilters(MonitorFilter) with RenderingServiceMonitorReg
     registerReporters()
 
     // compile jasper reports if they are not already compiled
-    Logger.info("Calling compile reports")
-    compileAllReports()
+    Logger.info("RS Calling compile reports")
+    JasperReportCompiler.compileAllReports()
     Logger.info("RS (RenderingService) started.")
   }
 
