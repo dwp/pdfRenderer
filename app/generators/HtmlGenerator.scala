@@ -1,5 +1,6 @@
 package generators
 
+import helpers.CarersWriter
 import net.sf.jasperreports.engine.{JRExporterParameter, JasperPrint}
 import java.io.OutputStream
 import play.api.Logger

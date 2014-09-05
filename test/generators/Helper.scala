@@ -1,6 +1,8 @@
 package generators
 
 import java.io.{FileOutputStream, File}
+import helpers.VersionExtractor
+
 import scala.xml.Elem
 import data_sources.XmlDataSource
 
@@ -22,7 +24,7 @@ object Helper {
 
   private def generateFile(fileLocation:String, xml:Elem, generator: ReportGenerator) = {
     val dataSource = new XmlDataSource(xml)
-    val print = generator.generateFrom(dataSource)
+    val print = generator.generateFrom(dataSource, VersionExtractor.extractVersionFrom(xml))
     val file = new FileOutputStream(fileLocation)
     generator.exportReportToStream(print, file)
   }

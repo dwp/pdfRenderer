@@ -6,7 +6,7 @@ import net.sf.jasperreports.crosstabs.JRCrosstab
 /**
  * Interface for compiling .jasper reports by recursively reading and compiling subreports.
  */
-abstract class ReportCompiler extends JRVisitor {
+abstract class ReportCompilerVisitor extends JRVisitor {
   def visitBreak(breakElement: JRBreak) = {}
 
   def visitChart(chart: JRChart) = {}

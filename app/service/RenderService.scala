@@ -1,5 +1,6 @@
 package service
 
+import helpers.VersionExtractor
 import play.api.mvc.{Request, AnyContent, Results}
 import generators.{GenerationFailure, GenerationSuccess, ReportGenerator}
 import pdfService.Implicits._
@@ -30,7 +31,7 @@ trait RenderService {
         val transactionId = if (node.isEmpty) "" else node.text
         try {
           Logger.debug("treating XML received.")
-          val print = generator.generateFrom(xml)
+          val print = generator.generateFrom(xml, VersionExtractor.extractVersionFrom(xml))
 
           generator.exportReportToStream(print, outputStream) match {
             case GenerationSuccess() =>

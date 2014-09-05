@@ -1,5 +1,6 @@
 package generators
 
+import helpers.VersionExtractor
 import org.specs2.mutable._
 import data_sources.{InvalidSourceFormatException, XmlDataSource}
 import test_data.ClaimBuilder
@@ -22,7 +23,7 @@ class PdfGeneratorCommonSpec extends Specification {
       val generatorResult = None
       try{
         val dataSource = new XmlDataSource(xml)
-        val jasperPrint = PdfGenerator.generateFrom(dataSource)
+        val jasperPrint = PdfGenerator.generateFrom(dataSource, VersionExtractor.extractVersionFrom(xml))
         PdfGenerator.exportReportToStream(jasperPrint, new FileOutputStream(pdfFileLocation))
       }catch {
         case ise:InvalidSourceFormatException => success
@@ -35,7 +36,7 @@ class PdfGeneratorCommonSpec extends Specification {
       val pdfFileLocation = "goodClaimSuccess.pdf"
       val xml = ClaimBuilder.goodClaim
       val dataSource = new XmlDataSource(xml)
-      val print = PdfGenerator.generateFrom(dataSource)
+      val print = PdfGenerator.generateFrom(dataSource, VersionExtractor.extractVersionFrom(xml))
       val generatorResult = PdfGenerator.exportReportToStream(print, new FileOutputStream(pdfFileLocation))
       generatorResult must beAnInstanceOf[GenerationSuccess]
       deleteFile(pdfFileLocation)
@@ -45,7 +46,7 @@ class PdfGeneratorCommonSpec extends Specification {
       val pdfFileLocation = "goodClaimCreate.pdf"
       val xml = ClaimBuilder.goodClaim
       val dataSource = new XmlDataSource(xml)
-      val print = PdfGenerator.generateFrom(dataSource)
+      val print = PdfGenerator.generateFrom(dataSource, VersionExtractor.extractVersionFrom(xml))
       PdfGenerator.exportReportToStream(print, new FileOutputStream(pdfFileLocation))
       val pdfFile = new File(pdfFileLocation)
       pdfFile.exists() must beTrue
@@ -60,7 +61,7 @@ class PdfGeneratorCommonSpec extends Specification {
         val pdfFileLocation = "parallelTestFile" + x + ".pdf"
         val xml =  XML.load(getClass.getResource("/c3_functional9.xml"))
         val dataSource = new XmlDataSource(xml)
-        val print = PdfGenerator.generateFrom(dataSource)
+        val print = PdfGenerator.generateFrom(dataSource, VersionExtractor.extractVersionFrom(xml))
         PdfGenerator.exportReportToStream(print, new FileOutputStream(pdfFileLocation))
         val pdfFile = new File(pdfFileLocation)
         pdfFile.exists()

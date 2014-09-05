@@ -1,4 +1,4 @@
-package generators;
+package helpers;
 
 
 import java.io.BufferedWriter;
