@@ -85,7 +85,7 @@ object JasperReportCompiler {
           Logger.info(s"[$index/${files.size}] Jasper template ${reportNameArr(0)}")
           JasperReportCompiler.compileReport(reportNameArr(0), path)
         }
-        else Logger.error("Error reading from jrxml directory")
+        else Logger.error(s"Error reading from jrxml directory ${path.getOrElse("")}.")
       }
     }
 

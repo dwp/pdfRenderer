@@ -50,7 +50,7 @@ trait RenderService {
         }
         catch {
           case e: InvalidSourceFormatException =>
-            Logger.error(s"Could not render for transactionId [${transactionId}]")
+            Logger.error(s"Could not render for transactionId [${transactionId}]",e)
             Results.BadRequest // Error already logged by generator
           case t: Throwable => {
             Logger.error(s"Could not render for transactionId [${transactionId}]. ${t.getMessage}",t)

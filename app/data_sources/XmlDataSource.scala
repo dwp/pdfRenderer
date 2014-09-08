@@ -30,7 +30,7 @@ case class XmlDataSource(source: NodeSeq) extends ReportDataSource {
     circsElement.isEmpty match {
       case true => {
         claimElement.isEmpty match {
-          case true => throw new InvalidSourceFormatException("XmlDataSource did not contain an XML element that matches a jasper template")
+          case true => throw new InvalidSourceFormatException("XmlDataSource did not contain an XML element that matches a jasper template.")
           case false => claimJasperTemplate
         }
       }
@@ -70,7 +70,7 @@ case class XmlDataSource(source: NodeSeq) extends ReportDataSource {
       }
     } catch {
       case e: RuntimeException =>
-        Logger.error("Sensitive data decryption failed.")
+        Logger.error(s"Sensitive data decryption failed. ${e.getMessage}")
         throw e
     }
 
