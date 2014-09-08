@@ -22,6 +22,7 @@ case class SectionAboutEmployment(xml: Elem) {
         map(x => {
         Seq((x \\ "CurrentlyEmployed" \ "QuestionLabel").text+" "+(x \\ "CurrentlyEmployed" \ "Answer").text,
           (x \\ "Name" \\ "QuestionLabel").text+ " "+(x \\ "Name" \\ "Answer").text,
+          (x \\ "DidJobStartBeforeClaimDate" \\ "QuestionLabel").text+ " "+(x \\ "DidJobStartBeforeClaimDate" \\ "Answer").text,
           (x \\ "DateJobStarted" \\ "QuestionLabel").text+" "+(x \\ "DateJobStarted" \\ "Answer").text,
           (x \\ "DateJobEnded" \\ "QuestionLabel").text+" "+(x \\ "DateJobEnded" \\ "Answer").text,
           (x \\ "P45LeavingDate" \\ "QuestionLabel").text+" "+(x \\ "P45LeavingDate" \\ "Answer").text,
