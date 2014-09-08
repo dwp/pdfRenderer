@@ -4,10 +4,13 @@
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
-	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
+	<template><![CDATA[ $P{TEMPLATE_DIR} + "StyleTemplateClaim.jrtx"]]></template>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
-		<defaultValueExpression><![CDATA["/Users/valtechuk/carers-dev-pdf/pdfService/pdfService/conf/"]]></defaultValueExpression>
+		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
 	</parameter>
+	<parameter name="TEMPLATE_DIR" class="java.lang.String">
+    		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+    </parameter>
 	<field name="Question" class="java.lang.String">
 		<fieldDescription><![CDATA[QuestionLabel]]></fieldDescription>
 	</field>

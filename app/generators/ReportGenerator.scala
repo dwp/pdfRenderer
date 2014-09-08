@@ -30,6 +30,7 @@ trait ReportGenerator {
       JasperReportCompiler.compileReport(reportName, version)
       val parameter: util.Map[String, Object] = new util.HashMap[String, Object]()
       parameter.put("SUBREPORT_DIR", realJasperLocation)
+      parameter.put("TEMPLATE_DIR", JasperReportCompiler.fullJrxmlLocation(version))
       val jasperPrint = JasperFillManager.fillReport(jasperFilename, parameter, source.convertToJRDataSource())
       if (null != jasperPrint) Some(jasperPrint) else None
     }

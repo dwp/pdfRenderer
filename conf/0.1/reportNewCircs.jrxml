@@ -5,7 +5,7 @@
 	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CircsTestCase10"/>
-	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
+	<template><![CDATA[ $P{TEMPLATE_DIR} + "StyleTemplateClaim.jrtx"]]></template>
 	<style name="table">
 		<box>
 			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
@@ -50,9 +50,12 @@
 		</box>
 	</style>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String">
-		<defaultValueExpression><![CDATA["conf/"]]></defaultValueExpression>
+		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
 	</parameter>
-	<queryString language="xPath">
+	<parameter name="TEMPLATE_DIR" class="java.lang.String">
+    		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+    </parameter>
+    <queryString language="xPath">
 		<![CDATA[/]]>
 	</queryString>
 	<field name="Version" class="java.lang.String">
@@ -162,6 +165,9 @@
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsIdentification.jasper"]]></subreportExpression>
 			</subreport>
@@ -172,6 +178,9 @@
 				<reportElement uuid="5bdc073c-2e2f-4019-a5f3-adb0b7895289" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsStoppedCaring.jasper"]]></subreportExpression>
@@ -184,6 +193,9 @@
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsChangeOfAddress.jasper"]]></subreportExpression>
 			</subreport>
@@ -194,6 +206,9 @@
 				<reportElement uuid="e01f87d6-f598-42e2-8c0e-1f63d48f456a" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsPaymentBankDetails.jasper"]]></subreportExpression>
@@ -206,6 +221,9 @@
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsSelfEmployment.jasper"]]></subreportExpression>
 			</subreport>
@@ -216,6 +234,9 @@
 				<reportElement uuid="03480f1a-abfb-4123-861f-0e5af4094c81" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsBreaksInCare.jasper"]]></subreportExpression>
@@ -228,6 +249,9 @@
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsEmploymentChange.jasper"]]></subreportExpression>
 			</subreport>
@@ -239,6 +263,9 @@
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsAdditionalInfo.jasper"]]></subreportExpression>
 			</subreport>
@@ -249,6 +276,9 @@
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsConsentsAndDeclarations.jasper"]]></subreportExpression>
 			</subreport>
@@ -258,6 +288,9 @@
 				<reportElement uuid="c226320f-849f-42fb-9722-634cac389fcb" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircs_evidenceList.jasper"]]></subreportExpression>

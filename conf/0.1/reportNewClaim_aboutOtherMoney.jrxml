@@ -4,10 +4,13 @@
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
-	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
+	<template><![CDATA[ $P{TEMPLATE_DIR} + "StyleTemplateClaim.jrtx"]]></template>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
-		<defaultValueExpression><![CDATA["/Users/jmi/Dropbox/Valtech/Carers/JasperReports/"]]></defaultValueExpression>
+		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
 	</parameter>
+	<parameter name="TEMPLATE_DIR" class="java.lang.String">
+    		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+    </parameter>
 	<queryString language="XPath">
 		<![CDATA[/]]>
 	</queryString>
@@ -299,6 +302,9 @@
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
 				<subreportParameter name="postCode">
 					<subreportParameterExpression><![CDATA["Employer's Postcode"]]></subreportParameterExpression>
 				</subreportParameter>
@@ -388,6 +394,9 @@
 				<reportElement uuid="35137a21-8cdc-4abb-8133-c3754e88b753" positionType="Float" x="0" y="94" width="595" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
 				<subreportParameter name="postCode">
 					<subreportParameterExpression><![CDATA["Employer's Postcode"]]></subreportParameterExpression>

@@ -4,7 +4,7 @@
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
-	<template><![CDATA["StyleTemplateClaim.jrtx"]]></template>
+	<template><![CDATA[ $P{TEMPLATE_DIR} + "StyleTemplateClaim.jrtx"]]></template>
 	<style name="table">
 		<box>
 			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
@@ -51,6 +51,9 @@
 	<parameter name="SUBREPORT_DIR" class="java.lang.String">
 		<defaultValueExpression><![CDATA["conf/"]]></defaultValueExpression>
 	</parameter>
+	<parameter name="TEMPLATE_DIR" class="java.lang.String">
+    		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+    </parameter>
 	<parameter name="SUMMARY_PAGE_NUMBER" class="java.lang.Integer" isForPrompting="false">
 		<defaultValueExpression><![CDATA[2]]></defaultValueExpression>
 	</parameter>
@@ -156,6 +159,9 @@
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_aboutYouTheCarer.jasper"]]></subreportExpression>
 			</subreport>
@@ -165,6 +171,9 @@
 				<reportElement uuid="75564d7a-a29b-41fc-a89c-debc7307f3fb" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_aboutYourPartner.jasper"]]></subreportExpression>
@@ -176,6 +185,9 @@
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_aboutTheCareYouProvide.jasper"]]></subreportExpression>
 			</subreport>
@@ -185,6 +197,9 @@
 				<reportElement uuid="32e318d3-4311-4a9d-9fb2-13e3f6bb8c40" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_AboutYourEducation.jasper"]]></subreportExpression>
@@ -196,6 +211,9 @@
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_aboutEmployment.jasper"]]></subreportExpression>
 			</subreport>
@@ -205,6 +223,9 @@
 				<reportElement uuid="4e2c7d53-6a5a-4343-933f-005fbdd500d2" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_aboutSelfEmployment.jasper"]]></subreportExpression>
@@ -216,6 +237,9 @@
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_aboutOtherMoney.jasper"]]></subreportExpression>
 			</subreport>
@@ -225,6 +249,9 @@
 				<reportElement uuid="9698f1c6-8133-4262-83e4-8567c8ee247f" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_aboutYourPayDetails.jasper"]]></subreportExpression>
@@ -236,6 +263,9 @@
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_ConsentsAndDeclarations.jasper"]]></subreportExpression>
 			</subreport>
@@ -245,6 +275,9 @@
 				<reportElement uuid="541dfba5-c6b0-442f-9bd1-ec584e4b89ca" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_evidenceList.jasper"]]></subreportExpression>
