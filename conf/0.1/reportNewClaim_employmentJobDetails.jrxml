@@ -216,9 +216,7 @@
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="4406d9b7-7956-4b70-9ce0-b6c518c8548a" style="Answer" positionType="Float" x="420" y="20" width="174" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement markup="none">
-					<font isBold="false" isItalic="false"/>
-				</textElement>
+                <textElement/>
 				<textFieldExpression><![CDATA[$F{JobDetailsEmployerDidJobStartBeforeClaimDateAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
