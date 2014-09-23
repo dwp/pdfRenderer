@@ -35,9 +35,10 @@ object ApplicationBuild extends Build {
 //    files map(p=>println(p))
   }
 
+  var sJ: Seq[Def.Setting[_]] = Seq(javaOptions in Test += "-Djava.awt.headless=true")
   var sV: Seq[Def.Setting[_]] = Seq(scalaVersion := "2.10.3")
   val compilerSettings: Seq[Def.Setting[_]] = Seq(scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8","-feature"))
-  var appSettings: Seq[Def.Setting[_]] = repo ++ sV ++ compilerSettings ++ cleanjsprTask ++ ScalastylePlugin.Settings
+  var appSettings: Seq[Def.Setting[_]] = repo ++ sV ++ compilerSettings ++ cleanjsprTask ++ sJ ++ ScalastylePlugin.Settings
 
   val main = play.Project(appName, appVersion, appDependencies).settings(appSettings: _*)
 
