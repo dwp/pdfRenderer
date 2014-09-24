@@ -1,5 +1,5 @@
 <DWPBody xsi:schemaLocation="http://www.govtalk.gov.uk/dwp/carers-allowance file:/future/schema/ca/CarersAllowance_Schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns="http://www.govtalk.gov.uk/dwp/carers-allowance">
-    <Version>0.2</Version>
+    <Version>0.1</Version>
     <DWPCATransaction id="1408TEST432">
         <TransactionId>1408TEST432</TransactionId>
         <DateTimeGenerated>21-08-2014 15:08</DateTimeGenerated>
@@ -67,7 +67,9 @@
             <HavePartner><QuestionLabel>Have you lived with a partner at any time since your claim date?</QuestionLabel><Answer>No</Answer></HavePartner>
 
             <OtherBenefits>
-
+                <ClaimantBenefits>
+                    <StatePension><QuestionLabel>Do you get State Pension?</QuestionLabel><Answer>Yes</Answer></StatePension>
+                </ClaimantBenefits>
                 <OtherMoneySSP><QuestionLabel>Have you had any Statutory Sick Pay (SSP) since the date you want to claim from 21/07/2013?</QuestionLabel><Answer>No</Answer></OtherMoneySSP>
 
                 <OtherMoneySP><QuestionLabel>Have you had any Statutory Maternity Pay (SMP), Statutory Paternity Pay (SPP) or Statutory Adoption Pay (SAP) since the date you want to claim from 21/07/2013?</QuestionLabel><Answer>No</Answer></OtherMoneySP>

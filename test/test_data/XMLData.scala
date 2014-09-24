@@ -125,7 +125,7 @@ object XMLData extends TestUtils{
       fields.nationalityAnswer.text,
       buildQuestion(fields.receiveEEAPensionsBenefitsQuestion.text, fields.receiveEEAPensionsBenefitsAnswer.text),
       buildQuestion(fields.timeOutsideGBLast3YearsQuestion.text, fields.timeOutsideGBLast3YearsAnswer.text),
-      buildQuestion(fields.statePensionQuestion.text, fields.statePensionAnswer.text),
+      buildQuestion(fields.statePensionQuestion.text, fields.statePensionAnswer.text), // this field is only valid for 0.1: Remove this when you remove 0.1 version
       buildQuestion(fields.otherInformationWelshCommunicationQuestion.text, fields.otherInformationWelshCommunicationAnswer.text),
       buildQuestion(fields.otherInformationAddtionalInformationQuestion.text, fields.otherInformationAddtionalInformationAnswer.text),
       "Transaction " + fields.transactionPath.text

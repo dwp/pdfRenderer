@@ -13,7 +13,7 @@ import scala.xml.XML
 
 /**
  * Test PdfGenerator with the implicits defined in package object data_sources.
- * @author Jorge Migueis
+ *
  */
 class PdfGeneratorCommonSpec extends Specification {
   "PdfGeneratorCommonSpec" should {

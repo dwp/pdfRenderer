@@ -10,10 +10,16 @@ import scala.xml.XML
 class VersionExtractorSpec extends Specification with Tags {
 
   "The helper" should {
-    "Extract version from valid XML" in {
-      val xml = XML.load(getClass getResource "/c3_functional1.xml")
+    "Extract version 0.1 from valid XML" in {
+      val xml = XML.load(getClass getResource "/0.1/claim/c3_functional1.xml")
       VersionExtractor.extractVersionFrom(xml).get mustEqual "0.1"
     }
+
+    "Extract version 0.2 from valid XML" in {
+      val xml = XML.load(getClass getResource "/0.2/claim/c3_functional1.xml")
+      VersionExtractor.extractVersionFrom(xml).get mustEqual "0.2"
+    }
+
     "Not extract invalid version" in {
       var xml = <DWPBody><Version>3ksdjfalk</Version></DWPBody>
       VersionExtractor.extractVersionFrom(xml) mustEqual  None

@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewCircs" language="groovy" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="90378acd-33ad-413e-ad03-6f54642cad18">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CircsTestCase10"/>
+	<template><![CDATA[ $P{TEMPLATE_DIR} + "StyleTemplateClaim.jrtx"]]></template>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#D9C3C3">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#FFE6E6">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String">
+		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="TEMPLATE_DIR" class="java.lang.String">
+    		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+    </parameter>
+    <queryString language="xPath">
+		<![CDATA[/]]>
+	</queryString>
+	<field name="Version" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/Version]]></fieldDescription>
+	</field>
+	<field name="ClaimantSurname" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/ClaimantDetails/FullName/Answer]]></fieldDescription>
+	</field>
+	<field name="NationalInsuranceNumber" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/ClaimantDetails/NationalInsuranceNumber/Answer]]></fieldDescription>
+	</field>
+	<field name="TransactionId" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/TransactionId]]></fieldDescription>
+	</field>
+	<field name="ClaimantTitle" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Title]]></fieldDescription>
+	</field>
+	<field name="DateTimeGenerated" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DateTimeGenerated]]></fieldDescription>
+	</field>
+	<field name="ShowStoppedCaringSection" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/StoppedCaring]]></fieldDescription>
+	</field>
+	<field name="ShowSelfEmployedSection" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/SelfEmployedChange]]></fieldDescription>
+	</field>
+	<field name="ShowPaymentBankDetailsSection" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/PaymentChange]]></fieldDescription>
+	</field>
+	<field name="ShowChangeOfAddressSection" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/AddressChange]]></fieldDescription>
+	</field>
+	<field name="ShowBreaksInCareSection" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/BreakFromCaring]]></fieldDescription>
+	</field>
+	<field name="ShowEmploymentChangeSection" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange]]></fieldDescription>
+	</field>
+	<field name="showOtherChangesSection" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/OtherChanges/Answer]]></fieldDescription>
+	</field>
+	<variable name="ClaimantTitleUpper" class="java.lang.String">
+		<variableExpression><![CDATA[$F{ClaimantSurname}.toUpperCase()]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="42" splitType="Stretch">
+			<frame>
+				<reportElement uuid="f8b53fbe-5298-44b4-8221-8cb5fe105405" x="0" y="0" width="592" height="41"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textField>
+					<reportElement uuid="5c2d716d-3052-4233-ac3c-0c90ac6a3fad" x="2" y="1" width="433" height="20"/>
+					<textElement/>
+					<textFieldExpression><![CDATA["Date Received: "+$F{DateTimeGenerated}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="427f062f-b332-44e6-ace5-ebb66b995325" x="435" y="1" width="157" height="20"/>
+					<textElement textAlignment="Right" markup="none"/>
+					<textFieldExpression><![CDATA["Service version: "+$F{Version}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="a35eba91-2360-4f07-9422-13e675e718bc" x="2" y="20" width="218" height="20" forecolor="#000000"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Transaction: "+$F{TransactionId}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement uuid="f611597b-ca9e-4eee-b245-2214c1573ce9" x="220" y="20" width="248" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{ClaimantSurname}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="fa8df42d-d92f-4051-a603-d9108427489c" x="468" y="20" width="124" height="20" isRemoveLineWhenBlank="true" forecolor="#000000"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{NationalInsuranceNumber}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="33f37f7e-ea89-47ec-9572-b60206334392" x="0" y="3" width="364" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Carer's Allowance Change of Circumstances Form]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7fc54fa3-8e8e-49e3-b237-71e48d1d5de5" x="323" y="23" width="272" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<text><![CDATA[This form was completed in English]]></text>
+			</staticText>
+		</band>
+		<band height="1" splitType="Immediate">
+			<subreport>
+				<reportElement uuid="4710f3be-ed46-452c-9664-173aad5d1c8a" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsIdentification.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="1" splitType="Immediate">
+			<printWhenExpression><![CDATA[!$F{ShowStoppedCaringSection}.isEmpty()]]></printWhenExpression>
+			<subreport runToBottom="false">
+				<reportElement uuid="5bdc073c-2e2f-4019-a5f3-adb0b7895289" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsStoppedCaring.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="1" splitType="Immediate">
+			<printWhenExpression><![CDATA[!$F{ShowChangeOfAddressSection}.isEmpty()]]></printWhenExpression>
+			<subreport runToBottom="false">
+				<reportElement uuid="c85ab019-8300-4323-b094-9ea2beb74163" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsChangeOfAddress.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="1" splitType="Immediate">
+			<printWhenExpression><![CDATA[!$F{ShowPaymentBankDetailsSection}.isEmpty()]]></printWhenExpression>
+			<subreport runToBottom="false">
+				<reportElement uuid="e01f87d6-f598-42e2-8c0e-1f63d48f456a" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsPaymentBankDetails.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="1" splitType="Immediate">
+			<printWhenExpression><![CDATA[!$F{ShowSelfEmployedSection}.isEmpty()]]></printWhenExpression>
+			<subreport runToBottom="false">
+				<reportElement uuid="1a3f9bb2-c3ff-4ad2-a98d-a06f07866943" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsSelfEmployment.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="1" splitType="Immediate">
+			<printWhenExpression><![CDATA[!$F{ShowBreaksInCareSection}.isEmpty()]]></printWhenExpression>
+			<subreport runToBottom="false">
+				<reportElement uuid="03480f1a-abfb-4123-861f-0e5af4094c81" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsBreaksInCare.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="1" splitType="Immediate">
+			<printWhenExpression><![CDATA[!$F{ShowEmploymentChangeSection}.isEmpty()]]></printWhenExpression>
+			<subreport runToBottom="false">
+				<reportElement uuid="ce297c61-1e15-4922-94cc-50fb831cb95f" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsEmploymentChange.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="1" splitType="Immediate">
+			<printWhenExpression><![CDATA[!$F{showOtherChangesSection}.isEmpty()]]></printWhenExpression>
+			<subreport runToBottom="false">
+				<reportElement uuid="30b7c3cf-4e6b-45b6-8efd-5ad89f22cf8a" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsAdditionalInfo.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="1" splitType="Immediate">
+			<subreport runToBottom="false">
+				<reportElement uuid="d93bb26d-8ca2-4293-bb4a-4c903868681c" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsConsentsAndDeclarations.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="50">
+			<subreport>
+				<reportElement uuid="c226320f-849f-42fb-9722-634cac389fcb" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircs_evidenceList.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement uuid="fb0d9e43-5827-4ea3-a9c3-df5752f30646" x="403" y="0" width="121" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER} + " of "]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="ff73e306-b40d-442d-98a9-1abf56267436" x="527" y="0" width="27" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
