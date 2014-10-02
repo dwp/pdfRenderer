@@ -24,7 +24,6 @@
 
                 </PaidIntoAccountDetails>
                 <AccountDetails>
-                    <AccountHolder><QuestionLabel>Whose name or names is the account in?</QuestionLabel><Answer>Your name</Answer></AccountHolder>
                     <HolderName><QuestionLabel>Name of account holder</QuestionLabel><Answer>A little bigger name that what we are us</Answer></HolderName>
                     <BuildingSocietyDetails>
                         <AccountNumber><QuestionLabel>Account number</QuestionLabel><Answer>1234567890</Answer></AccountNumber>

@@ -24,7 +24,6 @@
 
                 </PaidIntoAccountDetails>
                 <AccountDetails>
-                    <AccountHolder><QuestionLabel>Whose name or names is the account in?</QuestionLabel><Answer>Person acting on your behalf</Answer></AccountHolder>
                     <HolderName><QuestionLabel>Name of account holder</QuestionLabel><Answer>Mr ABC Smith</Answer></HolderName>
                     <BuildingSocietyDetails>
                         <AccountNumber><QuestionLabel>Account number</QuestionLabel><Answer>12345678</Answer></AccountNumber>

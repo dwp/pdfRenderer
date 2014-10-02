@@ -24,7 +24,6 @@
                     <MethodOfPayment><QuestionLabel>Confirm your method of payment</QuestionLabel><Answer>Cheque</Answer></MethodOfPayment>
                 </PaidIntoAccountDetails>
                 <AccountDetails>
-                    <AccountHolder><QuestionLabel>Whose name or names is the account in?</QuestionLabel><Answer>Your name</Answer></AccountHolder>
                     <HolderName><QuestionLabel>Name of account holder</QuestionLabel><Answer>Mr John Roger Smith</Answer></HolderName>
                     <BuildingSocietyDetails>
                         <AccountNumber><QuestionLabel>Account number</QuestionLabel><Answer>12345678</Answer></AccountNumber>
