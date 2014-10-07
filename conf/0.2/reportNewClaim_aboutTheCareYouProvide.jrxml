@@ -95,6 +95,9 @@
 	<field name="IsPartnerCareeAnswer" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Partner/IsCaree/Answer]]></fieldDescription>
 	</field>
+	<field name="havePartnerAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/HavePartner/Answer]]></fieldDescription>
+	</field>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -139,7 +142,7 @@
 			</textField>
 		</band>
 		<band height="93" splitType="Immediate">
-			<printWhenExpression><![CDATA[$F{IsPartnerCareeAnswer}.equals("No")]]></printWhenExpression>
+			<printWhenExpression><![CDATA[$F{IsPartnerCareeAnswer}.equals("No") || $F{havePartnerAnswer}.equals("No")]]></printWhenExpression>
 			<textField>
 				<reportElement uuid="a40e208f-de17-439e-92fe-f37ff23112be" positionType="Float" x="0" y="0" width="392" height="18"/>
 				<textElement/>
