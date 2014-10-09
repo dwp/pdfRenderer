@@ -71,7 +71,7 @@
 				<textElement verticalAlignment="Middle">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[PART 8 - ABOUT YOUR PAY DETAILS]]></text>
+				<text><![CDATA[PART 8 - PAY DETAILS]]></text>
 			</staticText>
 		</band>
 		<band height="56">

@@ -198,8 +198,8 @@ class PdfContentMatchingCircsSpec extends PdfContentMatchingSpec{
 
     // Other changes
     "extract PDF for functionalTestCase29 and match contents" in new WithApplication{
-      val pdfFileLocation = s"${version}_functionalTestCase29_circs_contentTestPDF.pdf"
-      val source = getClass.getResource(s"/${version}/circs/c3_functional29_circs.xml")
+      val pdfFileLocation = s"${version}_functionalTestCase30_circs_contentTestPDF.pdf"
+      val source = getClass.getResource(s"/${version}/circs/c3_functional30_circs.xml")
       val textCaseXml = XML.load(source)
       testContentMatches(pdfFileLocation, textCaseXml, XMLCircsData.functionalTestDataOtherDetails, foundMustBeTrue)
     }

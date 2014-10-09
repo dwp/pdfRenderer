@@ -81,7 +81,7 @@ object XMLCircsData extends TestUtils{
   def paymentBankDetails(xml:Elem) = {
     val details = PaymentBankDetailsPaidIntoAccount(xml).paidIntoAccountData.map(s => buildQuestion(s._1.text, s._2.text))
     Seq(
-      "Part 2 - Change in Circumstance - Change of payment and bank details",
+      "Part 2 -Change in Circumstance - Change of payment and bank details",
       "Existing payment details",
       "New payment details"
     ) ++ details ++ PaymentBankDetailsAccountDetails(xml).accountDetailsData.map(s => buildQuestion(s._1.text, s._2.text)) ++

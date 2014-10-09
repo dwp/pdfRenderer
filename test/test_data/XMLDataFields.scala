@@ -10,6 +10,8 @@ case class XMLDataFields(xml: Elem) extends TestUtils{
 
   val transactionPath = xml \\ "DWPCATransaction" \\ "TransactionId"
 
+  val serviceVersion = xml \\ "Version"
+
   val titleQuestion = rootPath \\ "Claimant" \\ "Title" \\ "QuestionLabel"
 
   val titleAnswer = rootPath \\ "Claimant" \\ "Title" \\ "Answer"
@@ -32,7 +34,11 @@ case class XMLDataFields(xml: Elem) extends TestUtils{
 
   val careeLastNameAnswer = rootPath \\ "Caree" \\ "Surname" \\ "Answer"
 
+  val careeLastNameQuestion = rootPath \\ "Caree" \\ "Surname" \\ "QuestionLabel"
+
   val careeFirstNameAnswer = rootPath \\ "Caree" \\ "OtherNames" \\ "Answer"
+
+  val careeFirstNameQuestion = rootPath \\ "Caree" \\ "OtherNames" \\ "QuestionLabel"
 
   val careeTitleAnswer = rootPath \\ "Caree" \\ "Title" \\ "Answer"
 
@@ -93,6 +99,10 @@ case class XMLDataFields(xml: Elem) extends TestUtils{
   val otherInformationAddtionalInformationQuestion = SectionConsentAndDeclaration(xml).otherInformationAdditionalInformationQuestion
 
   val otherInformationAddtionalInformationAnswer = SectionConsentAndDeclaration(xml).otherInformationAdditionalInformationAnswer
+
+  val dateOfClaimQuestion = rootPath \\ "DateOfClaim" \\ "QuestionLabel"
+
+  val dateOfClaimAnswer = rootPath \\ "DateOfClaim" \\ "Answer"
 
   val careBreak: Seq[String] = {
     (rootPath \\ "Caree" \\ "CareBreak").
