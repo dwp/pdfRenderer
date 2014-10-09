@@ -109,6 +109,6 @@ trait PdfContentMatchingSpec extends Specification{
     val totalContent = getPDFContent(pdfFileLocation)
     val testData = generateTestData(testCaseXml)
     matchFunction(testData, totalContent) must beTrue
-    //deleteFile(pdfFileLocation)
+    deleteFile(pdfFileLocation)
   }
 }
