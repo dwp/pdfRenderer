@@ -13,13 +13,13 @@ object ApplicationBuild extends Build {
 
   val appDependencies = Seq(
     "me.moocar"             % "logback-gelf"          % "0.9.6p2",
-    "org.specs2"            %% "specs2"               % "2.3.6"     % "test",
+    "org.specs2"            %% "specs2"               % "2.3.13"     % "test",
     "net.sf.jasperreports"  % "jasperreports"         % "5.2.0",
     "com.lowagie"           % "itext"                 % "4.2.1",
     "com.itextpdf"          % "itextpdf"              % "5.4.4",
     "xalan"                 % "xalan"                 % "2.7.1",
     "org.codehaus.groovy"   % "groovy-all"            % "2.0.1",
-    "com.dwp.carers"        %% "carerscommon"         % "5.4"
+    "com.dwp.carers"        %% "carerscommon"         % "6.0"
   )
 
   val conf = ConfigFactory.parseFile(new File("conf/application.conf")).resolve()
@@ -28,18 +28,26 @@ object ApplicationBuild extends Build {
 
   val cleanjsprTask = cleanjspr := {
     val jasperFolder    = conf.getString("jasper.folder")
-//    val files =
-      new File(jasperFolder).listFiles().filter(_.name.endsWith(".jasper")).filter(_.delete)
-    // No printlns in code - JMI
-//    println("Removed files:")
-//    files map(p=>println(p))
+    for (i <- 1 to 100) {
+      try {
+        new File(s"jasperFolder/0.$i").listFiles().filter(_.name.endsWith(".jasper")).filter(_.delete)
+      } catch {
+        case e: Exception => // do nothing. deleted all current versions
+      }
+    }
   }
 
   var sJ: Seq[Def.Setting[_]] = Seq(javaOptions in Test += "-Djava.awt.headless=true")
-  var sV: Seq[Def.Setting[_]] = Seq(scalaVersion := "2.10.3")
+  var sV: Seq[Def.Setting[_]] = Seq(scalaVersion := "2.10.4")
   val compilerSettings: Seq[Def.Setting[_]] = Seq(scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8","-feature"))
-  var appSettings: Seq[Def.Setting[_]] = repo ++ sV ++ compilerSettings ++ cleanjsprTask ++ sJ ++ ScalastylePlugin.Settings
 
-  val main = play.Project(appName, appVersion, appDependencies).settings(appSettings: _*)
+  var vS: Seq[Def.Setting[_]] = Seq(version := appVersion, libraryDependencies ++= appDependencies)
+
+  var appSettings: Seq[Def.Setting[_]] = repo ++ sV ++ compilerSettings ++ sJ ++ ScalastylePlugin.Settings ++ vS ++ cleanjsprTask
+
+
+  val main = Project(appName, file(".")).enablePlugins(play.PlayScala).settings(appSettings: _*)
+
+//  val main = Project(appName, appVersion, appDependencies).settings(appSettings: _*)
 
 }
