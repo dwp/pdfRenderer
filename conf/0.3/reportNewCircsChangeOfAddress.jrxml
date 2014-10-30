@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewCircsChangeOfAddress" language="groovy" pageWidth="595" pageHeight="802" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="19f509ce-8249-449c-abaf-c0d624c078e9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<template><![CDATA[ $P{TEMPLATE_DIR} + "StyleTemplateClaim.jrtx"]]></template>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="TEMPLATE_DIR" class="java.lang.String">
+    		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+    </parameter>
+	<queryString language="xPath">
+		<![CDATA[/]]>
+	</queryString>
+	<field name="YourPreviousAddressQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/AddressChange/PreviousAddress/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="Caring35HoursQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/AddressChange/Caring35Hours/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="Caring35HoursAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/AddressChange/Caring35Hours/Answer]]></fieldDescription>
+	</field>
+	<field name="DateStoppedCaring35HoursQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/AddressChange/DateStoppedCaring35Hours/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="DateStoppedCaring35HoursAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/AddressChange/DateStoppedCaring35Hours/Answer]]></fieldDescription>
+	</field>
+	<field name="NewAddressQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/AddressChange/NewAddress/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="CareeChangedAddressQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/AddressChange/CareeChangedAddress/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="CareeChangedAddressAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/AddressChange/CareeChangedAddress/Answer]]></fieldDescription>
+	</field>
+	<field name="CareeSameAddressQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/AddressChange/CareeSameAddress/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="CareeSameAddressAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/AddressChange/CareeSameAddress/Answer]]></fieldDescription>
+	</field>
+	<field name="CareeAddressQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/AddressChange/CareeAddress/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="OtherChangesQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/AddressChange/OtherChanges/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="OtherChangesAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/AddressChange/OtherChanges/Answer]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="36">
+			<staticText>
+				<reportElement uuid="61d27c60-d23c-47b0-a56a-f72fe47dd241" style="HeadingClaim" mode="Opaque" x="0" y="0" width="595" height="35" forecolor="#000000"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PART 2 - CHANGE IN CIRCUMSTANCE - CHANGE OF ADDRESS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="57" splitType="Immediate">
+			<staticText>
+				<reportElement uuid="f8b07e72-4c24-4a2e-b083-d9eaae0b77cc" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="595" height="32" forecolor="#000000"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[For security, we also need you to confirm your previous address.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="130cdd33-e9ba-470a-a5ca-16f1cf4a13a7" positionType="Float" x="0" y="32" width="595" height="23"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Previous address]]></text>
+			</staticText>
+			<subreport>
+				<reportElement uuid="29fd1c6d-2702-4983-bc1c-400f6ba459d7" positionType="Float" x="0" y="55" width="595" height="1"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="addressLabel">
+					<subreportParameterExpression><![CDATA[$F{YourPreviousAddressQuestionLabel}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="postCode">
+					<subreportParameterExpression><![CDATA["Your previous postcode"]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/AddressChange/PreviousAddress/Answer")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_addressForNestedReports.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="44" splitType="Prevent">
+			<staticText>
+				<reportElement uuid="77b07617-7c8a-48fa-aa28-26555541ac1b" positionType="Float" x="0" y="0" width="595" height="23"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Change of address]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="ac801cd2-efb7-4e36-bfc8-b084b41307e7" positionType="Float" x="0" y="24" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Caring35HoursQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="7f4ea2b9-240c-47d2-90bd-09a0b7304d30" style="Answer" positionType="Float" x="420" y="24" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Caring35HoursAnswer}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="60" splitType="Immediate">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="706a6621-ec6e-4d96-81ce-48cd32471c1e" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{DateStoppedCaring35HoursQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="20941537-5b90-49f1-8e5f-4dbd17ca7049" style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{DateStoppedCaring35HoursAnswer}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement uuid="e8aa6f4a-37d7-4e51-9c8a-82481c1cb020" positionType="Float" x="0" y="19" width="594" height="1" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="addressLabel">
+					<subreportParameterExpression><![CDATA[$F{NewAddressQuestionLabel}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="postCode">
+					<subreportParameterExpression><![CDATA["Your new postcode"]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/AddressChange/NewAddress/Answer")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_addressForNestedReports.jasper"]]></subreportExpression>
+			</subreport>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="bee6fad1-3671-4c73-8502-6d4b88218d30" positionType="Float" x="0" y="20" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CareeChangedAddressQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="eedbfa39-5eff-4985-86f2-2025f1e1ff27" style="Answer" positionType="Float" x="420" y="20" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CareeChangedAddressAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="ff2c91e2-f3f9-425d-b7c0-eade9d85c7ad" positionType="Float" x="0" y="39" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CareeSameAddressQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="b878b345-b9a0-4b28-9a3b-a63402a42008" style="Answer" positionType="Float" x="420" y="39" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CareeSameAddressAnswer}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement uuid="83c8d577-702e-4c84-8603-880b6ce7b710" positionType="Float" x="0" y="58" width="594" height="1" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="postCode">
+					<subreportParameterExpression><![CDATA["Thier Postcode"]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="addressLabel">
+					<subreportParameterExpression><![CDATA[$F{CareeAddressQuestionLabel}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/AddressChange/CareeAddress/Answer")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_addressForNestedReports.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement uuid="71826848-2469-448d-8eef-ccad07e0c81b" positionType="Float" x="0" y="59" width="594" height="1" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OTHER_CHANGES_QUESTION">
+					<subreportParameterExpression><![CDATA[$F{OtherChangesQuestionLabel}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OTHER_CHANGES_ANSWER">
+					<subreportParameterExpression><![CDATA[$F{OtherChangesAnswer}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsOtherChanges.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+</jasperReport>

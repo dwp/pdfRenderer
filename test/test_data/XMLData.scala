@@ -250,7 +250,7 @@ object XMLData extends TestUtils{
   def sectionAboutOtherMoney(xml:Elem) = {
     val fields = SectionAboutOtherMoney(xml)
     var otherMoneyTitle = "Part 7 - About Other Money"
-    if (serviceVersion(xml).equals("0.2")){
+    if (!serviceVersion(xml).equals("0.1")){
       otherMoneyTitle = "PART 7 - STATUTORY PAY, BENEFITS AND PAYMENTS"
     }
     Seq (otherMoneyTitle,
