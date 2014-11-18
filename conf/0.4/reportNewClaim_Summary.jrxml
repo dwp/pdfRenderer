@@ -475,32 +475,32 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ClaimantAddressQuestionLabel}]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="1d079477-62eb-49a5-bafc-2c8bfd1e5d80" style="Answer" positionType="Float" x="168" y="0" width="180" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ClaimantAddressLine1}]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="ada5908f-c4ca-4cba-8ad7-40d3beaa96e6" style="Answer" positionType="Float" x="367" y="0" width="180" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{CareeAddressLine1}]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="f1fc5bd3-2e8b-4d79-b0e0-2f03f2224e1c" style="Answer" positionType="Float" x="168" y="18" width="180" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ClaimantAddressLine2}]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="672be288-faca-495d-970c-521330deb8d3" style="Answer" positionType="Float" x="168" y="36" width="180" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ClaimantAddressLine3}]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="e9c13479-b30b-49dc-a134-57871e2c9916" style="Answer" positionType="Float" x="367" y="18" width="180" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{CareeAddressLine2}]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="6e1ae830-4018-4311-b5e9-96c978107cdc" style="Answer" positionType="Float" x="367" y="36" width="180" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{CareeAddressLine3}]]></textFieldExpression>
