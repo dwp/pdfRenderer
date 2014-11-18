@@ -227,7 +227,7 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{selfEmployedNowAnswer}.equals("Yes") ? $F{natureOfBusinessQuestion} : $F{natureOfBusinessRecentQuestion}]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="2c435d18-b073-4b27-9f62-609d1d035aec" style="Answer" positionType="Float" x="419" y="54" width="175" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{selfEmployedNowAnswer}.equals("Yes") ? $F{natureOfBusinessAnswer} : $F{natureOfBusinessRecentAnswer}]]></textFieldExpression>
