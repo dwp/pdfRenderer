@@ -4,7 +4,7 @@
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
-	<template><![CDATA[ $P{TEMPLATE_DIR} + "StyleTemplateClaim.jrtx"]]></template>
+	<template><![CDATA[$P{TEMPLATE_DIR} + "StyleTemplateClaim.jrtx"]]></template>
 	<style name="table">
 		<box>
 			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
@@ -52,8 +52,8 @@
 		<defaultValueExpression><![CDATA["conf/"]]></defaultValueExpression>
 	</parameter>
 	<parameter name="TEMPLATE_DIR" class="java.lang.String">
-    		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
-    </parameter>
+		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+	</parameter>
 	<parameter name="SUMMARY_PAGE_NUMBER" class="java.lang.Integer" isForPrompting="false">
 		<defaultValueExpression><![CDATA[2]]></defaultValueExpression>
 	</parameter>
@@ -64,8 +64,8 @@
 		<fieldDescription><![CDATA[/DWPBody/Version]]></fieldDescription>
 	</field>
 	<field name="LanguageUsed" class="java.lang.String">
-        <fieldDescription><![CDATA[/DWPBody/DWPCATransaction/LanguageUsed]]></fieldDescription>
-    </field>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/LanguageUsed]]></fieldDescription>
+	</field>
 	<field name="ClaimantSurname" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Surname/Answer]]></fieldDescription>
 	</field>
@@ -107,7 +107,7 @@
 					<rightPen lineWidth="1.0" lineColor="#000000"/>
 				</box>
 				<textField>
-					<reportElement uuid="2b597163-946a-4982-9320-135afb766d57" mode="Opaque" x="1" y="1" width="423" height="23"/>
+					<reportElement uuid="2b597163-946a-4982-9320-135afb766d57" style="Answer" mode="Opaque" x="1" y="1" width="423" height="23"/>
 					<textElement/>
 					<textFieldExpression><![CDATA["Date Received: "+$F{DateTimeGenerated}]]></textFieldExpression>
 				</textField>

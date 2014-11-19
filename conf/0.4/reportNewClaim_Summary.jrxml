@@ -308,7 +308,7 @@
 					<rightPen lineWidth="1.0" lineColor="#000000"/>
 				</box>
 				<textField>
-					<reportElement uuid="905dab3a-2029-46c5-a36e-392a200e1640" style="HeadingClaim" positionType="Float" mode="Opaque" x="1" y="1" width="550" height="20" forecolor="#000000" backcolor="#FFFFFF">
+					<reportElement uuid="905dab3a-2029-46c5-a36e-392a200e1640" style="Answer" positionType="Float" mode="Opaque" x="1" y="1" width="550" height="20" forecolor="#000000" backcolor="#FFFFFF">
 						<property name="net.sf.jasperreports.export.html.class" value="SummaryPageDateHeader"/>
 					</reportElement>
 					<textElement verticalAlignment="Middle" markup="styled"/>
