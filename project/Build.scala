@@ -6,19 +6,18 @@ import org.scalastyle.sbt.ScalastylePlugin
 object ApplicationBuild extends Build {
 
   val appName = "p1"
-  val appVersion = "1.0-SNAPSHOT"
+  val appVersion = "1.1-SNAPSHOT"
 
   var repo: Seq[Def.Setting[_]] = Seq(resolvers += "Carers repo" at "http://build.3cbeta.co.uk:8080/artifactory/repo/")
 
 
   val appDependencies = Seq(
-    "me.moocar"             % "logback-gelf"          % "0.9.6p2",
+    "me.moocar"             % "logback-gelf"          % "0.12",
     "org.specs2"            %% "specs2"               % "2.3.13"     % "test",
     "net.sf.jasperreports"  % "jasperreports"         % "5.2.0",
     "com.lowagie"           % "itext"                 % "4.2.1",
     "com.itextpdf"          % "itextpdf"              % "5.4.4",
-    "xalan"                 % "xalan"                 % "2.7.1",
-    "org.codehaus.groovy"   % "groovy-all"            % "2.0.1",
+    "org.codehaus.groovy"   % "groovy-all"            % "2.3.7",
     "com.dwp.carers"        %% "carerscommon"         % "6.1"
   )
 
