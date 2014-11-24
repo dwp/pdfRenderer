@@ -115,15 +115,15 @@
                 <PaidForPension><QuestionLabel>Do you pay into a pension and/or have any work related expenses?</QuestionLabel><Answer>No</Answer></PaidForPension>
                 <PaidForJobExpenses><QuestionLabel>Do you have any care costs because of this work?</QuestionLabel><Answer>No</Answer></PaidForJobExpenses>
             </SelfEmployment>
-            <Employed><QuestionLabel>Have you been employed at any time since 01/07/2009?</QuestionLabel><Answer>Yes</Answer></Employed>
+            <Employed><QuestionLabel>Have you been employed at any time since 1 July 2009?</QuestionLabel><Answer>Yes</Answer></Employed>
             <Employment>
 
                 <JobDetails>
                     <Employer>
                         <CurrentlyEmployed><QuestionLabel>Have you finished this job?</QuestionLabel><Answer>Yes</Answer></CurrentlyEmployed>
-                        <DidJobStartBeforeClaimDate><QuestionLabel>Did you start this job before 01 December 2009</QuestionLabel><Answer>No</Answer></DidJobStartBeforeClaimDate>
-                        <DateJobStarted><QuestionLabel>When did you start your job?</QuestionLabel><Answer>01-01-2013</Answer></DateJobStarted>
-                        <DateJobEnded><QuestionLabel>What date did you last work?</QuestionLabel><Answer>01-07-2013</Answer></DateJobEnded>
+                        <DidJobStartBeforeClaimDate><QuestionLabel>Did you start this job before 1 December 2009?</QuestionLabel><Answer>No</Answer></DidJobStartBeforeClaimDate>
+                        <DateJobStarted><QuestionLabel>Job start date</QuestionLabel><Answer>01-01-2013</Answer></DateJobStarted>
+                        <DateJobEnded><QuestionLabel>Date last worked</QuestionLabel><Answer>01-07-2013</Answer></DateJobEnded>
                         <Name><QuestionLabel>Employer's name</QuestionLabel><Answer>Some company that is not paying me enough for my daily work'</Answer></Name>
                         <Address>
                             <QuestionLabel>Address</QuestionLabel>
@@ -144,18 +144,19 @@
                         <ConstantEarnings><QuestionLabel>Did you get the same amount each time?</QuestionLabel><Answer>No</Answer></ConstantEarnings>
                     </Pay>
                     <OweMoney><QuestionLabel>Does your employer owe you any money?</QuestionLabel><Answer>No</Answer></OweMoney>
-                    <PaidForPension><QuestionLabel>Did you pay into a pension and/or have any work related expenses?</QuestionLabel><Answer>Yes</Answer></PaidForPension><PensionExpenses>
+                    <PaidForPension><QuestionLabel>Did you pay into a pension or have any work related expenses?</QuestionLabel><Answer>Yes</Answer></PaidForPension><PensionExpenses>
                     <Expense><QuestionLabel>Tell us what these were for, how much and how often</QuestionLabel><Answer>Some pension expenses paying 200 a week for xyz</Answer></Expense>
                 </PensionExpenses>
                     <PaidForJobExpenses><QuestionLabel>Did you pay for anything necessary to do your job?</QuestionLabel><Answer>Yes</Answer></PaidForJobExpenses><JobExpenses>
                     <Expense><QuestionLabel>Tell us what the cost was for, how much, how often and who to</QuestionLabel><Answer>Some job expenses paying 200 a week for xyz</Answer></Expense>
                 </JobExpenses>
+                    <OtherEmployment><QuestionLabel>Have you had any other jobs since 1 July 2009?</QuestionLabel><Answer>Yes</Answer></OtherEmployment>
                 </JobDetails><JobDetails>
                 <Employer>
                     <CurrentlyEmployed><QuestionLabel>Have you finished this job?</QuestionLabel><Answer>Yes</Answer></CurrentlyEmployed>
-                    <DidJobStartBeforeClaimDate><QuestionLabel>Did you start this job before 01 December 2009</QuestionLabel><Answer>Yes</Answer></DidJobStartBeforeClaimDate>
+                    <DidJobStartBeforeClaimDate><QuestionLabel>Did you start this job before 1 December 2009?</QuestionLabel><Answer>Yes</Answer></DidJobStartBeforeClaimDate>
 
-                    <DateJobEnded><QuestionLabel>What date did you last work?</QuestionLabel><Answer>01-01-2001</Answer></DateJobEnded>
+                    <DateJobEnded><QuestionLabel>Date last worked</QuestionLabel><Answer>01-01-2001</Answer></DateJobEnded>
                     <Name><QuestionLabel>Employer's name</QuestionLabel><Answer>Tesco's</Answer></Name>
                     <Address>
                         <QuestionLabel>Address</QuestionLabel>
@@ -164,7 +165,7 @@
                         </Answer>
                     </Address>
                     <EmployersPhoneNumber><QuestionLabel>Phone number</QuestionLabel><Answer>01253 667889</Answer></EmployersPhoneNumber>
-                    <P45LeavingDate><QuestionLabel>What is the leaving date on your P45, if you have one?</QuestionLabel><Answer>25-12-2010</Answer></P45LeavingDate>
+                    <P45LeavingDate><QuestionLabel>Leaving date on your P45</QuestionLabel><Answer>25-12-2010</Answer></P45LeavingDate>
                 </Employer>
                 <Pay>
 
@@ -176,12 +177,13 @@
                     <ConstantEarnings><QuestionLabel>Did you get the same amount each time?</QuestionLabel><Answer>No</Answer></ConstantEarnings>
                 </Pay>
                 <OweMoney><QuestionLabel>Does your employer owe you any money?</QuestionLabel><Answer>Yes</Answer></OweMoney>
-                <PaidForPension><QuestionLabel>Did you pay into a pension and/or have any work related expenses?</QuestionLabel><Answer>Yes</Answer></PaidForPension><PensionExpenses>
+                <PaidForPension><QuestionLabel>Did you pay into a pension or have any work related expenses?</QuestionLabel><Answer>Yes</Answer></PaidForPension><PensionExpenses>
                 <Expense><QuestionLabel>Tell us what these were for, how much and how often</QuestionLabel><Answer>Some pension expenses paying 200 a week for xyz</Answer></Expense>
             </PensionExpenses>
                 <PaidForJobExpenses><QuestionLabel>Did you pay for anything necessary to do your job?</QuestionLabel><Answer>Yes</Answer></PaidForJobExpenses><JobExpenses>
                 <Expense><QuestionLabel>Tell us what the cost was for, how much, how often and who to</QuestionLabel><Answer>Some job expenses paying 200 a week for xyz</Answer></Expense>
             </JobExpenses>
+                <OtherEmployment><QuestionLabel>Have you had any other jobs since 1 July 2009?</QuestionLabel><Answer>No</Answer></OtherEmployment>
             </JobDetails>
             </Employment>
             <HavePartner><QuestionLabel>Have you lived with a partner at any time since your claim date?</QuestionLabel><Answer>Yes</Answer></HavePartner>

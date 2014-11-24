@@ -168,6 +168,12 @@
 	<field name="JobDetailsEmployerDidJobStartBeforeClaimDateAnswer" class="java.lang.String">
 		<fieldDescription><![CDATA[Employer/DidJobStartBeforeClaimDate/Answer]]></fieldDescription>
 	</field>
+	<field name="JobDetailsEmployerHasMoreJobsQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[OtherEmployment/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="JobDetailsEmployerHasMoreJobsAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[OtherEmployment/Answer]]></fieldDescription>
+	</field>
 	<variable name="variable1" class="java.lang.Integer" incrementType="Group" incrementGroup="EmployerDetails">
 		<variableExpression><![CDATA[$V{variable1}+1]]></variableExpression>
 		<initialValueExpression><![CDATA[1]]></initialValueExpression>
@@ -440,7 +446,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 		</band>
-		<band height="137" splitType="Prevent">
+		<band height="157" splitType="Prevent">
 			<staticText>
 				<reportElement uuid="9123999a-8bef-4b7a-adc0-5346c4e17805" positionType="Float" mode="Opaque" x="0" y="1" width="595" height="20" isRemoveLineWhenBlank="true" backcolor="#E6E6E6"/>
 				<textElement verticalAlignment="Middle">
@@ -508,6 +514,16 @@
 				<textElement/>
 				<text><![CDATA[]]></text>
 			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="ce0c3486-5a1b-4920-ab9a-f9c248337e95" positionType="Float" x="0" y="137" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsEmployerHasMoreJobsQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="0e513308-911a-4d30-9bc5-d9e77cde67ed" style="Answer" positionType="Float" x="420" y="137" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{JobDetailsEmployerHasMoreJobsAnswer}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 </jasperReport>
