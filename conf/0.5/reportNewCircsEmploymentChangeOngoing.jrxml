@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewCircsEmploymentChangeOngoing" language="groovy" pageWidth="595" pageHeight="802" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="6995e436-52bd-4ce4-966d-188e2b70830b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<template><![CDATA[ $P{TEMPLATE_DIR} + "StyleTemplateClaim.jrtx"]]></template>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="TEMPLATE_DIR" class="java.lang.String">
+    		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+    </parameter>
+	<queryString language="xPath">
+		<![CDATA[/]]>
+	</queryString>
+	<field name="showOngoingEmpSection" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing]]></fieldDescription>
+	</field>
+	<field name="OngoingEmpAddressQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/Address/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="OngoingEmpEmployerContactNumberQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/EmployerContactNumber/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="OngoingEmpEmployerContactNumberAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/EmployerContactNumber/Answer]]></fieldDescription>
+	</field>
+	<field name="OngoingEmpEmployerPayrollQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/EmployerPayroll/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="OngoingEmpEmployerPayrollAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/EmployerPayroll/Answer]]></fieldDescription>
+	</field>
+	<field name="OngoingEmpBeenPaidYetQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/BeenPaidYet/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="OngoingEmpBeenPaidYetAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/BeenPaidYet/Answer]]></fieldDescription>
+	</field>
+	<field name="OngoingEmpHowMuchPaidQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/HowMuchPaid/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="OngoingEmpHowMuchPaidAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/HowMuchPaid/Answer]]></fieldDescription>
+	</field>
+	<field name="OngoingEmpPaymentDateQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/PaymentDate/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="OngoingEmpPaymentDateAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/PaymentDate/Answer]]></fieldDescription>
+	</field>
+	<field name="OngoingEmpMonthlyPayDayQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/MonthlyPayDay/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="OngoingEmpMonthlyPayDayAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/MonthlyPayDay/Answer]]></fieldDescription>
+	</field>
+	<field name="OngoingEmpPayFrequencyQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/PayFrequency/Frequency/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="OngoingEmpPayFrequencyAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/PayFrequency/Frequency/Answer]]></fieldDescription>
+	</field>
+	<field name="OngoingEmpPayFrequencyOtherAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/PayFrequency/Frequency/Other]]></fieldDescription>
+	</field>
+	<field name="OngoingEmpUsuallyPaidSameAmountQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/UsuallyPaidSameAmount/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="OngoingEmpUsuallyPaidSameAmountAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/UsuallyPaidSameAmount/Answer]]></fieldDescription>
+	</field>
+	<field name="OngoingEmpPayIntoPensionQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/PayIntoPension/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="OngoingEmpPayIntoPensionAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/PayIntoPension/Answer]]></fieldDescription>
+	</field>
+	<field name="OngoingEmpPayIntoPensionWhatForQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/PayIntoPensionWhatFor/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="OngoingEmpPayIntoPensionWhatForAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/PayIntoPensionWhatFor/Answer]]></fieldDescription>
+	</field>
+	<field name="OngoingEmpCareCostsForThisWorkQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/CareCostsForThisWork/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="OngoingEmpCareCostsForThisWorkAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/CareCostsForThisWork/Answer]]></fieldDescription>
+	</field>
+	<field name="OngoingEmpCareCostsForThisWorkWhatCostsQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/CareCostsForThisWorkWhatCosts/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="OngoingEmpCareCostsForThisWorkWhatCostsAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/CareCostsForThisWorkWhatCosts/Answer]]></fieldDescription>
+	</field>
+	<field name="OngoingEmpMoreAboutChangesQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/MoreAboutChanges/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="OngoingEmpMoreAboutChangesAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/MoreAboutChanges/Answer]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="41" splitType="Prevent">
+			<printWhenExpression><![CDATA[!$F{showOngoingEmpSection}.isEmpty()]]></printWhenExpression>
+			<staticText>
+				<reportElement uuid="b844a3a3-7c0b-4b86-a81f-69d0a0daf51d" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="595" height="18" forecolor="#000000">
+					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart2CircsBreaksFromCaring"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle" markup="styled">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Employment]]></text>
+			</staticText>
+			<subreport>
+				<reportElement uuid="00326627-c6ad-4692-8bf3-52b64ca89296" positionType="Float" x="0" y="18" width="595" height="1" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="addressLabel">
+					<subreportParameterExpression><![CDATA[$F{OngoingEmpAddressQuestionLabel}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="postCode">
+					<subreportParameterExpression><![CDATA["Postcode"]]></subreportParameterExpression>
+				</subreportParameter>
+                <subreportParameter name="TEMPLATE_DIR">
+                    <subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+                </subreportParameter>
+                <dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/Address/Answer")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_addressForNestedReports.jasper"]]></subreportExpression>
+			</subreport>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="7e3040b7-1924-43a2-a6a0-2b71db9e99bb" positionType="Float" x="0" y="21" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{OngoingEmpEmployerContactNumberQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="43c48463-d859-4085-b4c8-53acc78a816d" style="Answer" positionType="Float" x="420" y="21" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{OngoingEmpEmployerContactNumberAnswer}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="66f8f67b-02a7-490a-acb2-c595bcfb060f" positionType="Float" x="0" y="39" width="592" height="1"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+		<band height="191" splitType="Immediate">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="7037f9d7-a80c-44ca-b2cc-a54f81c6bebf" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{OngoingEmpEmployerPayrollQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="c4802aa8-dbd0-4b0e-bc7c-7000de6ac3b4" style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{OngoingEmpEmployerPayrollAnswer}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="2de8eedc-d89d-46dc-becc-8054e4b1809c" positionType="Float" x="1" y="18" width="591" height="1"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="ab700ba1-23f5-41cc-8ad7-8a1c935f4845" positionType="Float" x="0" y="19" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{OngoingEmpBeenPaidYetQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="21bbd370-c436-4723-91c2-4b0d35e3d83e" style="Answer" positionType="Float" x="420" y="19" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{OngoingEmpBeenPaidYetAnswer}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="3c906752-7a5f-49e3-a5bc-47d8a6188de6" positionType="Float" x="0" y="37" width="592" height="1"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="27600381-8434-40db-88ce-315a3be86de9" positionType="Float" x="0" y="38" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{OngoingEmpHowMuchPaidQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="bdf5ff2b-9665-4459-a3c0-e067f70ec5f0" style="Answer" positionType="Float" x="420" y="38" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{OngoingEmpHowMuchPaidAnswer}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="94b3eb3b-42f9-4829-9817-79e0692360b2" positionType="Float" x="0" y="56" width="592" height="1"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="73af0ee4-221a-4226-b3b1-bac6cd1b60c2" positionType="Float" x="0" y="57" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{OngoingEmpPaymentDateQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="f1bc23fc-2f04-42d2-ac97-8d8a7789ea66" style="Answer" positionType="Float" x="420" y="57" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{OngoingEmpPaymentDateAnswer}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="a9aa6549-0277-4e54-9a81-64f987123276" positionType="Float" x="2" y="75" width="592" height="1"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="490bc1d1-d678-48da-a8b8-2e621cc294d7" positionType="Float" x="0" y="76" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{OngoingEmpMonthlyPayDayQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="f29baa2a-c9e7-4099-a694-85c855b7a7a0" style="Answer" positionType="Float" x="420" y="76" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{OngoingEmpMonthlyPayDayAnswer}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="1d5e5028-67ba-46b2-8a2f-29a7ed8de515" positionType="Float" x="3" y="94" width="591" height="1"/>
+				<textElement/>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="a92e4235-5fd0-473f-b25a-8f9534e60bfc" positionType="Float" x="0" y="95" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{OngoingEmpPayFrequencyQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="507c2029-1266-417a-87a5-6bb8f56ef995" style="Answer" positionType="Float" x="420" y="95" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{OngoingEmpPayFrequencyAnswer}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="39eda72a-cb1e-4e83-8359-93e495d0b5a4" positionType="Float" x="2" y="113" width="592" height="1"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="4d064dfa-0242-4e61-bca6-9c2c7f5efd17" style="Answer" positionType="Float" x="420" y="114" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{OngoingEmpPayFrequencyOtherAnswer}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="12b51072-d5bf-4ee8-930a-588be0887233" positionType="Float" x="2" y="132" width="593" height="1"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="1d3a72b6-49bb-4740-a26a-18c387c988e8" positionType="Float" x="0" y="133" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{OngoingEmpUsuallyPaidSameAmountQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="77e4180d-3858-4979-bd9d-198b4658160a" style="Answer" positionType="Float" x="420" y="133" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{OngoingEmpUsuallyPaidSameAmountAnswer}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="6a3912a6-a13c-4f1c-94e4-f635daf9bb6d" positionType="Float" x="7" y="151" width="587" height="1"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="f588d94c-08bf-4db2-8939-0a86b55bacbc" positionType="Float" x="0" y="152" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{OngoingEmpPayIntoPensionQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="52000e0a-4939-4a15-9630-8462eb111f42" style="Answer" positionType="Float" x="420" y="152" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{OngoingEmpPayIntoPensionAnswer}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement uuid="c423d067-4805-46c1-8642-d66204ae6a14" positionType="Float" x="0" y="170" width="594" height="1"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OTHER_CHANGES_QUESTION">
+					<subreportParameterExpression><![CDATA[$F{OngoingEmpPayIntoPensionWhatForQuestionLabel}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OTHER_CHANGES_ANSWER">
+					<subreportParameterExpression><![CDATA[$F{OngoingEmpPayIntoPensionWhatForAnswer}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsOtherChanges.jasper"]]></subreportExpression>
+			</subreport>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="d8860fe9-d4e1-4b13-9d0b-3a33ea711f51" positionType="Float" x="0" y="171" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{OngoingEmpCareCostsForThisWorkQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="78f63d80-3735-483b-8c94-8a41115f259a" style="Answer" positionType="Float" x="420" y="171" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{OngoingEmpCareCostsForThisWorkAnswer}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement uuid="8aa9f828-eb13-4254-87eb-0a393d8c6f23" positionType="Float" x="0" y="189" width="594" height="1"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OTHER_CHANGES_QUESTION">
+					<subreportParameterExpression><![CDATA[$F{OngoingEmpCareCostsForThisWorkWhatCostsQuestionLabel}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OTHER_CHANGES_ANSWER">
+					<subreportParameterExpression><![CDATA[$F{OngoingEmpCareCostsForThisWorkWhatCostsAnswer}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsOtherChanges.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement uuid="ca32667a-15f2-488a-9a3b-e04e3f426e34" positionType="Float" x="0" y="190" width="594" height="1"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OTHER_CHANGES_QUESTION">
+					<subreportParameterExpression><![CDATA[$F{OngoingEmpMoreAboutChangesQuestionLabel}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OTHER_CHANGES_ANSWER">
+					<subreportParameterExpression><![CDATA[$F{OngoingEmpMoreAboutChangesAnswer}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsOtherChanges.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+</jasperReport>
