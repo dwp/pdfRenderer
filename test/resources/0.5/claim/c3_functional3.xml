@@ -27,7 +27,6 @@
             <Caree>
                 <Surname><QuestionLabel>Last name</QuestionLabel><Answer>CaseThree</Answer></Surname>
                 <OtherNames><QuestionLabel>First name</QuestionLabel><Answer>Test Middle</Answer></OtherNames>
-                <MiddleNames><QuestionLabel>Middle name(s)</QuestionLabel><Answer>Middle name</Answer></MiddleNames>
                 <Title><QuestionLabel>Title</QuestionLabel><Answer>Mrs</Answer></Title>
                 <DateOfBirth><QuestionLabel>Date of birth</QuestionLabel><Answer>28-09-1937</Answer></DateOfBirth>
                 <NationalInsuranceNumber><QuestionLabel>National Insurance number</QuestionLabel><Answer>BA234567A</Answer></NationalInsuranceNumber>
@@ -192,7 +191,7 @@
             <Partner>
                 <Surname><QuestionLabel>Last name</QuestionLabel><Answer>CaseThree</Answer></Surname>
                 <OtherNames><QuestionLabel>First name</QuestionLabel><Answer>Test Middle</Answer></OtherNames>
-                <MiddleNames><QuestionLabel>Middle name(s)</QuestionLabel><Answer>Middle name</Answer></MiddleNames>
+                <MiddleNames><QuestionLabel>Middle name(s)</QuestionLabel><Answer>Partner Middlename</Answer></MiddleNames>
                 <OtherSurnames><QuestionLabel>Other surname or maiden name</QuestionLabel><Answer>Dixon</Answer></OtherSurnames>
                 <Title><QuestionLabel>Title</QuestionLabel><Answer>Mrs</Answer></Title>
                 <DateOfBirth><QuestionLabel>Date of birth</QuestionLabel><Answer>28-09-1937</Answer></DateOfBirth>
