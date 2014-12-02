@@ -272,7 +272,9 @@
 				<text><![CDATA[Contact details of the person you care for]]></text>
 			</staticText>
 			<subreport>
-				<reportElement uuid="15feeace-8a18-4dcf-982d-e67a66e7e551" positionType="Float" x="0" y="21" width="595" height="1" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="15feeace-8a18-4dcf-982d-e67a66e7e551" positionType="Float" x="0" y="21" width="595" height="1" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{AboutCareYouProvideCareeLiveSameAddressAnswer} == "No"]]></printWhenExpression>
+				</reportElement>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
