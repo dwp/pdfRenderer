@@ -239,7 +239,7 @@ object XMLData extends TestUtils{
         buildQuestion((fields.nationalInsuranceNumber \\ "QuestionLabel").text, (fields.nationalInsuranceNumber \\ "Answer").text),
         buildQuestion((fields.dateOfBirth \\ "QuestionLabel").text, (fields.dateOfBirth \\ "Answer").text),
         buildQuestion(fields.liveSameAddressQuestion.text,fields.liveSameAddressAnswer.text),
-        "Contact details of the person you care for",
+        //"Contact details of the person you care for", This is now a dynamic label, so is giving problems
         buildQuestion((fields.dayTimeTelephoneNumber \\ "QuestionLabel").text, (fields.dayTimeTelephoneNumber \\ "Answer").text),
         buildQuestion(fields.relationToClaimantQuestion.text, fields.relationToClaimantAnswer.text),
         buildQuestion(fields.armedForcesIndependantPaymentQuestion.text, fields.armedForcesIndependantPaymentAnswer.text),
