@@ -9,7 +9,7 @@ resolvers += "Sonatype OSS Releases" at "https://oss.sonatype.org/content/reposi
 resolvers += "sbt-idea-repo" at "http://mpeltonen.github.com/maven/"
 
 // Use the Play sbt plugin for Play projects
-addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.3.6")
+addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.3.7")
 
 addSbtPlugin("com.github.mpeltonen" % "sbt-idea" % "1.6.0")
 
