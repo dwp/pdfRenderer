@@ -197,8 +197,8 @@
 				<textElement/>
 				<text><![CDATA[]]></text>
 			</staticText>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="1d3a72b6-49bb-4740-a26a-18c387c988e8" positionType="Float" x="0" y="108" width="420" height="19" isRemoveLineWhenBlank="true"/>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="1d3a72b6-49bb-4740-a26a-18c387c988e8" positionType="Float" x="0" y="108" width="392" height="19" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{NotStartedUsuallyPaidSameAmountQuestionLabel}]]></textFieldExpression>
 			</textField>
