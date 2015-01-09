@@ -90,3 +90,20 @@ case class BreaksFromCaringEnded(xml:Elem) extends CircsUtils(xml \ "DWPCATransa
 case class OtherChangesDetails(xml: Elem) extends CircsUtils(xml \ "DWPCATransaction" \ "DWPCAChangeOfCircumstances"){
   val otherChangesData = prepareTestData(Seq("OtherChanges"))
 }
+
+case class FinishedEmploymentBasicDetails(xml: Elem) extends CircsUtils(xml \ "DWPCATransaction" \ "DWPCAChangeOfCircumstances" \ "EmploymentChange"){
+  val basicChangesData = prepareTestData(Seq("StillCaring", "HasWorkStartedYet", "DateWorkedStarted", "HasWorkFinishedYet",
+                                             "DateWorkedFinished", "TypeOfWork"))
+}
+
+case class FinishedEmploymentFurtherDetails(xml: Elem) extends CircsUtils(xml \ "DWPCATransaction" \ "DWPCAChangeOfCircumstances" \ "EmploymentChange" \ "StartedEmploymentAndFinished"){
+  val employerAddressQuestion = (xml \ "DWPCATransaction" \ "DWPCAChangeOfCircumstances" \ "EmploymentChange" \ "StartedEmploymentAndFinished" \ "Address" \ "QuestionLabel")
+  val employerAddressAnswer = (xml \ "DWPCATransaction" \ "DWPCAChangeOfCircumstances" \ "EmploymentChange" \ "StartedEmploymentAndFinished" \ "Address" \ "Answer" \ "Line").map(x => x.text).filterNot(x => x.isEmpty).mkString(" ")
+  val payFrequencyQuestion = (xml \ "DWPCATransaction" \ "DWPCAChangeOfCircumstances" \ "EmploymentChange" \ "StartedEmploymentAndFinished" \ "PayFrequency" \ "Frequency" \ "QuestionLabel")
+  val payFrequencyAnswer = (xml \ "DWPCATransaction" \ "DWPCAChangeOfCircumstances" \ "EmploymentChange" \ "StartedEmploymentAndFinished" \ "PayFrequency" \ "Frequency" \ "Answer")
+
+  val furtherChangesData = prepareTestData(Seq("BeenPaidYet", "HowMuchPaid", "PaymentDate", "WhatWasIncluded",
+    "EmployerOwesYouMoney", "UsuallyPaidSameAmount", "PayIntoPension", "CareCostsForThisWork"))
+}
+
+

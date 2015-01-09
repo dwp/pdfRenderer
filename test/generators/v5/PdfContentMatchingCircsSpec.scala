@@ -205,5 +205,21 @@ class PdfContentMatchingCircsSpec extends PdfContentMatchingSpec{
       testContentMatches(pdfFileLocation, textCaseXml, XMLCircsData.functionalTestDataOtherDetails, foundMustBeTrue)
     }
 
+    // Employment : Finished employment : Have you received your last pay - yes
+    "extract PDF for functionalTestCase31 and match contents" in new WithApplication{
+      val pdfFileLocation = s"${version}_functionalTestCase31_circs_contentTestPDF.pdf"
+      val source = getClass.getResource(s"/${version}/circs/c3_functional31_circs.xml")
+      val textCaseXml = XML.load(source)
+      testContentMatches(pdfFileLocation, textCaseXml, XMLCircsData.finishedEmployment, foundMustBeTrue)
+    }
+
+    // Employment : Finished employment : Have you received your last pay - no
+    "extract PDF for functionalTestCase32 and match contents" in new WithApplication{
+      val pdfFileLocation = s"${version}_functionalTestCase32_circs_contentTestPDF.pdf"
+      val source = getClass.getResource(s"/${version}/circs/c3_functional32_circs.xml")
+      val textCaseXml = XML.load(source)
+      testContentMatches(pdfFileLocation, textCaseXml, XMLCircsData.finishedEmployment, foundMustBeTrue)
+    }
+
   }
 }
