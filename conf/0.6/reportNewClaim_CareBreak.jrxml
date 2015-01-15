@@ -106,7 +106,7 @@
 				<textElement verticalAlignment="Middle">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[Breaks in care]]></text>
+				<text><![CDATA[Breaks from Caring]]></text>
 			</staticText>
 		</band>
 	</title>
