@@ -6,7 +6,7 @@ import org.scalastyle.sbt.ScalastylePlugin
 object ApplicationBuild extends Build {
 
   val appName = "p1"
-  val appVersion = "1.3-SNAPSHOT"
+  val appVersion = "1.4-SNAPSHOT"
 
   var repo: Seq[Def.Setting[_]] = Seq(resolvers += "Carers repo" at "http://build.3cbeta.co.uk:8080/artifactory/repo/",
   resolvers += "Jaspersoft repo" at "http://jaspersoft.artifactoryonline.com/jaspersoft/third-party-ce-artifacts/")
@@ -14,13 +14,12 @@ object ApplicationBuild extends Build {
 
   val appDependencies = Seq(
     "me.moocar"             % "logback-gelf"          % "0.12",
-    "org.specs2"            %% "specs2"               % "2.3.13"     % "test",
     "net.sf.jasperreports"  % "jasperreports"         % "5.6.1",
     "com.lowagie"           % "itext"                 % "4.2.1",
-    "com.itextpdf"          % "itextpdf"              % "5.5.3",
-    "org.codehaus.groovy"   % "groovy-all"            % "2.3.7",
+    "com.itextpdf"          % "itextpdf"              % "5.5.4",
+    "org.codehaus.groovy"   % "groovy-all"            % "2.3.9",
     "xalan"                 % "xalan"                 % "2.7.2",
-    "com.dwp.carers"        %% "carerscommon"         % "6.2"
+    "com.dwp.carers"        %% "carerscommon"         % "6.4"
   )
 
   val conf = ConfigFactory.parseFile(new File("conf/application.conf")).resolve()
@@ -44,11 +43,8 @@ object ApplicationBuild extends Build {
 
   var vS: Seq[Def.Setting[_]] = Seq(version := appVersion, libraryDependencies ++= appDependencies)
 
-  var appSettings: Seq[Def.Setting[_]] = repo ++ sV ++ compilerSettings ++ sJ ++ ScalastylePlugin.Settings ++ vS ++ cleanjsprTask
-
+  var appSettings: Seq[Def.Setting[_]] = repo ++ sV ++ compilerSettings ++ sJ ++ ScalastylePlugin.Settings ++ vS ++ cleanjsprTask ++ net.virtualvoid.sbt.graph.Plugin.graphSettings
 
   val main = Project(appName, file(".")).enablePlugins(play.PlayScala).settings(appSettings: _*)
-
-//  val main = Project(appName, appVersion, appDependencies).settings(appSettings: _*)
 
 }
