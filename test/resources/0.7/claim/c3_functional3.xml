@@ -195,7 +195,7 @@
                 <Title><QuestionLabel>Title</QuestionLabel><Answer>Mrs</Answer></Title>
                 <DateOfBirth><QuestionLabel>Date of birth</QuestionLabel><Answer>28-09-1937</Answer></DateOfBirth>
                 <NationalInsuranceNumber><QuestionLabel>National Insurance number</QuestionLabel><Answer>BA234567A</Answer></NationalInsuranceNumber>
-                <NationalityPartner><QuestionLabel>Nationality?</QuestionLabel><Answer>British</Answer></NationalityPartner>
+                <NationalityPartner><QuestionLabel>Nationality?</QuestionLabel><Answer>UNITED STATES OF AMERICA</Answer></NationalityPartner>
                 <RelationshipStatus>
                     <SeparatedFromPartner><QuestionLabel>Have you separated from your partner since the date you want to claim from: 01/01/2010?</QuestionLabel><Answer>No</Answer></SeparatedFromPartner>
                 </RelationshipStatus>

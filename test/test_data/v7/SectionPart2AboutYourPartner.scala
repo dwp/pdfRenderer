@@ -9,9 +9,13 @@ case class SectionPart2AboutYourPartner(xml: Elem) {
 
   val otherSurnameOrMaidenName = rootPath \\ "OtherSurnames"
 
-  val dateOfBirth = rootPath \\ "DateOfBirth"
+  val dateOfBirthQuestion = rootPath \ "DateOfBirth" \ "QuestionLabel"
 
-  val nationalityPartner = rootPath \\ "NationalityPartner"
+  val dateOfBirthAnswer = rootPath \ "DateOfBirth" \ "Answer"
+
+  val nationalityPartnerQuestion = rootPath \"NationalityPartner" \ "QuestionLabel"
+
+  val nationalityPartnerAnswer = rootPath \ "NationalityPartner" \ "Answer"
 
   val seperatedFromPartnerQuestion = rootPath \\ "RelationshipStatus" \\ "SeparatedFromPartner" \\ "QuestionLabel"
 
@@ -20,4 +24,30 @@ case class SectionPart2AboutYourPartner(xml: Elem) {
   val isCareeQuestion = rootPath \\ "IsCaree" \\ "QuestionLabel"
 
   val isCareeAnswer = rootPath \\ "IsCaree" \\ "Answer"
+
+  val parnerNINOAnswer = rootPath \\ "Partner" \\ "NationalInsuranceNumber" \\ "Answer"
+
+  val parnerNINOQuestion = rootPath \\ "Partner" \\ "NationalInsuranceNumber" \\ "QuestionLabel"
+
+  val partnerSurnameAnswer = rootPath \\ "Partner" \\ "Surname" \\ "Answer"
+
+  val partnerSurnameQuestion = rootPath \\ "Partner" \\ "Surname" \\ "QuestionLabel"
+
+  val partnerOtherNamesAnswer = rootPath \\ "Partner" \\ "OtherNames" \\ "Answer"
+
+  val partnerOtherNamesQuestion = rootPath \\ "Partner" \\ "OtherNames" \\ "QuestionLabel"
+
+  val partnerMiddleNamesAnswer = rootPath \\ "Partner" \\ "MiddleNames" \\ "Answer"
+
+  val partnerMiddleNamesQuestion = rootPath \\ "Partner" \\ "MiddleNames" \\ "QuestionLabel"
+
+  val partnerTitleAnswer = rootPath \\ "Partner" \\ "Title" \\ "Answer"
+
+  val partnerTitleQuestion = rootPath \\ "Partner" \\ "Title" \\ "QuestionLabel"
+
+  val partnerOtherSurnamesAnswer = rootPath \\ "Partner" \\ "OtherSurnames" \\ "Answer"
+
+  val partnerOtherSurnamesQuestion = rootPath \\ "Partner" \\ "OtherSurnames" \\ "QuestionLabel"
+
+
 }

@@ -58,30 +58,6 @@ case class XMLDataFields(xml: Elem) extends TestUtils{
 
   val postCodeCaree = rootPath \\ "Caree" \\ "Address" \\ "PostCode"
 
-  val parnerNINOAnswer = rootPath \\ "Partner" \\ "NationalInsuranceNumber" \\ "Answer"
-
-  val parnerNINOQuestion = rootPath \\ "Partner" \\ "NationalInsuranceNumber" \\ "QuestionLabel"
-
-  val partnerSurnameAnswer = rootPath \\ "Partner" \\ "Surname" \\ "Answer"
-
-  val partnerSurnameQuestion = rootPath \\ "Partner" \\ "Surname" \\ "QuestionLabel"
-
-  val partnerOtherNamesAnswer = rootPath \\ "Partner" \\ "OtherNames" \\ "Answer"
-
-  val partnerOtherNamesQuestion = rootPath \\ "Partner" \\ "OtherNames" \\ "QuestionLabel"
-
-  val partnerMiddleNamesAnswer = rootPath \\ "Partner" \\ "MiddleNames" \\ "Answer"
-
-  val partnerMiddleNamesQuestion = rootPath \\ "Partner" \\ "MiddleNames" \\ "QuestionLabel"
-
-  val partnerTitleAnswer = rootPath \\ "Partner" \\ "Title" \\ "Answer"
-
-  val partnerTitleQuestion = rootPath \\ "Partner" \\ "Title" \\ "QuestionLabel"
-
-  val partnerOtherSurnamesAnswer = rootPath \\ "Partner" \\ "OtherSurnames" \\ "Answer"
-
-  val partnerOtherSurnamesQuestion = rootPath \\ "Partner" \\ "OtherSurnames" \\ "QuestionLabel"
-
   val nationalityAnswer = SectionPart1AboutYouTheCarer(xml: Elem).nationalityAnswer
 
   val nationalityQuestion = SectionPart1AboutYouTheCarer(xml: Elem).nationalityQuestion

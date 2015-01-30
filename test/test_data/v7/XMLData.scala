@@ -22,16 +22,12 @@ object XMLData extends TestUtils{
 
   def functionalTestCase2(xml: Elem) = {
     val fields = XMLDataFields(xml)
-    Seq(
-      buildQuestion(fields.partnerOtherSurnamesQuestion.text, fields.partnerOtherSurnamesAnswer.text)
-    ) ++ functionalTestCaseMandatoryFields(xml) ++ aboutYourPartner(fields)
+    functionalTestCaseMandatoryFields(xml) ++ sectionAboutYourPartner(xml)
   }
 
   def functionalTestCase3(xml: Elem) = {
     val fields = XMLDataFields(xml)
-    Seq(
-      buildQuestion(fields.partnerOtherSurnamesQuestion.text, fields.partnerOtherSurnamesAnswer.text)
-    ) ++ functionalTestCaseMandatoryFields(xml) ++ aboutYourPartner(fields) ++ careBreaks(fields) ++ sectionAboutEmployment(xml) ++ sectionEvidenceList(xml)
+    functionalTestCaseMandatoryFields(xml) ++ sectionAboutYourPartner(xml) ++ careBreaks(fields) ++ sectionAboutEmployment(xml) ++ sectionEvidenceList(xml)
   }
 
   def functionalTestCase4(xml: Elem): Seq[String] = {
@@ -41,7 +37,7 @@ object XMLData extends TestUtils{
 
   def functionalTestCase5(xml: Elem) = {
     val fields = XMLDataFields(xml)
-    functionalTestCaseMandatoryFields(xml) ++ aboutYourPartner(fields) ++ careBreaks(fields)
+    functionalTestCaseMandatoryFields(xml) ++ sectionAboutYourPartner(xml) ++ careBreaks(fields)
   }
 
   def functionalTestCase6(xml: Elem) = {
@@ -51,7 +47,7 @@ object XMLData extends TestUtils{
 
   def functionalTestCase7(xml: Elem) = {
     val fields = XMLDataFields(xml)
-    functionalTestCaseMandatoryFields(xml) ++ aboutYourPartner(fields) ++ careBreaks(fields)
+    functionalTestCaseMandatoryFields(xml) ++ sectionAboutYourPartner(xml) ++ careBreaks(fields)
   }
 
   def functionalTestCase8(xml: Elem) = {
@@ -129,14 +125,6 @@ object XMLData extends TestUtils{
     )
   }
 
-  def aboutYourPartner(fields: XMLDataFields) = Seq(
-    buildQuestion(fields.parnerNINOQuestion.text, fields.parnerNINOAnswer.text),
-    buildQuestion(fields.partnerSurnameQuestion.text,fields.partnerSurnameAnswer.text),
-    buildQuestion(fields.partnerMiddleNamesQuestion.text,fields.partnerMiddleNamesAnswer.text),
-    buildQuestion(fields.partnerOtherNamesQuestion.text,fields.partnerOtherNamesAnswer.text),
-    buildQuestion(fields.partnerTitleQuestion.text,fields.partnerTitleAnswer.text)
-  )
-
   def careBreaks(fields: XMLDataFields) = fields.careBreak
 
   def sectionAboutYouTheCarer(xml: Elem) = {
@@ -177,15 +165,20 @@ object XMLData extends TestUtils{
 
   def sectionAboutYourPartner(xml: Elem) = {
     val fields = SectionPart2AboutYourPartner(xml)
-    Seq ("Part 2 - About your partner",
-         "Partner/Spouse details",
-         "Other surname or maiden name "+fields.otherSurnameOrMaidenName.text,
-         "Date of Birth "+fields.dateOfBirth.text,
-         "Nationality "+fields.nationalityPartner.text,
-         fields.seperatedFromPartnerQuestion.text+" "+fields.seperatedFromPartnerAnswer.text,
-         "Person you care for",
-         fields.isCareeQuestion.text+" "+fields.isCareeAnswer.text
-         ) ++ aboutYourPartner(XMLDataFields(xml))
+    Seq (
+            "Part 2 - About your partner",
+            "Partner details",
+            buildQuestion(fields.dateOfBirthQuestion.text, fields.dateOfBirthAnswer.text),
+            buildQuestion(fields.nationalityPartnerQuestion.text, fields.nationalityPartnerAnswer.text),
+            buildQuestion(fields.seperatedFromPartnerQuestion.text, fields.seperatedFromPartnerAnswer.text),
+            buildQuestion(fields.isCareeQuestion.text, fields.isCareeAnswer.text),
+            buildQuestion(fields.parnerNINOQuestion.text, fields.parnerNINOAnswer.text),
+            buildQuestion(fields.partnerSurnameQuestion.text,fields.partnerSurnameAnswer.text),
+            buildQuestion(fields.partnerMiddleNamesQuestion.text,fields.partnerMiddleNamesAnswer.text),
+            buildQuestion(fields.partnerOtherNamesQuestion.text,fields.partnerOtherNamesAnswer.text),
+            buildQuestion(fields.partnerTitleQuestion.text,fields.partnerTitleAnswer.text),
+            buildQuestion(fields.partnerOtherSurnamesQuestion.text,fields.partnerOtherSurnamesAnswer.text)
+         )
   }
 
   def sectionAboutEmployment(xml:Elem) = {
