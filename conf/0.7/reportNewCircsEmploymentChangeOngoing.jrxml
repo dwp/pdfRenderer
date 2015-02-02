@@ -208,12 +208,12 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="490bc1d1-d678-48da-a8b8-2e621cc294d7" positionType="Float" x="0" y="76" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="490bc1d1-d678-48da-a8b8-2e621cc294d7" positionType="Float" x="0" y="95" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{OngoingEmpMonthlyPayDayQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="f29baa2a-c9e7-4099-a694-85c855b7a7a0" style="Answer" positionType="Float" x="420" y="76" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="f29baa2a-c9e7-4099-a694-85c855b7a7a0" style="Answer" positionType="Float" x="420" y="95" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{OngoingEmpMonthlyPayDayAnswer}]]></textFieldExpression>
 			</textField>
@@ -223,12 +223,12 @@
 				<text><![CDATA[Static text]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="a92e4235-5fd0-473f-b25a-8f9534e60bfc" positionType="Float" x="0" y="95" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="a92e4235-5fd0-473f-b25a-8f9534e60bfc" positionType="Float" x="0" y="76" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{OngoingEmpPayFrequencyQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="507c2029-1266-417a-87a5-6bb8f56ef995" style="Answer" positionType="Float" x="420" y="95" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="507c2029-1266-417a-87a5-6bb8f56ef995" style="Answer" positionType="Float" x="420" y="76" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{OngoingEmpPayFrequencyAnswer}]]></textFieldExpression>
 			</textField>
