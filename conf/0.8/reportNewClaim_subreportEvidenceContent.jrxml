@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_subreportEvidenceContent" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isIgnorePagination="true" uuid="59b5c377-1745-423a-a51f-4871a9a032bc">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<template><![CDATA[ $P{TEMPLATE_DIR} + "StyleTemplateClaim.jrtx"]]></template>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String">
+		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="TEMPLATE_DIR" class="java.lang.String">
+    		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+    </parameter>
+	<queryString language="xPath">
+		<![CDATA[//Evidence/Content]]>
+	</queryString>
+	<field name="Content" class="java.lang.String">
+		<fieldDescription><![CDATA[.]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="19" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="d1f681c7-12c0-4696-afcf-2d7be4833b58" positionType="Float" x="0" y="0" width="595" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Content}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
