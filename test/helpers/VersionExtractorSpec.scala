@@ -1,6 +1,7 @@
 package helpers
 
 import org.specs2.mutable.{Tags, Specification}
+import test_data.XMLData
 
 import scala.xml.XML
 
@@ -11,14 +12,10 @@ class VersionExtractorSpec extends Specification with Tags {
 
   "The helper" should {
     "Extract version 0.1 from valid XML" in {
-      val xml = XML.load(getClass getResource "/0.1/claim/c3_functional1.xml")
-      VersionExtractor.extractVersionFrom(xml).get mustEqual "0.1"
+      val xml = XML.load(getClass getResource s"/${XMLData.LATEST_VERSION}/claim/c3_functional1.xml")
+      VersionExtractor.extractVersionFrom(xml).get mustEqual XMLData.LATEST_VERSION
     }
 
-    "Extract version 0.2 from valid XML" in {
-      val xml = XML.load(getClass getResource "/0.2/claim/c3_functional1.xml")
-      VersionExtractor.extractVersionFrom(xml).get mustEqual "0.2"
-    }
 
     "Not extract invalid version" in {
       var xml = <DWPBody><Version>3ksdjfalk</Version></DWPBody>

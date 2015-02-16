@@ -5,6 +5,9 @@ import utils.TestUtils
 
 
 object XMLData extends TestUtils{
+
+  var LATEST_VERSION = "0.8"
+
   def madeUpField(xml: Elem) = {
     Seq(
       "I am an invalid field that should never appear in the pdf"
