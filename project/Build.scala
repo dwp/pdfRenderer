@@ -6,7 +6,7 @@ import org.scalastyle.sbt.ScalastylePlugin
 object ApplicationBuild extends Build {
 
   val appName = "p1"
-  val appVersion = "1.5-SNAPSHOT"
+  val appVersion = "1.6-SNAPSHOT"
 
   var repo: Seq[Def.Setting[_]] = Seq(resolvers += "Carers repo" at "http://build.3cbeta.co.uk:8080/artifactory/repo/",
   resolvers += "Jaspersoft repo" at "http://jaspersoft.artifactoryonline.com/jaspersoft/third-party-ce-artifacts/")
@@ -19,7 +19,7 @@ object ApplicationBuild extends Build {
     "com.itextpdf"          % "itextpdf"              % "5.5.4",
     "org.codehaus.groovy"   % "groovy-all"            % "2.3.9",
     "xalan"                 % "xalan"                 % "2.7.2",
-    "com.dwp.carers"        %% "carerscommon"         % "6.4"
+    "com.dwp.carers"        %% "carerscommon"         % "6.5"
   )
 
   val conf = ConfigFactory.parseFile(new File("conf/application.conf")).resolve()
