@@ -60,6 +60,8 @@ case class XMLDataFields(xml: Elem) extends TestUtils{
 
   val nationalityAnswer = SectionPart1AboutYouTheCarer(xml: Elem).nationalityAnswer
 
+  val qualifyingBenefitAnswer = rootPath \ "QualifyingBenefit" \ "Answer"
+
   val nationalityQuestion = SectionPart1AboutYouTheCarer(xml: Elem).nationalityQuestion
 
   val receiveEEAPensionsBenefitsQuestion = SectionPart1AboutYouTheCarer(xml: Elem).receiveEEAPensionsBenefitsQuestion

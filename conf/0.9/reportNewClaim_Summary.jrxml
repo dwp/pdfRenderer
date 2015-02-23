@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="560" pageHeight="842" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.366026910730141"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="352"/>
+	<property name="ireport.y" value="487"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<import value="org.apache.commons.codec.binary.Base64"/>
 	<template><![CDATA[$P{TEMPLATE_DIR} + "StyleTemplateClaimSummary.jrtx"]]></template>
@@ -308,6 +308,9 @@
 	</field>
 	<field name="PartnerMiddleNamesAnswer" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Partner/MiddleNames/Answer]]></fieldDescription>
+	</field>
+	<field name="QualifyingBenefitAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/QualifyingBenefit/Answer]]></fieldDescription>
 	</field>
 	<pageHeader>
 		<band height="63" splitType="Immediate">
@@ -752,7 +755,7 @@
 						<rightPen lineWidth="0.5"/>
 					</box>
 					<textElement textAlignment="Left" verticalAlignment="Middle"/>
-					<text><![CDATA[  Nationality]]></text>
+					<text><![CDATA[  Qualifying Benefit]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
 					<reportElement uuid="3c37fe2c-b14b-4cfa-abc0-72e4332b04f0" positionType="Float" x="356" y="18" width="204" height="18" isRemoveLineWhenBlank="true"/>
@@ -764,7 +767,7 @@
 						<rightPen lineWidth="0.5"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle"/>
-					<textFieldExpression><![CDATA[$F{ClaimantNationalityAnswer}.equals("British") ? $F{ClaimantNationalityAnswer}:$F{ClaimantNationalityAnotherCountryAnswer}]]></textFieldExpression>
+					<textFieldExpression><![CDATA[$F{QualifyingBenefitAnswer}]]></textFieldExpression>
 				</textField>
 				<staticText>
 					<reportElement uuid="8b4cdebf-2471-4fdd-b4fc-ef3214ade416" positionType="Float" x="0" y="36" width="356" height="18" isRemoveLineWhenBlank="true"/>
@@ -776,7 +779,7 @@
 						<rightPen lineWidth="0.5"/>
 					</box>
 					<textElement verticalAlignment="Middle"/>
-					<text><![CDATA[  Armed Forces Independence Payment (AFIP)]]></text>
+					<text><![CDATA[  Nationality]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
 					<reportElement uuid="94af47e2-7d51-412d-acd6-381539274f14" positionType="Float" x="356" y="36" width="204" height="18" isRemoveLineWhenBlank="true">
@@ -791,7 +794,7 @@
 						<rightPen lineWidth="0.5"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle"/>
-					<textFieldExpression><![CDATA[($F{AFIPAnswer}.equals("Yes") ? "##CHECK##" : "##CROSS##")]]></textFieldExpression>
+					<textFieldExpression><![CDATA[$F{ClaimantNationalityAnswer}.equals("British") ? $F{ClaimantNationalityAnswer}:$F{ClaimantNationalityAnotherCountryAnswer}]]></textFieldExpression>
 				</textField>
 				<staticText>
 					<reportElement uuid="1df17865-4983-414f-9c23-49449e7a830d" positionType="Float" x="0" y="54" width="356" height="18" isRemoveLineWhenBlank="true"/>

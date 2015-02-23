@@ -117,6 +117,7 @@ object XMLData extends TestUtils{
   def claimSummary(fields: XMLDataFields) = {
     Seq("Claim Summary",
       fields.nationalityAnswer.text,
+      fields.qualifyingBenefitAnswer.text,
       buildQuestion(fields.receiveEEAPensionsBenefitsQuestion.text, fields.receiveEEAPensionsBenefitsAnswer.text),
       buildQuestion(fields.timeOutsideGBLast3YearsQuestion.text, fields.timeOutsideGBLast3YearsAnswer.text),
       buildQuestion(fields.statePensionQuestion.text, fields.statePensionAnswer.text), // this field is only valid for 0.1: Remove this when you remove 0.1 version
