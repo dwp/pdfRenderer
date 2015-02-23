@@ -246,7 +246,7 @@
 		</band>
 		<band height="40" splitType="Prevent">
 			<staticText>
-				<reportElement uuid="1c5d9726-b4ef-44ce-9a67-6874d77320ab" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="1" y="0" width="594" height="21">
+				<reportElement uuid="1c5d9726-b4ef-44ce-9a67-6874d77320ab" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="1" y="0" width="594" height="21" isRemoveLineWhenBlank="true">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingContactDetailsOfThePersonYouCareFor"/>
 					<printWhenExpression><![CDATA[$F{AboutCareYouProvideCareeLiveSameAddressAnswer} == "No"]]></printWhenExpression>
 				</reportElement>
