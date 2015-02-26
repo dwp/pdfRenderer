@@ -100,6 +100,10 @@
                     <PaidForPension><QuestionLabel>Did you pay into a pension and/or have any work related expenses?</QuestionLabel><Answer>Yes</Answer></PaidForPension><PensionExpenses>
                     <Expense><QuestionLabel>Tell us what these were for, how much and how often</QuestionLabel><Answer>Some pension expenses paying 200 a week for xyz</Answer></Expense>
                 </PensionExpenses>
+                    <PaidForThingsToDoJob>
+                        <QuestionLabel>Did you pay for things you needed to do your job?</QuestionLabel>
+                        <Answer>No</Answer>
+                    </PaidForThingsToDoJob>
                     <PaidForJobExpenses><QuestionLabel>Did you pay for anything necessary to do your job?</QuestionLabel><Answer>No</Answer></PaidForJobExpenses>
                 </JobDetails>
             </Employment>

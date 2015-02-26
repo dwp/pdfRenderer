@@ -195,6 +195,16 @@
                     <Payment><QuestionLabel>How much did you pay?</QuestionLabel><Answer><Currency>GBP</Currency><Amount>200.1</Amount></Answer></Payment>
                     <Frequency><QuestionLabel>How often?</QuestionLabel><Other>Another reason</Other><Answer>Other</Answer></Frequency>
                 </PersonalPension>
+                    <PaidForThingsToDoJob>
+                        <QuestionLabel>Did you pay for things you needed to do your job?</QuestionLabel>
+                        <Answer>Yes</Answer>
+                    </PaidForThingsToDoJob>
+                    <ExpensesToDoJob>
+                        <Expense>
+                            <QuestionLabel>Give details of what you needed to buy, why you needed it and how much it cost.</QuestionLabel>
+                            <Answer>Some expenses to do my job</Answer>
+                        </Expense>
+                    </ExpensesToDoJob>
                     <PaidForJobExpenses><QuestionLabel>Did you pay for anything necessary to do your job?</QuestionLabel><Answer>Yes</Answer></PaidForJobExpenses><JobExpenses>
                     <Expense><QuestionLabel>What were these things?</QuestionLabel><Answer>Petrol money for driving</Answer></Expense>
                 </JobExpenses>
@@ -250,6 +260,16 @@
                 <Payment><QuestionLabel>How much did you pay?</QuestionLabel><Answer><Currency>GBP</Currency><Amount>345.2</Amount></Answer></Payment>
                 <Frequency><QuestionLabel>How often?</QuestionLabel><Answer>Weekly</Answer></Frequency>
             </PersonalPension>
+                <PaidForThingsToDoJob>
+                    <QuestionLabel>Did you pay for things you needed to do your job?</QuestionLabel>
+                    <Answer>Yes</Answer>
+                </PaidForThingsToDoJob>
+                <ExpensesToDoJob>
+                    <Expense>
+                        <QuestionLabel>Give details of what you needed to buy, why you needed it and how much it cost.</QuestionLabel>
+                        <Answer>Some expenses to do my job</Answer>
+                    </Expense>
+                </ExpensesToDoJob>
                 <PaidForJobExpenses><QuestionLabel>Did you pay for anything necessary to do your job?</QuestionLabel><Answer>Yes</Answer></PaidForJobExpenses><JobExpenses>
                 <Expense><QuestionLabel>What were these things?</QuestionLabel><Answer>Petrol money for driving</Answer></Expense>
             </JobExpenses>

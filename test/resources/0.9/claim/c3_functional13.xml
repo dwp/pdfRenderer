@@ -460,6 +460,16 @@
                     <PensionExpenses>
                         <Expense><QuestionLabel>Tell us what these were for, how much and how often</QuestionLabel><Answer>Some pension expenses paying 200 a week for xyz</Answer></Expense>
                     </PensionExpenses>
+                    <PaidForThingsToDoJob>
+                        <QuestionLabel>Did you pay for things you needed to do your job?</QuestionLabel>
+                        <Answer>Yes</Answer>
+                    </PaidForThingsToDoJob>
+                    <ExpensesToDoJob>
+                        <Expense>
+                            <QuestionLabel>Give details of what you needed to buy, why you needed it and how much it cost.</QuestionLabel>
+                            <Answer>Some expenses to do my job</Answer>
+                        </Expense>
+                    </ExpensesToDoJob>
                     <PaidForJobExpenses><QuestionLabel>Did you pay for anything necessary to do your job?</QuestionLabel><Answer>Yes</Answer></PaidForJobExpenses>
                     <JobExpenses>
                         <Expense><QuestionLabel>Tell us what the cost was for, how much, how often and who to.</QuestionLabel><Answer>Some job expenses paying 200 a week for xyz</Answer></Expense>

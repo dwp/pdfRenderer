@@ -118,6 +118,10 @@
                     </Pay>
                     <OweMoney><QuestionLabel>Does your employer owe you any money?</QuestionLabel><Answer>No</Answer></OweMoney>
                     <PaidForPension><QuestionLabel>Do you pay into a pension and/or have any work related expenses?</QuestionLabel><Answer>No</Answer></PaidForPension>
+                    <PaidForThingsToDoJob>
+                        <QuestionLabel>Did you pay for things you needed to do your job?</QuestionLabel>
+                        <Answer>No</Answer>
+                    </PaidForThingsToDoJob>
                     <PaidForJobExpenses><QuestionLabel>Do you have any care costs because of this work?</QuestionLabel><Answer>Yes</Answer></PaidForJobExpenses><JobExpenses>
                     <Expense><QuestionLabel>Tell us what the cost is for, how much, how often and who to.</QuestionLabel><Answer>Some job expenses paying 200 a week for xyz</Answer></Expense>
                 </JobExpenses>
