@@ -4,13 +4,13 @@
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
-	<template><![CDATA[ $P{TEMPLATE_DIR} + "StyleTemplateClaim.jrtx"]]></template>
+	<template><![CDATA[$P{TEMPLATE_DIR} + "StyleTemplateClaim.jrtx"]]></template>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
 	</parameter>
 	<parameter name="TEMPLATE_DIR" class="java.lang.String">
-    		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
-    </parameter>
+		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+	</parameter>
 	<queryString language="xPath">
 		<![CDATA[/]]>
 	</queryString>
@@ -101,6 +101,18 @@
 	<field name="OngoingEmpMoreAboutChangesAnswer" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/MoreAboutChanges/Answer]]></fieldDescription>
 	</field>
+	<field name="OngoingEmpPaidForThingsQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/PaidForThingsToDoJob/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="OngoingEmpPaidForThingsAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/PaidForThingsToDoJob/Answer]]></fieldDescription>
+	</field>
+	<field name="OngoingEmpPaidForThingsWhatForQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/PaidForThingsWhatFor/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="OngoingEmpPaidForThingsWhatForAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/PaidForThingsWhatFor/Answer]]></fieldDescription>
+	</field>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -124,10 +136,10 @@
 				<subreportParameter name="postCode">
 					<subreportParameterExpression><![CDATA["Postcode"]]></subreportParameterExpression>
 				</subreportParameter>
-                <subreportParameter name="TEMPLATE_DIR">
-                    <subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
-                </subreportParameter>
-                <dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/Address/Answer")]]></dataSourceExpression>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndOngoing/Address/Answer")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_addressForNestedReports.jasper"]]></subreportExpression>
 			</subreport>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
@@ -146,7 +158,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 		</band>
-		<band height="191" splitType="Immediate">
+		<band height="210" splitType="Immediate">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="7037f9d7-a80c-44ca-b2cc-a54f81c6bebf" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
@@ -290,17 +302,44 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsOtherChanges.jasper"]]></subreportExpression>
 			</subreport>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="d8860fe9-d4e1-4b13-9d0b-3a33ea711f51" positionType="Float" x="0" y="171" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="1bd76ca6-66d8-4ac0-a7ce-b1ba7c303c2c" positionType="Float" x="0" y="171" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{OngoingEmpPaidForThingsQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="80232bbd-9439-463d-b15d-5f86cdbf2963" style="Answer" positionType="Float" x="420" y="171" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{OngoingEmpPaidForThingsAnswer}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement uuid="70b24df4-e85a-4458-9617-f8ea2e94cff5" positionType="Float" x="0" y="189" width="594" height="1"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OTHER_CHANGES_QUESTION">
+					<subreportParameterExpression><![CDATA[$F{OngoingEmpPaidForThingsWhatForQuestionLabel}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OTHER_CHANGES_ANSWER">
+					<subreportParameterExpression><![CDATA[$F{OngoingEmpPaidForThingsWhatForAnswer}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsOtherChanges.jasper"]]></subreportExpression>
+			</subreport>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="d8860fe9-d4e1-4b13-9d0b-3a33ea711f51" positionType="Float" x="0" y="190" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{OngoingEmpCareCostsForThisWorkQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="78f63d80-3735-483b-8c94-8a41115f259a" style="Answer" positionType="Float" x="420" y="171" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="78f63d80-3735-483b-8c94-8a41115f259a" style="Answer" positionType="Float" x="420" y="190" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{OngoingEmpCareCostsForThisWorkAnswer}]]></textFieldExpression>
 			</textField>
 			<subreport>
-				<reportElement uuid="8aa9f828-eb13-4254-87eb-0a393d8c6f23" positionType="Float" x="0" y="189" width="594" height="1"/>
+				<reportElement uuid="8aa9f828-eb13-4254-87eb-0a393d8c6f23" positionType="Float" x="0" y="208" width="594" height="1"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -317,7 +356,7 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsOtherChanges.jasper"]]></subreportExpression>
 			</subreport>
 			<subreport>
-				<reportElement uuid="ca32667a-15f2-488a-9a3b-e04e3f426e34" positionType="Float" x="0" y="190" width="594" height="1"/>
+				<reportElement uuid="ca32667a-15f2-488a-9a3b-e04e3f426e34" positionType="Float" x="0" y="209" width="594" height="1"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
