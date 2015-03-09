@@ -2,17 +2,20 @@ import sbt._
 import sbt.Keys._
 import com.typesafe.config._
 import org.scalastyle.sbt.ScalastylePlugin
+import play.Play.autoImport._
+
 
 object ApplicationBuild extends Build {
 
   val appName = "p1"
-  val appVersion = "1.6-SNAPSHOT"
+  val appVersion = "1.7-SNAPSHOT"
 
   var repo: Seq[Def.Setting[_]] = Seq(resolvers += "Carers repo" at "http://build.3cbeta.co.uk:8080/artifactory/repo/",
   resolvers += "Jaspersoft repo" at "http://jaspersoft.artifactoryonline.com/jaspersoft/third-party-ce-artifacts/")
 
 
   val appDependencies = Seq(
+    filters,
     "me.moocar"             % "logback-gelf"          % "0.12",
     "net.sf.jasperreports"  % "jasperreports"         % "5.6.1",
     "com.lowagie"           % "itext"                 % "4.2.1",
