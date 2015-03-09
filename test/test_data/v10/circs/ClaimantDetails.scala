@@ -123,7 +123,7 @@ case class FinishedEmploymentFurtherDetails(xml: Elem) extends CircsUtils(xml \ 
 
 
   val furtherChangesData = prepareTestData(Seq("BeenPaidYet", "HowMuchPaid", "PaymentDate", "WhatWasIncluded",
-    "UsuallyPaidSameAmount", "PayIntoPension", "CareCostsForThisWork"))
+    "UsuallyPaidSameAmount", "PayIntoPension", "PayIntoPensionWhatFor","PaidForThingsToDoJob","PaidForThingsWhatFor","CareCostsForThisWork","CareCostsForThisWorkWhatCosts"))
 }
 
 case class StartedAndOngoingEmploymentBasicDetails(xml: Elem) extends CircsUtils(xml \ "DWPCATransaction" \ "DWPCAChangeOfCircumstances" \ "EmploymentChange"){

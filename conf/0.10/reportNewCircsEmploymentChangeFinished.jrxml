@@ -116,6 +116,18 @@
 	<field name="FinishedEmpEmployerOwesYouMoneyOther" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndFinished/EmployerOwesYouMoney/Other]]></fieldDescription>
 	</field>
+	<field name="FinishedEmpPayedForThingsQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndFinished/PaidForThingsToDoJob/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="FinishedEmpPayedForThingsAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndFinished/PaidForThingsToDoJob/Answer]]></fieldDescription>
+	</field>
+	<field name="FinishedEmpPayedForThingsWhatForQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndFinished/PaidForThingsWhatFor/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="FinishedEmpPayedForThingsWhatForAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EmploymentChange/StartedEmploymentAndFinished/PaidForThingsWhatFor/Answer]]></fieldDescription>
+	</field>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -156,7 +168,7 @@
 				<textFieldExpression><![CDATA[$F{FinishedEmpEmployerContactNumberAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="348" splitType="Immediate">
+		<band height="274" splitType="Immediate">
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="7037f9d7-a80c-44ca-b2cc-a54f81c6bebf" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
@@ -277,46 +289,79 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{FinishedEmpPayIntoPensionAnswer}]]></textFieldExpression>
 			</textField>
+			<subreport>
+				<reportElement uuid="9a7139c7-7f8b-4c5b-9d36-deb37da0dc4b" positionType="Float" x="0" y="234" width="594" height="1"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OTHER_CHANGES_QUESTION">
+					<subreportParameterExpression><![CDATA[$F{FinishedEmpPayIntoPensionWhatForQuestionLabel}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OTHER_CHANGES_ANSWER">
+					<subreportParameterExpression><![CDATA[$F{FinishedEmpPayIntoPensionWhatForAnswer}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsOtherChanges.jasper"]]></subreportExpression>
+			</subreport>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="325987e0-c3db-4fbe-835f-14c81907b958" positionType="Float" x="0" y="234" width="594" height="17" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{FinishedEmpPayIntoPensionAnswer} == "Yes"]]></printWhenExpression>
-				</reportElement>
+				<reportElement uuid="ef16ab33-ae27-4627-9d7a-fa46417b07d5" positionType="Float" x="0" y="235" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{FinishedEmpPayIntoPensionWhatForQuestionLabel}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{FinishedEmpPayedForThingsQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="92e7438a-4117-4a56-8687-6b3f0c0f04cb" style="Answer" positionType="Float" x="0" y="257" width="594" height="16" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{FinishedEmpPayIntoPensionAnswer} == "Yes"]]></printWhenExpression>
-				</reportElement>
+				<reportElement uuid="29780648-a474-4202-b5d2-dd71acf85dd7" style="Answer" positionType="Float" x="420" y="235" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{FinishedEmpPayIntoPensionWhatForAnswer}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{FinishedEmpPayedForThingsAnswer}]]></textFieldExpression>
 			</textField>
+			<subreport>
+				<reportElement uuid="4f738442-6803-45e8-a524-8c1aae35d9de" positionType="Float" x="0" y="253" width="594" height="1"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OTHER_CHANGES_QUESTION">
+					<subreportParameterExpression><![CDATA[$F{FinishedEmpPayedForThingsWhatForQuestionLabel}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OTHER_CHANGES_ANSWER">
+					<subreportParameterExpression><![CDATA[$F{FinishedEmpPayedForThingsWhatForAnswer}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsOtherChanges.jasper"]]></subreportExpression>
+			</subreport>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="d8860fe9-d4e1-4b13-9d0b-3a33ea711f51" positionType="Float" x="0" y="279" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="d8860fe9-d4e1-4b13-9d0b-3a33ea711f51" positionType="Float" x="0" y="254" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{FinishedEmpCareCostsForThisWorkQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="78f63d80-3735-483b-8c94-8a41115f259a" style="Answer" positionType="Float" x="420" y="279" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="78f63d80-3735-483b-8c94-8a41115f259a" style="Answer" positionType="Float" x="420" y="254" width="174" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{FinishedEmpCareCostsForThisWorkAnswer}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="8338b452-38eb-45ea-b472-373e9cc98a40" positionType="Float" x="0" y="298" width="594" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{FinishedEmpCareCostsForThisWorkAnswer} == "Yes"]]></printWhenExpression>
-				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{FinishedEmpCareCostsForThisWorkWhatCostsQuestionLabel}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="d8fb4e33-755a-412b-9f60-fe8d06aea92d" style="Answer" positionType="Float" x="0" y="322" width="594" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{FinishedEmpCareCostsForThisWorkAnswer} == "Yes"]]></printWhenExpression>
-				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{FinishedEmpCareCostsForThisWorkWhatCostsAnswer}]]></textFieldExpression>
-			</textField>
 			<subreport>
-				<reportElement uuid="348d1e17-042a-43e4-925e-89cc66bbd257" positionType="Float" x="0" y="346" width="594" height="1" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="912addd6-9fdb-4e2d-a9f4-ea89251c8091" positionType="Float" x="0" y="272" width="594" height="1"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OTHER_CHANGES_QUESTION">
+					<subreportParameterExpression><![CDATA[$F{FinishedEmpCareCostsForThisWorkWhatCostsQuestionLabel}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OTHER_CHANGES_ANSWER">
+					<subreportParameterExpression><![CDATA[$F{FinishedEmpCareCostsForThisWorkWhatCostsAnswer}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsOtherChanges.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement uuid="348d1e17-042a-43e4-925e-89cc66bbd257" positionType="Float" x="0" y="273" width="594" height="1" isRemoveLineWhenBlank="true"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>

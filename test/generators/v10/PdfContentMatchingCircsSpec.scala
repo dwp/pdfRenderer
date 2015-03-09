@@ -221,6 +221,22 @@ class PdfContentMatchingCircsSpec extends PdfContentMatchingSpec{
       testContentMatches(pdfFileLocation, textCaseXml, XMLCircsData.finishedEmployment, foundMustBeTrue)
     }
 
+    // Employment : Finished employment : Pension, PaidToDoThings, Costs - no
+    "extract PDF for functionalTestCase35 and match contents" in new WithApplication{
+      val pdfFileLocation = s"${version}_functionalTestCase35_circs_contentTestPDF.pdf"
+      val source = getClass.getResource(s"/${version}/circs/c3_functional35_circs.xml")
+      val textCaseXml = XML.load(source)
+      testContentMatches(pdfFileLocation, textCaseXml, XMLCircsData.finishedEmployment, foundMustBeTrue)
+    }
+
+    // Employment : Finished employment : Pension, PaidToDoThings, Costs - yes
+    "extract PDF for functionalTestCase36 and match contents" in new WithApplication{
+      val pdfFileLocation = s"${version}_functionalTestCase36_circs_contentTestPDF.pdf"
+      val source = getClass.getResource(s"/${version}/circs/c3_functional36_circs.xml")
+      val textCaseXml = XML.load(source)
+      testContentMatches(pdfFileLocation, textCaseXml, XMLCircsData.finishedEmployment, foundMustBeTrue)
+    }
+
     // Employment : Started and Ongoing employment : Pension, PaidToDoThings, Costs - no
     "extract PDF for functionalTestCase33 and match contents" in new WithApplication{
       val pdfFileLocation = s"${version}_functionalTestCase33_circs_contentTestPDF.pdf"
@@ -236,6 +252,5 @@ class PdfContentMatchingCircsSpec extends PdfContentMatchingSpec{
       val textCaseXml = XML.load(source)
       testContentMatches(pdfFileLocation, textCaseXml, XMLCircsData.startedAndOngoingEmployment, foundMustBeTrue)
     }
-
   }
 }
