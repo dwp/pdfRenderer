@@ -108,6 +108,19 @@ object XMLCircsData extends TestUtils{
     ) ++ details ++ furtherDetails
   }
 
+  def futureEmployment(xml:Elem) = {
+    val details = FutureEmploymentBasicDetails(xml).basicChangesData.map(s => buildQuestion(s._1.text, s._2.text))
+    val furtherDetails = FutureEmploymentFurtherDetails(xml).furtherChangesData.map(s => buildQuestion(s._1.text, s._2.text))
+
+    Seq(
+      "Part 2 - Change in Circumstance - Employment Change",
+      FutureEmploymentFurtherDetails(xml).employerAddressQuestion.text,
+      FutureEmploymentFurtherDetails(xml).employerAddressAnswer,
+      FutureEmploymentFurtherDetails(xml).payFrequencyQuestion.text,
+      FutureEmploymentFurtherDetails(xml).payFrequencyAnswer.text
+    ) ++ details ++ furtherDetails
+  }
+
 
   def paymentBankDetails(xml:Elem) = {
     val details = PaymentBankDetailsPaidIntoAccount(xml).paidIntoAccountData.map(s => buildQuestion(s._1.text, s._2.text))

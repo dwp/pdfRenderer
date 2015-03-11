@@ -141,4 +141,19 @@ case class StartedAndOngoingEmploymentFurtherDetails(xml: Elem) extends CircsUti
     "UsuallyPaidSameAmount", "PayIntoPension", "PayIntoPensionWhatFor","PaidForThingsToDoJob","PaidForThingsWhatFor","CareCostsForThisWork","CareCostsForThisWorkWhatCosts"))
 }
 
+case class FutureEmploymentBasicDetails(xml: Elem) extends CircsUtils(xml \ "DWPCATransaction" \ "DWPCAChangeOfCircumstances" \ "EmploymentChange"){
+  val basicChangesData = EmploymentChangeBasicDetails(xml: Elem).basicChangesData
+}
+
+case class FutureEmploymentFurtherDetails(xml: Elem) extends CircsUtils(xml \ "DWPCATransaction" \ "DWPCAChangeOfCircumstances" \ "EmploymentChange" \ "NotStartedEmployment"){
+  val futureEmp = xml \ "DWPCATransaction" \ "DWPCAChangeOfCircumstances" \ "EmploymentChange" \ "NotStartedEmployment"
+  val employerAddressQuestion = (futureEmp \ "Address" \ "QuestionLabel")
+  val employerAddressAnswer = (futureEmp \ "Address" \ "Answer" \ "Line").map(x => x.text).filterNot(x => x.isEmpty).mkString(" ")
+  val payFrequencyQuestion = (futureEmp \ "PayFrequency" \ "Frequency" \ "QuestionLabel")
+  val payFrequencyAnswer = (futureEmp \ "PayFrequency" \ "Frequency" \ "Answer")
+
+  val furtherChangesData = prepareTestData(Seq("EmployerContactNumber","EmployerPayroll", "BeenPaidYet", "HowMuchPaid", "PaymentDate",
+    "UsuallyPaidSameAmount", "PayIntoPension", "PayIntoPensionWhatFor","PaidForThingsToDoJob","PaidForThingsWhatFor","CareCostsForThisWork","CareCostsForThisWorkWhatCosts"))
+}
+
 
