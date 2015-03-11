@@ -134,7 +134,7 @@
 				<textElement verticalAlignment="Middle" markup="styled">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[PART 7 - STATUTORY PAY, BENEFITS AND PAYMENTS]]></text>
+				<text><![CDATA[PART 7 - OTHER PAYMENTS]]></text>
 			</staticText>
 		</band>
 	</title>

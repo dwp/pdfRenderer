@@ -243,7 +243,7 @@ object XMLData extends TestUtils{
     val fields = SectionAboutOtherMoney(xml)
     var otherMoneyTitle = "Part 7 - About Other Money"
     if (!serviceVersion(xml).equals("0.1")){
-      otherMoneyTitle = "PART 7 - STATUTORY PAY, BENEFITS AND PAYMENTS"
+      otherMoneyTitle = "PART 7 - OTHER PAYMENTS"
     }
     Seq (otherMoneyTitle,
       buildQuestion(fields.otherMoneyQuestion.text, fields.otherMoneyAnswer.text),
