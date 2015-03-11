@@ -2,8 +2,8 @@ package helpers
 
 import javax.xml.bind.DatatypeConverter
 
-import com.dwp.carers.security.encryption.{NotEncryptedException, EncryptorAES}
-import com.dwp.exceptions.DwpRuntimeException
+import gov.dwp.carers.security.encryption.{NotEncryptedException, EncryptorAES}
+import gov.dwp.exceptions.DwpRuntimeException
 import play.api.Logger
 
 import scala.xml.{Elem, Node}
