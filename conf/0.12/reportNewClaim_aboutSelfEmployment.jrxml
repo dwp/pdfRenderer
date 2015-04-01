@@ -4,13 +4,13 @@
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
-	<template><![CDATA[ $P{TEMPLATE_DIR} + "StyleTemplateClaim.jrtx"]]></template>
+	<template><![CDATA[$P{TEMPLATE_DIR} + "StyleTemplateClaim.jrtx"]]></template>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
 	</parameter>
 	<parameter name="TEMPLATE_DIR" class="java.lang.String">
-    		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
-    </parameter>
+		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+	</parameter>
 	<queryString language="XPath">
 		<![CDATA[/]]>
 	</queryString>
@@ -139,6 +139,15 @@
 	</field>
 	<field name="PensionExpensesAnswer" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/PensionExpenses/Expense/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutEmploymentAdditionaInfoQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/EmploymentAdditionalInfo/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutEmploymentAdditionaInfoAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/EmploymentAdditionalInfo/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutEmploymentAdditionaInfoOther" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/EmploymentAdditionalInfo/Other]]></fieldDescription>
 	</field>
 	<background>
 		<band splitType="Stretch"/>
@@ -378,6 +387,36 @@
 				<textElement/>
 				<text><![CDATA[]]></text>
 			</staticText>
+		</band>
+		<band height="58">
+			<printWhenExpression><![CDATA[!$F{AboutEmploymentAdditionaInfoQuestion}.isEmpty()]]></printWhenExpression>
+			<staticText>
+				<reportElement uuid="3b7a4779-53b3-423c-8f6b-9bc5f86ff79f" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="594" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement verticalAlignment="Top">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Additional information for your work]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="a14ed3ff-d2dc-4de1-99b0-5b418ebe8d8e" positionType="Float" x="0" y="21" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutEmploymentAdditionaInfoQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="335f3d44-a020-4c31-95da-c6d8f1cacc77" style="Answer" positionType="Float" x="420" y="21" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutEmploymentAdditionaInfoAnswer}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="025c9dfe-cf83-44d1-8b39-3e1b7d5b7b3b" positionType="Float" x="0" y="39" width="594" height="1"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="5991c9b7-69ad-4f2c-b62e-61d26b774bc6" style="Answer" positionType="Float" x="0" y="40" width="594" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AboutEmploymentAdditionaInfoOther}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 </jasperReport>

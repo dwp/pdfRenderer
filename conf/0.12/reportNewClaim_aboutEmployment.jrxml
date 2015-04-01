@@ -17,15 +17,6 @@
 	<field name="AboutEmploymentAreYouEmployedAnswer" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Employed/Answer]]></fieldDescription>
 	</field>
-	<field name="AboutEmploymentAdditionaInfoQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/EmploymentAdditionalInfo/QuestionLabel]]></fieldDescription>
-	</field>
-	<field name="AboutEmploymentAdditionaInfoAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/EmploymentAdditionalInfo/Answer]]></fieldDescription>
-	</field>
-	<field name="AboutEmploymentAdditionaInfoOther" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/EmploymentAdditionalInfo/Other]]></fieldDescription>
-	</field>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -67,36 +58,6 @@
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/Employment/JobDetails")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_employmentJobDetails.jasper"]]></subreportExpression>
 			</subreport>
-		</band>
-		<band height="58">
-			<printWhenExpression><![CDATA[!$F{AboutEmploymentAdditionaInfoQuestion}.isEmpty()]]></printWhenExpression>
-			<staticText>
-				<reportElement uuid="62e1997c-bc95-4661-ab36-c9d0ebf17081" positionType="Float" mode="Opaque" x="0" y="1" width="594" height="20" backcolor="#E6E6E6"/>
-				<textElement verticalAlignment="Middle">
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[Additional information for your work]]></text>
-			</staticText>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="288d500f-caaa-47d4-9787-bcb4f9a584e9" positionType="Float" x="0" y="21" width="392" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutEmploymentAdditionaInfoQuestion}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="71631665-3d5f-48da-869e-ef424c60d426" style="Answer" positionType="Float" x="420" y="21" width="174" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutEmploymentAdditionaInfoAnswer}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement uuid="c003261b-dc74-43f3-acc4-1e778fbdd9ac" positionType="Float" x="0" y="39" width="594" height="1"/>
-				<textElement/>
-				<text><![CDATA[]]></text>
-			</staticText>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="4d21193e-9602-405a-816f-6e6d081d459e" style="Answer" positionType="Float" x="0" y="40" width="594" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutEmploymentAdditionaInfoOther}]]></textFieldExpression>
-			</textField>
 		</band>
 	</detail>
 </jasperReport>
