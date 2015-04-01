@@ -69,6 +69,12 @@
 	<field name="EndTimeAnswer" class="java.lang.String">
 		<fieldDescription><![CDATA[EndTime/Answer]]></fieldDescription>
 	</field>
+	<field name="EndDateDoNotKnowQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[EndDateDoNotKnow/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="EndDateDoNotKnowAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[EndDateDoNotKnow/Answer]]></fieldDescription>
+	</field>
 	<variable name="variable1" class="java.lang.Integer" incrementType="Group" incrementGroup="Break">
 		<variableExpression><![CDATA[$V{variable1}+1]]></variableExpression>
 		<initialValueExpression><![CDATA[0]]></initialValueExpression>
@@ -123,7 +129,7 @@
 				<textFieldExpression><![CDATA["Care Break " + $V{variable1}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="164">
+		<band height="182">
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="111c129f-a7b9-4827-bd88-0d8d0478c093" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
@@ -213,18 +219,31 @@
 				<textFieldExpression><![CDATA[$F{EndTimeAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="d76016ae-69ca-405b-b478-6b951f730ffa" positionType="Float" x="0" y="146" width="392" height="18" isRemoveLineWhenBlank="true">
+				<reportElement uuid="d76016ae-69ca-405b-b478-6b951f730ffa" positionType="Float" x="0" y="164" width="392" height="18" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{MedicalAnswer} != null]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{MedicalQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="3f90f92a-4244-49fe-974f-17ba1065cd87" style="Answer" positionType="Float" x="420" y="146" width="174" height="18" isRemoveLineWhenBlank="true">
+				<reportElement uuid="3f90f92a-4244-49fe-974f-17ba1065cd87" style="Answer" positionType="Float" x="420" y="164" width="174" height="18" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{MedicalAnswer}!= null]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{MedicalAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="3f68757d-2d4b-44ff-bef6-5f69fb3d594d" style="Answer" positionType="Float" x="420" y="146" width="174" height="18" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[!$F{EndDateDoNotKnowAnswer}.isEmpty()]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EndDateDoNotKnowAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="194590fc-088b-44ea-8323-5ea752b3b5c7" positionType="Float" x="0" y="146" width="392" height="18" isRemoveLineWhenBlank="true">
+				</reportElement>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EndDateDoNotKnowQuestionLabel}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
