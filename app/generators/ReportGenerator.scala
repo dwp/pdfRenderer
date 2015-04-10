@@ -44,7 +44,7 @@ trait ReportGenerator {
     }
   }
 
-  def exportReportToStream(print: Option[JasperPrint], stream: OutputStream): SuccessOrFailure = {
+  def exportReportToStream(print: Option[JasperPrint], stream: OutputStream,claimType:String): SuccessOrFailure = {
     GenerationSuccess()
   }
 }
