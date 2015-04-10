@@ -4,9 +4,10 @@ import net.sf.jasperreports.engine.export.{JRPdfExporterParameter, JRPdfExporter
 import net.sf.jasperreports.engine._
 import net.sf.jasperreports.export.`type`.PdfaConformanceEnum
 import net.sf.jasperreports.export._
-import play.api.Logger
+import play.api.{Play, Logger}
 import java.io.OutputStream
 import app.ConfigProperties._
+import play.api.Play.current
 
 /**
  * Generates a PDF from a DataSource.
@@ -17,36 +18,28 @@ import app.ConfigProperties._
 object PdfGenerator extends ReportGenerator {
 
   val context = DefaultJasperReportsContext.getInstance()
-  val config = initConfig
+  def config = initConfig
 
   private def initConfig = {
     val config = new SimplePdfExporterConfiguration()
-    config.setTagged(true)
-    config.setPdfaConformance(PdfaConformanceEnum.PDFA_1A)
-    config.setIccProfilePath(getProperty("icc.path","./profile.icc"))
-    config.setMetadataTitle("")
+    if (!Play.isTest) {
+      config.setTagged(true)
+      config.setPdfaConformance(PdfaConformanceEnum.PDFA_1A)
+      config.setIccProfilePath(getProperty("icc.path", "./profile.icc"))
+    }
     config.setMetadataAuthor("Carer's allowance digital service")
 
     config
   }
 
-  private def setConfigTitle(title:String) = {
-    val config = new SimplePdfExporterConfiguration()
-    config.setTagged(this.config.isTagged)
-    config.setPdfaConformance(this.config.getPdfaConformance)
-    config.setIccProfilePath(this.config.getIccProfilePath)
-    config.setMetadataTitle(title)
-    config.setMetadataAuthor(this.config.getMetadataAuthor)
-    config
-  }
-  override def exportReportToStream(print: Option[JasperPrint], stream: OutputStream, claimType:String): SuccessOrFailure = {
+  override def exportReportToStream(print: Option[JasperPrint], stream: OutputStream): SuccessOrFailure = {
     try {
       if (print.isDefined) {
         val exporter = new JRPdfExporter(context);
 
         exporter.setExporterInput(new SimpleExporterInput(print.get))
         exporter.setExporterOutput(new SimpleOutputStreamExporterOutput(stream))
-        exporter.setConfiguration(setConfigTitle(claimType))
+        exporter.setConfiguration(config)
 
         exporter.exportReport()
         Logger.debug("PDF Generated.")
@@ -58,7 +51,6 @@ object PdfGenerator extends ReportGenerator {
       }
     } catch {
       case e: Throwable =>
-        Logger.info("classpath "+System.getProperty("java.class.path"))
         Logger.error(e.getMessage,e)
         GenerationFailure()
     }

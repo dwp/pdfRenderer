@@ -32,8 +32,8 @@ trait RenderService {
         try {
           Logger.debug("treating XML received.")
           val print = generator.generateFrom(xml, VersionExtractor.extractVersionFrom(xml))
-          val claimType = if ((xml \\ "DWPCAClaim").length > 0 ) "Carer's Allowance Claim Form" else "Carer's Allowance Change of Circumstances Form"
-          generator.exportReportToStream(print, outputStream,claimType) match {
+
+          generator.exportReportToStream(print, outputStream) match {
             case GenerationSuccess() =>
               Logger.info(s"Generation success for transactionId [${transactionId}] with content size: ${content.length}")
               Counters.recordClaimRenderCount()

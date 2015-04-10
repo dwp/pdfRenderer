@@ -26,7 +26,7 @@ object Helper {
     val dataSource = new XmlDataSource(xml)
     val print = generator.generateFrom(dataSource, VersionExtractor.extractVersionFrom(xml))
     val file = new FileOutputStream(fileLocation)
-    generator.exportReportToStream(print, file, "")
+    generator.exportReportToStream(print, file)
   }
 
 }

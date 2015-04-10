@@ -10,7 +10,7 @@ import net.sf.jasperreports.engine.export.HtmlExporter
 
 object HtmlGenerator extends ReportGenerator {
 
-  override def exportReportToStream(print: Option[JasperPrint], stream: OutputStream, claimType:String): SuccessOrFailure = {
+  override def exportReportToStream(print: Option[JasperPrint], stream: OutputStream): SuccessOrFailure = {
 
     try {
       if (print.isDefined) {
