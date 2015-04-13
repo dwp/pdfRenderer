@@ -50,7 +50,6 @@ object JasperReportCompiler {
     if (!new File(jasperFilename).exists()) {
       Logger.info(s"No jasper file. Compiling from JRXML for $jasperFilename.")
       compileReportsRecursively(reportName, version)
-      Logger.info(s"Completed compilation of JRXML files for $jasperFilename.")
     }
   }
 
@@ -77,12 +76,10 @@ object JasperReportCompiler {
 
   private def compileReports(files: Array[File], path: Option[String]): Unit = {
     if (files != null) {
-      Logger.info(s"Found ${files.size} Jasper templates")
       for ((file, index) <- files.zipWithIndex) {
         // process the file
         val reportNameArr = file.getName.split( """\.""")
         if (reportNameArr.size > 0) {
-          Logger.info(s"[$index/${files.size}] Jasper template ${reportNameArr(0)}")
           JasperReportCompiler.compileReport(reportNameArr(0), path)
         }
         else Logger.error(s"Error reading from jrxml directory ${path.getOrElse("")}.")

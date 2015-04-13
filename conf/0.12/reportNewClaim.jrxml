@@ -119,7 +119,7 @@
 				<textField>
 					<reportElement uuid="d4ffb11d-8a42-4d0a-84bf-5a08db017d2f" mode="Opaque" x="1" y="24" width="233" height="27" forecolor="#000000"/>
 					<textElement verticalAlignment="Middle" markup="none">
-						<font fontName="SansSerif" isBold="true"/>
+						<font isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA["Transaction: "+$F{TransactionId}]]></textFieldExpression>
 				</textField>

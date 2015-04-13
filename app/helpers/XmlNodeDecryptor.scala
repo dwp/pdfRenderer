@@ -4,6 +4,8 @@ import javax.xml.bind.DatatypeConverter
 
 import gov.dwp.carers.security.encryption.{NotEncryptedException, EncryptorAES}
 import gov.dwp.exceptions.DwpRuntimeException
+import play.api.Play
+import play.api.Play.current
 import play.api.Logger
 
 import scala.xml.{Elem, Node}
@@ -88,7 +90,7 @@ object XmlNodeDecryptor {
     } catch {
       case e: NotEncryptedException =>
         // Means field was not encrypted.
-        Logger.warn("An XML node that should be encrypted was not encrypted.")
+        if (! Play.isTest) Logger.warn("An XML node that should be encrypted was not encrypted.")
         text
       case e: DwpRuntimeException =>
         Logger.error("Could not decrypt node.")
