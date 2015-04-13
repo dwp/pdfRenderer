@@ -22,11 +22,10 @@ object PdfGenerator extends ReportGenerator {
 
   private def initConfig = {
     val config = new SimplePdfExporterConfiguration()
-    if (!Play.isTest) {
-      config.setTagged(true)
-      config.setPdfaConformance(PdfaConformanceEnum.PDFA_1A)
-      config.setIccProfilePath(getProperty("icc.path", "./profile.icc"))
-    }
+    config.setTagged(true)
+    config.setPdfaConformance(PdfaConformanceEnum.PDFA_1A)
+    config.setIccProfilePath(getProperty("icc.path", "./profile.icc"))
+
     config.setMetadataAuthor("Carer's allowance digital service")
 
     config
