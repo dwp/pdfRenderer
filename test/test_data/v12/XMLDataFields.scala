@@ -96,7 +96,8 @@ case class XMLDataFields(xml: Elem) extends TestUtils{
         buildQuestion((x \\ "ReasonCaree" \\ "QuestionLabel").text,(x \\ "ReasonCaree" \\ "Answer").text),
         buildQuestion((x \\ "MedicalCare" \\ "QuestionLabel").text,(x \\ "MedicalCare" \\ "Answer").text),
         buildQuestion((x \\ "StartTime" \\ "QuestionLabel").text, (x \\ "StartTime" \\ "Answer").text),
-        buildQuestion((x \\ "EndTime" \\ "QuestionLabel").text, (x \\ "EndTime" \\ "Answer").text)
+        buildQuestion((x \\ "EndTime" \\ "QuestionLabel").text, (x \\ "EndTime" \\ "Answer").text),
+        buildQuestion((x \\ "EndDateDoNotKnow" \\ "QuestionLabel").text, (x \\ "EndDateDoNotKnow" \\ "Answer").text)
       )
       (fromDate ++ toDate).filterNot(x => x.isEmpty) ++ otherData
     }).filterNot(x => x.isEmpty).flatten
