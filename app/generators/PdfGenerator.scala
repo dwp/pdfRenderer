@@ -2,7 +2,7 @@ package generators
 
 import net.sf.jasperreports.engine.export.{JRPdfExporterParameter, JRPdfExporter}
 import net.sf.jasperreports.engine._
-import net.sf.jasperreports.export.`type`.PdfaConformanceEnum
+import net.sf.jasperreports.export.`type`.{PdfPrintScalingEnum, PdfaConformanceEnum}
 import net.sf.jasperreports.export._
 import play.api.{Play, Logger}
 import java.io.OutputStream
@@ -25,8 +25,8 @@ object PdfGenerator extends ReportGenerator {
     config.setTagged(true)
     config.setPdfaConformance(PdfaConformanceEnum.PDFA_1A)
     config.setIccProfilePath(getProperty("icc.path", "./profile.icc"))
-
     config.setMetadataAuthor("Carer's allowance digital service")
+    config.setPrintScaling(PdfPrintScalingEnum.NONE)
 
     config
   }
