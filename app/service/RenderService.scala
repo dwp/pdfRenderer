@@ -8,19 +8,20 @@ import play.api.Logger
 import java.io.OutputStream
 import data_sources.InvalidSourceFormatException
 import monitoring.Counters
+import scala.language.higherKinds
 
 /**
  * Entry point of the service. It consumes the HTTP request received, checks it is an XML request
  * and then ask a [[generators.ReportGenerator]] to generate a report from the XML.
  * @author Jorge Migueis
  */
-trait RenderService {
+trait RenderService{
 
   protected def reportGenerator: ReportGenerator
 
   protected val outputStream: OutputStream
 
-  protected def content: String
+  protected def content: Either[String,Array[Byte]]
 
   def outputGeneration(request: Request[AnyContent]) = {
 
@@ -35,9 +36,12 @@ trait RenderService {
 
           generator.exportReportToStream(print, outputStream) match {
             case GenerationSuccess() =>
-              Logger.info(s"Generation success for transactionId [${transactionId}] with content size: ${content.length}")
+              Logger.info(s"Generation success for transactionId [${transactionId}] ")//TODO: Fix this with content size: ${content.length}")
               Counters.recordClaimRenderCount()
-              Results.Ok(content)
+              content match {
+                case Right(v) => Results.Ok(v.asInstanceOf[Array[Byte]])
+                case Left(v) => Results.Ok(v.asInstanceOf[String])
+              }
 
             case GenerationFailure() =>
               Logger.error(s"Could not render XML for transactionId [${transactionId}]")

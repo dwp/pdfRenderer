@@ -21,7 +21,7 @@ class HtmlServiceSpec  extends Specification with Tags {
       val service = new RenderService {
         protected def reportGenerator: ReportGenerator = HtmlGenerator
         override protected val outputStream = new ByteArrayOutputStream()
-        protected def content: String = { outputStream.toString("UTF-8")}
+        protected def content = Left(outputStream.toString("UTF-8"))
       }
       val requestXml = <Invalid>type</Invalid>
       val response = Future(service.outputGeneration(FakeRequest().withXmlBody(requestXml)))
@@ -32,7 +32,7 @@ class HtmlServiceSpec  extends Specification with Tags {
       val service = new RenderService {
         protected def reportGenerator: ReportGenerator = HtmlGenerator
         override protected val outputStream = new ByteArrayOutputStream()
-        protected def content: String = { outputStream.toString("UTF-8")}
+        protected def content = Left(outputStream.toString("UTF-8"))
       }
       val invalidRequest = "Hello"
       val response = Future(service.outputGeneration(FakeRequest().withTextBody(invalidRequest)))
@@ -44,7 +44,7 @@ class HtmlServiceSpec  extends Specification with Tags {
       val service = new RenderService {
         protected def reportGenerator: ReportGenerator = HtmlGenerator
         override protected val outputStream = null
-        protected def content: String = ""
+        protected def content = Left("")
       }
       val validRequest = ClaimBuilder.goodClaim
       val response = Future(service.outputGeneration(FakeRequest().withXmlBody(validRequest)))
@@ -56,7 +56,7 @@ class HtmlServiceSpec  extends Specification with Tags {
       val service =new RenderService {
         protected def reportGenerator: ReportGenerator = HtmlGenerator
         override protected val outputStream = new ByteArrayOutputStream()
-        protected def content: String = { outputStream.toString("UTF-8")}
+        protected def content = Left(outputStream.toString("UTF-8"))
       }
       val validRequest = ClaimBuilder.goodClaim
       val response = Future(service.outputGeneration(FakeRequest().withXmlBody(validRequest)))
