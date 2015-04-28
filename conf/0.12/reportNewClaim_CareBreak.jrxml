@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version last-->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_CareBreak" language="groovy" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isSummaryNewPage="true" isIgnorePagination="true" uuid="d2b233ab-6178-4bb0-9059-17e24879fcd8">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
@@ -129,7 +128,7 @@
 				<textFieldExpression><![CDATA["Care Break " + $V{variable1}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="182">
+		<band height="183">
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="111c129f-a7b9-4827-bd88-0d8d0478c093" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
@@ -218,32 +217,36 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EndTimeAnswer}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="d76016ae-69ca-405b-b478-6b951f730ffa" positionType="Float" x="0" y="164" width="392" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{MedicalAnswer} != null]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top"/>
-				<textFieldExpression><![CDATA[$F{MedicalQuestionLabel}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="3f90f92a-4244-49fe-974f-17ba1065cd87" style="Answer" positionType="Float" x="420" y="164" width="174" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{MedicalAnswer}!= null]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top"/>
-				<textFieldExpression><![CDATA[$F{MedicalAnswer}]]></textFieldExpression>
-			</textField>
 			<textField isBlankWhenNull="true">
+				<reportElement uuid="194590fc-088b-44ea-8323-5ea752b3b5c7" positionType="Float" x="0" y="146" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EndDateDoNotKnowQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="3f68757d-2d4b-44ff-bef6-5f69fb3d594d" style="Answer" positionType="Float" x="420" y="146" width="174" height="18" isRemoveLineWhenBlank="true">
 					<printWhenExpression><![CDATA[!$F{EndDateDoNotKnowAnswer}.isEmpty()]]></printWhenExpression>
 				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EndDateDoNotKnowAnswer}]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="194590fc-088b-44ea-8323-5ea752b3b5c7" positionType="Float" x="0" y="146" width="392" height="18" isRemoveLineWhenBlank="true">
-				</reportElement>
+			<staticText>
+				<reportElement uuid="8328abde-f154-445b-9a11-a95c25c7cd32" positionType="Float" x="0" y="164" width="594" height="1"/>
 				<textElement/>
-				<textFieldExpression><![CDATA[$F{EndDateDoNotKnowQuestionLabel}]]></textFieldExpression>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="d76016ae-69ca-405b-b478-6b951f730ffa" positionType="Float" x="0" y="165" width="392" height="18" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{MedicalAnswer} != null]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{MedicalQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="3f90f92a-4244-49fe-974f-17ba1065cd87" style="Answer" positionType="Float" x="420" y="165" width="174" height="18" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{MedicalAnswer}!= null]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{MedicalAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
