@@ -1,7 +1,7 @@
 <DWPBody xsi:schemaLocation="http://www.govtalk.gov.uk/dwp/carers-allowance file:/future/schema/ca/CarersAllowance_Schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns="http://www.govtalk.gov.uk/dwp/carers-allowance">
     <Version>0.12</Version>
-    <DWPCATransaction id="TEST432">
-        <TransactionId>TEST432</TransactionId>
+    <DWPCATransaction id="1408CLAIM11">
+        <TransactionId>1408CLAIM11</TransactionId>
         <DateTimeGenerated>02-05-2014 11:45</DateTimeGenerated>
         <LanguageUsed>English</LanguageUsed>
         <DWPCAClaim>
@@ -223,7 +223,7 @@
         <ds:SignedInfo>
             <ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
             <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
-            <ds:Reference URI="#TEST432">
+            <ds:Reference URI="#1408CLAIM11">
                 <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
                 <ds:DigestValue>1NbatRVqcN2B6BG795R/aNM63pk=</ds:DigestValue>
             </ds:Reference>
