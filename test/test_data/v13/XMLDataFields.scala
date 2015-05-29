@@ -63,6 +63,10 @@ case class XMLDataFields(xml: Elem) extends TestUtils{
 
   val receiveEEAPensionsBenefitsAnswer = SectionAboutOtherMoney(xml: Elem).receiveEEAPensionsBenefitsAnswer
 
+  val receiveEEAPensionsBenefitsDetailsQuestion = SectionAboutOtherMoney(xml: Elem).receiveEEAPensionsBenefitsDetailsQuestion
+
+  val receiveEEAPensionsBenefitsDetailsAnswer = SectionAboutOtherMoney(xml: Elem).receiveEEAPensionsBenefitsDetailsAnswer
+
   val timeOutsideGBLast3YearsQuestion =  xml \\ "DWPCATransaction" \\ "DWPCAClaim" \\ "Residency" \\ "TimeOutsideGBLast3Years" \\ "QuestionLabel[0]"
 
   val timeOutsideGBLast3YearsAnswer = xml \\ "DWPCATransaction" \\ "DWPCAClaim" \\ "Residency" \\ "TimeOutsideGBLast3Years" \\ "Answer[0]"
