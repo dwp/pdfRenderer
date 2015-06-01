@@ -700,14 +700,14 @@ object ClaimBuilder {
               </Name>
             </OtherMoneyDetails>
             <EEA>
-              <EEAClaimPensionsBenefits>
-                <QuestionLabel>eea.pension</QuestionLabel>
-                <Answer>Yes</Answer>
-              </EEAClaimPensionsBenefits>
               <EEAReceivePensionsBenefits>
                 <QuestionLabel>eea.pension</QuestionLabel>
                 <Answer>Yes</Answer>
               </EEAReceivePensionsBenefits>
+              <EEAReceivePensionsBenefitsDetails>
+                <QuestionLabel>eea.pension</QuestionLabel>
+                <Answer>blah blah blah</Answer>
+              </EEAReceivePensionsBenefitsDetails>
               <EEAWorkingInsurance>
                 <QuestionLabel>eea.insurance</QuestionLabel>
                 <Answer>No</Answer>
