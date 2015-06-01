@@ -40,7 +40,7 @@
                 <CareBreak>
                     <BreaksSinceClaim><QuestionLabel>Have you had any breaks from caring for this person since 01/01/2010?</QuestionLabel><Answer>Yes</Answer></BreaksSinceClaim>
                     <StartDate><QuestionLabel>When did the break start?</QuestionLabel><Answer>10-01-2010</Answer></StartDate><StartTime><QuestionLabel>Break start time?</QuestionLabel><Answer>10:00</Answer></StartTime>
-                    <EndDateDoNotKnow><QuestionLabel>When did the break end?</QuestionLabel><Answer>I don't know when this break will end</Answer></EndDateDoNotKnow>
+                    <EndDateDoNotKnow><QuestionLabel>When did the break end?</QuestionLabel><Answer>I do not know</Answer></EndDateDoNotKnow>
                     <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>Yes</Answer></MedicalCare>
                     <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Answer>Home</Answer></ReasonClaimant>
                     <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Answer>Hospital</Answer></ReasonCaree>
