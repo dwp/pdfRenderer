@@ -242,7 +242,8 @@ object XMLData extends TestUtils{
       "Employer's Address " + fields.otherMoneySPEmployerAddress,
       "Employer's Postcode " + fields.otherMoneySPEmployerPostcode.text,
       buildQuestion(fields.receiveEEAPensionsBenefitsQuestion.text, fields.receiveEEAPensionsBenefitsAnswer.text),
-      buildQuestion(fields.workingEEAInsuranceQuestion.text, fields.workingEEAInsuranceAnswer.text)
+      buildQuestion(fields.workingEEAInsuranceQuestion.text, fields.workingEEAInsuranceAnswer.text),
+      buildQuestion(fields.workingEEAInsuranceDetailsQuestion.text, fields.workingEEAInsuranceDetailsAnswer.text)
     )
   }
 

@@ -150,6 +150,7 @@
                     <EEAReceivePensionsBenefits><QuestionLabel>Do you, or any member of your family, receive any benefits or pensions from any other European Economic Area EEA state or Switzerland?</QuestionLabel><Answer>No</Answer></EEAReceivePensionsBenefits>
                     <EEAClaimPensionsBenefits><QuestionLabel>Have you, or a member of your family, made a claim for any benefits or pensions from any other European Economic Area EEA state or Switzerland?</QuestionLabel><Answer>No</Answer></EEAClaimPensionsBenefits>
                     <EEAWorkingInsurance><QuestionLabel>Are you, or a member of your family, working in or paying insurance to, another European Economic Area EEA state or Switzerland?</QuestionLabel><Answer>No</Answer></EEAWorkingInsurance>
+                    <EEAWorkingInsuranceDetails><QuestionLabel>Give Details</QuestionLabel><Answer>EEA Working Insurance Details</Answer></EEAWorkingInsuranceDetails>
                 </EEA>
             </OtherBenefits>
             <Payment>
