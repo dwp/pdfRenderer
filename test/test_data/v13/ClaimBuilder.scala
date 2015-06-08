@@ -712,6 +712,10 @@ object ClaimBuilder {
                 <QuestionLabel>eea.insurance</QuestionLabel>
                 <Answer>No</Answer>
               </EEAWorkingInsurance>
+              <EEAWorkingInsuranceDetails>
+                <QuestionLabel>eea.insurance.details</QuestionLabel>
+                <Answer>EEA Working Insurance Details</Answer>
+              </EEAWorkingInsuranceDetails>
             </EEA>
 
           </OtherBenefits>

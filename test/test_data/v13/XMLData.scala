@@ -3,7 +3,6 @@ package test_data.v13
 import scala.xml.Elem
 import utils.TestUtils
 
-
 object XMLData extends TestUtils{
   def madeUpField(xml: Elem) = {
     Seq(
@@ -242,7 +241,8 @@ object XMLData extends TestUtils{
       "Employer's Postcode " + fields.otherMoneySPEmployerPostcode.text,
       buildQuestion(fields.receiveEEAPensionsBenefitsQuestion.text, fields.receiveEEAPensionsBenefitsAnswer.text),
       buildQuestion(fields.receiveEEAPensionsBenefitsDetailsQuestion.text, fields.receiveEEAPensionsBenefitsDetailsAnswer.text),
-      buildQuestion(fields.workingEEAInsuranceQuestion.text, fields.workingEEAInsuranceAnswer.text)
+      buildQuestion(fields.workingEEAInsuranceQuestion.text, fields.workingEEAInsuranceAnswer.text),
+      buildQuestion(fields.workingEEAInsuranceDetailsQuestion.text, fields.workingEEAInsuranceDetailsAnswer.text)
     )
   }
 

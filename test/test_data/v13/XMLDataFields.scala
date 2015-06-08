@@ -1,9 +1,7 @@
 package test_data.v13
 
-import scala.xml.Elem
 import utils.TestUtils
-
-
+import scala.xml.Elem
 
 case class XMLDataFields(xml: Elem) extends TestUtils{
 

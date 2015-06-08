@@ -178,6 +178,7 @@
                     <EEAReceivePensionsBenefits><QuestionLabel>Have you or anyone in your family claimed or been paid any benefits or pensions from any of these countries?</QuestionLabel><Answer>No</Answer></EEAReceivePensionsBenefits>
                     <EEAReceivePensionsBenefitsDetails><QuestionLabel>Give details, including who was paid, the local name of the benefit, the amount and dates of any payments.</QuestionLabel><Answer>blah blah blah</Answer></EEAReceivePensionsBenefitsDetails>
                     <EEAWorkingInsurance><QuestionLabel>Do you or anyone in your family work or pay insurance in any of these countries?</QuestionLabel><Answer>No</Answer></EEAWorkingInsurance>
+                    <EEAWorkingInsuranceDetails><QuestionLabel>Give Details</QuestionLabel><Answer>EEA Working Insurance Details</Answer></EEAWorkingInsuranceDetails>
                 </EEA>
             </OtherBenefits>
             <Payment>

@@ -6,7 +6,7 @@ import utils.TestUtils
 
 object XMLData extends TestUtils{
 
-  var LATEST_VERSION = "0.12"
+  var LATEST_VERSION = "0.13"
 
   def madeUpField(xml: Elem) = {
     Seq(

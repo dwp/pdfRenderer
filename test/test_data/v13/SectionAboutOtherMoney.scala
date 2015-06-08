@@ -69,4 +69,8 @@ case class SectionAboutOtherMoney(xml: Elem) {
 
   val workingEEAInsuranceAnswer = rootPath \\ "OtherBenefits" \\ "EEA" \\ "EEAWorkingInsurance" \\ "Answer"
 
+  val workingEEAInsuranceDetailsQuestion = rootPath \\ "OtherBenefits" \\ "EEA" \\ "EEAWorkingInsuranceDetails" \\ "QuestionLabel"
+
+  val workingEEAInsuranceDetailsAnswer = rootPath \\ "OtherBenefits" \\ "EEA" \\ "EEAWorkingInsuranceDetails" \\ "Answer"
+
 }
