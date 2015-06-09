@@ -273,7 +273,7 @@
                         </QuestionLabel>
                         <Answer>No</Answer>
                     </EEAWorkingInsurance>
-                    <EEAWorkingInsuranceDetails><QuestionLabel>Give Details</QuestionLabel><Answer>EEA Working Insurance Details</Answer></EEAWorkingInsuranceDetails>
+                    <EEAWorkingInsuranceDetails><QuestionLabel>Give details</QuestionLabel><Answer>EEA Working Insurance Details</Answer></EEAWorkingInsuranceDetails>
                 </EEA>
             </OtherBenefits>
             <OtherInformation>

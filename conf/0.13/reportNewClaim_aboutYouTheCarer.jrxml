@@ -332,7 +332,7 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_PeriodAbroad.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="88" splitType="Prevent">
+		<band height="74" splitType="Prevent">
 			<staticText>
 				<reportElement uuid="badfdb41-025e-422b-9da8-49bb6e64b71c" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" forecolor="#000000">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingMoneyEEA"/>
@@ -354,22 +354,22 @@
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerReceiveEEAPensionsBenefitsAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement positionType="Float" x="0" y="37" width="595" height="25" isRemoveLineWhenBlank="true" uuid="f64abea0-79dc-4d40-8ce7-85ca8c2dc888"/>
+				<reportElement positionType="Float" x="0" y="37" width="595" height="18" isRemoveLineWhenBlank="true" uuid="f64abea0-79dc-4d40-8ce7-85ca8c2dc888"/>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerReceiveEEAPensionsBenefitsDetailsQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="0" y="62" width="595" height="25" isRemoveLineWhenBlank="true" uuid="272a83f2-7d4b-42b6-803e-d2b1b8d6f14f"/>
+				<reportElement style="Answer" positionType="Float" x="0" y="55" width="595" height="18" isRemoveLineWhenBlank="true" uuid="272a83f2-7d4b-42b6-803e-d2b1b8d6f14f"/>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerReceiveEEAPensionsBenefitsDetailsAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="fcbef05e-939d-427c-a1e3-c881df86bcaf" positionType="Float" x="0" y="87" width="594" height="1"/>
+				<reportElement uuid="fcbef05e-939d-427c-a1e3-c881df86bcaf" positionType="Float" x="0" y="73" width="594" height="1"/>
 				<textElement/>
 				<text><![CDATA[]]></text>
 			</staticText>
 		</band>
-		<band height="63" splitType="Immediate">
+		<band height="56" splitType="Immediate">
 			<staticText>
 				<reportElement uuid="f0620fe9-9653-4e04-a070-c2c89ff54e09" positionType="Float" x="0" y="0" width="594" height="1"/>
 				<textElement/>
@@ -394,7 +394,7 @@
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerWorkingEEAInsuranceDetailsQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="0" y="37" width="392" height="25" isRemoveLineWhenBlank="true" uuid="42e462db-6f31-4e22-89d2-627b9fdb5899">
+				<reportElement style="Answer" positionType="Float" x="0" y="37" width="392" height="18" isRemoveLineWhenBlank="true" uuid="42e462db-6f31-4e22-89d2-627b9fdb5899">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="local_mesure_unity" value="pixel"/>
@@ -404,7 +404,7 @@
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerWorkingEEAInsuranceDetailsAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="b95c002f-51c8-4a1c-bdf8-458c7659b88f" positionType="Float" x="0" y="62" width="594" height="1"/>
+				<reportElement uuid="b95c002f-51c8-4a1c-bdf8-458c7659b88f" positionType="Float" x="0" y="55" width="594" height="1"/>
 				<textElement/>
 				<text><![CDATA[]]></text>
 			</staticText>
