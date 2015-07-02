@@ -1,7 +1,7 @@
 package service
 
 import helpers.VersionExtractor
-import play.api.mvc.{Request, AnyContent, Results}
+import play.api.mvc.{Result, Request, AnyContent, Results}
 import generators.{GenerationFailure, GenerationSuccess, ReportGenerator}
 import pdfService.Implicits._
 import play.api.Logger
@@ -23,7 +23,7 @@ trait RenderService{
 
   protected def content: Either[String,Array[Byte]]
 
-  def outputGeneration(request: Request[AnyContent]) = {
+  def outputGeneration(request: Request[AnyContent]): Result = {
 
     request.body.asXml.map {
       xml =>
