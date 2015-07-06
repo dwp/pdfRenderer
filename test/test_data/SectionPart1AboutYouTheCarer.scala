@@ -14,6 +14,8 @@ case class SectionPart1AboutYouTheCarer(xml: Elem) {
 
   val titleQuestion = rootPathClaimant \\ "Title" \\ "QuestionLabel"
 
+  val titleOther = rootPathClaimant \\ "Title" \\ "Other"
+
   val firstNameAnswer = rootPathClaimant  \\ "OtherNames" \\ "Answer"
 
   val firstNameQuestion = rootPathClaimant  \\ "OtherNames" \\ "QuestionLabel"

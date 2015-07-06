@@ -1,8 +1,7 @@
-package test_data
+package test_data.v14
 
-import scala.xml.Elem
 import utils.TestUtils
-
+import scala.xml.Elem
 
 case class XMLDataFields(xml: Elem) extends TestUtils{
 
@@ -16,19 +15,9 @@ case class XMLDataFields(xml: Elem) extends TestUtils{
 
   val titleAnswer = rootPath \\ "Claimant" \\ "Title" \\ "Answer"
 
-  val titleOther = rootPath \\ "Claimant" \\ "Title" \\ "Other"
-
-  val claimantOtherSurnamesAnswer = rootPath \\ "Claimant" \\ "OtherSurnames" \\ "Answer"
-
-  val claimantOtherSurnamesQuestion = rootPath \\ "Claimant" \\ "OtherSurnames" \\ "QuestionLabel"
-
   val surNameAnswer = rootPath \\ "Claimant" \\ "Surname" \\ "Answer"
 
   val surNameQuestion = rootPath \\ "Claimant" \\ "Surname" \\ "QuestionLabel"
-
-  val nationalInsuranceNumberAnswer = rootPath \\ "Claimant" \\ "NationalInsuranceNumber" \\ "Answer"
-
-  val nationalInsuranceNumberQuestion = rootPath \\ "Claimant" \\ "NationalInsuranceNumber" \\ "QuestionLabel"
 
   val firstNameAnswer = rootPath \\ "Claimant" \\ "OtherNames" \\ "Answer"
 
@@ -41,6 +30,10 @@ case class XMLDataFields(xml: Elem) extends TestUtils{
   val careeFirstNameAnswer = rootPath \\ "Caree" \\ "OtherNames" \\ "Answer"
 
   val careeFirstNameQuestion = rootPath \\ "Caree" \\ "OtherNames" \\ "QuestionLabel"
+
+  val careeMiddleNameAnswer = rootPath \\ "Caree" \\ "MiddleNames" \\ "Answer"
+
+  val careeMiddleNameQuestion = rootPath \\ "Caree" \\ "MiddleNames" \\ "QuestionLabel"
 
   val careeTitleAnswer = rootPath \\ "Caree" \\ "Title" \\ "Answer"
 
@@ -56,45 +49,27 @@ case class XMLDataFields(xml: Elem) extends TestUtils{
 
   val postCodeCaree = rootPath \\ "Caree" \\ "Address" \\ "PostCode"
 
-  val parnerNINOAnswer = rootPath \\ "Partner" \\ "NationalInsuranceNumber" \\ "Answer"
-
-  val parnerNINOQuestion = rootPath \\ "Partner" \\ "NationalInsuranceNumber" \\ "QuestionLabel"
-
-  val partnerSurnameAnswer = rootPath \\ "Partner" \\ "Surname" \\ "Answer"
-
-  val partnerSurnameQuestion = rootPath \\ "Partner" \\ "Surname" \\ "QuestionLabel"
-
-  val partnerOtherNamesAnswer = rootPath \\ "Partner" \\ "OtherNames" \\ "Answer"
-
-  val partnerOtherNamesQuestion = rootPath \\ "Partner" \\ "OtherNames" \\ "QuestionLabel"
-
-  val partnerTitleAnswer = rootPath \\ "Partner" \\ "Title" \\ "Answer"
-
-  val partnerTitleOther = rootPath \\ "Partner" \\ "Title" \\ "Other"
-
-  val partnerTitleQuestion = rootPath \\ "Partner" \\ "Title" \\ "QuestionLabel"
-
-  val partnerOtherSurnamesAnswer = rootPath \\ "Partner" \\ "OtherSurnames" \\ "Answer"
-
-  val partnerOtherSurnamesQuestion = rootPath \\ "Partner" \\ "OtherSurnames" \\ "QuestionLabel"
-
   val nationalityAnswer = SectionPart1AboutYouTheCarer(xml: Elem).nationalityAnswer
+
+  val qualifyingBenefitAnswer = rootPath \ "QualifyingBenefit" \ "Answer"
 
   val nationalityQuestion = SectionPart1AboutYouTheCarer(xml: Elem).nationalityQuestion
 
-  val receiveEEAPensionsBenefitsQuestion = SectionPart1AboutYouTheCarer(xml: Elem).receiveEEAPensionsBenefitsQuestion
+  val nationalInsuranceNumberAnswer = SectionPart1AboutYouTheCarer(xml: Elem).nationalInsuranceNumberAnswer
 
-  val receiveEEAPensionsBenefitsAnswer = SectionPart1AboutYouTheCarer(xml: Elem).receiveEEAPensionsBenefitsAnswer
+  val receiveEEAPensionsBenefitsQuestion = SectionAboutOtherMoney(xml: Elem).receiveEEAPensionsBenefitsQuestion
+
+  val receiveEEAPensionsBenefitsAnswer = SectionAboutOtherMoney(xml: Elem).receiveEEAPensionsBenefitsAnswer
+
+  val receiveEEAPensionsBenefitsDetailsQuestion = SectionAboutOtherMoney(xml: Elem).receiveEEAPensionsBenefitsDetailsQuestion
+
+  val receiveEEAPensionsBenefitsDetailsAnswer = SectionAboutOtherMoney(xml: Elem).receiveEEAPensionsBenefitsDetailsAnswer
 
   val timeOutsideGBLast3YearsQuestion =  xml \\ "DWPCATransaction" \\ "DWPCAClaim" \\ "Residency" \\ "TimeOutsideGBLast3Years" \\ "QuestionLabel[0]"
 
   val timeOutsideGBLast3YearsAnswer = xml \\ "DWPCATransaction" \\ "DWPCAClaim" \\ "Residency" \\ "TimeOutsideGBLast3Years" \\ "Answer[0]"
 
   val reasonTimeAbroadOther = xml \\ "DWPCATransaction" \\ "DWPCAClaim" \\ "Residency" \\ "Reason" \\ "Other"
-
-  val statePensionQuestion = SectionPart1AboutYouTheCarer(xml: Elem).statePensionQuestion
-
-  val statePensionAnswer = SectionPart1AboutYouTheCarer(xml: Elem).statePensionAnswer
 
   val otherInformationWelshCommunicationQuestion = SectionConsentAndDeclaration(xml).otherInformationWelshCommunicationQuestion
 
@@ -123,9 +98,14 @@ case class XMLDataFields(xml: Elem) extends TestUtils{
         buildQuestion((x \\ "ReasonCaree" \\ "QuestionLabel").text,(x \\ "ReasonCaree" \\ "Answer").text),
         buildQuestion((x \\ "MedicalCare" \\ "QuestionLabel").text,(x \\ "MedicalCare" \\ "Answer").text),
         buildQuestion((x \\ "StartTime" \\ "QuestionLabel").text, (x \\ "StartTime" \\ "Answer").text),
-        buildQuestion((x \\ "EndTime" \\ "QuestionLabel").text, (x \\ "EndTime" \\ "Answer").text)
+        buildQuestion((x \\ "EndTime" \\ "QuestionLabel").text, (x \\ "EndTime" \\ "Answer").text),
+        buildQuestion((x \\ "EndDateDoNotKnow" \\ "QuestionLabel").text, (x \\ "EndDateDoNotKnow" \\ "Answer").text)
       )
       (fromDate ++ toDate).filterNot(x => x.isEmpty) ++ otherData
     }).filterNot(x => x.isEmpty).flatten
   }
+
+  val employmentAdditionaInfoQuestion = rootPath \ "EmploymentAdditionalInfo" \ "QuestionLabel"
+  val employmentAdditionaInfoAnswer = rootPath \ "EmploymentAdditionalInfo" \ "Answer"
+  val employmentAdditionaInfoOther = rootPath \ "EmploymentAdditionalInfo" \ "Other"
 }
