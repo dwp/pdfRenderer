@@ -22,7 +22,8 @@ object ApplicationBuild extends Build {
     "com.itextpdf"          % "itextpdf"              % "5.5.4",
     "org.codehaus.groovy"   % "groovy-all"            % "2.3.9",
     "xalan"                 % "xalan"                 % "2.7.2",
-    "gov.dwp.carers"        %% "carerscommon"         % "6.6"
+    "gov.dwp.carers"        %% "carerscommon"         % "6.6",
+    "commons-io"            % "commons-io"            % "2.4"
   )
 
   val conf = ConfigFactory.parseFile(new File("conf/application.conf")).resolve()

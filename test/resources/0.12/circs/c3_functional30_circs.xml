@@ -1,8 +1,8 @@
 <DWPBody xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.govtalk.gov.uk/dwp/carers-allowance"
          xsi:schemaLocation="http://www.govtalk.gov.uk/dwp/carers-allowance file:/future/schema/ca/CarersAllowance_Schema.xsd">
     <Version>0.12</Version>
-    <DWPCATransaction id="1408TEST432">
-        <TransactionId>1408TEST432</TransactionId>
+    <DWPCATransaction id="1408COFC024">
+        <TransactionId>1408COFC024</TransactionId>
         <DateTimeGenerated>09-10-2014 11:58</DateTimeGenerated>
         <LanguageUsed>English</LanguageUsed>
         <DWPCAChangeOfCircumstances>

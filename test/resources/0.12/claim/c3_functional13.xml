@@ -3,8 +3,8 @@
         xmlns="http://www.govtalk.gov.uk/dwp/carers-allowance" xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <Version>0.12</Version>
-    <DWPCATransaction id="AVXGB9F">
-        <TransactionId>AVXGB9F</TransactionId>
+    <DWPCATransaction id="1408CLAIM13">
+        <TransactionId>1408CLAIM13</TransactionId>
         <DateTimeGenerated>04-06-2014 10:46</DateTimeGenerated>
         <LanguageUsed>English</LanguageUsed>
         <DWPCAClaim>
@@ -714,7 +714,7 @@
         <ds:SignedInfo>
             <ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
             <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
-            <ds:Reference URI="#AVXGB9F">
+            <ds:Reference URI="#1408CLAIM13">
                 <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
                 <ds:DigestValue>IwT19djUtikNg7xsllfYI8YhUsA=</ds:DigestValue>
             </ds:Reference>

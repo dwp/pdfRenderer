@@ -25,8 +25,8 @@ class PdfServiceSpec extends Specification with Tags {
       val service = new RenderService {
         lazy val pdfLocation = Try(Play.current.configuration.getString("pdf.folder").getOrElse("./")) match {case Success(s) => s; case _ => "./"}
         protected def reportGenerator: ReportGenerator = PdfGenerator
-        protected def content: String = ""
-        protected val outputStream: OutputStream = new FileOutputStream(s"${pdfLocation}PDFGenerated_${new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date())}.pdf")
+        protected def content = Left("")
+        protected val outputStream: OutputStream = new ByteArrayOutputStream()//new FileOutputStream(s"${pdfLocation}PDFGenerated_${new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date())}.pdf")
       }
       val requestXml = <Invalid>type</Invalid>
       val response = Future(service.outputGeneration(FakeRequest().withXmlBody(requestXml)))
@@ -37,8 +37,8 @@ class PdfServiceSpec extends Specification with Tags {
       val service = new RenderService {
         lazy val pdfLocation = Try(Play.current.configuration.getString("pdf.folder").getOrElse("./")) match {case Success(s) => s; case _ => "./"}
         protected def reportGenerator: ReportGenerator = PdfGenerator
-        protected def content: String = ""
-        protected val outputStream: OutputStream = new FileOutputStream(s"${pdfLocation}PDFGenerated_${new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date())}.pdf")
+        protected def content = Left("")
+        protected val outputStream: OutputStream =  new ByteArrayOutputStream() //new FileOutputStream(s"${pdfLocation}PDFGenerated_${new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date())}.pdf")
       }
       val invalidRequest = "Hello"
       val response = Future(service.outputGeneration(FakeRequest().withTextBody(invalidRequest)))
@@ -48,7 +48,7 @@ class PdfServiceSpec extends Specification with Tags {
     "return Internal error code if could not generate PDF" in new WithApplication {
       val service = new RenderService {
         protected def reportGenerator: ReportGenerator = PdfGenerator
-        protected def content: String = ""
+        protected def content = Left("")
         protected val outputStream: OutputStream = null
       }
       val validRequest = ClaimBuilder.goodClaim
@@ -61,7 +61,7 @@ class PdfServiceSpec extends Specification with Tags {
       val service =new RenderService {
         lazy val pdfLocation = Try(Play.current.configuration.getString("pdf.folder").getOrElse("./")) match {case Success(s) => s; case _ => "./"}
         protected def reportGenerator: ReportGenerator = PdfGenerator
-        protected def content: String = ""
+        protected def content = Left("")
         protected val outputStream: OutputStream = output
       }
       val validRequest = ClaimBuilder.goodClaim
