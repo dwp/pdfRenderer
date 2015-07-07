@@ -49,7 +49,7 @@
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Partner/Title/Answer]]></fieldDescription>
 	</field>
 	<field name="AboutYourPartnerTitleOther" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Partner/Title/Other]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Partner/TitleOther/Answer]]></fieldDescription>
 	</field>
 	<field name="AboutYourPartnerTitleQuestionLabel" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Partner/Title/QuestionLabel]]></fieldDescription>

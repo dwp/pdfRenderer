@@ -37,7 +37,7 @@
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Title/Answer]]></fieldDescription>
 	</field>
 	<field name="AboutYouTheCarerClaimantTitleOther" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Title/Other]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/TitleOther/Answer]]></fieldDescription>
 	</field>
 	<field name="AboutYouTheCarerClaimantFirstNameQuestionLabel" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/OtherNames/QuestionLabel]]></fieldDescription>

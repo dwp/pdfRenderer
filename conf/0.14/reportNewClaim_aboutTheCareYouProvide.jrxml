@@ -79,7 +79,7 @@
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Title/QuestionLabel]]></fieldDescription>
 	</field>
 	<field name="AboutCareYouProvideCareeTitleOther" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Title/Other]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/TitleOther/Answer]]></fieldDescription>
 	</field>
 	<field name="AboutCareYouProvideCareeOtherNamesQuestionLabel" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/OtherNames/QuestionLabel]]></fieldDescription>
