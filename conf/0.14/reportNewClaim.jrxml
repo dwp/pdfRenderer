@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim" language="groovy" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="90378acd-33ad-413e-ad03-6f54642cad18">
 	<property name="ireport.zoom" value="3.0"/>
 	<property name="ireport.x" value="0"/>
@@ -96,7 +97,7 @@
 	<pageHeader>
 		<band height="54" splitType="Immediate">
 			<frame>
-				<reportElement uuid="7afb6c41-52be-4c63-89cd-61179a0fa915" positionType="Float" x="0" y="0" width="594" height="52">
+				<reportElement positionType="Float" x="0" y="0" width="594" height="52" uuid="7afb6c41-52be-4c63-89cd-61179a0fa915">
 					<property name="net.sf.jasperreports.export.html.class" value="DetailPageHeader"/>
 				</reportElement>
 				<box>
@@ -107,34 +108,44 @@
 					<rightPen lineWidth="1.0" lineColor="#000000"/>
 				</box>
 				<textField>
-					<reportElement uuid="2b597163-946a-4982-9320-135afb766d57" style="Answer" mode="Opaque" x="1" y="1" width="423" height="23"/>
-					<textElement/>
+					<reportElement style="Answer" mode="Opaque" x="1" y="1" width="423" height="23" uuid="2b597163-946a-4982-9320-135afb766d57"/>
 					<textFieldExpression><![CDATA["Date Received: "+$F{DateTimeGenerated}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement uuid="3205d842-c416-44c0-82fe-89f83bcb8739" mode="Opaque" x="425" y="1" width="168" height="23"/>
+					<reportElement mode="Opaque" x="425" y="1" width="168" height="23" uuid="3205d842-c416-44c0-82fe-89f83bcb8739"/>
 					<textElement textAlignment="Right" verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA["Service version : "+$F{Version}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement uuid="d4ffb11d-8a42-4d0a-84bf-5a08db017d2f" mode="Opaque" x="1" y="24" width="233" height="27" forecolor="#000000"/>
+					<reportElement mode="Opaque" x="1" y="24" width="248" height="27" forecolor="#000000" uuid="d4ffb11d-8a42-4d0a-84bf-5a08db017d2f">
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
 					<textElement verticalAlignment="Middle" markup="none">
 						<font isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA["Transaction: "+$F{TransactionId}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="false">
-					<reportElement uuid="413555f5-6e37-46fa-9f7b-00d6dd12b626" mode="Opaque" x="235" y="24" width="40" height="27" forecolor="#000000"/>
+					<reportElement mode="Opaque" x="250" y="24" width="40" height="27" forecolor="#000000" uuid="413555f5-6e37-46fa-9f7b-00d6dd12b626">
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
 					<textElement textAlignment="Right" verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[$F{ClaimantTitle}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="false">
-					<reportElement uuid="f611597b-ca9e-4eee-b245-2214c1573ce9" mode="Opaque" x="282" y="24" width="188" height="27" forecolor="#000000"/>
+					<reportElement mode="Opaque" x="297" y="24" width="200" height="27" forecolor="#000000" uuid="f611597b-ca9e-4eee-b245-2214c1573ce9">
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
 					<textElement verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[$F{ClaimantSurname}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="false">
-					<reportElement uuid="fa8df42d-d92f-4051-a603-d9108427489c" mode="Opaque" x="498" y="24" width="95" height="27" forecolor="#000000"/>
+					<reportElement mode="Opaque" x="498" y="24" width="95" height="27" forecolor="#000000" uuid="fa8df42d-d92f-4051-a603-d9108427489c"/>
 					<textElement textAlignment="Right" verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[$F{NationalInsuranceNumber}]]></textFieldExpression>
 				</textField>
@@ -144,21 +155,21 @@
 	<detail>
 		<band height="30" splitType="Immediate">
 			<staticText>
-				<reportElement uuid="33f37f7e-ea89-47ec-9572-b60206334392" positionType="Float" x="2" y="4" width="233" height="20"/>
+				<reportElement positionType="Float" x="2" y="4" width="233" height="20" uuid="33f37f7e-ea89-47ec-9572-b60206334392"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font isBold="true" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[Carer's Allowance Claim Form]]></text>
 			</staticText>
 			<textField>
-				<reportElement uuid="7fc54fa3-8e8e-49e3-b237-71e48d1d5de5" positionType="Float" x="329" y="4" width="262" height="20"/>
+				<reportElement positionType="Float" x="329" y="4" width="262" height="20" uuid="7fc54fa3-8e8e-49e3-b237-71e48d1d5de5"/>
 				<textElement textAlignment="Right" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA["This form was completed in "+$F{LanguageUsed}]]></textFieldExpression>
 			</textField>
 		</band>
 		<band height="1" splitType="Immediate">
 			<subreport>
-				<reportElement uuid="215b4880-58fe-4b83-b271-f650709b3cac" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
+				<reportElement positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true" uuid="215b4880-58fe-4b83-b271-f650709b3cac"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -171,7 +182,7 @@
 		</band>
 		<band height="1" splitType="Immediate">
 			<subreport>
-				<reportElement uuid="75564d7a-a29b-41fc-a89c-debc7307f3fb" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
+				<reportElement positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true" uuid="75564d7a-a29b-41fc-a89c-debc7307f3fb"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -184,7 +195,7 @@
 		</band>
 		<band height="1" splitType="Immediate">
 			<subreport>
-				<reportElement uuid="dfd7d263-0881-4af0-b3c1-166b1491022a" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
+				<reportElement positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true" uuid="dfd7d263-0881-4af0-b3c1-166b1491022a"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -197,7 +208,7 @@
 		</band>
 		<band height="1" splitType="Immediate">
 			<subreport>
-				<reportElement uuid="32e318d3-4311-4a9d-9fb2-13e3f6bb8c40" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
+				<reportElement positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true" uuid="32e318d3-4311-4a9d-9fb2-13e3f6bb8c40"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -210,7 +221,7 @@
 		</band>
 		<band height="1" splitType="Immediate">
 			<subreport>
-				<reportElement uuid="57b7fddc-1a96-4fb6-8d15-fc3c5d961a7a" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
+				<reportElement positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true" uuid="57b7fddc-1a96-4fb6-8d15-fc3c5d961a7a"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -223,7 +234,7 @@
 		</band>
 		<band height="1" splitType="Immediate">
 			<subreport>
-				<reportElement uuid="4e2c7d53-6a5a-4343-933f-005fbdd500d2" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
+				<reportElement positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true" uuid="4e2c7d53-6a5a-4343-933f-005fbdd500d2"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -236,7 +247,7 @@
 		</band>
 		<band height="1" splitType="Immediate">
 			<subreport>
-				<reportElement uuid="026da851-8e62-4c4a-a0b8-71e5ce6ad71e" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
+				<reportElement positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true" uuid="026da851-8e62-4c4a-a0b8-71e5ce6ad71e"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -249,7 +260,7 @@
 		</band>
 		<band height="1" splitType="Immediate">
 			<subreport>
-				<reportElement uuid="9698f1c6-8133-4262-83e4-8567c8ee247f" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
+				<reportElement positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true" uuid="9698f1c6-8133-4262-83e4-8567c8ee247f"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -262,7 +273,7 @@
 		</band>
 		<band height="1" splitType="Immediate">
 			<subreport>
-				<reportElement uuid="e07170fa-a386-4eb8-94f3-bab926bd1918" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
+				<reportElement positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true" uuid="e07170fa-a386-4eb8-94f3-bab926bd1918"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -275,7 +286,7 @@
 		</band>
 		<band height="1" splitType="Immediate">
 			<subreport>
-				<reportElement uuid="541dfba5-c6b0-442f-9bd1-ec584e4b89ca" positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true"/>
+				<reportElement positionType="Float" x="0" y="0" width="560" height="1" isRemoveLineWhenBlank="true" uuid="541dfba5-c6b0-442f-9bd1-ec584e4b89ca"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -290,14 +301,14 @@
 	<pageFooter>
 		<band height="20" splitType="Stretch">
 			<textField>
-				<reportElement uuid="fb0d9e43-5827-4ea3-a9c3-df5752f30646" positionType="FixRelativeToBottom" x="404" y="0" width="121" height="20">
+				<reportElement positionType="FixRelativeToBottom" x="404" y="0" width="121" height="20" uuid="fb0d9e43-5827-4ea3-a9c3-df5752f30646">
 					<property name="net.sf.jasperreports.export.html.class" value="DetailPageFooter"/>
 				</reportElement>
 				<textElement textAlignment="Right" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+ " of "]]></textFieldExpression>
 			</textField>
 			<textField evaluationTime="Report">
-				<reportElement uuid="ff73e306-b40d-442d-98a9-1abf56267436" positionType="FixRelativeToBottom" x="527" y="0" width="27" height="20">
+				<reportElement positionType="FixRelativeToBottom" x="527" y="0" width="27" height="20" uuid="ff73e306-b40d-442d-98a9-1abf56267436">
 					<property name="net.sf.jasperreports.export.html.class" value="DetailPageFooter"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle"/>
