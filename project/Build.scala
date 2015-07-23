@@ -8,7 +8,7 @@ import play.Play.autoImport._
 object ApplicationBuild extends Build {
 
   val appName = "p1"
-  val appVersion = "1.13-SNAPSHOT"
+  val appVersion = "1.14-SNAPSHOT"
 
   var repo: Seq[Def.Setting[_]] = Seq(resolvers += "Carers repo" at "http://build.3cbeta.co.uk:8080/artifactory/repo/",
   resolvers += "Jaspersoft repo" at "http://jaspersoft.artifactoryonline.com/jaspersoft/third-party-ce-artifacts/")
