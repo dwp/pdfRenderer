@@ -1,19 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_evidenceList" language="groovy" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="b9646490-04e2-4d9d-9171-d5b8ba44bbb4">
 	<property name="ireport.zoom" value="2.5937424601000023"/>
 	<property name="ireport.x" value="300"/>
 	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
-	<template><![CDATA[ $P{TEMPLATE_DIR} + "StyleTemplateClaim.jrtx"]]></template>
+	<template><![CDATA[$P{TEMPLATE_DIR} + "StyleTemplateClaim.jrtx"]]></template>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
 	</parameter>
 	<parameter name="TEMPLATE_DIR" class="java.lang.String">
-    		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
-    </parameter>
+		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+	</parameter>
 	<queryString language="xPath">
 		<![CDATA[/]]>
 	</queryString>
+	<field name="EvidenceListAddressLine1" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EvidenceList/RecipientAddress/Answer/Line[1]]]></fieldDescription>
+	</field>
+	<field name="EvidenceListAddressLine2" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EvidenceList/RecipientAddress/Answer/Line[2]]]></fieldDescription>
+	</field>
+	<field name="EvidenceListAddressLine3" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EvidenceList/RecipientAddress/Answer/Line[3]]]></fieldDescription>
+	</field>
+	<field name="EvidenceListAddressPostcode" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EvidenceList/RecipientAddress/Answer/PostCode]]></fieldDescription>
+	</field>
+	<field name="AddressLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EvidenceList/RecipientAddress/QuestionLabel]]></fieldDescription>
+	</field>
 	<field name="showTitle" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/EvidenceList/Evidence]]></fieldDescription>
 	</field>
@@ -44,6 +60,33 @@
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource) $P{REPORT_DATA_SOURCE}).subDataSource("//Evidence")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_subreportEvidenceList.jasper"]]></subreportExpression>
 			</subreport>
+		</band>
+		<band height="100">
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="00a60fe2-8b39-4b8c-87c1-4d23bee0caae" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AddressLabel}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="0dd14db0-4476-49c9-88da-37468f510b54" style="Answer" positionType="Float" x="0" y="18" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EvidenceListAddressLine1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="26e6c82e-2996-4d28-992d-e48d5a323758" style="Answer" positionType="Float" x="0" y="72" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EvidenceListAddressPostcode}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="e677e3b0-b054-4d66-9053-c2d89f9aadbf" style="Answer" positionType="Float" x="0" y="54" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EvidenceListAddressLine3}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="d37e7f59-ff0b-4357-b6dd-92b0bf3c1aa3" style="Answer" positionType="Float" x="0" y="36" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EvidenceListAddressLine2}]]></textFieldExpression>
+			</textField>
 		</band>
 		<band height="23">
 			<staticText>
