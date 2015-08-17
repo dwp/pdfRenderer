@@ -14,9 +14,6 @@
 	<queryString language="xPath">
 		<![CDATA[/]]>
 	</queryString>
-	<field name="OtherChangesQuestionLabel" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/OtherChanges/QuestionLabel]]></fieldDescription>
-	</field>
 	<field name="OtherChangesAnswer" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAChangeOfCircumstances/OtherChanges/Answer]]></fieldDescription>
 	</field>
@@ -35,13 +32,6 @@
 		</band>
 	</title>
 	<detail>
-		<band height="22" splitType="Prevent">
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="4cec8ba0-e1a6-48d5-937f-e565d34bf8ca" positionType="Float" x="0" y="0" width="590" height="20" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{OtherChangesQuestionLabel}]]></textFieldExpression>
-			</textField>
-		</band>
 		<band height="50">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement uuid="cfcfe0f4-935e-4ec5-9f70-f8402a77eedd" style="Answer" positionType="Float" x="0" y="0" width="590" height="18" isRemoveLineWhenBlank="true"/>
