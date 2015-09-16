@@ -1,21 +1,13 @@
-package test_data
+package test_data.v15
 
 import scala.xml.Elem
 import utils.TestUtils
 
-
 object XMLData extends TestUtils{
-
-  var LATEST_VERSION = "0.15"
-
   def madeUpField(xml: Elem) = {
     Seq(
       "I am an invalid field that should never appear in the pdf"
     )
-  }
-
-  def functionalTestCaseSectionAboutYouTheCarer(xml: Elem) = {
-    sectionAboutYouTheCarer(xml)
   }
 
   def functionalTestCase1(xml: Elem) = {
@@ -25,30 +17,22 @@ object XMLData extends TestUtils{
 
   def functionalTestCase2(xml: Elem) = {
     val fields = XMLDataFields(xml)
-    Seq(
-      buildQuestion(fields.claimantOtherSurnamesQuestion.text, fields.claimantOtherSurnamesAnswer.text),
-      buildQuestion(fields.partnerOtherSurnamesQuestion.text, fields.partnerOtherSurnamesAnswer.text)
-    ) ++ functionalTestCaseMandatoryFields(xml) ++ aboutYourPartner(fields)
+    functionalTestCaseMandatoryFields(xml) ++ sectionAboutYourPartner(xml)
   }
 
   def functionalTestCase3(xml: Elem) = {
     val fields = XMLDataFields(xml)
-    Seq(
-      buildQuestion(fields.claimantOtherSurnamesQuestion.text, fields.claimantOtherSurnamesAnswer.text),
-      buildQuestion(fields.partnerOtherSurnamesQuestion.text, fields.partnerOtherSurnamesAnswer.text)
-    ) ++ functionalTestCaseMandatoryFields(xml) ++ aboutYourPartner(fields) ++ careBreaks(fields) ++ sectionAboutEmployment(xml) ++ sectionEvidenceList(xml)
+    functionalTestCaseMandatoryFields(xml) ++ sectionAboutYourPartner(xml) ++ careBreaks(fields) ++ sectionAboutEmployment(xml) ++ sectionEvidenceList(xml)
   }
 
   def functionalTestCase4(xml: Elem): Seq[String] = {
     val fields = XMLDataFields(xml)
-    Seq(
-      buildQuestion(fields.claimantOtherSurnamesQuestion.text, fields.claimantOtherSurnamesAnswer.text)
-    ) ++ functionalTestCaseMandatoryFields(xml) ++ careBreaks(fields)
+    functionalTestCaseMandatoryFields(xml) ++ careBreaks(fields)
   }
 
   def functionalTestCase5(xml: Elem) = {
     val fields = XMLDataFields(xml)
-    functionalTestCaseMandatoryFields(xml) ++ aboutYourPartner(fields) ++ careBreaks(fields)
+    functionalTestCaseMandatoryFields(xml) ++ sectionAboutYourPartner(xml) ++ careBreaks(fields)
   }
 
   def functionalTestCase6(xml: Elem) = {
@@ -58,7 +42,7 @@ object XMLData extends TestUtils{
 
   def functionalTestCase7(xml: Elem) = {
     val fields = XMLDataFields(xml)
-    functionalTestCaseMandatoryFields(xml) ++ aboutYourPartner(fields) ++ careBreaks(fields)
+    functionalTestCaseMandatoryFields(xml) ++ sectionAboutYourPartner(xml) ++ careBreaks(fields)
   }
 
   def functionalTestCase8(xml: Elem) = {
@@ -92,26 +76,40 @@ object XMLData extends TestUtils{
       "Transaction: " + fields.transactionPath.text + " " + fields.titleAnswer.text + " " + fields.surNameAnswer.text + " " + fields.nationalInsuranceNumberAnswer.text,
       "Summary",
       "About the care you provide"
-    ) ++ aboutYouTheCarer(fields) ++ sectionAboutTheCareYouProvide(xml) ++ claimDates(fields) ++ claimSummary(fields)
+    ) ++ aboutYouTheCarer(xml) ++ sectionAboutTheCareYouProvide(xml) ++ claimDates(fields) ++ claimSummary(fields)
   }
 
-  def aboutYouTheCarer(fields: XMLDataFields) = {
+  def aboutYouTheCarer(xml: Elem) = {
+    val fields = SectionPart1AboutYouTheCarer(xml)
     Seq("About you - the carer",
       buildQuestion(fields.nationalInsuranceNumberQuestion.text, fields.nationalInsuranceNumberAnswer.text.trim),
-      buildQuestion(fields.surNameQuestion.text, fields.surNameAnswer.text.trim),
-      buildQuestion(fields.firstNameQuestion.text+"(s)", fields.firstNameAnswer.text.trim),
-      buildOther(fields.titleQuestion.text, fields.titleAnswer.text.trim, fields.titleOther.text.trim),
+      buildQuestion(fields.lastNameQuestion.text, fields.lastNameAnswer.text.trim),
+      buildQuestion(fields.firstNameQuestion.text, fields.firstNameAnswer.text.trim),
+      buildQuestion(fields.claimantMiddleNamesQuestion.text, fields.claimantMiddleNameAnswer.text.trim),
+      buildQuestion(fields.titleQuestion.text, fields.titleAnswer.text.trim),
+      buildQuestion(fields.dateOfBirthQuestion.text, fields.dateOfBirthAnswer.text.trim),
+      buildQuestion(fields.maritalStatusQuestion.text, fields.maritalStatusAnswer.text.trim),
+      buildQuestion(fields.dayTimeTelephoneNumberQuestion.text, fields.dayTimeTelephoneNumberAnswer.text.trim),
+      buildQuestion(fields.speechOrHearingDifficultyQuestion.text, fields.speechOrHearingDifficultyAnswer.text.trim),
+      buildQuestion(fields.nationalityQuestion.text, fields.nationalityAnswer.text.trim),
+      buildQuestion(fields.doYouLiveEnglandScotlandWalesQuestion.text, fields.doYouLiveEnglandScotlandWalesAnswer.text.trim),
+      buildQuestion(fields.countryNormallyLiveInQuestion.text, fields.countryNormallyLiveInAnswer.text.trim),
+      buildQuestion(fields.timeOutsideGBLast3YearsQuestion.text, fields.timeOutsideGBLast3YearsAnswer.text.trim),
+      buildQuestion(fields.havePartnerQuestion.text, fields.havePartnerAnswer.text.trim),
       fields.addressCarerAnswer,
       fields.postCodeCarer.text,
-      fields.reasonTimeAbroadOther.text
+      fields.reasonTimeAbroadOther.text,
+      buildQuestion(fields.cared35HoursBeforeQuestion.text, fields.cared35HoursBeforeAnswer.text),
+      buildQuestion(fields.dateStartedCaringQuestion.text, fields.dateStartedCaringAnswer.text)
     )
   }
 
   def aboutTheCareYouProvide(fields: XMLDataFields) = {
     Seq(
       fields.careeLastNameQuestion.text + " " + fields.careeLastNameAnswer.text.trim,
-      fields.careeFirstNameQuestion.text+"(s)" + " " + fields.careeFirstNameAnswer.text.trim,
-      fields.titleQuestion.text + " " + fields.titleAnswer.text + " " + fields.titleOther.text,
+      fields.careeFirstNameQuestion.text + " " + fields.careeFirstNameAnswer.text.trim,
+      fields.careeMiddleNameQuestion.text + " " + fields.careeMiddleNameAnswer.text.trim,
+      fields.titleQuestion.text + " " + fields.titleAnswer.text,
       fields.addressCareeAnswer,
       fields.postCodeCaree.text
     )
@@ -126,70 +124,32 @@ object XMLData extends TestUtils{
   def claimSummary(fields: XMLDataFields) = {
     Seq("Claim Summary",
       fields.nationalityAnswer.text,
+      fields.qualifyingBenefitAnswer.text,
       buildQuestion(fields.receiveEEAPensionsBenefitsQuestion.text, fields.receiveEEAPensionsBenefitsAnswer.text),
       buildQuestion(fields.timeOutsideGBLast3YearsQuestion.text, fields.timeOutsideGBLast3YearsAnswer.text),
-      buildQuestion(fields.statePensionQuestion.text, fields.statePensionAnswer.text), // this field is only valid for 0.1: Remove this when you remove 0.1 version
       buildQuestion(fields.otherInformationWelshCommunicationQuestion.text, fields.otherInformationWelshCommunicationAnswer.text),
       buildQuestion(fields.otherInformationAddtionalInformationQuestion.text, fields.otherInformationAddtionalInformationAnswer.text)
     )
   }
 
-  def aboutYourPartner(fields: XMLDataFields) = Seq(
-    buildQuestion(fields.parnerNINOQuestion.text, fields.parnerNINOAnswer.text),
-    buildQuestion(fields.partnerSurnameQuestion.text,fields.partnerSurnameAnswer.text),
-    buildQuestion(fields.partnerOtherNamesQuestion.text,fields.partnerOtherNamesAnswer.text),
-    buildOther(fields.partnerTitleQuestion.text,fields.partnerTitleAnswer.text, fields.partnerTitleOther.text)
-  )
-
   def careBreaks(fields: XMLDataFields) = fields.careBreak
-
-  def sectionAboutYouTheCarer(xml: Elem) = {
-    val fields = SectionPart1AboutYouTheCarer(xml)
-    Seq("Part 1 - About you - the carer",
-      "Your details",
-      buildOther(fields.titleQuestion.text, fields.titleAnswer.text, fields.titleOther.text),
-      buildQuestion(fields.firstNameQuestion.text+"(s)", fields.firstNameAnswer.text),
-      buildQuestion(fields.lastNameQuestion.text, fields.lastNameAnswer.text),
-      "Other surname or maiden name " + fields.otherSurnameOrMaidenName.text,
-      "National Insurance number " + fields.nationalInsuranceNumber.text,
-      "Date of Birth " + fields.dateOfBirth.text,
-      "Marital Status " + fields.maritalStatus.text,
-      fields.dateOfClaimQuestion.text +" "+ fields.dateOfClaimAnswer.text,
-      "Your contact details",
-      fields.address,
-      fields.postCode.text,
-      buildQuestion(fields.dayTimeTelephoneNumberQuestion.text, fields.dayTimeTelephoneNumberAnswer.text),
-      "Mobile number " + fields.mobileNumber.text,
-      fields.speechOrHearingDifficultyQuestion.text +" "+ fields.speechOrHearingDifficultyAnswer.text,
-      "Your nationality and residency",
-      buildQuestion(fields.nationalityQuestion.text, fields.nationalityAnswer.text),
-      fields.doYouLiveEnglandScotlandWalesQuestion.text +" "+fields.doYouLiveEnglandScotlandWalesAnswer.text,
-      fields.countryNormallyLiveInQuestion.text +" "+fields.countryNormallyLiveInAnswer.text,
-      "Time outside of England, Scotland or Wales",
-      fields.timeOutsideGBLast3YearsQuestion.text +" "+fields.timeOutsideGBLast3YearsAnswer.text,
-      "-->>  Outside England, Scotland and Wales X",
-      "Money you get from other European Economic Area (EEA) countries or Switzerland",
-      fields.receiveEEAPensionsBenefitsQuestion.text + " " + fields.receiveEEAPensionsBenefitsAnswer.text,
-      fields.claimEEAPensionsBenefitsQuestion.text + " " + fields.claimEEAPensionsBenefitsAnswer.text,
-      fields.workingEEAInsuranceQuestion.text + " " + fields.workingEEAInsuranceAnswer.text,
-      "More about you",
-      fields.havePartnerQuestion.text + " " + fields.havePartnerAnswer.text,
-      fields.courseOfEducationQuestion.text + " " + fields.courseOfEducationAnswer.text,
-      fields.statePensionQuestion.text + " " + fields.statePensionAnswer.text
-    ) ++ fields.periodAbroad
-  }
 
   def sectionAboutYourPartner(xml: Elem) = {
     val fields = SectionPart2AboutYourPartner(xml)
-    Seq ("Part 2 - About your partner",
-         "Partner/Spouse details",
-         "Other surname or maiden name "+fields.otherSurnameOrMaidenName.text,
-         "Date of Birth "+fields.dateOfBirth.text,
-         "Nationality "+fields.nationalityPartner.text,
-         fields.seperatedFromPartnerQuestion.text+" "+fields.seperatedFromPartnerAnswer.text,
-         "Person you care for",
-         fields.isCareeQuestion.text+" "+fields.isCareeAnswer.text
-         ) ++ aboutYourPartner(XMLDataFields(xml))
+    Seq (
+            "Part 2 - About your partner",
+            "Partner details",
+            buildQuestion(fields.dateOfBirthQuestion.text, fields.dateOfBirthAnswer.text),
+            buildQuestion(fields.nationalityPartnerQuestion.text, fields.nationalityPartnerAnswer.text),
+            buildQuestion(fields.seperatedFromPartnerQuestion.text, fields.seperatedFromPartnerAnswer.text),
+            buildQuestion(fields.isCareeQuestion.text, fields.isCareeAnswer.text),
+            buildQuestion(fields.parnerNINOQuestion.text, fields.parnerNINOAnswer.text),
+            buildQuestion(fields.partnerSurnameQuestion.text,fields.partnerSurnameAnswer.text),
+            buildQuestion(fields.partnerMiddleNamesQuestion.text,fields.partnerMiddleNamesAnswer.text),
+            buildQuestion(fields.partnerOtherNamesQuestion.text,fields.partnerOtherNamesAnswer.text),
+            buildQuestion(fields.partnerTitleQuestion.text,fields.partnerTitleAnswer.text),
+            buildQuestion(fields.partnerOtherSurnamesQuestion.text,fields.partnerOtherSurnamesAnswer.text)
+         )
   }
 
   def sectionAboutEmployment(xml:Elem) = {
@@ -199,7 +159,15 @@ object XMLData extends TestUtils{
       employmentTitle = "Part 5 - Employment"
     }
     Seq (employmentTitle,
-         fields.areYouEmployedQuestion.text+" "+fields.areYouEmployedAnswer.text) ++ fields.employmentDetails
+         fields.areYouEmployedQuestion.text+" "+fields.areYouEmployedAnswer.text,
+         buildEmpAdditionaInfo(xml)) ++ fields.employmentDetails
+  }
+
+  private def buildEmpAdditionaInfo (xml:Elem) = {
+    val xmlDatafields = XMLDataFields(xml)
+    buildOther(xmlDatafields.employmentAdditionaInfoQuestion.text,
+      xmlDatafields.employmentAdditionaInfoAnswer.text,
+      xmlDatafields.employmentAdditionaInfoOther.text)
   }
 
   def sectionAboutSelfEmployment(xml:Elem) = {
@@ -229,7 +197,7 @@ object XMLData extends TestUtils{
          buildQuestion(fields.pensionExpensesQuestion.text, fields.pensionExpensesAnswer.text),
          buildQuestion(fields.paidForJobExpensesQuestion.text, fields.paidForJobExpensesAnswer.text),
          buildQuestion(fields.jobExpensesQuestion.text, fields.jobExpensesAnswer.text)
-      )
+      ) ++ Seq(buildEmpAdditionaInfo(xml))
   }
 
   def sectionAboutTheCareYouProvide(xml:Elem) = {
@@ -239,14 +207,11 @@ object XMLData extends TestUtils{
         buildQuestion((fields.nationalInsuranceNumber \\ "QuestionLabel").text, (fields.nationalInsuranceNumber \\ "Answer").text),
         buildQuestion((fields.dateOfBirth \\ "QuestionLabel").text, (fields.dateOfBirth \\ "Answer").text),
         buildQuestion(fields.liveSameAddressQuestion.text,fields.liveSameAddressAnswer.text),
-        "Contact details of the person you care for",
+        //"Contact details of the person you care for", This is now a dynamic label, so is giving problems
         buildQuestion((fields.dayTimeTelephoneNumber \\ "QuestionLabel").text, (fields.dayTimeTelephoneNumber \\ "Answer").text),
         buildQuestion(fields.relationToClaimantQuestion.text, fields.relationToClaimantAnswer.text),
-        buildQuestion(fields.armedForcesIndependantPaymentQuestion.text, fields.armedForcesIndependantPaymentAnswer.text),
         "More about the care you provide",
-        buildQuestion(fields.cared35HoursQuestion.text, fields.cared35HoursAnswer.text),
-        buildQuestion(fields.cared35HoursBeforeQuestion.text, fields.cared35HoursBeforeAnswer.text),
-        buildQuestion(fields.dateStartedCaringQuestion.text, fields.dateStartedCaringAnswer.text)
+        buildQuestion(fields.cared35HoursQuestion.text, fields.cared35HoursAnswer.text)
     ) ++ aboutTheCareYouProvide(XMLDataFields(xml)) ++ careBreaks(XMLDataFields(xml))
   }
   
@@ -254,7 +219,7 @@ object XMLData extends TestUtils{
     val fields = SectionAboutOtherMoney(xml)
     var otherMoneyTitle = "Part 7 - About Other Money"
     if (!serviceVersion(xml).equals("0.1")){
-      otherMoneyTitle = "PART 7 - STATUTORY PAY, BENEFITS AND PAYMENTS"
+      otherMoneyTitle = "PART 7 - OTHER PAYMENTS"
     }
     Seq (otherMoneyTitle,
       buildQuestion(fields.otherMoneyQuestion.text, fields.otherMoneyAnswer.text),
@@ -273,7 +238,11 @@ object XMLData extends TestUtils{
       buildOther(fields.otherMoneySPPaymentFrequencyQuestion.text, fields.otherMoneySPPaymentFrequencyAnswer.text, fields.otherMoneySPPaymentFrequencyOther.text),
       "Employer's Name" + " " + fields.otherMoneySPEmployerName.text,
       "Employer's Address " + fields.otherMoneySPEmployerAddress,
-      "Employer's Postcode " + fields.otherMoneySPEmployerPostcode.text
+      "Employer's Postcode " + fields.otherMoneySPEmployerPostcode.text,
+      buildQuestion(fields.receiveEEAPensionsBenefitsQuestion.text, fields.receiveEEAPensionsBenefitsAnswer.text),
+      buildQuestion(fields.receiveEEAPensionsBenefitsDetailsQuestion.text, fields.receiveEEAPensionsBenefitsDetailsAnswer.text),
+      buildQuestion(fields.workingEEAInsuranceQuestion.text, fields.workingEEAInsuranceAnswer.text),
+      buildQuestion(fields.workingEEAInsuranceDetailsQuestion.text, fields.workingEEAInsuranceDetailsAnswer.text)
     )
   }
 
