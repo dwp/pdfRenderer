@@ -80,7 +80,7 @@
 		</band>
 	</title>
 	<detail>
-		<band height="89" splitType="Prevent">
+		<band height="108" splitType="Prevent">
 			<staticText>
 				<reportElement uuid="de1d3cb5-12c0-49c2-bcb6-284eee491c31" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="595" height="32" forecolor="#000000"/>
 				<textElement verticalAlignment="Middle">
@@ -98,8 +98,9 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{DeclarationContactPreferenceAnswer}]]></textFieldExpression>
 			</textField>
+
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="e60f6436-2b18-4959-a91e-b15b5c6ff7f3" positionType="Float" x="0" y="52" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="e60f6436-2b18-4959-a91e-b15b5c6ff7f3" positionType="Float" x="0" y="52" width="392" height="36" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{DeclarationWantsContactEmailQuestion}]]></textFieldExpression>
 			</textField>
@@ -108,18 +109,26 @@
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{DeclarationWantsContactEmailAnswer}]]></textFieldExpression>
 			</textField>
+
+			<staticText>
+				<reportElement uuid="fcbef05e-939d-427c-a1e3-c881df86bcdd" positionType="Float" x="0" y="88" width="594" height="1"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
+
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="e60f6436-2b18-4959-a91e-b15b5c6ff7f4" positionType="Float" x="0" y="70" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="e60f6436-2b18-4959-a91e-b15b5c6ff7f4" positionType="Float" x="0" y="89" width="392" height="18" isRemoveLineWhenBlank="true"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{DeclarationEmailQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="189e5fd1-a549-4097-b0cd-2b1b95171633" style="Answer" positionType="Float" x="420" y="70" width="174" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
+				<reportElement uuid="189e5fd1-a549-4097-b0cd-2b1b95171633" style="Answer" positionType="Float" x="420" y="89" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{DeclarationEmailAnswer}]]></textFieldExpression>
 			</textField>
+
 			<staticText>
-				<reportElement uuid="28517f75-6ab3-43b8-b4e3-516df6fa0d4f" positionType="Float" x="1" y="88" width="593" height="1"/>
+				<reportElement uuid="28517f75-6ab3-43b8-b4e3-516df6fa0d4f" positionType="Float" x="1" y="107" width="593" height="1"/>
 				<textElement/>
 				<text><![CDATA[]]></text>
 			</staticText>
