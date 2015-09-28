@@ -109,6 +109,10 @@ trait PdfContentMatchingSpec extends Specification{
     testOutputFileExists(pdfFileLocation, testCaseXml)
     val totalContent = getPDFContent(pdfFileLocation)
     val testData = generateTestData(testCaseXml)
+//    val matches =matchFunction(testData, totalContent)
+//    if(!matches) {println (s"$testData != $totalContent")}
+//    matches must beTrue
+
     matchFunction(testData, totalContent) must beTrue
     deleteFile(pdfFileLocation)
   }
