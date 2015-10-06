@@ -40,7 +40,9 @@ trait PdfContentMatchingSpec extends Specification{
     }
     reader.close()
 
-    content.mkString(" ").toLowerCase.replaceAll(seperator, space)
+    content.mkString(" ").toLowerCase
+      .replaceAll(seperator, space) //Replacing new lines for spaces
+      .replaceAll(" service version : 0\\.[0-9]{2}  ","") //Removing the header from the pdf -> text conversion because it interfered with field values
   }
 
   def cleanPdfContent(text:String, pageNumber:Int):String = {
@@ -109,9 +111,6 @@ trait PdfContentMatchingSpec extends Specification{
     testOutputFileExists(pdfFileLocation, testCaseXml)
     val totalContent = getPDFContent(pdfFileLocation)
     val testData = generateTestData(testCaseXml)
-//    val matches =matchFunction(testData, totalContent)
-//    if(!matches) {println (s"$testData != $totalContent")}
-//    matches must beTrue
 
     matchFunction(testData, totalContent) must beTrue
     deleteFile(pdfFileLocation)
