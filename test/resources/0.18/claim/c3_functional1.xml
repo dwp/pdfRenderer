@@ -13,7 +13,8 @@
                 <Surname><QuestionLabel>Last name</QuestionLabel><Answer>Caseone</Answer></Surname>
                 <OtherNames><QuestionLabel>First name</QuestionLabel><Answer>I have a real nam I have real mid</Answer></OtherNames>
 
-                <Title><QuestionLabel>Title</QuestionLabel><Other>Darth</Other><Answer>Other</Answer></Title>
+                <Title><QuestionLabel>Title</QuestionLabel><Answer>Other</Answer></Title>
+                <TitleOther><QuestionLabel>TitleOther</QuestionLabel><Answer>Darth</Answer></TitleOther>
                 <DateOfBirth><QuestionLabel>Date of birth</QuestionLabel><Answer>28-09-1976</Answer></DateOfBirth>
                 <NationalInsuranceNumber><QuestionLabel>National Insurance number</QuestionLabel><Answer>AB123456C</Answer></NationalInsuranceNumber>
                 <Address>
@@ -33,7 +34,8 @@
             <Caree>
                 <Surname><QuestionLabel>Last name</QuestionLabel><Answer>Caseone</Answer></Surname>
                 <OtherNames><QuestionLabel>First name</QuestionLabel><Answer>I have a real nam I have a real mid</Answer></OtherNames>
-                <Title><QuestionLabel>Title</QuestionLabel><Other>Baroness</Other><Answer>Other</Answer></Title>
+                <Title><QuestionLabel>Title</QuestionLabel><Answer>Other</Answer></Title>
+                <TitleOther><QuestionLabel>TitleOther</QuestionLabel><Answer>Baroness</Answer></TitleOther>
                 <DateOfBirth><QuestionLabel>Date of birth</QuestionLabel><Answer>12-09-1980</Answer></DateOfBirth>
 
                 <Address>

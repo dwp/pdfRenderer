@@ -9,7 +9,8 @@
             <Claimant>
                 <Surname><QuestionLabel>Last name</QuestionLabel><Answer>CaseTwo</Answer></Surname>
                 <OtherNames><QuestionLabel>First name</QuestionLabel><Answer>Test Middle</Answer></OtherNames>
-                <Title><QuestionLabel>Title</QuestionLabel><Answer>Rev</Answer></Title>
+                <Title><QuestionLabel>Title</QuestionLabel><Answer>Other</Answer></Title>
+                <TitleOther><QuestionLabel>TitleOther</QuestionLabel><Answer>Rev</Answer></TitleOther>
                 <DateOfBirth><QuestionLabel>Date of birth</QuestionLabel><Answer>28-09-1976</Answer></DateOfBirth>
                 <NationalInsuranceNumber><QuestionLabel>National Insurance number</QuestionLabel><Answer>JA486278A</Answer></NationalInsuranceNumber>
                 <Address>
@@ -86,7 +87,8 @@
                 <Surname><QuestionLabel>Last name</QuestionLabel><Answer>Caseone</Answer></Surname>
                 <OtherNames><QuestionLabel>First name</QuestionLabel><Answer>Firstname</Answer></OtherNames>
                 <OtherSurnames><QuestionLabel>Other surname or maiden name</QuestionLabel><Answer>Other name</Answer></OtherSurnames>
-                <Title><QuestionLabel>Title</QuestionLabel><Othe>Baroness</Othe><Answer>Other</Answer></Title>
+                <Title><QuestionLabel>Title</QuestionLabel><Answer>Other</Answer></Title>
+                <TitleOther><QuestionLabel>TitleOther</QuestionLabel><Answer>Baroness</Answer></TitleOther>
                 <DateOfBirth><QuestionLabel>Date of birth</QuestionLabel><Answer>28-09-1977</Answer></DateOfBirth>
                 <NationalInsuranceNumber><QuestionLabel>National Insurance number</QuestionLabel><Answer>JA234567B</Answer></NationalInsuranceNumber>
                 <NationalityPartner><QuestionLabel>Nationality?</QuestionLabel><Answer>French</Answer></NationalityPartner>

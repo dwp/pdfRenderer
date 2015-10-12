@@ -26,7 +26,8 @@
                 <Surname><QuestionLabel>Last name</QuestionLabel><Answer>watson</Answer></Surname>
                 <OtherNames><QuestionLabel>First name</QuestionLabel><Answer>Cloe scott</Answer></OtherNames>
                 <MiddleNames><QuestionLabel>Middle name(s)</QuestionLabel><Answer>Caree Middlename</Answer></MiddleNames>
-                <Title><QuestionLabel>Title</QuestionLabel><Answer>Dame</Answer></Title>
+                <Title><QuestionLabel>Title</QuestionLabel><Answer>Other</Answer></Title>
+                <TitleOther><QuestionLabel>TitleOther</QuestionLabel><Answer>Dame</Answer></TitleOther>
                 <DateOfBirth><QuestionLabel>Date of birth</QuestionLabel><Answer>03-07-1951</Answer></DateOfBirth>
 
                 <Address>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version last-->
+<!-- Created with Jaspersoft Studio version 5.6.1.final using JasperReports Library version 5.6.1  -->
+<!-- 2015-10-12T16:07:42 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYouTheCarer_YourDetails" language="groovy" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="298ab450-e0e7-4402-afad-ec2c84b931c1">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
@@ -64,11 +65,11 @@
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="150" splitType="Immediate">
+		<band height="134" splitType="Immediate">
 			<property name="local_mesure_unitheight" value="pixel"/>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<staticText>
-				<reportElement uuid="76ae28bc-b80c-4a97-a183-7b7eb19f2f8d" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="594" height="20">
+				<reportElement style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="594" height="20" uuid="76ae28bc-b80c-4a97-a183-7b7eb19f2f8d">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourDetails"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
@@ -77,121 +78,17 @@
 				<text><![CDATA[Your Details]]></text>
 			</staticText>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="9415ec90-b8b5-40d0-b5ea-8983fd33549e" positionType="Float" x="0" y="21" width="392" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
+				<reportElement positionType="Float" x="0" y="21" width="392" height="18" isRemoveLineWhenBlank="true" uuid="9415ec90-b8b5-40d0-b5ea-8983fd33549e"/>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantTitleQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="0f00aab9-bd9c-417b-8e32-a61a0b7c360c" style="Answer" positionType="Float" x="420" y="21" width="174" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
+				<reportElement style="Answer" positionType="Float" x="420" y="21" width="174" height="18" isRemoveLineWhenBlank="true" uuid="0f00aab9-bd9c-417b-8e32-a61a0b7c360c">
+					<printWhenExpression><![CDATA[!$F{AboutYouTheCarerClaimantTitleAnswer}.toLowerCase().contains("other")]]></printWhenExpression>
+				</reportElement>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantTitleAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="f6bc7857-d513-406a-8e3d-5aa5901d49e2" positionType="Float" x="0" y="57" width="392" height="18" isRemoveLineWhenBlank="true">
-					<property name="local_mesure_unity" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantFirstNameQuestionLabel}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="7fb7a342-d9f3-42ba-86f2-7f418864f0f4" style="Answer" positionType="Float" x="420" y="57" width="174" height="18" isRemoveLineWhenBlank="true">
-					<property name="local_mesure_unity" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantFirstNameAnswer}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement uuid="91a14418-bd5b-48ed-80f7-34109ea920a9" positionType="Float" x="0" y="75" width="594" height="1">
-					<property name="local_mesure_unity" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<textElement/>
-				<text><![CDATA[Static text]]></text>
-			</staticText>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="7a470dfc-5247-4c3f-a062-6ac214b72810" positionType="Float" x="0" y="76" width="392" height="18" isRemoveLineWhenBlank="true">
-					<property name="local_mesure_unity" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantMiddleNameQuestionLabel}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="5f3cea36-1385-4ab7-9c10-3924021c9fb0" style="Answer" positionType="Float" x="420" y="76" width="174" height="18" isRemoveLineWhenBlank="true">
-					<property name="local_mesure_unity" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantMiddleNameAnswer}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement uuid="d4666f5e-a156-4609-ba90-c1260d371758" positionType="Float" x="0" y="94" width="594" height="1">
-					<property name="local_mesure_unity" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<textElement/>
-				<text><![CDATA[]]></text>
-			</staticText>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="3aa7b2f8-c0c3-4bc7-83bd-394da404d049" positionType="Float" x="0" y="95" width="392" height="18" isRemoveLineWhenBlank="true">
-					<property name="local_mesure_unity" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantSurnameQuestionLabel}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="8c75e471-dd48-4837-99a1-ec82c69b2d40" style="Answer" positionType="Float" x="420" y="95" width="174" height="18" isRemoveLineWhenBlank="true">
-					<property name="local_mesure_unity" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantSurnameAnswer}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement uuid="1b31aa83-8b10-4ecc-9d26-5e95273b2b74" positionType="Float" x="0" y="113" width="594" height="1">
-					<property name="local_mesure_unity" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<textElement/>
-				<text><![CDATA[]]></text>
-			</staticText>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="3b10bf4b-22b8-4920-9cf2-dc3670497676" positionType="Float" x="0" y="114" width="392" height="18" isRemoveLineWhenBlank="true">
-					<property name="local_mesure_unity" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutYouTheCarerNationalInsuranceNumberQuestionLabel}]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="2aa6b536-54b9-4d3e-b3d3-a79e9df0173c" style="Answer" positionType="Float" x="420" y="114" width="174" height="18" isRemoveLineWhenBlank="true">
-					<property name="local_mesure_unity" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutYouTheCarerNationalInsuranceNumberAnswer}]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="ef9a8048-a9eb-472d-b1e8-64c10bde3fcf" positionType="Float" x="0" y="132" width="392" height="18" isRemoveLineWhenBlank="true">
-					<property name="local_mesure_unity" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutYouTheCarerDateOfBirthQuestionLabel}]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="79f5aba9-3547-4f6e-862f-cdb7dfc7c27a" style="Answer" positionType="Float" x="420" y="132" width="174" height="18" isRemoveLineWhenBlank="true">
-					<property name="local_mesure_unity" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{AboutYouTheCarerDateOfBirthAnswer}]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement uuid="fb2d6a30-30c1-4bef-8e4f-f2b18f7d6786" positionType="Float" x="420" y="39" width="174" height="18">
+				<reportElement positionType="Float" x="420" y="22" width="174" height="18" uuid="fb2d6a30-30c1-4bef-8e4f-f2b18f7d6786">
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
@@ -200,11 +97,103 @@
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[$F{AboutYouTheCarerClaimantTitleAnswer}.toLowerCase().contains("other")]]></printWhenExpression>
 				</reportElement>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantTitleOther}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="41" width="392" height="18" isRemoveLineWhenBlank="true" uuid="f6bc7857-d513-406a-8e3d-5aa5901d49e2">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantFirstNameQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="41" width="174" height="18" isRemoveLineWhenBlank="true" uuid="7fb7a342-d9f3-42ba-86f2-7f418864f0f4">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantFirstNameAnswer}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="75" width="594" height="1" uuid="91a14418-bd5b-48ed-80f7-34109ea920a9">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="60" width="392" height="18" isRemoveLineWhenBlank="true" uuid="7a470dfc-5247-4c3f-a062-6ac214b72810">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantMiddleNameQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="60" width="174" height="18" isRemoveLineWhenBlank="true" uuid="5f3cea36-1385-4ab7-9c10-3924021c9fb0">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantMiddleNameAnswer}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="94" width="594" height="1" uuid="d4666f5e-a156-4609-ba90-c1260d371758">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="79" width="392" height="18" isRemoveLineWhenBlank="true" uuid="3aa7b2f8-c0c3-4bc7-83bd-394da404d049">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantSurnameQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="79" width="174" height="18" isRemoveLineWhenBlank="true" uuid="8c75e471-dd48-4837-99a1-ec82c69b2d40">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerClaimantSurnameAnswer}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="113" width="594" height="1" uuid="1b31aa83-8b10-4ecc-9d26-5e95273b2b74">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="98" width="392" height="18" isRemoveLineWhenBlank="true" uuid="3b10bf4b-22b8-4920-9cf2-dc3670497676">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerNationalInsuranceNumberQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="98" width="174" height="18" isRemoveLineWhenBlank="true" uuid="2aa6b536-54b9-4d3e-b3d3-a79e9df0173c">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerNationalInsuranceNumberAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="116" width="392" height="18" isRemoveLineWhenBlank="true" uuid="ef9a8048-a9eb-472d-b1e8-64c10bde3fcf">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerDateOfBirthQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="116" width="174" height="18" isRemoveLineWhenBlank="true" uuid="79f5aba9-3547-4f6e-862f-cdb7dfc7c27a">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{AboutYouTheCarerDateOfBirthAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>

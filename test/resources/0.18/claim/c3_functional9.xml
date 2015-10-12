@@ -27,7 +27,8 @@
             <Caree>
                 <Surname><QuestionLabel>Last name</QuestionLabel><Answer>Caseone</Answer></Surname>
                 <OtherNames><QuestionLabel>First name</QuestionLabel><Answer>Test </Answer></OtherNames>
-                <Title><QuestionLabel>Title</QuestionLabel><Answer>Dame</Answer></Title>
+                <Title><QuestionLabel>Title</QuestionLabel><Answer>Other</Answer></Title>
+                <TitleOther><QuestionLabel>TitleOther</QuestionLabel><Answer>Dame</Answer></TitleOther>
                 <DateOfBirth><QuestionLabel>Date of birth</QuestionLabel><Answer>12-09-1980</Answer></DateOfBirth>
 
                 <Address>
