@@ -40,74 +40,93 @@
                 <CareBreak>
                     <BreaksSinceClaim><QuestionLabel>Have you had any breaks from caring for this person since 10/02/2013?</QuestionLabel><Answer>Yes</Answer></BreaksSinceClaim>
                     <StartDate><QuestionLabel>When did the break start?</QuestionLabel><Answer>10-01-2010</Answer></StartDate><StartTime><QuestionLabel>Break start time?</QuestionLabel><Answer>10:15</Answer></StartTime>
-                    <EndDate><QuestionLabel>When did the break end?</QuestionLabel><Answer>17-01-2010</Answer></EndDate><EndTime><QuestionLabel>Break end time?</QuestionLabel><Answer>17:30</Answer></EndTime>
+                    <EndDate><QuestionLabel>When did the break end?</QuestionLabel><Answer>17-01-2010</Answer></EndDate>
+                    <EndTime><QuestionLabel>Break end time?</QuestionLabel><Answer>17:30</Answer></EndTime>
+                    <EndDateDoNotKnow><QuestionLabel>Has this break ended?</QuestionLabel><Answer>Yes</Answer></EndDateDoNotKnow>
                     <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>Yes</Answer></MedicalCare>
                     <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Answer>Home</Answer></ReasonClaimant>
                     <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Answer>Hospital</Answer></ReasonCaree>
-                </CareBreak><CareBreak>
+                </CareBreak>
+                <CareBreak>
                 <BreaksSinceClaim><QuestionLabel>Have you had any more breaks from caring for this person since 10/02/2013?</QuestionLabel><Answer>Yes</Answer></BreaksSinceClaim>
-                <StartDate><QuestionLabel>When did the break start?</QuestionLabel><Answer>20-01-2010</Answer></StartDate>
-                <EndDate><QuestionLabel>When did the break end?</QuestionLabel><Answer>27-01-2010</Answer></EndDate>
+                <StartDate><QuestionLabel>11When did the break start?</QuestionLabel><Answer>20-01-2010</Answer></StartDate>
+                <EndDate><QuestionLabel>11When did the break end?</QuestionLabel><Answer>27-01-2010</Answer></EndDate>
+                <EndDateDoNotKnow><QuestionLabel>11Has this break ended?</QuestionLabel><Answer>Yes</Answer></EndDateDoNotKnow>
                 <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>Yes</Answer></MedicalCare>
                 <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Answer>Holiday</Answer></ReasonClaimant>
                 <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Answer>Nursing Home</Answer></ReasonCaree>
-            </CareBreak><CareBreak>
+                </CareBreak>
+                <CareBreak>
                 <BreaksSinceClaim><QuestionLabel>Have you had any more breaks from caring for this person since 10/02/2013?</QuestionLabel><Answer>Yes</Answer></BreaksSinceClaim>
                 <StartDate><QuestionLabel>When did the break start?</QuestionLabel><Answer>20-02-2010</Answer></StartDate><StartTime><QuestionLabel>Break start time?</QuestionLabel><Answer>12:15</Answer></StartTime>
 
                 <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>Yes</Answer></MedicalCare>
                 <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Answer>Respite Care</Answer></ReasonClaimant>
                 <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Answer>Care Home</Answer></ReasonCaree>
-            </CareBreak><CareBreak>
+                </CareBreak>
+                <CareBreak>
                 <BreaksSinceClaim><QuestionLabel>Have you had any more breaks from caring for this person since 10/02/2013?</QuestionLabel><Answer>Yes</Answer></BreaksSinceClaim>
                 <StartDate><QuestionLabel>When did the break start?</QuestionLabel><Answer>20-03-2010</Answer></StartDate>
 
                 <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>Yes</Answer></MedicalCare>
                 <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Answer>Holiday</Answer></ReasonClaimant>
                 <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Answer>Nursing Home</Answer></ReasonCaree>
-            </CareBreak><CareBreak>
+            </CareBreak>
+            <CareBreak>
                 <BreaksSinceClaim><QuestionLabel>Have you had any more breaks from caring for this person since 10/02/2013?</QuestionLabel><Answer>Yes</Answer></BreaksSinceClaim>
                 <StartDate><QuestionLabel>When did the break start?</QuestionLabel><Answer>20-03-2013</Answer></StartDate><StartTime><QuestionLabel>Break start time?</QuestionLabel><Answer>12:00</Answer></StartTime>
                 <EndDate><QuestionLabel>When did the break end?</QuestionLabel><Answer>21-02-2013</Answer></EndDate>
                 <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>No</Answer></MedicalCare>
                 <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Other>Other Place 5a</Other><Answer>Other</Answer></ReasonClaimant>
                 <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Other>Other place 5b</Other><Answer>Other</Answer></ReasonCaree>
-            </CareBreak><CareBreak>
+            </CareBreak>
+            <CareBreak>
                 <BreaksSinceClaim><QuestionLabel>Have you had any more breaks from caring for this person since 10/02/2013?</QuestionLabel><Answer>Yes</Answer></BreaksSinceClaim>
                 <StartDate><QuestionLabel>When did the break start?</QuestionLabel><Answer>10-01-2010</Answer></StartDate><StartTime><QuestionLabel>Break start time?</QuestionLabel><Answer>10:30</Answer></StartTime>
-                <EndDate><QuestionLabel>When did the break end?</QuestionLabel><Answer>17-01-2010</Answer></EndDate><EndTime><QuestionLabel>Break end time?</QuestionLabel><Answer>16:45</Answer></EndTime>
+                <EndDate><QuestionLabel>When did the break end?</QuestionLabel><Answer>17-01-2010</Answer></EndDate>
+                <EndTime><QuestionLabel>Break end time?</QuestionLabel><Answer>16:45</Answer></EndTime>
+                <EndDateDoNotKnow><QuestionLabel>Has this break ended?</QuestionLabel><Answer>Yes</Answer></EndDateDoNotKnow>
                 <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>Yes</Answer></MedicalCare>
                 <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Answer>Home</Answer></ReasonClaimant>
                 <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Answer>Hospital</Answer></ReasonCaree>
-            </CareBreak><CareBreak>
+            </CareBreak>
+            <CareBreak>
                 <BreaksSinceClaim><QuestionLabel>Have you had any more breaks from caring for this person since 10/02/2013?</QuestionLabel><Answer>Yes</Answer></BreaksSinceClaim>
                 <StartDate><QuestionLabel>When did the break start?</QuestionLabel><Answer>20-01-2010</Answer></StartDate><StartTime><QuestionLabel>Break start time?</QuestionLabel><Answer>10:15</Answer></StartTime>
                 <EndDate><QuestionLabel>When did the break end?</QuestionLabel><Answer>27-01-2010</Answer></EndDate><EndTime><QuestionLabel>Break end time?</QuestionLabel><Answer>18:30</Answer></EndTime>
                 <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>Yes</Answer></MedicalCare>
                 <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Answer>Holiday</Answer></ReasonClaimant>
                 <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Answer>Nursing Home</Answer></ReasonCaree>
-            </CareBreak><CareBreak>
+            </CareBreak>
+            <CareBreak>
                 <BreaksSinceClaim><QuestionLabel>Have you had any more breaks from caring for this person since 10/02/2013?</QuestionLabel><Answer>Yes</Answer></BreaksSinceClaim>
                 <StartDate><QuestionLabel>When did the break start?</QuestionLabel><Answer>20-02-2010</Answer></StartDate><StartTime><QuestionLabel>Break start time?</QuestionLabel><Answer>12:00</Answer></StartTime>
                 <EndDate><QuestionLabel>When did the break end?</QuestionLabel><Answer>27-02-2010</Answer></EndDate><EndTime><QuestionLabel>Break end time?</QuestionLabel><Answer>13:45</Answer></EndTime>
                 <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>Yes</Answer></MedicalCare>
                 <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Answer>Respite Care</Answer></ReasonClaimant>
                 <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Answer>Care Home</Answer></ReasonCaree>
-            </CareBreak><CareBreak>
+            </CareBreak>
+            <CareBreak>
                 <BreaksSinceClaim><QuestionLabel>Have you had any more breaks from caring for this person since 10/02/2013?</QuestionLabel><Answer>Yes</Answer></BreaksSinceClaim>
                 <StartDate><QuestionLabel>When did the break start?</QuestionLabel><Answer>20-03-2010</Answer></StartDate><StartTime><QuestionLabel>Break start time?</QuestionLabel><Answer>12:15</Answer></StartTime>
-                <EndDate><QuestionLabel>When did the break end?</QuestionLabel><Answer>21-02-2010</Answer></EndDate><EndTime><QuestionLabel>Break end time?</QuestionLabel><Answer>13:30</Answer></EndTime>
+                <EndDate><QuestionLabel>When did the break end?</QuestionLabel><Answer>21-02-2010</Answer></EndDate>
+                <EndTime><QuestionLabel>Break end time?</QuestionLabel><Answer>13:30</Answer></EndTime>
+                <EndDateDoNotKnow><QuestionLabel>Has this break ended?</QuestionLabel><Answer>Yes</Answer></EndDateDoNotKnow>
                 <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>Yes</Answer></MedicalCare>
                 <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Answer>Holiday</Answer></ReasonClaimant>
                 <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Answer>Nursing Home</Answer></ReasonCaree>
-            </CareBreak><CareBreak>
+            </CareBreak>
+            <CareBreak>
                 <BreaksSinceClaim><QuestionLabel>Have you had any more breaks from caring for this person since 10/02/2013?</QuestionLabel><Answer>Yes</Answer></BreaksSinceClaim>
                 <StartDate><QuestionLabel>When did the break start?</QuestionLabel><Answer>20-03-2013</Answer></StartDate><StartTime><QuestionLabel>Break start time?</QuestionLabel><Answer>12:00</Answer></StartTime>
-                <EndDate><QuestionLabel>When did the break end?</QuestionLabel><Answer>21-02-2013</Answer></EndDate><EndTime><QuestionLabel>Break end time?</QuestionLabel><Answer>13:45</Answer></EndTime>
+                <EndDate><QuestionLabel>When did the break end?</QuestionLabel><Answer>21-02-2013</Answer></EndDate>
+                <EndTime><QuestionLabel>Break end time?</QuestionLabel><Answer>13:45</Answer></EndTime>
+                <EndDateDoNotKnow><QuestionLabel>Has this break ended?</QuestionLabel><Answer>Yes</Answer></EndDateDoNotKnow>
                 <MedicalCare><QuestionLabel>Did you or the person you care for get any medical treatment or professional care during this time?</QuestionLabel><Answer>No</Answer></MedicalCare>
                 <ReasonClaimant><QuestionLabel>Where were you during the break?</QuestionLabel><Other>Other place 10a</Other><Answer>Other</Answer></ReasonClaimant>
                 <ReasonCaree><QuestionLabel>Where was the person you care for during the break?</QuestionLabel><Other>Other place 10b</Other><Answer>Other</Answer></ReasonCaree>
-            </CareBreak><CareBreak>
+            </CareBreak>
+            <CareBreak>
                 <BreaksSinceClaim><QuestionLabel>Have you had any more breaks from caring for this person since 10/02/2013?</QuestionLabel><Answer>No</Answer></BreaksSinceClaim>
             </CareBreak>
                 <LiveSameAddress><QuestionLabel>Do they live at the same address as you?</QuestionLabel><Answer>Yes</Answer></LiveSameAddress>
