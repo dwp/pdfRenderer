@@ -26,7 +26,8 @@
             <Caree>
                 <Surname><QuestionLabel>Last name</QuestionLabel><Answer>For</Answer></Surname>
                 <OtherNames><QuestionLabel>First name</QuestionLabel><Answer>Person Cared</Answer></OtherNames>
-                <Title><QuestionLabel>Title</QuestionLabel><Answer>Mr</Answer></Title>
+                <Title><QuestionLabel>Title</QuestionLabel><Answer>Other</Answer></Title>
+                <TitleOther><QuestionLabel>TitleOther</QuestionLabel><Answer>Lord</Answer></TitleOther>
                 <DateOfBirth><QuestionLabel>Date of birth</QuestionLabel><Answer>12-09-1923</Answer></DateOfBirth>
                 <NationalInsuranceNumber><QuestionLabel>National Insurance number</QuestionLabel><Answer>JA789871C</Answer></NationalInsuranceNumber>
                 <Address>
