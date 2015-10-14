@@ -22,7 +22,7 @@
                 <DayTimePhoneNumber><QuestionLabel>Contact phone or mobile number</QuestionLabel><Answer>0771 5419899</Answer></DayTimePhoneNumber>
                 <Cared35HoursBefore><QuestionLabel>Were you caring for the person for more than 35 hours a week before this date?</QuestionLabel><Answer>No</Answer></Cared35HoursBefore>
                 <WantsContactEmail><QuestionLabel>Do you want an email to confirm your application has been received?</QuestionLabel><Answer>Yes</Answer></WantsContactEmail>
-                <Email><QuestionLabel>Enter your email address</QuestionLabel><Answer>test@test.co.uk</Answer></Email>
+                <Email><QuestionLabel>Email address</QuestionLabel><Answer>test@test.co.uk</Answer></Email>
             </Claimant>
             <Caree>
                 <Surname><QuestionLabel>Last name</QuestionLabel><Answer>Person</Answer></Surname>
@@ -155,8 +155,8 @@
                 <EEA>
                     <EEAGuardQuestion><QuestionLabel>Have you or anyone in your family claimed or been paid any benefits or pensions from any of these countries?</QuestionLabel><Answer>Yes</Answer></EEAGuardQuestion>
                     <EEAReceivePensionsBenefits><QuestionLabel>Have you or anyone in your family claimed or been paid any benefits or pensions from any of these countries?</QuestionLabel><Answer>Yes</Answer></EEAReceivePensionsBenefits>
-                    <EEAReceivePensionsBenefitsDetails><QuestionLabel>Give details, including who was paid, the local name of the benefit, the amount and dates of any payments.</QuestionLabel><Answer>blah blah blah</Answer></EEAReceivePensionsBenefitsDetails>
-                    <EEAWorkingInsurance><QuestionLabel>Do you or anyone in your family work or pay insurance in any of these countries?</QuestionLabel><Answer>Yes</Answer></EEAWorkingInsurance>
+                    <EEAReceivePensionsBenefitsDetails><QuestionLabel>Give details</QuestionLabel><Answer>blah blah blah</Answer></EEAReceivePensionsBenefitsDetails>
+                    <EEAWorkingInsurance><QuestionLabel>Have you or your close family worked or paid national insurance in any of these countries since your claim date?</QuestionLabel><Answer>Yes</Answer></EEAWorkingInsurance>
                     <EEAWorkingInsuranceDetails><QuestionLabel>Give details</QuestionLabel><Answer>eea details eea details eea details eea details eea details eea details eea details eea details eea details eea details</Answer></EEAWorkingInsuranceDetails>
                 </EEA>
             </OtherBenefits>

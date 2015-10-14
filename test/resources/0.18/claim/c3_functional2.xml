@@ -119,11 +119,16 @@
                 <OtherMoneyPayments><QuestionLabel>Have you received any payments for the person you care for or any other person since your claim date 22/03/2013</QuestionLabel><Answer>No</Answer></OtherMoneyPayments>
 
                 <EEA>
-                    <EEAGuardQuestion><QuestionLabel>Have you or anyone in your family claimed or been paid any benefits or pensions from any of these countries?</QuestionLabel><Answer>Yes</Answer></EEAGuardQuestion>
-                    <EEAReceivePensionsBenefits><QuestionLabel>Have you or anyone in your family claimed or been paid any benefits or pensions from any of these countries?</QuestionLabel><Answer>Yes</Answer></EEAReceivePensionsBenefits>
-                    <EEAReceivePensionsBenefitsDetails><QuestionLabel>Give details, including who was paid, the local name of the benefit, the amount and dates of any payments.</QuestionLabel><Answer>blah blah blah</Answer></EEAReceivePensionsBenefitsDetails>
-                    <EEAWorkingInsurance><QuestionLabel>Do you or anyone in your family work or pay insurance in any of these countries?</QuestionLabel><Answer>Yes</Answer></EEAWorkingInsurance>
-                    <EEAWorkingInsuranceDetails><QuestionLabel>Give details</QuestionLabel><Answer>eea details eea details eea details eea details eea details eea details eea details eea details eea details eea details</Answer></EEAWorkingInsuranceDetails>
+                    <EEAGuardQuestion><QuestionLabel>Have you or anyone in your family claimed or been paid any benefits or pensions from any of these countries?</QuestionLabel>
+                    <Answer>Yes</Answer></EEAGuardQuestion>
+                    <EEAReceivePensionsBenefits><QuestionLabel>Have you or anyone in your family claimed or been paid any benefits or pensions from any of these countries?</QuestionLabel>
+                    <Answer>Yes</Answer></EEAReceivePensionsBenefits>
+                    <EEAReceivePensionsBenefitsDetails><QuestionLabel>Give details</QuestionLabel>
+                    <Answer>Test pensions benefits details in Abroad payment section. question 1 answer. Test pensions benefits details in Abroad payment section. question 1 answer. Test pensions benefits details in Abroad payment section. question 1 answer.</Answer></EEAReceivePensionsBenefitsDetails>
+                    <EEAWorkingInsurance><QuestionLabel>Have you or your close family worked or paid national insurance in any of these countries since your claim date?</QuestionLabel>
+                    <Answer>Yes</Answer></EEAWorkingInsurance>
+                    <EEAWorkingInsuranceDetails><QuestionLabel>Give details</QuestionLabel>
+                    <Answer>Test About you section, Abroad payment section, question 2 answer. Test About you section, Abroad payment section, question 2 answer. Test About you section, Abroad payment section, question 2 answer. </Answer></EEAWorkingInsuranceDetails>
                 </EEA>
             </OtherBenefits>
             <Payment>

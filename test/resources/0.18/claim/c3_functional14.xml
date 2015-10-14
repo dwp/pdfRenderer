@@ -272,7 +272,7 @@
                         </QuestionLabel>
                         <Answer>No</Answer>
                     </EEAReceivePensionsBenefits>
-                    <EEAReceivePensionsBenefitsDetails><QuestionLabel>Give details, including who was paid, the local name of the benefit, the amount and dates of any payments.</QuestionLabel><Answer>blah blah blah</Answer></EEAReceivePensionsBenefitsDetails>
+                    <EEAReceivePensionsBenefitsDetails><QuestionLabel>Give details</QuestionLabel><Answer>blah blah blah</Answer></EEAReceivePensionsBenefitsDetails>
                     <EEAWorkingInsurance>
                         <QuestionLabel>Are you, or a member of your family, working in or paying insurance to, another European Economic Area EEA state or Switzerland?
                         </QuestionLabel>

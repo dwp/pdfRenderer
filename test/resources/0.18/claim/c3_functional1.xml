@@ -28,7 +28,7 @@
                 <DateStartCaring><QuestionLabel>When did you begin caring?</QuestionLabel><Answer>21-01-2012</Answer></DateStartCaring>
                 <MaritalStatus><QuestionLabel>What is your marital status?</QuestionLabel><Answer>Single</Answer></MaritalStatus>
                 <WantsContactEmail><QuestionLabel>Do you want an email to confirm your application has been received?</QuestionLabel><Answer>Yes</Answer></WantsContactEmail>
-                <Email><QuestionLabel>Enter your email address</QuestionLabel><Answer>test@test.co.uk</Answer></Email>
+                <Email><QuestionLabel>Email address</QuestionLabel><Answer>departmentforwork.preston.uk@test.co.uk</Answer></Email>
 
             </Claimant>
             <Caree>
@@ -81,10 +81,13 @@
                 <OtherMoneyPayments><QuestionLabel>Have you received any payments for the person you care for or any other person since your claim date 21/07/2013</QuestionLabel><Answer>No</Answer></OtherMoneyPayments>
 
                 <EEA>
-                    <EEAGuardQuestion><QuestionLabel>Have you or anyone in your family claimed or been paid any benefits or pensions from any of these countries?</QuestionLabel><Answer>Yes</Answer></EEAGuardQuestion>
-                    <EEAReceivePensionsBenefits><QuestionLabel>Have you or anyone in your family claimed or been paid any benefits or pensions from any of these countries?</QuestionLabel><Answer>No</Answer></EEAReceivePensionsBenefits>
-                    <EEAReceivePensionsBenefitsDetails><QuestionLabel>Give details, including who was paid, the local name of the benefit, the amount and dates of any payments.</QuestionLabel><Answer>blah blah blah</Answer></EEAReceivePensionsBenefitsDetails>
-                    <EEAWorkingInsurance><QuestionLabel>Do you or anyone in your family work or pay insurance in any of these countries?</QuestionLabel><Answer>No</Answer></EEAWorkingInsurance>
+                    <EEAGuardQuestion><QuestionLabel>Have you or anyone in your family claimed or been paid any benefits or pensions from any of these countries?</QuestionLabel>
+                    <Answer>Yes</Answer></EEAGuardQuestion>
+                    <EEAReceivePensionsBenefits><QuestionLabel>Have you or anyone in your family claimed or been paid any benefits or pensions from any of these countries?</QuestionLabel>
+                    <Answer>No</Answer></EEAReceivePensionsBenefits>
+                    <EEAReceivePensionsBenefitsDetails><QuestionLabel>Give details</QuestionLabel>
+                        <Answer>blah blah blah</Answer></EEAReceivePensionsBenefitsDetails>
+                    <EEAWorkingInsurance><QuestionLabel>Have you or your close family worked or paid national insurance in any of these countries since your claim date?</QuestionLabel><Answer>No</Answer></EEAWorkingInsurance>
                     <EEAWorkingInsuranceDetails><QuestionLabel>Give details</QuestionLabel><Answer>EEA Working Insurance Details</Answer></EEAWorkingInsuranceDetails>
                 </EEA>
             </OtherBenefits>
