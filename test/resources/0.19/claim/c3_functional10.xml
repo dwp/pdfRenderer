@@ -5,6 +5,7 @@
         <DateTimeGenerated>09-02-2015 16:41</DateTimeGenerated>
         <LanguageUsed>English</LanguageUsed>
         <DWPCAClaim>
+            <QualifyingBenefit><QuestionLabel>Qualifying Benefit</QuestionLabel><Answer>AFIP</Answer></QualifyingBenefit>
             <DateOfClaim><QuestionLabel>Claim date</QuestionLabel><Answer>23-07-2013</Answer></DateOfClaim>
             <Claimant>
                 <Surname><QuestionLabel>Last name</QuestionLabel><Answer>last name</Answer></Surname>

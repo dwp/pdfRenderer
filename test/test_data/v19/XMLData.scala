@@ -71,6 +71,21 @@ object XMLData extends TestUtils{
     functionalTestCaseMandatoryFields(xml) ++ sectionCustomerConsent(xml)
   }
 
+  def functionalTestCase13(xml: Elem) = {
+    val fields = XMLDataFields(xml)
+    functionalTestCaseMandatoryFields(xml) ++ sectionCustomerConsent(xml)
+  }
+
+  def functionalTestCase14(xml: Elem) = {
+    val fields = XMLDataFields(xml)
+    functionalTestCaseMandatoryFields(xml) ++ sectionCustomerConsent(xml)
+  }
+
+  def functionalTestCase15(xml: Elem) = {
+    val fields = XMLDataFields(xml)
+    functionalTestCaseMandatoryFields(xml) ++ sectionCustomerConsent(xml)
+  }
+
   def functionalTestCaseMandatoryFields(xml: Elem) = {
     val fields = XMLDataFields(xml)
     Seq(

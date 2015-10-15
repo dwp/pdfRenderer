@@ -5,6 +5,7 @@
         <DateTimeGenerated>08-09-2014 14:29</DateTimeGenerated>
         <LanguageUsed>English</LanguageUsed>
         <DWPCAClaim>
+            <QualifyingBenefit><QuestionLabel>Qualifying Benefit</QuestionLabel><Answer>DLA</Answer></QualifyingBenefit>
             <DateOfClaim><QuestionLabel>Claim date</QuestionLabel><Answer>01-01-2010</Answer></DateOfClaim>
             <Claimant>
                 <Surname><QuestionLabel>Last name</QuestionLabel><Answer>CaseThree</Answer></Surname>

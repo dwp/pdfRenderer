@@ -5,6 +5,7 @@
         <DateTimeGenerated>02-05-2014 11:45</DateTimeGenerated>
         <LanguageUsed>English</LanguageUsed>
         <DWPCAClaim>
+            <QualifyingBenefit><QuestionLabel>Qualifying Benefit</QuestionLabel><Answer>AFIP</Answer></QualifyingBenefit>
             <DateOfClaim><QuestionLabel>When do you want your Carer's Allowance claim to start?</QuestionLabel><Answer>05-01-2013</Answer></DateOfClaim>
             <Claimant>
                 <Surname><QuestionLabel>Last name</QuestionLabel><Answer>CaseFour</Answer></Surname>

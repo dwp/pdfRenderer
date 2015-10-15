@@ -103,6 +103,27 @@ class PdfContentMatchingClaimSpec extends PdfContentMatchingSpec {
       val textCaseXml = XML.load(source)
       testContentMatches(pdfFileLocation, textCaseXml, XMLData.functionalTestCase12, foundMustBeTrue)
     }
+
+    "extract PDF for functionalTestCase13 and match contents" in new WithApplication{
+      val pdfFileLocation = s"${version}_functionalTestCase13_contentTestPDF.pdf"
+      val source = getClass.getResource(s"/$version/claim/c3_functional13.xml")
+      val textCaseXml = XML.load(source)
+      testContentMatches(pdfFileLocation, textCaseXml, XMLData.functionalTestCase13, foundMustBeTrue)
+    }
+
+   "extract PDF for functionalTestCase14 and match contents" in new WithApplication{
+      val pdfFileLocation = s"${version}_functionalTestCase14_contentTestPDF.pdf"
+      val source = getClass.getResource(s"/$version/claim/c3_functional14.xml")
+      val textCaseXml = XML.load(source)
+      testContentMatches(pdfFileLocation, textCaseXml, XMLData.functionalTestCase14, foundMustBeTrue)
+    }
+
+    "extract PDF for functionalTestCase15 and match contents" in new WithApplication{
+      val pdfFileLocation = s"${version}_functionalTestCase15_contentTestPDF.pdf"
+      val source = getClass.getResource(s"/$version/claim/c3_functional15.xml")
+      val textCaseXml = XML.load(source)
+      testContentMatches(pdfFileLocation, textCaseXml, XMLData.functionalTestCase15, foundMustBeTrue)
+    }
   }
 }
 
