@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 5.6.1.final using JasperReports Library version 5.6.1  -->
-<!-- 2015-10-15T12:09:54 -->
+<!-- 2015-10-15T13:02:24 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewCircsConsentsAndDeclarations" language="groovy" pageWidth="595" pageHeight="802" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="9eb0c9ea-845f-415c-b3aa-c474b12cd034">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
@@ -82,7 +82,7 @@
 		</band>
 	</title>
 	<detail>
-		<band height="126" splitType="Prevent">
+		<band height="108" splitType="Prevent">
 			<property name="local_mesure_unitheight" value="pixel"/>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<staticText>
@@ -117,7 +117,7 @@
 				<textFieldExpression><![CDATA[$F{DeclarationEmailQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="0" y="108" width="595" height="18" isRemoveLineWhenBlank="true" uuid="189e5fd1-a549-4097-b0cd-2b1b95171633">
+				<reportElement style="Answer" positionType="Float" x="420" y="90" width="174" height="18" isRemoveLineWhenBlank="true" uuid="189e5fd1-a549-4097-b0cd-2b1b95171633">
 					<property name="local_mesure_unitwidth" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
