@@ -143,11 +143,23 @@
 
             <OtherBenefits>
 
-                <OtherMoneySSP><QuestionLabel>Have you had any Statutory Sick Pay (SSP) since the date you want to claim from 05/01/2013?</QuestionLabel><Answer>No</Answer></OtherMoneySSP>
+                <OtherMoneySSP><QuestionLabel>Have you had any Statutory Sick Pay (SSP) since the date you want to claim from 22/03/2013?</QuestionLabel><Answer>No</Answer></OtherMoneySSP>
 
-                <OtherMoneySP><QuestionLabel>Have you had any Statutory Maternity Pay (SMP), Statutory Paternity Pay (SPP) or Statutory Adoption Pay (SAP) since the date you want to claim from 05/01/2013?</QuestionLabel><Answer>No</Answer></OtherMoneySP>
+                <OtherMoneySP><QuestionLabel>Have you had any Statutory Maternity Pay (SMP), Statutory Paternity Pay (SPP) or Statutory Adoption Pay (SAP) since the date you want to claim from 22/03/2013?</QuestionLabel><Answer>Yes</Answer></OtherMoneySP>
+                <OtherMoneySPDetails>
+                    <Payment>
+                        <Payment><QuestionLabel>How much</QuestionLabel><Answer><Currency>GBP</Currency><Amount>145</Amount></Answer></Payment>
+                        <Frequency><QuestionLabel>How often</QuestionLabel><Answer>Monthly</Answer></Frequency>
+                    </Payment>
+                    <Name><QuestionLabel>Employer's name</QuestionLabel><Answer>Greggs Bakers</Answer></Name>
+                    <Address>
+                        <QuestionLabel>Employer's address</QuestionLabel>
+                        <Answer>
+                            <Line>this is a very large address line$$</Line><Line>another absurd large address line%</Line><PostCode>PR45 6YH</PostCode>
+                        </Answer>
+                    </Address>
+                </OtherMoneySPDetails>
 
-                <OtherMoney><QuestionLabel>Have you  claimed or received any other benefits since your claim date: 05/01/2013?</QuestionLabel><Answer>No</Answer></OtherMoney>
                 <OtherMoneyPayments><QuestionLabel>Have you received any payments for the person you care for or any other person since your claim date 05/01/2013</QuestionLabel><Answer>No</Answer></OtherMoneyPayments>
 
                 <EEA>
@@ -160,16 +172,7 @@
             </OtherBenefits>
             <Payment>
                 <PaymentFrequency><QuestionLabel>How often do you want to get paid?</QuestionLabel><Answer>Four-Weekly</Answer></PaymentFrequency>
-                <InitialAccountQuestion><QuestionLabel>How would you like to get paid?</QuestionLabel><Answer>UK bank or building society account</Answer></InitialAccountQuestion>
-                <Account>
-                    <HolderName><QuestionLabel>Name of account holder</QuestionLabel><Answer>Mr Test Casefour</Answer></HolderName>
-                    <BuildingSocietyDetails>
-                        <AccountNumber><QuestionLabel>Account number</QuestionLabel><Answer>12345678</Answer></AccountNumber>
-                        <RollNumber><QuestionLabel>Building society roll or reference number</QuestionLabel><Answer>1.23E+12</Answer></RollNumber>
-                        <SortCode><QuestionLabel>Sort code</QuestionLabel><Answer>090123</Answer></SortCode>
-                        <Name><QuestionLabel>Full name of bank or building society</QuestionLabel><Answer>Lloyds</Answer></Name>
-                    </BuildingSocietyDetails>
-                </Account>
+                <InitialAccountQuestion><QuestionLabel>Do you have a bank account?</QuestionLabel><Answer>No</Answer></InitialAccountQuestion>
             </Payment>
             <OtherInformation>
                 <WelshCommunication><QuestionLabel>Do you live in Wales and would like to receive future communications in Welsh?</QuestionLabel><Answer>Yes</Answer></WelshCommunication>

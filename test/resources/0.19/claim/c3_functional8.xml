@@ -154,18 +154,21 @@
                 <OtherMoneyPayments><QuestionLabel>Have you received any payments for the person you care for or any other person since your claim date 20/06/2013</QuestionLabel><Answer>No</Answer></OtherMoneyPayments>
 
                 <EEA>
-                    <EEAGuardQuestion><QuestionLabel>Have you or anyone in your family claimed or been paid any benefits or pensions from any of these countries?</QuestionLabel><Answer>Yes</Answer></EEAGuardQuestion>
                     <EEAReceivePensionsBenefits><QuestionLabel>Have you or anyone in your family claimed or been paid any benefits or pensions from any of these countries?</QuestionLabel><Answer>Yes</Answer></EEAReceivePensionsBenefits>
                     <EEAReceivePensionsBenefitsDetails><QuestionLabel>Give details</QuestionLabel><Answer>blah blah blah</Answer></EEAReceivePensionsBenefitsDetails>
                     <EEAWorkingInsurance><QuestionLabel>Have you or your close family worked or paid national insurance in any of these countries since your claim date?</QuestionLabel><Answer>Yes</Answer></EEAWorkingInsurance>
                     <EEAWorkingInsuranceDetails><QuestionLabel>Give details</QuestionLabel><Answer>eea details eea details eea details eea details eea details eea details eea details eea details eea details eea details</Answer></EEAWorkingInsuranceDetails>
+                    <EEAGuardQuestion>
+                        <QuestionLabel>Have you or any of your close family worked abroad or been paid benefits from any of these countries??</QuestionLabel>
+                        <Answer>Yes</Answer>
+                    </EEAGuardQuestion>
                 </EEA>
             </OtherBenefits>
             <Payment>
                 <PaymentFrequency><QuestionLabel>How often do you want to get paid?</QuestionLabel><Answer>Four-Weekly</Answer></PaymentFrequency>
                 <InitialAccountQuestion><QuestionLabel>How would you like to get paid?</QuestionLabel><Answer>UK bank or building society account</Answer></InitialAccountQuestion>
                 <Account>
-                    <HolderName><QuestionLabel>Name of account holder</QuestionLabel><Answer>Mr Test Casesix</Answer></HolderName>
+                    <HolderName><QuestionLabel>Account holder name</QuestionLabel><Answer>Mr Test Casesix</Answer></HolderName>
                     <BuildingSocietyDetails>
                         <AccountNumber><QuestionLabel>Account number</QuestionLabel><Answer>12345678</Answer></AccountNumber>
                         <RollNumber><QuestionLabel>Building society roll or reference number</QuestionLabel><Answer>123456789</Answer></RollNumber>

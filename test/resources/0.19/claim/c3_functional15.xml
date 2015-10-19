@@ -160,16 +160,7 @@
             </OtherBenefits>
             <Payment>
                 <PaymentFrequency><QuestionLabel>How often do you want to get paid?</QuestionLabel><Answer>Four-Weekly</Answer></PaymentFrequency>
-                <InitialAccountQuestion><QuestionLabel>How would you like to get paid?</QuestionLabel><Answer>UK bank or building society account</Answer></InitialAccountQuestion>
-                <Account>
-                    <HolderName><QuestionLabel>Name of account holder</QuestionLabel><Answer>Mr Test Casefour</Answer></HolderName>
-                    <BuildingSocietyDetails>
-                        <AccountNumber><QuestionLabel>Account number</QuestionLabel><Answer>12345678</Answer></AccountNumber>
-                        <RollNumber><QuestionLabel>Building society roll or reference number</QuestionLabel><Answer>1.23E+12</Answer></RollNumber>
-                        <SortCode><QuestionLabel>Sort code</QuestionLabel><Answer>090123</Answer></SortCode>
-                        <Name><QuestionLabel>Full name of bank or building society</QuestionLabel><Answer>Lloyds</Answer></Name>
-                    </BuildingSocietyDetails>
-                </Account>
+                <InitialAccountQuestion><QuestionLabel>Do you have a bank account?</QuestionLabel><Answer>No</Answer></InitialAccountQuestion>
             </Payment>
             <OtherInformation>
                 <WelshCommunication><QuestionLabel>Do you live in Wales and would like to receive future communications in Welsh?</QuestionLabel><Answer>Yes</Answer></WelshCommunication>

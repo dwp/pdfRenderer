@@ -73,7 +73,7 @@ object XMLData extends TestUtils{
 
   def functionalTestCase13(xml: Elem) = {
     val fields = XMLDataFields(xml)
-    functionalTestCaseMandatoryFields(xml) ++ sectionCustomerConsent(xml)
+    functionalTestCaseMandatoryFields(xml) ++ sectionCustomerConsent(xml) ++ sectionAboutYourPayDetails(xml)
   }
 
   def functionalTestCase14(xml: Elem) = {
@@ -266,19 +266,17 @@ object XMLData extends TestUtils{
 
   def sectionAboutYourPayDetails(xml:Elem) = {
     val fields = SectionAboutYourPayDetails(xml)
-    var payDetailsTitle = "Part 8 - About Your Pay Details"
-    if (serviceVersion(xml).equals("0.2")){
-      payDetailsTitle = "PART 8 - PAY DETAILS"
-    }
+    val payDetailsTitle = "PART 8 - PAY DETAILS"
+
     Seq (payDetailsTitle,
          buildQuestion(fields.howToGetPaidQuestion.text, fields.howToGetPaidAnswer.text),
          buildOther(fields.howOftenGetPaidQuestion.text, fields.howOftenGetPaidAnswer.text, fields.howOftenGetPaidOther.text),
          "Bank/Building Society Details",
-         "Name of account holder" + " " + fields.bankAccountHolderName.text,
-         "Full name of bank or building society" + " " + fields.bankAccountBankName.text,
-         "Sort code" + " " + fields.bankAccountSortCode.text,
-         "Account number" + " " + fields.bankAccountNumber.text,
-         "Building society roll or reference number" + " " + fields.bankAccountReferenceNumber.text
+         buildQuestion(fields.bankAccountHolderNameQuestion.text, fields.bankAccountHolderNameAnswer.text),
+         buildQuestion(fields.bankAccountBankNameQuestion.text, fields.bankAccountBankNameAnswer.text),
+         buildQuestion(fields.bankAccountSortCodeQuestion.text, fields.bankAccountSortCodeAnswer.text),
+         buildQuestion(fields.bankAccountNumberQuestion.text, fields.bankAccountNumberAnswer.text),
+         buildQuestion(fields.bankAccountReferenceNumberQuestion.text,  fields.bankAccountReferenceNumberAnswer.text)
     )
   }
 

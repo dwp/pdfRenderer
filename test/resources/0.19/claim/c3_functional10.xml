@@ -163,7 +163,7 @@
                 <PaymentFrequency><QuestionLabel>How often do you want to get paid?</QuestionLabel><Answer>Every week</Answer></PaymentFrequency>
                 <InitialAccountQuestion><QuestionLabel>How would you like to get paid?</QuestionLabel><Answer>UK bank or building society account</Answer></InitialAccountQuestion>
                 <Account>
-                    <HolderName><QuestionLabel>Name of account holder</QuestionLabel><Answer>2A1XsOZSm7rpSt4r2sl7d2KQQZ5O95eFimgr2cCn1V9cLvZ0frn0u6KbvTnUYV4NjhEVHXyAm2HQLZK7WIT0GQ==</Answer></HolderName>
+                    <HolderName><QuestionLabel>Account holder name</QuestionLabel><Answer>2A1XsOZSm7rpSt4r2sl7d2KQQZ5O95eFimgr2cCn1V9cLvZ0frn0u6KbvTnUYV4NjhEVHXyAm2HQLZK7WIT0GQ==</Answer></HolderName>
                     <BuildingSocietyDetails>
                         <AccountNumber><QuestionLabel>Account number</QuestionLabel><Answer>6dVgQIFCqxWBEudniupyeEnPNcdGduo550+6E8HeK1BE6G8r/vVVovGZh0h/i2+m</Answer></AccountNumber>
                         <RollNumber><QuestionLabel>Building society roll or reference number</QuestionLabel><Answer>1230000000002</Answer></RollNumber>
