@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 5.6.1.final using JasperReports Library version 5.6.1  -->
-<!-- 2015-10-06T12:06:59 -->
+<!-- 2015-10-22T13:56:59 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYourPartner" language="groovy" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="2c76a7f8-deb9-45af-83f2-c12559d20c72">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
@@ -264,7 +264,7 @@
 				<textFieldExpression><![CDATA[$F{selfEmployedNowAnswer}.equals("Yes") ? $F{doYouKnowYourTradingYearCurrentAnswer} : $F{doYouKnowYourTradingYearAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="81">
+		<band height="99">
 			<textField isBlankWhenNull="true">
 				<reportElement style="Answer" positionType="Float" x="420" y="1" width="174" height="18" isRemoveLineWhenBlank="true" uuid="9dfea395-437a-4f46-a8e1-8830b9c14917"/>
 				<textFieldExpression><![CDATA[$F{selfEmployedNowAnswer}.equals("Yes") ? $F{tradingYearStartedCurrentAnswer} : $F{tradingYearStartedAnswer}]]></textFieldExpression>
@@ -298,7 +298,7 @@
 				<textFieldExpression><![CDATA[$F{selfEmployedNowAnswer}.equals("Yes") ? $F{whyWhenChangeCurrentQuestion} : $F{whyWhenChangeQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="420" y="61" width="174" height="18" isRemoveLineWhenBlank="true" uuid="b6a81634-d1b7-481f-a388-697727fa0ccd"/>
+				<reportElement style="Answer" positionType="Float" x="0" y="79" width="592" height="18" isRemoveLineWhenBlank="true" uuid="b6a81634-d1b7-481f-a388-697727fa0ccd"/>
 				<textFieldExpression><![CDATA[$F{selfEmployedNowAnswer}.equals("Yes") ? $F{whyWhenChangeCurrentAnswer} : $F{whyWhenChangeAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
