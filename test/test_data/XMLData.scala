@@ -1,10 +1,9 @@
 package test_data
 
 import scala.xml.Elem
-import utils.TestUtils
 
 
-object XMLData extends TestUtils{
+object XMLData extends utils.TestUtils {
 
   var LATEST_VERSION = "0.15"
 

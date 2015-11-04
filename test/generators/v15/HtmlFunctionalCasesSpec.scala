@@ -2,7 +2,7 @@ package generators.v15
 
 import generators.Helper._
 import org.specs2.mutable.Specification
-import play.api.test.WithApplication
+import utils.WithApplication
 
 import scala.xml.XML
 

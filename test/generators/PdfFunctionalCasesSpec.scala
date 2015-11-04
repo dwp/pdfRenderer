@@ -1,6 +1,6 @@
 package generators
 
-import play.api.test.WithApplication
+import utils.WithApplication
 import test_data.XMLData
 import scala.xml.XML
 

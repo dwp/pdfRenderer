@@ -1,11 +1,10 @@
 package test_data.circs
 
-import utils.TestUtils
 import scala.xml.Elem
 import scala._
 
 
-object XMLCircsData extends TestUtils{
+object XMLCircsData extends utils.TestUtils {
 
   def functionalTestCase1(xml: Elem) = {
     claimantDetails(xml) ++ careeDetails(xml) ++ declaration(xml:Elem)
