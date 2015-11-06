@@ -2,10 +2,10 @@ package utils.filters
 
 import javax.inject.Inject
 
-import monitor.MonitorFilter
+import com.kenshoo.play.metrics.MetricsFilter
 import play.api.http.HttpFilters
 import play.filters.gzip.GzipFilter
 
-class Filters @Inject() (monitorFilter: MonitorFilter, gzipFilter: GzipFilter) extends HttpFilters {
-  val filters = Seq(monitorFilter, gzipFilter)
+class Filters @Inject() (metricsFilter: MetricsFilter, gzipFilter: GzipFilter) extends HttpFilters {
+  val filters = Seq(metricsFilter, gzipFilter)
 }
