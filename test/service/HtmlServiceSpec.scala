@@ -1,6 +1,6 @@
 package service
 
-import org.specs2.mutable.{Tags, Specification}
+import org.specs2.mutable.Specification
 import scala.concurrent.{ExecutionContext, Future}
 import play.api.test.FakeRequest
 import play.api.test.Helpers._
@@ -13,7 +13,7 @@ import generators.{HtmlGenerator, ReportGenerator}
 /**
  * Created by jmi on 07/04/2014.
  */
-class HtmlServiceSpec  extends Specification with Tags {
+class HtmlServiceSpec  extends Specification {
 
   "HMTL Service" should {
 
@@ -63,6 +63,7 @@ class HtmlServiceSpec  extends Specification with Tags {
       contentAsString(response) must contain("html")
       status(response)  mustEqual OK
     }
-  } section "unit"
+  }
+  section("unit")
 
 }

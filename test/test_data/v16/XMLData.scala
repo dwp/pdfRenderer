@@ -1,10 +1,8 @@
 package test_data.v16
 
-import utils.TestUtils
-
 import scala.xml.Elem
 
-object XMLData extends TestUtils{
+object XMLData extends utils.TestUtils {
   def madeUpField(xml: Elem) = {
     Seq(
       "I am an invalid field that should never appear in the pdf"

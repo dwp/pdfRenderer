@@ -1,9 +1,8 @@
 package test_data.v13
 
-import utils.TestUtils
 import scala.xml.Elem
 
-case class XMLDataFields(xml: Elem) extends TestUtils{
+case class XMLDataFields(xml: Elem) extends utils.TestUtils {
 
   val rootPath = xml \\ "DWPCATransaction" \\ "DWPCAClaim"
 

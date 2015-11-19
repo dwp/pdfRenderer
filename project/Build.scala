@@ -8,7 +8,7 @@ import play.Play.autoImport._
 object ApplicationBuild extends Build {
 
   val appName = "p1"
-  val appVersion = "1.20-SNAPSHOT"
+  val appVersion = "2.0-SNAPSHOT"
 
   var repo: Seq[Def.Setting[_]] = Seq(resolvers += "Carers repo" at "http://build.3cbeta.co.uk:8080/artifactory/repo/",
   resolvers += "Jaspersoft repo" at "http://jaspersoft.artifactoryonline.com/jaspersoft/third-party-ce-artifacts/",
@@ -22,8 +22,12 @@ object ApplicationBuild extends Build {
     "com.itextpdf"          % "itextpdf"              % "5.5.4",
     "org.codehaus.groovy"   % "groovy-all"            % "2.3.9",
     "xalan"                 % "xalan"                 % "2.7.2",
-    "gov.dwp.carers"        %% "carerscommon"         % "6.6",
-    "commons-io"            % "commons-io"            % "2.4"
+    "gov.dwp.carers"        %% "carerscommon"         % "7.0",
+    "commons-io"            % "commons-io"            % "2.4",
+    "org.specs2" %% "specs2-core" % "3.3.1" % "test" withSources() withJavadoc(),
+    "org.specs2" %% "specs2-mock" % "3.3.1" % "test" withSources() withJavadoc(),
+    "org.specs2" %% "specs2-junit" % "3.3.1" % "test" withSources() withJavadoc(),
+    "com.kenshoo" % "metrics-play_2.10" % "2.4.0_0.4.0"
   )
 
   val conf = ConfigFactory.parseFile(new File("conf/application.conf")).resolve()
@@ -42,7 +46,7 @@ object ApplicationBuild extends Build {
   }
 
   var sJ: Seq[Def.Setting[_]] = Seq(javaOptions in Test += "-Djava.awt.headless=true")
-  var sV: Seq[Def.Setting[_]] = Seq(scalaVersion := "2.10.4")
+  var sV: Seq[Def.Setting[_]] = Seq(scalaVersion := "2.10.5")
   val compilerSettings: Seq[Def.Setting[_]] = Seq(scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8","-feature"))
 
   var vS: Seq[Def.Setting[_]] = Seq(version := appVersion, libraryDependencies ++= appDependencies)
