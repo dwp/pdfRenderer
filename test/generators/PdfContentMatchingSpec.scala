@@ -68,8 +68,8 @@ trait PdfContentMatchingSpec extends Specification{
       }
       if (!found) {
         Logger.error("TotalContent " + totalContent)
-        Logger.error("content " + x)
-        Logger.error("*** Cannot find: " + x.toLowerCase)
+        Logger.error("*** Generated ....:" + x.toLowerCase)
+        Logger.error("*** Failed to find:" + x.toLowerCase)
         Logger.debug("*** End ***")
       }
       found

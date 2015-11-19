@@ -16,6 +16,8 @@ case class XMLDataFields(xml: Elem) extends TestUtils{
 
   val titleAnswer = rootPath \\ "Claimant" \\ "Title" \\ "Answer"
 
+  val titleOtherAnswer = rootPath \\ "Claimant" \\ "TitleOther" \\ "Answer"
+
   val surNameAnswer = rootPath \\ "Claimant" \\ "Surname" \\ "Answer"
 
   val surNameQuestion = rootPath \\ "Claimant" \\ "Surname" \\ "QuestionLabel"
