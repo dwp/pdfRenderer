@@ -32,7 +32,7 @@ object Application extends Controller {
     if (Play.isTest(Play.current)) {
       //todo - refactor this
       result match {
-        case Result(ResponseHeader(200, _), _, _) =>
+        case Result(ResponseHeader(200, _, _), _, _) =>
           IOUtils.copy(new ByteArrayInputStream(output.toByteArray), new FileOutputStream(s"${getProperty("pdf.folder", "./")}PDFGenerated_${new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date())}.pdf"))
         case _ => //do nothing
       }

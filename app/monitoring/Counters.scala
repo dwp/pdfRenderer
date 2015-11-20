@@ -1,9 +1,10 @@
 package monitoring
 
-import com.kenshoo.play.metrics.MetricsRegistry
+import com.codahale.metrics.SharedMetricRegistries
+import play.api.Play._
 
 object Counters {
   def recordClaimRenderCount() {
-    MetricsRegistry.defaultRegistry.counter(s"rs-render-count").inc()
+    SharedMetricRegistries.getOrCreate(current.configuration.getString("metrics.name").getOrElse("default")).counter(s"rs-render-count").inc()
   }
 }

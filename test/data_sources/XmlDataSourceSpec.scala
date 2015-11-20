@@ -2,7 +2,7 @@ package data_sources
 
 import net.sf.jasperreports.engine.data.JRXmlDataSource
 import org.specs2.mutable.Specification
-import play.api.test.WithApplication
+import utils.WithApplication
 
 import scala.xml.XML
 

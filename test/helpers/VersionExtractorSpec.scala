@@ -1,6 +1,6 @@
 package helpers
 
-import org.specs2.mutable.{Tags, Specification}
+import org.specs2.mutable.Specification
 import test_data.XMLData
 
 import scala.xml.XML
@@ -8,7 +8,7 @@ import scala.xml.XML
 /**
  * Created by jmi on 04/09/2014.
  */
-class VersionExtractorSpec extends Specification with Tags {
+class VersionExtractorSpec extends Specification {
 
   "The helper" should {
     "Extract version 0.1 from valid XML" in {
@@ -25,6 +25,7 @@ class VersionExtractorSpec extends Specification with Tags {
       xml = <DWPBody><Version>1.2a</Version></DWPBody>
       VersionExtractor.extractVersionFrom(xml) mustEqual  None
     }
-  } section "unit"
+  }
+  section("unit")
 
 }

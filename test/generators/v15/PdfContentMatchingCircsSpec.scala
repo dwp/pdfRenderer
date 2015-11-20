@@ -1,7 +1,7 @@
 package generators.v15
 
 import generators.PdfContentMatchingSpec
-import play.api.test.WithApplication
+import utils.WithApplication
 import test_data.v15.circs.XMLCircsData
 
 import scala.xml.XML

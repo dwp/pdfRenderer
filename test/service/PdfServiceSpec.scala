@@ -1,10 +1,12 @@
 package service
 
-import org.specs2.mutable.{Specification, Tags}
-import play.api.test.{WithApplication, FakeRequest}
+import org.specs2.mutable.Specification
+import play.api.test.FakeRequest
 import play.api.test.Helpers._
 import test_data.ClaimBuilder
 import java.io.{FileOutputStream, ByteArrayOutputStream, OutputStream}
+import utils.WithApplication
+
 import scala.concurrent.{ExecutionContext, Future}
 import ExecutionContext.Implicits.global
 import scala.util.{Success, Try}
@@ -17,7 +19,7 @@ import java.util.Date
  * Test RESTful interface
  * @author Jorge Migueis
  */
-class PdfServiceSpec extends Specification with Tags {
+class PdfServiceSpec extends Specification {
 
   "PDF Service" should {
 
@@ -70,6 +72,7 @@ class PdfServiceSpec extends Specification with Tags {
       output.size must be_>(0)
     }
 
-  } section "unit"
+  }
+  section("unit")
 
 }

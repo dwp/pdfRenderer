@@ -7,7 +7,7 @@ import test_data.ClaimBuilder
 import java.io.{FileOutputStream, File}
 
 import generators.Helper._
-import play.api.test.WithApplication
+import utils.WithApplication
 import scala.xml.XML
 
 
