@@ -134,7 +134,6 @@ object XMLCircsData extends utils.TestUtils {
     val details = ChangeAddressDetails(xml).changeAddressData.map(s => buildQuestion(s._1.text, s._2.text))
     Seq(
       "Part 2 - Change in Circumstance - Change of address",
-      "For security, we also need you to confirm your previous address.",
       ChangeAddressDetails(xml).previousAddressQuestion.text,
       ChangeAddressDetails(xml).previousAddressAnswer,
       ChangeAddressDetails(xml).newAddressQuestion.text,
