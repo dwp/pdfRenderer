@@ -40,7 +40,6 @@ class HtmlServiceSpec  extends Specification {
     }
 
     "return Internal error code if could not generate HTML" in {
-      pending ("Future throwing TimeoutException : Need to review")
       val service = new RenderService {
         protected def reportGenerator: ReportGenerator = HtmlGenerator
         override protected val outputStream = null
