@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 5.6.1.final using JasperReports Library version 5.6.1  -->
-<!-- 2015-10-20T13:01:08 -->
+<!-- 2016-01-12T10:01:30 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Declaration" language="groovy" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="9294c83c-2f9e-43be-be00-e5341b401111">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
@@ -16,10 +16,10 @@
 	<queryString language="XPath">
 		<![CDATA[/]]>
 	</queryString>
-	<field name="DeclarationSomeOneElseQuestion" class="java.lang.String">
+	<field name="DeclarationAreYouTheCarerQuestion" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Declaration//DeclarationQuestion[1]/QuestionLabel]]></fieldDescription>
 	</field>
-	<field name="DeclarationSomeOneElseAnswer" class="java.lang.String">
+	<field name="DeclarationAreYouTheCarerAnswer" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Declaration//DeclarationQuestion[1]/Answer]]></fieldDescription>
 	</field>
 	<field name="DeclarationNameOrgQuestion" class="java.lang.String">
@@ -59,24 +59,24 @@
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
-				<textFieldExpression><![CDATA[$F{DeclarationSomeOneElseQuestion}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{DeclarationAreYouTheCarerQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement style="Answer" positionType="Float" x="420" y="3" width="174" height="20" isRemoveLineWhenBlank="true" uuid="d21db177-9611-4f48-acbe-52de28d65ae1">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
-				<textFieldExpression><![CDATA[$F{DeclarationSomeOneElseAnswer}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{DeclarationAreYouTheCarerAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="26" width="392" height="20" isRemoveLineWhenBlank="true" uuid="dd747e36-227c-4960-ae51-ec1a643b57e6">
-					<printWhenExpression><![CDATA[$F{DeclarationSomeOneElseAnswer}.equals("Yes")]]></printWhenExpression>
+					<printWhenExpression><![CDATA[$F{DeclarationAreYouTheCarerAnswer}.equals("No")]]></printWhenExpression>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{DeclarationNameOrgQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement style="Answer" positionType="Float" x="420" y="26" width="174" height="20" isRemoveLineWhenBlank="true" uuid="066d6cf3-8dce-42ae-aaf5-8b2ed356c8e7">
-					<printWhenExpression><![CDATA[$F{DeclarationSomeOneElseAnswer}.equals("Yes")]]></printWhenExpression>
+					<printWhenExpression><![CDATA[$F{DeclarationAreYouTheCarerAnswer}.equals("No")]]></printWhenExpression>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{DeclarationNameOrgAnswer}]]></textFieldExpression>
 			</textField>
