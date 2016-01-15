@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 5.6.1.final using JasperReports Library version 5.6.1  -->
-<!-- 2016-01-15T09:34:56 -->
+<!-- 2016-01-15T13:36:26 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="560" pageHeight="842" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.366026910730141"/>
 	<property name="ireport.x" value="0"/>
@@ -400,11 +400,44 @@
 	<detail>
 		<band height="149" splitType="Immediate">
 			<staticText>
-				<reportElement style="SubHeadingClaim" x="0" y="0" width="560" height="18" uuid="b2bb3cf3-e649-4539-9544-e42e4dda2dd3"/>
+				<reportElement style="SubHeadingClaim" x="0" y="0" width="168" height="18" uuid="de8eb677-4647-4a10-ac6f-064de28213db">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
 				<textElement markup="styled">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[                                     Customer                        Disabled Person]]></text>
+				<text><![CDATA[ ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubHeadingClaim" x="367" y="0" width="193" height="18" uuid="4488f265-a754-4570-9fe2-d0987b5e3182">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement markup="styled">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Disabled Person]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubHeadingClaim" x="168" y="0" width="199" height="18" uuid="b2bb3cf3-e649-4539-9544-e42e4dda2dd3">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement markup="styled">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer]]></text>
 			</staticText>
 			<staticText>
 				<reportElement positionType="Float" x="0" y="18" width="162" height="18" uuid="eafce885-40b7-4aa2-9883-4ccd5538338c"/>
