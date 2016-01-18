@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 5.6.1.final using JasperReports Library version 5.6.1  -->
-<!-- 2016-01-15T09:34:56 -->
+<!-- 2016-01-15T14:19:50 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="560" pageHeight="842" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.366026910730141"/>
 	<property name="ireport.x" value="0"/>
@@ -400,11 +400,44 @@
 	<detail>
 		<band height="149" splitType="Immediate">
 			<staticText>
-				<reportElement style="SubHeadingClaim" x="0" y="0" width="560" height="18" uuid="b2bb3cf3-e649-4539-9544-e42e4dda2dd3"/>
+				<reportElement style="SubHeadingClaim" x="0" y="0" width="168" height="18" uuid="de8eb677-4647-4a10-ac6f-064de28213db">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
 				<textElement markup="styled">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[                                     Customer                        Disabled Person]]></text>
+				<text><![CDATA[ ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubHeadingClaim" x="367" y="0" width="193" height="18" uuid="4488f265-a754-4570-9fe2-d0987b5e3182">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement markup="styled">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Disabled Person]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubHeadingClaim" x="168" y="0" width="199" height="18" uuid="b2bb3cf3-e649-4539-9544-e42e4dda2dd3">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement markup="styled">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer]]></text>
 			</staticText>
 			<staticText>
 				<reportElement positionType="Float" x="0" y="18" width="162" height="18" uuid="eafce885-40b7-4aa2-9883-4ccd5538338c"/>
@@ -601,10 +634,17 @@
 				<reportElement positionType="Float" x="2" y="37" width="545" height="1" uuid="d97e5fc1-583e-48da-970d-1546f97f36db"/>
 				<text><![CDATA[]]></text>
 			</staticText>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement positionType="Float" x="0" y="38" width="162" height="18" isRemoveLineWhenBlank="true" uuid="f1197136-f51c-430b-b688-e7f44b2032e5"/>
-				<textFieldExpression><![CDATA[$F{CareeRelQuestionLabel}]]></textFieldExpression>
-			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="38" width="162" height="18" uuid="6957f6d9-c9f9-429a-9803-692113eb0bfc">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<text><![CDATA[Relationship]]></text>
+			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement style="Answer" positionType="Float" x="367" y="38" width="180" height="18" isRemoveLineWhenBlank="true" uuid="356229cf-91a4-4f6a-b7a3-9b1840393869"/>
 				<textFieldExpression><![CDATA[$F{CareeRelAnswer}]]></textFieldExpression>
@@ -629,13 +669,17 @@
 				</textElement>
 				<text><![CDATA[About your partner]]></text>
 			</staticText>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement positionType="Float" x="0" y="18" width="367" height="18" isRemoveLineWhenBlank="true" uuid="a63933cd-3a19-4890-988c-c85fb8726d9d"/>
-				<textElement>
-					<paragraph spacingAfter="2"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{HavePartnerQuestionLabel}]]></textFieldExpression>
-			</textField>
+			<staticText>
+				<reportElement key="" positionType="Float" x="0" y="18" width="367" height="18" uuid="ea911915-f458-4dda-b86b-5ca79b778a64">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<text><![CDATA[Partner]]></text>
+			</staticText>
 			<textField isBlankWhenNull="true">
 				<reportElement style="Answer" positionType="Float" x="367" y="18" width="180" height="18" isRemoveLineWhenBlank="true" uuid="783bedd6-3c03-4c59-8f35-f1b5ba2be6c8"/>
 				<textFieldExpression><![CDATA[$F{HavePartnerAnswer}]]></textFieldExpression>
@@ -779,36 +823,6 @@
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[$F{QualifyingBenefitAnswer}]]></textFieldExpression>
-				</textField>
-				<staticText>
-					<reportElement positionType="Float" x="0" y="36" width="356" height="18" isRemoveLineWhenBlank="true" uuid="8b4cdebf-2471-4fdd-b4fc-ef3214ade416">
-						<printWhenExpression><![CDATA[!$F{ClaimantNationalityAnswer}.equals("British")]]></printWhenExpression>
-					</reportElement>
-					<box>
-						<pen lineWidth="0.5"/>
-						<topPen lineWidth="0.5"/>
-						<leftPen lineWidth="0.5"/>
-						<bottomPen lineWidth="0.5"/>
-						<rightPen lineWidth="0.5"/>
-					</box>
-					<textElement verticalAlignment="Middle"/>
-					<text><![CDATA[  Nationality]]></text>
-				</staticText>
-				<textField isBlankWhenNull="true">
-					<reportElement positionType="Float" x="356" y="36" width="204" height="18" isRemoveLineWhenBlank="true" uuid="94af47e2-7d51-412d-acd6-381539274f14">
-						<property name="local_mesure_unity" value="pixel"/>
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-						<printWhenExpression><![CDATA[!$F{ClaimantNationalityAnswer}.equals("British")]]></printWhenExpression>
-					</reportElement>
-					<box>
-						<pen lineWidth="0.5"/>
-						<topPen lineWidth="0.5"/>
-						<leftPen lineWidth="0.5"/>
-						<bottomPen lineWidth="0.5"/>
-						<rightPen lineWidth="0.5"/>
-					</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle"/>
-					<textFieldExpression><![CDATA[$F{ClaimantNationalityAnotherCountryAnswer}]]></textFieldExpression>
 				</textField>
 				<staticText>
 					<reportElement positionType="Float" x="0" y="90" width="356" height="18" isRemoveLineWhenBlank="true" uuid="1df17865-4983-414f-9c23-49449e7a830d">
@@ -1286,6 +1300,52 @@
 					<textElement textAlignment="Center" verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[$F{ConsentAnswer}]]></textFieldExpression>
 				</textField>
+				<frame>
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="36" width="560" height="18" isRemoveLineWhenBlank="true" uuid="211ef0fb-05ac-4202-a8ce-91138b1803d1">
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.1" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.1" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.1" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.1" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<staticText>
+						<reportElement positionType="Float" x="0" y="0" width="356" height="18" isRemoveLineWhenBlank="true" uuid="8b4cdebf-2471-4fdd-b4fc-ef3214ade416">
+							<printWhenExpression><![CDATA[!$F{ClaimantNationalityAnswer}.equals("British")]]></printWhenExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.5"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement verticalAlignment="Middle"/>
+						<text><![CDATA[  Nationality]]></text>
+					</staticText>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="356" y="0" width="204" height="18" isRemoveLineWhenBlank="true" uuid="94af47e2-7d51-412d-acd6-381539274f14">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<printWhenExpression><![CDATA[!$F{ClaimantNationalityAnswer}.equals("British")]]></printWhenExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.5"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.1" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle"/>
+						<textFieldExpression><![CDATA[$F{ClaimantNationalityAnotherCountryAnswer}]]></textFieldExpression>
+					</textField>
+				</frame>
 			</frame>
 		</band>
 	</detail>
