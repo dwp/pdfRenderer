@@ -14,7 +14,6 @@ object ApplicationBuild extends Build {
   resolvers += "Jaspersoft repo" at "http://jaspersoft.artifactoryonline.com/jaspersoft/third-party-ce-artifacts/",
   resolvers += "Jasper" at "http://jasperreports.sourceforge.net/maven2")
 
-
   val appDependencies = Seq(
     filters,
     "me.moocar"             % "logback-gelf"          % "0.12",

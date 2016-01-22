@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 5.6.1.final using JasperReports Library version 5.6.1  -->
-<!-- 2016-01-19T09:58:23 -->
+<!-- 2016-01-22T14:58:01 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="560" pageHeight="842" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.366026910730141"/>
 	<property name="ireport.x" value="0"/>
@@ -1317,7 +1317,9 @@
 					</box>
 					<staticText>
 						<reportElement positionType="Float" x="0" y="0" width="356" height="18" isRemoveLineWhenBlank="true" uuid="8b4cdebf-2471-4fdd-b4fc-ef3214ade416">
-							<printWhenExpression><![CDATA[!$F{ClaimantNationalityAnswer}.equals("British")]]></printWhenExpression>
+							<printWhenExpression><![CDATA[!($F{ClaimantNationalityAnswer}.equals("British") 
+	|| $F{ClaimantNationalityAnswer}.equals("British/Irish")
+)]]></printWhenExpression>
 						</reportElement>
 						<box>
 							<pen lineWidth="0.5"/>
@@ -1333,7 +1335,9 @@
 						<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="356" y="0" width="204" height="18" isRemoveLineWhenBlank="true" uuid="94af47e2-7d51-412d-acd6-381539274f14">
 							<property name="local_mesure_unity" value="pixel"/>
 							<property name="com.jaspersoft.studio.unit.y" value="px"/>
-							<printWhenExpression><![CDATA[!$F{ClaimantNationalityAnswer}.equals("British")]]></printWhenExpression>
+							<printWhenExpression><![CDATA[!($F{ClaimantNationalityAnswer}.equals("British")
+	|| $F{ClaimantNationalityAnswer}.equals("British/Irish")
+)]]></printWhenExpression>
 						</reportElement>
 						<box>
 							<pen lineWidth="0.5"/>
