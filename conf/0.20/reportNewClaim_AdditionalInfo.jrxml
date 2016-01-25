@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 5.6.1.final using JasperReports Library version 5.6.1  -->
-<!-- 2016-01-22T15:06:20 -->
+<!-- 2016-01-25T12:03:30 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Consents" language="groovy" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="ce7b9f2b-d8a3-4228-abe5-88fb5d2f3eae">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
@@ -74,13 +74,13 @@
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="48" width="392" height="18" isRemoveLineWhenBlank="true" uuid="53de5b37-2b0a-4074-9e5f-50eddf56e2bb">
-					<printWhenExpression><![CDATA[$F{originTag}.equals("GB")]]></printWhenExpression>
+					<printWhenExpression><![CDATA[!$F{originTag}.equals("GB-NIR")]]></printWhenExpression>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{welshQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement style="Answer" positionType="Float" x="420" y="48" width="174" height="18" isRemoveLineWhenBlank="true" uuid="2013b6a7-5201-4e87-aec0-28c7521b86a6">
-					<printWhenExpression><![CDATA[$F{originTag}.equals("GB")]]></printWhenExpression>
+					<printWhenExpression><![CDATA[!$F{originTag}.equals("GB-NIR")]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{welshAnswer}]]></textFieldExpression>
