@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 5.6.1.final using JasperReports Library version 5.6.1  -->
-<!-- 2016-01-27T12:14:52 -->
+<!-- 2016-01-27T12:35:43 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="560" pageHeight="842" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.366026910730141"/>
 	<property name="ireport.x" value="0"/>
@@ -809,7 +809,7 @@
 				<reportElement positionType="Float" x="0" y="18" width="550" height="18" isRemoveLineWhenBlank="true" uuid="c42ee3ff-6635-4145-a5a5-17a4fb10b2d7">
 					<printWhenExpression><![CDATA[!($F{AssistedDecisionReason}.contains("None") && $F{AssistedDecisionRecommendedAction}.contains("None"))]]></printWhenExpression>
 				</reportElement>
-				<textFieldExpression><![CDATA[($F{AssistedDecisionRecommendedAction}.contains("None") ? $F{AssistedDecisionReason} : $F{AssistedDecisionRecommendedAction} + " - " + $F{AssistedDecisionReason})]]></textFieldExpression>
+				<textFieldExpression><![CDATA[($F{AssistedDecisionRecommendedAction}.contains("None") ? $F{AssistedDecisionReason} : $F{AssistedDecisionRecommendedAction}.split(",")[0] + " - " + $F{AssistedDecisionReason})]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement style="SubHeadingClaim" x="0" y="0" width="560" height="18" isRemoveLineWhenBlank="true" uuid="87791690-770b-48e7-9ea1-14e449af432c">
