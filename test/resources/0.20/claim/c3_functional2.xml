@@ -183,7 +183,7 @@
             <Consents>
                 <Consent><QuestionLabel>Do you agree to the Carer's Allowance Unit contacting anyone mentioned in this form?</QuestionLabel><Answer>Yes</Answer></Consent>
             </Consents>
-            <AssistedDecisions><AssistedDecision><Reason>Claimant or partner dependent on EEA pensions or benefits.</Reason><RecommendedDecision>Transfer to Exportability team.</RecommendedDecision></AssistedDecision><AssistedDecision><Reason>Claimant or partner dependent on EEA insurance or work.</Reason><RecommendedDecision>Transfer to Exportability team.</RecommendedDecision></AssistedDecision></AssistedDecisions>
+            <AssistedDecisions><AssistedDecision><Reason>None</Reason><RecommendedDecision>None</RecommendedDecision></AssistedDecision></AssistedDecisions>
         </DWPCAClaim>
     </DWPCATransaction>
     <ds:Signature>
