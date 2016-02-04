@@ -8,12 +8,11 @@ import play.sbt.Play.autoImport._
 object ApplicationBuild extends Build {
 
   val appName = "p1"
-  val appVersion = "2.3-SNAPSHOT"
+  val appVersion = "2.4-SNAPSHOT"
 
   var repo: Seq[Def.Setting[_]] = Seq(resolvers += "Carers repo" at "http://build.3cbeta.co.uk:8080/artifactory/repo/",
   resolvers += "Jaspersoft repo" at "http://jaspersoft.artifactoryonline.com/jaspersoft/third-party-ce-artifacts/",
   resolvers += "Jasper" at "http://jasperreports.sourceforge.net/maven2")
-
 
   val appDependencies = Seq(
     filters,
@@ -22,7 +21,7 @@ object ApplicationBuild extends Build {
     "com.itextpdf"          % "itextpdf"              % "5.5.4",
     "org.codehaus.groovy"   % "groovy-all"            % "2.3.9",
     "xalan"                 % "xalan"                 % "2.7.2",
-    "gov.dwp.carers"        %% "carerscommon"         % "7.0",
+    "gov.dwp.carers"        %% "carerscommon"         % "7.2",
     "commons-io"            % "commons-io"            % "2.4",
     "org.specs2" %% "specs2-core" % "3.3.1" % "test" withSources() withJavadoc(),
     "org.specs2" %% "specs2-mock" % "3.3.1" % "test" withSources() withJavadoc(),
