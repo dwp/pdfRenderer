@@ -16,6 +16,6 @@ trait RenderingServiceMonitorRegistration extends MonitorRegistration {
 
   override def registerHealthChecks(): Unit = {
     Logger.info("Health Checks registered.")
-    ProdHealthMonitor.register("p1-check", new NoHealthCheck)
+    ProdHealthMonitor.register("p1-check", new pdfHealthCheck)
   }
 }
