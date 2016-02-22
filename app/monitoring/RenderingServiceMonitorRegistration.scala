@@ -1,9 +1,10 @@
 package monitoring
 
 import app.ConfigProperties._
-import monitor.{MonitorRegistration, NoHealthCheck}
+import monitor.{HealthMonitor, MonitorRegistration}
+import play.api.Logger
 
-trait RenderingServiceMonitorRegistration extends MonitorRegistration with NoHealthCheck {
+trait RenderingServiceMonitorRegistration extends MonitorRegistration {
 
   override def getFrequency: Int = getProperty("metrics.frequency", default = 1)
 
@@ -11,4 +12,10 @@ trait RenderingServiceMonitorRegistration extends MonitorRegistration with NoHea
 
   override def isLogHealth: Boolean = getProperty("health.logging", default = false)
 
+  override def getHealthMonitor : HealthMonitor = ProdHealthMonitor
+
+  override def registerHealthChecks(): Unit = {
+    Logger.info("Health Checks registered.")
+    ProdHealthMonitor.register("p1-check", new NoHealthCheck)
+  }
 }

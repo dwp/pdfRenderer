@@ -17,6 +17,7 @@ object Global extends RenderingServiceMonitorRegistration with GlobalSettings wi
     super.onStart(app)
 
     registerReporters()
+    registerHealthChecks()
 
     // compile jasper reports if they are not already compiled
     Logger.info("RS Calling compile reports")

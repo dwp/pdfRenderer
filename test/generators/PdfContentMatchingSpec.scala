@@ -110,8 +110,9 @@ trait PdfContentMatchingSpec extends Specification{
                          matchFunction: ((Seq[String], String) => Boolean)) = {
     testOutputFileExists(pdfFileLocation, testCaseXml)
     val totalContent = getPDFContent(pdfFileLocation)
+    println(totalContent)
     val testData = generateTestData(testCaseXml)
-
+    println(testData)
     matchFunction(testData, totalContent) must beTrue
     deleteFile(pdfFileLocation)
   }
