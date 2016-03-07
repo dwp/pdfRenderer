@@ -7,7 +7,7 @@ import utils.ConfigurationChangeHelper._
 
 object ApplicationBuild extends Build {
   val appName = "p1"
-  val appVersion = "2.5-SNAPSHOT"
+  val appVersion = "2.6-SNAPSHOT"
 
   processConfFiles(Seq("conf/application-info.conf"), Seq("application.version" -> appVersion, "application.name" -> appName))
 
