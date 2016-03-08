@@ -22,7 +22,7 @@ object ApplicationBuild extends Build {
     "com.itextpdf"          % "itextpdf"              % "5.5.4",
     "org.codehaus.groovy"   % "groovy-all"            % "2.3.9",
     "xalan"                 % "xalan"                 % "2.7.2",
-    "gov.dwp.carers"        %% "carerscommon"         % "7.5",
+    "gov.dwp.carers"        %% "carerscommon"         % "7.7",
     "commons-io"            % "commons-io"            % "2.4",
     "org.specs2" %% "specs2-core" % "3.3.1" % "test" withSources() withJavadoc(),
     "org.specs2" %% "specs2-mock" % "3.3.1" % "test" withSources() withJavadoc(),

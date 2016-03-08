@@ -3,7 +3,7 @@ package controllers
 import java.io.{ByteArrayInputStream, ByteArrayOutputStream, FileOutputStream, OutputStream}
 import java.text.SimpleDateFormat
 import java.util.Date
-
+import utils.RenameThread
 import app.ConfigProperties._
 import generators.{HtmlGenerator, PdfGenerator, ReportGenerator}
 import org.apache.commons.io.IOUtils
@@ -16,6 +16,7 @@ import scala.language.higherKinds
 object Application extends Controller {
 
   def generatePDF = Action { request =>
+    RenameThread.getTransactionIdAndRenameThread(request.body.asXml)
     val output = new ByteArrayOutputStream()
     val service = new RenderService {
       protected def reportGenerator: ReportGenerator = PdfGenerator
@@ -42,6 +43,7 @@ object Application extends Controller {
   }
 
   def generateHTML = Action { request =>
+    RenameThread.getTransactionIdAndRenameThread(request.body.asXml)
     Logger.info("Serving generateHtml")
     val service = new RenderService {
       protected def reportGenerator: ReportGenerator = HtmlGenerator
