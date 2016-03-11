@@ -1,7 +1,6 @@
 import sbt._
 import sbt.Keys._
 import com.typesafe.config._
-import org.scalastyle.sbt.ScalastylePlugin
 import play.sbt.Play.autoImport._
 import utils.ConfigurationChangeHelper._
 
@@ -51,7 +50,7 @@ object ApplicationBuild extends Build {
 
   var vS: Seq[Def.Setting[_]] = Seq(version := appVersion, libraryDependencies ++= appDependencies)
 
-  var appSettings: Seq[Def.Setting[_]] = repo ++ sV ++ compilerSettings ++ sJ ++ ScalastylePlugin.Settings ++ vS ++ cleanjsprTask ++ net.virtualvoid.sbt.graph.Plugin.graphSettings
+  var appSettings: Seq[Def.Setting[_]] = repo ++ sV ++ compilerSettings ++ sJ ++ vS ++ cleanjsprTask ++ net.virtualvoid.sbt.graph.Plugin.graphSettings
 
   val main = Project(appName, file(".")).enablePlugins(play.sbt.PlayScala).settings(appSettings: _*)
 
