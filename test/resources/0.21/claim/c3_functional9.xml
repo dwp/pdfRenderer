@@ -3,7 +3,9 @@
     <DWPCATransaction id="1408TEST432">
         <TransactionId>1408TEST432</TransactionId>
         <DateTimeGenerated>21-08-2014 15:08</DateTimeGenerated>
+        <LanguageUsed>English</LanguageUsed>
         <DWPCAClaim>
+            <QualifyingBenefit><QuestionLabel>Qualifying Benefit</QuestionLabel><Answer>AFIP</Answer></QualifyingBenefit>
             <DateOfClaim><QuestionLabel>Claim date</QuestionLabel><Answer>21-07-2013</Answer></DateOfClaim>
             <Claimant>
                 <Surname><QuestionLabel>Last name</QuestionLabel><Answer>Casenine</Answer></Surname>
@@ -19,13 +21,15 @@
                     </Answer>
                 </Address>
                 <DayTimePhoneNumber><QuestionLabel>Contact phone or mobile number</QuestionLabel><Answer>I do not have a contact number</Answer></DayTimePhoneNumber>
-
+                <Cared35HoursBefore><QuestionLabel>Were you caring for the person for more than 35 hours a week before this date?</QuestionLabel><Answer>Yes</Answer></Cared35HoursBefore>
+                <DateStartCaring><QuestionLabel>When did you begin caring?</QuestionLabel><Answer>21-01-2012</Answer></DateStartCaring>
 
             </Claimant>
             <Caree>
                 <Surname><QuestionLabel>Last name</QuestionLabel><Answer>Caseone</Answer></Surname>
                 <OtherNames><QuestionLabel>First name</QuestionLabel><Answer>Test </Answer></OtherNames>
-                <Title><QuestionLabel>Title</QuestionLabel><Answer>Dame</Answer></Title>
+                <Title><QuestionLabel>Title</QuestionLabel><Answer>Other</Answer></Title>
+                <TitleOther><QuestionLabel>TitleOther</QuestionLabel><Answer>Dame</Answer></TitleOther>
                 <DateOfBirth><QuestionLabel>Date of birth</QuestionLabel><Answer>12-09-1980</Answer></DateOfBirth>
 
                 <Address>
@@ -39,10 +43,7 @@
                 <CareBreak>
                     <BreaksSinceClaim><QuestionLabel>Have you had any breaks from caring for this person since 21/07/2013?</QuestionLabel><Answer>No</Answer></BreaksSinceClaim>
                 </CareBreak>
-                <Cared35HoursBefore><QuestionLabel>Did you care for this person for 35 hours or more each week before your claim date?</QuestionLabel><Answer>Yes</Answer></Cared35HoursBefore>
-                <DateStartCaring><QuestionLabel>When did you start to care for this person?</QuestionLabel><Answer>21-01-2012</Answer></DateStartCaring>
                 <LiveSameAddress><QuestionLabel>Do they live at the same address as you?</QuestionLabel><Answer>Yes</Answer></LiveSameAddress>
-                <ArmedForcesIndependencePayment><QuestionLabel>Does this person get Armed Forces Independence Payment (AFIP)?</QuestionLabel><Answer>Yes</Answer></ArmedForcesIndependencePayment>
             </Caree>
             <Residency>
                 <Nationality><QuestionLabel>What is your nationality?</QuestionLabel><Answer>British</Answer></Nationality>
@@ -68,15 +69,18 @@
 
             <OtherBenefits>
 
-                <OtherMoneySSP><QuestionLabel>Have you had any Statutory Sick Pay (SSP) since the date you want to claim from 21/07/2013?</QuestionLabel><Answer>No</Answer></OtherMoneySSP>
+                <OtherMoneySSP><QuestionLabel>Have you had any Statutory Sick Pay (SSP) since the date you want to claim from 21/07/2013?</QuestionLabel><Answer>Yes</Answer></OtherMoneySSP>
 
-                <OtherMoneySP><QuestionLabel>Have you had any Statutory Maternity Pay (SMP), Statutory Paternity Pay (SPP) or Statutory Adoption Pay (SAP) since the date you want to claim from 21/07/2013?</QuestionLabel><Answer>No</Answer></OtherMoneySP>
+                <OtherMoneySP><QuestionLabel>Have you had any Statutory Maternity Pay (SMP), Statutory Paternity Pay (SPP) or Statutory Adoption Pay (SAP) since the date you want to claim from 21/07/2013?</QuestionLabel><Answer>Yes</Answer></OtherMoneySP>
 
                 <OtherMoneyPayments><QuestionLabel>Have you received any payments for the person you care for or any other person since your claim date 21/07/2013</QuestionLabel><Answer>No</Answer></OtherMoneyPayments>
 
                 <EEA>
+                    <EEAGuardQuestion><QuestionLabel>Have you or anyone in your family claimed or been paid any benefits or pensions from any of these countries?</QuestionLabel><Answer>Yes</Answer></EEAGuardQuestion>
                     <EEAReceivePensionsBenefits><QuestionLabel>Have you or anyone in your family claimed or been paid any benefits or pensions from any of these countries?</QuestionLabel><Answer>No</Answer></EEAReceivePensionsBenefits>
-                    <EEAWorkingInsurance><QuestionLabel>Do you or anyone in your family work or pay insurance in any of these countries?</QuestionLabel><Answer>No</Answer></EEAWorkingInsurance>
+                    <EEAReceivePensionsBenefitsDetails><QuestionLabel>Give details</QuestionLabel><Answer>blah blah blah</Answer></EEAReceivePensionsBenefitsDetails>
+                    <EEAWorkingInsurance><QuestionLabel>Have you or your close family worked or paid national insurance in any of these countries since your claim date?</QuestionLabel><Answer>No</Answer></EEAWorkingInsurance>
+                    <EEAWorkingInsuranceDetails><QuestionLabel>Give details</QuestionLabel><Answer>EEA Working Insurance Details</Answer></EEAWorkingInsuranceDetails>
                 </EEA>
             </OtherBenefits>
 
@@ -92,9 +96,9 @@
                     <Content>I will use the online service or phone 0345 608 4321 or write to Carer's Allowance Unit, Palatine House, Lancaster Road, Preston, PR1 1HB to report a change in my circumstances or that of the person that I am caring for.</Content>
                     <Content>If I give false or incomplete information or fail to report changes in my circumstances or that of the person that I am caring for promptly, I understand that my Carer's Allowance may be stopped or reduced and any overpayment of Carer's Allowance may be recovered. In addition I may be prosecuted or face a financial penalty.</Content>
                 </DeclarationStatement>
-                <DeclarationQuestion><QuestionLabel>Please tick this box if this claim form has been filled in by someone else, if so, please ensure that you understand the declarations above as another person cannot make the declarations on your behalf.</QuestionLabel><Answer>Yes</Answer></DeclarationQuestion>
+                <DeclarationQuestion><QuestionLabel>Select this box if you filled this form in for someone else.</QuestionLabel><Answer>Yes</Answer></DeclarationQuestion>
                 <DeclarationQuestion><QuestionLabel>Please tick this box to confirm that you understand and make the declarations above.</QuestionLabel><Answer>Yes</Answer></DeclarationQuestion>
-                <DeclarationNameOrg><QuestionLabel>Your name and/or organisation</QuestionLabel><Answer>Some Org</Answer></DeclarationNameOrg>
+                <DeclarationNameOrg><QuestionLabel>Your name or organisation</QuestionLabel><Answer>Some Org</Answer></DeclarationNameOrg>
             </Declaration>
             <Disclaimer>
                 <DisclaimerStatement>
@@ -117,9 +121,9 @@
             </EvidenceList>
             <Consents>
 
-                <Consent><QuestionLabel>Do you agree to us getting information from any other person or organisation you have told us about on this claim?</QuestionLabel><Answer>Yes</Answer></Consent>
+                <Consent><QuestionLabel>Do you agree to the Carer's Allowance Unit contacting anyone mentioned in this form?</QuestionLabel><Answer>Yes</Answer></Consent>
             </Consents>
-            <AssistedDecisions><AssistedDecision><Reason>Person receives Armed Forces Independence Payment.</Reason><RecommendedDecision>Transfer to Armed Forces Independent Payments team.</RecommendedDecision></AssistedDecision></AssistedDecisions>
+            <AssistedDecisions><AssistedDecision><Reason>None</Reason><RecommendedDecision>None</RecommendedDecision></AssistedDecision></AssistedDecisions>
         </DWPCAClaim>
     </DWPCATransaction>
     <ds:Signature>

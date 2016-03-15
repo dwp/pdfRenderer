@@ -62,7 +62,7 @@ object JasperReportCompiler {
 
   def fullJrxmlLocation(version: Option[String]) = s"$jrxmlLocation${
     version match {
-      case Some(x) => s"$x/";
+      case Some(x) => s"/$x/";
       case _ => ""
     }
   }"

@@ -1,7 +1,7 @@
-package generators.v20
+package generators.v21
 
 import generators.PdfContentMatchingSpec
-import test_data.v20.circs.XMLCircsData
+import test_data.v21.circs.XMLCircsData
 import utils.WithApplication
 
 import scala.xml.XML
@@ -13,7 +13,7 @@ import scala.xml.XML
 
 class PdfContentMatchingCircsSpec extends PdfContentMatchingSpec{
 
-  val version = "0.20"
+  val version = "0.21"
 
   "PdfCircsContentMatching" should {
 

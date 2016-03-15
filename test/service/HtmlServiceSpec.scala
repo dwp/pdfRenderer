@@ -1,6 +1,7 @@
 package service
 
 import org.specs2.mutable.Specification
+import utils.WithApplication
 import scala.concurrent.{ExecutionContext, Future}
 import play.api.test.FakeRequest
 import play.api.test.Helpers._
@@ -50,8 +51,7 @@ class HtmlServiceSpec  extends Specification {
       status(response)  mustEqual INTERNAL_SERVER_ERROR
     }
 
-    "accept valid XML and generate a html" in {
-      pending
+    "accept valid XML and generate a html" in new WithApplication {
       val service =new RenderService {
         protected def reportGenerator: ReportGenerator = HtmlGenerator
         override protected val outputStream = new ByteArrayOutputStream()

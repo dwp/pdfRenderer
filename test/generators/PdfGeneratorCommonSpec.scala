@@ -55,9 +55,9 @@ class PdfGeneratorCommonSpec extends Specification {
 
 
     "write files in parallel" in new WithApplication{
-      val max = 10
+      val max = 21
 
-      (1 to max).toArray.par.forall(x => {
+      (19 to max).toArray.par.forall(x => {
         val pdfFileLocation = "parallelTestFile" + x + ".pdf"
         val xml =  XML.load(getClass.getResource("/c3_functional9.xml"))
         val dataSource = new XmlDataSource(xml)
@@ -67,7 +67,7 @@ class PdfGeneratorCommonSpec extends Specification {
         pdfFile.exists()
       }) must beTrue
 
-      (1 to max).foreach(x => {
+      (19 to max).foreach(x => {
         val pdfFileLocation = "parallelTestFile" + x + ".pdf"
         deleteFile(pdfFileLocation)
       })

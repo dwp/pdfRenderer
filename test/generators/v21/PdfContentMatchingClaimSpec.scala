@@ -1,7 +1,7 @@
-package generators.v20
+package generators.v21
 
 import generators.PdfContentMatchingSpec
-import test_data.v20.XMLData
+import test_data.v21.XMLData
 import utils.WithApplication
 
 import scala.xml.XML
@@ -15,7 +15,7 @@ import scala.xml.XML
 
 class PdfContentMatchingClaimSpec extends PdfContentMatchingSpec {
 
-  val version = "0.20"
+  val version = "0.21"
 
   "PdfContentMatching" should {
 
