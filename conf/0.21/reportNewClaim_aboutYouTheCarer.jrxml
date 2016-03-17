@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 5.6.1.final using JasperReports Library version 5.6.1  -->
-<!-- 2016-03-08T16:17:50 -->
+<!-- 2016-03-17T12:37:53 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYouTheCarer" language="groovy" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a66aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
@@ -308,7 +308,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<textElement verticalAlignment="Top"/>
-				<textFieldExpression><![CDATA[$F{AbouYouTheCarerCared35HoursBeforeAnswer}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{AbouYouTheCarerDateStartCaringAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="196" width="392" height="18" isRemoveLineWhenBlank="true" uuid="fe9c3714-334a-4196-8e8b-6d02f38757a6">
@@ -328,7 +328,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<textElement verticalAlignment="Top"/>
-				<textFieldExpression><![CDATA[$F{AbouYouTheCarerDateStartCaringAnswer}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{AbouYouTheCarerCared35HoursBeforeAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement positionType="Float" x="0" y="195" width="594" height="1" uuid="0fbef05e-939d-427c-a1e3-c881df86bcaf"/>
