@@ -48,9 +48,25 @@ object ApplicationBuild extends Build {
   var sV: Seq[Def.Setting[_]] = Seq(scalaVersion := "2.10.5")
   val compilerSettings: Seq[Def.Setting[_]] = Seq(scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8","-feature"))
 
-  var vS: Seq[Def.Setting[_]] = Seq(version := appVersion, libraryDependencies ++= appDependencies)
+  var vS: Seq[Def.Setting[_]] = Seq(libraryDependencies ++= appDependencies)
 
-  var appSettings: Seq[Def.Setting[_]] = repo ++ sV ++ compilerSettings ++ sJ ++ vS ++ cleanjsprTask ++ net.virtualvoid.sbt.graph.Plugin.graphSettings
+  var sAppN: Seq[Def.Setting[_]] = Seq(name := appName)
+  var sAppV: Seq[Def.Setting[_]] = Seq(version := appVersion)
+  var sOrg: Seq[Def.Setting[_]] = Seq(organization := "gov.dwp.carers")
+
+  val isSnapshotBuild = appVersion.endsWith("-SNAPSHOT")
+  var publ: Seq[Def.Setting[_]] = Seq(
+    publishTo := Some("Artifactory Realm" at "http://build.3cbeta.co.uk:8080/artifactory/repo/"),
+    publishTo <<= version {
+      (v: String) =>
+        if (isSnapshotBuild) {
+          Some("snapshots" at "http://build.3cbeta.co.uk:8080/artifactory/libs-snapshot-local")
+        } else {
+          Some("releases" at "http://build.3cbeta.co.uk:8080/artifactory/libs-release-local")
+        }
+    })
+
+  var appSettings: Seq[Def.Setting[_]] = repo ++ sV ++ compilerSettings ++ sJ ++ vS ++ cleanjsprTask ++ sAppN ++ sAppV ++ sOrg ++ publ ++ net.virtualvoid.sbt.graph.Plugin.graphSettings
 
   val main = Project(appName, file(".")).enablePlugins(play.sbt.PlayScala).settings(appSettings: _*)
 
