@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 5.6.1.final using JasperReports Library version 5.6.1  -->
-<!-- 2016-03-30T13:43:03 -->
+<!-- 2016-04-04T12:46:09 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYourPartner" language="groovy" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="2c76a7f8-deb9-45af-83f2-c12559d20c72">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
@@ -206,7 +206,7 @@
 				<textFieldExpression><![CDATA[$F{selfEmployedEndedAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="108" splitType="Prevent">
+		<band height="130" splitType="Immediate">
 			<property name="local_mesure_unitheight" value="pixel"/>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<printWhenExpression><![CDATA[$F{haveBeenSelfEmployedAnswer}.equals("Yes")]]></printWhenExpression>
@@ -219,84 +219,46 @@
 				</textElement>
 				<text><![CDATA[Your accounts]]></text>
 			</staticText>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement positionType="Float" x="0" y="18" width="392" height="18" isRemoveLineWhenBlank="true" uuid="169f6444-16b5-4124-be44-64f2840284fd">
-					<property name="local_mesure_unity" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="21" width="392" height="18" isRemoveLineWhenBlank="true" uuid="169f6444-16b5-4124-be44-64f2840284fd"/>
 				<textFieldExpression><![CDATA[$F{selfEmployedGotAccountsQuestion}]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="420" y="18" width="174" height="18" isRemoveLineWhenBlank="true" uuid="48084702-32a8-49ec-bf6d-27d6e3094151">
-					<property name="local_mesure_unity" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="21" width="174" height="18" isRemoveLineWhenBlank="true" uuid="48084702-32a8-49ec-bf6d-27d6e3094151"/>
 				<textFieldExpression><![CDATA[$F{selfEmployedGotAccountsAnswer}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement positionType="Float" x="0" y="36" width="392" height="18" isRemoveLineWhenBlank="true" uuid="169f6444-16b5-4124-be44-64f2840284fd">
-					<property name="local_mesure_unity" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="39" width="392" height="18" isRemoveLineWhenBlank="true" uuid="169f6444-16b5-4124-be44-64f2840284fd"/>
 				<textFieldExpression><![CDATA[$F{knowTradingYearQuestion}]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="420" y="36" width="174" height="18" isRemoveLineWhenBlank="true" uuid="48084702-32a8-49ec-bf6d-27d6e3094151">
-					<property name="local_mesure_unity" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="39" width="174" height="18" isRemoveLineWhenBlank="true" uuid="48084702-32a8-49ec-bf6d-27d6e3094151"/>
 				<textFieldExpression><![CDATA[$F{knowTradingYearAnswer}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement positionType="Float" x="0" y="54" width="392" height="18" isRemoveLineWhenBlank="true" uuid="e1eded18-7307-49b2-adf5-e5015263a9b0">
-					<property name="local_mesure_unity" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="57" width="392" height="18" isRemoveLineWhenBlank="true" uuid="e1eded18-7307-49b2-adf5-e5015263a9b0"/>
 				<textFieldExpression><![CDATA[$F{tradingYearStartQuestion}]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="420" y="54" width="174" height="18" isRemoveLineWhenBlank="true" uuid="9dfea395-437a-4f46-a8e1-8830b9c14917">
-					<property name="local_mesure_unity" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="57" width="174" height="18" isRemoveLineWhenBlank="true" uuid="9dfea395-437a-4f46-a8e1-8830b9c14917"/>
 				<textFieldExpression><![CDATA[$F{tradingYearStartAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement positionType="Float" x="0" y="72" width="392" height="18" isRemoveLineWhenBlank="true" uuid="bfebe281-9297-42a1-9483-506f8bd3071a">
-					<property name="local_mesure_unity" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
+				<reportElement positionType="Float" x="0" y="75" width="392" height="36" isRemoveLineWhenBlank="true" uuid="bfebe281-9297-42a1-9483-506f8bd3071a"/>
 				<textFieldExpression><![CDATA[$F{paidMoneyYetQuestion}]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="419" y="72" width="175" height="18" isRemoveLineWhenBlank="true" uuid="0bcdb23a-6098-41e4-b1e2-8b1bf17f3b5a">
-					<property name="local_mesure_unity" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="419" y="75" width="175" height="36" isRemoveLineWhenBlank="true" uuid="0bcdb23a-6098-41e4-b1e2-8b1bf17f3b5a"/>
 				<textFieldExpression><![CDATA[$F{paidMoneyYetAnswer}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement positionType="Float" x="0" y="90" width="392" height="18" isRemoveLineWhenBlank="true" uuid="28baef97-3b86-43de-bae4-2f109c498ba4">
-					<property name="local_mesure_unity" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="111" width="392" height="18" isRemoveLineWhenBlank="true" uuid="28baef97-3b86-43de-bae4-2f109c498ba4"/>
 				<textFieldExpression><![CDATA[$F{paidMoneyDateQuestion}]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="420" y="90" width="174" height="18" isRemoveLineWhenBlank="true" uuid="97cb89c9-8352-42b8-9734-abc807904a2f">
-					<property name="local_mesure_unity" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="111" width="174" height="18" isRemoveLineWhenBlank="true" uuid="97cb89c9-8352-42b8-9734-abc807904a2f"/>
 				<textFieldExpression><![CDATA[$F{paidMoneyDateAnswer}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement positionType="Float" x="1" y="36" width="593" height="1" uuid="9f1e78e5-bd45-490e-8c39-a0a717a119e6"/>
-				<text><![CDATA[]]></text>
-			</staticText>
-			<staticText>
-				<reportElement positionType="Float" x="0" y="55" width="594" height="1" uuid="9f19772d-a014-4dc5-8158-59c511363213"/>
-				<text><![CDATA[]]></text>
-			</staticText>
 		</band>
 		<band height="136" splitType="Prevent">
 			<printWhenExpression><![CDATA[$F{haveBeenSelfEmployedAnswer}.equals("Yes")]]></printWhenExpression>
