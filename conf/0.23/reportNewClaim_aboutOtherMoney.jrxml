@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 5.6.1.final using JasperReports Library version 5.6.1  -->
+<!-- 2016-04-07T11:54:19 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYourPartner" language="groovy" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="2c76a7f8-deb9-45af-83f2-c12559d20c72">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
@@ -14,113 +16,170 @@
 	<queryString language="XPath">
 		<![CDATA[/]]>
 	</queryString>
-	<field name="otherMoneyQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoney/QuestionLabel]]></fieldDescription>
+	<field name="paidSickPayAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SickPayment/Answer]]></fieldDescription>
 	</field>
-	<field name="otherMoneyAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoney/Answer]]></fieldDescription>
+	<field name="paidPatMatAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/PatMatAdopPayment/Answer]]></fieldDescription>
 	</field>
-	<field name="otherMoneyPaymentQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneyPayments/QuestionLabel]]></fieldDescription>
+	<field name="paidFosterAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/FosteringPayment/Answer]]></fieldDescription>
 	</field>
-	<field name="otherMoneyPaymentAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneyPayments/Answer]]></fieldDescription>
+	<field name="paidDirectAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/DirectPayment/Answer]]></fieldDescription>
 	</field>
-	<field name="otherMoneyPaymentNameQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneyDetails/Name/QuestionLabel]]></fieldDescription>
+	<field name="paidAnyOtherAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/AnyOtherPayment/Answer]]></fieldDescription>
 	</field>
-	<field name="otherMoneyPaymentNameAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneyDetails/Name/Answer]]></fieldDescription>
+	<field name="sickPayStillBeingPaidQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SickPay/StillBeingPaidThisPay/QuestionLabel]]></fieldDescription>
 	</field>
-	<field name="otherMoneyPaymentAmountQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneyDetails/Payment/Payment/QuestionLabel]]></fieldDescription>
+	<field name="sickPayStillBeingPaidAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SickPay/StillBeingPaidThisPay/Answer]]></fieldDescription>
 	</field>
-	<field name="otherMoneyPaymentAmountAmount" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneyDetails/Payment/Payment/Answer/Amount]]></fieldDescription>
+	<field name="sickPaylastPaidQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SickPay/WhenDidYouLastGetPaid/QuestionLabel]]></fieldDescription>
 	</field>
-	<field name="otherMoneyPaymentAmountCurrency" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneyDetails/Payment/Payment/Answer/Currency]]></fieldDescription>
+	<field name="sickPaylastPaidAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SickPay/WhenDidYouLastGetPaid/Answer]]></fieldDescription>
 	</field>
-	<field name="otherMoneyPaymentFrequencyQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneyDetails/Payment/Frequency/QuestionLabel]]></fieldDescription>
+	<field name="sickPayAmountQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SickPay/AmountOfThisPay/QuestionLabel]]></fieldDescription>
 	</field>
-	<field name="otherMoneyPaymentFrequencyAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneyDetails/Payment/Frequency/Answer]]></fieldDescription>
+	<field name="sickPayAmountAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SickPay/AmountOfThisPay/Answer]]></fieldDescription>
 	</field>
-	<field name="otherMoneyPaymentFrequencyOther" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneyDetails/Payment/Frequency/Other]]></fieldDescription>
+	<field name="sickPayWhoPaidQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SickPay/WhoPaidYouThisPay/QuestionLabel]]></fieldDescription>
 	</field>
-	<field name="otherMoneySSPQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySSP/QuestionLabel]]></fieldDescription>
+	<field name="sickPayWhoPaidAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SickPay/WhoPaidYouThisPay/Answer]]></fieldDescription>
 	</field>
-	<field name="otherMoneySSPAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySSP/Answer]]></fieldDescription>
+	<field name="sickPayHowOftenPaidQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SickPay/HowOftenPaidThisPay/QuestionLabel]]></fieldDescription>
 	</field>
-	<field name="otherMoneySSPPaymentAmountQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySSPDetails/Payment/Payment/QuestionLabel]]></fieldDescription>
+	<field name="sickPayHowOftenPaidAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SickPay/HowOftenPaidThisPay/Answer]]></fieldDescription>
 	</field>
-	<field name="otherMoneySSPPaymentAmountAmount" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySSPDetails/Payment/Payment/Answer/Amount]]></fieldDescription>
+	<field name="sickPayHowOftenPaidOtherQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SickPay/HowOftenPaidThisPayOther/QuestionLabel]]></fieldDescription>
 	</field>
-	<field name="otherMoneySSPPaymentAmountCurrency" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySSPDetails/Payment/Payment/Answer/Currency]]></fieldDescription>
+	<field name="sickPayHowOftenPaidOtherAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SickPay/HowOftenPaidThisPayOther/Answer]]></fieldDescription>
 	</field>
-	<field name="otherMoneySSPPaymentFrequencyQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySSPDetails/Payment/Frequency/QuestionLabel]]></fieldDescription>
+	<field name="patmatPayStillBeingPaidQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/StatutoryMaternityPaternityAdopt/StillBeingPaidThisPay/QuestionLabel]]></fieldDescription>
 	</field>
-	<field name="otherMoneySSPPaymentFrequencyAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySSPDetails/Payment/Frequency/Answer]]></fieldDescription>
+	<field name="patmatPayStillBeingPaidAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/StatutoryMaternityPaternityAdopt/StillBeingPaidThisPay/Answer]]></fieldDescription>
 	</field>
-	<field name="otherMoneySSPPaymentFrequencyOther" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySSPDetails/Payment/Frequency/Other]]></fieldDescription>
+	<field name="patmatPaylastPaidQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/StatutoryMaternityPaternityAdopt/WhenDidYouLastGetPaid/QuestionLabel]]></fieldDescription>
 	</field>
-	<field name="otherMoneySSPEmployerNameAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySSPDetails/Name/Answer]]></fieldDescription>
+	<field name="patmatPaylastPaidAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/StatutoryMaternityPaternityAdopt/WhenDidYouLastGetPaid/Answer]]></fieldDescription>
 	</field>
-	<field name="otherMoneySPQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySP/QuestionLabel]]></fieldDescription>
+	<field name="patmatPayAmountQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/StatutoryMaternityPaternityAdopt/AmountOfThisPay/QuestionLabel]]></fieldDescription>
 	</field>
-	<field name="otherMoneySPAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySP/Answer]]></fieldDescription>
+	<field name="patmatPayAmountAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/StatutoryMaternityPaternityAdopt/AmountOfThisPay/Answer]]></fieldDescription>
 	</field>
-	<field name="otherMoneySPPaymentAmountQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySPDetails/Payment/Payment/QuestionLabel]]></fieldDescription>
+	<field name="patmatPayWhoPaidQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/StatutoryMaternityPaternityAdopt/WhoPaidYouThisPay/QuestionLabel]]></fieldDescription>
 	</field>
-	<field name="otherMoneySPPaymentAmountAmount" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySPDetails/Payment/Payment/Answer/Amount]]></fieldDescription>
+	<field name="patmatPayWhoPaidAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/StatutoryMaternityPaternityAdopt/WhoPaidYouThisPay/Answer]]></fieldDescription>
 	</field>
-	<field name="otherMoneySPPaymentAmountCurrency" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySPDetails/Payment/Payment/Answer/Currency]]></fieldDescription>
+	<field name="patmatPayHowOftenPaidQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/StatutoryMaternityPaternityAdopt/HowOftenPaidThisPay/QuestionLabel]]></fieldDescription>
 	</field>
-	<field name="otherMoneySPPaymentFrequencyQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySPDetails/Payment/Frequency/QuestionLabel]]></fieldDescription>
+	<field name="patmatPayHowOftenPaidAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/StatutoryMaternityPaternityAdopt/HowOftenPaidThisPay/Answer]]></fieldDescription>
 	</field>
-	<field name="otherMoneySPPaymentFrequencyAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySPDetails/Payment/Frequency/Answer]]></fieldDescription>
+	<field name="patmatPayHowOftenPaidOtherQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/StatutoryMaternityPaternityAdopt/HowOftenPaidThisPayOther/QuestionLabel]]></fieldDescription>
 	</field>
-	<field name="otherMoneySPPaymentFrequencyOther" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySPDetails/Payment/Frequency/Other]]></fieldDescription>
+	<field name="patmatPayHowOftenPaidOtherAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/StatutoryMaternityPaternityAdopt/HowOftenPaidThisPayOther/Answer]]></fieldDescription>
 	</field>
-	<field name="otherMoneySPEmployerNameAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySPDetails/Name/Answer]]></fieldDescription>
+	<field name="fosterPayStillBeingPaidQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/FosteringAllowance/StillBeingPaidThisPay/QuestionLabel]]></fieldDescription>
 	</field>
-	<field name="Line1" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySPDetails/Address/Line[1]]]></fieldDescription>
+	<field name="fosterPayStillBeingPaidAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/FosteringAllowance/StillBeingPaidThisPay/Answer]]></fieldDescription>
 	</field>
-	<field name="Line2" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySPDetails/Address/Line[2]]]></fieldDescription>
+	<field name="fosterPaylastPaidQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/FosteringAllowance/WhenDidYouLastGetPaid/QuestionLabel]]></fieldDescription>
 	</field>
-	<field name="Line3" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySPDetails/Address/Line[3]]]></fieldDescription>
+	<field name="fosterPaylastPaidAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/FosteringAllowance/WhenDidYouLastGetPaid/Answer]]></fieldDescription>
 	</field>
-	<field name="otherMoneySSPEmployersPostCode" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySPDetails/Address/PostCode]]></fieldDescription>
+	<field name="fosterPayAmountQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/FosteringAllowance/AmountOfThisPay/QuestionLabel]]></fieldDescription>
 	</field>
-	<field name="otherMoneySSPEmployerNameQuestionLabel" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySSPDetails/Name/QuestionLabel]]></fieldDescription>
+	<field name="fosterPayAmountAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/FosteringAllowance/AmountOfThisPay/Answer]]></fieldDescription>
 	</field>
-	<field name="otherMoneySPEmployerNameQuestionLabel" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySPDetails/Name/QuestionLabel]]></fieldDescription>
+	<field name="fosterPayWhoPaidQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/FosteringAllowance/WhoPaidYouThisPay/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="fosterPayWhoPaidAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/FosteringAllowance/WhoPaidYouThisPay/Answer]]></fieldDescription>
+	</field>
+	<field name="fosterPayHowOftenPaidQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/FosteringAllowance/HowOftenPaidThisPay/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="fosterPayHowOftenPaidAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/FosteringAllowance/HowOftenPaidThisPay/Answer]]></fieldDescription>
+	</field>
+	<field name="fosterPayHowOftenPaidOtherQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/FosteringAllowance/HowOftenPaidThisPayOther/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="fosterPayHowOftenPaidOtherAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/FosteringAllowance/HowOftenPaidThisPayOther/Answer]]></fieldDescription>
+	</field>
+	<field name="directPayStillBeingPaidQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/DirectPay/StillBeingPaidThisPay/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="directPayStillBeingPaidAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/DirectPay/StillBeingPaidThisPay/Answer]]></fieldDescription>
+	</field>
+	<field name="directPaylastPaidQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/DirectPay/WhenDidYouLastGetPaid/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="directPaylastPaidAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/DirectPay/WhenDidYouLastGetPaid/Answer]]></fieldDescription>
+	</field>
+	<field name="directPayAmountQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/DirectPay/AmountOfThisPay/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="directPayAmountAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/DirectPay/AmountOfThisPay/Answer]]></fieldDescription>
+	</field>
+	<field name="directPayWhoPaidQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/DirectPay/WhoPaidYouThisPay/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="directPayWhoPaidAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/DirectPay/WhoPaidYouThisPay/Answer]]></fieldDescription>
+	</field>
+	<field name="directPayHowOftenPaidQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/DirectPay/HowOftenPaidThisPay/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="directPayHowOftenPaidAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/DirectPay/HowOftenPaidThisPay/Answer]]></fieldDescription>
+	</field>
+	<field name="directPayHowOftenPaidOtherQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/DirectPay/HowOftenPaidThisPayOther/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="directPayHowOftenPaidOtherAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/DirectPay/HowOftenPaidThisPayOther/Answer]]></fieldDescription>
+	</field>
+	<field name="anyOtherPayQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/OtherPaymentsInfo/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="anyOtherPayAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/OtherPaymentsInfo/Answer]]></fieldDescription>
 	</field>
 	<background>
 		<band splitType="Stretch"/>
@@ -128,7 +187,7 @@
 	<title>
 		<band height="20" splitType="Immediate">
 			<staticText>
-				<reportElement uuid="c4993f7a-b987-4a99-9fbd-21415dcc29ce" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="18" forecolor="#000000">
+				<reportElement style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="18" forecolor="#000000" uuid="c4993f7a-b987-4a99-9fbd-21415dcc29ce">
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart7AboutOtherMoney"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
@@ -139,274 +198,505 @@
 		</band>
 	</title>
 	<detail>
-		<band height="20" splitType="Prevent">
+		<band height="128" splitType="Prevent">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<printWhenExpression><![CDATA[$F{paidSickPayAnswer}=="Yes"]]></printWhenExpression>
+			<staticText>
+				<reportElement style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="594" height="20" isRemoveLineWhenBlank="true" uuid="7d9504ff-8be5-4151-a3d8-f96ce7e33025">
+					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourAccounts"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Statutory sick pay]]></text>
+			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="61c7218b-715a-4359-9449-ee3c564dbe6f" positionType="Float" x="0" y="1" width="392" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{otherMoneyQuestion}]]></textFieldExpression>
+				<reportElement positionType="Float" x="0" y="20" width="392" height="18" isRemoveLineWhenBlank="true" uuid="61c7218b-715a-4359-9449-ee3c564dbe6f">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{sickPayStillBeingPaidQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="57e79dc7-f890-477f-831c-ab6a643652c4" style="Answer" positionType="Float" x="420" y="1" width="174" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{otherMoneyAnswer}]]></textFieldExpression>
+				<reportElement style="Answer" positionType="Float" x="420" y="20" width="174" height="18" isRemoveLineWhenBlank="true" uuid="57e79dc7-f890-477f-831c-ab6a643652c4">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{sickPayStillBeingPaidAnswer}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement uuid="9bc07f73-bd6f-4c0f-95e5-cc133110592e" positionType="Float" x="0" y="19" width="594" height="1"/>
-				<textElement/>
-				<text><![CDATA[]]></text>
-			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="38" width="392" height="18" isRemoveLineWhenBlank="true" uuid="a0b9917d-7eca-4a80-91d8-a161818d2fcf">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{sickPaylastPaidQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="38" width="174" height="18" isRemoveLineWhenBlank="true" uuid="64492f6b-e6c8-489d-a678-76e072fe2a18">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{sickPaylastPaidAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="56" width="392" height="18" isRemoveLineWhenBlank="true" uuid="da593358-c8b2-4af6-83fa-ffa2de726130">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{sickPayAmountQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="56" width="174" height="18" isRemoveLineWhenBlank="true" uuid="1d08374c-4490-49ab-9004-cea90e446759">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{sickPayAmountAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="72" width="392" height="18" isRemoveLineWhenBlank="true" uuid="3ad181b5-16f1-44d6-9f92-4b34a2c8fde3">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{sickPayWhoPaidQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="92" width="174" height="18" isRemoveLineWhenBlank="true" uuid="69b61134-56cd-4249-8933-d43a35092d99">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{sickPayHowOftenPaidAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="74" width="174" height="18" isRemoveLineWhenBlank="true" uuid="d74dfe9b-d782-43f5-b1a7-0217d689a561">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{sickPayWhoPaidAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="92" width="392" height="18" isRemoveLineWhenBlank="true" uuid="6f160ad8-1624-4255-a197-cd4a990866ab">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{sickPayHowOftenPaidQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="110" width="392" height="18" isRemoveLineWhenBlank="true" uuid="04ce5ed1-d215-430f-88c7-405f698a9580">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{sickPayHowOftenPaidOtherQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="110" width="174" height="18" isRemoveLineWhenBlank="true" uuid="ab9ce04b-1218-4fa0-974f-1813f58043bf">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{sickPayHowOftenPaidOtherAnswer}]]></textFieldExpression>
+			</textField>
 		</band>
-		<band height="93">
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="7bb93528-3b89-44ae-a9c5-0ba004ce195b" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{otherMoneyPaymentQuestion}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="be751728-34d8-4eb0-a263-747fdb05702d" style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{otherMoneyPaymentAnswer}]]></textFieldExpression>
-			</textField>
+		<band height="128">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<printWhenExpression><![CDATA[$F{paidPatMatAnswer}=="Yes"]]></printWhenExpression>
 			<staticText>
-				<reportElement uuid="6f1208cb-fa7f-487a-9d16-ba7b162b3f88" positionType="Float" x="0" y="18" width="594" height="1"/>
-				<textElement/>
-				<text><![CDATA[]]></text>
+				<reportElement style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="594" height="20" isRemoveLineWhenBlank="true" uuid="d8b192d7-788b-476b-bb7b-0d92e375078c">
+					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourAccounts"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Statutory paternity, maternity or adoption pay]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="e11a911e-cabe-44d6-b424-b4a77ecb1a72" positionType="Float" x="0" y="19" width="392" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{otherMoneyPaymentNameQuestion}]]></textFieldExpression>
+				<reportElement positionType="Float" x="0" y="20" width="392" height="18" isRemoveLineWhenBlank="true" uuid="c8978e41-34fa-47a8-a77c-e4e37d15b368">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{patmatPayStillBeingPaidQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="bd2b7cc9-9e0c-4bdd-a750-dcf09cd50409" style="Answer" positionType="Float" x="420" y="19" width="174" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{otherMoneyPaymentNameAnswer}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement uuid="95032ba4-420e-4040-a223-36fde3759ec3" positionType="Float" x="0" y="37" width="594" height="1"/>
-				<textElement/>
-				<text><![CDATA[]]></text>
-			</staticText>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="6a5591c5-0d69-4b26-885d-d8e19c311f6e" positionType="Float" x="0" y="38" width="392" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{otherMoneyPaymentAmountQuestion}]]></textFieldExpression>
+				<reportElement style="Answer" positionType="Float" x="420" y="20" width="174" height="18" isRemoveLineWhenBlank="true" uuid="609fcd47-2ce5-4107-9e15-d81db8789779">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{patmatPayStillBeingPaidAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="6f340126-ba90-44bd-9e40-cef31435caf4" style="Answer" positionType="Float" x="420" y="38" width="174" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{otherMoneyPaymentAmountAmount}]]></textFieldExpression>
+				<reportElement style="Answer" positionType="Float" x="420" y="38" width="174" height="18" isRemoveLineWhenBlank="true" uuid="59cb6382-adb8-40be-b3ac-5060a13e18bb">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{patmatPaylastPaidAnswer}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement uuid="345de997-e7ff-4cfb-8a17-0fd6fecdc59d" positionType="Float" x="0" y="56" width="594" height="1"/>
-				<textElement/>
-				<text><![CDATA[]]></text>
-			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="3a037ddc-2c98-456d-96a5-d88cd20d5034" positionType="Float" x="0" y="57" width="392" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{otherMoneyPaymentFrequencyQuestion}]]></textFieldExpression>
+				<reportElement positionType="Float" x="0" y="38" width="392" height="18" isRemoveLineWhenBlank="true" uuid="27ec7159-7b77-4540-b1a2-ed719f7b5a4f">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{patmatPaylastPaidQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="56" width="392" height="18" isRemoveLineWhenBlank="true" uuid="1859b9f4-c1c4-412a-8c3f-dbfcce563539">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{patmatPayAmountQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="72" width="392" height="18" isRemoveLineWhenBlank="true" uuid="af06e88b-b71c-4bc3-a55e-39991abe35f9">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{patmatPayWhoPaidQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="a302b0dc-6514-4adb-9f57-203365c60d50" style="Answer" positionType="Float" x="420" y="57" width="174" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{otherMoneyPaymentFrequencyAnswer}]]></textFieldExpression>
+				<reportElement style="Answer" positionType="Float" x="420" y="56" width="174" height="18" isRemoveLineWhenBlank="true" uuid="dfe0de53-a066-4c95-b740-3e74b7e46f55">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{patmatPayAmountAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="74" width="174" height="18" isRemoveLineWhenBlank="true" uuid="ba750c12-0636-4440-9b49-755cbd6a676a">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{patmatPayWhoPaidAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="92" width="174" height="18" isRemoveLineWhenBlank="true" uuid="2ca5cd46-6861-47bb-8210-5a145c6b1572">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{patmatPayHowOftenPaidAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="8dea8a59-fb2e-4a40-9cfe-977f28fb70fe" style="Answer" positionType="Float" x="420" y="75" width="174" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{otherMoneyPaymentFrequencyAnswer}=="Other" ? $F{otherMoneyPaymentFrequencyOther} : ""]]></textFieldExpression>
+				<reportElement positionType="Float" x="0" y="92" width="392" height="18" isRemoveLineWhenBlank="true" uuid="313fe967-42b5-4565-9170-b48b6cf5cfd9">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{patmatPayHowOftenPaidQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="110" width="392" height="18" isRemoveLineWhenBlank="true" uuid="4cf55554-ae2f-4e90-8b53-a418cb318589">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{patmatPayHowOftenPaidOtherQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="110" width="174" height="18" isRemoveLineWhenBlank="true" uuid="c63ffb3e-898d-4fd3-8a91-5996f832938f">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{patmatPayHowOftenPaidOtherAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="19" splitType="Prevent">
+		<band height="128">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<printWhenExpression><![CDATA[$F{paidFosterAnswer}=="Yes"]]></printWhenExpression>
+			<staticText>
+				<reportElement style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="594" height="20" isRemoveLineWhenBlank="true" uuid="d8b192d7-788b-476b-bb7b-0d92e375078c">
+					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourAccounts"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fostering Allowance]]></text>
+			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="12143880-f4e6-403b-99ba-b142cdbe1dec" positionType="Float" x="0" y="1" width="392" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{otherMoneySSPQuestion}]]></textFieldExpression>
+				<reportElement positionType="Float" x="0" y="20" width="392" height="18" isRemoveLineWhenBlank="true" uuid="c8978e41-34fa-47a8-a77c-e4e37d15b368">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{fosterPayStillBeingPaidQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="596d7de4-e047-4f40-95d5-940aaed36461" style="Answer" positionType="Float" x="420" y="1" width="174" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{otherMoneySSPAnswer}]]></textFieldExpression>
+				<reportElement style="Answer" positionType="Float" x="420" y="20" width="174" height="18" isRemoveLineWhenBlank="true" uuid="609fcd47-2ce5-4107-9e15-d81db8789779">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{fosterPayStillBeingPaidAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="38" width="174" height="18" isRemoveLineWhenBlank="true" uuid="59cb6382-adb8-40be-b3ac-5060a13e18bb">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{fosterPaylastPaidAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="38" width="392" height="18" isRemoveLineWhenBlank="true" uuid="27ec7159-7b77-4540-b1a2-ed719f7b5a4f">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{fosterPaylastPaidQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="56" width="392" height="18" isRemoveLineWhenBlank="true" uuid="1859b9f4-c1c4-412a-8c3f-dbfcce563539">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{fosterPayAmountQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="72" width="392" height="18" isRemoveLineWhenBlank="true" uuid="af06e88b-b71c-4bc3-a55e-39991abe35f9">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{fosterPayWhoPaidQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="56" width="174" height="18" isRemoveLineWhenBlank="true" uuid="dfe0de53-a066-4c95-b740-3e74b7e46f55">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{fosterPayAmountAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="74" width="174" height="18" isRemoveLineWhenBlank="true" uuid="ba750c12-0636-4440-9b49-755cbd6a676a">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{fosterPayWhoPaidAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="92" width="174" height="18" isRemoveLineWhenBlank="true" uuid="2ca5cd46-6861-47bb-8210-5a145c6b1572">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{fosterPayHowOftenPaidAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="92" width="392" height="18" isRemoveLineWhenBlank="true" uuid="313fe967-42b5-4565-9170-b48b6cf5cfd9">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{fosterPayHowOftenPaidQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="110" width="392" height="18" isRemoveLineWhenBlank="true" uuid="4cf55554-ae2f-4e90-8b53-a418cb318589">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{fosterPayHowOftenPaidOtherQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="110" width="174" height="18" isRemoveLineWhenBlank="true" uuid="c63ffb3e-898d-4fd3-8a91-5996f832938f">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{fosterPayHowOftenPaidOtherAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="77">
+		<band height="128">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<printWhenExpression><![CDATA[$F{paidDirectAnswer}=="Yes"]]></printWhenExpression>
 			<staticText>
-				<reportElement uuid="b1e1e171-f98b-4da5-a7b4-09c9aa342c96" positionType="Float" x="0" y="0" width="594" height="1"/>
-				<textElement/>
-				<text><![CDATA[]]></text>
+				<reportElement style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="594" height="20" isRemoveLineWhenBlank="true" uuid="d8b192d7-788b-476b-bb7b-0d92e375078c">
+					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourAccounts"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Direct payment for caring for someone]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="53605bf5-202c-4a5a-86eb-eebecd268a52" positionType="Float" x="0" y="1" width="392" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{otherMoneySSPAnswer}.equals("Yes")]]></printWhenExpression>
+				<reportElement positionType="Float" x="0" y="20" width="392" height="18" isRemoveLineWhenBlank="true" uuid="c8978e41-34fa-47a8-a77c-e4e37d15b368">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{otherMoneySSPPaymentAmountQuestion}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{directPayStillBeingPaidQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="e6d3c97c-9fb5-447f-bd68-e16152fa3a52" style="Answer" positionType="Float" x="420" y="1" width="174" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{otherMoneySSPAnswer}.equals("Yes")]]></printWhenExpression>
+				<reportElement style="Answer" positionType="Float" x="420" y="20" width="174" height="18" isRemoveLineWhenBlank="true" uuid="609fcd47-2ce5-4107-9e15-d81db8789779">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{otherMoneySSPPaymentAmountAmount}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement uuid="ecae50a6-1846-420d-a762-af2559259024" positionType="Float" x="0" y="19" width="594" height="1"/>
-				<textElement/>
-				<text><![CDATA[]]></text>
-			</staticText>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="0f1cc67d-4980-4359-95ac-4b0b2f91ee2f" positionType="Float" x="0" y="20" width="392" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{otherMoneySSPAnswer}.equals("Yes")]]></printWhenExpression>
-				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{otherMoneySSPPaymentFrequencyQuestion}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{directPayStillBeingPaidAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="736c5372-16ee-49fa-a192-de6cac781514" style="Answer" positionType="Float" x="420" y="20" width="174" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{otherMoneySSPAnswer}.equals("Yes")]]></printWhenExpression>
+				<reportElement style="Answer" positionType="Float" x="420" y="38" width="174" height="18" isRemoveLineWhenBlank="true" uuid="59cb6382-adb8-40be-b3ac-5060a13e18bb">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{otherMoneySSPPaymentFrequencyAnswer}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{directPaylastPaidAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="a050aa06-3810-4539-a750-6a1201ea32ac" style="Answer" positionType="Float" x="420" y="38" width="174" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{otherMoneySSPAnswer}.equals("Yes")]]></printWhenExpression>
+				<reportElement positionType="Float" x="0" y="38" width="392" height="18" isRemoveLineWhenBlank="true" uuid="27ec7159-7b77-4540-b1a2-ed719f7b5a4f">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{otherMoneySSPPaymentFrequencyAnswer}=="Other" ? $F{otherMoneySSPPaymentFrequencyOther} : ""]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{directPaylastPaidQuestion}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement uuid="3498d3a2-eb8d-464a-a91c-f15884d448b4" positionType="Float" x="0" y="56" width="594" height="1"/>
-				<textElement/>
-				<text><![CDATA[]]></text>
-			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="56" width="392" height="18" isRemoveLineWhenBlank="true" uuid="1859b9f4-c1c4-412a-8c3f-dbfcce563539">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{directPayAmountQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="72" width="392" height="18" isRemoveLineWhenBlank="true" uuid="af06e88b-b71c-4bc3-a55e-39991abe35f9">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{directPayWhoPaidQuestion}]]></textFieldExpression>
+			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="18d2c3f6-23c0-45a3-ba95-d15c235f8d81" positionType="Float" x="0" y="57" width="392" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{otherMoneySSPAnswer}.equals("Yes")]]></printWhenExpression>
+				<reportElement style="Answer" positionType="Float" x="420" y="56" width="174" height="18" isRemoveLineWhenBlank="true" uuid="dfe0de53-a066-4c95-b740-3e74b7e46f55">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{otherMoneySSPEmployerNameQuestionLabel}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{directPayAmountAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="74" width="174" height="18" isRemoveLineWhenBlank="true" uuid="ba750c12-0636-4440-9b49-755cbd6a676a">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{directPayWhoPaidAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="92" width="174" height="18" isRemoveLineWhenBlank="true" uuid="2ca5cd46-6861-47bb-8210-5a145c6b1572">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{directPayHowOftenPaidAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="404fcccc-145c-45bc-a500-a1da771b3949" style="Answer" positionType="Float" x="420" y="57" width="174" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{otherMoneySSPAnswer}.equals("Yes")]]></printWhenExpression>
+				<reportElement positionType="Float" x="0" y="92" width="392" height="18" isRemoveLineWhenBlank="true" uuid="313fe967-42b5-4565-9170-b48b6cf5cfd9">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{otherMoneySSPEmployerNameAnswer}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{directPayHowOftenPaidQuestion}]]></textFieldExpression>
 			</textField>
-			<subreport>
-				<reportElement uuid="3a1885f4-3c9e-4131-aa43-af61f05e274b" positionType="Float" x="0" y="75" width="595" height="1" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{otherMoneySSPAnswer}.equals("Yes")]]></printWhenExpression>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="110" width="392" height="18" isRemoveLineWhenBlank="true" uuid="4cf55554-ae2f-4e90-8b53-a418cb318589">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				</reportElement>
-				<subreportParameter name="SUBREPORT_DIR">
-					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
-				</subreportParameter>
-				<subreportParameter name="TEMPLATE_DIR">
-					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
-				</subreportParameter>
-				<subreportParameter name="postCode">
-					<subreportParameterExpression><![CDATA["Employer's Postcode"]]></subreportParameterExpression>
-				</subreportParameter>
-				<subreportParameter name="addressLabel">
-					<subreportParameterExpression><![CDATA["Employer's Address"]]></subreportParameterExpression>
-				</subreportParameter>
-				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySSPDetails/Address/Answer")]]></dataSourceExpression>
-				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_addressForNestedReports.jasper"]]></subreportExpression>
-			</subreport>
+				<textFieldExpression><![CDATA[$F{directPayHowOftenPaidOtherQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="110" width="174" height="18" isRemoveLineWhenBlank="true" uuid="c63ffb3e-898d-4fd3-8a91-5996f832938f">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{directPayHowOftenPaidOtherAnswer}]]></textFieldExpression>
+			</textField>
 		</band>
-		<band height="95" splitType="Immediate">
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="39a51b43-4cf7-4e12-a63d-a0127684aefc" positionType="Float" x="0" y="1" width="392" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{otherMoneySPQuestion}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="8e5b4a39-7fb9-4a3f-95d4-8cd9c55a7249" style="Answer" positionType="Float" x="420" y="1" width="174" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{otherMoneySPAnswer}]]></textFieldExpression>
-			</textField>
+		<band height="128">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<printWhenExpression><![CDATA[$F{paidAnyOtherAnswer}=="Yes"]]></printWhenExpression>
 			<staticText>
-				<reportElement uuid="1960d53e-5965-438f-93b4-1da82e3f11f9" positionType="Float" x="0" y="19" width="594" height="1"/>
-				<textElement/>
-				<text><![CDATA[]]></text>
+				<reportElement style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="594" height="20" isRemoveLineWhenBlank="true" uuid="d8b192d7-788b-476b-bb7b-0d92e375078c">
+					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourAccounts"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Any other income, eg rental income]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="b768d1a4-4cf0-4bf1-a700-b1df02712cca" positionType="Float" x="0" y="20" width="392" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{otherMoneySPAnswer}.equals("Yes")]]></printWhenExpression>
+				<reportElement positionType="Float" x="0" y="20" width="392" height="18" isRemoveLineWhenBlank="true" uuid="c8978e41-34fa-47a8-a77c-e4e37d15b368">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{otherMoneySPPaymentAmountQuestion}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{anyOtherPayQuestion}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="2156bb53-9ae4-4663-a71b-abdf4a2ab29f" style="Answer" positionType="Float" x="420" y="20" width="174" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{otherMoneySPAnswer}.equals("Yes")]]></printWhenExpression>
-				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{otherMoneySPPaymentAmountAmount}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement uuid="11a8975b-98f6-4b44-93e7-f48c617e6548" positionType="Float" x="0" y="38" width="594" height="1"/>
-				<textElement/>
-				<text><![CDATA[]]></text>
-			</staticText>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="c081e130-794f-485f-a8b7-5de9464d62b6" positionType="Float" x="0" y="39" width="392" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{otherMoneySPAnswer}.equals("Yes")]]></printWhenExpression>
-				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{otherMoneySPPaymentFrequencyQuestion}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="27eba973-7502-486b-a601-b7b19b5ce18e" style="Answer" positionType="Float" x="420" y="39" width="174" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{otherMoneySPAnswer}.equals("Yes")]]></printWhenExpression>
-				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{otherMoneySPPaymentFrequencyAnswer}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="cc35ed85-4dea-46b3-8685-7b854653e29e" style="Answer" positionType="Float" x="420" y="57" width="174" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{otherMoneySPAnswer}.equals("Yes")]]></printWhenExpression>
-				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{otherMoneySPPaymentFrequencyAnswer}=="Other" ? $F{otherMoneySPPaymentFrequencyOther} : ""]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement uuid="4e9d2407-c617-4322-bd2f-db7ffc60b458" positionType="Float" x="0" y="75" width="594" height="1"/>
-				<textElement/>
-				<text><![CDATA[]]></text>
-			</staticText>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="0dbaa7c2-f7d9-4344-b330-7d45ee76ccc2" positionType="Float" x="0" y="76" width="392" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{otherMoneySPAnswer}.equals("Yes")]]></printWhenExpression>
+				<reportElement style="Answer" positionType="Float" x="420" y="20" width="174" height="18" isRemoveLineWhenBlank="true" uuid="609fcd47-2ce5-4107-9e15-d81db8789779">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{otherMoneySPEmployerNameQuestionLabel}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{anyOtherPayAnswer}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="5e9d566e-7099-43fc-a64d-6c3c7883343a" style="Answer" positionType="Float" x="420" y="76" width="174" height="18" isRemoveLineWhenBlank="true">
-					<printWhenExpression><![CDATA[$F{otherMoneySPAnswer}.equals("Yes")]]></printWhenExpression>
-				</reportElement>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{otherMoneySPEmployerNameAnswer}]]></textFieldExpression>
-			</textField>
-			<subreport>
-				<reportElement uuid="35137a21-8cdc-4abb-8133-c3754e88b753" positionType="Float" x="0" y="94" width="595" height="1" isRemoveLineWhenBlank="true"/>
-				<subreportParameter name="SUBREPORT_DIR">
-					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
-				</subreportParameter>
-				<subreportParameter name="TEMPLATE_DIR">
-					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
-				</subreportParameter>
-				<subreportParameter name="postCode">
-					<subreportParameterExpression><![CDATA["Employer's Postcode"]]></subreportParameterExpression>
-				</subreportParameter>
-				<subreportParameter name="addressLabel">
-					<subreportParameterExpression><![CDATA["Employer's Address"]]></subreportParameterExpression>
-				</subreportParameter>
-				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySPDetails/Address/Answer")]]></dataSourceExpression>
-				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_addressForNestedReports.jasper"]]></subreportExpression>
-			</subreport>
 		</band>
 	</detail>
 </jasperReport>
