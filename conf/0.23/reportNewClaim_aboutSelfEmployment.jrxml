@@ -101,13 +101,13 @@
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SelfEmployment/PensionExpenses/Expense/Answer]]></fieldDescription>
 	</field>
 	<field name="AboutEmploymentAdditionaInfoQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/EmploymentAdditionalInfo/QuestionLabel]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/EmploymentAdditionalInfo/QuestionLabel]]></fieldDescription>
 	</field>
 	<field name="AboutEmploymentAdditionaInfoAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/EmploymentAdditionalInfo/Answer]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/EmploymentAdditionalInfo/Answer]]></fieldDescription>
 	</field>
 	<field name="AboutEmploymentAdditionaInfoOther" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/EmploymentAdditionalInfo/Other]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/EmploymentAdditionalInfo/Other]]></fieldDescription>
 	</field>
 	<background>
 		<band splitType="Stretch"/>
