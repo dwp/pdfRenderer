@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 5.6.1.final using JasperReports Library version 5.6.1  -->
-<!-- 2016-04-04T12:46:09 -->
+<!-- 2016-04-07T13:33:57 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYourPartner" language="groovy" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="2c76a7f8-deb9-45af-83f2-c12559d20c72">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
@@ -17,88 +17,88 @@
 		<![CDATA[/]]>
 	</queryString>
 	<field name="haveBeenSelfEmployedQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployed/QuestionLabel]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SelfEmployed/QuestionLabel]]></fieldDescription>
 	</field>
 	<field name="haveBeenSelfEmployedAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployed/Answer]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SelfEmployed/Answer]]></fieldDescription>
 	</field>
 	<field name="selfEmployedNowQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/SelfEmployedNow/QuestionLabel]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SelfEmployment/SelfEmployedNow/QuestionLabel]]></fieldDescription>
 	</field>
 	<field name="selfEmployedNowAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/SelfEmployedNow/Answer]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SelfEmployment/SelfEmployedNow/Answer]]></fieldDescription>
 	</field>
 	<field name="selfEmployedMoreThanYearAgoQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/MoreThanYearAgo/QuestionLabel]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SelfEmployment/MoreThanYearAgo/QuestionLabel]]></fieldDescription>
 	</field>
 	<field name="selfEmployedMoreThanYearAgoAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/MoreThanYearAgo/Answer]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SelfEmployment/MoreThanYearAgo/Answer]]></fieldDescription>
 	</field>
 	<field name="selfEmployedStartedQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/DateStarted/QuestionLabel]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SelfEmployment/DateStarted/QuestionLabel]]></fieldDescription>
 	</field>
 	<field name="selfEmployedStartedAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/DateStarted/Answer]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SelfEmployment/DateStarted/Answer]]></fieldDescription>
 	</field>
 	<field name="selfEmployedEndedQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/DateEnded/QuestionLabel]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SelfEmployment/DateEnded/QuestionLabel]]></fieldDescription>
 	</field>
 	<field name="selfEmployedEndedAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/DateEnded/Answer]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SelfEmployment/DateEnded/Answer]]></fieldDescription>
 	</field>
 	<field name="selfEmployedGotAccountsQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/GotAccounts/QuestionLabel]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SelfEmployment/GotAccounts/QuestionLabel]]></fieldDescription>
 	</field>
 	<field name="selfEmployedGotAccountsAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/GotAccounts/Answer]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SelfEmployment/GotAccounts/Answer]]></fieldDescription>
 	</field>
 	<field name="knowTradingYearQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/KnowTradingYear/QuestionLabel]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SelfEmployment/KnowTradingYear/QuestionLabel]]></fieldDescription>
 	</field>
 	<field name="knowTradingYearAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/KnowTradingYear/Answer]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SelfEmployment/KnowTradingYear/Answer]]></fieldDescription>
 	</field>
 	<field name="tradingYearStartQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/TradingYearStart/QuestionLabel]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SelfEmployment/TradingYearStart/QuestionLabel]]></fieldDescription>
 	</field>
 	<field name="tradingYearStartAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/TradingYearStart/Answer]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SelfEmployment/TradingYearStart/Answer]]></fieldDescription>
 	</field>
 	<field name="paidMoneyYetQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/PaidMoneyYet/QuestionLabel]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SelfEmployment/PaidMoneyYet/QuestionLabel]]></fieldDescription>
 	</field>
 	<field name="paidMoneyYetAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/PaidMoneyYet/Answer]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SelfEmployment/PaidMoneyYet/Answer]]></fieldDescription>
 	</field>
 	<field name="paidMoneyDateQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/PaidMoneyDate/QuestionLabel]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SelfEmployment/PaidMoneyDate/QuestionLabel]]></fieldDescription>
 	</field>
 	<field name="paidMoneyDateAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/PaidMoneyDate/Answer]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SelfEmployment/PaidMoneyDate/Answer]]></fieldDescription>
 	</field>
 	<field name="PaidForPensionQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/PaidForPension/QuestionLabel]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SelfEmployment/PaidForPension/QuestionLabel]]></fieldDescription>
 	</field>
 	<field name="PaidForPensionAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/PaidForPension/Answer]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SelfEmployment/PaidForPension/Answer]]></fieldDescription>
 	</field>
 	<field name="PaidForJobExpensesQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/PaidForJobExpenses/QuestionLabel]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SelfEmployment/PaidForJobExpenses/QuestionLabel]]></fieldDescription>
 	</field>
 	<field name="PaidForJobExpensesAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/PaidForJobExpenses/Answer]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SelfEmployment/PaidForJobExpenses/Answer]]></fieldDescription>
 	</field>
 	<field name="JobExpensesQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/JobExpenses/Expense/QuestionLabel]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SelfEmployment/JobExpenses/Expense/QuestionLabel]]></fieldDescription>
 	</field>
 	<field name="JobExpensesAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/JobExpenses/Expense/Answer]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SelfEmployment/JobExpenses/Expense/Answer]]></fieldDescription>
 	</field>
 	<field name="PensionExpensesQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/PensionExpenses/Expense/QuestionLabel]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SelfEmployment/PensionExpenses/Expense/QuestionLabel]]></fieldDescription>
 	</field>
 	<field name="PensionExpensesAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployment/PensionExpenses/Expense/Answer]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SelfEmployment/PensionExpenses/Expense/Answer]]></fieldDescription>
 	</field>
 	<field name="AboutEmploymentAdditionaInfoQuestion" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/EmploymentAdditionalInfo/QuestionLabel]]></fieldDescription>
