@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 5.6.1.final using JasperReports Library version 5.6.1  -->
-<!-- 2016-03-21T11:01:52 -->
+<!-- 2016-04-08T11:25:53 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="560" pageHeight="842" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.366026910730141"/>
 	<property name="ireport.x" value="0"/>
@@ -135,16 +135,16 @@
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Cared35Hours/Answer]]></fieldDescription>
 	</field>
 	<field name="EmployedQuestionLabel" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Employed/QuestionLabel]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/Employed/QuestionLabel]]></fieldDescription>
 	</field>
 	<field name="EmployedAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Employed/Answer]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/Employed/Answer]]></fieldDescription>
 	</field>
 	<field name="SelfEmployedQuestionLabel" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployed/QuestionLabel]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SelfEmployed/QuestionLabel]]></fieldDescription>
 	</field>
 	<field name="SelfEmployedAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployed/Answer]]></fieldDescription>
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim//Incomes/SelfEmployed/Answer]]></fieldDescription>
 	</field>
 	<field name="EducationQuestionLabel" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/CourseOfEducation/QuestionLabel]]></fieldDescription>
@@ -221,17 +221,35 @@
 	<field name="CourseOfEducationAnswer" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/CourseOfEducation/Answer]]></fieldDescription>
 	</field>
-	<field name="OtherMoneySSPQuestionLabel" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySSP/QuestionLabel]]></fieldDescription>
+	<field name="OtherMoneySickPayQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SickPayment/QuestionLabel]]></fieldDescription>
 	</field>
-	<field name="OtherMoneySSPAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySSP/Answer]]></fieldDescription>
+	<field name="OtherMoneySickPayAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/SickPayment/Answer]]></fieldDescription>
 	</field>
-	<field name="OtherMoneySPQuestionLabel" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySP/QuestionLabel]]></fieldDescription>
+	<field name="OtherMoneyPatMatQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/PatMatAdopPayment/QuestionLabel]]></fieldDescription>
 	</field>
-	<field name="OtherMoneySPAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoneySP/Answer]]></fieldDescription>
+	<field name="OtherMoneyPatMatAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/PatMatAdopPayment/Answer]]></fieldDescription>
+	</field>
+	<field name="OtherMoneyFosterPayQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/FosteringPayment/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="OtherMoneyFosterPayAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/FosteringPayment/Answer]]></fieldDescription>
+	</field>
+	<field name="OtherMoneyDirectPayQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/DirectPayment/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="OtherMoneyDirectPayAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/DirectPayment/Answer]]></fieldDescription>
+	</field>
+	<field name="OtherMoneyAnyOtherPayQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/AnyOtherPayment/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="OtherMoneyAnyOtherPayAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/AnyOtherPayment/Answer]]></fieldDescription>
 	</field>
 	<field name="EEAWorkingInsuranceAnswer" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/EEA/EEAWorkingInsurance/Answer]]></fieldDescription>
@@ -336,7 +354,7 @@
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/QualifyingBenefit/Answer]]></fieldDescription>
 	</field>
 	<field name="EmploymentAdditionalInfoAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[DWPBody/DWPCATransaction/DWPCAClaim/EmploymentAdditionalInfo/Answer]]></fieldDescription>
+		<fieldDescription><![CDATA[DWPBody/DWPCATransaction/DWPCAClaim/Incomes/EmploymentAdditionalInfo/Answer]]></fieldDescription>
 	</field>
 	<field name="ConsentAnswer" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Consents/Consent/Answer]]></fieldDescription>
@@ -821,12 +839,12 @@
 				<text><![CDATA[Next Action]]></text>
 			</staticText>
 		</band>
-		<band height="318" splitType="Immediate">
+		<band height="372" splitType="Immediate">
 			<property name="local_mesure_unitheight" value="pixel"/>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<printWhenExpression><![CDATA[$F{AssistedDecisionRecommendedAction}.contains("show table")]]></printWhenExpression>
 			<frame>
-				<reportElement positionType="Float" x="0" y="0" width="560" height="318" isRemoveLineWhenBlank="true" uuid="77d199bf-1cc8-4b67-b300-42adcd92df38">
+				<reportElement positionType="Float" x="0" y="0" width="560" height="372" isRemoveLineWhenBlank="true" uuid="77d199bf-1cc8-4b67-b300-42adcd92df38">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -1079,7 +1097,7 @@
 					<reportElement positionType="Float" x="0" y="198" width="356" height="18" isRemoveLineWhenBlank="true" uuid="b632aa97-0a59-4952-9b22-7c0b4a85c0af">
 						<property name="local_mesure_unity" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-						<printWhenExpression><![CDATA[$F{OtherMoneySSPAnswer}.equalsIgnoreCase("Yes")]]></printWhenExpression>
+						<printWhenExpression><![CDATA[$F{OtherMoneySickPayAnswer}.equalsIgnoreCase("Yes")]]></printWhenExpression>
 					</reportElement>
 					<box>
 						<pen lineWidth="0.5"/>
@@ -1096,7 +1114,7 @@
 						<property name="local_mesure_unity" value="pixel"/>
 						<property name="local_mesure_unitx" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-						<printWhenExpression><![CDATA[$F{OtherMoneySSPAnswer}.equalsIgnoreCase("Yes")]]></printWhenExpression>
+						<printWhenExpression><![CDATA[$F{OtherMoneySickPayAnswer}.equalsIgnoreCase("Yes")]]></printWhenExpression>
 					</reportElement>
 					<box>
 						<pen lineWidth="0.5"/>
@@ -1106,13 +1124,13 @@
 						<rightPen lineWidth="0.5"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle"/>
-					<textFieldExpression><![CDATA[($F{OtherMoneySSPAnswer}.equalsIgnoreCase("Yes") ? "Yes" : "No")]]></textFieldExpression>
+					<textFieldExpression><![CDATA[($F{OtherMoneySickPayAnswer}.equalsIgnoreCase("Yes") ? "Yes" : "No")]]></textFieldExpression>
 				</textField>
 				<staticText>
 					<reportElement positionType="Float" x="0" y="216" width="356" height="18" isRemoveLineWhenBlank="true" uuid="0b856e39-b61f-412c-ba23-5a99c5a4e060">
 						<property name="local_mesure_unity" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-						<printWhenExpression><![CDATA[$F{OtherMoneySPAnswer}.equalsIgnoreCase("Yes")]]></printWhenExpression>
+						<printWhenExpression><![CDATA[$F{OtherMoneyPatMatAnswer}.equalsIgnoreCase("Yes")]]></printWhenExpression>
 					</reportElement>
 					<box>
 						<pen lineWidth="0.5"/>
@@ -1130,7 +1148,7 @@
 						<property name="local_mesure_unitx" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-						<printWhenExpression><![CDATA[$F{OtherMoneySPAnswer}.equalsIgnoreCase("Yes")]]></printWhenExpression>
+						<printWhenExpression><![CDATA[$F{OtherMoneyPatMatAnswer}.equalsIgnoreCase("Yes")]]></printWhenExpression>
 					</reportElement>
 					<box>
 						<pen lineWidth="0.5"/>
@@ -1140,10 +1158,112 @@
 						<rightPen lineWidth="0.5"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle"/>
-					<textFieldExpression><![CDATA[($F{OtherMoneySPAnswer}.equalsIgnoreCase("Yes") ? "Yes" : "No")]]></textFieldExpression>
+					<textFieldExpression><![CDATA[($F{OtherMoneyPatMatAnswer}.equalsIgnoreCase("Yes") ? "Yes" : "No")]]></textFieldExpression>
 				</textField>
 				<staticText>
-					<reportElement positionType="Float" x="0" y="270" width="356" height="18" isRemoveLineWhenBlank="true" uuid="e896e00b-0da9-477d-bc71-accbf264bb12">
+					<reportElement positionType="Float" x="0" y="234" width="356" height="18" isRemoveLineWhenBlank="true" uuid="0b856e39-b61f-412c-ba23-5a99c5a4e060">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<printWhenExpression><![CDATA[$F{OtherMoneyFosterPayAnswer}.equalsIgnoreCase("Yes")]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement verticalAlignment="Middle"/>
+					<text><![CDATA[  Fostering Allowance]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="356" y="234" width="204" height="18" isRemoveLineWhenBlank="true" uuid="aa52bdd1-edfe-4c4a-9833-f4d03f46b751">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<printWhenExpression><![CDATA[$F{OtherMoneyFosterPayAnswer}.equalsIgnoreCase("Yes")]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[($F{OtherMoneyFosterPayAnswer}.equalsIgnoreCase("Yes") ? "Yes" : "No")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="0" y="252" width="356" height="18" isRemoveLineWhenBlank="true" uuid="0b856e39-b61f-412c-ba23-5a99c5a4e060">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<printWhenExpression><![CDATA[$F{OtherMoneyDirectPayAnswer}.equalsIgnoreCase("Yes")]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement verticalAlignment="Middle"/>
+					<text><![CDATA[  Direct Payment]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="356" y="252" width="204" height="18" isRemoveLineWhenBlank="true" uuid="aa52bdd1-edfe-4c4a-9833-f4d03f46b751">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<printWhenExpression><![CDATA[$F{OtherMoneyDirectPayAnswer}.equalsIgnoreCase("Yes")]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[($F{OtherMoneyDirectPayAnswer}.equalsIgnoreCase("Yes") ? "Yes" : "No")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="0" y="270" width="356" height="18" isRemoveLineWhenBlank="true" uuid="0b856e39-b61f-412c-ba23-5a99c5a4e060">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<printWhenExpression><![CDATA[$F{OtherMoneyAnyOtherPayAnswer}.equalsIgnoreCase("Yes")]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement verticalAlignment="Middle"/>
+					<text><![CDATA[  Other Income]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="356" y="270" width="204" height="18" isRemoveLineWhenBlank="true" uuid="aa52bdd1-edfe-4c4a-9833-f4d03f46b751">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<printWhenExpression><![CDATA[$F{OtherMoneyAnyOtherPayAnswer}.equalsIgnoreCase("Yes")]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[($F{OtherMoneyAnyOtherPayAnswer}.equalsIgnoreCase("Yes") ? "Yes" : "No")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="0" y="324" width="356" height="18" isRemoveLineWhenBlank="true" uuid="e896e00b-0da9-477d-bc71-accbf264bb12">
 						<property name="local_mesure_unity" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 						<printWhenExpression><![CDATA[$F{welshAnswer}.equalsIgnoreCase("Yes")]]></printWhenExpression>
@@ -1159,7 +1279,7 @@
 					<text><![CDATA[  Welsh Comms]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
-					<reportElement positionType="Float" x="356" y="270" width="204" height="18" isRemoveLineWhenBlank="true" uuid="b9343c5b-77ab-48b9-8b45-0a2f7cb8860b">
+					<reportElement positionType="Float" x="356" y="324" width="204" height="18" isRemoveLineWhenBlank="true" uuid="b9343c5b-77ab-48b9-8b45-0a2f7cb8860b">
 						<property name="local_mesure_unity" value="pixel"/>
 						<property name="local_mesure_unitx" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
@@ -1176,7 +1296,7 @@
 					<textFieldExpression><![CDATA[($F{welshAnswer}.equalsIgnoreCase("Yes") ? "Yes" : "No")]]></textFieldExpression>
 				</textField>
 				<staticText>
-					<reportElement positionType="Float" x="0" y="252" width="356" height="18" isRemoveLineWhenBlank="true" uuid="fe4c1ca4-b49d-45c1-a39e-525b108c5816">
+					<reportElement positionType="Float" x="0" y="306" width="356" height="18" isRemoveLineWhenBlank="true" uuid="fe4c1ca4-b49d-45c1-a39e-525b108c5816">
 						<property name="local_mesure_unity" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 						<printWhenExpression><![CDATA[$F{additionalInformationAnswer}.equalsIgnoreCase("Yes")]]></printWhenExpression>
@@ -1192,7 +1312,7 @@
 					<text><![CDATA[  Additional Information]]></text>
 				</staticText>
 				<textField>
-					<reportElement positionType="Float" x="356" y="252" width="204" height="18" isRemoveLineWhenBlank="true" uuid="18f19c91-0639-48c0-bb00-3f880f3177f4">
+					<reportElement positionType="Float" x="356" y="306" width="204" height="18" isRemoveLineWhenBlank="true" uuid="18f19c91-0639-48c0-bb00-3f880f3177f4">
 						<property name="local_mesure_unity" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 						<printWhenExpression><![CDATA[$F{additionalInformationAnswer}.equalsIgnoreCase("Yes")]]></printWhenExpression>
@@ -1215,7 +1335,7 @@
 					<text><![CDATA[Claim Summary]]></text>
 				</staticText>
 				<staticText>
-					<reportElement positionType="Float" x="0" y="234" width="356" height="18" isRemoveLineWhenBlank="true" uuid="a0eb05ac-2731-4c14-a6f0-a80db2d32788">
+					<reportElement positionType="Float" x="0" y="288" width="356" height="18" isRemoveLineWhenBlank="true" uuid="a0eb05ac-2731-4c14-a6f0-a80db2d32788">
 						<property name="local_mesure_unity" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 						<printWhenExpression><![CDATA[$F{doYouHaveBankAccountAnswer}.equalsIgnoreCase("No")]]></printWhenExpression>
@@ -1231,7 +1351,7 @@
 					<text><![CDATA[  Bank Account]]></text>
 				</staticText>
 				<textField>
-					<reportElement positionType="Float" x="356" y="234" width="204" height="18" isRemoveLineWhenBlank="true" uuid="a34ef38f-4631-4226-852a-da2d9d445b22">
+					<reportElement positionType="Float" x="356" y="288" width="204" height="18" isRemoveLineWhenBlank="true" uuid="a34ef38f-4631-4226-852a-da2d9d445b22">
 						<property name="local_mesure_unity" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 						<printWhenExpression><![CDATA[$F{doYouHaveBankAccountAnswer}.equalsIgnoreCase("No")]]></printWhenExpression>
@@ -1281,7 +1401,7 @@
 					<textFieldExpression><![CDATA[$F{EmploymentAdditionalInfoAnswer}]]></textFieldExpression>
 				</textField>
 				<staticText>
-					<reportElement positionType="Float" x="0" y="288" width="356" height="18" isRemoveLineWhenBlank="true" uuid="b86d3bb6-d5d7-41ba-b0e7-b1917fef9119">
+					<reportElement positionType="Float" x="0" y="342" width="356" height="18" isRemoveLineWhenBlank="true" uuid="b86d3bb6-d5d7-41ba-b0e7-b1917fef9119">
 						<property name="local_mesure_unity" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 						<printWhenExpression><![CDATA[$F{ConsentAnswer}.equalsIgnoreCase("No")]]></printWhenExpression>
@@ -1297,7 +1417,7 @@
 					<text><![CDATA[  Consent]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
-					<reportElement positionType="Float" x="356" y="288" width="204" height="18" isRemoveLineWhenBlank="true" uuid="08523d4a-0960-4acd-88cd-ef02ae13b526">
+					<reportElement positionType="Float" x="356" y="342" width="204" height="18" isRemoveLineWhenBlank="true" uuid="08523d4a-0960-4acd-88cd-ef02ae13b526">
 						<property name="local_mesure_unity" value="pixel"/>
 						<property name="local_mesure_unitx" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
