@@ -242,6 +242,7 @@
 				<reportElement positionType="Float" x="0" y="20" width="392" height="18" isRemoveLineWhenBlank="true" uuid="61c7218b-715a-4359-9449-ee3c564dbe6f">
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="ssp-stillpaid-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{sickPayStillBeingPaidQuestion}]]></textFieldExpression>
 			</textField>
@@ -249,6 +250,7 @@
 				<reportElement style="Answer" positionType="Float" x="420" y="20" width="174" height="18" isRemoveLineWhenBlank="true" uuid="57e79dc7-f890-477f-831c-ab6a643652c4">
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="ssp-stillpaid-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{sickPayStillBeingPaidAnswer}]]></textFieldExpression>
 			</textField>
@@ -258,6 +260,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="ssp-lastpaid-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{sickPaylastPaidQuestion}]]></textFieldExpression>
 			</textField>
@@ -267,6 +270,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="ssp-lastpaid-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{sickPaylastPaidAnswer}]]></textFieldExpression>
 			</textField>
@@ -276,6 +280,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="ssp-amount-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{sickPayAmountQuestion}]]></textFieldExpression>
 			</textField>
@@ -285,6 +290,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="ssp-amount-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{sickPayAmountAnswer}]]></textFieldExpression>
 			</textField>
@@ -294,6 +300,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="ssp-whopaid-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{sickPayWhoPaidQuestion}]]></textFieldExpression>
 			</textField>
@@ -303,6 +310,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="ssp-whopaid-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{sickPayWhoPaidAnswer}]]></textFieldExpression>
 			</textField>
@@ -316,6 +324,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="ssp-howoften-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{sickPayHowOftenPaidQuestion}]]></textFieldExpression>
 			</textField>
@@ -325,6 +334,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="ssp-howoften-a"/>
 					<printWhenExpression><![CDATA[$F{sickPayHowOftenPaidAnswer}!="Other"]]></printWhenExpression>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{sickPayHowOftenPaidAnswer}]]></textFieldExpression>
@@ -335,6 +345,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="ssp-howoften-other"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{sickPayHowOftenPaidOtherAnswer}]]></textFieldExpression>
 			</textField>
@@ -358,6 +369,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="smp-paytype-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{patmatPayPaymentTypeQuestion}]]></textFieldExpression>
 			</textField>
@@ -367,6 +379,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="smp-paytype-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{patmatPayPaymentTypeAnswer}]]></textFieldExpression>
 			</textField>
@@ -374,6 +387,7 @@
 				<reportElement positionType="Float" x="0" y="38" width="392" height="18" isRemoveLineWhenBlank="true" uuid="c8978e41-34fa-47a8-a77c-e4e37d15b368">
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="smp-stillpaid-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{patmatPayStillBeingPaidQuestion}]]></textFieldExpression>
 			</textField>
@@ -381,6 +395,7 @@
 				<reportElement style="Answer" positionType="Float" x="420" y="38" width="174" height="18" isRemoveLineWhenBlank="true" uuid="609fcd47-2ce5-4107-9e15-d81db8789779">
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="smp-stillpaid-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{patmatPayStillBeingPaidAnswer}]]></textFieldExpression>
 			</textField>
@@ -390,6 +405,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="smp-lastpaid-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{patmatPaylastPaidQuestion}]]></textFieldExpression>
 			</textField>
@@ -399,6 +415,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="smp-lastpaid-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{patmatPaylastPaidAnswer}]]></textFieldExpression>
 			</textField>
@@ -408,6 +425,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="smp-amount-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{patmatPayAmountQuestion}]]></textFieldExpression>
 			</textField>
@@ -417,6 +435,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="smp-whopaid-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{patmatPayWhoPaidQuestion}]]></textFieldExpression>
 			</textField>
@@ -426,6 +445,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="smp-whopaid-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{patmatPayWhoPaidAnswer}]]></textFieldExpression>
 			</textField>
@@ -439,6 +459,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="smp-amount-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{patmatPayAmountAnswer}]]></textFieldExpression>
 			</textField>
@@ -448,6 +469,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="smp-howoften-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{patmatPayHowOftenPaidQuestion}]]></textFieldExpression>
 			</textField>
@@ -457,6 +479,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="smp-howoften-a"/>
 					<printWhenExpression><![CDATA[$F{patmatPayHowOftenPaidAnswer}!="Other"]]></printWhenExpression>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{patmatPayHowOftenPaidAnswer}]]></textFieldExpression>
@@ -467,6 +490,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="smp-howoften-other"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{patmatPayHowOftenPaidOtherAnswer}]]></textFieldExpression>
 			</textField>
@@ -490,6 +514,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="fost-paytype-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{fosterPayPaymentTypeQuestion}]]></textFieldExpression>
 			</textField>
@@ -499,6 +524,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="fost-paytype-a"/>
 					<printWhenExpression><![CDATA[$F{fosterPayPaymentTypeAnswer}!="Other"]]></printWhenExpression>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{fosterPayPaymentTypeAnswer}]]></textFieldExpression>
@@ -512,6 +538,7 @@
 					<property name="local_mesure_unitwidth" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="net.sf.jasperreports.export.html.id" value="fost-paytype-other"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{fosterPayPaymentTypeOtherAnswer}]]></textFieldExpression>
 			</textField>
@@ -523,6 +550,7 @@
 				<reportElement positionType="Float" x="0" y="38" width="392" height="18" isRemoveLineWhenBlank="true" uuid="c8978e41-34fa-47a8-a77c-e4e37d15b368">
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="fost-stillpaid-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{fosterPayStillBeingPaidQuestion}]]></textFieldExpression>
 			</textField>
@@ -530,6 +558,7 @@
 				<reportElement style="Answer" positionType="Float" x="420" y="38" width="174" height="18" isRemoveLineWhenBlank="true" uuid="609fcd47-2ce5-4107-9e15-d81db8789779">
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="fost-stillpaid-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{fosterPayStillBeingPaidAnswer}]]></textFieldExpression>
 			</textField>
@@ -539,6 +568,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="fost-lastpaid-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{fosterPaylastPaidQuestion}]]></textFieldExpression>
 			</textField>
@@ -548,6 +578,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="fost-lastpaid-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{fosterPaylastPaidAnswer}]]></textFieldExpression>
 			</textField>
@@ -557,6 +588,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="fost-amount-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{fosterPayAmountQuestion}]]></textFieldExpression>
 			</textField>
@@ -566,6 +598,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="fost-amount-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{fosterPayAmountAnswer}]]></textFieldExpression>
 			</textField>
@@ -575,6 +608,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="fost-whopaid-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{fosterPayWhoPaidQuestion}]]></textFieldExpression>
 			</textField>
@@ -584,6 +618,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="fost-whopaid-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{fosterPayWhoPaidAnswer}]]></textFieldExpression>
 			</textField>
@@ -597,6 +632,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="fost-howoften-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{fosterPayHowOftenPaidQuestion}]]></textFieldExpression>
 			</textField>
@@ -606,6 +642,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="fost-howoften-a"/>
 					<printWhenExpression><![CDATA[$F{fosterPayHowOftenPaidAnswer}!="Other"]]></printWhenExpression>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{fosterPayHowOftenPaidAnswer}]]></textFieldExpression>
@@ -616,6 +653,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="fost-howoften-other"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{fosterPayHowOftenPaidOtherAnswer}]]></textFieldExpression>
 			</textField>
@@ -637,6 +675,7 @@
 				<reportElement positionType="Float" x="0" y="20" width="392" height="18" isRemoveLineWhenBlank="true" uuid="c8978e41-34fa-47a8-a77c-e4e37d15b368">
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="dpay-stillpaid-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{directPayStillBeingPaidQuestion}]]></textFieldExpression>
 			</textField>
@@ -644,6 +683,7 @@
 				<reportElement style="Answer" positionType="Float" x="420" y="20" width="174" height="18" isRemoveLineWhenBlank="true" uuid="609fcd47-2ce5-4107-9e15-d81db8789779">
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="dpay-stillpaid-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{directPayStillBeingPaidAnswer}]]></textFieldExpression>
 			</textField>
@@ -653,6 +693,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="dpay-lastpaid-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{directPaylastPaidAnswer}]]></textFieldExpression>
 			</textField>
@@ -662,6 +703,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="dpay-lastpaid-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{directPaylastPaidQuestion}]]></textFieldExpression>
 			</textField>
@@ -671,6 +713,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="dpay-amount-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{directPayAmountQuestion}]]></textFieldExpression>
 			</textField>
@@ -680,6 +723,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="dpay-whopaid-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{directPayWhoPaidQuestion}]]></textFieldExpression>
 			</textField>
@@ -689,6 +733,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="dpay-whopaid-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{directPayWhoPaidAnswer}]]></textFieldExpression>
 			</textField>
@@ -702,6 +747,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="dpay-amount-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{directPayAmountAnswer}]]></textFieldExpression>
 			</textField>
@@ -711,6 +757,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="dpay-howoften-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{directPayHowOftenPaidQuestion}]]></textFieldExpression>
 			</textField>
@@ -720,6 +767,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="dpay-howoften-a"/>
 					<printWhenExpression><![CDATA[$F{directPayHowOftenPaidAnswer}!="Other"]]></printWhenExpression>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{directPayHowOftenPaidAnswer}]]></textFieldExpression>
@@ -730,6 +778,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="dpay-howoften-other"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{directPayHowOftenPaidOtherAnswer}]]></textFieldExpression>
 			</textField>
@@ -751,6 +800,7 @@
 				<reportElement positionType="Float" x="0" y="20" width="392" height="18" isRemoveLineWhenBlank="true" uuid="c8978e41-34fa-47a8-a77c-e4e37d15b368">
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="anyotherpay-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{anyOtherPayQuestion}]]></textFieldExpression>
 			</textField>
@@ -758,6 +808,7 @@
 				<reportElement style="Answer" positionType="Float" x="420" y="20" width="174" height="18" isRemoveLineWhenBlank="true" uuid="609fcd47-2ce5-4107-9e15-d81db8789779">
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="anyotherpay-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{anyOtherPayAnswer}]]></textFieldExpression>
 			</textField>
@@ -770,6 +821,7 @@
 				<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="c8978e41-34fa-47a8-a77c-e4e37d15b368">
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="otherpay-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{paidOtherQuestion}]]></textFieldExpression>
 			</textField>
@@ -777,6 +829,7 @@
 				<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="609fcd47-2ce5-4107-9e15-d81db8789779">
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="otherpay-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{paidOtherQuestionAnswer}]]></textFieldExpression>
 			</textField>
