@@ -144,11 +144,14 @@
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<printWhenExpression><![CDATA[$F{IsPartnerCareeAnswer}.equals("No") || $F{havePartnerAnswer}.equals("No")]]></printWhenExpression>
 			<textField>
-				<reportElement positionType="Float" x="0" y="0" width="392" height="18" uuid="a40e208f-de17-439e-92fe-f37ff23112be"/>
+				<reportElement positionType="Float" x="0" y="0" width="392" height="18" uuid="a40e208f-de17-439e-92fe-f37ff23112be">
+					<property name="net.sf.jasperreports.export.html.id" value="caree-title-q"/>
+				</reportElement>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeTitleQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="346b12e5-301a-4d95-8b9e-848cc0033523">
+					<property name="net.sf.jasperreports.export.html.id" value="caree-title-a"/>
 					<printWhenExpression><![CDATA[!$F{AboutCareYouProvideCareeTitleAnswer}.toLowerCase().contains("other")]]></printWhenExpression>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeTitleAnswer}]]></textFieldExpression>
@@ -163,6 +166,7 @@
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="caree-title-a"/>
 					<printWhenExpression><![CDATA[$F{AboutCareYouProvideCareeTitleAnswer}.toLowerCase().contains("other")]]></printWhenExpression>
 				</reportElement>
 				<textElement>
@@ -181,6 +185,7 @@
 				<reportElement positionType="Float" x="0" y="19" width="392" height="18" isRemoveLineWhenBlank="true" uuid="dc9e637e-86be-4f52-8118-56b591c236b8">
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="caree-othernames-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeOtherNamesQuestionLabel}]]></textFieldExpression>
 			</textField>
@@ -188,6 +193,7 @@
 				<reportElement style="Answer" positionType="Float" x="420" y="19" width="174" height="18" isRemoveLineWhenBlank="true" uuid="8e02da51-c788-4d38-a074-3a564548d64b">
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="caree-othernames-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeOtherNamesAnswer}]]></textFieldExpression>
 			</textField>
@@ -202,6 +208,7 @@
 				<reportElement positionType="Float" x="0" y="38" width="392" height="18" isRemoveLineWhenBlank="true" uuid="434d76a4-e064-4fb3-a0d4-e98c0676971e">
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="caree-middlenames-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{CareeMiddleNamesQuestionLabel}]]></textFieldExpression>
 			</textField>
@@ -209,6 +216,7 @@
 				<reportElement style="Answer" positionType="Float" x="420" y="38" width="174" height="18" isRemoveLineWhenBlank="true" uuid="56568a05-f831-4ba1-bcda-01fbe80ca6c2">
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="caree-middlenames-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{CareeMiddleNamesAnswer}]]></textFieldExpression>
 			</textField>
@@ -223,6 +231,7 @@
 				<reportElement positionType="Float" x="0" y="57" width="392" height="18" uuid="e8dbed26-f9a1-465f-b9db-2a77a89c5aea">
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="caree-surname-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeSurnameQuestionLabel}]]></textFieldExpression>
 			</textField>
@@ -230,6 +239,7 @@
 				<reportElement style="Answer" positionType="Float" x="420" y="57" width="174" height="18" isRemoveLineWhenBlank="true" uuid="1a7a66a0-3b0e-4e89-9537-6af0052356ac">
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="caree-surname-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeSurnameAnswer}]]></textFieldExpression>
 			</textField>
@@ -244,6 +254,7 @@
 				<reportElement positionType="Float" x="0" y="76" width="392" height="18" isRemoveLineWhenBlank="true" uuid="a0012086-cd9c-437b-ac4f-1b5c97c1b2e6">
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="caree-nino-q"/>
 					<printWhenExpression><![CDATA[!$F{AboutCareYouProvideCareeNationalInsuranceNumberAnswer}.isEmpty()]]></printWhenExpression>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeNationalInsuranceNumberQuestionLabel}]]></textFieldExpression>
@@ -252,6 +263,7 @@
 				<reportElement style="Answer" positionType="Float" x="420" y="76" width="174" height="18" isRemoveLineWhenBlank="true" uuid="62d9252a-370e-49c9-9ddf-120521e1e9e2">
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="caree-nino-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeNationalInsuranceNumberAnswer}]]></textFieldExpression>
 			</textField>
@@ -259,6 +271,7 @@
 				<reportElement positionType="Float" x="0" y="94" width="392" height="18" uuid="96e23d15-1475-4283-86d9-254a5a2a7d60">
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="caree-dob-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeDateOfBirthQuestionLabel}]]></textFieldExpression>
 			</textField>
@@ -266,6 +279,7 @@
 				<reportElement style="Answer" positionType="Float" x="420" y="94" width="174" height="18" isRemoveLineWhenBlank="true" uuid="fc2efcd3-5c61-480d-b8e1-8f6ca189deea">
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="caree-dob-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeDateOfBirthAnswer}]]></textFieldExpression>
 			</textField>
@@ -274,11 +288,15 @@
 			<property name="local_mesure_unitheight" value="pixel"/>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="d4744d43-d6c7-4045-b2a5-b062d711e814"/>
+				<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="d4744d43-d6c7-4045-b2a5-b062d711e814">
+					<property name="net.sf.jasperreports.export.html.id" value="caree-sameaddress-q"/>
+				</reportElement>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeLiveSameAddressQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="718738d6-adca-4d1e-bc8f-78362a787b96"/>
+				<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="718738d6-adca-4d1e-bc8f-78362a787b96">
+					<property name="net.sf.jasperreports.export.html.id" value="caree-sameaddress-a"/>
+				</reportElement>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeLiveSameAddressAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
@@ -287,6 +305,7 @@
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="caree-relation-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeRelationshipToClaimantQuestion}]]></textFieldExpression>
 			</textField>
@@ -295,6 +314,7 @@
 					<property name="local_mesure_unitx" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="caree-relation-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeRelationshipToClaimantAnswer}]]></textFieldExpression>
 			</textField>
@@ -324,11 +344,15 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_addressForNestedReports.jasper"]]></subreportExpression>
 			</subreport>
 			<textField isBlankWhenNull="true">
-				<reportElement positionType="Float" x="0" y="22" width="392" height="18" isRemoveLineWhenBlank="true" uuid="f9fcd57d-9f3a-414a-9787-9151c5d61c71"/>
+				<reportElement positionType="Float" x="0" y="22" width="392" height="18" isRemoveLineWhenBlank="true" uuid="f9fcd57d-9f3a-414a-9787-9151c5d61c71">
+					<property name="net.sf.jasperreports.export.html.id" value="caree-phone-q"/>
+				</reportElement>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeDayTimeTelephoneNumberQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="420" y="22" width="174" height="18" isRemoveLineWhenBlank="true" uuid="1b516ca2-63d3-4238-9a9d-af54229c119d"/>
+				<reportElement style="Answer" positionType="Float" x="420" y="22" width="174" height="18" isRemoveLineWhenBlank="true" uuid="1b516ca2-63d3-4238-9a9d-af54229c119d">
+					<property name="net.sf.jasperreports.export.html.id" value="caree-phone-a"/>
+				</reportElement>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeDayTimeTelephoneNumberAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
@@ -344,17 +368,23 @@
 				<text><![CDATA[More about the care you provide]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement positionType="Float" x="0" y="21" width="392" height="18" isRemoveLineWhenBlank="true" uuid="96e328c6-ee58-4244-9db5-3f7f90196bb8"/>
+				<reportElement positionType="Float" x="0" y="21" width="392" height="18" isRemoveLineWhenBlank="true" uuid="96e328c6-ee58-4244-9db5-3f7f90196bb8">
+					<property name="net.sf.jasperreports.export.html.id" value="caree-35hours-q"/>
+				</reportElement>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeCared35HoursQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="420" y="21" width="174" height="18" isRemoveLineWhenBlank="true" uuid="afcdb5c2-bad5-4e6c-b9bb-bff1dd057fae"/>
+				<reportElement style="Answer" positionType="Float" x="420" y="21" width="174" height="18" isRemoveLineWhenBlank="true" uuid="afcdb5c2-bad5-4e6c-b9bb-bff1dd057fae">
+					<property name="net.sf.jasperreports.export.html.id" value="caree-35hours-a"/>
+				</reportElement>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeCared35HoursAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
 		<band height="39">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="662d9f0a-3e4c-48d9-bc72-d0c8001cc579"/>
+				<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="662d9f0a-3e4c-48d9-bc72-d0c8001cc579">
+					<property name="net.sf.jasperreports.export.html.id" value="caree-35hoursbefore-q"/>
+				</reportElement>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeCared35HoursBeforeQuestion}]]></textFieldExpression>
 			</textField>
 			<staticText>
@@ -362,15 +392,21 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement positionType="Float" x="0" y="19" width="392" height="18" isRemoveLineWhenBlank="true" uuid="7f34ebef-d770-48a5-8c8a-37e63ad553ae"/>
+				<reportElement positionType="Float" x="0" y="19" width="392" height="18" isRemoveLineWhenBlank="true" uuid="7f34ebef-d770-48a5-8c8a-37e63ad553ae">
+					<property name="net.sf.jasperreports.export.html.id" value="caree-startdate-q"/>
+				</reportElement>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeDateStartCaringQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="420" y="19" width="174" height="18" isRemoveLineWhenBlank="true" uuid="84b9ee90-aaf5-4962-a85c-bbfe277d7318"/>
+				<reportElement style="Answer" positionType="Float" x="420" y="19" width="174" height="18" isRemoveLineWhenBlank="true" uuid="84b9ee90-aaf5-4962-a85c-bbfe277d7318">
+					<property name="net.sf.jasperreports.export.html.id" value="caree-startdate-a"/>
+				</reportElement>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeDateStartCaringAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="bd95bc79-cf26-49ce-8996-1d11bf56dcf0"/>
+				<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="bd95bc79-cf26-49ce-8996-1d11bf56dcf0">
+					<property name="net.sf.jasperreports.export.html.id" value="caree-35hoursbefore-a"/>
+				</reportElement>
 				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeCared35HoursBeforeAnswer}]]></textFieldExpression>
 			</textField>
 		</band>
