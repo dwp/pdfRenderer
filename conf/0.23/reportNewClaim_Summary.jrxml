@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 5.6.1.final using JasperReports Library version 5.6.1  -->
-<!-- 2016-04-11T11:33:13 -->
+<!-- 2016-04-15T13:18:33 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" language="groovy" pageWidth="560" pageHeight="842" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.366026910730141"/>
 	<property name="ireport.x" value="0"/>
@@ -367,6 +367,12 @@
 	</field>
 	<field name="OriginTag" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/Origin]]></fieldDescription>
+	</field>
+	<field name="CaringStartDateQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/DateStartCaring/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="CaringStartDateAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/DateStartCaring/Answer]]></fieldDescription>
 	</field>
 	<pageHeader>
 		<band height="63" splitType="Immediate">
@@ -933,6 +939,27 @@
 				<text><![CDATA[Claim Date]]></text>
 			</staticText>
 		</band>
+		<band height="37" splitType="Immediate">
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="18" width="367" height="18" isRemoveLineWhenBlank="true" uuid="984cf590-bf0c-4c23-bc4b-be9d40d4fb00">
+					<property name="net.sf.jasperreports.export.html.id" value="summary-caring-starting-date-q"/>
+				</reportElement>
+				<textFieldExpression><![CDATA["Caring start date"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="367" y="18" width="180" height="18" isRemoveLineWhenBlank="true" uuid="3fb16258-db61-4296-bdb3-0848513491ce">
+					<property name="net.sf.jasperreports.export.html.id" value="summary-caring-starting-dat-a"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{CaringStartDateAnswer} ? $F{CaringStartDateAnswer} : $F{ClaimDateAnswer}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="SubHeadingClaim" x="0" y="0" width="560" height="18" uuid="02d46fba-cc2b-476f-9355-3d434fb7678f"/>
+				<textElement markup="styled">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Caring start date]]></text>
+			</staticText>
+		</band>
 		<band height="41" splitType="Immediate">
 			<property name="local_mesure_unitheight" value="pixel"/>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -966,8 +993,7 @@
 					<property name="net.sf.jasperreports.export.html.id" value="summary-qb-q"/>
 				</reportElement>
 				<staticText>
-					<reportElement positionType="Float" x="0" y="18" width="356" height="18" isRemoveLineWhenBlank="true" uuid="a3fda3d7-37fc-4369-8a30-97f41b0393b0">
-					</reportElement>
+					<reportElement positionType="Float" x="0" y="18" width="356" height="18" isRemoveLineWhenBlank="true" uuid="a3fda3d7-37fc-4369-8a30-97f41b0393b0"/>
 					<box>
 						<pen lineWidth="0.5"/>
 						<topPen lineWidth="0.5"/>
@@ -1475,8 +1501,7 @@
 					<textFieldExpression><![CDATA[($F{additionalInformationAnswer}.equalsIgnoreCase("Yes") ? "Yes" : "No")]]></textFieldExpression>
 				</textField>
 				<staticText>
-					<reportElement style="SubHeadingClaim" x="0" y="0" width="560" height="18" uuid="2ed48975-bda6-418b-b6f9-80103eaa1a2e">
-					</reportElement>
+					<reportElement style="SubHeadingClaim" x="0" y="0" width="560" height="18" uuid="2ed48975-bda6-418b-b6f9-80103eaa1a2e"/>
 					<textElement markup="styled">
 						<font isBold="true"/>
 					</textElement>
