@@ -73,32 +73,41 @@
 		</band>
 		<band height="140" splitType="Immediate">
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="fa94d49d-1eab-4c18-a6df-70b5c3ec49b8" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="fa94d49d-1eab-4c18-a6df-70b5c3ec49b8" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="evidence-address-q"/>
+				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{AddressLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="ca47f04c-5f78-4523-80b3-0fad318b0849" style="Answer" positionType="Float" x="0" y="18" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="ca47f04c-5f78-4523-80b3-0fad318b0849" style="Answer" positionType="Float" x="0" y="18" width="392" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="evidence-address1"/>
+				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{EvidenceListAddressLine1}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="dcfdbee9-72c3-4992-a8ec-0909fc2c0a6a" style="Answer" positionType="Float" x="0" y="36" width="392" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
+				<reportElement uuid="dcfdbee9-72c3-4992-a8ec-0909fc2c0a6a" style="Answer" positionType="Float" x="0" y="36" width="392" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="evidence-address2"/>
+				</reportElement>
 				<textFieldExpression><![CDATA[$F{EvidenceListAddressLine2}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="a57c785b-5469-4919-a0e5-823b36f92ff0" style="Answer" positionType="Float" x="0" y="54" width="392" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
+				<reportElement uuid="a57c785b-5469-4919-a0e5-823b36f92ff0" style="Answer" positionType="Float" x="0" y="54" width="392" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="evidence-address3"/>
+				</reportElement>
 				<textFieldExpression><![CDATA[$F{EvidenceListAddressLine3}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="e470daa1-453e-48a4-9a5d-9bc30257fe19" style="Answer" positionType="Float" x="0" y="72" width="392" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
+				<reportElement uuid="e470daa1-453e-48a4-9a5d-9bc30257fe19" style="Answer" positionType="Float" x="0" y="72" width="392" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="evidence-postcode"/>
+				</reportElement>
 				<textFieldExpression><![CDATA[$F{EvidenceListAddressPostcode}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="fe0558c0-060a-461d-892b-3d613bcb38d7" positionType="Float" x="1" y="119" width="593" height="21"/>
+				<reportElement uuid="fe0558c0-060a-461d-892b-3d613bcb38d7" positionType="Float" x="1" y="119" width="593" height="21">
+					<property name="net.sf.jasperreports.export.html.id" value="evidence-endofprint"/>
+				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Bottom">
 					<font isBold="true"/>
 				</textElement>
