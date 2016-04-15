@@ -32,22 +32,29 @@
 	<detail>
 		<band height="67" splitType="Immediate">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="5f5b2185-9b5f-4d1e-858b-24852cd2757e" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement/>
+				<reportElement uuid="5f5b2185-9b5f-4d1e-858b-24852cd2757e" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="consent-q"/>
+				</reportElement>
 				<textFieldExpression><![CDATA[$F{ConsentQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="8a91fad2-9d40-45d2-84be-d2e058a1e540" style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="8a91fad2-9d40-45d2-84be-d2e058a1e540" style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="consent-a"/>
+				</reportElement>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{ConsentAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="2e1473c5-5820-429d-a8d0-be33b8e0ef10" positionType="Float" x="0" y="19" width="552" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="2e1473c5-5820-429d-a8d0-be33b8e0ef10" positionType="Float" x="0" y="19" width="552" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="consent-why-q"/>
+				</reportElement>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{ConsentWhyQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="b9bbee5b-521f-4c04-b6aa-87a20f75b9e1" style="Answer" positionType="Float" x="0" y="43" width="552" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="b9bbee5b-521f-4c04-b6aa-87a20f75b9e1" style="Answer" positionType="Float" x="0" y="43" width="552" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="consent-why-a"/>
+				</reportElement>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{ConsentWhyAnswer}]]></textFieldExpression>
 			</textField>
