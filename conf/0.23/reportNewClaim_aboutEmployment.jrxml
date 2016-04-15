@@ -38,11 +38,15 @@
 	<detail>
 		<band height="21" splitType="Stretch">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement positionType="Float" x="0" y="1" width="392" height="18" isRemoveLineWhenBlank="true" uuid="eb266188-59cb-419c-a0f8-91a681fa3220"/>
+				<reportElement positionType="Float" x="0" y="1" width="392" height="18" isRemoveLineWhenBlank="true" uuid="eb266188-59cb-419c-a0f8-91a681fa3220">
+					<property name="net.sf.jasperreports.export.html.id" value="employment-have-q"/>
+				</reportElement>
 				<textFieldExpression><![CDATA[$F{AboutEmploymentAreYouEmployedQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="420" y="1" width="174" height="18" isRemoveLineWhenBlank="true" uuid="611415b6-f512-4ac4-b6c1-518bb947d854"/>
+				<reportElement style="Answer" positionType="Float" x="420" y="1" width="174" height="18" isRemoveLineWhenBlank="true" uuid="611415b6-f512-4ac4-b6c1-518bb947d854">
+					<property name="net.sf.jasperreports.export.html.id" value="employment-have-a"/>
+				</reportElement>
 				<textFieldExpression><![CDATA[$F{AboutEmploymentAreYouEmployedAnswer}]]></textFieldExpression>
 			</textField>
 			<subreport>

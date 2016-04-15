@@ -76,7 +76,9 @@
 		</band>
 		<band height="56">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="61c7218b-715a-4359-9449-ee3c564dbe6f" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="61c7218b-715a-4359-9449-ee3c564dbe6f" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="paydetails-how-q"/>
+				</reportElement>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{howToGetPaidQuestion}]]></textFieldExpression>
 			</textField>
@@ -86,22 +88,30 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="57e79dc7-f890-477f-831c-ab6a643652c4" style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="57e79dc7-f890-477f-831c-ab6a643652c4" style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="paydetails-how-a"/>
+				</reportElement>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{howToGetPaidAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="0802ec1f-3436-47b0-9d4a-32035567b1c9" positionType="Float" x="0" y="19" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="0802ec1f-3436-47b0-9d4a-32035567b1c9" positionType="Float" x="0" y="19" width="392" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="paydetails-howoften-q"/>
+				</reportElement>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{howOftenGetPaidQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="e8079ca6-0ec7-44e4-9c1a-e42b72da36db" style="Answer" positionType="Float" x="420" y="19" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="e8079ca6-0ec7-44e4-9c1a-e42b72da36db" style="Answer" positionType="Float" x="420" y="19" width="174" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="paydetails-howoften-a"/>
+				</reportElement>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{howOftenGetPaidAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="38020387-0dc2-4f7f-bfe0-63dc81a0daf4" style="Answer" positionType="Float" x="420" y="37" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="38020387-0dc2-4f7f-bfe0-63dc81a0daf4" style="Answer" positionType="Float" x="420" y="37" width="174" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="paydetails-howoften-other"/>
+				</reportElement>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{howOftenGetPaidAnswer}=="Other" ? $F{howOftenGetPaidOther} : null]]></textFieldExpression>
 			</textField>
@@ -123,12 +133,16 @@
 				<text><![CDATA[Bank/Building Society Details]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="435b6de5-d41d-40df-8485-e2c19154020d" positionType="Float" x="0" y="20" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="435b6de5-d41d-40df-8485-e2c19154020d" positionType="Float" x="0" y="20" width="392" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="paydetails-bankholder-q"/>
+				</reportElement>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{bankAccountHolderNameQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="3585c88b-ad07-47d0-b172-d609bf404eeb" style="Answer" positionType="Float" x="420" y="20" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="3585c88b-ad07-47d0-b172-d609bf404eeb" style="Answer" positionType="Float" x="420" y="20" width="174" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="paydetails-bankholder-a"/>
+				</reportElement>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{bankAccountHolderNameAnswer}]]></textFieldExpression>
 			</textField>
@@ -140,48 +154,63 @@
 		</band>
 		<band height="74">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="6d961b8f-2b5b-4ebc-bb6b-48bb40c9c684" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="6d961b8f-2b5b-4ebc-bb6b-48bb40c9c684" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="paydetails-bankname-q"/>
+				</reportElement>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{bankAccountBankNameQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="be49c075-e8db-4d27-8a30-f5414761027e" style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="be49c075-e8db-4d27-8a30-f5414761027e" style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="paydetails-bankname-a"/>
+				</reportElement>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{bankAccountBankNameAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="ac5d7f60-2d42-481c-9177-0e1dff247bf8" positionType="Float" x="0" y="19" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="ac5d7f60-2d42-481c-9177-0e1dff247bf8" positionType="Float" x="0" y="19" width="392" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="paydetails-banksortcode-q"/>
+				</reportElement>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{bankAccountSortCodeQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="12f94aa2-1e66-40c4-8916-2990ca93e937" style="Answer" positionType="Float" x="420" y="19" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="12f94aa2-1e66-40c4-8916-2990ca93e937" style="Answer" positionType="Float" x="420" y="19" width="174" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="paydetails-banksortcode-a"/>
+				</reportElement>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{bankAccountSortCodeAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="ef58f6eb-cbbf-4bd1-af0b-b5a3d167171d" positionType="Float" x="0" y="37" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="ef58f6eb-cbbf-4bd1-af0b-b5a3d167171d" positionType="Float" x="0" y="37" width="392" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="paydetails-banknum-q"/>
+				</reportElement>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{bankAccountNumberQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="a7591379-f58d-46ba-877b-a488f1fdd851" style="Answer" positionType="Float" x="420" y="37" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="a7591379-f58d-46ba-877b-a488f1fdd851" style="Answer" positionType="Float" x="420" y="37" width="174" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="paydetails-banknum-a"/>
+				</reportElement>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{bankAccountNumberAnswer}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="8ef1d95f-57e8-4c38-9cdc-efafee196bb1" positionType="Float" x="0" y="55" width="392" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="8ef1d95f-57e8-4c38-9cdc-efafee196bb1" positionType="Float" x="0" y="55" width="392" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="paydetails-bsocnum-q"/>
+				</reportElement>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{bankAccountReferenceNumberQuestionLabel}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="2c435d18-b073-4b27-9f62-609d1d035aec" style="Answer" positionType="Float" x="420" y="55" width="174" height="18" isRemoveLineWhenBlank="true"/>
+				<reportElement uuid="2c435d18-b073-4b27-9f62-609d1d035aec" style="Answer" positionType="Float" x="420" y="55" width="174" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="paydetails-bsocnum-a"/>
+				</reportElement>
 				<textElement verticalAlignment="Top"/>
 				<textFieldExpression><![CDATA[$F{bankAccountReferenceNumberAnswer}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement uuid="f7b0e498-50ad-454d-b516-c50f247aafef" positionType="Float" x="0" y="18" width="594" height="1"/>
-				<textElement/>
 				<text><![CDATA[]]></text>
 			</staticText>
 		</band>
