@@ -190,7 +190,7 @@
 	</field>
 	<variable name="variable1" class="java.lang.Integer" incrementType="Group" incrementGroup="EmployerDetails">
 		<variableExpression><![CDATA[$V{variable1}+1]]></variableExpression>
-		<initialValueExpression><![CDATA[1]]></initialValueExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
 	</variable>
 	<variable name="EmploymentNum" class="java.lang.String">
 		<variableExpression><![CDATA["emp"+$V{variable1}+"-"]]></variableExpression>
@@ -198,15 +198,6 @@
 	<group name="EmployerDetails">
 		<groupExpression><![CDATA[$V{EmployerDetails_COUNT}==1]]></groupExpression>
 		<groupHeader>
-			<band height="20" splitType="Immediate">
-				<textField isBlankWhenNull="true">
-					<reportElement positionType="Float" mode="Opaque" x="0" y="0" width="595" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#E6E6E6" uuid="546e57b0-0c10-4b4b-b768-1f3cea76fdc0"/>
-					<textElement verticalAlignment="Middle">
-						<font isBold="true"/>
-					</textElement>
-					<textFieldExpression><![CDATA["Your Job details "+$V{variable1}]]></textFieldExpression>
-				</textField>
-			</band>
 		</groupHeader>
 		<groupFooter>
 			<band splitType="Immediate"/>
@@ -216,6 +207,15 @@
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
+		<band height="20" splitType="Immediate">
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" mode="Opaque" x="0" y="0" width="595" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#E6E6E6" uuid="546e57b0-0c10-4b4b-b768-1f3cea76fdc0"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Your Job details "+$V{variable1}]]></textFieldExpression>
+			</textField>
+		</band>
 		<band height="129" splitType="Immediate">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="1" width="392" height="18" isRemoveLineWhenBlank="true" uuid="73f9c0dd-1bf6-4235-8fd9-127d3c70fc3c">
