@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 5.6.1.final using JasperReports Library version 5.6.1  -->
+<!-- 2015-10-12T16:07:59 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutTheCareYouProvide" language="groovy" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="7235f8d3-c0a0-415a-aa3f-969494fe9489">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<template><![CDATA[$P{TEMPLATE_DIR} + "StyleTemplateClaim.jrtx"]]></template>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="TEMPLATE_DIR" class="java.lang.String">
+		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="xPath">
+		<![CDATA[/]]>
+	</queryString>
+	<field name="AboutCareYouProvideCareeTitleAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Title/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutCareYouProvideCareeOtherNamesAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/OtherNames/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutCareYouProvideCareeSurnameAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Surname/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutCareYouProvideCareeNationalInsuranceNumberAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/NationalInsuranceNumber/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutCareYouProvideCareeDateOfBirthAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/DateOfBirth/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutCareYouProvideCareeLiveSameAddressQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/LiveSameAddress/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutCareYouProvideCareeLiveSameAddressAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/LiveSameAddress/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutCareYouProvideCareeDayTimeTelephoneNumberAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/DayTimePhoneNumber/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutCareYouProvideCareeRelationshipToClaimantQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/RelationToClaimant/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutCareYouProvideCareeRelationshipToClaimantAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/RelationToClaimant/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutCareYouProvideCareeArmedForcesQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/ArmedForcesIndependencePayment/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutCareYouProvideCareeArmedForcesAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/ArmedForcesIndependencePayment/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutCareYouProvideCareeCared35HoursQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Cared35Hours/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutCareYouProvideCareeCared35HoursAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Cared35Hours/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutCareYouProvideCareeCared35HoursBeforeQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Cared35HoursBefore/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutCareYouProvideCareeCared35HoursBeforeAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Cared35HoursBefore/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutCareYouProvideCareeDateStartCaringQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/DateStartCaring/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutCareYouProvideCareeDateStartCaringAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/DateStartCaring/Answer]]></fieldDescription>
+	</field>
+	<field name="displayCareYouProvide" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Cared35Hours/Answer]]></fieldDescription>
+	</field>
+	<field name="displayRelationShipOtherClaims" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/RelationToClaimant/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutCareYouProvideCareeTitleQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Title/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutCareYouProvideCareeTitleOther" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/TitleOther/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutCareYouProvideCareeOtherNamesQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/OtherNames/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutCareYouProvideCareeSurnameQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Surname/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutCareYouProvideCareeNationalInsuranceNumberQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/NationalInsuranceNumber/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutCareYouProvideCareeDateOfBirthQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/DateOfBirth/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutCareYouProvideCareeDayTimeTelephoneNumberQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/DayTimePhoneNumber/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="IsPartnerCareeAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Partner/IsCaree/Answer]]></fieldDescription>
+	</field>
+	<field name="havePartnerAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/HavePartner/Answer]]></fieldDescription>
+	</field>
+	<field name="CareeMiddleNamesQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/MiddleNames/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="CareeMiddleNamesAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/MiddleNames/Answer]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="21">
+			<staticText>
+				<reportElement style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="20" uuid="0352c26e-c945-465d-a87d-c2030a5dc51d">
+					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart3AboutTheCareYouProvide"/>
+				</reportElement>
+				<textElement markup="styled">
+					<font isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[PART 3 - ABOUT THE CARE YOU PROVIDE]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="22" splitType="Prevent">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="594" height="20" isRemoveLineWhenBlank="true" uuid="1cbce792-112d-4e39-8088-39c855728d3b">
+					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingDetailsOfThePersonYouCareFor"/>
+				</reportElement>
+				<textElement markup="styled">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Details of the person you care for]]></text>
+			</staticText>
+		</band>
+		<band height="112" splitType="Immediate">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<printWhenExpression><![CDATA[$F{IsPartnerCareeAnswer}.equals("No") || $F{havePartnerAnswer}.equals("No")]]></printWhenExpression>
+			<textField>
+				<reportElement positionType="Float" x="0" y="0" width="392" height="18" uuid="a40e208f-de17-439e-92fe-f37ff23112be">
+					<property name="net.sf.jasperreports.export.html.id" value="caree-title-q"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeTitleQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="346b12e5-301a-4d95-8b9e-848cc0033523">
+					<property name="net.sf.jasperreports.export.html.id" value="caree-title-a"/>
+					<printWhenExpression><![CDATA[!$F{AboutCareYouProvideCareeTitleAnswer}.toLowerCase().contains("other")]]></printWhenExpression>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeTitleAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="420" y="1" width="174" height="18" uuid="94584b3e-6f0e-45e0-9dd7-d1705a4dd06c">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="caree-title-a"/>
+					<printWhenExpression><![CDATA[$F{AboutCareYouProvideCareeTitleAnswer}.toLowerCase().contains("other")]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeTitleOther}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="36" width="594" height="1" uuid="6394ed05-35b2-457d-933d-fb8b5b558004">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="19" width="392" height="18" isRemoveLineWhenBlank="true" uuid="dc9e637e-86be-4f52-8118-56b591c236b8">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="caree-othernames-q"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeOtherNamesQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="19" width="174" height="18" isRemoveLineWhenBlank="true" uuid="8e02da51-c788-4d38-a074-3a564548d64b">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="caree-othernames-a"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeOtherNamesAnswer}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="1" y="55" width="593" height="1" uuid="7f41eca9-e966-41a4-b4ac-4dc0517db562">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="38" width="392" height="18" isRemoveLineWhenBlank="true" uuid="434d76a4-e064-4fb3-a0d4-e98c0676971e">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="caree-middlenames-q"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{CareeMiddleNamesQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="38" width="174" height="18" isRemoveLineWhenBlank="true" uuid="56568a05-f831-4ba1-bcda-01fbe80ca6c2">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="caree-middlenames-a"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{CareeMiddleNamesAnswer}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="74" width="594" height="1" uuid="a8518300-fb5e-49b3-a884-04f5c1c1370c">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="0" y="57" width="392" height="18" uuid="e8dbed26-f9a1-465f-b9db-2a77a89c5aea">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="caree-surname-q"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeSurnameQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="57" width="174" height="18" isRemoveLineWhenBlank="true" uuid="1a7a66a0-3b0e-4e89-9537-6af0052356ac">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="caree-surname-a"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeSurnameAnswer}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="1" y="93" width="594" height="1" uuid="ea143d8a-0b44-4902-8ab0-43c48197c681">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="76" width="392" height="18" isRemoveLineWhenBlank="true" uuid="a0012086-cd9c-437b-ac4f-1b5c97c1b2e6">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="caree-nino-q"/>
+					<printWhenExpression><![CDATA[!$F{AboutCareYouProvideCareeNationalInsuranceNumberAnswer}.isEmpty()]]></printWhenExpression>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeNationalInsuranceNumberQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="76" width="174" height="18" isRemoveLineWhenBlank="true" uuid="62d9252a-370e-49c9-9ddf-120521e1e9e2">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="caree-nino-a"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeNationalInsuranceNumberAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="0" y="94" width="392" height="18" uuid="96e23d15-1475-4283-86d9-254a5a2a7d60">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="caree-dob-q"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeDateOfBirthQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="94" width="174" height="18" isRemoveLineWhenBlank="true" uuid="fc2efcd3-5c61-480d-b8e1-8f6ca189deea">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="caree-dob-a"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeDateOfBirthAnswer}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="38">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="d4744d43-d6c7-4045-b2a5-b062d711e814">
+					<property name="net.sf.jasperreports.export.html.id" value="caree-sameaddress-q"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeLiveSameAddressQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="718738d6-adca-4d1e-bc8f-78362a787b96">
+					<property name="net.sf.jasperreports.export.html.id" value="caree-sameaddress-a"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeLiveSameAddressAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="19" width="392" height="18" isRemoveLineWhenBlank="true" uuid="5ab11f5f-2d8c-4043-a1d9-7582fa563171">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="caree-relation-q"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeRelationshipToClaimantQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="19" width="174" height="18" isRemoveLineWhenBlank="true" uuid="4f611fa7-5173-4b90-a5c7-0d8fa4b17673">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="caree-relation-a"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeRelationshipToClaimantAnswer}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="40" splitType="Prevent">
+			<staticText>
+				<reportElement style="SubHeadingClaim" positionType="Float" mode="Opaque" x="1" y="0" width="594" height="21" isRemoveLineWhenBlank="true" uuid="1c5d9726-b4ef-44ce-9a67-6874d77320ab">
+					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingContactDetailsOfThePersonYouCareFor"/>
+					<printWhenExpression><![CDATA[$F{AboutCareYouProvideCareeLiveSameAddressAnswer} == "No"]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contact details of the person you care for]]></text>
+			</staticText>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="21" width="595" height="1" isRemoveLineWhenBlank="true" uuid="15feeace-8a18-4dcf-982d-e67a66e7e551">
+					<printWhenExpression><![CDATA[$F{AboutCareYouProvideCareeLiveSameAddressAnswer} == "No"]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Address/Answer")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_addressForNestedReports.jasper"]]></subreportExpression>
+			</subreport>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="22" width="392" height="18" isRemoveLineWhenBlank="true" uuid="f9fcd57d-9f3a-414a-9787-9151c5d61c71">
+					<property name="net.sf.jasperreports.export.html.id" value="caree-phone-q"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeDayTimeTelephoneNumberQuestionLabel}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="22" width="174" height="18" isRemoveLineWhenBlank="true" uuid="1b516ca2-63d3-4238-9a9d-af54229c119d">
+					<property name="net.sf.jasperreports.export.html.id" value="caree-phone-a"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeDayTimeTelephoneNumberAnswer}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="39" splitType="Prevent">
+			<staticText>
+				<reportElement style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="21" isRemoveLineWhenBlank="true" uuid="c9913d36-dbcf-4fdc-841b-9a496f3d3f0f">
+					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingMoreAboutTheCareYouProvide"/>
+					<printWhenExpression><![CDATA[!$F{displayCareYouProvide}.isEmpty()]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[More about the care you provide]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="21" width="392" height="18" isRemoveLineWhenBlank="true" uuid="96e328c6-ee58-4244-9db5-3f7f90196bb8">
+					<property name="net.sf.jasperreports.export.html.id" value="caree-35hours-q"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeCared35HoursQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="21" width="174" height="18" isRemoveLineWhenBlank="true" uuid="afcdb5c2-bad5-4e6c-b9bb-bff1dd057fae">
+					<property name="net.sf.jasperreports.export.html.id" value="caree-35hours-a"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeCared35HoursAnswer}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="39">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="662d9f0a-3e4c-48d9-bc72-d0c8001cc579">
+					<property name="net.sf.jasperreports.export.html.id" value="caree-35hoursbefore-q"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeCared35HoursBeforeQuestion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="3" y="18" width="593" height="1" uuid="01885348-5ad9-49cd-986a-0bf7ae6ab155"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="19" width="392" height="18" isRemoveLineWhenBlank="true" uuid="7f34ebef-d770-48a5-8c8a-37e63ad553ae">
+					<property name="net.sf.jasperreports.export.html.id" value="caree-startdate-q"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeDateStartCaringQuestion}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="19" width="174" height="18" isRemoveLineWhenBlank="true" uuid="84b9ee90-aaf5-4962-a85c-bbfe277d7318">
+					<property name="net.sf.jasperreports.export.html.id" value="caree-startdate-a"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeDateStartCaringAnswer}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="bd95bc79-cf26-49ce-8996-1d11bf56dcf0">
+					<property name="net.sf.jasperreports.export.html.id" value="caree-35hoursbefore-a"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{AboutCareYouProvideCareeCared35HoursBeforeAnswer}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="2">
+			<subreport>
+				<reportElement positionType="Float" x="1" y="0" width="595" height="1" isRemoveLineWhenBlank="true" uuid="e023222c-36da-453b-8ec4-4d1faba787b3"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/Caree/CareBreak")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_CareBreak.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+</jasperReport>
