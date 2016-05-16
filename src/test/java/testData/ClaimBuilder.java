@@ -7,791 +7,790 @@ public class ClaimBuilder {
     public final static String LATEST_VERSION = "0.24";
 
     public static String goodClaim() {
-        StringBuilder stringBuilder =
-                new StringBuilder()
-                        .append("<DWPBody xmlns:ds=\"http://www.w3.org/2000/09/xmldsig#\" xmlns=\"http://www.govtalk.gov.uk/dwp/carers-allowance\"")
-                        .append(" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"")
-                        .append(" xsi:schemaLocation=\"http://www.govtalk.gov.uk/dwp/carers-allowance file:/Users/jmi/Temp/CarersAllowance_Schema.xsd\">")
-                        .append("<Version>")
-                        .append(ClaimBuilder.LATEST_VERSION)
-                        .append("</Version>")
-                        .append("<ClaimVersion>3.8</ClaimVersion>")
-                        .append("<Origin>GB</Origin>")
-                        .append("<DWPCATransaction>")
-                        .append("<TransactionId>NFM33DB</TransactionId>")
-                        .append("<DateTimeGenerated>02-10-2010 14:36</DateTimeGenerated>")
-                        .append("<DWPCAClaim>")
-                        .append("<DateOfClaim>")
-                        .append("<QuestionLabel>When do you want your Carer's Allowance claim to start?</QuestionLabel>")
-                        .append("<Answer>01-01-2010</Answer>")
-                        .append("</DateOfClaim>")
-                        .append("<Claimant>")
-                        .append("<Surname>CaseThree</Surname>")
-                        .append("<OtherNames>Test Middle</OtherNames>")
-                        .append("<OtherSurnames>Smithson</OtherSurnames>")
-                        .append("<Title>Mr</Title>")
-                        .append("<DateOfBirth>01-01-1931</DateOfBirth>")
-                        .append("<NationalInsuranceNumber>JB486278C</NationalInsuranceNumber>")
-                        .append("<Address>")
-                        .append("<Line>3 Preston Road</Line>")
-                        .append("<Line>Preston</Line>")
-                        .append("<Line>Lancashire</Line>")
-                        .append("<PostCode>PR1 2TH</PostCode>")
-                        .append("</Address>")
-                        .append("<DayTimePhoneNumber>01772 888901</DayTimePhoneNumber>")
-                        .append("<MobileNumber>0771 5419808</MobileNumber>")
-                        .append("<MaritalStatus>Single</MaritalStatus>")
-                        .append("<TextPhoneContact>")
-                        .append("<QuestionLabel>text.phone</QuestionLabel>")
-                        .append("<Answer>No</Answer>")
-                        .append("</TextPhoneContact>")
-                        .append("</Claimant>")
-                        .append("<Caree>")
-                        .append("<Surname>CaseThree</Surname>")
-                        .append("<OtherNames>Cloe Scott</OtherNames>")
-                        .append("<OtherSurnames>Watson</OtherSurnames>")
-                        .append("<Title>Dame</Title>")
-                        .append("<DateOfBirth>03-07-1953</DateOfBirth>")
-                        .append("<NationalInsuranceNumber>BA234567A</NationalInsuranceNumber>")
-                        .append("<Address>")
-                        .append("<Line>3a Preston Road</Line>")
-                        .append("<Line>Preston</Line>")
-                        .append("<Line>Lancashire</Line>")
-                        .append("<PostCode>PR1 2TH</PostCode>")
-                        .append("</Address>")
-                        .append("<DayTimePhoneNumber>01234 567890</DayTimePhoneNumber>")
-                        .append("<RelationToClaimant>")
-                        .append("<QuestionLabel>What's their relationshipt to you?</QuestionLabel>")
-                        .append("<Answer>Mother</Answer>")
-                        .append("</RelationToClaimant>")
-                        .append("<Cared35Hours>")
-                        .append("<QuestionLabel>Do you spend 35 hours or more each week caring for this person?</QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</Cared35Hours>")
-                        .append("<BreaksSinceClaim>")
-                        .append("<QuestionLabel>Have you had any breaks in caring for this person since claim date?</QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</BreaksSinceClaim>")
-                        .append("<CareBreak>")
-                        .append("<StartDateTime>10-07-2010 10:00</StartDateTime>")
-                        .append("<EndDateTime>17-07-2010 17:45</EndDateTime>")
-                        .append("<ReasonClaimant>")
-                        .append("<QuestionLabel>Where were you during the break?</QuestionLabel>")
-                        .append("<Other>Friend's place</Other>")
-                        .append("<Answer>Other</Answer>")
-                        .append("</ReasonClaimant>")
-                        .append("<ReasonCaree>")
-                        .append("<QuestionLabel>Where was the person you care for during the break?</QuestionLabel>")
-                        .append("<Answer>At Home</Answer>")
-                        .append("</ReasonCaree>")
-                        .append("<MedicalCare>")
-                        .append("<QuestionLabel>Did you or the person you care for receive any medical treatment or professional care during the break?</QuestionLabel>")
-                        .append("<Answer>No</Answer>")
-                        .append("</MedicalCare>")
-                        .append("</CareBreak>")
-                        .append("<CareBreak>")
-                        .append("<StartDateTime>10-09-2010 12:00</StartDateTime>")
-                        .append("<EndDateTime>17-09-2010 15:15</EndDateTime>")
-                        .append("<ReasonClaimant>")
-                        .append("<QuestionLabel>Where were you during the break?</QuestionLabel>")
-                        .append("<Answer>Hospital</Answer>")
-                        .append("</ReasonClaimant>")
-                        .append("<ReasonCaree>")
-                        .append("<QuestionLabel>Where was the person you care for during the break?</QuestionLabel>")
-                        .append("<Answer>At Home</Answer>")
-                        .append("</ReasonCaree>")
-                        .append("<MedicalCare>")
-                        .append("<QuestionLabel>Did you or the person you care for receive any medical treatment or professional care during the break?</QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</MedicalCare>")
-                        .append("</CareBreak>")
-                        .append("<CareBreak>")
-                        .append("<StartDateTime>10-10-2010 10:30</StartDateTime>")
-                        .append("</CareBreak>")
-                        .append("<Cared35HoursBefore>")
-                        .append("<QuestionLabel>care.35.before</QuestionLabel>")
-                        .append("<Answer>No</Answer>")
-                        .append("</Cared35HoursBefore>")
-                        .append("<DateStartCaring>")
-                        .append("<QuestionLabel>care.started</QuestionLabel>")
-                        .append("<Answer>05-01-2010</Answer>")
-                        .append("</DateStartCaring>")
-                        .append("<LiveSameAddress>")
-                        .append("<QuestionLabel>caree.sameadrees</QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</LiveSameAddress>")
-                        .append("<ArmedForcesIndependencePayment>")
-                        .append("<QuestionLabel>Does this person get Armed Forces Independence Payment?</QuestionLabel>")
-                        .append("<Answer>No</Answer>")
-                        .append("</ArmedForcesIndependencePayment>")
-                        .append("</Caree>")
-                        .append("<Residency>")
-                        .append("<NormallyLiveInGB>")
-                        .append("<QuestionLabel>live.normally.GB</QuestionLabel>")
-                        .append("<Answer>No</Answer>")
-                        .append("</NormallyLiveInGB>")
-                        .append("<CountryNormallyLive>")
-                        .append("<QuestionLabel>live.normally.country</QuestionLabel>")
-                        .append("<Answer>France</Answer>")
-                        .append("</CountryNormallyLive>")
-                        .append("<Nationality>British</Nationality>")
-                        .append("<TimeOutsideGBLast3Years>")
-                        .append("<QuestionLabel>Time.out.GB</QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</TimeOutsideGBLast3Years>")
-                        .append("<PeriodAbroad>")
-                        .append("<Period>")
-                        .append("<DateFrom>")
-                        .append("<QuestionLabel>abroad.date.from</QuestionLabel>")
-                        .append("<Answer>08-09-2010</Answer>")
-                        .append("</DateFrom>")
-                        .append("<DateTo>")
-                        .append("<QuestionLabel>abroad.date.to</QuestionLabel>")
-                        .append("<Answer>08-12-2010</Answer>")
-                        .append("</DateTo>")
-                        .append("</Period>")
-                        .append("<Reason>")
-                        .append("<QuestionLabel>abroad.reason</QuestionLabel>")
-                        .append("<Other>Funeral</Other>")
-                        .append("<Answer>Other</Answer>")
-                        .append("</Reason>")
-                        .append("<Country>")
-                        .append("<QuestionLabel>country.went</QuestionLabel>")
-                        .append("<Answer>France</Answer>")
-                        .append("</Country>")
-                        .append("<CareePresent>")
-                        .append("<QuestionLabel>caree.present</QuestionLabel>")
-                        .append("<Answer>No</Answer>")
-                        .append("</CareePresent>")
-                        .append("</PeriodAbroad>")
-                        .append("<PeriodAbroad>")
-                        .append("<Period>")
-                        .append("<DateFrom>")
-                        .append("<QuestionLabel>abroad.date.from</QuestionLabel>")
-                        .append("<Answer>06-09-2011</Answer>")
-                        .append("</DateFrom>")
-                        .append("<DateTo>")
-                        .append("<QuestionLabel>abroad.date.to</QuestionLabel>")
-                        .append("<Answer>06-12-2011</Answer>")
-                        .append("</DateTo>")
-                        .append("</Period>")
-                        .append("<Reason>")
-                        .append("<QuestionLabel>abroad.reason</QuestionLabel>")
-                        .append("<Answer>Holiday</Answer>")
-                        .append("</Reason>")
-                        .append("<Country>")
-                        .append("<QuestionLabel>country.went</QuestionLabel>")
-                        .append("<Answer>Spain</Answer>")
-                        .append("</Country>")
-                        .append("<CareePresent>")
-                        .append("<QuestionLabel>caree.present</QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</CareePresent>")
-                        .append("</PeriodAbroad>")
-                        .append("</Residency>")
-                        .append("<CourseOfEducation>")
-                        .append("<QuestionLabel>Have you been on a course of education since your claim date?</QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</CourseOfEducation>")
-                        .append("<FullTimeEducation>")
-                        .append("<CourseDetails>")
-                        .append("<Type>BA honours in Business</Type>")
-                        .append("<Title>Bussines Studies</Title>")
-                        .append("<DateStarted>")
-                        .append("<QuestionLabel>education.started</QuestionLabel>")
-                        .append("<Answer>01-01-2013</Answer>")
-                        .append("</DateStarted>")
-                        .append("<ExpectedEndDate>")
-                        .append("<QuestionLabel>education.end.expected</QuestionLabel>")
-                        .append("<Answer>05-01-2014</Answer>")
-                        .append("</ExpectedEndDate>")
-                        .append("</CourseDetails>")
-                        .append("<LocationDetails>")
-                        .append("<Name>Oxford College</Name>")
-                        .append("<Address>")
-                        .append("<Line>1 Oxford Road</Line>")
-                        .append("<Line>Oxford</Line>")
-                        .append("<Line>Oxfordshire</Line>")
-                        .append("<PostCode>OX12 3RT</PostCode>")
-                        .append("</Address>")
-                        .append("<PhoneNumber>01776 829920</PhoneNumber>")
-                        .append("<FaxNumber>01776 829920</FaxNumber>")
-                        .append("<StudentReferenceNumber>91982</StudentReferenceNumber>")
-                        .append("<Tutor>My Tutor</Tutor>")
-                        .append("</LocationDetails>")
-                        .append("</FullTimeEducation>")
-                        .append("<SelfEmployed>")
-                        .append("<QuestionLabel>Have you been self-employed at any time since (this is one week before your claim date)?</QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</SelfEmployed>")
-                        .append("<SelfEmployment>")
-                        .append("<SelfEmployedNow>")
-                        .append("<QuestionLabel>selfepmloyed.now</QuestionLabel>")
-                        .append("<Answer>No</Answer>")
-                        .append("</SelfEmployedNow>")
-                        .append("<RecentJobDetails>")
-                        .append("<DateStarted>")
-                        .append("<QuestionLabel>selfemployed.started</QuestionLabel>")
-                        .append("<Answer>05-01-2010</Answer>")
-                        .append("</DateStarted>")
-                        .append("<NatureBusiness>")
-                        .append("<QuestionLabel>selfemployed.business</QuestionLabel>")
-                        .append("<Answer>Fruit and veg, delivery service</Answer>")
-                        .append("</NatureBusiness>")
-                        .append("<TradingYear>")
-                        .append("<DateFrom>")
-                        .append("<QuestionLabel>trading.from</QuestionLabel>")
-                        .append("<Answer>05-01-2013</Answer>")
-                        .append("</DateFrom>")
-                        .append("<DateTo>")
-                        .append("<QuestionLabel>trading.to</QuestionLabel>")
-                        .append("<Answer>30-04-2014</Answer>")
-                        .append("</DateTo>")
-                        .append("</TradingYear>")
-                        .append("<SameIncomeOutgoingLevels>")
-                        .append("<QuestionLabel>selfemployed.level</QuestionLabel>")
-                        .append("<Answer>No</Answer>")
-                        .append("</SameIncomeOutgoingLevels>")
-                        .append("<WhyWhenChange>")
-                        .append("<QuestionLabel>selfemployed.level.change</QuestionLabel>")
-                        .append("<Answer>Depends on the seasons, and productivity of the fruit.</Answer>")
-                        .append("</WhyWhenChange>")
-                        .append("<DateEnded>")
-                        .append("<QuestionLabel>selfemployed.ended</QuestionLabel>")
-                        .append("<Answer>01-09-2013</Answer>")
-                        .append("</DateEnded>")
-                        .append("<TradingCeased>")
-                        .append("<QuestionLabel>selfemployed.ceased</QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</TradingCeased>")
-                        .append("</RecentJobDetails>")
-                        .append("<CareExpensesChildren>")
-                        .append("<QuestionLabel>self.child.expenses</QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</CareExpensesChildren>")
-                        .append("<ChildCareExpenses>")
-                        .append("<CarerName>")
-                        .append("<QuestionLabel>self.child.carer</QuestionLabel>")
-                        .append("<Answer>Mr John Smith</Answer>")
-                        .append("</CarerName>")
-                        .append("<Expense>")
-                        .append("<Payment>")
-                        .append("<QuestionLabel>self.child.care.amount</QuestionLabel>")
-                        .append("<Answer>")
-                        .append("<Currency>GBP</Currency>")
-                        .append("<Amount>120.00</Amount>")
-                        .append("</Answer>")
-                        .append("</Payment>")
-                        .append("<Frequency>")
-                        .append("<QuestionLabel>self.child.care.frequency</QuestionLabel>")
-                        .append("<Answer>Weekly</Answer>")
-                        .append("</Frequency>")
-                        .append("</Expense>")
-                        .append("<RelationshipCarerToClaimant>")
-                        .append("<QuestionLabel>self.child.rel.claimant</QuestionLabel>")
-                        .append("<Answer>Uncle</Answer>")
-                        .append("</RelationshipCarerToClaimant>")
-                        .append("<RelationshipCarerToPartner>")
-                        .append("<QuestionLabel>self.child.rel.partner</QuestionLabel>")
-                        .append("<Other>None</Other>")
-                        .append("<Answer>Other</Answer>")
-                        .append("</RelationshipCarerToPartner>")
-                        .append("<RelationToChild>")
-                        .append("<QuestionLabel>self.child.rel.child</QuestionLabel>")
-                        .append("<Answer>Uncle</Answer>")
-                        .append("</RelationToChild>")
-                        .append("</ChildCareExpenses>")
-                        .append("<CareExpensesCaree>")
-                        .append("<QuestionLabel>self.care.expenses</QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</CareExpensesCaree>")
-                        .append("<CareExpenses>")
-                        .append("<CarerName>")
-                        .append("<QuestionLabel>self.care.carer</QuestionLabel>")
-                        .append("<Answer>Mrs Terry Smith</Answer>")
-                        .append("</CarerName>")
-                        .append("<Expense>")
-                        .append("<Payment>")
-                        .append("<QuestionLabel>self.care.amount</QuestionLabel>")
-                        .append("<Answer>")
-                        .append("<Currency>GBP</Currency>")
-                        .append("<Amount>400.00</Amount>")
-                        .append("</Answer>")
-                        .append("</Payment>")
-                        .append("<Frequency>")
-                        .append("<QuestionLabel>self.care.frequency</QuestionLabel>")
-                        .append("<Other>Other expenses frequency</Other>")
-                        .append("<Answer>Other</Answer>")
-                        .append("</Frequency>")
-                        .append("</Expense>")
-                        .append("<RelationshipCarerToClaimant>")
-                        .append("<QuestionLabel>self.care.rel.claimant</QuestionLabel>")
-                        .append("<Other>None</Other>")
-                        .append("<Answer>Other</Answer>")
-                        .append("</RelationshipCarerToClaimant>")
-                        .append("<RelationshipCarerToPartner>")
-                        .append("<QuestionLabel>self.care.rel.partner</QuestionLabel>")
-                        .append("<Answer>Aunt</Answer>")
-                        .append("</RelationshipCarerToPartner>")
-                        .append("<RelationshipCarerToCaree>")
-                        .append("<QuestionLabel>self.care.rel.caree</QuestionLabel>")
-                        .append("<Answer>Aunt</Answer>")
-                        .append("</RelationshipCarerToCaree>")
-                        .append("</CareExpenses>")
-                        .append("<PaidForPension>")
-                        .append("<QuestionLabel>self.pension</QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</PaidForPension>")
-                        .append("<PensionScheme>")
-                        .append("<Payment>")
-                        .append("<QuestionLabel>self.pension.amount</QuestionLabel>")
-                        .append("<Answer>")
-                        .append("<Currency>GBP</Currency>")
-                        .append("<Amount>15.23</Amount>")
-                        .append("</Answer>")
-                        .append("</Payment>")
-                        .append("<Frequency>")
-                        .append("<QuestionLabel>self.pension.frequency</QuestionLabel>")
-                        .append("<Answer>Weekly</Answer>")
-                        .append("</Frequency>")
-                        .append("</PensionScheme>")
-                        .append("</SelfEmployment>")
-                        .append("<Employed>")
-                        .append("<QuestionLabel>Have you been employed at any time since (this is six months before your claim date)?</QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</Employed>")
-                        .append("<Employment>")
-                        .append("<CurrentlyEmployed>")
-                        .append("<QuestionLabel>employed.currently</QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</CurrentlyEmployed>")
-                        .append("<JobDetails>")
-                        .append("<Employer>")
-                        .append("<DateJobStarted>")
-                        .append("<QuestionLabel>job.started</QuestionLabel>")
-                        .append("<Answer>01-01-2013</Answer>")
-                        .append("</DateJobStarted>")
-                        .append("<JobType>")
-                        .append("<QuestionLabel>job.title</QuestionLabel>")
-                        .append("<Answer>Hacker</Answer>")
-                        .append("</JobType>")
-                        .append("<ClockPayrollNumber>12345678</ClockPayrollNumber>")
-                        .append("<Name>Tesco's</Name>")
-                        .append("<Address>")
-                        .append("<Line>23 Yeadon Way</Line>")
-                        .append("<Line>Blackpool</Line>")
-                        .append("<Line>Lancashire</Line>")
-                        .append("<PostCode>FY4 5TH</PostCode>")
-                        .append("</Address>")
-                        .append("<EmployersPhoneNumber>01253 667889</EmployersPhoneNumber>")
-                        .append("<HaveFinishedJob>")
-                        .append("<QuestionLabel>job.finished</QuestionLabel>")
-                        .append("<Answer>No</Answer>")
-                        .append("</HaveFinishedJob>")
-                        .append("</Employer>")
-                        .append("<Pay>")
-                        .append("<WeeklyHoursWorked>")
-                        .append("<QuestionLabel>job.hours</QuestionLabel>")
-                        .append("<Answer>25</Answer>")
-                        .append("</WeeklyHoursWorked>")
-                        .append("<DateLastPaid>")
-                        .append("<QuestionLabel>job.lastpaid</QuestionLabel>")
-                        .append("<Answer>02-07-2013</Answer>")
-                        .append("</DateLastPaid>")
-                        .append("<GrossPayment>")
-                        .append("<QuestionLabel>job.pay</QuestionLabel>")
-                        .append("<Answer>")
-                        .append("<Currency>GBP</Currency>")
-                        .append("<Amount>600.00</Amount>")
-                        .append("</Answer>")
-                        .append("</GrossPayment>")
-                        .append("<IncludedInWage>")
-                        .append("<QuestionLabel>job.pay.include</QuestionLabel>")
-                        .append("<Answer>All amounts due</Answer>")
-                        .append("</IncludedInWage>")
-                        .append("<PayFrequency>")
-                        .append("<QuestionLabel>job.pay.frequency</QuestionLabel>")
-                        .append("<Answer>Four-Weekly</Answer>")
-                        .append("</PayFrequency>")
-                        .append("<UsualPayDay>")
-                        .append("<QuestionLabel>job.day</QuestionLabel>")
-                        .append("<Answer>Wednesday usually</Answer>")
-                        .append("</UsualPayDay>")
-                        .append("<ConstantEarnings>")
-                        .append("<QuestionLabel>job.same.amount</QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</ConstantEarnings>")
-                        .append("</Pay>")
-                        .append("<OweMoney>")
-                        .append("<QuestionLabel>job.owe</QuestionLabel>")
-                        .append("<Answer>No</Answer>")
-                        .append("</OweMoney>")
-                        .append("<CareExpensesChildren>")
-                        .append("<QuestionLabel>chld.expenses</QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</CareExpensesChildren>")
-                        .append("<ChildCareExpenses>")
-                        .append("<CarerName>")
-                        .append("<QuestionLabel>child.carer</QuestionLabel>")
-                        .append("<Answer>Mr Grandfather Senior</Answer>")
-                        .append("</CarerName>")
-                        .append("<Expense>")
-                        .append("<Payment>")
-                        .append("<QuestionLabel>child.care.amount</QuestionLabel>")
-                        .append("<Answer>")
-                        .append("<Currency>GBP</Currency>")
-                        .append("<Amount>120.12</Amount>")
-                        .append("</Answer>")
-                        .append("</Payment>")
-                        .append("<Frequency>")
-                        .append("<QuestionLabel>child.care.frequency</QuestionLabel>")
-                        .append("<Answer>Weekly</Answer>")
-                        .append("</Frequency>")
-                        .append("</Expense>")
-                        .append("<RelationshipCarerToClaimant>")
-                        .append("<QuestionLabel>child.care.rel.claimant</QuestionLabel>")
-                        .append("<Answer>Father</Answer>")
-                        .append("</RelationshipCarerToClaimant>")
-                        .append("<RelationshipCarerToPartner>")
-                        .append("<QuestionLabel>cild.care.rel.partner</QuestionLabel>")
-                        .append("<Answer>Stepfather</Answer>")
-                        .append("</RelationshipCarerToPartner>")
-                        .append("<RelationToChild>")
-                        .append("<QuestionLabel>child.care.rel.child</QuestionLabel>")
-                        .append("<Answer>Grandfather</Answer>")
-                        .append("</RelationToChild>")
-                        .append("</ChildCareExpenses>")
-                        .append("<CareExpensesCaree>")
-                        .append("<QuestionLabel>care.expenses</QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</CareExpensesCaree>")
-                        .append("<CareExpenses>")
-                        .append("<CarerName>")
-                        .append("<QuestionLabel>care.carer</QuestionLabel>")
-                        .append("<Answer>Carers UK Ltd</Answer>")
-                        .append("</CarerName>")
-                        .append("<Expense>")
-                        .append("<Payment>")
-                        .append("<QuestionLabel>care.carer.amount</QuestionLabel>")
-                        .append("<Answer>")
-                        .append("<Currency>GBP</Currency>")
-                        .append("<Amount>150.55</Amount>")
-                        .append("</Answer>")
-                        .append("</Payment>")
-                        .append("<Frequency>")
-                        .append("<QuestionLabel>care.carer.frequency</QuestionLabel>")
-                        .append("<Other>Annually</Other>")
-                        .append("<Answer>Other</Answer>")
-                        .append("</Frequency>")
-                        .append("</Expense>")
-                        .append("<RelationshipCarerToClaimant>")
-                        .append("<QuestionLabel>care.carer.rel.claimant</QuestionLabel>")
-                        .append("<Other>None</Other>")
-                        .append("<Answer>Other</Answer>")
-                        .append("</RelationshipCarerToClaimant>")
-                        .append("<RelationshipCarerToPartner>")
-                        .append("<QuestionLabel>care.carer.rel.partner</QuestionLabel>")
-                        .append("<Other>None</Other>")
-                        .append("<Answer>Other</Answer>")
-                        .append("</RelationshipCarerToPartner>")
-                        .append("<RelationshipCarerToCaree>")
-                        .append("<QuestionLabel>care.carer.rel.caree</QuestionLabel>")
-                        .append("<Other>None</Other>")
-                        .append("<Answer>Other</Answer>")
-                        .append("</RelationshipCarerToCaree>")
-                        .append("</CareExpenses>")
-                        .append("<PaidForOccupationalPension>")
-                        .append("<QuestionLabel>pension.occupational</QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</PaidForOccupationalPension>")
-                        .append("<OccupationalPension>")
-                        .append("<Payment>")
-                        .append("<QuestionLabel>pension.occ.amount</QuestionLabel>")
-                        .append("<Answer>")
-                        .append("<Currency>GBP</Currency>")
-                        .append("<Amount>350.10</Amount>")
-                        .append("</Answer>")
-                        .append("</Payment>")
-                        .append("<Frequency>")
-                        .append("<QuestionLabel>pension.occ.frequency</QuestionLabel>")
-                        .append("<Other>Other frequency fo occupational scheme</Other>")
-                        .append("<Answer>Other</Answer>")
-                        .append("</Frequency>")
-                        .append("</OccupationalPension>")
-                        .append("<PaidForPersonalPension>")
-                        .append("<QuestionLabel>pension.personal</QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</PaidForPersonalPension>")
-                        .append("<PersonalPension>")
-                        .append("<Payment>")
-                        .append("<QuestionLabel>pension.per.amount</QuestionLabel>")
-                        .append("<Answer>")
-                        .append("<Currency>GBP</Currency>")
-                        .append("<Amount>200.1</Amount>")
-                        .append("</Answer>")
-                        .append("</Payment>")
-                        .append("<Frequency>")
-                        .append("<QuestionLabel>pension.per.frequency</QuestionLabel>")
-                        .append("<Answer>Monthly</Answer>")
-                        .append("</Frequency>")
-                        .append("</PersonalPension>")
-                        .append("<PaidForJobExpenses>")
-                        .append("<QuestionLabel>job.expenses</QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</PaidForJobExpenses>")
-                        .append("<JobExpenses>")
-                        .append("<Expense>")
-                        .append("<QuestionLabel>job.expense</QuestionLabel>")
-                        .append("<Answer>Petrol money for driving</Answer>")
-                        .append("</Expense>")
-                        .append("</JobExpenses>")
-                        .append("<OtherEmployment>")
-                        .append("<QuestionLabel>Other.eployment</QuestionLabel>")
-                        .append("<Answer>No</Answer>")
-                        .append("</OtherEmployment>")
-                        .append("</JobDetails>")
-                        .append("</Employment>")
-                        .append("<HavePartner>")
-                        .append("<QuestionLabel>Have you had a partner/spouse living with you since your claim date?</QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</HavePartner>")
-                        .append("<Partner>")
-                        .append("<Surname>CaseThree</Surname>")
-                        .append("<OtherNames>Test Middle clémence</OtherNames>")
-                        .append("<OtherSurnames>Dixon Jão SØren Górnictwo</OtherSurnames>")
-                        .append("<Title>Mrs</Title>")
-                        .append("<DateOfBirth>28-09-1937</DateOfBirth>")
-                        .append("<NationalInsuranceNumber>BA234567A</NationalInsuranceNumber>")
-                        .append("<DayTimePhoneNumber>0987654321</DayTimePhoneNumber>")
-                        .append("<NationalityPartner>British</NationalityPartner>")
-                        .append("<RelationshipStatus>")
-                        .append("<SeparatedFromPartner>")
-                        .append("<QuestionLabel>partner.separated</QuestionLabel>")
-                        .append("<Answer>No</Answer>")
-                        .append("</SeparatedFromPartner>")
-                        .append("</RelationshipStatus>")
-                        .append("<IsCaree>")
-                        .append("<QuestionLabel>Is your partner/spouse the person you are claiming Carer's Allowance for?</QuestionLabel>")
-                        .append("<Answer>No</Answer>")
-                        .append("</IsCaree>")
-                        .append("</Partner>")
-                        .append("<OtherBenefits>")
-                        .append("<ClaimantBenefits>")
-                        .append("<StatePension>")
-                        .append("<QuestionLabel>Do you get State Pension?</QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</StatePension>")
-                        .append("</ClaimantBenefits>")
-                        .append("<OtherMoneySSP>")
-                        .append("<QuestionLabel>ssp.money</QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</OtherMoneySSP>")
-                        .append("<OtherMoneySSPDetails>")
-                        .append("<Payment>")
-                        .append("<Payment>")
-                        .append("<QuestionLabel>ssp.amount</QuestionLabel>")
-                        .append("<Answer>")
-                        .append("<Currency>GBP</Currency>")
-                        .append("<Amount>12</Amount>")
-                        .append("</Answer>")
-                        .append("</Payment>")
-                        .append("<Frequency>")
-                        .append("<QuestionLabel>ssp.frequency</QuestionLabel>")
-                        .append("<Other>Every day and twice on Sundays</Other>")
-                        .append("<Answer>Other</Answer>")
-                        .append("</Frequency>")
-                        .append("</Payment>")
-                        .append("<Name>Burger King</Name>")
-                        .append("<Address>")
-                        .append("<Line>102 Preston Road</Line>")
-                        .append("<Line>Preston</Line>")
-                        .append("<Line>Lancashire</Line>")
-                        .append("<PostCode>PR45 6YH</PostCode>")
-                        .append("</Address>")
-                        .append("</OtherMoneySSPDetails>")
-                        .append("<OtherMoneySP>")
-                        .append("<QuestionLabel>sp.money</QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</OtherMoneySP>")
-                        .append("<OtherMoneySPDetails>")
-                        .append("<Payment>")
-                        .append("<Payment>")
-                        .append("<QuestionLabel>sp.amount</QuestionLabel>")
-                        .append("<Answer>")
-                        .append("<Currency>GBP</Currency>")
-                        .append("<Amount>120</Amount>")
-                        .append("</Answer>")
-                        .append("</Payment>")
-                        .append("<Frequency>")
-                        .append("<QuestionLabel>sp.frequency</QuestionLabel>")
-                        .append("<Answer>Weekly</Answer>")
-                        .append("</Frequency>")
-                        .append("</Payment>")
-                        .append("<Name>KFC</Name>")
-                        .append("<Address>")
-                        .append("<Line>104 Preston Road</Line>")
-                        .append("<Line>Preston</Line>")
-                        .append("<Line>Lancashire</Line>")
-                        .append("<PostCode>PR45 6YH</PostCode>")
-                        .append("</Address>")
-                        .append("</OtherMoneySPDetails>")
-                        .append("<OtherMoney>")
-                        .append("<QuestionLabel>Have you or your Partner or Spouse claimed or received any other benefits since the date you want to claim?</QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</OtherMoney>")
-                        .append("<OtherMoneyDetails>")
-                        .append("<Payment>")
-                        .append("<Payment>")
-                        .append("<QuestionLabel>Other.amount</QuestionLabel>")
-                        .append("<Answer>")
-                        .append("<Currency>GBP</Currency>")
-                        .append("<Amount>123.57</Amount>")
-                        .append("</Answer>")
-                        .append("</Payment>")
-                        .append("<Frequency>")
-                        .append("<QuestionLabel>Other.frequency</QuestionLabel>")
-                        .append("<Other>Quarterly</Other>")
-                        .append("<Answer>Other</Answer>")
-                        .append("</Frequency>")
-                        .append("</Payment>")
-                        .append("<Name>")
-                        .append("<QuestionLabel>Other.who</QuestionLabel>")
-                        .append("<Answer>The Man</Answer>")
-                        .append("</Name>")
-                        .append("</OtherMoneyDetails>")
-                        .append("<EEA>")
-                        .append("<EEAClaimPensionsBenefits>")
-                        .append("<QuestionLabel>eea.pension</QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</EEAClaimPensionsBenefits>")
-                        .append("<EEAReceivePensionsBenefits>")
-                        .append("<QuestionLabel>eea.pension</QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</EEAReceivePensionsBenefits>")
-                        .append("<EEAWorkingInsurance>")
-                        .append("<QuestionLabel>eea.insurance</QuestionLabel>")
-                        .append("<Answer>No</Answer>")
-                        .append("</EEAWorkingInsurance>")
-                        .append("</EEA>")
-                        .append("</OtherBenefits>")
-                        .append("<Payment>")
-                        .append("<PaymentFrequency>")
-                        .append("<QuestionLabel>payment.frequency</QuestionLabel>")
-                        .append("<Answer>Weekly</Answer>")
-                        .append("</PaymentFrequency>")
-                        .append("<InitialAccountQuestion>")
-                        .append("<QuestionLabel>payment.way</QuestionLabel>")
-                        .append("<Answer>UK bank or building society</Answer>")
-                        .append("</InitialAccountQuestion>")
-                        .append("<Account>")
-                        .append("<HolderName>Mr Test Casetwo</HolderName>")
-                        .append("<BuildingSocietyDetails>")
-                        .append("<AccountNumber>12345678</AccountNumber>")
-                        .append("<SortCode>090126</SortCode>")
-                        .append("<Name>Santander</Name>")
-                        .append("</BuildingSocietyDetails>")
-                        .append("</Account>")
-                        .append("</Payment>")
-                        .append("<OtherInformation>")
-                        .append("<WelshCommunication>")
-                        .append("<QuestionLabel>welsh.communication</QuestionLabel>")
-                        .append("<Answer>No</Answer>")
-                        .append("</WelshCommunication>")
-                        .append("<AdditionalInformation>")
-                        .append("<QuestionLabel>anything.else</QuestionLabel>")
-                        .append("<Answer>It takes too long to claim. But I can write a very long answer here. 2000 characters.</Answer>")
-                        .append("</AdditionalInformation>")
-                        .append("</OtherInformation>")
-                        .append("<Declaration>")
-                        .append("<DeclarationStatement>")
-                        .append("<Content>The declarations below sets out your legal responsibilities in respect of your claim.</Content>")
-                        .append("<Content>I declare that I understand the Carer's Allowance Claim Notes and that the information provided on this claim form is correct and complete.</Content>")
-                        .append("<Content>I understand that I must report all changes in my circumstances or that of the person that I am caring for which may affect my entitlement promptly and by failing to do so I may be liable to prosecution or face a financial penalty.</Content>")
-                        .append("<Content>I will phone 08456084321 or write to Carer's Allowance Unit, Palatine House, Preston, Lancaster, PR1 1HB to report a change in my circumstances or that of the person that I am caring for.</Content>")
-                        .append("<Content>If I give false or incomplete information or fail to report changes in my circumstances or that of the person that I am caring for promptly, I understand that my Carer's Allowance may be stopped or reduced and any overpayment of Carer's Allowance may be recovered. In addition I may be prosecuted or face a financial penalty.</Content>")
-                        .append("</DeclarationStatement>")
-                        .append("<DeclarationQuestion>")
-                        .append("<QuestionLabel>Please tick this box if this claim form has been filled in by someone else, if so, please ensure that you understand the declarations above as another person cannot make the declarations on your behalf.</QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</DeclarationQuestion>")
-                        .append("<DeclarationQuestion>")
-                        .append("<QuestionLabel>Please tick this box to confirm that you understand and make the declarations above.</QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</DeclarationQuestion>")
-                        .append("</Declaration>")
-                        .append("<Disclaimer>")
-                        .append("<DisclaimerStatement>")
-                        .append("<Content>I understand that if I am paid Carer's Allowance it may affect the benefits paid to DP's name I understand that if I am paid Carer's Allowance it may affect the benefits paid to DP's name>>I understand that if I am paid Carer's Allowance it may affect the benefits paid to DP's name</Content>")
-                        .append("<Content>If the person you are caring for receives certain benefits, the amount they receive may be affected by your claim for Carer's Allowance. Because of this we need both of you to understand the potential consequences of your claim to Carer's Allowance.</Content>")
-                        .append("<Content>If DP's name gets a Severe Disability Premium with their income-based Jobseeker's Allowance, Income Support, income-related Employment and Support Allowance, Housing Benefit, they may no longer get that premium if we pay Carer's Allowance to you.If DP's name>> gets a Severe Disability Premium with their income-based Jobseeker's Allowance, Income Support, income-related Employment and Support Allowance, Housing Benefit, they may no longer get that premium if we pay Carer's Allowance to you.If DP's name gets a Severe Disability Premium with their income-based Jobseeker's Allowance, Income Support, income-related Employment and Support Allowance, Housing Benefit, they may no longer get that premium if we pay Carer's Allowance to you.</Content>")
-                        .append("<Content>If DP's name Pension Credit includes an extra amount for severe disability, they may no longer get that extra amount if we pay Carer's Allowance to you.If DP's name Pension Credit includes an extra amount for severe disability, they may no longer get that extra amount if we pay Carer's Allowance to you.If DP's name Pension Credit includes an extra amount for severe disability, they may no longer get that extra amount if we pay Carer's Allowance to you.</Content>")
-                        .append("<Content>This could also affect any reduction in Council Tax DP's name may be entitled to. To find out more about it, please contact the Local Authority.This could also affect any reduction in Council Tax DP's name>> may be entitled to. To find out more about it, please contact the Local Authority.This could also affect any reduction in Council Tax DP's name may be entitled to. To find out more about it, please contact the Local Authority.</Content>")
-                        .append("<Content>We will need to check DP's name entitlement to Disability Living Allowance, Personal Independence Payment, Attendance Allowance, Constant Attendance Allowance or Armed Forces Independence Payment when considering your claim.We will need to check DP's name entitlement to Disability Living Allowance, Personal Independence Payment, Attendance Allowance, Constant Attendance Allowance or Armed Forces Independence Payment when considering your claim.We will need to check DP's name entitlement to Disability Living Allowance, Personal Independence Payment, Attendance Allowance, Constant Attendance Allowance or Armed Forces Independence Payment when considering your claim.</Content>")
-                        .append("<Content>We may contact DP's name or their representative to establish whether 35 hours caring per week is taking place.We may contact DP's name or their representative to establish whether 35 hours caring per week is taking place.We may contact DP's name or their representative to establish whether 35 hours caring per week is taking place.</Content>")
-                        .append("</DisclaimerStatement>")
-                        .append("<DisclaimerQuestion>")
-                        .append("<QuestionLabel>Please tick this box to declare that you have understood the notes and you have made / will make the person you are caring for / or their representative aware that there could be a change to their benefits.</QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</DisclaimerQuestion>")
-                        .append("</Disclaimer>")
-                        .append("<EvidenceList>")
-                        .append("<RecipientAddress>")
-                        .append("<Line>CA Freepost</Line>")
-                        .append("<Line>Palatine House</Line>")
-                        .append("<Line>Preston</Line>")
-                        .append("<PostCode>PR1 1HN</PostCode>")
-                        .append("</RecipientAddress>")
-                        .append("<Evidence>")
-                        .append("<Title>Document you need to send us</Title>")
-                        .append("<Content>You must send us all the documents we ask for. If you do not, any benefit you may be entitled to my be delayed because of this claim. 1</Content>")
-                        .append("<Content>You must send us all the documents we ask for. If you do not, any benefit you may be entitled to my be delayed because of this claim. 2</Content>")
-                        .append("<Content>You must send us all the documents we ask for. If you do not, any benefit you may be entitled to my be delayed because of this claim. 3</Content>")
-                        .append("</Evidence>")
-                        .append("<Evidence>")
-                        .append("<Title>Pay Details</Title>")
-                        .append("<Content>You need to send us the last payslip before 10 Ocotber 2013 and all the payslips you have since then.</Content>")
-                        .append("</Evidence>")
-                        .append("<Evidence>")
-                        .append("<Title>Statement Signed</Title>")
-                        .append("<Content>You need to send us the completed and signed statement.</Content>")
-                        .append("</Evidence>")
-                        .append("</EvidenceList>")
-                        .append("<Consents>")
-                        .append("<Consent>")
-                        .append("<QuestionLabel>Do you agree to us getting information from any current or previous employer you have told us about on this form?</QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</Consent>")
-                        .append("<Consent>")
-                        .append("<QuestionLabel>Please tell us why</QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</Consent>")
-                        .append("<Consent>")
-                        .append("<QuestionLabel></QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</Consent>")
-                        .append("<Consent>")
-                        .append("<QuestionLabel>Please tell us why</QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</Consent>")
-                        .append("<Consent>")
-                        .append("<QuestionLabel>Do you agree to us getting information from any other person or organisation you have told us about on this form?</QuestionLabel>")
-                        .append("<Answer>Yes</Answer>")
-                        .append("</Consent>")
-                        .append("</Consents>")
-                        .append("</DWPCAClaim>")
-                        .append("</DWPCATransaction>")
-                        .append("<ds:Signature xmlns:ds=\"http://www.w3.org/2000/09/xmldsig#\">")
-                        .append("<ds:SignedInfo>")
-                        .append("<ds:CanonicalizationMethod Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\"/>")
-                        .append("<ds:SignatureMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#dsa-sha1\"/>")
-                        .append("<ds:Reference URI=\"DWPCATransaction\">")
-                        .append("<ds:DigestMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#sha1\"/>")
-                        .append("<ds:DigestValue>SadVcIUbeepTfvhp2BzI2V3EPYo=</ds:DigestValue>")
-                        .append("</ds:Reference>")
-                        .append("</ds:SignedInfo>")
-                        .append("<ds:SignatureValue>V6NzTYMiickLrbenHakT1UTnawk7CxWpqPtOh++XyCpg94LlWT682A==</ds:SignatureValue>")
-                        .append("</ds:Signature>")
-                        .append("</DWPBody>");
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("<DWPBody xmlns:ds=\"http://www.w3.org/2000/09/xmldsig#\" xmlns=\"http://www.govtalk.gov.uk/dwp/carers-allowance\"");
+        stringBuilder.append(" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"");
+        stringBuilder.append(" xsi:schemaLocation=\"http://www.govtalk.gov.uk/dwp/carers-allowance file:/Users/jmi/Temp/CarersAllowance_Schema.xsd\">");
+        stringBuilder.append("<Version>");
+        stringBuilder.append(ClaimBuilder.LATEST_VERSION);
+        stringBuilder.append("</Version>");
+        stringBuilder.append("<ClaimVersion>3.8</ClaimVersion>");
+        stringBuilder.append("<Origin>GB</Origin>");
+        stringBuilder.append("<DWPCATransaction>");
+        stringBuilder.append("<TransactionId>NFM33DB</TransactionId>");
+        stringBuilder.append("<DateTimeGenerated>02-10-2010 14:36</DateTimeGenerated>");
+        stringBuilder.append("<DWPCAClaim>");
+        stringBuilder.append("<DateOfClaim>");
+        stringBuilder.append("<QuestionLabel>When do you want your Carer's Allowance claim to start?</QuestionLabel>");
+        stringBuilder.append("<Answer>01-01-2010</Answer>");
+        stringBuilder.append("</DateOfClaim>");
+        stringBuilder.append("<Claimant>");
+        stringBuilder.append("<Surname>CaseThree</Surname>");
+        stringBuilder.append("<OtherNames>Test Middle</OtherNames>");
+        stringBuilder.append("<OtherSurnames>Smithson</OtherSurnames>");
+        stringBuilder.append("<Title>Mr</Title>");
+        stringBuilder.append("<DateOfBirth>01-01-1931</DateOfBirth>");
+        stringBuilder.append("<NationalInsuranceNumber>JB486278C</NationalInsuranceNumber>");
+        stringBuilder.append("<Address>");
+        stringBuilder.append("<Line>3 Preston Road</Line>");
+        stringBuilder.append("<Line>Preston</Line>");
+        stringBuilder.append("<Line>Lancashire</Line>");
+        stringBuilder.append("<PostCode>PR1 2TH</PostCode>");
+        stringBuilder.append("</Address>");
+        stringBuilder.append("<DayTimePhoneNumber>01772 888901</DayTimePhoneNumber>");
+        stringBuilder.append("<MobileNumber>0771 5419808</MobileNumber>");
+        stringBuilder.append("<MaritalStatus>Single</MaritalStatus>");
+        stringBuilder.append("<TextPhoneContact>");
+        stringBuilder.append("<QuestionLabel>text.phone</QuestionLabel>");
+        stringBuilder.append("<Answer>No</Answer>");
+        stringBuilder.append("</TextPhoneContact>");
+        stringBuilder.append("</Claimant>");
+        stringBuilder.append("<Caree>");
+        stringBuilder.append("<Surname>CaseThree</Surname>");
+        stringBuilder.append("<OtherNames>Cloe Scott</OtherNames>");
+        stringBuilder.append("<OtherSurnames>Watson</OtherSurnames>");
+        stringBuilder.append("<Title>Dame</Title>");
+        stringBuilder.append("<DateOfBirth>03-07-1953</DateOfBirth>");
+        stringBuilder.append("<NationalInsuranceNumber>BA234567A</NationalInsuranceNumber>");
+        stringBuilder.append("<Address>");
+        stringBuilder.append("<Line>3a Preston Road</Line>");
+        stringBuilder.append("<Line>Preston</Line>");
+        stringBuilder.append("<Line>Lancashire</Line>");
+        stringBuilder.append("<PostCode>PR1 2TH</PostCode>");
+        stringBuilder.append("</Address>");
+        stringBuilder.append("<DayTimePhoneNumber>01234 567890</DayTimePhoneNumber>");
+        stringBuilder.append("<RelationToClaimant>");
+        stringBuilder.append("<QuestionLabel>What's their relationshipt to you?</QuestionLabel>");
+        stringBuilder.append("<Answer>Mother</Answer>");
+        stringBuilder.append("</RelationToClaimant>");
+        stringBuilder.append("<Cared35Hours>");
+        stringBuilder.append("<QuestionLabel>Do you spend 35 hours or more each week caring for this person?</QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</Cared35Hours>");
+        stringBuilder.append("<BreaksSinceClaim>");
+        stringBuilder.append("<QuestionLabel>Have you had any breaks in caring for this person since claim date?</QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</BreaksSinceClaim>");
+        stringBuilder.append("<CareBreak>");
+        stringBuilder.append("<StartDateTime>10-07-2010 10:00</StartDateTime>");
+        stringBuilder.append("<EndDateTime>17-07-2010 17:45</EndDateTime>");
+        stringBuilder.append("<ReasonClaimant>");
+        stringBuilder.append("<QuestionLabel>Where were you during the break?</QuestionLabel>");
+        stringBuilder.append("<Other>Friend's place</Other>");
+        stringBuilder.append("<Answer>Other</Answer>");
+        stringBuilder.append("</ReasonClaimant>");
+        stringBuilder.append("<ReasonCaree>");
+        stringBuilder.append("<QuestionLabel>Where was the person you care for during the break?</QuestionLabel>");
+        stringBuilder.append("<Answer>At Home</Answer>");
+        stringBuilder.append("</ReasonCaree>");
+        stringBuilder.append("<MedicalCare>");
+        stringBuilder.append("<QuestionLabel>Did you or the person you care for receive any medical treatment or professional care during the break?</QuestionLabel>");
+        stringBuilder.append("<Answer>No</Answer>");
+        stringBuilder.append("</MedicalCare>");
+        stringBuilder.append("</CareBreak>");
+        stringBuilder.append("<CareBreak>");
+        stringBuilder.append("<StartDateTime>10-09-2010 12:00</StartDateTime>");
+        stringBuilder.append("<EndDateTime>17-09-2010 15:15</EndDateTime>");
+        stringBuilder.append("<ReasonClaimant>");
+        stringBuilder.append("<QuestionLabel>Where were you during the break?</QuestionLabel>");
+        stringBuilder.append("<Answer>Hospital</Answer>");
+        stringBuilder.append("</ReasonClaimant>");
+        stringBuilder.append("<ReasonCaree>");
+        stringBuilder.append("<QuestionLabel>Where was the person you care for during the break?</QuestionLabel>");
+        stringBuilder.append("<Answer>At Home</Answer>");
+        stringBuilder.append("</ReasonCaree>");
+        stringBuilder.append("<MedicalCare>");
+        stringBuilder.append("<QuestionLabel>Did you or the person you care for receive any medical treatment or professional care during the break?</QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</MedicalCare>");
+        stringBuilder.append("</CareBreak>");
+        stringBuilder.append("<CareBreak>");
+        stringBuilder.append("<StartDateTime>10-10-2010 10:30</StartDateTime>");
+        stringBuilder.append("</CareBreak>");
+        stringBuilder.append("<Cared35HoursBefore>");
+        stringBuilder.append("<QuestionLabel>care.35.before</QuestionLabel>");
+        stringBuilder.append("<Answer>No</Answer>");
+        stringBuilder.append("</Cared35HoursBefore>");
+        stringBuilder.append("<DateStartCaring>");
+        stringBuilder.append("<QuestionLabel>care.started</QuestionLabel>");
+        stringBuilder.append("<Answer>05-01-2010</Answer>");
+        stringBuilder.append("</DateStartCaring>");
+        stringBuilder.append("<LiveSameAddress>");
+        stringBuilder.append("<QuestionLabel>caree.sameadrees</QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</LiveSameAddress>");
+        stringBuilder.append("<ArmedForcesIndependencePayment>");
+        stringBuilder.append("<QuestionLabel>Does this person get Armed Forces Independence Payment?</QuestionLabel>");
+        stringBuilder.append("<Answer>No</Answer>");
+        stringBuilder.append("</ArmedForcesIndependencePayment>");
+        stringBuilder.append("</Caree>");
+        stringBuilder.append("<Residency>");
+        stringBuilder.append("<NormallyLiveInGB>");
+        stringBuilder.append("<QuestionLabel>live.normally.GB</QuestionLabel>");
+        stringBuilder.append("<Answer>No</Answer>");
+        stringBuilder.append("</NormallyLiveInGB>");
+        stringBuilder.append("<CountryNormallyLive>");
+        stringBuilder.append("<QuestionLabel>live.normally.country</QuestionLabel>");
+        stringBuilder.append("<Answer>France</Answer>");
+        stringBuilder.append("</CountryNormallyLive>");
+        stringBuilder.append("<Nationality>British</Nationality>");
+        stringBuilder.append("<TimeOutsideGBLast3Years>");
+        stringBuilder.append("<QuestionLabel>Time.out.GB</QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</TimeOutsideGBLast3Years>");
+        stringBuilder.append("<PeriodAbroad>");
+        stringBuilder.append("<Period>");
+        stringBuilder.append("<DateFrom>");
+        stringBuilder.append("<QuestionLabel>abroad.date.from</QuestionLabel>");
+        stringBuilder.append("<Answer>08-09-2010</Answer>");
+        stringBuilder.append("</DateFrom>");
+        stringBuilder.append("<DateTo>");
+        stringBuilder.append("<QuestionLabel>abroad.date.to</QuestionLabel>");
+        stringBuilder.append("<Answer>08-12-2010</Answer>");
+        stringBuilder.append("</DateTo>");
+        stringBuilder.append("</Period>");
+        stringBuilder.append("<Reason>");
+        stringBuilder.append("<QuestionLabel>abroad.reason</QuestionLabel>");
+        stringBuilder.append("<Other>Funeral</Other>");
+        stringBuilder.append("<Answer>Other</Answer>");
+        stringBuilder.append("</Reason>");
+        stringBuilder.append("<Country>");
+        stringBuilder.append("<QuestionLabel>country.went</QuestionLabel>");
+        stringBuilder.append("<Answer>France</Answer>");
+        stringBuilder.append("</Country>");
+        stringBuilder.append("<CareePresent>");
+        stringBuilder.append("<QuestionLabel>caree.present</QuestionLabel>");
+        stringBuilder.append("<Answer>No</Answer>");
+        stringBuilder.append("</CareePresent>");
+        stringBuilder.append("</PeriodAbroad>");
+        stringBuilder.append("<PeriodAbroad>");
+        stringBuilder.append("<Period>");
+        stringBuilder.append("<DateFrom>");
+        stringBuilder.append("<QuestionLabel>abroad.date.from</QuestionLabel>");
+        stringBuilder.append("<Answer>06-09-2011</Answer>");
+        stringBuilder.append("</DateFrom>");
+        stringBuilder.append("<DateTo>");
+        stringBuilder.append("<QuestionLabel>abroad.date.to</QuestionLabel>");
+        stringBuilder.append("<Answer>06-12-2011</Answer>");
+        stringBuilder.append("</DateTo>");
+        stringBuilder.append("</Period>");
+        stringBuilder.append("<Reason>");
+        stringBuilder.append("<QuestionLabel>abroad.reason</QuestionLabel>");
+        stringBuilder.append("<Answer>Holiday</Answer>");
+        stringBuilder.append("</Reason>");
+        stringBuilder.append("<Country>");
+        stringBuilder.append("<QuestionLabel>country.went</QuestionLabel>");
+        stringBuilder.append("<Answer>Spain</Answer>");
+        stringBuilder.append("</Country>");
+        stringBuilder.append("<CareePresent>");
+        stringBuilder.append("<QuestionLabel>caree.present</QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</CareePresent>");
+        stringBuilder.append("</PeriodAbroad>");
+        stringBuilder.append("</Residency>");
+        stringBuilder.append("<CourseOfEducation>");
+        stringBuilder.append("<QuestionLabel>Have you been on a course of education since your claim date?</QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</CourseOfEducation>");
+        stringBuilder.append("<FullTimeEducation>");
+        stringBuilder.append("<CourseDetails>");
+        stringBuilder.append("<Type>BA honours in Business</Type>");
+        stringBuilder.append("<Title>Bussines Studies</Title>");
+        stringBuilder.append("<DateStarted>");
+        stringBuilder.append("<QuestionLabel>education.started</QuestionLabel>");
+        stringBuilder.append("<Answer>01-01-2013</Answer>");
+        stringBuilder.append("</DateStarted>");
+        stringBuilder.append("<ExpectedEndDate>");
+        stringBuilder.append("<QuestionLabel>education.end.expected</QuestionLabel>");
+        stringBuilder.append("<Answer>05-01-2014</Answer>");
+        stringBuilder.append("</ExpectedEndDate>");
+        stringBuilder.append("</CourseDetails>");
+        stringBuilder.append("<LocationDetails>");
+        stringBuilder.append("<Name>Oxford College</Name>");
+        stringBuilder.append("<Address>");
+        stringBuilder.append("<Line>1 Oxford Road</Line>");
+        stringBuilder.append("<Line>Oxford</Line>");
+        stringBuilder.append("<Line>Oxfordshire</Line>");
+        stringBuilder.append("<PostCode>OX12 3RT</PostCode>");
+        stringBuilder.append("</Address>");
+        stringBuilder.append("<PhoneNumber>01776 829920</PhoneNumber>");
+        stringBuilder.append("<FaxNumber>01776 829920</FaxNumber>");
+        stringBuilder.append("<StudentReferenceNumber>91982</StudentReferenceNumber>");
+        stringBuilder.append("<Tutor>My Tutor</Tutor>");
+        stringBuilder.append("</LocationDetails>");
+        stringBuilder.append("</FullTimeEducation>");
+        stringBuilder.append("<SelfEmployed>");
+        stringBuilder.append("<QuestionLabel>Have you been self-employed at any time since (this is one week before your claim date);?</QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</SelfEmployed>");
+        stringBuilder.append("<SelfEmployment>");
+        stringBuilder.append("<SelfEmployedNow>");
+        stringBuilder.append("<QuestionLabel>selfepmloyed.now</QuestionLabel>");
+        stringBuilder.append("<Answer>No</Answer>");
+        stringBuilder.append("</SelfEmployedNow>");
+        stringBuilder.append("<RecentJobDetails>");
+        stringBuilder.append("<DateStarted>");
+        stringBuilder.append("<QuestionLabel>selfemployed.started</QuestionLabel>");
+        stringBuilder.append("<Answer>05-01-2010</Answer>");
+        stringBuilder.append("</DateStarted>");
+        stringBuilder.append("<NatureBusiness>");
+        stringBuilder.append("<QuestionLabel>selfemployed.business</QuestionLabel>");
+        stringBuilder.append("<Answer>Fruit and veg, delivery service</Answer>");
+        stringBuilder.append("</NatureBusiness>");
+        stringBuilder.append("<TradingYear>");
+        stringBuilder.append("<DateFrom>");
+        stringBuilder.append("<QuestionLabel>trading.from</QuestionLabel>");
+        stringBuilder.append("<Answer>05-01-2013</Answer>");
+        stringBuilder.append("</DateFrom>");
+        stringBuilder.append("<DateTo>");
+        stringBuilder.append("<QuestionLabel>trading.to</QuestionLabel>");
+        stringBuilder.append("<Answer>30-04-2014</Answer>");
+        stringBuilder.append("</DateTo>");
+        stringBuilder.append("</TradingYear>");
+        stringBuilder.append("<SameIncomeOutgoingLevels>");
+        stringBuilder.append("<QuestionLabel>selfemployed.level</QuestionLabel>");
+        stringBuilder.append("<Answer>No</Answer>");
+        stringBuilder.append("</SameIncomeOutgoingLevels>");
+        stringBuilder.append("<WhyWhenChange>");
+        stringBuilder.append("<QuestionLabel>selfemployed.level.change</QuestionLabel>");
+        stringBuilder.append("<Answer>Depends on the seasons, and productivity of the fruit.</Answer>");
+        stringBuilder.append("</WhyWhenChange>");
+        stringBuilder.append("<DateEnded>");
+        stringBuilder.append("<QuestionLabel>selfemployed.ended</QuestionLabel>");
+        stringBuilder.append("<Answer>01-09-2013</Answer>");
+        stringBuilder.append("</DateEnded>");
+        stringBuilder.append("<TradingCeased>");
+        stringBuilder.append("<QuestionLabel>selfemployed.ceased</QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</TradingCeased>");
+        stringBuilder.append("</RecentJobDetails>");
+        stringBuilder.append("<CareExpensesChildren>");
+        stringBuilder.append("<QuestionLabel>self.child.expenses</QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</CareExpensesChildren>");
+        stringBuilder.append("<ChildCareExpenses>");
+        stringBuilder.append("<CarerName>");
+        stringBuilder.append("<QuestionLabel>self.child.carer</QuestionLabel>");
+        stringBuilder.append("<Answer>Mr John Smith</Answer>");
+        stringBuilder.append("</CarerName>");
+        stringBuilder.append("<Expense>");
+        stringBuilder.append("<Payment>");
+        stringBuilder.append("<QuestionLabel>self.child.care.amount</QuestionLabel>");
+        stringBuilder.append("<Answer>");
+        stringBuilder.append("<Currency>GBP</Currency>");
+        stringBuilder.append("<Amount>120.00</Amount>");
+        stringBuilder.append("</Answer>");
+        stringBuilder.append("</Payment>");
+        stringBuilder.append("<Frequency>");
+        stringBuilder.append("<QuestionLabel>self.child.care.frequency</QuestionLabel>");
+        stringBuilder.append("<Answer>Weekly</Answer>");
+        stringBuilder.append("</Frequency>");
+        stringBuilder.append("</Expense>");
+        stringBuilder.append("<RelationshipCarerToClaimant>");
+        stringBuilder.append("<QuestionLabel>self.child.rel.claimant</QuestionLabel>");
+        stringBuilder.append("<Answer>Uncle</Answer>");
+        stringBuilder.append("</RelationshipCarerToClaimant>");
+        stringBuilder.append("<RelationshipCarerToPartner>");
+        stringBuilder.append("<QuestionLabel>self.child.rel.partner</QuestionLabel>");
+        stringBuilder.append("<Other>None</Other>");
+        stringBuilder.append("<Answer>Other</Answer>");
+        stringBuilder.append("</RelationshipCarerToPartner>");
+        stringBuilder.append("<RelationToChild>");
+        stringBuilder.append("<QuestionLabel>self.child.rel.child</QuestionLabel>");
+        stringBuilder.append("<Answer>Uncle</Answer>");
+        stringBuilder.append("</RelationToChild>");
+        stringBuilder.append("</ChildCareExpenses>");
+        stringBuilder.append("<CareExpensesCaree>");
+        stringBuilder.append("<QuestionLabel>self.care.expenses</QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</CareExpensesCaree>");
+        stringBuilder.append("<CareExpenses>");
+        stringBuilder.append("<CarerName>");
+        stringBuilder.append("<QuestionLabel>self.care.carer</QuestionLabel>");
+        stringBuilder.append("<Answer>Mrs Terry Smith</Answer>");
+        stringBuilder.append("</CarerName>");
+        stringBuilder.append("<Expense>");
+        stringBuilder.append("<Payment>");
+        stringBuilder.append("<QuestionLabel>self.care.amount</QuestionLabel>");
+        stringBuilder.append("<Answer>");
+        stringBuilder.append("<Currency>GBP</Currency>");
+        stringBuilder.append("<Amount>400.00</Amount>");
+        stringBuilder.append("</Answer>");
+        stringBuilder.append("</Payment>");
+        stringBuilder.append("<Frequency>");
+        stringBuilder.append("<QuestionLabel>self.care.frequency</QuestionLabel>");
+        stringBuilder.append("<Other>Other expenses frequency</Other>");
+        stringBuilder.append("<Answer>Other</Answer>");
+        stringBuilder.append("</Frequency>");
+        stringBuilder.append("</Expense>");
+        stringBuilder.append("<RelationshipCarerToClaimant>");
+        stringBuilder.append("<QuestionLabel>self.care.rel.claimant</QuestionLabel>");
+        stringBuilder.append("<Other>None</Other>");
+        stringBuilder.append("<Answer>Other</Answer>");
+        stringBuilder.append("</RelationshipCarerToClaimant>");
+        stringBuilder.append("<RelationshipCarerToPartner>");
+        stringBuilder.append("<QuestionLabel>self.care.rel.partner</QuestionLabel>");
+        stringBuilder.append("<Answer>Aunt</Answer>");
+        stringBuilder.append("</RelationshipCarerToPartner>");
+        stringBuilder.append("<RelationshipCarerToCaree>");
+        stringBuilder.append("<QuestionLabel>self.care.rel.caree</QuestionLabel>");
+        stringBuilder.append("<Answer>Aunt</Answer>");
+        stringBuilder.append("</RelationshipCarerToCaree>");
+        stringBuilder.append("</CareExpenses>");
+        stringBuilder.append("<PaidForPension>");
+        stringBuilder.append("<QuestionLabel>self.pension</QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</PaidForPension>");
+        stringBuilder.append("<PensionScheme>");
+        stringBuilder.append("<Payment>");
+        stringBuilder.append("<QuestionLabel>self.pension.amount</QuestionLabel>");
+        stringBuilder.append("<Answer>");
+        stringBuilder.append("<Currency>GBP</Currency>");
+        stringBuilder.append("<Amount>15.23</Amount>");
+        stringBuilder.append("</Answer>");
+        stringBuilder.append("</Payment>");
+        stringBuilder.append("<Frequency>");
+        stringBuilder.append("<QuestionLabel>self.pension.frequency</QuestionLabel>");
+        stringBuilder.append("<Answer>Weekly</Answer>");
+        stringBuilder.append("</Frequency>");
+        stringBuilder.append("</PensionScheme>");
+        stringBuilder.append("</SelfEmployment>");
+        stringBuilder.append("<Employed>");
+        stringBuilder.append("<QuestionLabel>Have you been employed at any time since (this is six months before your claim date);?</QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</Employed>");
+        stringBuilder.append("<Employment>");
+        stringBuilder.append("<CurrentlyEmployed>");
+        stringBuilder.append("<QuestionLabel>employed.currently</QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</CurrentlyEmployed>");
+        stringBuilder.append("<JobDetails>");
+        stringBuilder.append("<Employer>");
+        stringBuilder.append("<DateJobStarted>");
+        stringBuilder.append("<QuestionLabel>job.started</QuestionLabel>");
+        stringBuilder.append("<Answer>01-01-2013</Answer>");
+        stringBuilder.append("</DateJobStarted>");
+        stringBuilder.append("<JobType>");
+        stringBuilder.append("<QuestionLabel>job.title</QuestionLabel>");
+        stringBuilder.append("<Answer>Hacker</Answer>");
+        stringBuilder.append("</JobType>");
+        stringBuilder.append("<ClockPayrollNumber>12345678</ClockPayrollNumber>");
+        stringBuilder.append("<Name>Tesco's</Name>");
+        stringBuilder.append("<Address>");
+        stringBuilder.append("<Line>23 Yeadon Way</Line>");
+        stringBuilder.append("<Line>Blackpool</Line>");
+        stringBuilder.append("<Line>Lancashire</Line>");
+        stringBuilder.append("<PostCode>FY4 5TH</PostCode>");
+        stringBuilder.append("</Address>");
+        stringBuilder.append("<EmployersPhoneNumber>01253 667889</EmployersPhoneNumber>");
+        stringBuilder.append("<HaveFinishedJob>");
+        stringBuilder.append("<QuestionLabel>job.finished</QuestionLabel>");
+        stringBuilder.append("<Answer>No</Answer>");
+        stringBuilder.append("</HaveFinishedJob>");
+        stringBuilder.append("</Employer>");
+        stringBuilder.append("<Pay>");
+        stringBuilder.append("<WeeklyHoursWorked>");
+        stringBuilder.append("<QuestionLabel>job.hours</QuestionLabel>");
+        stringBuilder.append("<Answer>25</Answer>");
+        stringBuilder.append("</WeeklyHoursWorked>");
+        stringBuilder.append("<DateLastPaid>");
+        stringBuilder.append("<QuestionLabel>job.lastpaid</QuestionLabel>");
+        stringBuilder.append("<Answer>02-07-2013</Answer>");
+        stringBuilder.append("</DateLastPaid>");
+        stringBuilder.append("<GrossPayment>");
+        stringBuilder.append("<QuestionLabel>job.pay</QuestionLabel>");
+        stringBuilder.append("<Answer>");
+        stringBuilder.append("<Currency>GBP</Currency>");
+        stringBuilder.append("<Amount>600.00</Amount>");
+        stringBuilder.append("</Answer>");
+        stringBuilder.append("</GrossPayment>");
+        stringBuilder.append("<IncludedInWage>");
+        stringBuilder.append("<QuestionLabel>job.pay.include</QuestionLabel>");
+        stringBuilder.append("<Answer>All amounts due</Answer>");
+        stringBuilder.append("</IncludedInWage>");
+        stringBuilder.append("<PayFrequency>");
+        stringBuilder.append("<QuestionLabel>job.pay.frequency</QuestionLabel>");
+        stringBuilder.append("<Answer>Four-Weekly</Answer>");
+        stringBuilder.append("</PayFrequency>");
+        stringBuilder.append("<UsualPayDay>");
+        stringBuilder.append("<QuestionLabel>job.day</QuestionLabel>");
+        stringBuilder.append("<Answer>Wednesday usually</Answer>");
+        stringBuilder.append("</UsualPayDay>");
+        stringBuilder.append("<ConstantEarnings>");
+        stringBuilder.append("<QuestionLabel>job.same.amount</QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</ConstantEarnings>");
+        stringBuilder.append("</Pay>");
+        stringBuilder.append("<OweMoney>");
+        stringBuilder.append("<QuestionLabel>job.owe</QuestionLabel>");
+        stringBuilder.append("<Answer>No</Answer>");
+        stringBuilder.append("</OweMoney>");
+        stringBuilder.append("<CareExpensesChildren>");
+        stringBuilder.append("<QuestionLabel>chld.expenses</QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</CareExpensesChildren>");
+        stringBuilder.append("<ChildCareExpenses>");
+        stringBuilder.append("<CarerName>");
+        stringBuilder.append("<QuestionLabel>child.carer</QuestionLabel>");
+        stringBuilder.append("<Answer>Mr Grandfather Senior</Answer>");
+        stringBuilder.append("</CarerName>");
+        stringBuilder.append("<Expense>");
+        stringBuilder.append("<Payment>");
+        stringBuilder.append("<QuestionLabel>child.care.amount</QuestionLabel>");
+        stringBuilder.append("<Answer>");
+        stringBuilder.append("<Currency>GBP</Currency>");
+        stringBuilder.append("<Amount>120.12</Amount>");
+        stringBuilder.append("</Answer>");
+        stringBuilder.append("</Payment>");
+        stringBuilder.append("<Frequency>");
+        stringBuilder.append("<QuestionLabel>child.care.frequency</QuestionLabel>");
+        stringBuilder.append("<Answer>Weekly</Answer>");
+        stringBuilder.append("</Frequency>");
+        stringBuilder.append("</Expense>");
+        stringBuilder.append("<RelationshipCarerToClaimant>");
+        stringBuilder.append("<QuestionLabel>child.care.rel.claimant</QuestionLabel>");
+        stringBuilder.append("<Answer>Father</Answer>");
+        stringBuilder.append("</RelationshipCarerToClaimant>");
+        stringBuilder.append("<RelationshipCarerToPartner>");
+        stringBuilder.append("<QuestionLabel>cild.care.rel.partner</QuestionLabel>");
+        stringBuilder.append("<Answer>Stepfather</Answer>");
+        stringBuilder.append("</RelationshipCarerToPartner>");
+        stringBuilder.append("<RelationToChild>");
+        stringBuilder.append("<QuestionLabel>child.care.rel.child</QuestionLabel>");
+        stringBuilder.append("<Answer>Grandfather</Answer>");
+        stringBuilder.append("</RelationToChild>");
+        stringBuilder.append("</ChildCareExpenses>");
+        stringBuilder.append("<CareExpensesCaree>");
+        stringBuilder.append("<QuestionLabel>care.expenses</QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</CareExpensesCaree>");
+        stringBuilder.append("<CareExpenses>");
+        stringBuilder.append("<CarerName>");
+        stringBuilder.append("<QuestionLabel>care.carer</QuestionLabel>");
+        stringBuilder.append("<Answer>Carers UK Ltd</Answer>");
+        stringBuilder.append("</CarerName>");
+        stringBuilder.append("<Expense>");
+        stringBuilder.append("<Payment>");
+        stringBuilder.append("<QuestionLabel>care.carer.amount</QuestionLabel>");
+        stringBuilder.append("<Answer>");
+        stringBuilder.append("<Currency>GBP</Currency>");
+        stringBuilder.append("<Amount>150.55</Amount>");
+        stringBuilder.append("</Answer>");
+        stringBuilder.append("</Payment>");
+        stringBuilder.append("<Frequency>");
+        stringBuilder.append("<QuestionLabel>care.carer.frequency</QuestionLabel>");
+        stringBuilder.append("<Other>Annually</Other>");
+        stringBuilder.append("<Answer>Other</Answer>");
+        stringBuilder.append("</Frequency>");
+        stringBuilder.append("</Expense>");
+        stringBuilder.append("<RelationshipCarerToClaimant>");
+        stringBuilder.append("<QuestionLabel>care.carer.rel.claimant</QuestionLabel>");
+        stringBuilder.append("<Other>None</Other>");
+        stringBuilder.append("<Answer>Other</Answer>");
+        stringBuilder.append("</RelationshipCarerToClaimant>");
+        stringBuilder.append("<RelationshipCarerToPartner>");
+        stringBuilder.append("<QuestionLabel>care.carer.rel.partner</QuestionLabel>");
+        stringBuilder.append("<Other>None</Other>");
+        stringBuilder.append("<Answer>Other</Answer>");
+        stringBuilder.append("</RelationshipCarerToPartner>");
+        stringBuilder.append("<RelationshipCarerToCaree>");
+        stringBuilder.append("<QuestionLabel>care.carer.rel.caree</QuestionLabel>");
+        stringBuilder.append("<Other>None</Other>");
+        stringBuilder.append("<Answer>Other</Answer>");
+        stringBuilder.append("</RelationshipCarerToCaree>");
+        stringBuilder.append("</CareExpenses>");
+        stringBuilder.append("<PaidForOccupationalPension>");
+        stringBuilder.append("<QuestionLabel>pension.occupational</QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</PaidForOccupationalPension>");
+        stringBuilder.append("<OccupationalPension>");
+        stringBuilder.append("<Payment>");
+        stringBuilder.append("<QuestionLabel>pension.occ.amount</QuestionLabel>");
+        stringBuilder.append("<Answer>");
+        stringBuilder.append("<Currency>GBP</Currency>");
+        stringBuilder.append("<Amount>350.10</Amount>");
+        stringBuilder.append("</Answer>");
+        stringBuilder.append("</Payment>");
+        stringBuilder.append("<Frequency>");
+        stringBuilder.append("<QuestionLabel>pension.occ.frequency</QuestionLabel>");
+        stringBuilder.append("<Other>Other frequency fo occupational scheme</Other>");
+        stringBuilder.append("<Answer>Other</Answer>");
+        stringBuilder.append("</Frequency>");
+        stringBuilder.append("</OccupationalPension>");
+        stringBuilder.append("<PaidForPersonalPension>");
+        stringBuilder.append("<QuestionLabel>pension.personal</QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</PaidForPersonalPension>");
+        stringBuilder.append("<PersonalPension>");
+        stringBuilder.append("<Payment>");
+        stringBuilder.append("<QuestionLabel>pension.per.amount</QuestionLabel>");
+        stringBuilder.append("<Answer>");
+        stringBuilder.append("<Currency>GBP</Currency>");
+        stringBuilder.append("<Amount>200.1</Amount>");
+        stringBuilder.append("</Answer>");
+        stringBuilder.append("</Payment>");
+        stringBuilder.append("<Frequency>");
+        stringBuilder.append("<QuestionLabel>pension.per.frequency</QuestionLabel>");
+        stringBuilder.append("<Answer>Monthly</Answer>");
+        stringBuilder.append("</Frequency>");
+        stringBuilder.append("</PersonalPension>");
+        stringBuilder.append("<PaidForJobExpenses>");
+        stringBuilder.append("<QuestionLabel>job.expenses</QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</PaidForJobExpenses>");
+        stringBuilder.append("<JobExpenses>");
+        stringBuilder.append("<Expense>");
+        stringBuilder.append("<QuestionLabel>job.expense</QuestionLabel>");
+        stringBuilder.append("<Answer>Petrol money for driving</Answer>");
+        stringBuilder.append("</Expense>");
+        stringBuilder.append("</JobExpenses>");
+        stringBuilder.append("<OtherEmployment>");
+        stringBuilder.append("<QuestionLabel>Other.eployment</QuestionLabel>");
+        stringBuilder.append("<Answer>No</Answer>");
+        stringBuilder.append("</OtherEmployment>");
+        stringBuilder.append("</JobDetails>");
+        stringBuilder.append("</Employment>");
+        stringBuilder.append("<HavePartner>");
+        stringBuilder.append("<QuestionLabel>Have you had a partner/spouse living with you since your claim date?</QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</HavePartner>");
+        stringBuilder.append("<Partner>");
+        stringBuilder.append("<Surname>CaseThree</Surname>");
+        stringBuilder.append("<OtherNames>Test Middle clémence</OtherNames>");
+        stringBuilder.append("<OtherSurnames>Dixon Jão SØren Górnictwo</OtherSurnames>");
+        stringBuilder.append("<Title>Mrs</Title>");
+        stringBuilder.append("<DateOfBirth>28-09-1937</DateOfBirth>");
+        stringBuilder.append("<NationalInsuranceNumber>BA234567A</NationalInsuranceNumber>");
+        stringBuilder.append("<DayTimePhoneNumber>0987654321</DayTimePhoneNumber>");
+        stringBuilder.append("<NationalityPartner>British</NationalityPartner>");
+        stringBuilder.append("<RelationshipStatus>");
+        stringBuilder.append("<SeparatedFromPartner>");
+        stringBuilder.append("<QuestionLabel>partner.separated</QuestionLabel>");
+        stringBuilder.append("<Answer>No</Answer>");
+        stringBuilder.append("</SeparatedFromPartner>");
+        stringBuilder.append("</RelationshipStatus>");
+        stringBuilder.append("<IsCaree>");
+        stringBuilder.append("<QuestionLabel>Is your partner/spouse the person you are claiming Carer's Allowance for?</QuestionLabel>");
+        stringBuilder.append("<Answer>No</Answer>");
+        stringBuilder.append("</IsCaree>");
+        stringBuilder.append("</Partner>");
+        stringBuilder.append("<OtherBenefits>");
+        stringBuilder.append("<ClaimantBenefits>");
+        stringBuilder.append("<StatePension>");
+        stringBuilder.append("<QuestionLabel>Do you get State Pension?</QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</StatePension>");
+        stringBuilder.append("</ClaimantBenefits>");
+        stringBuilder.append("<OtherMoneySSP>");
+        stringBuilder.append("<QuestionLabel>ssp.money</QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</OtherMoneySSP>");
+        stringBuilder.append("<OtherMoneySSPDetails>");
+        stringBuilder.append("<Payment>");
+        stringBuilder.append("<Payment>");
+        stringBuilder.append("<QuestionLabel>ssp.amount</QuestionLabel>");
+        stringBuilder.append("<Answer>");
+        stringBuilder.append("<Currency>GBP</Currency>");
+        stringBuilder.append("<Amount>12</Amount>");
+        stringBuilder.append("</Answer>");
+        stringBuilder.append("</Payment>");
+        stringBuilder.append("<Frequency>");
+        stringBuilder.append("<QuestionLabel>ssp.frequency</QuestionLabel>");
+        stringBuilder.append("<Other>Every day and twice on Sundays</Other>");
+        stringBuilder.append("<Answer>Other</Answer>");
+        stringBuilder.append("</Frequency>");
+        stringBuilder.append("</Payment>");
+        stringBuilder.append("<Name>Burger King</Name>");
+        stringBuilder.append("<Address>");
+        stringBuilder.append("<Line>102 Preston Road</Line>");
+        stringBuilder.append("<Line>Preston</Line>");
+        stringBuilder.append("<Line>Lancashire</Line>");
+        stringBuilder.append("<PostCode>PR45 6YH</PostCode>");
+        stringBuilder.append("</Address>");
+        stringBuilder.append("</OtherMoneySSPDetails>");
+        stringBuilder.append("<OtherMoneySP>");
+        stringBuilder.append("<QuestionLabel>sp.money</QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</OtherMoneySP>");
+        stringBuilder.append("<OtherMoneySPDetails>");
+        stringBuilder.append("<Payment>");
+        stringBuilder.append("<Payment>");
+        stringBuilder.append("<QuestionLabel>sp.amount</QuestionLabel>");
+        stringBuilder.append("<Answer>");
+        stringBuilder.append("<Currency>GBP</Currency>");
+        stringBuilder.append("<Amount>120</Amount>");
+        stringBuilder.append("</Answer>");
+        stringBuilder.append("</Payment>");
+        stringBuilder.append("<Frequency>");
+        stringBuilder.append("<QuestionLabel>sp.frequency</QuestionLabel>");
+        stringBuilder.append("<Answer>Weekly</Answer>");
+        stringBuilder.append("</Frequency>");
+        stringBuilder.append("</Payment>");
+        stringBuilder.append("<Name>KFC</Name>");
+        stringBuilder.append("<Address>");
+        stringBuilder.append("<Line>104 Preston Road</Line>");
+        stringBuilder.append("<Line>Preston</Line>");
+        stringBuilder.append("<Line>Lancashire</Line>");
+        stringBuilder.append("<PostCode>PR45 6YH</PostCode>");
+        stringBuilder.append("</Address>");
+        stringBuilder.append("</OtherMoneySPDetails>");
+        stringBuilder.append("<OtherMoney>");
+        stringBuilder.append("<QuestionLabel>Have you or your Partner or Spouse claimed or received any other benefits since the date you want to claim?</QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</OtherMoney>");
+        stringBuilder.append("<OtherMoneyDetails>");
+        stringBuilder.append("<Payment>");
+        stringBuilder.append("<Payment>");
+        stringBuilder.append("<QuestionLabel>Other.amount</QuestionLabel>");
+        stringBuilder.append("<Answer>");
+        stringBuilder.append("<Currency>GBP</Currency>");
+        stringBuilder.append("<Amount>123.57</Amount>");
+        stringBuilder.append("</Answer>");
+        stringBuilder.append("</Payment>");
+        stringBuilder.append("<Frequency>");
+        stringBuilder.append("<QuestionLabel>Other.frequency</QuestionLabel>");
+        stringBuilder.append("<Other>Quarterly</Other>");
+        stringBuilder.append("<Answer>Other</Answer>");
+        stringBuilder.append("</Frequency>");
+        stringBuilder.append("</Payment>");
+        stringBuilder.append("<Name>");
+        stringBuilder.append("<QuestionLabel>Other.who</QuestionLabel>");
+        stringBuilder.append("<Answer>The Man</Answer>");
+        stringBuilder.append("</Name>");
+        stringBuilder.append("</OtherMoneyDetails>");
+        stringBuilder.append("<EEA>");
+        stringBuilder.append("<EEAClaimPensionsBenefits>");
+        stringBuilder.append("<QuestionLabel>eea.pension</QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</EEAClaimPensionsBenefits>");
+        stringBuilder.append("<EEAReceivePensionsBenefits>");
+        stringBuilder.append("<QuestionLabel>eea.pension</QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</EEAReceivePensionsBenefits>");
+        stringBuilder.append("<EEAWorkingInsurance>");
+        stringBuilder.append("<QuestionLabel>eea.insurance</QuestionLabel>");
+        stringBuilder.append("<Answer>No</Answer>");
+        stringBuilder.append("</EEAWorkingInsurance>");
+        stringBuilder.append("</EEA>");
+        stringBuilder.append("</OtherBenefits>");
+        stringBuilder.append("<Payment>");
+        stringBuilder.append("<PaymentFrequency>");
+        stringBuilder.append("<QuestionLabel>payment.frequency</QuestionLabel>");
+        stringBuilder.append("<Answer>Weekly</Answer>");
+        stringBuilder.append("</PaymentFrequency>");
+        stringBuilder.append("<InitialAccountQuestion>");
+        stringBuilder.append("<QuestionLabel>payment.way</QuestionLabel>");
+        stringBuilder.append("<Answer>UK bank or building society</Answer>");
+        stringBuilder.append("</InitialAccountQuestion>");
+        stringBuilder.append("<Account>");
+        stringBuilder.append("<HolderName>Mr Test Casetwo</HolderName>");
+        stringBuilder.append("<BuildingSocietyDetails>");
+        stringBuilder.append("<AccountNumber>12345678</AccountNumber>");
+        stringBuilder.append("<SortCode>090126</SortCode>");
+        stringBuilder.append("<Name>Santander</Name>");
+        stringBuilder.append("</BuildingSocietyDetails>");
+        stringBuilder.append("</Account>");
+        stringBuilder.append("</Payment>");
+        stringBuilder.append("<OtherInformation>");
+        stringBuilder.append("<WelshCommunication>");
+        stringBuilder.append("<QuestionLabel>welsh.communication</QuestionLabel>");
+        stringBuilder.append("<Answer>No</Answer>");
+        stringBuilder.append("</WelshCommunication>");
+        stringBuilder.append("<AdditionalInformation>");
+        stringBuilder.append("<QuestionLabel>anything.else</QuestionLabel>");
+        stringBuilder.append("<Answer>It takes too long to claim. But I can write a very long answer here. 2000 characters.</Answer>");
+        stringBuilder.append("</AdditionalInformation>");
+        stringBuilder.append("</OtherInformation>");
+        stringBuilder.append("<Declaration>");
+        stringBuilder.append("<DeclarationStatement>");
+        stringBuilder.append("<Content>The declarations below sets out your legal responsibilities in respect of your claim.</Content>");
+        stringBuilder.append("<Content>I declare that I understand the Carer's Allowance Claim Notes and that the information provided on this claim form is correct and complete.</Content>");
+        stringBuilder.append("<Content>I understand that I must report all changes in my circumstances or that of the person that I am caring for which may affect my entitlement promptly and by failing to do so I may be liable to prosecution or face a financial penalty.</Content>");
+        stringBuilder.append("<Content>I will phone 08456084321 or write to Carer's Allowance Unit, Palatine House, Preston, Lancaster, PR1 1HB to report a change in my circumstances or that of the person that I am caring for.</Content>");
+        stringBuilder.append("<Content>If I give false or incomplete information or fail to report changes in my circumstances or that of the person that I am caring for promptly, I understand that my Carer's Allowance may be stopped or reduced and any overpayment of Carer's Allowance may be recovered. In addition I may be prosecuted or face a financial penalty.</Content>");
+        stringBuilder.append("</DeclarationStatement>");
+        stringBuilder.append("<DeclarationQuestion>");
+        stringBuilder.append("<QuestionLabel>Please tick this box if this claim form has been filled in by someone else, if so, please ensure that you understand the declarations above as another person cannot make the declarations on your behalf.</QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</DeclarationQuestion>");
+        stringBuilder.append("<DeclarationQuestion>");
+        stringBuilder.append("<QuestionLabel>Please tick this box to confirm that you understand and make the declarations above.</QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</DeclarationQuestion>");
+        stringBuilder.append("</Declaration>");
+        stringBuilder.append("<Disclaimer>");
+        stringBuilder.append("<DisclaimerStatement>");
+        stringBuilder.append("<Content>I understand that if I am paid Carer's Allowance it may affect the benefits paid to DP's name I understand that if I am paid Carer's Allowance it may affect the benefits paid to DP's name>>I understand that if I am paid Carer's Allowance it may affect the benefits paid to DP's name</Content>");
+        stringBuilder.append("<Content>If the person you are caring for receives certain benefits, the amount they receive may be affected by your claim for Carer's Allowance. Because of this we need both of you to understand the potential consequences of your claim to Carer's Allowance.</Content>");
+        stringBuilder.append("<Content>If DP's name gets a Severe Disability Premium with their income-based Jobseeker's Allowance, Income Support, income-related Employment and Support Allowance, Housing Benefit, they may no longer get that premium if we pay Carer's Allowance to you.If DP's name>> gets a Severe Disability Premium with their income-based Jobseeker's Allowance, Income Support, income-related Employment and Support Allowance, Housing Benefit, they may no longer get that premium if we pay Carer's Allowance to you.If DP's name gets a Severe Disability Premium with their income-based Jobseeker's Allowance, Income Support, income-related Employment and Support Allowance, Housing Benefit, they may no longer get that premium if we pay Carer's Allowance to you.</Content>");
+        stringBuilder.append("<Content>If DP's name Pension Credit includes an extra amount for severe disability, they may no longer get that extra amount if we pay Carer's Allowance to you.If DP's name Pension Credit includes an extra amount for severe disability, they may no longer get that extra amount if we pay Carer's Allowance to you.If DP's name Pension Credit includes an extra amount for severe disability, they may no longer get that extra amount if we pay Carer's Allowance to you.</Content>");
+        stringBuilder.append("<Content>This could also affect any reduction in Council Tax DP's name may be entitled to. To find out more about it, please contact the Local Authority.This could also affect any reduction in Council Tax DP's name>> may be entitled to. To find out more about it, please contact the Local Authority.This could also affect any reduction in Council Tax DP's name may be entitled to. To find out more about it, please contact the Local Authority.</Content>");
+        stringBuilder.append("<Content>We will need to check DP's name entitlement to Disability Living Allowance, Personal Independence Payment, Attendance Allowance, Constant Attendance Allowance or Armed Forces Independence Payment when considering your claim.We will need to check DP's name entitlement to Disability Living Allowance, Personal Independence Payment, Attendance Allowance, Constant Attendance Allowance or Armed Forces Independence Payment when considering your claim.We will need to check DP's name entitlement to Disability Living Allowance, Personal Independence Payment, Attendance Allowance, Constant Attendance Allowance or Armed Forces Independence Payment when considering your claim.</Content>");
+        stringBuilder.append("<Content>We may contact DP's name or their representative to establish whether 35 hours caring per week is taking place.We may contact DP's name or their representative to establish whether 35 hours caring per week is taking place.We may contact DP's name or their representative to establish whether 35 hours caring per week is taking place.</Content>");
+        stringBuilder.append("</DisclaimerStatement>");
+        stringBuilder.append("<DisclaimerQuestion>");
+        stringBuilder.append("<QuestionLabel>Please tick this box to declare that you have understood the notes and you have made / will make the person you are caring for / or their representative aware that there could be a change to their benefits.</QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</DisclaimerQuestion>");
+        stringBuilder.append("</Disclaimer>");
+        stringBuilder.append("<EvidenceList>");
+        stringBuilder.append("<RecipientAddress>");
+        stringBuilder.append("<Line>CA Freepost</Line>");
+        stringBuilder.append("<Line>Palatine House</Line>");
+        stringBuilder.append("<Line>Preston</Line>");
+        stringBuilder.append("<PostCode>PR1 1HN</PostCode>");
+        stringBuilder.append("</RecipientAddress>");
+        stringBuilder.append("<Evidence>");
+        stringBuilder.append("<Title>Document you need to send us</Title>");
+        stringBuilder.append("<Content>You must send us all the documents we ask for. If you do not, any benefit you may be entitled to my be delayed because of this claim. 1</Content>");
+        stringBuilder.append("<Content>You must send us all the documents we ask for. If you do not, any benefit you may be entitled to my be delayed because of this claim. 2</Content>");
+        stringBuilder.append("<Content>You must send us all the documents we ask for. If you do not, any benefit you may be entitled to my be delayed because of this claim. 3</Content>");
+        stringBuilder.append("</Evidence>");
+        stringBuilder.append("<Evidence>");
+        stringBuilder.append("<Title>Pay Details</Title>");
+        stringBuilder.append("<Content>You need to send us the last payslip before 10 Ocotber 2013 and all the payslips you have since then.</Content>");
+        stringBuilder.append("</Evidence>");
+        stringBuilder.append("<Evidence>");
+        stringBuilder.append("<Title>Statement Signed</Title>");
+        stringBuilder.append("<Content>You need to send us the completed and signed statement.</Content>");
+        stringBuilder.append("</Evidence>");
+        stringBuilder.append("</EvidenceList>");
+        stringBuilder.append("<Consents>");
+        stringBuilder.append("<Consent>");
+        stringBuilder.append("<QuestionLabel>Do you agree to us getting information from any current or previous employer you have told us about on this form?</QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</Consent>");
+        stringBuilder.append("<Consent>");
+        stringBuilder.append("<QuestionLabel>Please tell us why</QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</Consent>");
+        stringBuilder.append("<Consent>");
+        stringBuilder.append("<QuestionLabel></QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</Consent>");
+        stringBuilder.append("<Consent>");
+        stringBuilder.append("<QuestionLabel>Please tell us why</QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</Consent>");
+        stringBuilder.append("<Consent>");
+        stringBuilder.append("<QuestionLabel>Do you agree to us getting information from any other person or organisation you have told us about on this form?</QuestionLabel>");
+        stringBuilder.append("<Answer>Yes</Answer>");
+        stringBuilder.append("</Consent>");
+        stringBuilder.append("</Consents>");
+        stringBuilder.append("</DWPCAClaim>");
+        stringBuilder.append("</DWPCATransaction>");
+        stringBuilder.append("<ds:Signature xmlns:ds=\"http://www.w3.org/2000/09/xmldsig#\">");
+        stringBuilder.append("<ds:SignedInfo>");
+        stringBuilder.append("<ds:CanonicalizationMethod Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\"/>");
+        stringBuilder.append("<ds:SignatureMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#dsa-sha1\"/>");
+        stringBuilder.append("<ds:Reference URI=\"DWPCATransaction\">");
+        stringBuilder.append("<ds:DigestMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#sha1\"/>");
+        stringBuilder.append("<ds:DigestValue>SadVcIUbeepTfvhp2BzI2V3EPYo=</ds:DigestValue>");
+        stringBuilder.append("</ds:Reference>");
+        stringBuilder.append("</ds:SignedInfo>");
+        stringBuilder.append("<ds:SignatureValue>V6NzTYMiickLrbenHakT1UTnawk7CxWpqPtOh++XyCpg94LlWT682A==</ds:SignatureValue>");
+        stringBuilder.append("</ds:Signature>");
+        stringBuilder.append("</DWPBody>");
         return stringBuilder.toString();
     }
 

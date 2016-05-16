@@ -9,10 +9,14 @@ import javax.inject.Inject;
  */
 @Component
 public class HtmlRendererService extends RendererService {
-    @Inject
     private HtmlGenerator reportGenerator;
 
     public String generateHtml(String xmlBody) {
         return outputGeneration(xmlBody, reportGenerator);
+    }
+
+    @Inject
+    public void setHtmlGenerator(HtmlGenerator htmlGenerator) {
+        this.reportGenerator = htmlGenerator;
     }
 }

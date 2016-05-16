@@ -3,6 +3,7 @@ package testData.circs;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.Pair;
+import play.api.i18n.I18nModule;
 import utils.TestUtils;
 import java.util.Arrays;
 import java.util.List;
@@ -174,8 +175,7 @@ public class XMLCircsData extends TestUtils {
     public List<String> getAddressChangeDetails(String xml) {
         List<String> details = convertListOfPairsToListOfString(changeAddressDetails(xml));
         details.addAll(0, Arrays.asList(
-                "Part 2 - Change in Circumstance - Change of address",
-                "For security, we also need you to confirm your previous address."
+                "Part 2 - Change in Circumstance - Change of address"
         ));
         return details;
     }
@@ -289,10 +289,17 @@ public class XMLCircsData extends TestUtils {
         String rootPath = StringUtils.substringBetween(xml, "<BreakFromCaring>", "</BreakFromCaring>");
         String wherePersonYouCare = StringUtils.substringBetween(rootPath, "<WherePersonYouCare>", "</WherePersonYouCare>");
         String wherePersonYouCareSomeWhereElse = StringUtils.substringBetween(wherePersonYouCare, "<Other>", "</Other>");
+        Pair<String, String> wherePerson = pathQuestionLabelAnswer(rootPath, "WherePersonYouCare");
+        if (wherePersonYouCareSomeWhereElse != null) wherePerson = ImmutablePair.of(buildQuestion(wherePerson.getLeft(), wherePerson.getRight()), wherePersonYouCareSomeWhereElse);
+
         String whereWereYou = StringUtils.substringBetween(rootPath, "<WhereWereYou>", "</WhereWereYou>");
         String whereWereYouSomeWhereElse = StringUtils.substringBetween(whereWereYou, "<Other>", "</Other>");
+        Pair<String, String> whereWere = pathQuestionLabelAnswer(rootPath, "WhereWereYou");
+        if (whereWereYouSomeWhereElse != null) whereWere = ImmutablePair.of(buildQuestion(whereWere.getLeft(), whereWere.getRight()), whereWereYouSomeWhereElse);
+
         List<Pair<String, String>> details = prepareTestData(rootPath, Arrays.asList("RecentBreakStartDate", "RecentBreakStartTime", "WherePersonYouCare", "WhereWereYou", "MedicalTreatmentDuringBreak", "MoreChanges", "AdditionalBreaksNotReported", "AdditionalBreaksNotReportedDesc"));
-        details.add(ImmutablePair.of(wherePersonYouCareSomeWhereElse, whereWereYouSomeWhereElse));
+        details.add(wherePerson);
+        details.add(whereWere);
         return details;
     }
 

@@ -9,10 +9,14 @@ import javax.inject.Inject;
  */
 @Component
 public class PdfRendererService extends RendererService {
-    @Inject
     private PdfGenerator reportGenerator;
 
     public String generatePdf(String xmlBody) {
         return outputGeneration(xmlBody, reportGenerator);
+    }
+
+    @Inject
+    public void setPdfGenerator(PdfGenerator pdfGenerator) {
+        this.reportGenerator = pdfGenerator;
     }
 }

@@ -17,6 +17,7 @@ public class PdfSpecification extends FileHelper {
     public void testGeneratorResultIsSuccess(String pdfFileLocation, String xml, PdfGenerator pdfGenerator) throws Exception {
         SuccessOrFailure generatorResult = deleteAndGeneratePDF(pdfFileLocation, xml, pdfGenerator);
         assertThat(generatorResult, is(instanceOf(GenerationSuccess.class)));
+        deleteFile(pdfFileLocation);
     }
 
     public void testOutputFileExists(String pdfFileLocation, String xml, PdfGenerator pdfGenerator) throws Exception {

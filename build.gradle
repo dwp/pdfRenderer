@@ -84,7 +84,7 @@ dependencies {
     compile("gov.dwp.carers:fonts:1.0")
     compile("org.codehaus.groovy:groovy-all:2.4.6")
     compile("xalan:xalan:2.7.2")
-    compile("gov.dwp.carers:xmlcommons:8.00-SNAPSHOT")
+    compile("gov.dwp.carers:xmlcommons:8.01-SNAPSHOT")
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.boot:spring-boot-starter-jetty")
     compile("org.springframework.boot:spring-boot-starter-data-rest")

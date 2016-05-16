@@ -1,6 +1,7 @@
 package generators.circs;
 
 import controllers.PdfServiceApplication;
+import generators.GenerationSuccess;
 import generators.HtmlGenerator;
 import generators.HtmlSpecification;
 import org.junit.Test;
@@ -11,6 +12,10 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import javax.inject.Inject;
 import java.io.File;
 import java.util.Arrays;
+
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.core.IsInstanceOf.instanceOf;
+import static org.junit.Assert.assertThat;
 
 
 /**
@@ -31,11 +36,11 @@ public class HtmlFunctionalCasesCircsTest extends HtmlSpecification {
         Arrays.asList(allFiles.listFiles()).stream().filter(f -> f.isDirectory()).forEach(folder -> {
             try {
                 for (int i = 1; i <= 13; i++) {
-                    createAndGenerateCircsHtml(folder.getName(), i, htmlGenerator);
+                    assertThat(createAndGenerateCircsHtml(folder.getName(), i, htmlGenerator), is(instanceOf(GenerationSuccess.class)));
                 }
 
                 for (int i = 20; i <= 37; i++) {
-                    createAndGenerateCircsHtml(folder.getName(), i, htmlGenerator);
+                    assertThat(createAndGenerateCircsHtml(folder.getName(), i, htmlGenerator), is(instanceOf(GenerationSuccess.class)));
                 }
             } catch (Exception e) { throw new RuntimeException(e); }
         });
