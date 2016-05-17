@@ -232,8 +232,9 @@ public class XMLClaimData extends TestUtils {
 
     private List<Pair<String, String>> claimSummary(String xml) {
         String rootPath = StringUtils.substringBetween(xml, "<Residency>", "</Residency>");
-        List<Pair<String, String>> details = prepareTestData(rootPath, Arrays.asList("Nationality", "TimeOutsideGBLast3Years"));
+        List<Pair<String, String>> details = prepareTestData(rootPath, Arrays.asList("TimeOutsideGBLast3Years"));
         rootPath = StringUtils.substringBetween(xml, "<OtherInformation>", "</OtherInformation>");
+        details.add(pathQuestionLabelAnswerOther(rootPath, "Nationality", "ActualNationality"));
         details.addAll(prepareTestData(rootPath, Arrays.asList("AdditionalInformation", "WelshCommunication")));
         rootPath = StringUtils.substringBetween(xml, "<EEA>", "</EEA>");
         details.addAll(prepareTestData(rootPath, Arrays.asList("EEAReceivePensionsBenefits")));

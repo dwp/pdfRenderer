@@ -40,7 +40,7 @@ public class TestUtils {
         String elementDetail = StringUtils.substringBetween(rootPath, "<" + element + ">", "</" + element + ">");
         String answer = StringUtils.substringBetween(elementDetail, "<Answer>", "</Answer>");
         if (answer == null) return "";
-        else if (answer.equalsIgnoreCase("other")) {
+        else if (answer.equalsIgnoreCase("other") || answer.equalsIgnoreCase("another country")) {
             elementDetail = StringUtils.substringBetween(rootPath, "<" + otherElement + ">", "</" + otherElement + ">");
             answer = StringUtils.substringBetween(elementDetail, "<Answer>", "</Answer>");
             if (answer == null) return "";

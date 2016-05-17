@@ -39,7 +39,5 @@ public class HtmlFunctionalCasesClaimTest extends HtmlSpecification {
                 }
             } catch (Exception e) { throw new RuntimeException(e); }
         });
-
-        //Arrays.asList(new File("./").listFiles()).stream().filter(folder -> folder.getName().endsWith(".html")).forEach(x -> x.delete());
     }
 }
