@@ -143,12 +143,10 @@ bootRun {
 task zip(type: Zip, dependsOn: bootRepackage) {
     def fileName = "${jar.baseName}-${jar.version}"
     from projectDir
-    include "script.sh"
+    include "config/**/*"
+    include "0.*/*"
     from file("$buildDir/libs")
     include "${fileName}.jar"
-    from file('src/dist')
-    include "config/.*"
-    include "/0.*/*"
     archiveName "${fileName}.zip"
 }
 
