@@ -107,6 +107,9 @@ publishing {
                 classifier = 'sources'
             }
         }
+        distribution(MavenPublication) {
+            artifact (zip) {}
+        }
     }
 }
 
