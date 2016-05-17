@@ -10,7 +10,6 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
-
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
@@ -32,7 +31,7 @@ public class PdfContentMatching extends PdfSpecification {
     }
 
     public void testContentForClaimVersion(String version, int testNumber, PdfGenerator pdfGenerator, Function<String, List<String>> generateTestData) throws Exception {
-        logger.info("testContentForCircsVersion for version:" + version + " test case number:" + testNumber);
+        logger.info("testContentForClaimVersion for version:" + version + " test case number:" + testNumber);
         String pdfFileLocation = version + "_functionalTestCase" + testNumber + "_contentTestPDF.pdf";
         String textCaseXml = new String(Files.readAllBytes(Paths.get(getClass().getResource("/" + version + "/claim/c3_functional" + testNumber + ".xml").toURI())));
         deleteFile(pdfFileLocation);

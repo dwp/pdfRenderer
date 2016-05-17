@@ -83,19 +83,13 @@
             <Residency>
                 <Nationality><QuestionLabel>What is your nationality?</QuestionLabel><Answer>British</Answer></Nationality>
 
-
-
                 <NormallyLiveInGB><QuestionLabel>Do you normally live in England, Scotland or Wales?</QuestionLabel><Answer>Yes</Answer></NormallyLiveInGB>
 
-
-
-                <PeriodAbroad>
-                    <TimeOutsideGBLast3Years><QuestionLabel>Have you been out of England, Scotland or Wales for more than 52 weeks in the last 3 years before your claim date?</QuestionLabel><Answer>Yes</Answer></TimeOutsideGBLast3Years>
-                    <TripsDetails>
-                        <QuestionLabel>Tell us about this time away.Include the dates you left and returned and details of where you''ve been.</QuestionLabel>
-                        <Answer>Trip 1 london &amp; Trip 2 Paris</Answer>
-                    </TripsDetails>
-                </PeriodAbroad>
+                <TimeOutsideGBLast3Years><QuestionLabel>Have you been out of England, Scotland or Wales for more than 52 weeks in the last 3 years before your claim date?</QuestionLabel><Answer>Yes</Answer></TimeOutsideGBLast3Years>
+                <TripsDetails>
+                    <QuestionLabel>Tell us about this time away.Include the dates you left and returned and details of where you''ve been.</QuestionLabel>
+                    <Answer>Trip 1 london &amp; Trip 2 Paris</Answer>
+                </TripsDetails>
             </Residency>
             <CourseOfEducation><QuestionLabel>Have you been on a course of education since your claim date?</QuestionLabel><Answer>No</Answer></CourseOfEducation>
 
