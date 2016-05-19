@@ -13,6 +13,11 @@ import java.util.function.Function;
  * Created by peterwhitehead on 09/05/2016.
  */
 public class XMLClaimData extends TestUtils {
+    public Function <String, List<String>> functionalTestCase1 = xml -> {
+        List<String> details = getFunctionalTestCase1(xml);
+        return details;
+    };
+
     public Function <String, List<String>> functionalTestCase2 = xml -> {
         List<String> details = getFunctionalTestCase2(xml);
         return details;
@@ -20,11 +25,6 @@ public class XMLClaimData extends TestUtils {
 
     public Function <String, List<String>> functionalTestCase3 = xml -> {
         List<String> details = getFunctionalTestCase3(xml);//
-        return details;
-    };
-
-    public Function <String, List<String>> functionalTestCase1 = xml -> {
-        List<String> details = getFunctionalTestCase1(xml);
         return details;
     };
 

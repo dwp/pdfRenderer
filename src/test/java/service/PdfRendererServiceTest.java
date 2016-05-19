@@ -6,6 +6,7 @@ import generators.PdfGenerator;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import testData.ClaimBuilder;
 import javax.inject.Inject;
@@ -20,6 +21,7 @@ import static org.mockito.Mockito.mock;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = PdfServiceApplication.class)
+@TestPropertySource(locations="classpath:test.application.properties")
 public class PdfRendererServiceTest {
     @Inject
     private PdfRendererService pdfRendererService;

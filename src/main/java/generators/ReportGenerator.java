@@ -2,38 +2,48 @@ package generators;
 
 import dataSources.InvalidSourceFormatException;
 import dataSources.ReportDataSource;
-import net.sf.jasperreports.engine.JRException;
-import net.sf.jasperreports.engine.JasperFillManager;
-import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.engine.util.JRLoader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import javax.inject.Inject;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 import java.io.OutputStream;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * Created by peterwhitehead on 04/05/2016.
  */
+@Component
 public class ReportGenerator {
     private static final Logger logger = LoggerFactory.getLogger(ReportGenerator.class);
 
-    @Inject
-    private JasperReportCompiler jasperReportCompiler;
+    @Value("${jasper.folder}")
+    private String jasperLocation;
+
+    @Value("${jrxml.folder}")
+    private String jrxmlLocation;
 
     public JasperPrint generateFrom(ReportDataSource source, String version) {
         try {
-            String realJasperLocation = jasperReportCompiler.fullJasperLocation(version);
             String reportName = source.jasperReportFilenameMatcher();
-            String jasperFilename = realJasperLocation + reportName + ".jasper";
 
-            // If we do not have the compiled report templates, then we need to compile them
-            // before we can generate a report. They are normally compiled at start-up. It is just in case.
-            jasperReportCompiler.compileReport(reportName, version);
+            URL jasperResURL = this.getClass().getResource(fullJasperLocation(version) + reportName + ".jasper");
+            setLocations(jasperResURL);
+
             Map<String, Object> parameter = new HashMap<>();
-            parameter.put("SUBREPORT_DIR", realJasperLocation);
-            parameter.put("TEMPLATE_DIR", jasperReportCompiler.fullJrxmlLocation(version));
-            JasperPrint jasperPrint = JasperFillManager.fillReport(jasperFilename, parameter, source.convertToJRDataSource());
+            parameter.put("SUBREPORT_DIR", fullJasperLocation(version));
+            parameter.put("TEMPLATE_DIR", fullJrxmlLocation(version));
+
+            JasperPrint jasperPrint;
+            if (jasperResURL != null) {
+                JasperReport jasperReport = (JasperReport) JRLoader.loadObject(jasperResURL);
+                jasperPrint = JasperFillManager.fillReport(jasperReport, parameter, source.convertToJRDataSource());
+            } else {
+                jasperPrint = JasperFillManager.fillReport(fullJasperLocation(version) + reportName + ".jasper", parameter, source.convertToJRDataSource());
+            }
             return jasperPrint;
         } catch (JRException e) {
             logger.error(e.getMessage(), e);
@@ -44,7 +54,25 @@ public class ReportGenerator {
         }
     }
 
+    private void setLocations(URL jasperResURL) {
+        if (jasperLocation.startsWith("/") && jasperResURL != null) {
+            jasperLocation = jasperLocation.substring(jasperLocation.indexOf("/") +1);
+            jrxmlLocation = jrxmlLocation.substring(jrxmlLocation.indexOf("/") +1);
+        } else if (jasperLocation.startsWith("/")) {
+            jasperLocation = "." + jasperLocation;
+            jrxmlLocation = "." + jrxmlLocation;
+        }
+        logger.info("jasperLocation:" + jasperLocation);
+    }
     public SuccessOrFailure exportReportToStream(JasperPrint print, OutputStream stream) {
         return new GenerationSuccess();
+    }
+
+    public String fullJasperLocation(String version) {
+        return jasperLocation + ((version == null) ? "" : "/" + version + "/");
+    }
+
+    public String fullJrxmlLocation(String version) {
+        return jrxmlLocation + ((version == null) ? "" : "/" + version + "/");
     }
 }

@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import testData.claim.XMLClaimData;
 import javax.inject.Inject;
@@ -20,6 +21,7 @@ import java.util.Arrays;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = PdfServiceApplication.class)
+@TestPropertySource(locations="classpath:test.application.properties")
 public class PdfContentMatchingClaimTest extends PdfContentMatching {
     private static final Logger logger = LoggerFactory.getLogger(PdfContentMatchingClaimTest.class);
 

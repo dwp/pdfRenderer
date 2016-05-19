@@ -29,11 +29,21 @@ public class PdfGenerator extends ReportGenerator {
         SimplePdfExporterConfiguration config = new SimplePdfExporterConfiguration();
         config.setTagged(true);
         config.setPdfaConformance(PdfaConformanceEnum.PDFA_1A);
+        setPath();
         logger.info("iccPath:" + iccPath);
         config.setIccProfilePath(iccPath);
         config.setMetadataAuthor("Carer's allowance digital service");
         config.setPrintScaling(PdfPrintScalingEnum.NONE);
         return config;
+    }
+
+    //because of class loader issues with Jasper reports need to take / off path or running from file add .
+    private void setPath() {
+        if (iccPath.startsWith("/") && this.getClass().getResource(iccPath) != null) {
+            iccPath = iccPath.substring(iccPath.indexOf("/") +1);
+        } else if (iccPath.startsWith("/")) {
+            iccPath = "." + iccPath;
+        }
     }
 
     @Override

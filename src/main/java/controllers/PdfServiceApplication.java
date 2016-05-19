@@ -1,6 +1,5 @@
 package controllers;
 
-import generators.JasperReportCompiler;
 import monitoring.RenderingServiceMonitorRegistration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,7 +22,7 @@ import java.util.Properties;
 
 @SpringBootApplication
 @ComponentScan(basePackages = {"controllers", "dataSources", "generators", "service", "monitoring"})
-@PropertySource("file:./config/application-info.properties")
+@PropertySource("classpath:/config/application-info.properties")
 public class PdfServiceApplication {
     private static final Logger logger = LoggerFactory.getLogger(PdfServiceApplication.class);
 
@@ -35,9 +34,6 @@ public class PdfServiceApplication {
 
     @Value("${app.name}")
     private String appName;
-
-    @Inject
-    private JasperReportCompiler jasperReportCompiler;
 
     @Inject
     private RenderingServiceMonitorRegistration renderingServiceMonitorRegistration;
@@ -58,9 +54,6 @@ public class PdfServiceApplication {
         renderingServiceMonitorRegistration.registerReporters();
         renderingServiceMonitorRegistration.registerHealthChecks();
 
-        // compile jasper reports if they are not already compiled
-        logger.info("RS Calling compile reports");
-        jasperReportCompiler.compileAllReports();
         logger.info("RS (RenderingService) started.");
     }
 
