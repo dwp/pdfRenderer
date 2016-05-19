@@ -32,7 +32,7 @@ public class PdfServiceApplication {
     @Value("${env.name}")
     private String envName;
 
-    @Value("${app.name}")
+    @Value("${application.name}")
     private String appName;
 
     @Inject
