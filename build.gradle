@@ -159,11 +159,6 @@ bootRun {
     addResources = true
 }
 
-//jar {
-//    sourceSets.main.resources.srcDirs = [ "./" ]
-//    sourceSets.main.resources.includes = ["config/**/*", "0.*/*"]
-//}
-
 jasperreports {
     srcDir = file("src/main/resources/config")
     tmpDir = file("${buildDir}/jasperreports")
@@ -179,7 +174,11 @@ jasperreports {
 
 compileJava.dependsOn(compileAllReports)
 
-//bootRepackage {
-//    withJarTask jar
-//    classifier = "full"
-//}
+def renameFile(oldName, newName) {
+    new File(oldName).renameTo(new File(newName))
+}
+
+bootRepackage.doLast {
+    renameFile("${libsDir}/${archivesBaseName}-${version}.jar", "${libsDir}/${archivesBaseName}-boot-${version}.jar");
+    renameFile("${libsDir}/${archivesBaseName}-${version}.jar.original", "${libsDir}/${archivesBaseName}-${version}.jar");
+}
