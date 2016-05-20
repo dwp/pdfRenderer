@@ -127,7 +127,9 @@ publishing {
             }
         }
         distribution(MavenPublication) {
-            artifact file("${libsDir}/${archivesBaseName}-boot-${version}.jar")
+            artifact file("${libsDir}/${archivesBaseName}-boot-${version}.jar") {
+                classifier = 'full'
+            }
         }
     }
 }
