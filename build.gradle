@@ -64,7 +64,7 @@ artifactory {
             // Reference to Gradle publications defined in the build script.
             // This is how we tell the Artifactory Plugin which artifacts should be
             // published to Artifactory.
-            publications('mavenJava', 'distribution')
+            publications('mavenJava')
             publishArtifacts = true
             publishPom = true // Publish generated POM files to Artifactory (true by default)
         }
@@ -125,9 +125,7 @@ publishing {
             artifact (sourcesJar) {
                 classifier = 'sources'
             }
-        }
-        distribution(MavenPublication) {
-            artifact ("${libsDir}/${archivesBaseName}-boot-${version}.jar")
+            artifact file("${libsDir}/${archivesBaseName}-boot-${version}.jar")
         }
     }
 }
