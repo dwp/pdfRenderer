@@ -128,7 +128,7 @@ publishing {
 
         }
         distribution(MavenPublication) {
-            artifact ("${libsDir}/${archivesBaseName}-boot-${version}.jar") {
+            artifact ("${libsDir}/${archivesBaseName}-${version}-full.jar") {
                 classifier = 'full'
             }
         }
@@ -185,6 +185,6 @@ def renameFile(oldName, newName) {
 }
 
 bootRepackage.doLast {
-    renameFile("${libsDir}/${archivesBaseName}-${version}.jar", "${libsDir}/${archivesBaseName}-boot-${version}.jar");
+    renameFile("${libsDir}/${archivesBaseName}-${version}.jar", "${libsDir}/${archivesBaseName}-${version}-full.jar");
     renameFile("${libsDir}/${archivesBaseName}-${version}.jar.original", "${libsDir}/${archivesBaseName}-${version}.jar");
 }
