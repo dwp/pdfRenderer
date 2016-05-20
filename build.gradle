@@ -125,9 +125,10 @@ publishing {
             artifact (sourcesJar) {
                 classifier = 'sources'
             }
+
         }
         distribution(MavenPublication) {
-            artifact file("${libsDir}/${archivesBaseName}-boot-${version}.jar") {
+            artifact ("${libsDir}/${archivesBaseName}-boot-${version}.jar") {
                 classifier = 'full'
             }
         }
