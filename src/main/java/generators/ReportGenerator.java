@@ -30,7 +30,8 @@ public class ReportGenerator {
         try {
             String reportName = source.jasperReportFilenameMatcher();
 
-            URL jasperResURL = this.getClass().getResource(fullJasperLocation(version) + reportName + ".jasper");
+            URL jasperResURL = JRLoader.class.getClassLoader().getResource(fullJasperLocation2(version) + reportName + ".jasper");
+
             setLocations(jasperResURL);
 
             Map<String, Object> parameter = new HashMap<>();
@@ -74,5 +75,10 @@ public class ReportGenerator {
 
     public String fullJrxmlLocation(String version) {
         return jrxmlLocation + ((version == null) ? "" : "/" + version + "/");
+    }
+
+    public String fullJasperLocation2(String version) {
+        String test = (jasperLocation.startsWith("/")) ? jasperLocation.substring(1) : jasperLocation;
+        return test + ((version == null) ? "" : "/" + version + "/");
     }
 }

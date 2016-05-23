@@ -25,15 +25,16 @@ public class RendererService {
     @Inject
     private Counters counters;
 
-    OutputStream outputStream = new ByteArrayOutputStream();
+    OutputStream outputStream;
 
     public String outputGeneration(String xmlBody, ReportGenerator reportGenerator) {
         String node = StringUtils.substringBetween(xmlBody, "<TransactionId>","</TransactionId>");
         String transactionId = StringUtils.isEmpty(node) ? "" : node;
         try {
             logger.debug("treating XML received.");
-            JasperPrint print = reportGenerator.generateFrom(new XmlDataSource(xmlBody), StringUtils.substringBetween(xmlBody, "<Version>","</Version>"));
+            JasperPrint print = reportGenerator.generateFrom(new XmlDataSource(xmlBody), StringUtils.substringBetween(xmlBody, "<Version>", "</Version>"));
 
+            outputStream = new ByteArrayOutputStream();
             SuccessOrFailure successOrFailure = reportGenerator.exportReportToStream(print, outputStream);
             if (successOrFailure instanceof GenerationSuccess) {
                 logger.info("Generation success for transactionId: [" + transactionId + "]");
@@ -49,6 +50,8 @@ public class RendererService {
         } catch (Throwable t) {
             logger.error("Could not render for transactionId: [" + transactionId + "]. " + t.getMessage(), t);
             return "<Error>Failed to render XML for transactionId: [" + transactionId + "]</Error>";
+        } finally {
+            if (outputStream != null) try { outputStream.close(); } catch (Exception e) { logger.error("Unable to close output stream", e);}
         }
     }
 }
