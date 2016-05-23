@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 5.6.1.final using JasperReports Library version 5.6.1  -->
-<!-- 2016-04-21T13:45:15 -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYouTheCarer" language="java" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a66aead0-a2c6-4cbf-be45-bb0d849ea1f9">
+<!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
+<!-- 2016-05-23T12:11:38 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYouTheCarer" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a66aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
@@ -166,6 +166,12 @@
 	</field>
 	<field name="OriginTag" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/Origin]]></fieldDescription>
+	</field>
+	<field name="ResidencyArrivedInUKFromAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/ArrivedInUKFrom/Answer]]></fieldDescription>
+	</field>
+	<field name="ResidencyArrivedInUKFromQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/ArrivedInUKFrom/QuestionLabel]]></fieldDescription>
 	</field>
 	<background>
 		<band splitType="Stretch"/>
@@ -373,9 +379,9 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 		</band>
-		<band height="114" splitType="Immediate">
+		<band height="119" splitType="Immediate">
 			<property name="local_mesure_unitheight" value="pixel"/>
-			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 			<staticText>
 				<reportElement style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="-12" width="594" height="20" forecolor="#000000" uuid="f647fa16-31cd-4b73-8c88-855fe67cf124">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourNationalityAndResidency"/>
@@ -456,7 +462,7 @@
 				<textFieldExpression><![CDATA[T($F{ResidencyLiveInUKNowAnswer})]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="420" y="64" width="180" height="18" isRemoveLineWhenBlank="true" uuid="c3d93968-29a0-4e5e-9816-f3b3661b055c">
+				<reportElement style="Answer" positionType="Float" x="420" y="64" width="174" height="18" isRemoveLineWhenBlank="true" uuid="c3d93968-29a0-4e5e-9816-f3b3661b055c">
 					<property name="net.sf.jasperreports.export.html.id" value="aboutyou-nat-a"/>
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
@@ -467,7 +473,7 @@
 				<textFieldExpression><![CDATA[T($F{ResidencyArrivedInUKAnswer}).equalsIgnoreCase("less") ? "Less than 3 years ago" : "More than 3 years ago"]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="420" y="64" width="180" height="18" isRemoveLineWhenBlank="true" uuid="7a10ffb1-2a91-440a-af68-372564464700">
+				<reportElement style="Answer" positionType="Float" x="420" y="64" width="174" height="18" isRemoveLineWhenBlank="true" uuid="7a10ffb1-2a91-440a-af68-372564464700">
 					<property name="net.sf.jasperreports.export.html.id" value="aboutyou-nat-a"/>
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
@@ -480,15 +486,32 @@
 				<textFieldExpression><![CDATA[T($F{ResidencyArrivedInUKAnswer}).equalsIgnoreCase("less") ? "Less than 6 months ago" : "More than 6 months ago"]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement positionType="Float" x="0" y="82" width="392" height="18" isRemoveLineWhenBlank="true" uuid="26f04003-d6ff-4093-9f63-017f421d6fc1">
+				<reportElement positionType="Float" x="0" y="100" width="392" height="18" isRemoveLineWhenBlank="true" uuid="26f04003-d6ff-4093-9f63-017f421d6fc1">
 					<property name="net.sf.jasperreports.export.html.id" value="aboutyou-nat-q"/>
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
+				<textFieldExpression><![CDATA[T($F{ResidencyArrivedInUKFromQuestion})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Answer" positionType="Float" x="420" y="100" width="174" height="18" isRemoveLineWhenBlank="true" uuid="a738b2b8-c0b3-4a55-900b-ab3d5c504f35">
+					<property name="net.sf.jasperreports.export.html.id" value="aboutyou-nat-a"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[T($F{ResidencyArrivedInUKFromAnswer})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="1" y="82" width="392" height="18" isRemoveLineWhenBlank="true" uuid="7578fcc3-a7e7-4ec4-b73c-238903e2065a">
+					<property name="net.sf.jasperreports.export.html.id" value="aboutyou-nat-q"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
 				<textFieldExpression><![CDATA[T($F{ResidencyArrivedInUKDateQuestion})]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="420" y="82" width="174" height="18" isRemoveLineWhenBlank="true" uuid="a738b2b8-c0b3-4a55-900b-ab3d5c504f35">
+				<reportElement style="Answer" positionType="Float" x="420" y="82" width="174" height="18" isRemoveLineWhenBlank="true" uuid="ed19cadf-aac4-4657-8c36-f3d6f63f06d8">
 					<property name="net.sf.jasperreports.export.html.id" value="aboutyou-nat-a"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="local_mesure_unity" value="pixel"/>
