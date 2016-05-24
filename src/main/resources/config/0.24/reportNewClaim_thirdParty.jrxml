@@ -48,14 +48,14 @@
 		<band height="38">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="3543a269-a583-48c2-882c-f5501701ae00">
-					<property name="net.sf.jasperreports.export.html.id" value="addinfo-why-q"/>
+					<property name="net.sf.jasperreports.export.html.id" value="third-party-q"/>
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{thirdPartyQuestion})]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="8bb1352e-4350-47ef-9f29-c241f8e32afb">
-					<property name="net.sf.jasperreports.export.html.id" value="addinfo-why-a"/>
+					<property name="net.sf.jasperreports.export.html.id" value="third-party-a"/>
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
@@ -64,14 +64,14 @@
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="18" width="392" height="18" isRemoveLineWhenBlank="true" uuid="0f862337-92b2-479f-8e79-1dd536a16c4e">
-					<property name="net.sf.jasperreports.export.html.id" value="addinfo-q"/>
+					<property name="net.sf.jasperreports.export.html.id" value="third-party-name-q"/>
 					<printWhenExpression><![CDATA[!T($F{thirdPartyNameAnswer}).isEmpty()]]></printWhenExpression>
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{thirdPartyNameQuestion})]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement style="Answer" positionType="Float" x="420" y="18" width="174" height="18" isRemoveLineWhenBlank="true" uuid="5b80a305-25fd-4fef-9c09-af2ce25c3858">
-					<property name="net.sf.jasperreports.export.html.id" value="addinfo-a"/>
+					<property name="net.sf.jasperreports.export.html.id" value="third-party-name-a"/>
 					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 				</reportElement>
 				<textElement verticalAlignment="Top"/>

@@ -53,7 +53,8 @@ public class PdfContentMatching extends PdfSpecification {
 
         return String.join(" ",content).toLowerCase()
                 .replaceAll(seperator, space) //Replacing new lines for spaces
-                .replaceAll(" service version : 0\\.[0-9]{2}  ",""); //Removing the header from the pdf -> text conversion because it interfered with field values
+                .replaceAll(" service version : 0\\.[0-9]{2}  ","")
+                .replaceAll(" version: [0-9]*.[0-9]* / 0\\.[0-9]{2}",""); //Removing the header from the pdf -> text conversion because it interfered with field values
     }
 
     public String cleanPdfContent(String text, Integer pageNumber) {
