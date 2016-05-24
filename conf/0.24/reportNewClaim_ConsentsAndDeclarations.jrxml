@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
+<!-- 2016-05-23T16:49:27 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Consents" language="groovy" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="ce7b9f2b-d8a3-4228-abe5-88fb5d2f3eae">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
-	<template><![CDATA[ $P{TEMPLATE_DIR} + "StyleTemplateClaim.jrtx"]]></template>
+	<template><![CDATA[$P{TEMPLATE_DIR} + "StyleTemplateClaim.jrtx"]]></template>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/valtechuk/Documents/Carers/code/pdfService/conf/"]]></defaultValueExpression>
 	</parameter>
 	<parameter name="TEMPLATE_DIR" class="java.lang.String">
-    		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
-    </parameter>
+		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+	</parameter>
 	<queryString language="xPath">
 		<![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim]]>
 	</queryString>
@@ -24,7 +26,7 @@
 	<detail>
 		<band height="22" splitType="Immediate">
 			<staticText>
-				<reportElement uuid="c6fb5c1e-aac1-4fcd-b4ff-655479a6a68e" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="3" width="594" height="18">
+				<reportElement style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="3" width="594" height="18" uuid="c6fb5c1e-aac1-4fcd-b4ff-655479a6a68e">
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingCustomerConsentAndDeclaration"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
@@ -35,7 +37,7 @@
 		</band>
 		<band height="2" splitType="Immediate">
 			<subreport>
-				<reportElement uuid="922102db-53c1-4c3e-ada4-d9ce5d2b5a73" positionType="Float" x="0" y="0" width="595" height="1" isRemoveLineWhenBlank="true"/>
+				<reportElement positionType="Float" x="0" y="0" width="595" height="1" isRemoveLineWhenBlank="true" uuid="922102db-53c1-4c3e-ada4-d9ce5d2b5a73"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -46,9 +48,25 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_AdditionalInfo.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
+		<band height="2" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="0" width="595" height="1" isRemoveLineWhenBlank="true" uuid="d3871437-c332-4410-b1af-cff64934d3fa">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("//Consent")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_thirdParty.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
 		<band height="23" splitType="Immediate">
 			<staticText>
-				<reportElement uuid="afcf6426-9227-4d64-990d-ccfec2ad7acb" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="21">
+				<reportElement style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="21" uuid="afcf6426-9227-4d64-990d-ccfec2ad7acb">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingConsent"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
@@ -57,7 +75,7 @@
 				<text><![CDATA[Consent]]></text>
 			</staticText>
 			<subreport>
-				<reportElement uuid="d3871437-c332-4410-b1af-cff64934d3fa" positionType="Float" x="0" y="21" width="595" height="1" isRemoveLineWhenBlank="true"/>
+				<reportElement positionType="Float" x="0" y="21" width="595" height="1" isRemoveLineWhenBlank="true" uuid="d3871437-c332-4410-b1af-cff64934d3fa"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -71,7 +89,7 @@
 		<band height="23" splitType="Immediate">
 			<printWhenExpression><![CDATA[!$F{displayDisclaimer}.isEmpty()]]></printWhenExpression>
 			<staticText>
-				<reportElement uuid="149c37e2-57ad-46d1-89bb-f9f30959fc13" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="21">
+				<reportElement style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="21" uuid="149c37e2-57ad-46d1-89bb-f9f30959fc13">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingDisclaimer"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
@@ -80,7 +98,7 @@
 				<text><![CDATA[Disclaimer]]></text>
 			</staticText>
 			<subreport>
-				<reportElement uuid="6ad6aef0-be4f-4dc0-9bcc-45b625ce4ee2" positionType="Float" x="0" y="21" width="595" height="1" isRemoveLineWhenBlank="true"/>
+				<reportElement positionType="Float" x="0" y="21" width="595" height="1" isRemoveLineWhenBlank="true" uuid="6ad6aef0-be4f-4dc0-9bcc-45b625ce4ee2"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -93,7 +111,7 @@
 		</band>
 		<band height="22" splitType="Immediate">
 			<staticText>
-				<reportElement uuid="fe6f19f7-59d4-4d8b-a7e7-9cff92db0fb7" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="21">
+				<reportElement style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="21" uuid="fe6f19f7-59d4-4d8b-a7e7-9cff92db0fb7">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingDeclaration"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
@@ -102,7 +120,7 @@
 				<text><![CDATA[Declaration]]></text>
 			</staticText>
 			<subreport>
-				<reportElement uuid="6ad6aef0-be4f-4dc0-9bcc-45b625ce4ee2" positionType="Float" x="0" y="21" width="595" height="1" isRemoveLineWhenBlank="true"/>
+				<reportElement positionType="Float" x="0" y="21" width="595" height="1" isRemoveLineWhenBlank="true" uuid="6ad6aef0-be4f-4dc0-9bcc-45b625ce4ee2"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>

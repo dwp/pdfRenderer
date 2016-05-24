@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 5.6.1.final using JasperReports Library version 5.6.1  -->
-<!-- 2016-01-12T10:01:30 -->
+<!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
+<!-- 2016-05-23T16:59:49 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Declaration" language="groovy" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="9294c83c-2f9e-43be-be00-e5341b401111">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
@@ -51,52 +51,26 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_Declaration_declarationStatement.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="66" splitType="Immediate">
+		<band height="20" splitType="Immediate">
 			<property name="local_mesure_unitheight" value="pixel"/>
-			<property name="com.jaspersoft.studio.unit.height" value="px"/>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement positionType="Float" x="0" y="3" width="392" height="20" isRemoveLineWhenBlank="true" uuid="c3c94047-8909-4057-8d7e-17a312bf5297">
-					<property name="local_mesure_unitheight" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="net.sf.jasperreports.export.html.id" value="declaration-areyoucarer-q"/>
-				</reportElement>
-				<textFieldExpression><![CDATA[$F{DeclarationAreYouTheCarerQuestion}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="420" y="3" width="174" height="20" isRemoveLineWhenBlank="true" uuid="d21db177-9611-4f48-acbe-52de28d65ae1">
-					<property name="local_mesure_unitheight" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="net.sf.jasperreports.export.html.id" value="declaration-areyoucarer-a"/>
-				</reportElement>
-				<textFieldExpression><![CDATA[$F{DeclarationAreYouTheCarerAnswer}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement positionType="Float" x="0" y="26" width="392" height="20" isRemoveLineWhenBlank="true" uuid="dd747e36-227c-4960-ae51-ec1a643b57e6">
-					<property name="net.sf.jasperreports.export.html.id" value="declaration-org-q"/>
-					<printWhenExpression><![CDATA[$F{DeclarationAreYouTheCarerAnswer}.equals("No")]]></printWhenExpression>
-				</reportElement>
-				<textFieldExpression><![CDATA[$F{DeclarationNameOrgQuestion}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="420" y="26" width="174" height="20" isRemoveLineWhenBlank="true" uuid="066d6cf3-8dce-42ae-aaf5-8b2ed356c8e7">
-					<property name="net.sf.jasperreports.export.html.id" value="declaration-org-a"/>
-					<printWhenExpression><![CDATA[$F{DeclarationAreYouTheCarerAnswer}.equals("No")]]></printWhenExpression>
-				</reportElement>
-				<textFieldExpression><![CDATA[$F{DeclarationNameOrgAnswer}]]></textFieldExpression>
-			</textField>
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 			<staticText>
-				<reportElement positionType="Float" x="0" y="46" width="594" height="1" uuid="933b9895-0939-4238-bc39-835ed837502c"/>
+				<reportElement positionType="Float" x="0" y="0" width="594" height="1" uuid="933b9895-0939-4238-bc39-835ed837502c">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
 				<text><![CDATA[]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement positionType="Float" x="0" y="47" width="392" height="18" isRemoveLineWhenBlank="true" uuid="53fbb72c-cd89-4ff7-8297-2eadf311487e">
+				<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="53fbb72c-cd89-4ff7-8297-2eadf311487e">
 					<property name="net.sf.jasperreports.export.html.id" value="declaration-confirm-q"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{DeclarationConfirmQuestion}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="420" y="47" width="174" height="18" isRemoveLineWhenBlank="true" uuid="747dd6ab-3448-466e-a8ca-b24ab9649a60">
+				<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="747dd6ab-3448-466e-a8ca-b24ab9649a60">
 					<property name="net.sf.jasperreports.export.html.id" value="declaration-confirm-a"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{DeclarationConfirmAnswer}]]></textFieldExpression>
 			</textField>
