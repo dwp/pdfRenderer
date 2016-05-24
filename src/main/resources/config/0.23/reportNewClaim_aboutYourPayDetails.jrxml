@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYourPayDetails" language="java" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="2c76a7f8-deb9-45af-83f2-c12559d20c72">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<template><![CDATA[$P{TEMPLATE_DIR} + "StyleTemplateClaim.jrtx"]]></template>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="TEMPLATE_DIR" class="java.lang.String">
+		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="XPath">
+		<![CDATA[/]]>
+	</queryString>
+	<field name="howToGetPaidQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Payment/InitialAccountQuestion/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="howToGetPaidAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Payment/InitialAccountQuestion/Answer]]></fieldDescription>
+	</field>
+	<field name="howOftenGetPaidQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Payment/PaymentFrequency/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="howOftenGetPaidAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Payment/PaymentFrequency/Answer]]></fieldDescription>
+	</field>
+	<field name="howOftenGetPaidOther" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Payment/PaymentFrequency/Other]]></fieldDescription>
+	</field>
+	<field name="bankAccountHolderNameAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Payment/Account/HolderName/Answer]]></fieldDescription>
+	</field>
+	<field name="bankAccountBankNameAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Payment/Account/BuildingSocietyDetails/Name/Answer]]></fieldDescription>
+	</field>
+	<field name="bankAccountSortCodeAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Payment/Account/BuildingSocietyDetails/SortCode/Answer]]></fieldDescription>
+	</field>
+	<field name="bankAccountNumberAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Payment/Account/BuildingSocietyDetails/AccountNumber/Answer]]></fieldDescription>
+	</field>
+	<field name="bankAccountReferenceNumberAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Payment/Account/BuildingSocietyDetails/RollNumber/Answer]]></fieldDescription>
+	</field>
+	<field name="bankAccountHolderNameQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Payment/Account/HolderName/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="bankAccountBankNameQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Payment/Account/BuildingSocietyDetails/Name/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="bankAccountSortCodeQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Payment/Account/BuildingSocietyDetails/SortCode/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="bankAccountNumberQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Payment/Account/BuildingSocietyDetails/AccountNumber/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="bankAccountReferenceNumberQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Payment/Account/BuildingSocietyDetails/RollNumber/QuestionLabel]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="19" splitType="Prevent">
+			<staticText>
+				<reportElement uuid="c4993f7a-b987-4a99-9fbd-21415dcc29ce" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart8AboutYourPayDetails"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PART 8 - PAY DETAILS]]></text>
+			</staticText>
+		</band>
+		<band height="56">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="61c7218b-715a-4359-9449-ee3c564dbe6f" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="paydetails-how-q"/>
+				</reportElement>
+				<textElement verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[T($F{howToGetPaidQuestion})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="c11b4788-244f-4805-930e-cd1a343ea8da" positionType="Float" x="0" y="18" width="594" height="1"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="57e79dc7-f890-477f-831c-ab6a643652c4" style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="paydetails-how-a"/>
+				</reportElement>
+				<textElement verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[T($F{howToGetPaidAnswer})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="0802ec1f-3436-47b0-9d4a-32035567b1c9" positionType="Float" x="0" y="19" width="392" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="paydetails-howoften-q"/>
+				</reportElement>
+				<textElement verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[T($F{howOftenGetPaidQuestion})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="e8079ca6-0ec7-44e4-9c1a-e42b72da36db" style="Answer" positionType="Float" x="420" y="19" width="174" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="paydetails-howoften-a"/>
+				</reportElement>
+				<textElement verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[T($F{howOftenGetPaidAnswer})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="38020387-0dc2-4f7f-bfe0-63dc81a0daf4" style="Answer" positionType="Float" x="420" y="37" width="174" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="paydetails-howoften-other"/>
+				</reportElement>
+				<textElement verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[T($F{howOftenGetPaidAnswer})=="Other" ? T($F{howOftenGetPaidOther}) : null]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="f4699a5d-873f-4a71-add0-68d5b7d447c0" positionType="Float" x="0" y="55" width="594" height="1"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+		<band height="39" splitType="Prevent">
+			<printWhenExpression><![CDATA[!T($F{bankAccountHolderNameAnswer}).isEmpty() || !T($F{bankAccountBankNameAnswer}).isEmpty() || !T($F{bankAccountSortCodeAnswer}).isEmpty() || !T($F{bankAccountNumberAnswer}).isEmpty() || !T($F{bankAccountReferenceNumberAnswer}).isEmpty()]]></printWhenExpression>
+			<staticText>
+				<reportElement uuid="682874b6-bfe4-439f-8bb8-4abdfe329111" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="20" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingBankBuildingSocietyDetails"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bank/Building Society Details]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="435b6de5-d41d-40df-8485-e2c19154020d" positionType="Float" x="0" y="20" width="392" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="paydetails-bankholder-q"/>
+				</reportElement>
+				<textElement verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[T($F{bankAccountHolderNameQuestionLabel})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="3585c88b-ad07-47d0-b172-d609bf404eeb" style="Answer" positionType="Float" x="420" y="20" width="174" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="paydetails-bankholder-a"/>
+				</reportElement>
+				<textElement verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[T($F{bankAccountHolderNameAnswer})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="fc12960f-c4e1-42b4-bde1-7ca0efd8916c" positionType="Float" x="0" y="38" width="594" height="1"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+		<band height="74">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="6d961b8f-2b5b-4ebc-bb6b-48bb40c9c684" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="paydetails-bankname-q"/>
+				</reportElement>
+				<textElement verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[T($F{bankAccountBankNameQuestionLabel})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="be49c075-e8db-4d27-8a30-f5414761027e" style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="paydetails-bankname-a"/>
+				</reportElement>
+				<textElement verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[T($F{bankAccountBankNameAnswer})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="ac5d7f60-2d42-481c-9177-0e1dff247bf8" positionType="Float" x="0" y="19" width="392" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="paydetails-banksortcode-q"/>
+				</reportElement>
+				<textElement verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[T($F{bankAccountSortCodeQuestionLabel})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="12f94aa2-1e66-40c4-8916-2990ca93e937" style="Answer" positionType="Float" x="420" y="19" width="174" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="paydetails-banksortcode-a"/>
+				</reportElement>
+				<textElement verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[T($F{bankAccountSortCodeAnswer})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="ef58f6eb-cbbf-4bd1-af0b-b5a3d167171d" positionType="Float" x="0" y="37" width="392" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="paydetails-banknum-q"/>
+				</reportElement>
+				<textElement verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[T($F{bankAccountNumberQuestionLabel})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="a7591379-f58d-46ba-877b-a488f1fdd851" style="Answer" positionType="Float" x="420" y="37" width="174" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="paydetails-banknum-a"/>
+				</reportElement>
+				<textElement verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[T($F{bankAccountNumberAnswer})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="8ef1d95f-57e8-4c38-9cdc-efafee196bb1" positionType="Float" x="0" y="55" width="392" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="paydetails-bsocnum-q"/>
+				</reportElement>
+				<textElement verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[T($F{bankAccountReferenceNumberQuestionLabel})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="2c435d18-b073-4b27-9f62-609d1d035aec" style="Answer" positionType="Float" x="420" y="55" width="174" height="18" isRemoveLineWhenBlank="true">
+					<property name="net.sf.jasperreports.export.html.id" value="paydetails-bsocnum-a"/>
+				</reportElement>
+				<textElement verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[T($F{bankAccountReferenceNumberAnswer})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="f7b0e498-50ad-454d-b516-c50f247aafef" positionType="Float" x="0" y="18" width="594" height="1"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>
