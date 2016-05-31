@@ -21,7 +21,7 @@ public class Application {
     @Inject
     private HtmlRendererService htmlRendererService;
 
-    @RequestMapping(value = "/print", method = RequestMethod.POST, consumes = "application/xml")
+    @RequestMapping(value = "/print", method = RequestMethod.POST, consumes = "text/xml")
     public @ResponseBody String generatePDF(@RequestBody String requestBody) {
         RenameThread.getTransactionIdAndRenameThread(requestBody);
         logger.info("generatePDF called with requestBody");
