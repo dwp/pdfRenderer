@@ -2,12 +2,12 @@ package monitoring;
 
 import com.codahale.metrics.SharedMetricRegistries;
 import com.codahale.metrics.Slf4jReporter;
+import gov.dwp.carers.CADSHealthCheck;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-
-import javax.annotation.PostConstruct;
+import java.util.SortedMap;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -87,5 +87,9 @@ public class RenderingServiceMonitorRegistration {
             logger.info("Health Logging stopped");
             logHealthReporter.stop();
         }
+    }
+
+    public SortedMap<String, CADSHealthCheck.Result> runHealthChecks() {
+        return logHealthReporter.getRegistry().runHealthChecks();
     }
 }

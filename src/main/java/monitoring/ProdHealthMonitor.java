@@ -1,5 +1,6 @@
 package monitoring;
 
+import gov.dwp.carers.CADSHealthCheckRegistry;
 import monitor.HealthMonitor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,6 +24,10 @@ public class ProdHealthMonitor extends HealthMonitor implements Closeable {
 
     public ProdHealthMonitor(String application) {
         this.executor = Executors.newSingleThreadScheduledExecutor(new NamedThreadFactory(application + '-' + FACTORY_ID.incrementAndGet()));
+    }
+
+    public CADSHealthCheckRegistry getRegistry() {
+        return super.registry();
     }
 
     /**
