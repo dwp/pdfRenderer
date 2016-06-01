@@ -26,7 +26,6 @@ public class HealthController {
 
     @RequestMapping(value = "/ping", method = RequestMethod.GET)
     public @ResponseBody String ping() {
-        logger.info("ping called");
         return "";
     }
 
@@ -34,7 +33,6 @@ public class HealthController {
     public @ResponseBody String health() {
         try {
             SortedMap<String, CADSHealthCheck.Result> health = renderingServiceMonitorRegistration.runHealthChecks();
-            logger.info("health called");
             ObjectMapper mapper = new ObjectMapper();
             Object json = mapper.readValue(createHealthMap(health), Object.class);
             String value = mapper
