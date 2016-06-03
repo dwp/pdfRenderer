@@ -28,6 +28,7 @@ public class ReportGenerator {
 
     public JasperPrint generateFrom(ReportDataSource source, String version) {
         try {
+            logger.info("Starting generating jasper print");
             String reportName = source.jasperReportFilenameMatcher();
 
             URL jasperResURL = JRLoader.class.getClassLoader().getResource(fullJasperLocation2(version) + reportName + ".jasper");
@@ -40,11 +41,15 @@ public class ReportGenerator {
 
             JasperPrint jasperPrint;
             if (jasperResURL != null) {
+                logger.info("loading jasper report");
                 JasperReport jasperReport = (JasperReport) JRLoader.loadObject(jasperResURL);
+                logger.info("filling jasper report");
                 jasperPrint = JasperFillManager.fillReport(jasperReport, parameter, source.convertToJRDataSource());
             } else {
+                logger.info("loading and filling jasper report");
                 jasperPrint = JasperFillManager.fillReport(fullJasperLocation(version) + reportName + ".jasper", parameter, source.convertToJRDataSource());
             }
+            logger.info("Finished generating jasper print");
             return jasperPrint;
         } catch (JRException e) {
             logger.error(e.getMessage(), e);
@@ -63,7 +68,7 @@ public class ReportGenerator {
             jasperLocation = "." + jasperLocation;
             jrxmlLocation = "." + jrxmlLocation;
         }
-        logger.info("jasperLocation:" + jasperLocation);
+        logger.info("finished setting jasperLocation:" + jasperLocation);
     }
     public SuccessOrFailure exportReportToStream(JasperPrint print, OutputStream stream) {
         return new GenerationSuccess();

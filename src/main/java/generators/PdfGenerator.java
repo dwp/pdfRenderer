@@ -50,6 +50,7 @@ public class PdfGenerator extends ReportGenerator {
     public SuccessOrFailure exportReportToStream(JasperPrint print, OutputStream stream) {
         try {
             if (print != null) {
+                logger.info("PDF generation started.");
                 JRPdfExporter exporter = new JRPdfExporter(DefaultJasperReportsContext.getInstance());
 
                 exporter.setExporterInput(new SimpleExporterInput(print));
@@ -57,7 +58,7 @@ public class PdfGenerator extends ReportGenerator {
                 exporter.setConfiguration(initConfig());
 
                 exporter.exportReport();
-                logger.debug("PDF Generated.");
+                logger.info("PDF generation finished.");
                 return new GenerationSuccess();
             } else {
                 logger.error("Received an empty print object to convert to PDF.");

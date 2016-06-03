@@ -43,9 +43,10 @@ public class RendererService {
         String transactionId = getTransactionId(xmlBody);
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         try {
-            logger.debug("treating XML received.");
+            logger.info("Creating output.");
             JasperPrint print = reportGenerator.generateFrom(new XmlDataSource(xmlBody), StringUtils.substringBetween(xmlBody, "<Version>", "</Version>"));
 
+            logger.info("exporting jasper print to stream.");
             SuccessOrFailure successOrFailure = reportGenerator.exportReportToStream(print, outputStream);
             if (successOrFailure instanceof GenerationSuccess) {
                 logger.info("Generation success for transactionId: [" + transactionId + "]");

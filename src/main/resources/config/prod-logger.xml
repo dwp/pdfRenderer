@@ -1,7 +1,5 @@
 <configuration scan="true" scanPeriod="30 seconds">
 
-    <conversionRule conversionWord="coloredLevel" converterClass="play.api.Logger$ColoredLevel"/>
-
     <appender name="APPLICATION_LOG" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${application.home}/logs/application.log</file>
 
@@ -14,7 +12,7 @@
         </rollingPolicy>
 
         <encoder>
-            <pattern>%coloredLevel %d - [%thread] - %logger{15} - %message%n%xException{5}</pattern>
+            <pattern>%d - [%thread] - %logger{15} - %message%n%xException{5}</pattern>
         </encoder>
     </appender>
 
@@ -35,22 +33,22 @@
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>%coloredLevel - [%thread] - %logger{15} - %message%n%xException{5}</pattern>
+            <pattern>%d - [%thread] - %logger{15} - %message%n%xException{5}</pattern>
         </encoder>
     </appender>
 
     <!--Only log play messages to stdout -->
-    <logger name="play" level="INFO" additivity="false">
+    <logger name="pdf" level="INFO" additivity="false">
         <appender-ref ref="STDOUT"/>
     </logger>
 
     <!-- log application messages to root logger appenders -->
-    <logger name="application" level="INFO"/>
+    <logger name="application" level="DEBUG"/>
 
     <!-- Note: The appenders are cumulative.
     A logger will log to the appenders attached to itself (if any) as well as all the appenders attached to its ancestors.
      The top ancestor is root; thus all loggers will log to the application log and graylog. -->
-    <root level="INFO">
+    <root level="DEBUG">
         <appender-ref ref="GELF"/>
         <appender-ref ref="ASYNC_APPLICATION_LOG"/>
     </root>

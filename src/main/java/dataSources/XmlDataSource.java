@@ -24,9 +24,10 @@ public class XmlDataSource implements ReportDataSource {
     @Override
     public JRDataSource convertToJRDataSource() {
         try {
-            logger.debug("Converting xml to JRDataSource");
+            logger.info("Converting xml to JRDataSource started.");
             XmlSchemaDecryptor xmlSchemaDecryptor = new XmlSchemaDecryptor();
             String decryptedSource = xmlSchemaDecryptor.decryptSchema(xmlBody);
+            logger.info("Converting xml to JRDataSource finished.");
             return new JRXmlDataSource(new ByteArrayInputStream(decryptedSource.getBytes("UTF-8")));
         } catch (Exception e) {
             logger.error("Failed to convert xml to JRDataSource " + e.getMessage(), e);

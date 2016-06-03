@@ -27,6 +27,7 @@ public class HtmlGenerator extends ReportGenerator {
     public SuccessOrFailure exportReportToStream(JasperPrint print, OutputStream stream) {
         try {
             if (print != null) {
+                logger.info("HMTL generation started.");
                 HtmlExporter exporter = new HtmlExporter();
                 CarersWriter lineWriter = new CarersWriter(stream);
                 SimpleHtmlReportConfiguration reportConfiguration = new SimpleHtmlReportConfiguration();
@@ -43,7 +44,7 @@ public class HtmlGenerator extends ReportGenerator {
                 exporter.setConfiguration(reportConfiguration);
                 exporter.setConfiguration(exporterConfiguration);
                 exporter.exportReport();
-                logger.debug("HMTL Generated.");
+                logger.info("HMTL generation finished.");
                 return new GenerationSuccess();
             }
             else {
