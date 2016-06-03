@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 5.6.1.final using JasperReports Library version 5.6.1  -->
-<!-- 2016-04-07T13:33:57 -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYourPartner" language="java" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="2c76a7f8-deb9-45af-83f2-c12559d20c72">
+<!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
+<!-- 2016-06-03T14:02:25 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYourPartner" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="2c76a7f8-deb9-45af-83f2-c12559d20c72">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
@@ -129,13 +129,13 @@
 		<band height="18" splitType="Immediate">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="61c7218b-715a-4359-9449-ee3c564dbe6f">
-						<property name="net.sf.jasperreports.export.html.id" value="semp-have-q"/>
+					<property name="net.sf.jasperreports.export.html.id" value="semp-have-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{haveBeenSelfEmployedQuestion})]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="57e79dc7-f890-477f-831c-ab6a643652c4">
-						<property name="net.sf.jasperreports.export.html.id" value="semp-have-a"/>
+					<property name="net.sf.jasperreports.export.html.id" value="semp-have-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{haveBeenSelfEmployedAnswer})]]></textFieldExpression>
 			</textField>
@@ -233,61 +233,61 @@
 			</staticText>
 			<textField isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="21" width="392" height="18" isRemoveLineWhenBlank="true" uuid="169f6444-16b5-4124-be44-64f2840284fd">
-						<property name="net.sf.jasperreports.export.html.id" value="semp-gotaccounts-q"/>
+					<property name="net.sf.jasperreports.export.html.id" value="semp-gotaccounts-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{selfEmployedGotAccountsQuestion})]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement style="Answer" positionType="Float" x="420" y="21" width="174" height="18" isRemoveLineWhenBlank="true" uuid="48084702-32a8-49ec-bf6d-27d6e3094151">
-						<property name="net.sf.jasperreports.export.html.id" value="semp-gotaccounts-a"/>
+					<property name="net.sf.jasperreports.export.html.id" value="semp-gotaccounts-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{selfEmployedGotAccountsAnswer})]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="39" width="392" height="18" isRemoveLineWhenBlank="true" uuid="169f6444-16b5-4124-be44-64f2840284fd">
-						<property name="net.sf.jasperreports.export.html.id" value="semp-knowtradingyear-q"/>
+					<property name="net.sf.jasperreports.export.html.id" value="semp-knowtradingyear-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{knowTradingYearQuestion})]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement style="Answer" positionType="Float" x="420" y="39" width="174" height="18" isRemoveLineWhenBlank="true" uuid="48084702-32a8-49ec-bf6d-27d6e3094151">
-						<property name="net.sf.jasperreports.export.html.id" value="semp-knowtradingyear-a"/>
+					<property name="net.sf.jasperreports.export.html.id" value="semp-knowtradingyear-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{knowTradingYearAnswer})]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="57" width="392" height="18" isRemoveLineWhenBlank="true" uuid="e1eded18-7307-49b2-adf5-e5015263a9b0">
-						<property name="net.sf.jasperreports.export.html.id" value="semp-startyear-q"/>
+					<property name="net.sf.jasperreports.export.html.id" value="semp-startyear-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{tradingYearStartQuestion})]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement style="Answer" positionType="Float" x="420" y="57" width="174" height="18" isRemoveLineWhenBlank="true" uuid="9dfea395-437a-4f46-a8e1-8830b9c14917">
-						<property name="net.sf.jasperreports.export.html.id" value="semp-startyear-a"/>
+					<property name="net.sf.jasperreports.export.html.id" value="semp-startyear-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{tradingYearStartAnswer})]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="75" width="392" height="36" isRemoveLineWhenBlank="true" uuid="bfebe281-9297-42a1-9483-506f8bd3071a">
-						<property name="net.sf.jasperreports.export.html.id" value="semp-paid-q"/>
+					<property name="net.sf.jasperreports.export.html.id" value="semp-paid-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{paidMoneyYetQuestion})]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement style="Answer" positionType="Float" x="419" y="75" width="175" height="36" isRemoveLineWhenBlank="true" uuid="0bcdb23a-6098-41e4-b1e2-8b1bf17f3b5a">
-						<property name="net.sf.jasperreports.export.html.id" value="semp-paid-a"/>
+					<property name="net.sf.jasperreports.export.html.id" value="semp-paid-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{paidMoneyYetAnswer})]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="111" width="392" height="18" isRemoveLineWhenBlank="true" uuid="28baef97-3b86-43de-bae4-2f109c498ba4">
-						<property name="net.sf.jasperreports.export.html.id" value="semp-datepaid-q"/>
+					<property name="net.sf.jasperreports.export.html.id" value="semp-datepaid-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{paidMoneyDateQuestion})]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement style="Answer" positionType="Float" x="420" y="111" width="174" height="18" isRemoveLineWhenBlank="true" uuid="97cb89c9-8352-42b8-9734-abc807904a2f">
-						<property name="net.sf.jasperreports.export.html.id" value="semp-datepaid-a"/>
+					<property name="net.sf.jasperreports.export.html.id" value="semp-datepaid-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{paidMoneyDateAnswer})]]></textFieldExpression>
 			</textField>
@@ -305,82 +305,58 @@
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="21" width="392" height="18" isRemoveLineWhenBlank="true" uuid="5253eb03-1405-460d-9257-caac55f69d69">
-						<property name="net.sf.jasperreports.export.html.id" value="semp-pension-q"/>
+					<property name="net.sf.jasperreports.export.html.id" value="semp-pension-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{PaidForPensionQuestion})]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement style="Answer" positionType="Float" x="420" y="21" width="174" height="18" isRemoveLineWhenBlank="true" uuid="ae86e0b9-e58b-4174-a186-9d1b89cb2ece">
-						<property name="net.sf.jasperreports.export.html.id" value="semp-pension-a"/>
+					<property name="net.sf.jasperreports.export.html.id" value="semp-pension-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{PaidForPensionAnswer})]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement positionType="Float" x="0" y="39" width="594" height="1" uuid="51883abb-4270-4899-980d-40cbc4292f4c"/>
-				<text><![CDATA[]]></text>
-			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="40" width="594" height="18" isRemoveLineWhenBlank="true" uuid="9b34bacc-9970-4bd7-ab83-e7f6fc5950bf">
-						<property name="net.sf.jasperreports.export.html.id" value="semp-penexp-q"/>
+					<property name="net.sf.jasperreports.export.html.id" value="semp-penexp-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{PensionExpensesQuestion})]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement positionType="Float" x="0" y="58" width="594" height="1" uuid="ed579a6d-2d04-44f0-8e41-aa35909f0746"/>
-				<text><![CDATA[]]></text>
-			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement style="Answer" positionType="Float" x="0" y="59" width="594" height="18" isRemoveLineWhenBlank="true" uuid="abfc6877-def1-4003-9f0b-0ee56eb99b2c">
-						<property name="net.sf.jasperreports.export.html.id" value="semp-penexp-a"/>
+					<property name="net.sf.jasperreports.export.html.id" value="semp-penexp-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{PensionExpensesAnswer})]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement positionType="Float" x="0" y="77" width="592" height="1" uuid="1b8e123a-b8b5-4f50-a857-ce5b7e8a8981"/>
-				<text><![CDATA[]]></text>
-			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="78" width="392" height="18" isRemoveLineWhenBlank="true" uuid="e8fd6b41-aca1-4c3d-8138-ad77b5cfc491">
-						<property name="net.sf.jasperreports.export.html.id" value="semp-paythings-q"/>
+					<property name="net.sf.jasperreports.export.html.id" value="semp-paythings-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{PaidForJobExpensesQuestion})]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement style="Answer" positionType="Float" x="420" y="78" width="175" height="18" isRemoveLineWhenBlank="true" uuid="b2fe0218-e54d-4932-b31c-b0f40339d845">
-						<property name="net.sf.jasperreports.export.html.id" value="semp-paythings-a"/>
+					<property name="net.sf.jasperreports.export.html.id" value="semp-paythings-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{PaidForJobExpensesAnswer})]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement positionType="Float" x="0" y="96" width="594" height="1" uuid="20f270e9-5fdb-4823-ac6f-8c6feaa64241"/>
-				<text><![CDATA[]]></text>
-			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="97" width="594" height="18" isRemoveLineWhenBlank="true" uuid="bfdbcc13-f366-4acf-ae70-b0983be0c238">
-						<property name="net.sf.jasperreports.export.html.id" value="semp-jobexpenses-q"/>
+					<property name="net.sf.jasperreports.export.html.id" value="semp-jobexpenses-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{JobExpensesQuestion})]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement positionType="Float" x="0" y="115" width="594" height="1" uuid="77af7c47-b518-46ff-8f7d-e518423155b1"/>
-				<text><![CDATA[]]></text>
-			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement style="Answer" positionType="Float" x="0" y="116" width="594" height="18" isRemoveLineWhenBlank="true" uuid="14124939-e11d-424f-ae13-256b9a7943d9">
-						<property name="net.sf.jasperreports.export.html.id" value="semp-jobexpenses-a"/>
+					<property name="net.sf.jasperreports.export.html.id" value="semp-jobexpenses-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{JobExpensesAnswer})]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement positionType="Float" x="-1" y="134" width="593" height="1" uuid="84088390-7014-4dce-b414-86b26cb7e4db"/>
-				<text><![CDATA[]]></text>
-			</staticText>
 		</band>
 		<band height="58">
 			<printWhenExpression><![CDATA[!T($F{AboutEmploymentAdditionaInfoQuestion}).isEmpty()]]></printWhenExpression>
 			<staticText>
 				<reportElement style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="1" width="594" height="20" isRemoveLineWhenBlank="true" uuid="3b7a4779-53b3-423c-8f6b-9bc5f86ff79f">
-						<property name="net.sf.jasperreports.export.html.id" value="semp-addinfo"/>
+					<property name="net.sf.jasperreports.export.html.id" value="semp-addinfo"/>
 				</reportElement>
 				<textElement verticalAlignment="Top">
 					<font isBold="true"/>
@@ -389,23 +365,19 @@
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="21" width="392" height="18" isRemoveLineWhenBlank="true" uuid="a14ed3ff-d2dc-4de1-99b0-5b418ebe8d8e">
-						<property name="net.sf.jasperreports.export.html.id" value="semp-addinfo-q"/>
+					<property name="net.sf.jasperreports.export.html.id" value="semp-addinfo-q"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{AboutEmploymentAdditionaInfoQuestion})]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement style="Answer" positionType="Float" x="420" y="21" width="174" height="18" isRemoveLineWhenBlank="true" uuid="335f3d44-a020-4c31-95da-c6d8f1cacc77">
-						<property name="net.sf.jasperreports.export.html.id" value="semp-addinfo-a"/>
+					<property name="net.sf.jasperreports.export.html.id" value="semp-addinfo-a"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{AboutEmploymentAdditionaInfoAnswer})]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement positionType="Float" x="0" y="39" width="594" height="1" uuid="025c9dfe-cf83-44d1-8b39-3e1b7d5b7b3b"/>
-				<text><![CDATA[]]></text>
-			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement style="Answer" positionType="Float" x="0" y="40" width="594" height="18" isRemoveLineWhenBlank="true" uuid="5991c9b7-69ad-4f2c-b62e-61d26b774bc6">
-						<property name="net.sf.jasperreports.export.html.id" value="semp-addinfo-other"/>
+					<property name="net.sf.jasperreports.export.html.id" value="semp-addinfo-other"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{AboutEmploymentAdditionaInfoOther})]]></textFieldExpression>
 			</textField>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 5.6.1.final using JasperReports Library version 5.6.1  -->
-<!-- 2016-04-14T13:22:59 -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYouTheCarer_YourDetails" language="java" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="298ab450-e0e7-4402-afad-ec2c84b931c1">
+<!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
+<!-- 2016-06-03T13:40:22 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYouTheCarer_YourDetails" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="298ab450-e0e7-4402-afad-ec2c84b931c1">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
@@ -124,13 +124,6 @@
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{AboutYouTheCarerClaimantFirstNameAnswer})]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement positionType="Float" x="0" y="75" width="594" height="1" uuid="91a14418-bd5b-48ed-80f7-34109ea920a9">
-					<property name="local_mesure_unity" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<text><![CDATA[Static text]]></text>
-			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="60" width="392" height="18" isRemoveLineWhenBlank="true" uuid="7a470dfc-5247-4c3f-a062-6ac214b72810">
 					<property name="local_mesure_unity" value="pixel"/>
@@ -147,13 +140,6 @@
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{AboutYouTheCarerClaimantMiddleNameAnswer})]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement positionType="Float" x="0" y="94" width="594" height="1" uuid="d4666f5e-a156-4609-ba90-c1260d371758">
-					<property name="local_mesure_unity" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<text><![CDATA[]]></text>
-			</staticText>
 			<textField isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="79" width="392" height="18" isRemoveLineWhenBlank="true" uuid="3aa7b2f8-c0c3-4bc7-83bd-394da404d049">
 					<property name="local_mesure_unity" value="pixel"/>
@@ -170,13 +156,6 @@
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{AboutYouTheCarerClaimantSurnameAnswer})]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement positionType="Float" x="0" y="113" width="594" height="1" uuid="1b31aa83-8b10-4ecc-9d26-5e95273b2b74">
-					<property name="local_mesure_unity" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<text><![CDATA[]]></text>
-			</staticText>
 			<textField isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="98" width="392" height="18" isRemoveLineWhenBlank="true" uuid="3b10bf4b-22b8-4920-9cf2-dc3670497676">
 					<property name="local_mesure_unity" value="pixel"/>

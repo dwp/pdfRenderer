@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version last-->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewCircsEmploymentChangeFuture" language="java" pageWidth="595" pageHeight="802" columnWidth="595" columnSpacing="1" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="6995e436-52bd-4ce4-966d-188e2b70830b">
+<!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
+<!-- 2016-06-03T14:07:11 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewCircsEmploymentChangeFuture" pageWidth="595" pageHeight="802" columnWidth="595" columnSpacing="1" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="6995e436-52bd-4ce4-966d-188e2b70830b">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
@@ -208,10 +209,6 @@
 				<reportElement style="Answer" positionType="Float" x="420" y="90" width="174" height="17" isRemoveLineWhenBlank="true" uuid="4d064dfa-0242-4e61-bca6-9c2c7f5efd17"/>
 				<textFieldExpression><![CDATA[T($F{NotStartedPayFrequencyOtherAnswer})]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement positionType="Float" x="0" y="107" width="595" height="1" uuid="6d04bfb4-233e-4703-ab10-6453f30ee20c"/>
-				<text><![CDATA[]]></text>
-			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="108" width="392" height="19" isRemoveLineWhenBlank="true" uuid="1d3a72b6-49bb-4740-a26a-18c387c988e8"/>
 				<textFieldExpression><![CDATA[T($F{NotStartedUsuallyPaidSameAmountQuestionLabel})]]></textFieldExpression>
@@ -220,10 +217,6 @@
 				<reportElement style="Answer" positionType="Float" x="420" y="108" width="174" height="19" isRemoveLineWhenBlank="true" uuid="77e4180d-3858-4979-bd9d-198b4658160a"/>
 				<textFieldExpression><![CDATA[T($F{NotStartedUsuallyPaidSameAmountAnswer})]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement positionType="Float" x="0" y="127" width="595" height="1" uuid="a9a965e5-b920-4432-8149-b2e64284a510"/>
-				<text><![CDATA[]]></text>
-			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="128" width="392" height="16" isRemoveLineWhenBlank="true" uuid="f588d94c-08bf-4db2-8939-0a86b55bacbc"/>
 				<textFieldExpression><![CDATA[T($F{NotStartedPayIntoPensionQuestionLabel})]]></textFieldExpression>
@@ -274,10 +267,6 @@
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsOtherChanges.jasper"]]></subreportExpression>
 			</subreport>
-			<staticText>
-				<reportElement positionType="Float" x="0" y="164" width="595" height="1" uuid="0057bd59-ab75-4616-aeeb-1854cacb5574"/>
-				<text><![CDATA[]]></text>
-			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="165" width="392" height="15" isRemoveLineWhenBlank="true" uuid="d8860fe9-d4e1-4b13-9d0b-3a33ea711f51"/>
 				<textFieldExpression><![CDATA[T($F{NotStartedCareCostsForThisWorkQuestionLabel})]]></textFieldExpression>
@@ -303,10 +292,6 @@
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsOtherChanges.jasper"]]></subreportExpression>
 			</subreport>
-			<staticText>
-				<reportElement positionType="Float" x="1" y="181" width="595" height="1" uuid="0dba6f4c-4d22-4ad4-b33d-8b08390aac01"/>
-				<text><![CDATA[]]></text>
-			</staticText>
 			<subreport>
 				<reportElement positionType="Float" x="0" y="183" width="593" height="1" isRemoveLineWhenBlank="true" uuid="8ead1cca-4a39-4878-805f-e9b3835251f3"/>
 				<subreportParameter name="SUBREPORT_DIR">

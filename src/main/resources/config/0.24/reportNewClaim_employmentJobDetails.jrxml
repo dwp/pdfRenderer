@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 5.6.1.final using JasperReports Library version 5.6.1  -->
-<!-- 2016-04-07T13:36:23 -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_employmentJobDetails" language="java" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="d2b233ab-6178-4bb0-9059-17e24879fcd8">
+<!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
+<!-- 2016-06-03T13:56:18 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_employmentJobDetails" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="d2b233ab-6178-4bb0-9059-17e24879fcd8">
 	<property name="ireport.zoom" value="0.9090909090909092"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
@@ -197,8 +197,6 @@
 	</variable>
 	<group name="EmployerDetails">
 		<groupExpression><![CDATA[$V{EmployerDetails_COUNT}==1]]></groupExpression>
-		<groupHeader>
-		</groupHeader>
 		<groupFooter>
 			<band splitType="Immediate"/>
 		</groupFooter>
@@ -229,10 +227,6 @@
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{JobDetailsEmployerAnswer})]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement positionType="Float" x="0" y="19" width="594" height="1" uuid="412674ca-312a-4488-af48-c41a82203174"/>
-				<text><![CDATA[]]></text>
-			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="20" width="392" height="18" isRemoveLineWhenBlank="true" uuid="766de9f6-9e5e-4228-acb5-efc36df221a0">
 					<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA[$V{EmploymentNum}+"startbeforeclaim-q"]]></propertyExpression>
@@ -293,10 +287,6 @@
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{JobDetailsEmployerP45LeavingDateAnswer})]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement positionType="Float" x="0" y="110" width="594" height="1" uuid="aca342af-b847-460b-944b-a1e9936f53d7"/>
-				<text><![CDATA[]]></text>
-			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="111" width="392" height="18" isRemoveLineWhenBlank="true" uuid="104bbea5-91f4-4c73-8518-bd5f1008e088">
 					<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA[$V{EmploymentNum}+"hours-q"]]></propertyExpression>
@@ -346,10 +336,6 @@
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{Line3})]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement positionType="Float" x="0" y="36" width="592" height="1" uuid="f71f51ab-8e3b-4bf1-bd80-290cf5d74fd1"/>
-				<text><![CDATA[]]></text>
-			</staticText>
 			<textField isBlankWhenNull="true">
 				<reportElement positionType="Float" x="1" y="37" width="392" height="18" isRemoveLineWhenBlank="true" uuid="0c0f040e-c1b7-46ea-a06e-57ebe04457c5">
 					<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA[$V{EmploymentNum}+"postcode-q"]]></propertyExpression>
@@ -424,10 +410,6 @@
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{JobDetailsPayIncludedInWageAnswer})]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement positionType="Float" x="0" y="54" width="594" height="1" uuid="cacd0d68-2f82-4bd6-bebd-e89a3983dcc3"/>
-				<text><![CDATA[]]></text>
-			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="55" width="392" height="18" isRemoveLineWhenBlank="true" uuid="410e26c9-24cb-48b9-91bd-e11cd4394bb1">
 					<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA[$V{EmploymentNum}+"constantearn-q"]]></propertyExpression>
@@ -495,10 +477,6 @@
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{JobDetailsOweMoneyAnswer})]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement positionType="Float" x="0" y="18" width="594" height="1" uuid="fc7a2a26-ab12-4620-b1ac-0a05b4183de3"/>
-				<text><![CDATA[]]></text>
-			</staticText>
 		</band>
 		<band height="211" splitType="Prevent">
 			<staticText>
@@ -522,10 +500,6 @@
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{JobDetailsPaidForPensionAnswer})]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement positionType="Float" x="0" y="39" width="594" height="1" uuid="cc2eed8b-8b70-4194-80cc-87ab080368d7"/>
-				<text><![CDATA[]]></text>
-			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="40" width="595" height="18" isRemoveLineWhenBlank="true" uuid="71e801b2-ae44-46fb-82fb-62d9de8b4a88">
 					<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA[$V{EmploymentNum}+"penexp-q"]]></propertyExpression>
@@ -538,10 +512,6 @@
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{JobDetailsPensionExpensesAnswer})]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement positionType="Float" x="0" y="76" width="594" height="1" uuid="6746514b-129b-4456-90a2-de8e9cc5a457"/>
-				<text><![CDATA[]]></text>
-			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="77" width="392" height="18" isRemoveLineWhenBlank="true" uuid="142b8571-bc1d-49c9-8718-a60bb2bc034b">
 					<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA[$V{EmploymentNum}+"paythings-q"]]></propertyExpression>
@@ -554,10 +524,6 @@
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{JobDetailsPaidForThingsAnswer})]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement positionType="Float" x="0" y="95" width="595" height="1" uuid="d577b57f-de9b-4916-93ed-cc1360bcad5e"/>
-				<text><![CDATA[]]></text>
-			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="96" width="595" height="18" isRemoveLineWhenBlank="true" uuid="1c4dc770-f747-46fb-b9e0-e14bcd03d8b3">
 					<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA[$V{EmploymentNum}+"jobexpenses-q"]]></propertyExpression>
@@ -570,10 +536,6 @@
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{JobDetailsExpensesToDoJobAnswer})]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement positionType="Float" x="0" y="132" width="595" height="1" uuid="a23fb111-1ba4-4076-8a89-57e2341b5015"/>
-				<text><![CDATA[]]></text>
-			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="1" y="133" width="391" height="18" isRemoveLineWhenBlank="true" uuid="0d36eb56-d9c0-48c0-a27a-dea0e9fc7fb4">
 					<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA[$V{EmploymentNum}+"carecosts-q"]]></propertyExpression>
@@ -586,10 +548,6 @@
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{JobDetailsPaidForJobExpensesAnswer})]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement positionType="Float" x="1" y="151" width="593" height="1" uuid="4d6938b5-d355-49ce-b95c-71f7af17028d"/>
-				<text><![CDATA[]]></text>
-			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="1" y="152" width="593" height="18" isRemoveLineWhenBlank="true" uuid="c39589ec-7cc1-4eab-be0f-6caa94f12aca">
 					<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA[$V{EmploymentNum}+"expenses-q"]]></propertyExpression>
@@ -602,10 +560,6 @@
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{JobDetailsJobExpensesAnswer})]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement positionType="Float" x="1" y="188" width="593" height="1" uuid="57f019c9-1737-48a2-b30d-72a7d59d010b"/>
-				<text><![CDATA[]]></text>
-			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="193" width="392" height="18" isRemoveLineWhenBlank="true" uuid="ce0c3486-5a1b-4920-ab9a-f9c248337e95">
 					<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA[$V{EmploymentNum}+"morejobs-q"]]></propertyExpression>

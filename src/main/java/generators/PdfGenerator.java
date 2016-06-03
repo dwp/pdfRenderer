@@ -29,6 +29,7 @@ public class PdfGenerator extends ReportGenerator {
         SimplePdfExporterConfiguration config = new SimplePdfExporterConfiguration();
         config.setTagged(true);
         config.setPdfaConformance(PdfaConformanceEnum.PDFA_1A);
+        config.setCompressed(true);
         setPath();
         logger.info("iccPath:" + iccPath);
         config.setIccProfilePath(iccPath);

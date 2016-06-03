@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 5.6.1.final using JasperReports Library version 5.6.1  -->
-<!-- 2016-04-20T16:38:03 -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYourPartner" language="java" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="2c76a7f8-deb9-45af-83f2-c12559d20c72">
+<!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
+<!-- 2016-06-03T13:44:03 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYourPartner" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="2c76a7f8-deb9-45af-83f2-c12559d20c72">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
@@ -314,10 +314,6 @@
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{sickPayWhoPaidAnswer})]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement positionType="Float" x="0" y="92" width="594" height="0" uuid="836d2149-9cb6-4f69-85b4-13fc6fb9de4d"/>
-				<text><![CDATA[]]></text>
-			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="92" width="392" height="18" isRemoveLineWhenBlank="true" uuid="6f160ad8-1624-4255-a197-cd4a990866ab">
 					<property name="local_mesure_unity" value="pixel"/>
@@ -449,10 +445,6 @@
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{patmatPayWhoPaidAnswer})]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement positionType="Float" x="0" y="110" width="594" height="0" uuid="836d2149-9cb6-4f69-85b4-13fc6fb9de4d"/>
-				<text><![CDATA[]]></text>
-			</staticText>
 			<textField isBlankWhenNull="true">
 				<reportElement style="Answer" positionType="Float" x="420" y="74" width="174" height="18" isRemoveLineWhenBlank="true" uuid="dfe0de53-a066-4c95-b740-3e74b7e46f55">
 					<property name="local_mesure_unity" value="pixel"/>
@@ -542,10 +534,6 @@
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{fosterPayPaymentTypeOtherAnswer})]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement positionType="Float" x="0" y="38" width="594" height="0" uuid="836d2149-9cb6-4f69-85b4-13fc6fb9de4d"/>
-				<text><![CDATA[]]></text>
-			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="38" width="392" height="18" isRemoveLineWhenBlank="true" uuid="c8978e41-34fa-47a8-a77c-e4e37d15b368">
 					<property name="local_mesure_unity" value="pixel"/>
@@ -622,10 +610,6 @@
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{fosterPayWhoPaidAnswer})]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement positionType="Float" x="0" y="110" width="594" height="0" uuid="836d2149-9cb6-4f69-85b4-13fc6fb9de4d"/>
-				<text><![CDATA[]]></text>
-			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="110" width="392" height="18" isRemoveLineWhenBlank="true" uuid="313fe967-42b5-4565-9170-b48b6cf5cfd9">
 					<property name="local_mesure_unity" value="pixel"/>
@@ -737,10 +721,6 @@
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{directPayWhoPaidAnswer})]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement positionType="Float" x="0" y="92" width="594" height="0" uuid="836d2149-9cb6-4f69-85b4-13fc6fb9de4d"/>
-				<text><![CDATA[]]></text>
-			</staticText>
 			<textField isBlankWhenNull="true">
 				<reportElement style="Answer" positionType="Float" x="420" y="56" width="174" height="18" isRemoveLineWhenBlank="true" uuid="dfe0de53-a066-4c95-b740-3e74b7e46f55">
 					<property name="local_mesure_unity" value="pixel"/>
