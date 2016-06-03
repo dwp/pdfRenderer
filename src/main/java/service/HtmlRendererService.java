@@ -12,7 +12,7 @@ public class HtmlRendererService extends RendererService {
     private HtmlGenerator reportGenerator;
 
     public String generateHtml(String xmlBody) {
-        return outputGeneration(xmlBody, reportGenerator);
+        return outputHtmlGeneration(xmlBody, reportGenerator);
     }
 
     @Inject

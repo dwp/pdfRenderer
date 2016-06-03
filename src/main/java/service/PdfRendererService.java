@@ -11,7 +11,7 @@ import javax.inject.Inject;
 public class PdfRendererService extends RendererService {
     private PdfGenerator reportGenerator;
 
-    public String generatePdf(String xmlBody) {
+    public byte[] generatePdf(String xmlBody) {
         return outputGeneration(xmlBody, reportGenerator);
     }
 

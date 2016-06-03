@@ -22,7 +22,7 @@ public class Application {
     private HtmlRendererService htmlRendererService;
 
     @RequestMapping(value = "/print", method = RequestMethod.POST, consumes = "text/xml")
-    public @ResponseBody String generatePDF(@RequestBody String requestBody) {
+    public @ResponseBody byte[] generatePDF(@RequestBody String requestBody) {
         RenameThread.getTransactionIdAndRenameThread(requestBody);
         logger.info("generatePDF called with requestBody");
         return pdfRendererService.generatePdf(requestBody);

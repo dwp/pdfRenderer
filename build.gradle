@@ -18,6 +18,9 @@ buildscript {
         maven {
             url 'http://jaspersoft.artifactoryonline.com/jaspersoft/jr-ce-releases'
         }
+        maven {
+            url 'http://jasperreports.sourceforge.net/maven2'
+        }
     }
     dependencies {
         classpath(group: 'org.jfrog.buildinfo', name: 'build-info-extractor-gradle', version: '4.0.0')
@@ -25,10 +28,8 @@ buildscript {
         classpath('com.github.gmazelier:jasperreports-gradle-plugin:0.3.2'){
             exclude group: 'net.sf.jasperreports', module: 'jasperreports'
         }
-        classpath("net.sf.jasperreports:jasperreports:6.2.2") {
-            exclude group: 'com.lowagie', module: 'itext'
-        }
-        classpath("com.lowagie:itext:4.2.1")
+        classpath("net.sf.jasperreports:jasperreports:6.2.2")
+        classpath("com.itextpdf:itextpdf:5.5.9")
         classpath("net.sf.jasperreports:jasperreports-functions:6.2.2")
     }
 }
@@ -87,6 +88,9 @@ repositories {
     maven {
         url 'http://jaspersoft.artifactoryonline.com/jaspersoft/jr-ce-releases/'
     }
+    maven {
+        url 'http://jasperreports.sourceforge.net/maven2'
+    }
 }
 
 configurations {
@@ -94,13 +98,10 @@ configurations {
 }
 
 dependencies {
-    compile("net.sf.jasperreports:jasperreports:6.2.2") {
-        exclude group: 'com.lowagie', module: 'itext'
-    }
-    compile("com.lowagie:itext:4.2.1")
+    compile("net.sf.jasperreports:jasperreports:6.2.2")
+    compile("com.itextpdf:itextpdf:5.5.9")
     compile("com.adobe.xmp:xmpcore:5.1.2")
     compile("gov.dwp.carers:fonts:1.0")
-    compile("org.codehaus.groovy:groovy-all:2.4.6")
     compile("xalan:xalan:2.7.2")
     compile("gov.dwp.carers:xmlcommons:8.01-SNAPSHOT")
     compile("org.springframework.boot:spring-boot-starter-web")

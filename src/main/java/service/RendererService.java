@@ -25,31 +25,42 @@ public class RendererService {
     @Inject
     private Counters counters;
 
-    OutputStream outputStream;
-
-    public String outputGeneration(String xmlBody, ReportGenerator reportGenerator) {
+    private String getTransactionId(String xmlBody) {
         String node = StringUtils.substringBetween(xmlBody, "<TransactionId>","</TransactionId>");
-        String transactionId = StringUtils.isEmpty(node) ? "" : node;
+        return StringUtils.isEmpty(node) ? "" : node;
+    }
+
+    public String outputHtmlGeneration(String xmlBody, ReportGenerator reportGenerator) {
+        String transactionId = getTransactionId(xmlBody);
+        try {
+            return new String(outputGeneration(xmlBody, reportGenerator), "UTF-8");
+        } catch (Exception e) {
+            return ("<Error>Failed to convert output for transactionId: [" + transactionId + "]</Error>");
+        }
+    }
+
+    public byte[] outputGeneration(String xmlBody, ReportGenerator reportGenerator) {
+        String transactionId = getTransactionId(xmlBody);
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         try {
             logger.debug("treating XML received.");
             JasperPrint print = reportGenerator.generateFrom(new XmlDataSource(xmlBody), StringUtils.substringBetween(xmlBody, "<Version>", "</Version>"));
 
-            outputStream = new ByteArrayOutputStream();
             SuccessOrFailure successOrFailure = reportGenerator.exportReportToStream(print, outputStream);
             if (successOrFailure instanceof GenerationSuccess) {
                 logger.info("Generation success for transactionId: [" + transactionId + "]");
                 counters.recordClaimRenderCount();
-                return outputStream.toString();
+                return outputStream.toByteArray();
             } else {
                 logger.error("Could not render XML for transactionId: [" + transactionId + "]");
-                return "<Error>Failed to render XML for transactionId: [" + transactionId + "]</Error>";
+                return ("<Error>Failed to render XML for transactionId: [" + transactionId + "]</Error>").getBytes();
             }
         } catch (InvalidSourceFormatException e) {
             logger.error("Could not render for transactionId: [" + transactionId + "]. " + e.getMessage(), e);
-            return "<Error>Failed to render XML for transactionId: [" + transactionId + "]</Error>"; // Error already logged by generator;
+            return ("<Error>Failed to render XML for transactionId: [" + transactionId + "]</Error>").getBytes(); // Error already logged by generator;
         } catch (Throwable t) {
             logger.error("Could not render for transactionId: [" + transactionId + "]. " + t.getMessage(), t);
-            return "<Error>Failed to render XML for transactionId: [" + transactionId + "]</Error>";
+            return ("<Error>Failed to render XML for transactionId: [" + transactionId + "]</Error>").getBytes();
         } finally {
             if (outputStream != null) try { outputStream.close(); } catch (Exception e) { logger.error("Unable to close output stream", e);}
         }

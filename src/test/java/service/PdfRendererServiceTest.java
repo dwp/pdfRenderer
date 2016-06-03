@@ -28,14 +28,14 @@ public class PdfRendererServiceTest {
 
     @Test
     public void acceptXMLAndReturnBADREQUESTErrorIfUnknownXMLType() throws Exception {
-        String status = pdfRendererService.generatePdf("<Invalid>type</Invalid>");
-        assertThat(status, is("<Error>Failed to render XML for transactionId: []</Error>"));
+        byte[] status = pdfRendererService.generatePdf("<Invalid>type</Invalid>");
+        assertThat(new String(status, "UTF-8"), is("<Error>Failed to render XML for transactionId: []</Error>"));
     }
 
     @Test
     public void notAcceptNonXMLRequest() throws Exception {
-        String status = pdfRendererService.generatePdf("Hello");
-        assertThat(status, is("<Error>Failed to render XML for transactionId: []</Error>"));
+        byte[] status = pdfRendererService.generatePdf("Hello");
+        assertThat(new String(status, "UTF-8"), is("<Error>Failed to render XML for transactionId: []</Error>"));
     }
 
     @Test
@@ -43,13 +43,13 @@ public class PdfRendererServiceTest {
         PdfRendererService pdfRendererServiceMock = new PdfRendererService();
         PdfGenerator reportGenerator = mock(PdfGenerator.class);
         pdfRendererServiceMock.setPdfGenerator(reportGenerator);
-        String status = pdfRendererServiceMock.generatePdf(ClaimBuilder.goodClaim());
-        assertThat(status, is("<Error>Failed to render XML for transactionId: [NFM33DB]</Error>"));
+        byte[] status = pdfRendererServiceMock.generatePdf(ClaimBuilder.goodClaim());
+        assertThat(new String(status, "UTF-8"), is("<Error>Failed to render XML for transactionId: [NFM33DB]</Error>"));
     }
 
     @Test
     public void acceptValidXMLAndGenerateAPDF() throws Exception {
-        String status = pdfRendererService.generatePdf(ClaimBuilder.goodClaim());
-        assertThat(status, containsString("PDF-1.4"));
+        byte[] status = pdfRendererService.generatePdf(ClaimBuilder.goodClaim());
+        assertThat(new String(status, "UTF-8"), containsString("PDF-1.4"));
     }
 }
