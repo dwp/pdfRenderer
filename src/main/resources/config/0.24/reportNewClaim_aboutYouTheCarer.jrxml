@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
-<!-- 2016-06-03T13:59:35 -->
+<!-- 2016-06-08T12:57:07 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYouTheCarer" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a66aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
@@ -452,22 +452,9 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="local_mesure_unitwidth" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<printWhenExpression><![CDATA[!T($F{ResidencyArrivedInUKAnswer}).isEmpty() && T($F{OriginTag}).equals("GB")]]></printWhenExpression>
+					<printWhenExpression><![CDATA[!T($F{ResidencyArrivedInUKAnswer}).isEmpty()]]></printWhenExpression>
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{ResidencyArrivedInUKAnswer}).equalsIgnoreCase("less") ? "Less than 3 years ago" : "More than 3 years ago"]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="420" y="64" width="174" height="18" isRemoveLineWhenBlank="true" uuid="7a10ffb1-2a91-440a-af68-372564464700">
-					<property name="net.sf.jasperreports.export.html.id" value="aboutyou-nat-a"/>
-					<property name="local_mesure_unity" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="local_mesure_unitwidth" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="local_mesure_unitx" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<printWhenExpression><![CDATA[!T($F{ResidencyArrivedInUKAnswer}).isEmpty() && T($F{OriginTag}).equals("GB-NIR")]]></printWhenExpression>
-				</reportElement>
-				<textFieldExpression><![CDATA[T($F{ResidencyArrivedInUKAnswer}).equalsIgnoreCase("less") ? "Less than 6 months ago" : "More than 6 months ago"]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="100" width="392" height="18" isRemoveLineWhenBlank="true" uuid="26f04003-d6ff-4093-9f63-017f421d6fc1">
