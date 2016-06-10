@@ -388,7 +388,7 @@
 			<textField isBlankWhenNull="true">
 				<reportElement style="Answer" positionType="Float" x="420" y="10" width="174" height="18" isRemoveLineWhenBlank="true" uuid="4a186ab4-1950-4c0c-95a1-3a9b27096e2d">
 					<property name="net.sf.jasperreports.export.html.id" value="aboutyou-natgb-a"/>
-					<printWhenExpression><![CDATA[T($F{ResidencyNationalityAnotherCountryAnswer})==null]]></printWhenExpression>
+					<printWhenExpression><![CDATA[T($F{ResidencyNationalityAnotherCountryAnswer}).isEmpty()]]></printWhenExpression>
 				</reportElement>
 				<textFieldExpression><![CDATA[T($F{ResidencyNationalityAnswer})]]></textFieldExpression>
 			</textField>
