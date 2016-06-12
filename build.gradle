@@ -81,6 +81,7 @@ artifactory {
 }
 
 repositories {
+    mavenLocal()
     mavenCentral()
     maven {
         url 'http://jaspersoft.artifactoryonline.com/jaspersoft/third-party-ce-artifacts/'
@@ -103,7 +104,8 @@ dependencies {
     compile("com.adobe.xmp:xmpcore:5.1.2")
     compile("gov.dwp.carers:fonts:1.0")
     compile("xalan:xalan:2.7.2")
-    compile("gov.dwp.carers:xmlcommons:8.01-SNAPSHOT")
+    compile("gov.dwp.carers:xmlcommons:8.10-SNAPSHOT")
+    compile("gov.dwp.carers:carerscommon:8.01-SNAPSHOT")
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.boot:spring-boot-starter-jetty")
     compile("org.springframework.boot:spring-boot-starter-data-rest")

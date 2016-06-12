@@ -2,7 +2,8 @@ package monitoring;
 
 import com.codahale.metrics.SharedMetricRegistries;
 import com.codahale.metrics.Slf4jReporter;
-import gov.dwp.carers.CADSHealthCheck;
+import gov.dwp.carers.monitor.MonitorRegistration;
+import gov.dwp.carers.monitor.ProdHealthMonitor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -14,43 +15,8 @@ import java.util.concurrent.TimeUnit;
  * Created by peterwhitehead on 05/05/2016.
  */
 @Component
-public class RenderingServiceMonitorRegistration {
+public class RenderingServiceMonitorRegistration extends MonitorRegistration{
     private final Logger logger = LoggerFactory.getLogger(RenderingServiceMonitorRegistration.class);
-
-    @Value("${metrics.frequency}")
-    private Integer metricsFrequency;
-
-    @Value("${metrics.slf4j}")
-    private Boolean metricsSlf4j;
-
-    @Value("${health.logging}")
-    private Boolean healthLogging;
-
-    @Value("${metrics.name}")
-    private String metricsName;
-
-    @Value("${application.name}")
-    private String applicationName;
-
-    @Value("${application.version}")
-    private String applicationVersion;
-
-    @Value("${health.logging.frequency}")
-    private Integer healthLoggingFrequency;
-
-    private Slf4jReporter reporter;
-
-    private ProdHealthMonitor logHealthReporter;
-
-    public RenderingServiceMonitorRegistration() {}
-
-    public int getFrequency() { return metricsFrequency; }
-
-    public int getHealthLoggingFrequency() { return healthLoggingFrequency; }
-
-    public boolean isLogMetrics() { return metricsSlf4j; }
-
-    public boolean isLogHealth() { return healthLogging; }
 
     public void registerHealthChecks() {
         logger.info("Registering Health Checks.");
@@ -75,21 +41,4 @@ public class RenderingServiceMonitorRegistration {
         } else logger.info("Metrics turned off.");
     }
 
-    public void unRegisterReporters() {
-        if (isLogMetrics()) {
-            logger.info("Metrics stopped");
-            reporter.stop();
-        }
-    }
-
-    public void unRegisterHealthChecks() {
-        if (isLogHealth()) {
-            logger.info("Health Logging stopped");
-            logHealthReporter.stop();
-        }
-    }
-
-    public SortedMap<String, CADSHealthCheck.Result> runHealthChecks() {
-        return logHealthReporter.getRegistry().runHealthChecks();
-    }
 }
