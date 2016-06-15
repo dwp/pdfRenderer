@@ -11,8 +11,9 @@ import net.sf.jasperreports.export.SimpleHtmlReportConfiguration;
 import net.sf.jasperreports.export.type.HtmlSizeUnitEnum;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-
+import javax.inject.Inject;
 import java.io.OutputStream;
 import java.util.List;
 
@@ -69,5 +70,10 @@ public class HtmlGenerator extends ReportGenerator {
             pages.remove(lastPage);
         }
         return print;
+    }
+
+    @Inject
+    public HtmlGenerator(@Value("${jasper.folder}") String jasperLocation, @Value("${jrxml.folder}") String jrxmlLocation) {
+        super(jasperLocation, jrxmlLocation);
     }
 }

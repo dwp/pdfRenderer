@@ -1,6 +1,7 @@
 package service;
 
 import generators.PdfGenerator;
+import gov.dwp.carers.monitor.Counters;
 import org.springframework.stereotype.Component;
 import javax.inject.Inject;
 
@@ -16,7 +17,8 @@ public class PdfRendererService extends RendererService {
     }
 
     @Inject
-    public void setPdfGenerator(PdfGenerator pdfGenerator) {
+    public PdfRendererService(PdfGenerator pdfGenerator, Counters counters) {
+        super(counters);
         this.reportGenerator = pdfGenerator;
     }
 }

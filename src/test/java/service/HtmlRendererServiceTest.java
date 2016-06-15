@@ -3,6 +3,7 @@ package service;
 import controllers.PdfServiceApplication;
 import dataSources.XmlDataSource;
 import generators.HtmlGenerator;
+import gov.dwp.carers.monitor.Counters;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
@@ -41,9 +42,9 @@ public class HtmlRendererServiceTest {
 
     @Test
     public void returnInternalErrorCodeIfCouldNotGenerateHTML() throws Exception {
-        HtmlRendererService htmlRendererServiceMock = new HtmlRendererService();
+        Counters counters = mock(Counters.class);
         HtmlGenerator reportGenerator = mock(HtmlGenerator.class);
-        htmlRendererServiceMock.setHtmlGenerator(reportGenerator);
+        HtmlRendererService htmlRendererServiceMock = new HtmlRendererService(reportGenerator, counters);
         when(reportGenerator.generateFrom(Mockito.any(XmlDataSource.class), Mockito.anyString())).thenThrow(Throwable.class);
         String status = htmlRendererServiceMock.generateHtml(ClaimBuilder.goodClaim());
         assertThat(status, is("<Error>Failed to render XML for transactionId: [NFM33DB]</Error>"));

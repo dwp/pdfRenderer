@@ -1,6 +1,7 @@
 package controllers;
 
-import monitoring.RenderingServiceMonitorRegistration;
+import gov.dwp.carers.monitor.MonitorRegistration;
+import monitoring.PdfHealthCheck;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.MDC;
@@ -9,19 +10,17 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.PropertySource;
-
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.inject.Inject;
 import java.net.InetAddress;
-import java.util.Properties;
 
 /**
  * Created by peterwhitehead on 04/05/2016.
  */
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"controllers", "dataSources", "generators", "service", "monitoring"})
+@ComponentScan(basePackages = {"controllers", "dataSources", "generators", "service", "monitoring", "gov.dwp.carers"})
 @PropertySource("classpath:/config/application-info.properties")
 public class PdfServiceApplication {
     private static final Logger logger = LoggerFactory.getLogger(PdfServiceApplication.class);
@@ -36,7 +35,10 @@ public class PdfServiceApplication {
     private String appName;
 
     @Inject
-    private RenderingServiceMonitorRegistration renderingServiceMonitorRegistration;
+    private MonitorRegistration monitorRegistration;
+
+    @Inject
+    private PdfHealthCheck pdfHealthCheck;
 
     @PostConstruct
     public void onStart() {
@@ -51,16 +53,16 @@ public class PdfServiceApplication {
         }
         logger.info("RS (RenderingService) is now starting.");
 
-        renderingServiceMonitorRegistration.registerReporters();
-        renderingServiceMonitorRegistration.registerHealthChecks();
+        monitorRegistration.registerReporters();
+        monitorRegistration.registerHealthChecks(pdfHealthCheck);
 
         logger.info("RS (RenderingService) started.");
     }
 
     @PreDestroy
     public void onStop() {
-        renderingServiceMonitorRegistration.unRegisterReporters();
-        renderingServiceMonitorRegistration.unRegisterHealthChecks();
+        monitorRegistration.unRegisterReporters();
+        monitorRegistration.unRegisterHealthChecks();
     }
 
     public static void main(String[] args) throws Exception {

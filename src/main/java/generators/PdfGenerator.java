@@ -13,6 +13,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import javax.inject.Inject;
 import java.io.OutputStream;
 
 /**
@@ -22,7 +23,6 @@ import java.io.OutputStream;
 public class PdfGenerator extends ReportGenerator {
     private static final Logger logger = LoggerFactory.getLogger(PdfGenerator.class);
 
-    @Value("${icc.path}")
     private String iccPath;
 
     private SimplePdfExporterConfiguration initConfig() {
@@ -69,5 +69,11 @@ public class PdfGenerator extends ReportGenerator {
             logger.error(e.getMessage(), e);
             return new GenerationFailure();
         }
+    }
+
+    @Inject
+    public PdfGenerator(@Value("${icc.path}") String iccPath, @Value("${jasper.folder}") String jasperLocation, @Value("${jrxml.folder}") String jrxmlLocation) {
+        super(jasperLocation, jrxmlLocation);
+        this.iccPath = iccPath;
     }
 }

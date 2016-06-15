@@ -8,6 +8,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+
+import javax.inject.Inject;
 import java.io.OutputStream;
 import java.net.URL;
 import java.util.HashMap;
@@ -20,10 +22,7 @@ import java.util.Map;
 public class ReportGenerator {
     private static final Logger logger = LoggerFactory.getLogger(ReportGenerator.class);
 
-    @Value("${jasper.folder}")
     private String jasperLocation;
-
-    @Value("${jrxml.folder}")
     private String jrxmlLocation;
 
     public JasperPrint generateFrom(ReportDataSource source, String version) {
@@ -85,5 +84,11 @@ public class ReportGenerator {
     public String fullJasperLocation2(String version) {
         String test = (jasperLocation.startsWith("/")) ? jasperLocation.substring(1) : jasperLocation;
         return test + ((version == null) ? "" : "/" + version + "/");
+    }
+
+    @Inject
+    public ReportGenerator(@Value("${jasper.folder}") String jasperLocation, @Value("${jrxml.folder}") String jrxmlLocation) {
+        this.jasperLocation = jasperLocation;
+        this.jrxmlLocation = jrxmlLocation;
     }
 }

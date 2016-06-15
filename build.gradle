@@ -98,14 +98,19 @@ configurations {
     compile.exclude module: "spring-boot-starter-tomcat"
 }
 
+configurations.all {
+    // check for updates every build
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
 dependencies {
     compile("net.sf.jasperreports:jasperreports:6.2.2")
     compile("com.itextpdf:itextpdf:5.5.9")
     compile("com.adobe.xmp:xmpcore:5.1.2")
     compile("gov.dwp.carers:fonts:1.0")
     compile("xalan:xalan:2.7.2")
-    compile("gov.dwp.carers:xmlcommons:8.10-SNAPSHOT")
-    compile("gov.dwp.carers:carerscommon:8.01-SNAPSHOT")
+    compile("gov.dwp.carers:xmlcommons:8.11-SNAPSHOT")
+    compile("gov.dwp.carers:carerscommon:8.02-SNAPSHOT")
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.boot:spring-boot-starter-jetty")
     compile("org.springframework.boot:spring-boot-starter-data-rest")

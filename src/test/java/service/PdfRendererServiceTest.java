@@ -3,6 +3,7 @@ package service;
 import controllers.PdfServiceApplication;
 import generators.HtmlGenerator;
 import generators.PdfGenerator;
+import gov.dwp.carers.monitor.Counters;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.SpringApplicationConfiguration;
@@ -40,9 +41,9 @@ public class PdfRendererServiceTest {
 
     @Test
     public void returnInternalErrorCodeIfCouldNotGeneratePDF() throws Exception {
-        PdfRendererService pdfRendererServiceMock = new PdfRendererService();
         PdfGenerator reportGenerator = mock(PdfGenerator.class);
-        pdfRendererServiceMock.setPdfGenerator(reportGenerator);
+        Counters counters = mock(Counters.class);
+        PdfRendererService pdfRendererServiceMock = new PdfRendererService(reportGenerator, counters);
         byte[] status = pdfRendererServiceMock.generatePdf(ClaimBuilder.goodClaim());
         assertThat(new String(status, "UTF-8"), is("<Error>Failed to render XML for transactionId: [NFM33DB]</Error>"));
     }

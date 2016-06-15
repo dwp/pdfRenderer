@@ -5,7 +5,7 @@ import dataSources.XmlDataSource;
 import generators.GenerationSuccess;
 import generators.ReportGenerator;
 import generators.SuccessOrFailure;
-import monitoring.Counters;
+import gov.dwp.carers.monitor.Counters;
 import net.sf.jasperreports.engine.JasperPrint;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -13,7 +13,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import javax.inject.Inject;
 import java.io.ByteArrayOutputStream;
-import java.io.OutputStream;
 
 /**
  * Created by peterwhitehead on 04/05/2016.
@@ -22,7 +21,6 @@ import java.io.OutputStream;
 public class RendererService {
     Logger logger = LoggerFactory.getLogger(RendererService.class);
 
-    @Inject
     private Counters counters;
 
     private String getTransactionId(String xmlBody) {
@@ -50,7 +48,7 @@ public class RendererService {
             SuccessOrFailure successOrFailure = reportGenerator.exportReportToStream(print, outputStream);
             if (successOrFailure instanceof GenerationSuccess) {
                 logger.info("Generation success for transactionId: [" + transactionId + "]");
-                counters.recordClaimRenderCount();
+                counters.incrementMetric("rs-render-count");
                 return outputStream.toByteArray();
             } else {
                 logger.error("Could not render XML for transactionId: [" + transactionId + "]");
@@ -65,5 +63,10 @@ public class RendererService {
         } finally {
             if (outputStream != null) try { outputStream.close(); } catch (Exception e) { logger.error("Unable to close output stream", e);}
         }
+    }
+
+    @Inject
+    public RendererService(Counters counters) {
+        this.counters = counters;
     }
 }

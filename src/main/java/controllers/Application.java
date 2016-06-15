@@ -2,6 +2,7 @@ package controllers;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 import service.HtmlRendererService;
 import service.PdfRendererService;
@@ -12,13 +13,11 @@ import javax.inject.Inject;
  * Created by peterwhitehead on 03/05/2016.
  */
 @RestController
+@Component
 public class Application {
     private final Logger logger = LoggerFactory.getLogger(Application.class);
 
-    @Inject
     private PdfRendererService pdfRendererService;
-
-    @Inject
     private HtmlRendererService htmlRendererService;
 
     @RequestMapping(value = "/print", method = RequestMethod.POST, consumes = "text/xml")
@@ -33,5 +32,11 @@ public class Application {
         RenameThread.getTransactionIdAndRenameThread(requestBody);
         logger.info("generateHTML called with requestBody");
         return htmlRendererService.generateHtml(requestBody);
+    }
+
+    @Inject
+    public Application(PdfRendererService pdfRendererService, HtmlRendererService htmlRendererService) {
+        this.pdfRendererService = pdfRendererService;
+        this.htmlRendererService = htmlRendererService;
     }
 }

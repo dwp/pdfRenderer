@@ -1,6 +1,7 @@
 package service;
 
 import generators.HtmlGenerator;
+import gov.dwp.carers.monitor.Counters;
 import org.springframework.stereotype.Component;
 import javax.inject.Inject;
 
@@ -16,7 +17,8 @@ public class HtmlRendererService extends RendererService {
     }
 
     @Inject
-    public void setHtmlGenerator(HtmlGenerator htmlGenerator) {
+    public HtmlRendererService(HtmlGenerator htmlGenerator, Counters counters) {
+        super(counters);
         this.reportGenerator = htmlGenerator;
     }
 }
