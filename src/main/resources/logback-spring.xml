@@ -1,5 +1,5 @@
 <configuration>
-
+    <springProperty name="application" source="application.name"/>
     <appender name="FILE" class="ch.qos.logback.core.FileAppender">
         <file>${application.home}/logs/application.log</file>
         <encoder>
@@ -17,8 +17,8 @@
       The logger name is typically the Java package name.
       This configures the log level to log at for a package and its children packages.
     -->
-    <logger name="application" level="DEBUG" />
-    <root level="DEBUG">
+    <logger name="application" level="INFO" />
+    <root level="INFO">
         <appender-ref ref="STDOUT" />
         <appender-ref ref="FILE" />
     </root>

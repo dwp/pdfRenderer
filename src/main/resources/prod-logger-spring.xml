@@ -1,11 +1,11 @@
 <configuration scan="true" scanPeriod="30 seconds">
-
+    <springProperty name="application" source="application.name"/>
     <appender name="APPLICATION_LOG" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${application.home}/logs/application.log</file>
+        <file>${LOG_PATH:-${user.home}}/logs/${application}-application.log</file>
 
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- daily rollover -->
-            <fileNamePattern>${application.home}/logs/application_archive/application.%d{yyyy-MM-dd}.log
+            <fileNamePattern>${LOG_PATH:-${user.home}}/logs/application_archive/${application}-application.%d{yyyy-MM-dd}.log
             </fileNamePattern>
             <!-- keep 30 days' worth of history -->
             <maxHistory>30</maxHistory>
@@ -48,7 +48,7 @@
     <!-- Note: The appenders are cumulative.
     A logger will log to the appenders attached to itself (if any) as well as all the appenders attached to its ancestors.
      The top ancestor is root; thus all loggers will log to the application log and graylog. -->
-    <root level="DEBUG">
+    <root level="INFO">
         <appender-ref ref="GELF"/>
         <appender-ref ref="ASYNC_APPLICATION_LOG"/>
     </root>
