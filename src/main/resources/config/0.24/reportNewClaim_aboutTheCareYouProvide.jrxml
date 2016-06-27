@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
-<!-- 2016-06-22T09:05:17 -->
+<!-- 2016-06-27T09:32:15 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutTheCareYouProvide" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="7235f8d3-c0a0-415a-aa3f-969494fe9489">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
@@ -336,7 +336,6 @@
 		<band height="18" splitType="Immediate">
 			<property name="local_mesure_unitheight" value="pixel"/>
 			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-			<printWhenExpression><![CDATA[T($F{IsPartnerCareeAnswer}).equals("No") || T($F{havePartnerAnswer}).equals("No")]]></printWhenExpression>
 			<frame>
 				<reportElement x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="09095ee1-49d1-48b4-b3b7-69ddbe478f7b">
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
@@ -361,7 +360,6 @@
 		</band>
 		<band height="18" splitType="Immediate">
 			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-			<printWhenExpression><![CDATA[T($F{IsPartnerCareeAnswer}).equals("No") || T($F{havePartnerAnswer}).equals("No")]]></printWhenExpression>
 			<frame>
 				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="0c314884-f9cb-4d93-af33-812bb20f7e1d">
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>

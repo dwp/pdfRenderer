@@ -54,7 +54,8 @@ public class PdfContentMatching extends PdfSpecification {
         return String.join(" ",content).toLowerCase()
                 .replaceAll(seperator, space) //Replacing new lines for spaces
                 .replaceAll(" service version : 0\\.[0-9]{2}  ","")
-                .replaceAll(" version: [0-9]*.[0-9]* / 0\\.[0-9]{2}",""); //Removing the header from the pdf -> text conversion because it interfered with field values
+                .replaceAll(" version: [0-9]*.[0-9]* / 0\\.[0-9]{2}","")
+                .replaceAll(" Transaction: [0-9]* [0-9]*.[0-9]* / 0\\.[0-9]{2}","");//Removing the header from the pdf -> text conversion because it interfered with field values
     }
 
     public String cleanPdfContent(String text, Integer pageNumber) {
@@ -62,6 +63,7 @@ public class PdfContentMatching extends PdfSpecification {
         for (int i=0; i < textArray.length; i++){
             String dataItem = textArray[i];
             if (pageNumber > 1 && (dataItem.startsWith("Date Received:") || dataItem.startsWith("Transaction:") || dataItem.startsWith("service version :"))){
+                if(textArray.length > 1 && dataItem.startsWith("Date Received:"))textArray[i+1] = " ";
                 textArray[i] = " ";
             }
             if (dataItem.startsWith("Page")){
