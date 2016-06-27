@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 5.6.1.final using JasperReports Library version 5.6.1  -->
-<!-- 2016-04-19T14:12:29 -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim" language="java" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="90378acd-33ad-413e-ad03-6f54642cad18">
+<!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
+<!-- 2016-06-23T16:03:55 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="90378acd-33ad-413e-ad03-6f54642cad18">
 	<property name="ireport.zoom" value="3.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<property name="net.sf.jasperreports.text.save.line.breaks" value="true"/>
 	<template><![CDATA[$P{TEMPLATE_DIR} + "StyleTemplateClaim.jrtx"]]></template>
 	<style name="table">
 		<box>
@@ -112,18 +113,27 @@
 					<rightPen lineWidth="1.0" lineColor="#000000"/>
 				</box>
 				<textField>
-					<reportElement style="Answer" mode="Opaque" x="1" y="1" width="399" height="23" uuid="2b597163-946a-4982-9320-135afb766d57"/>
+					<reportElement key="" style="Answer" positionType="Float" mode="Opaque" x="0" y="24" width="328" height="27" uuid="2b597163-946a-4982-9320-135afb766d57">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA["Date Received: "+T($F{DateTimeGenerated})]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement mode="Opaque" x="400" y="1" width="193" height="23" uuid="3205d842-c416-44c0-82fe-89f83bcb8739"/>
+					<reportElement key="" positionType="Float" mode="Opaque" x="498" y="24" width="95" height="27" uuid="3205d842-c416-44c0-82fe-89f83bcb8739">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
 					<textElement textAlignment="Right" verticalAlignment="Middle"/>
-					<textFieldExpression><![CDATA["Version: " + T($F{ClaimVersion}) + " / "+ T($F{Version})]]></textFieldExpression>
+					<textFieldExpression><![CDATA[T($F{ClaimVersion}) + " / "+ T($F{Version})]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement mode="Opaque" x="1" y="24" width="248" height="27" forecolor="#000000" uuid="d4ffb11d-8a42-4d0a-84bf-5a08db017d2f">
+					<reportElement key="" positionType="Float" mode="Opaque" x="290" y="25" width="219" height="27" forecolor="#000000" uuid="d4ffb11d-8a42-4d0a-84bf-5a08db017d2f">
 						<property name="local_mesure_unitwidth" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 					</reportElement>
 					<textElement verticalAlignment="Middle" markup="none">
 						<font isBold="true"/>
@@ -131,25 +141,20 @@
 					<textFieldExpression><![CDATA["Transaction: "+T($F{TransactionId})]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="false">
-					<reportElement mode="Opaque" x="250" y="24" width="40" height="27" forecolor="#000000" uuid="413555f5-6e37-46fa-9f7b-00d6dd12b626">
+					<reportElement key="" positionType="Float" mode="Opaque" x="0" y="0" width="590" height="23" forecolor="#000000" uuid="413555f5-6e37-46fa-9f7b-00d6dd12b626">
 						<property name="local_mesure_unitx" value="pixel"/>
-						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 					</reportElement>
-					<textElement textAlignment="Right" verticalAlignment="Middle"/>
-					<textFieldExpression><![CDATA[T($F{ClaimantTitle})]]></textFieldExpression>
+					<textElement textAlignment="Left" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[T($F{ClaimantTitle}) + " " + T($F{ClaimantSurname})]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="false">
-					<reportElement mode="Opaque" x="297" y="24" width="200" height="27" forecolor="#000000" uuid="f611597b-ca9e-4eee-b245-2214c1573ce9">
-						<property name="local_mesure_unitx" value="pixel"/>
-						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<property name="local_mesure_unitwidth" value="pixel"/>
-						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<reportElement key="" positionType="Float" mode="Opaque" x="498" y="1" width="95" height="23" forecolor="#000000" uuid="fa8df42d-d92f-4051-a603-d9108427489c">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 					</reportElement>
-					<textElement verticalAlignment="Middle"/>
-					<textFieldExpression><![CDATA[T($F{ClaimantSurname})]]></textFieldExpression>
-				</textField>
-				<textField isBlankWhenNull="false">
-					<reportElement mode="Opaque" x="498" y="24" width="95" height="27" forecolor="#000000" uuid="fa8df42d-d92f-4051-a603-d9108427489c"/>
 					<textElement textAlignment="Right" verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[T($F{NationalInsuranceNumber})]]></textFieldExpression>
 				</textField>
@@ -159,7 +164,7 @@
 	<detail>
 		<band height="30" splitType="Immediate">
 			<staticText>
-				<reportElement positionType="Float" x="2" y="4" width="233" height="20" uuid="33f37f7e-ea89-47ec-9572-b60206334392"/>
+				<reportElement positionType="Float" x="2" y="4" width="327" height="20" uuid="33f37f7e-ea89-47ec-9572-b60206334392"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font isBold="true" isItalic="false"/>
 				</textElement>

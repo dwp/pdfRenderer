@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 5.6.1.final using JasperReports Library version 5.6.1  -->
-<!-- 2016-01-12T10:24:52 -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Declaration_declarationStatement" language="java" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a0e98220-e1eb-421c-acfe-21fbefdfd0fa">
+<!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
+<!-- 2016-06-23T09:55:29 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Declaration_declarationStatement" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a0e98220-e1eb-421c-acfe-21fbefdfd0fa">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<property name="net.sf.jasperreports.text.save.line.breaks" value="true"/>
 	<template><![CDATA[$P{TEMPLATE_DIR} + "StyleTemplateClaim.jrtx"]]></template>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
@@ -29,27 +30,60 @@
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="48" splitType="Stretch">
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement x="0" y="1" width="392" height="18" isRemoveLineWhenBlank="true" uuid="da37dfe6-34e3-487b-83ba-f4bcbd593d68"/>
-				<textFieldExpression><![CDATA[T($F{DeclarationAreYouCarerQuestion})]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement x="397" y="0" width="197" height="18" isRemoveLineWhenBlank="true" uuid="e1e6da2c-4b06-412f-abc3-78d85a5ef810"/>
-				<textFieldExpression><![CDATA[T($F{DeclarationAreYouCarerAnswer})]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement x="0" y="19" width="392" height="20" isRemoveLineWhenBlank="true" uuid="fdf71c14-3bb7-4e0c-b01b-798c24e135a5">
-					<printWhenExpression><![CDATA[T($F{DeclarationAreYouCarerAnswer}).equals("No")]]></printWhenExpression>
+		<band height="18" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="b6535db4-0312-4a30-b654-e9e5e00311b9">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 				</reportElement>
-				<textFieldExpression><![CDATA[T($F{DeclarationNameOrgQuestion})]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement x="397" y="19" width="197" height="20" isRemoveLineWhenBlank="true" uuid="0cd1bdbf-3221-4467-8702-16e296b6f6ea">
-					<printWhenExpression><![CDATA[T($F{DeclarationAreYouCarerAnswer}).equals("No")]]></printWhenExpression>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="da37dfe6-34e3-487b-83ba-f4bcbd593d68">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{DeclarationAreYouCarerQuestion})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement key="" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="e1e6da2c-4b06-412f-abc3-78d85a5ef810">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{DeclarationAreYouCarerAnswer})]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="18" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="8a7c8581-b5fd-4574-932a-4dc2ca5074b4">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 				</reportElement>
-				<textFieldExpression><![CDATA[T($F{DeclarationNameOrgAnswer})]]></textFieldExpression>
-			</textField>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="fdf71c14-3bb7-4e0c-b01b-798c24e135a5">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<printWhenExpression><![CDATA[T($F{DeclarationAreYouCarerAnswer}).equals("No")]]></printWhenExpression>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{DeclarationNameOrgQuestion})]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="0cd1bdbf-3221-4467-8702-16e296b6f6ea">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<printWhenExpression><![CDATA[T($F{DeclarationAreYouCarerAnswer}).equals("No")]]></printWhenExpression>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{DeclarationNameOrgAnswer})]]></textFieldExpression>
+				</textField>
+			</frame>
 		</band>
 	</detail>
 </jasperReport>

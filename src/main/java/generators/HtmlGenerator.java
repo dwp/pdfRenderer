@@ -35,6 +35,7 @@ public class HtmlGenerator extends ReportGenerator {
                 reportConfiguration.setIgnorePageMargins(false);
                 reportConfiguration.setRemoveEmptySpaceBetweenRows(true);
                 reportConfiguration.setWrapBreakWord(true);
+                reportConfiguration.setBorderCollapse("separate");
                 reportConfiguration.setSizeUnit(HtmlSizeUnitEnum.POINT);
                 SimpleHtmlExporterConfiguration exporterConfiguration = new SimpleHtmlExporterConfiguration();
                 exporterConfiguration.setBetweenPagesHtml("<p class=\"htmlPageBreak\" style=\"page-break-after: always\"></p>");
