@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
-<!-- 2016-06-24T15:13:47 -->
+<!-- 2016-06-27T10:30:34 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_subreportEvidenceContent" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isIgnorePagination="true" uuid="59b5c377-1745-423a-a51f-4871a9a032bc">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
@@ -34,7 +34,7 @@
 				<textElement>
 					<paragraph lineSpacing="1_1_2"/>
 				</textElement>
-				<textFieldExpression><![CDATA[T($F{Content})]]></textFieldExpression>
+				<textFieldExpression><![CDATA[IF (!(T($F{Content}).startsWith("You") || T($F{Content}).startsWith("Include") || T($F{Content}).startsWith("By sending")),"  • " + T($F{Content}), T($F{Content}))]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
