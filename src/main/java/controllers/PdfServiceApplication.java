@@ -14,6 +14,7 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.inject.Inject;
 import java.net.InetAddress;
+import java.util.Arrays;
 
 /**
  * Created by peterwhitehead on 04/05/2016.
@@ -54,7 +55,7 @@ public class PdfServiceApplication {
         logger.info("RS (RenderingService) is now starting.");
 
         monitorRegistration.registerReporters();
-        monitorRegistration.registerHealthChecks(pdfHealthCheck);
+        monitorRegistration.registerHealthChecks(Arrays.asList(pdfHealthCheck));
 
         logger.info("RS (RenderingService) started.");
     }
