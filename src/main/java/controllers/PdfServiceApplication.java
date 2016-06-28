@@ -38,9 +38,6 @@ public class PdfServiceApplication {
     @Inject
     private MonitorRegistration monitorRegistration;
 
-    @Inject
-    private PdfHealthCheck pdfHealthCheck;
-
     @PostConstruct
     public void onStart() {
         try {
@@ -55,7 +52,6 @@ public class PdfServiceApplication {
         logger.info("RS (RenderingService) is now starting.");
 
         monitorRegistration.registerReporters();
-        monitorRegistration.registerHealthChecks(Arrays.asList(pdfHealthCheck));
 
         logger.info("RS (RenderingService) started.");
     }
@@ -64,6 +60,12 @@ public class PdfServiceApplication {
     public void onStop() {
         monitorRegistration.unRegisterReporters();
         monitorRegistration.unRegisterHealthChecks();
+    }
+
+    @Inject
+    private void registerHealthChecks(PdfHealthCheck pdfHealthCheck) {
+        logger.info(appName + " - registering health checks.");
+        monitorRegistration.registerHealthChecks(Arrays.asList(pdfHealthCheck));
     }
 
     public static void main(String[] args) throws Exception {
