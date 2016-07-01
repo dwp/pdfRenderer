@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
-<!-- 2016-06-24T13:08:14 -->
+<!-- 2016-07-01T17:34:19 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" pageWidth="560" pageHeight="842" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.366026910730141"/>
 	<property name="ireport.x" value="0"/>
@@ -521,7 +521,7 @@
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 						<property name="local_mesure_unitwidth" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
-						<property name="net.sf.jasperreports.export.html.id" value="summary-outgb-q"/>
+						<property name="net.sf.jasperreports.export.html.id" value="summary-alwaysgb-q"/>
 						<printWhenExpression><![CDATA[T($F{ResidencyAlwaysLivedInUKAnswer}).equalsIgnoreCase("No")]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -537,7 +537,7 @@
 					<reportElement positionType="Float" x="356" y="0" width="204" height="18" isRemoveLineWhenBlank="true" uuid="ade4eb73-1d68-4f5f-b985-9e25f44fe5c8">
 						<property name="local_mesure_unity" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
-						<property name="net.sf.jasperreports.export.html.id" value="summary-nationality-a"/>
+						<property name="net.sf.jasperreports.export.html.id" value="summary-alwaysgb-a"/>
 						<printWhenExpression><![CDATA[T($F{ResidencyAlwaysLivedInUKAnswer}).equalsIgnoreCase("No")]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -592,7 +592,7 @@
 					<reportElement positionType="Float" x="356" y="0" width="204" height="18" isRemoveLineWhenBlank="true" uuid="6a1c025c-8513-4b51-ad48-769040243e4f">
 						<property name="local_mesure_unity" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
-						<property name="net.sf.jasperreports.export.html.id" value="summary-nationality-a"/>
+						<property name="net.sf.jasperreports.export.html.id" value="summary-outgb-a"/>
 						<property name="local_mesure_unitx" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 						<printWhenExpression><![CDATA[T($F{ResidencyTimeOutsideGBLast3YearsAnswer}).equalsIgnoreCase("Yes")]]></printWhenExpression>
