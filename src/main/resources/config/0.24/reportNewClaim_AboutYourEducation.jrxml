@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
-<!-- 2016-06-23T09:37:39 -->
+<!-- 2016-07-05T12:55:53 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_AboutYourEducation" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="233a6ecd-5683-49cd-8996-0dfae9f2e3d1">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
@@ -81,8 +81,9 @@
 		<band height="20" splitType="Immediate">
 			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 			<staticText>
-				<reportElement style="HeadingClaim" positionType="Float" mode="Opaque" x="1" y="0" width="594" height="20" isRemoveLineWhenBlank="true" uuid="130411b3-59f9-4c8b-b394-99a8644d6960">
+				<reportElement style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="20" isRemoveLineWhenBlank="true" uuid="130411b3-59f9-4c8b-b394-99a8644d6960">
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart4AboutYourEducation"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
 					<font isBold="true"/>

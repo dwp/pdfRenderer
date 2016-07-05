@@ -118,6 +118,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-websocket")
     compile("org.springframework.boot:spring-boot-devtools")
     compile("net.sf.jasperreports:jasperreports-functions:6.2.2")
+    runtime("me.moocar:logback-gelf:0.3")
     testCompile (
             'org.springframework.boot:spring-boot-starter-test',
             'org.assertj:assertj-core:3.2.0'

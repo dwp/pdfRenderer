@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
-<!-- 2016-06-24T12:55:43 -->
+<!-- 2016-07-05T13:54:01 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewCircsConsentsAndDeclarations" pageWidth="595" pageHeight="802" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="9eb0c9ea-845f-415c-b3aa-c474b12cd034">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
@@ -309,6 +309,7 @@
 		</band>
 		<band height="36" splitType="Immediate">
 			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<printWhenExpression><![CDATA[!T($F{ConsentWhyAnswer}).isEmpty()]]></printWhenExpression>
 			<frame>
 				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="36" isRemoveLineWhenBlank="true" uuid="720a9e84-6e90-4f23-b13f-8f21bf18156c">
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
@@ -320,12 +321,14 @@
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 					<reportElement positionType="Float" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="b0faa3f6-b0ec-43f4-b65f-5b83582a627e">
 						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<printWhenExpression><![CDATA[!T($F{ConsentWhyQuestion}).isEmpty()]]></printWhenExpression>
 					</reportElement>
 					<textFieldExpression><![CDATA[T($F{ConsentWhyQuestion})]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 					<reportElement style="Answer" positionType="Float" x="0" y="18" width="594" height="18" isRemoveLineWhenBlank="true" uuid="e0c20ce0-7cc4-4431-8648-ae62bda7f9ff">
 						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<printWhenExpression><![CDATA[!T($F{ConsentWhyAnswer}).isEmpty()]]></printWhenExpression>
 					</reportElement>
 					<textFieldExpression><![CDATA[T($F{ConsentWhyAnswer})]]></textFieldExpression>
 				</textField>
