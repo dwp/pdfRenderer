@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
-<!-- 2016-07-01T16:35:57 -->
+<!-- 2016-07-05T11:31:46 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" pageWidth="560" pageHeight="842" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.366026910730141"/>
 	<property name="ireport.x" value="0"/>
@@ -578,6 +578,9 @@
 						<property name="net.sf.jasperreports.export.html.id" value="summary-other-q"/>
 						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 					</reportElement>
+                    <textElement markup="styled">
+                        <font isBold="false"/>
+                    </textElement>
 					<textFieldExpression><![CDATA[T($F{ClaimantOtherNamesQuestionLabel})]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
@@ -973,7 +976,7 @@
 				<textElement markup="styled">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[About your partner]]></text>
+				<text><![CDATA[Partner]]></text>
 			</staticText>
 			<frame>
 				<reportElement key="" positionType="Float" stretchType="RelativeToBandHeight" x="0" y="18" width="560" height="18" isRemoveLineWhenBlank="true" uuid="7597e094-9ebe-4dcd-9497-95196b316dae">
@@ -1226,9 +1229,13 @@
 				</box>
 				<staticText>
 					<reportElement style="Answer" positionType="Float" x="0" y="0" width="367" height="18" isRemoveLineWhenBlank="true" uuid="ade56f2e-8d0f-421b-a79b-9505322ddaf5">
+                        <property name="net.sf.jasperreports.export.html.id" value="summary-claim-start-dat-q"/>
 						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 					</reportElement>
+					<textElement markup="styled">
+						<font isBold="false"/>
+					</textElement>
 					<text><![CDATA[Claim date]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
