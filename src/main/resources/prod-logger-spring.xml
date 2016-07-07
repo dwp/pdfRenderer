@@ -1,6 +1,4 @@
 <configuration scan="true" scanPeriod="30 seconds">
-    <include resource="org/springframework/boot/logging/logback/base.xml"/>
-
     <appender name="APPLICATION_LOG" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${LOG_PATH:-${user.home}}/logs/${application.name}-application.log</file>
 
