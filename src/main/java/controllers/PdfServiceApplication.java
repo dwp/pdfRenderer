@@ -26,8 +26,8 @@ import java.util.Arrays;
 public class PdfServiceApplication {
     private static final Logger logger = LoggerFactory.getLogger(PdfServiceApplication.class);
 
-    @Value("${http.port}")
-    private String httpPort;
+    @Value("${server.port}")
+    private String serverPort;
 
     @Value("${env.name}")
     private String envName;
@@ -41,8 +41,8 @@ public class PdfServiceApplication {
     @PostConstruct
     public void onStart() {
         try {
-            logger.info("Starting application with - httpPort:" + httpPort + " envName:" + envName + " appName:" + appName);
-            MDC.put("httpPort", httpPort);
+            logger.info("Starting application with - serverPort:" + serverPort + " envName:" + envName + " appName:" + appName);
+            MDC.put("httpPort", serverPort);
             MDC.put("hostName", InetAddress.getLocalHost().getHostName());
             MDC.put("envName", envName);
             MDC.put("appName", appName);
