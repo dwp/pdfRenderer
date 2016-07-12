@@ -118,6 +118,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-websocket")
     compile("org.springframework.boot:spring-boot-devtools")
     compile("net.sf.jasperreports:jasperreports-functions:6.2.2")
+    compile("org.springframework.boot:spring-boot-starter-actuator")
     runtime("me.moocar:logback-gelf:0.3")
     testCompile (
             'org.springframework.boot:spring-boot-starter-test',
