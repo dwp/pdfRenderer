@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
-<!-- 2016-07-05T12:54:21 -->
+<!-- 2016-07-13T15:20:21 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutTheCareYouProvide" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="7235f8d3-c0a0-415a-aa3f-969494fe9489">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
@@ -59,17 +59,23 @@
 	<field name="AboutCareYouProvideCareeCared35HoursAnswer" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Cared35Hours/Answer]]></fieldDescription>
 	</field>
-	<field name="AboutCareYouProvideCareeCared35HoursBeforeQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Cared35HoursBefore/QuestionLabel]]></fieldDescription>
+	<field name="AboutCareYouProvideCareeOtherCarerQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/OtherCarer/QuestionLabel]]></fieldDescription>
 	</field>
-	<field name="AboutCareYouProvideCareeCared35HoursBeforeAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Cared35HoursBefore/Answer]]></fieldDescription>
+	<field name="AboutCareYouProvideCareeOtherCarerAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/OtherCarer/Answer]]></fieldDescription>
 	</field>
-	<field name="AboutCareYouProvideCareeDateStartCaringQuestion" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/DateStartCaring/QuestionLabel]]></fieldDescription>
+	<field name="AboutCareYouProvideCareeOtherCarerUcQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/OtherCarerUc/QuestionLabel]]></fieldDescription>
 	</field>
-	<field name="AboutCareYouProvideCareeDateStartCaringAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/DateStartCaring/Answer]]></fieldDescription>
+	<field name="AboutCareYouProvideCareeOtherCarerUcAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/OtherCarerUc/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutCareYouProvideCareeOtherCarerUcDetailsQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/OtherCarerUcDetails/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutCareYouProvideCareeOtherCarerUcDetailsAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/OtherCarerUcDetails/Answer]]></fieldDescription>
 	</field>
 	<field name="displayCareYouProvide" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/Cared35Hours/Answer]]></fieldDescription>
@@ -487,7 +493,7 @@
 		</band>
 		<band height="18" splitType="Immediate">
 			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-			<printWhenExpression><![CDATA[!T($F{AboutCareYouProvideCareeCared35HoursBeforeQuestion}).isEmpty()]]></printWhenExpression>
+			<printWhenExpression><![CDATA[!T($F{AboutCareYouProvideCareeOtherCarerQuestion}).isEmpty()]]></printWhenExpression>
 			<frame>
 				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="78da94f8-13d3-41e5-8666-456bc0b13aa5">
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
@@ -498,21 +504,21 @@
 				</box>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="662d9f0a-3e4c-48d9-bc72-d0c8001cc579">
-						<property name="net.sf.jasperreports.export.html.id" value="caree-35hoursbefore-q"/>
+						<property name="net.sf.jasperreports.export.html.id" value="caree-othercarer-q"/>
 					</reportElement>
-					<textFieldExpression><![CDATA[T($F{AboutCareYouProvideCareeCared35HoursBeforeQuestion})]]></textFieldExpression>
+					<textFieldExpression><![CDATA[T($F{AboutCareYouProvideCareeOtherCarerQuestion})]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
 					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="bd95bc79-cf26-49ce-8996-1d11bf56dcf0">
-						<property name="net.sf.jasperreports.export.html.id" value="caree-35hoursbefore-a"/>
+						<property name="net.sf.jasperreports.export.html.id" value="caree-othercarer-a"/>
 					</reportElement>
-					<textFieldExpression><![CDATA[T($F{AboutCareYouProvideCareeCared35HoursBeforeAnswer})]]></textFieldExpression>
+					<textFieldExpression><![CDATA[T($F{AboutCareYouProvideCareeOtherCarerAnswer})]]></textFieldExpression>
 				</textField>
 			</frame>
 		</band>
 		<band height="18" splitType="Immediate">
 			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-			<printWhenExpression><![CDATA[!T($F{AboutCareYouProvideCareeDateStartCaringQuestion}).isEmpty()]]></printWhenExpression>
+			<printWhenExpression><![CDATA[!T($F{AboutCareYouProvideCareeOtherCarerUcQuestion}).isEmpty()]]></printWhenExpression>
 			<frame>
 				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="bd446c26-8886-4bd8-8c36-8a93ee6e96f4">
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
@@ -523,17 +529,44 @@
 				</box>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="7f34ebef-d770-48a5-8c8a-37e63ad553ae">
-						<property name="net.sf.jasperreports.export.html.id" value="caree-startdate-q"/>
+						<property name="net.sf.jasperreports.export.html.id" value="caree-uc-q"/>
 						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 					</reportElement>
-					<textFieldExpression><![CDATA[T($F{AboutCareYouProvideCareeDateStartCaringQuestion})]]></textFieldExpression>
+					<textFieldExpression><![CDATA[T($F{AboutCareYouProvideCareeOtherCarerUcQuestion})]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
 					<reportElement key="" style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="84b9ee90-aaf5-4962-a85c-bbfe277d7318">
-						<property name="net.sf.jasperreports.export.html.id" value="caree-startdate-a"/>
+						<property name="net.sf.jasperreports.export.html.id" value="caree-uc-a"/>
 						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 					</reportElement>
-					<textFieldExpression><![CDATA[T($F{AboutCareYouProvideCareeDateStartCaringAnswer})]]></textFieldExpression>
+					<textFieldExpression><![CDATA[T($F{AboutCareYouProvideCareeOtherCarerUcAnswer})]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="36" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<printWhenExpression><![CDATA[!T($F{AboutCareYouProvideCareeOtherCarerUcDetailsQuestion}).isEmpty()]]></printWhenExpression>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="bd446c26-8886-4bd8-8c36-8a93ee6e96f4">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="7f34ebef-d770-48a5-8c8a-37e63ad553ae">
+						<property name="net.sf.jasperreports.export.html.id" value="caree-ucdetails-q"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{AboutCareYouProvideCareeOtherCarerUcDetailsQuestion})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement key="" style="Answer" positionType="Float" x="0" y="18" width="594" height="18" isRemoveLineWhenBlank="true" uuid="84b9ee90-aaf5-4962-a85c-bbfe277d7318">
+						<property name="net.sf.jasperreports.export.html.id" value="caree-ucdetails-a"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{AboutCareYouProvideCareeOtherCarerUcDetailsAnswer})]]></textFieldExpression>
 				</textField>
 			</frame>
 		</band>
