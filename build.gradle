@@ -41,7 +41,7 @@ allprojects {
     apply plugin: 'maven-publish'
     apply plugin: 'spring-boot'
     apply plugin: 'com.github.gmazelier.jasperreports'
-    version = '3.00-SNAPSHOT'
+    version = '3.01-SNAPSHOT'
     archivesBaseName = 'p1'
     group = 'gov.dwp.carers'
     sourceCompatibility = 1.8
@@ -118,6 +118,8 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-websocket")
     compile("org.springframework.boot:spring-boot-devtools")
     compile("net.sf.jasperreports:jasperreports-functions:6.2.2")
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+    runtime("me.moocar:logback-gelf:0.3")
     testCompile (
             'org.springframework.boot:spring-boot-starter-test',
             'org.assertj:assertj-core:3.2.0'
@@ -152,7 +154,7 @@ task createInfoFile << {
     def props = new Properties()
     props.setProperty("application.version", version)
     props.setProperty("application.name", rootProject.name)
-    def writer = new FileWriter(file('./config/application-info.properties'))
+    def writer = new FileWriter(file('./src/main/resources/config/application-info.properties'))
     try {
         props.store(writer, "application-info.properties Created for build version:" + version)
         writer.flush()
@@ -160,6 +162,8 @@ task createInfoFile << {
         writer.close()
     }
 }
+
+compileJava.dependsOn(createInfoFile)
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.13'
