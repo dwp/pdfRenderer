@@ -27,3 +27,8 @@ logfile
 *.html
 public/images/img_*
 conf/*/px
+.gradle/
+build/
+gradle/
+gradlew
+gradlew.bat
