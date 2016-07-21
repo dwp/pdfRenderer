@@ -163,11 +163,7 @@ task createInfoFile << {
     }
 }
 
-<<<<<<< HEAD
 compileJava.dependsOn(createInfoFile)
-=======
-build.dependsOn(createInfoFile)
->>>>>>> integration
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.13'
