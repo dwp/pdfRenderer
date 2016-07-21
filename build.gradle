@@ -163,7 +163,7 @@ task createInfoFile << {
     }
 }
 
-build.dependsOn(createInfoFile)
+compileJava.dependsOn(createInfoFile)
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.13'
