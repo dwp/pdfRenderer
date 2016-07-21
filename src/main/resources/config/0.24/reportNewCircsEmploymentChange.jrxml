@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
-<!-- 2016-06-03T14:08:04 -->
+<!-- 2016-06-24T13:00:59 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewCircsEmploymentChange" pageWidth="595" pageHeight="802" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="6995e436-52bd-4ce4-966d-188e2b70830b">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
+	<property name="net.sf.jasperreports.text.save.line.breaks" value="true"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
 	<template><![CDATA[$P{TEMPLATE_DIR} + "StyleTemplateClaim.jrtx"]]></template>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
@@ -374,154 +375,325 @@
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="41" splitType="Prevent">
+		<band height="20" splitType="Prevent">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 			<staticText>
-				<reportElement style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="595" height="18" forecolor="#000000" uuid="8f62fb47-d0a6-49f5-a1db-957558ba51a8">
+				<reportElement style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="20" forecolor="#000000" uuid="8f62fb47-d0a6-49f5-a1db-957558ba51a8">
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart2CircsBreaksFromCaring"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[PART 2 - CHANGE IN CIRCUMSTANCE - EMPLOYMENT CHANGE]]></text>
 			</staticText>
-			<textField isBlankWhenNull="true">
-				<reportElement positionType="Float" x="0" y="22" width="392" height="18" isRemoveLineWhenBlank="true" uuid="59a010e4-a3c4-4e34-bbb6-7867de7dfd97"/>
-				<textFieldExpression><![CDATA[T($F{EmpChangeStillCaringQuestionLabel})]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="420" y="22" width="174" height="18" isRemoveLineWhenBlank="true" uuid="4716f5e0-8640-41e3-9239-5abc3fa68a63"/>
-				<textFieldExpression><![CDATA[T($F{EmpChangeStillCaringAnswer})]]></textFieldExpression>
-			</textField>
 		</band>
-		<band height="127">
-			<textField isBlankWhenNull="true">
-				<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="9c7b4ccd-9207-4c43-8932-32fab47a73d4">
-					<printWhenExpression><![CDATA[T($F{EmpChangeStillCaringAnswer}).equals("No")]]></printWhenExpression>
+		<band height="18" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="c2fee9ff-0225-4583-9e95-b00a563bdb05">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 				</reportElement>
-				<textFieldExpression><![CDATA[T($F{EmpChangeDateStoppedCaringQuestionLabel})]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="394b3d45-6239-4a50-bf37-f1380335ecc2">
-					<printWhenExpression><![CDATA[T($F{EmpChangeStillCaringAnswer}).equals("No")]]></printWhenExpression>
-				</reportElement>
-				<textFieldExpression><![CDATA[T($F{EmpChangeDateStoppedCaringAnswer})]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="420" y="18" width="174" height="18" isRemoveLineWhenBlank="true" uuid="c448f030-31f2-46ff-87b2-1b7fef982acd"/>
-				<textFieldExpression><![CDATA[T($F{EmpChangeHasWorkStartedYetAnswer})]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement positionType="Float" x="0" y="18" width="392" height="18" isRemoveLineWhenBlank="true" uuid="0b835f93-40a3-4e67-80c2-cdb2342a387c"/>
-				<textFieldExpression><![CDATA[T($F{EmpChangeHasWorkStartedYetQuestionLabel})]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement positionType="Float" x="0" y="36" width="392" height="18" isRemoveLineWhenBlank="true" uuid="46631c88-d64e-4842-b6d5-b2511c3f8750">
-					<printWhenExpression><![CDATA[T($F{EmpChangeHasWorkStartedYetAnswer}).equals("Yes")]]></printWhenExpression>
-				</reportElement>
-				<textFieldExpression><![CDATA[T($F{EmpChangeDateWorkedStartedQuestionLabel})]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="420" y="36" width="174" height="18" isRemoveLineWhenBlank="true" uuid="4fcb136a-dbfb-482e-8285-07152bda1440">
-					<printWhenExpression><![CDATA[T($F{EmpChangeHasWorkStartedYetAnswer}).equals("Yes")]]></printWhenExpression>
-				</reportElement>
-				<textFieldExpression><![CDATA[T($F{EmpChangeDateWorkedStartedAnswer})]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement positionType="Float" x="0" y="54" width="392" height="18" isRemoveLineWhenBlank="true" uuid="ddd5dc60-8ee4-4f36-9de3-a86c57774d6e">
-					<printWhenExpression><![CDATA[T($F{EmpChangeHasWorkStartedYetAnswer}).equals("No")]]></printWhenExpression>
-				</reportElement>
-				<textFieldExpression><![CDATA[T($F{EmpChangeDateWhenWillWorkStartQuestionLabel})]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="420" y="54" width="174" height="18" isRemoveLineWhenBlank="true" uuid="4976a497-fe45-4ec9-8e83-760b798b4587">
-					<printWhenExpression><![CDATA[T($F{EmpChangeHasWorkStartedYetAnswer}).equals("No")]]></printWhenExpression>
-				</reportElement>
-				<textFieldExpression><![CDATA[T($F{EmpChangeDateWhenWillWorkStartAnswer})]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement positionType="Float" x="0" y="72" width="392" height="18" isRemoveLineWhenBlank="true" uuid="ebd69bf3-4ca2-4001-b66b-417f4e37b4a4">
-					<printWhenExpression><![CDATA[T($F{EmpChangeHasWorkStartedYetAnswer}).equals("Yes")]]></printWhenExpression>
-				</reportElement>
-				<textFieldExpression><![CDATA[T($F{EmpChangeHasWorkFinishedYetQuestionLabel})]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="420" y="72" width="174" height="18" isRemoveLineWhenBlank="true" uuid="c6d253b2-255f-4db3-8b7b-7fdd355dadca">
-					<printWhenExpression><![CDATA[T($F{EmpChangeHasWorkStartedYetAnswer}).equals("Yes")]]></printWhenExpression>
-				</reportElement>
-				<textFieldExpression><![CDATA[T($F{EmpChangeHasWorkFinishedYetAnswer})]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement positionType="Float" x="0" y="90" width="392" height="18" isRemoveLineWhenBlank="true" uuid="75eb9208-a89b-4544-932a-9ab2a10741bb">
-					<printWhenExpression><![CDATA[T($F{EmpChangeHasWorkFinishedYetAnswer}).equals("Yes")]]></printWhenExpression>
-				</reportElement>
-				<textFieldExpression><![CDATA[T($F{EmpChangeDateWorkedFinishedQuestionLabel})]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="420" y="90" width="174" height="18" isRemoveLineWhenBlank="true" uuid="72ef4b29-b024-482c-9fc4-5c27b6b68846">
-					<printWhenExpression><![CDATA[T($F{EmpChangeHasWorkFinishedYetAnswer}).equals("Yes")]]></printWhenExpression>
-				</reportElement>
-				<textFieldExpression><![CDATA[T($F{EmpChangeDateWorkedFinishedAnswer})]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement positionType="Float" x="0" y="108" width="392" height="18" isRemoveLineWhenBlank="true" uuid="fa674ca7-c75b-4561-be98-ecce39e063f5"/>
-				<textFieldExpression><![CDATA[T($F{EmpChangeTypeOfWorkQuestionLabel})]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="420" y="108" width="174" height="18" isRemoveLineWhenBlank="true" uuid="e23bbebe-6b67-4c27-b5d3-49d8a4159ebe"/>
-				<textFieldExpression><![CDATA[T($F{EmpChangeTypeOfWorkAnswer})]]></textFieldExpression>
-			</textField>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="59a010e4-a3c4-4e34-bbb6-7867de7dfd97">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{EmpChangeStillCaringQuestionLabel})]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="4716f5e0-8640-41e3-9239-5abc3fa68a63">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{EmpChangeStillCaringAnswer})]]></textFieldExpression>
+				</textField>
+			</frame>
 		</band>
-		<band height="36" splitType="Prevent">
+		<band height="18" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="2437a150-e84e-4380-bc07-8eb1c0936a4a">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="9c7b4ccd-9207-4c43-8932-32fab47a73d4">
+						<printWhenExpression><![CDATA[T($F{EmpChangeStillCaringAnswer}).equals("No")]]></printWhenExpression>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{EmpChangeDateStoppedCaringQuestionLabel})]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="394b3d45-6239-4a50-bf37-f1380335ecc2">
+						<printWhenExpression><![CDATA[T($F{EmpChangeStillCaringAnswer}).equals("No")]]></printWhenExpression>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{EmpChangeDateStoppedCaringAnswer})]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="18" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="da4a52e3-b45f-4967-928a-8b045021b83e">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="c448f030-31f2-46ff-87b2-1b7fef982acd">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{EmpChangeHasWorkStartedYetAnswer})]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement key="" positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="0b835f93-40a3-4e67-80c2-cdb2342a387c">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{EmpChangeHasWorkStartedYetQuestionLabel})]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="18" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="3f83b667-a552-4f44-bd9e-f8a1cc1ece29">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="46631c88-d64e-4842-b6d5-b2511c3f8750">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<printWhenExpression><![CDATA[T($F{EmpChangeHasWorkStartedYetAnswer}).equals("Yes")]]></printWhenExpression>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{EmpChangeDateWorkedStartedQuestionLabel})]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="4fcb136a-dbfb-482e-8285-07152bda1440">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<printWhenExpression><![CDATA[T($F{EmpChangeHasWorkStartedYetAnswer}).equals("Yes")]]></printWhenExpression>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{EmpChangeDateWorkedStartedAnswer})]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="18" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="eb4441bc-6265-479b-a4e3-e822fdaf8237">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="ddd5dc60-8ee4-4f36-9de3-a86c57774d6e">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<printWhenExpression><![CDATA[T($F{EmpChangeHasWorkStartedYetAnswer}).equals("No")]]></printWhenExpression>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{EmpChangeDateWhenWillWorkStartQuestionLabel})]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="4976a497-fe45-4ec9-8e83-760b798b4587">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<printWhenExpression><![CDATA[T($F{EmpChangeHasWorkStartedYetAnswer}).equals("No")]]></printWhenExpression>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{EmpChangeDateWhenWillWorkStartAnswer})]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="18" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="c8c89a0d-5e9f-4b98-88e6-cf3d5b1ff7e0">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="ebd69bf3-4ca2-4001-b66b-417f4e37b4a4">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<printWhenExpression><![CDATA[T($F{EmpChangeHasWorkStartedYetAnswer}).equals("Yes")]]></printWhenExpression>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{EmpChangeHasWorkFinishedYetQuestionLabel})]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="c6d253b2-255f-4db3-8b7b-7fdd355dadca">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<printWhenExpression><![CDATA[T($F{EmpChangeHasWorkStartedYetAnswer}).equals("Yes")]]></printWhenExpression>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{EmpChangeHasWorkFinishedYetAnswer})]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="18" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="164b60ca-238b-4200-8e24-f93225ce4bb3">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="75eb9208-a89b-4544-932a-9ab2a10741bb">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<printWhenExpression><![CDATA[T($F{EmpChangeHasWorkFinishedYetAnswer}).equals("Yes")]]></printWhenExpression>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{EmpChangeDateWorkedFinishedQuestionLabel})]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="72ef4b29-b024-482c-9fc4-5c27b6b68846">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<printWhenExpression><![CDATA[T($F{EmpChangeHasWorkFinishedYetAnswer}).equals("Yes")]]></printWhenExpression>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{EmpChangeDateWorkedFinishedAnswer})]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="18" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="bc7fb58c-31e8-4680-a549-11881ff69cc3">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="fa674ca7-c75b-4561-be98-ecce39e063f5">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{EmpChangeTypeOfWorkQuestionLabel})]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="e23bbebe-6b67-4c27-b5d3-49d8a4159ebe">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{EmpChangeTypeOfWorkAnswer})]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="38" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 			<printWhenExpression><![CDATA[T($F{EmpChangeTypeOfWorkAnswer}).equals("self-employed")]]></printWhenExpression>
 			<staticText>
-				<reportElement style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="595" height="18" forecolor="#000000" uuid="08c7b9ad-9096-49a4-834e-d6df80d37a6d">
+				<reportElement style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="595" height="20" forecolor="#000000" uuid="08c7b9ad-9096-49a4-834e-d6df80d37a6d">
 					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart2CircsBreaksFromCaring"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="styled">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[About Your Self-Employment]]></text>
+				<text><![CDATA[About your self employment]]></text>
 			</staticText>
-			<textField isBlankWhenNull="true">
-				<reportElement positionType="Float" x="0" y="18" width="392" height="18" isRemoveLineWhenBlank="true" uuid="0ccd7b92-d651-469a-803a-0e7a4d1f38c9"/>
-				<textFieldExpression><![CDATA[T($F{SelfEmpTypeOfSelfEmploymentQuestionLabel})]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="420" y="18" width="174" height="18" isRemoveLineWhenBlank="true" uuid="c242b8f4-b43a-4324-ab72-f59eea041c64"/>
-				<textFieldExpression><![CDATA[T($F{SelfEmpTypeOfSelfEmploymentAnswer})]]></textFieldExpression>
-			</textField>
+			<frame>
+				<reportElement key="" positionType="Float" stretchType="RelativeToBandHeight" x="0" y="20" width="594" height="18" isRemoveLineWhenBlank="true" uuid="b846453b-555f-4a09-a550-1f461eeb1e2e">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="0ccd7b92-d651-469a-803a-0e7a4d1f38c9">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{SelfEmpTypeOfSelfEmploymentQuestionLabel})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="c242b8f4-b43a-4324-ab72-f59eea041c64">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{SelfEmpTypeOfSelfEmploymentAnswer})]]></textFieldExpression>
+				</textField>
+			</frame>
 		</band>
 		<band height="18" splitType="Immediate">
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="6499a26c-3bce-4949-b772-0fc12c0f3238"/>
-				<textFieldExpression><![CDATA[T($F{SelfEmpPaidYetQuestionLabel})]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="2126a0aa-c51a-4f2c-a495-a5cb8cae21e3"/>
-				<textFieldExpression><![CDATA[T($F{SelfEmpPaidYetAnswer})]]></textFieldExpression>
-			</textField>
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<printWhenExpression><![CDATA[T($F{EmpChangeTypeOfWorkAnswer}).equals("self-employed")]]></printWhenExpression>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="c231f824-7c0f-4925-801f-d8e5c47b6d62">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="6499a26c-3bce-4949-b772-0fc12c0f3238"/>
+					<textFieldExpression><![CDATA[T($F{SelfEmpPaidYetQuestionLabel})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="2126a0aa-c51a-4f2c-a495-a5cb8cae21e3"/>
+					<textFieldExpression><![CDATA[T($F{SelfEmpPaidYetAnswer})]]></textFieldExpression>
+				</textField>
+			</frame>
 		</band>
 		<band height="18" splitType="Immediate">
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="b60e67e8-7f13-49fc-8179-94ed5f3ecf16"/>
-				<textFieldExpression><![CDATA[T($F{SelfEmpPaidDateQuestionLabel})]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="ccca45d3-cfb7-4679-a621-61697747e183"/>
-				<textFieldExpression><![CDATA[T($F{SelfEmpPaidDateAnswer})]]></textFieldExpression>
-			</textField>
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<printWhenExpression><![CDATA[T($F{EmpChangeTypeOfWorkAnswer}).equals("self-employed")]]></printWhenExpression>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="d7608c63-0d5b-4a84-8290-ff24d2303e0c">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="b60e67e8-7f13-49fc-8179-94ed5f3ecf16"/>
+					<textFieldExpression><![CDATA[T($F{SelfEmpPaidDateQuestionLabel})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="ccca45d3-cfb7-4679-a621-61697747e183"/>
+					<textFieldExpression><![CDATA[T($F{SelfEmpPaidDateAnswer})]]></textFieldExpression>
+				</textField>
+			</frame>
 		</band>
-		<band height="20" splitType="Immediate">
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="6499a26c-3bce-4949-b772-0fc12c0f3238"/>
-				<textFieldExpression><![CDATA[T($F{SelfEmpTotalIncomeQuestionLabel})]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="2126a0aa-c51a-4f2c-a495-a5cb8cae21e3"/>
-				<textFieldExpression><![CDATA[T($F{SelfEmpTotalIncomeAnswer})]]></textFieldExpression>
-			</textField>
+		<band height="18" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<printWhenExpression><![CDATA[T($F{EmpChangeTypeOfWorkAnswer}).equals("self-employed")]]></printWhenExpression>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="4d185978-7caf-49b1-9a67-839effc0886d">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="6499a26c-3bce-4949-b772-0fc12c0f3238"/>
+					<textFieldExpression><![CDATA[T($F{SelfEmpTotalIncomeQuestionLabel})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="2126a0aa-c51a-4f2c-a495-a5cb8cae21e3"/>
+					<textFieldExpression><![CDATA[T($F{SelfEmpTotalIncomeAnswer})]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="1" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 			<subreport>
-				<reportElement positionType="Float" x="0" y="19" width="594" height="1" isRemoveLineWhenBlank="true" uuid="71c9e80f-09ae-4664-98d3-70a325d32e77"/>
+				<reportElement positionType="Float" x="0" y="0" width="594" height="1" isRemoveLineWhenBlank="true" uuid="71c9e80f-09ae-4664-98d3-70a325d32e77">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -538,10 +710,14 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsOtherChanges.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="6" splitType="Immediate">
+		<band height="1" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 			<printWhenExpression><![CDATA[!T($F{showOngoingEmpSection}).isEmpty()]]></printWhenExpression>
 			<subreport>
-				<reportElement positionType="Float" x="0" y="0" width="595" height="0" isRemoveLineWhenBlank="true" uuid="1c1690bd-cdd9-4755-91f2-04b8b022350a"/>
+				<reportElement positionType="Float" x="0" y="0" width="594" height="1" isRemoveLineWhenBlank="true" uuid="1c1690bd-cdd9-4755-91f2-04b8b022350a">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -552,10 +728,14 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsEmploymentChangeOngoing.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="6" splitType="Immediate">
+		<band height="1" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 			<printWhenExpression><![CDATA[!T($F{showNotStartedEmpSection}).isEmpty()]]></printWhenExpression>
 			<subreport>
-				<reportElement positionType="Float" x="0" y="0" width="595" height="0" isRemoveLineWhenBlank="true" uuid="1c1690bd-cdd9-4755-91f2-04b8b022350a"/>
+				<reportElement positionType="Float" x="0" y="0" width="594" height="1" isRemoveLineWhenBlank="true" uuid="1c1690bd-cdd9-4755-91f2-04b8b022350a">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -566,10 +746,14 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewCircsEmploymentChangeFuture.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="6" splitType="Immediate">
+		<band height="1" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 			<printWhenExpression><![CDATA[!T($F{showFinishedEmpSection}).isEmpty()]]></printWhenExpression>
 			<subreport>
-				<reportElement positionType="Float" x="0" y="0" width="595" height="0" isRemoveLineWhenBlank="true" uuid="1c1690bd-cdd9-4755-91f2-04b8b022350a"/>
+				<reportElement positionType="Float" x="0" y="0" width="594" height="1" isRemoveLineWhenBlank="true" uuid="1c1690bd-cdd9-4755-91f2-04b8b022350a">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>

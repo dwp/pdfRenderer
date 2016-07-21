@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.slf4j.MDC;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.actuate.system.ApplicationPidFileWriter;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.PropertySource;
@@ -14,6 +15,7 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.inject.Inject;
 import java.net.InetAddress;
+import java.util.Arrays;
 
 /**
  * Created by peterwhitehead on 04/05/2016.
@@ -25,8 +27,8 @@ import java.net.InetAddress;
 public class PdfServiceApplication {
     private static final Logger logger = LoggerFactory.getLogger(PdfServiceApplication.class);
 
-    @Value("${http.port}")
-    private String httpPort;
+    @Value("${server.port}")
+    private String serverPort;
 
     @Value("${env.name}")
     private String envName;
@@ -37,14 +39,11 @@ public class PdfServiceApplication {
     @Inject
     private MonitorRegistration monitorRegistration;
 
-    @Inject
-    private PdfHealthCheck pdfHealthCheck;
-
     @PostConstruct
     public void onStart() {
         try {
-            logger.info("Starting application with - httpPort:" + httpPort + " envName:" + envName + " appName:" + appName);
-            MDC.put("httpPort", httpPort);
+            logger.info("Starting application with - serverPort:" + serverPort + " envName:" + envName + " appName:" + appName);
+            MDC.put("httpPort", serverPort);
             MDC.put("hostName", InetAddress.getLocalHost().getHostName());
             MDC.put("envName", envName);
             MDC.put("appName", appName);
@@ -54,7 +53,6 @@ public class PdfServiceApplication {
         logger.info("RS (RenderingService) is now starting.");
 
         monitorRegistration.registerReporters();
-        monitorRegistration.registerHealthChecks(pdfHealthCheck);
 
         logger.info("RS (RenderingService) started.");
     }
@@ -65,7 +63,15 @@ public class PdfServiceApplication {
         monitorRegistration.unRegisterHealthChecks();
     }
 
+    @Inject
+    private void registerHealthChecks(PdfHealthCheck pdfHealthCheck) {
+        logger.info(appName + " - registering health checks.");
+        monitorRegistration.registerHealthChecks(Arrays.asList(pdfHealthCheck));
+    }
+
     public static void main(String[] args) throws Exception {
-        SpringApplication.run(PdfServiceApplication.class, args);
+        SpringApplication springApplication = new SpringApplication(PdfServiceApplication.class);
+        springApplication.addListeners(new ApplicationPidFileWriter());
+        springApplication.run(args);
     }
 }

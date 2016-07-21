@@ -164,7 +164,7 @@ public class XMLCircsData extends TestUtils {
         details.addAll(convertListOfPairsToListOfString(paymentBankDetailsAccountDetails(xml)));
         details.addAll(convertListOfPairsToListOfString(paymentBankDetailsBuildingSocietyDetails(xml)));
         details.addAll(0, Arrays.asList(
-                "Part 2 -Change in Circumstance - Change of payment and bank details",
+                "Part 2 - Change in Circumstance - Change of payment and bank details",
                 "Existing payment details",
                 "New payment details"
         ));

@@ -12,7 +12,7 @@ import javax.inject.Inject;
 public class PdfHealthCheck extends CADSHealthCheck {
     @Inject
     public PdfHealthCheck(@Value("${application.name}") String applicationName, @Value("${application.version}") String applicationVersion) {
-        super(applicationName, applicationVersion);
+        super(applicationName, applicationVersion.replace("-SNAPSHOT", ""), "-check");
     }
 
     @Override

@@ -1,11 +1,10 @@
 <configuration scan="true" scanPeriod="30 seconds">
-    <springProperty name="application" source="application.name"/>
     <appender name="APPLICATION_LOG" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${LOG_PATH:-${user.home}}/logs/${application}-application.log</file>
+        <file>${LOG_PATH:-${user.home}}/logs/${application.name}-application.log</file>
 
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- daily rollover -->
-            <fileNamePattern>${LOG_PATH:-${user.home}}/logs/application_archive/${application}-application.%d{yyyy-MM-dd}.log
+            <fileNamePattern>${LOG_PATH:-${user.home}}/logs/application_archive/${application.name}-application.%d{yyyy-MM-dd}.log
             </fileNamePattern>
             <!-- keep 30 days' worth of history -->
             <maxHistory>30</maxHistory>
@@ -16,15 +15,20 @@
         </encoder>
     </appender>
 
-    <appender name="GELF" class="me.moocar.logbackgelf.GelfAppender">
-        <graylog2ServerHost>grayloghost</graylog2ServerHost>
-        <graylog2ServerPort>12201</graylog2ServerPort>
-
-        <!-- Logging for our play app-->
-        <additionalField>httpPort:_http_port</additionalField>
-        <additionalField>hostName:_host_name</additionalField>
-        <additionalField>envName:_Environment</additionalField>
-        <additionalField>uuid:_uuid</additionalField>
+    <appender name="GELF" class="me.moocar.logbackgelf.GelfUDPAppender">
+        <remoteHost>grayloghost</remoteHost>
+        <port>12201</port>
+        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+            <layout class="me.moocar.logbackgelf.GelfLayout">
+                <fullMessageLayout class="ch.qos.logback.classic.PatternLayout">
+                    <pattern>%d - [%thread] - %logger{15} - %message%n%xException{5}</pattern>
+                </fullMessageLayout>
+                <useLoggerName>true</useLoggerName>
+                <useThreadName>true</useThreadName>
+                <useMarker>true</useMarker>
+                <includeFullMDC>true</includeFullMDC>
+            </layout>
+        </encoder>
     </appender>
 
     <appender name="ASYNC_APPLICATION_LOG" class="ch.qos.logback.classic.AsyncAppender">

@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        springBootVersion = '1.3.5.RELEASE'
+        springBootVersion = '1.3.6.RELEASE'
     }
     repositories {
         jcenter()
@@ -110,7 +110,7 @@ dependencies {
     compile("gov.dwp.carers:fonts:1.0")
     compile("xalan:xalan:2.7.2")
     compile("gov.dwp.carers:xmlcommons:8.11-SNAPSHOT")
-    compile("gov.dwp.carers:carerscommon:8.02-SNAPSHOT")
+    compile("gov.dwp.carers:carerscommon:8.03-SNAPSHOT")
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.boot:spring-boot-starter-jetty")
     compile("org.springframework.boot:spring-boot-starter-data-rest")
@@ -163,7 +163,11 @@ task createInfoFile << {
     }
 }
 
+<<<<<<< HEAD
 compileJava.dependsOn(createInfoFile)
+=======
+build.dependsOn(createInfoFile)
+>>>>>>> integration
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.13'

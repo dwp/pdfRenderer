@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_subreportEvidenceList" language="java" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="43ef5573-1a4b-4c0d-a713-ecc72a8b64ee">
+<!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
+<!-- 2016-07-05T12:46:08 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_subreportEvidenceList" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="43ef5573-1a4b-4c0d-a713-ecc72a8b64ee">
 	<property name="ireport.zoom" value="3.1384283767210035"/>
 	<property name="ireport.x" value="304"/>
 	<property name="ireport.y" value="0"/>
 	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
-	<template><![CDATA[ $P{TEMPLATE_DIR} + "StyleTemplateClaim.jrtx"]]></template>
+	<property name="net.sf.jasperreports.text.save.line.breaks" value="true"/>
+	<template><![CDATA[$P{TEMPLATE_DIR} + "StyleTemplateClaim.jrtx"]]></template>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String">
 		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
 	</parameter>
 	<parameter name="TEMPLATE_DIR" class="java.lang.String">
-    		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
-    </parameter>
+		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+	</parameter>
 	<queryString language="xPath">
 		<![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/EvidenceList/Evidence]]>
 	</queryString>
@@ -33,16 +36,35 @@
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="20" splitType="Stretch">
+		<band height="21" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement uuid="fcd3ab37-4374-45fc-bfd2-b8f2313382c1" positionType="Float" x="0" y="0" width="595" height="18" isRemoveLineWhenBlank="true"/>
-				<textElement>
+				<reportElement positionType="Float" x="0" y="0" width="595" height="20" isRemoveLineWhenBlank="true" uuid="fcd3ab37-4374-45fc-bfd2-b8f2313382c1">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<printWhenExpression><![CDATA[T($F{Title}).contains("What happens next")]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[T($F{Title})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="0" width="595" height="20" isRemoveLineWhenBlank="true" uuid="977761b5-0d5c-4496-a105-07a2ba0d5e89">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<printWhenExpression><![CDATA[!T($F{Title}).contains("What happens next")]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
 					<font isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[T($F{Title})]]></textFieldExpression>
 			</textField>
 			<subreport>
-				<reportElement uuid="1726b69b-3884-4ec3-9efa-7d50543f66a7" positionType="Float" x="0" y="19" width="595" height="1" isRemoveLineWhenBlank="true"/>
+				<reportElement positionType="Float" x="0" y="20" width="595" height="1" isRemoveLineWhenBlank="true" uuid="1726b69b-3884-4ec3-9efa-7d50543f66a7">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
