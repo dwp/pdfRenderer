@@ -688,7 +688,7 @@
 					<reportElement positionType="Float" x="0" y="0" width="356" height="18" isRemoveLineWhenBlank="true" uuid="60a385ce-91e9-47e2-ba60-fff4872af576">
 						<property name="local_mesure_unity" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
-						<property name="net.sf.jasperreports.export.html.id" value="summary-eea-q"/>
+						<property name="net.sf.jasperreports.export.html.id" value="summary-othercareruc-q"/>
 						<printWhenExpression><![CDATA[T($F{OtherCarerUcAnswer}).equalsIgnoreCase("Yes")]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -706,7 +706,7 @@
 						<property name="local_mesure_unity" value="pixel"/>
 						<property name="local_mesure_unitx" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
-						<property name="net.sf.jasperreports.export.html.id" value="summary-eea-a"/>
+						<property name="net.sf.jasperreports.export.html.id" value="summary-othercareruc-a"/>
 						<printWhenExpression><![CDATA[T($F{OtherCarerUcAnswer}).equalsIgnoreCase("Yes")]]></printWhenExpression>
 					</reportElement>
 					<box>
