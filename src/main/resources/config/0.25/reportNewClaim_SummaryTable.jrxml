@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
-<!-- 2016-07-25T11:40:22 -->
+<!-- 2016-08-15T15:04:01 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" pageWidth="560" pageHeight="842" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.366026910730141"/>
 	<property name="ireport.x" value="0"/>
@@ -156,8 +156,8 @@
 	<field name="BreaksQuestionLabel" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/BreaksSinceClaim/QuestionLabel]]></fieldDescription>
 	</field>
-	<field name="BreaksAnswer" class="java.lang.String">
-		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/CareBreak/BreaksSinceClaim/Answer]]></fieldDescription>
+	<field name="BreaksAnswer" class="java.lang.Integer">
+		<fieldDescription><![CDATA[count(//DWPBody/DWPCATransaction/DWPCAClaim/Caree/CareBreak)]]></fieldDescription>
 	</field>
 	<field name="OtherBenefitsQuestionLabel" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/OtherMoney/QuestionLabel]]></fieldDescription>
@@ -724,6 +724,55 @@
 		</band>
 		<band height="18" splitType="Immediate">
 			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<printWhenExpression><![CDATA[T($F{AssistedDecisionRecommendedAction}).contains("show table") && $F{BreaksAnswer} > 1]]></printWhenExpression>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="560" height="18" isRemoveLineWhenBlank="true" uuid="b2c4161e-ea7a-4a65-9f9e-86e376641e69">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<staticText>
+					<reportElement positionType="Float" x="0" y="0" width="356" height="18" isRemoveLineWhenBlank="true" uuid="e021ca90-496f-405e-8f17-5fe8ba00adfe">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="net.sf.jasperreports.export.html.id" value="summary-breaks-q"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.0"/>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle"/>
+					<text><![CDATA[  Breaks in Care]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="356" y="0" width="204" height="18" isRemoveLineWhenBlank="true" uuid="a296b77f-9a7d-42e2-a190-2013fcc43468">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="net.sf.jasperreports.export.html.id" value="summary-breaks-a"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.0"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA["Yes"]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="18" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 			<printWhenExpression><![CDATA[T($F{AssistedDecisionRecommendedAction}).contains("show table") && (!T($F{Caree35HoursAnswer}).equalsIgnoreCase("Yes"))]]></printWhenExpression>
 			<frame>
 				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="560" height="18" isRemoveLineWhenBlank="true" uuid="65e3c79e-ef32-428f-9388-42372d7ca7e0">
@@ -771,57 +820,6 @@
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[T($F{Caree35HoursAnswer})]]></textFieldExpression>
-				</textField>
-			</frame>
-		</band>
-		<band height="18" splitType="Immediate">
-			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-			<printWhenExpression><![CDATA[T($F{AssistedDecisionRecommendedAction}).contains("show table") && (T($F{BreaksAnswer}).equalsIgnoreCase("Yes"))]]></printWhenExpression>
-			<frame>
-				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="560" height="18" isRemoveLineWhenBlank="true" uuid="b2c4161e-ea7a-4a65-9f9e-86e376641e69">
-					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
-				</reportElement>
-				<box>
-					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
-					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
-					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
-				</box>
-				<staticText>
-					<reportElement positionType="Float" x="0" y="0" width="356" height="18" isRemoveLineWhenBlank="true" uuid="e021ca90-496f-405e-8f17-5fe8ba00adfe">
-						<property name="local_mesure_unity" value="pixel"/>
-						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
-						<property name="net.sf.jasperreports.export.html.id" value="summary-breaks-q"/>
-						<printWhenExpression><![CDATA[T($F{BreaksAnswer}).equalsIgnoreCase("Yes")]]></printWhenExpression>
-					</reportElement>
-					<box>
-						<pen lineWidth="0.5"/>
-						<topPen lineWidth="0.0"/>
-						<leftPen lineWidth="0.0"/>
-						<bottomPen lineWidth="0.0"/>
-						<rightPen lineWidth="0.0"/>
-					</box>
-					<textElement verticalAlignment="Middle"/>
-					<text><![CDATA[  Breaks in Care]]></text>
-				</staticText>
-				<textField isBlankWhenNull="true">
-					<reportElement positionType="Float" x="356" y="0" width="204" height="18" isRemoveLineWhenBlank="true" uuid="a296b77f-9a7d-42e2-a190-2013fcc43468">
-						<property name="local_mesure_unity" value="pixel"/>
-						<property name="local_mesure_unitx" value="pixel"/>
-						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
-						<property name="net.sf.jasperreports.export.html.id" value="summary-breaks-a"/>
-						<printWhenExpression><![CDATA[T($F{BreaksAnswer}).equalsIgnoreCase("Yes")]]></printWhenExpression>
-					</reportElement>
-					<box>
-						<pen lineWidth="0.5"/>
-						<topPen lineWidth="0.0"/>
-						<leftPen lineWidth="0.5"/>
-						<bottomPen lineWidth="0.0"/>
-						<rightPen lineWidth="0.0"/>
-					</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle"/>
-					<textFieldExpression><![CDATA[T($F{BreaksAnswer})]]></textFieldExpression>
 				</textField>
 			</frame>
 		</band>
