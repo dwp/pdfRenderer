@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
-<!-- 2016-07-13T15:20:21 -->
+<!-- 2016-08-15T14:16:53 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutTheCareYouProvide" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="7235f8d3-c0a0-415a-aa3f-969494fe9489">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
@@ -116,6 +116,9 @@
 	<field name="CareeMiddleNamesAnswer" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/MiddleNames/Answer]]></fieldDescription>
 	</field>
+	<variable name="dpname" class="java.lang.String">
+		<variableExpression><![CDATA[$F{AboutCareYouProvideCareeOtherNamesAnswer}+" "+$F{AboutCareYouProvideCareeSurnameAnswer}]]></variableExpression>
+	</variable>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -480,7 +483,7 @@
 						<property name="net.sf.jasperreports.export.html.id" value="caree-35hours-q"/>
 						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 					</reportElement>
-					<textFieldExpression><![CDATA[T($F{AboutCareYouProvideCareeCared35HoursQuestion})]]></textFieldExpression>
+					<textFieldExpression><![CDATA[T($F{AboutCareYouProvideCareeCared35HoursQuestion}).replace("@dpname",$V{dpname})]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
 					<reportElement key="" style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="afcdb5c2-bad5-4e6c-b9bb-bff1dd057fae">
@@ -506,7 +509,7 @@
 					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="662d9f0a-3e4c-48d9-bc72-d0c8001cc579">
 						<property name="net.sf.jasperreports.export.html.id" value="caree-othercarer-q"/>
 					</reportElement>
-					<textFieldExpression><![CDATA[T($F{AboutCareYouProvideCareeOtherCarerQuestion})]]></textFieldExpression>
+					<textFieldExpression><![CDATA[T($F{AboutCareYouProvideCareeOtherCarerQuestion}).replace("@dpname",$V{dpname})]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
 					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="bd95bc79-cf26-49ce-8996-1d11bf56dcf0">
@@ -532,7 +535,7 @@
 						<property name="net.sf.jasperreports.export.html.id" value="caree-uc-q"/>
 						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 					</reportElement>
-					<textFieldExpression><![CDATA[T($F{AboutCareYouProvideCareeOtherCarerUcQuestion})]]></textFieldExpression>
+					<textFieldExpression><![CDATA[T($F{AboutCareYouProvideCareeOtherCarerUcQuestion}).replace("@dpname",$V{dpname})]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
 					<reportElement key="" style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="84b9ee90-aaf5-4962-a85c-bbfe277d7318">
@@ -559,7 +562,7 @@
 						<property name="net.sf.jasperreports.export.html.id" value="caree-ucdetails-q"/>
 						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 					</reportElement>
-					<textFieldExpression><![CDATA[T($F{AboutCareYouProvideCareeOtherCarerUcDetailsQuestion})]]></textFieldExpression>
+					<textFieldExpression><![CDATA[T($F{AboutCareYouProvideCareeOtherCarerUcDetailsQuestion}).replace("@dpname",$V{dpname})]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 					<reportElement key="" style="Answer" positionType="Float" x="0" y="18" width="594" height="18" isRemoveLineWhenBlank="true" uuid="84b9ee90-aaf5-4962-a85c-bbfe277d7318">
