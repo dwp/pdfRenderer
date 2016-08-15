@@ -117,6 +117,7 @@
 						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="net.sf.jasperreports.export.html.id" value="header-date"/>
 					</reportElement>
 					<textElement verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA["Date Received: "+T($F{DateTimeGenerated})]]></textFieldExpression>
@@ -125,6 +126,7 @@
 					<reportElement key="" positionType="Float" mode="Opaque" x="498" y="24" width="95" height="27" uuid="3205d842-c416-44c0-82fe-89f83bcb8739">
 						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="net.sf.jasperreports.export.html.id" value="header-version"/>
 					</reportElement>
 					<textElement textAlignment="Right" verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[T($F{ClaimVersion}) + " / "+ T($F{Version})]]></textFieldExpression>
@@ -134,6 +136,7 @@
 						<property name="local_mesure_unitwidth" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="net.sf.jasperreports.export.html.id" value="header-transactionid"/>
 					</reportElement>
 					<textElement verticalAlignment="Middle" markup="none">
 						<font isBold="true"/>
@@ -146,6 +149,7 @@
 						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="net.sf.jasperreports.export.html.id" value="header-title"/>
 					</reportElement>
 					<textElement textAlignment="Left" verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[T($F{ClaimantTitle}) + " " + T($F{ClaimantSurname})]]></textFieldExpression>
@@ -154,6 +158,7 @@
 					<reportElement key="" positionType="Float" mode="Opaque" x="498" y="1" width="95" height="23" forecolor="#000000" uuid="fa8df42d-d92f-4051-a603-d9108427489c">
 						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="net.sf.jasperreports.export.html.id" value="header-nino"/>
 					</reportElement>
 					<textElement textAlignment="Right" verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[T($F{NationalInsuranceNumber})]]></textFieldExpression>
@@ -171,7 +176,9 @@
 				<text><![CDATA[Carer's Allowance Claim Form]]></text>
 			</staticText>
 			<textField>
-				<reportElement positionType="Float" x="329" y="4" width="262" height="20" uuid="7fc54fa3-8e8e-49e3-b237-71e48d1d5de5"/>
+				<reportElement positionType="Float" x="329" y="4" width="262" height="20" uuid="7fc54fa3-8e8e-49e3-b237-71e48d1d5de5">
+					<property name="net.sf.jasperreports.export.html.id" value="header-language"/>
+				</reportElement>
 				<textElement textAlignment="Right" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA["This form was completed in "+T($F{LanguageUsed})]]></textFieldExpression>
 			</textField>
