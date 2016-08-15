@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
-<!-- 2016-07-18T11:39:35 -->
+<!-- 2016-07-25T11:40:22 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_Summary" pageWidth="560" pageHeight="842" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a88aead0-a2c6-4cbf-be45-bb0d849ea1f9">
 	<property name="ireport.zoom" value="1.366026910730141"/>
 	<property name="ireport.x" value="0"/>
@@ -204,6 +204,12 @@
 	<field name="EEAGuardAnswer" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/EEA/EEAGuardQuestion/Answer]]></fieldDescription>
 	</field>
+	<field name="OtherCarerUcQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/OtherCarerUc/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="OtherCarerUcAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/OtherCarerUc/Answer]]></fieldDescription>
+	</field>
 	<field name="welshQuestion" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherInformation/WelshCommunication/QuestionLabel]]></fieldDescription>
 	</field>
@@ -399,6 +405,7 @@
 				<reportElement key="" positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="560" height="36" isRemoveLineWhenBlank="true" uuid="1f780c8d-6400-4259-a3fb-c871d5f9908a">
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="net.sf.jasperreports.export.html.id" value="summary-table-heading"/>
 				</reportElement>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -662,6 +669,57 @@
     (T($F{EEAReceivePensionsBenefits}).equalsIgnoreCase("Yes") || T($F{EEAWorkingInsuranceAnswer}).equalsIgnoreCase("Yes"))
     ? "Yes" : "No")]]></textFieldExpression>
 				</textField>
+			</frame>
+		</band>
+		<band height="18" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<printWhenExpression><![CDATA[T($F{AssistedDecisionRecommendedAction}).contains("show table") && (T($F{OtherCarerUcAnswer}).equalsIgnoreCase("Yes"))]]></printWhenExpression>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="560" height="18" isRemoveLineWhenBlank="true" uuid="328fed35-31c0-4a6f-8e57-5886f196d30d">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<staticText>
+					<reportElement positionType="Float" x="0" y="0" width="356" height="18" isRemoveLineWhenBlank="true" uuid="60a385ce-91e9-47e2-ba60-fff4872af576">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="net.sf.jasperreports.export.html.id" value="summary-othercareruc-q"/>
+						<printWhenExpression><![CDATA[T($F{OtherCarerUcAnswer}).equalsIgnoreCase("Yes")]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.0"/>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle"/>
+					<text><![CDATA[  Dual Provision - carer element UC paid]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="356" y="0" width="204" height="18" isRemoveLineWhenBlank="true" uuid="c4e3527d-c160-49d7-a449-ccd9238d076a">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="net.sf.jasperreports.export.html.id" value="summary-othercareruc-a"/>
+						<printWhenExpression><![CDATA[T($F{OtherCarerUcAnswer}).equalsIgnoreCase("Yes")]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.0"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Yes]]></text>
+				</staticText>
 			</frame>
 		</band>
 		<band height="18" splitType="Immediate">

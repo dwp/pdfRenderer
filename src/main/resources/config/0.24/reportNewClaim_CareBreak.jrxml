@@ -142,6 +142,7 @@
 			<textField isBlankWhenNull="true">
 				<reportElement positionType="Float" mode="Opaque" x="0" y="0" width="594" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#E6E6E6" uuid="546e57b0-0c10-4b4b-b768-1f3cea76fdc0">
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA[$V{BreakNum}+"heading"]]></propertyExpression>
 					<printWhenExpression><![CDATA[!T($F{StartDateQuestionLabel}).isEmpty()]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Middle">

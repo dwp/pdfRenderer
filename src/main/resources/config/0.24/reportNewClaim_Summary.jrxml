@@ -447,6 +447,7 @@
 			<staticText>
 				<reportElement key="" style="HeadingClaim" x="0" y="45" width="560" height="18" uuid="7e065815-82c0-450f-8946-81991c6f06a1">
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="net.sf.jasperreports.export.html.id" value="summary-heading"/>
 				</reportElement>
 				<textElement markup="styled">
 					<font isBold="true"/>
@@ -476,6 +477,7 @@
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="local_mesure_unitwidth" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="summary-customer-heading"/>
 				</reportElement>
 				<textElement markup="styled">
 					<font isBold="true"/>
@@ -490,6 +492,7 @@
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="summary-dp-heading"/>
 				</reportElement>
 				<textElement markup="styled">
 					<font isBold="true"/>
@@ -544,6 +547,7 @@
 					<reportElement key="" positionType="Float" x="0" y="0" width="162" height="18" isRemoveLineWhenBlank="true" uuid="ec56ccd8-04f6-492e-ae5a-4ad0fc040f4a">
 						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="net.sf.jasperreports.export.html.id" value="summary-surname-q"/>
 					</reportElement>
 					<textFieldExpression><![CDATA[T($F{ClaimantSurnameQuestionLabel})]]></textFieldExpression>
 				</textField>
@@ -971,7 +975,7 @@
 			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 			<staticText>
 				<reportElement style="SubHeadingClaim" x="0" y="0" width="560" height="18" uuid="562ea462-0def-46d2-9621-e33490395670">
-					<property name="net.sf.jasperreports.export.html.id" value="summary-"/>
+					<property name="net.sf.jasperreports.export.html.id" value="summary-partner-heading"/>
 				</reportElement>
 				<textElement markup="styled">
 					<font isBold="true"/>

@@ -41,7 +41,7 @@ allprojects {
     apply plugin: 'maven-publish'
     apply plugin: 'spring-boot'
     apply plugin: 'com.github.gmazelier.jasperreports'
-    version = '3.01-SNAPSHOT'
+    version = '3.02-SNAPSHOT'
     archivesBaseName = 'p1'
     group = 'gov.dwp.carers'
     sourceCompatibility = 1.8
@@ -163,7 +163,7 @@ task createInfoFile << {
     }
 }
 
-build.dependsOn(createInfoFile)
+compileJava.dependsOn(createInfoFile)
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.13'
