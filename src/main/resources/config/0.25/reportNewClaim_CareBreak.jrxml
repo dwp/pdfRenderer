@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
-<!-- 2016-08-15T12:25:08 -->
+<!-- 2016-08-15T15:26:36 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_CareBreak" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isSummaryNewPage="true" isIgnorePagination="true" uuid="d2b233ab-6178-4bb0-9059-17e24879fcd8">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
@@ -13,6 +13,12 @@
 	</parameter>
 	<parameter name="TEMPLATE_DIR" class="java.lang.String">
 		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dpname" class="java.lang.String">
+		<parameterDescription><![CDATA[Disabled details to replace variable in question and who was away answer]]></parameterDescription>
+	</parameter>
+	<parameter name="yourname" class="java.lang.String">
+		<parameterDescription><![CDATA[Claimant details to replace variable who was away answer]]></parameterDescription>
 	</parameter>
 	<queryString language="xPath">
 		<![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/CareBreak]]>
@@ -148,7 +154,7 @@
 							<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 							<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA["breaks-any-q"]]></propertyExpression>
 						</reportElement>
-						<textFieldExpression><![CDATA[T($F{BreaksSinceClaimQuestion})]]></textFieldExpression>
+						<textFieldExpression><![CDATA[T($F{BreaksSinceClaimQuestion}).replace("@dpname",$P{dpname})]]></textFieldExpression>
 					</textField>
 					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 						<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="ac1e911a-07ae-4ed0-a9f3-a5f9b1d4c251">
@@ -175,7 +181,7 @@
 							<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 							<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA["breaks-any-q"]]></propertyExpression>
 						</reportElement>
-						<textFieldExpression><![CDATA[T($F{BreaksOtherSinceClaimQuestionLabel})]]></textFieldExpression>
+						<textFieldExpression><![CDATA[T($F{BreaksOtherSinceClaimQuestionLabel}).replace("@dpname",$P{dpname})]]></textFieldExpression>
 					</textField>
 					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 						<reportElement key="" style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="780dc54f-3aa4-4d11-885d-3f5a935dea64">
@@ -245,7 +251,7 @@ IF("YouHospital".equals($F{BreaksTypeAnswer}), "Customer - hospital", IF("DPHosp
 						<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA[$V{BreakNum}+"break-ended-a"]]></propertyExpression>
 						<printWhenExpression><![CDATA[!T($F{BreakEndedAnswer}).isEmpty()]]></printWhenExpression>
 					</reportElement>
-					<textFieldExpression><![CDATA[T($F{WhoWasAwayAnswer})]]></textFieldExpression>
+					<textFieldExpression><![CDATA[T($F{WhoWasAwayAnswer}).replace("@dpname",$P{dpname}).replace("@yourname",$P{yourname})]]></textFieldExpression>
 				</textField>
 			</frame>
 		</band>
@@ -264,7 +270,7 @@ IF("YouHospital".equals($F{BreaksTypeAnswer}), "Customer - hospital", IF("DPHosp
 					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="111c129f-a7b9-4827-bd88-0d8d0478c093">
 						<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA[$V{BreakNum}+"startdate-q"]]></propertyExpression>
 					</reportElement>
-					<textFieldExpression><![CDATA[IF(!"Other".equals($F{BreaksTypeAnswer}), T($F{StartDateQuestionLabel}), T($F{EndDateQuestionLabel}))]]></textFieldExpression>
+					<textFieldExpression><![CDATA[IF(!"Other".equals($F{BreaksTypeAnswer}), T($F{StartDateQuestionLabel}).replace("@dpname",$P{dpname}), T($F{EndDateQuestionLabel}).replace("@dpname",$P{dpname}))]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
 					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="218f2dc4-631a-44bc-b575-c5358348e9ea">
@@ -317,7 +323,7 @@ IF("YouHospital".equals($F{BreaksTypeAnswer}), "Customer - hospital", IF("DPHosp
 						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 						<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA[$V{BreakNum}+"ended-q"]]></propertyExpression>
 					</reportElement>
-					<textFieldExpression><![CDATA[IF(!"Other".equals($F{BreaksTypeAnswer}), T($F{BreakEndedQuestionLabel}), T($F{BreakStartedQuestionLabel}))]]></textFieldExpression>
+					<textFieldExpression><![CDATA[IF(!"Other".equals($F{BreaksTypeAnswer}), T($F{BreakEndedQuestionLabel}).replace("@dpname",$P{dpname}), T($F{BreakStartedQuestionLabel}).replace("@dpname",$P{dpname}))]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="3f68757d-2d4b-44ff-bef6-5f69fb3d594d">
@@ -346,7 +352,7 @@ IF("YouHospital".equals($F{BreaksTypeAnswer}), "Customer - hospital", IF("DPHosp
 						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 						<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA[$V{BreakNum}+"startdate-q"]]></propertyExpression>
 					</reportElement>
-					<textFieldExpression><![CDATA[IF(!"Other".equals($F{BreaksTypeAnswer}), T($F{EndDateQuestionLabel}), T($F{StartDateQuestionLabel}))]]></textFieldExpression>
+					<textFieldExpression><![CDATA[IF(!"Other".equals($F{BreaksTypeAnswer}), T($F{EndDateQuestionLabel}).replace("@dpname",$P{dpname}), T($F{StartDateQuestionLabel}).replace("@dpname",$P{dpname}))]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
 					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="ae1699e8-0023-4c15-81b8-44ecdfbd3a0d">
@@ -406,7 +412,7 @@ IF("YouHospital".equals($F{BreaksTypeAnswer}), "Customer - hospital", IF("DPHosp
 						<printWhenExpression><![CDATA[!T($F{ReasonClaimantAnswer}).isEmpty()]]></printWhenExpression>
 					</reportElement>
 					<textElement verticalAlignment="Top"/>
-					<textFieldExpression><![CDATA[T($F{ReasonClaimantQuestionLabel})]]></textFieldExpression>
+					<textFieldExpression><![CDATA[T($F{ReasonClaimantQuestionLabel}).replace("@dpname",$P{dpname})]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="cae9a88e-0697-4628-80ec-7eb233216f5e">
@@ -444,7 +450,7 @@ IF("YouHospital".equals($F{BreaksTypeAnswer}), "Customer - hospital", IF("DPHosp
 						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 						<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA[$V{BreakNum}+"reasoncaree-q"]]></propertyExpression>
 					</reportElement>
-					<textFieldExpression><![CDATA[T($F{ReasonCareeQuestionLabel})]]></textFieldExpression>
+					<textFieldExpression><![CDATA[T($F{ReasonCareeQuestionLabel}).replace("@dpname",$P{dpname})]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="eb72058a-026a-4fe9-9789-0b48b0cbc05f">
@@ -481,7 +487,7 @@ IF("YouHospital".equals($F{BreaksTypeAnswer}), "Customer - hospital", IF("DPHosp
 						<printWhenExpression><![CDATA[!T($F{MedicalAnswer}).isEmpty()]]></printWhenExpression>
 					</reportElement>
 					<textElement verticalAlignment="Top"/>
-					<textFieldExpression><![CDATA[T($F{MedicalQuestionLabel})]]></textFieldExpression>
+					<textFieldExpression><![CDATA[T($F{MedicalQuestionLabel}).replace("@dpname",$P{dpname})]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="3f90f92a-4244-49fe-974f-17ba1065cd87">
@@ -511,7 +517,7 @@ IF("YouHospital".equals($F{BreaksTypeAnswer}), "Customer - hospital", IF("DPHosp
 						<printWhenExpression><![CDATA[!T($F{DpMedicalAnswer}).isEmpty()]]></printWhenExpression>
 					</reportElement>
 					<textElement verticalAlignment="Top"/>
-					<textFieldExpression><![CDATA[T($F{DpMedicalQuestionLabel})]]></textFieldExpression>
+					<textFieldExpression><![CDATA[T($F{DpMedicalQuestionLabel}).replace("@dpname",$P{dpname})]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="0fa032e0-fe19-467b-a109-4bb45e1fc983">
@@ -541,7 +547,7 @@ IF("YouHospital".equals($F{BreaksTypeAnswer}), "Customer - hospital", IF("DPHosp
 						<printWhenExpression><![CDATA[!T($F{BreaksInCareRespiteStillCaringAnswer}).isEmpty()]]></printWhenExpression>
 					</reportElement>
 					<textElement verticalAlignment="Top"/>
-					<textFieldExpression><![CDATA[T($F{BreaksInCareRespiteStillCaringQuestionLabel})]]></textFieldExpression>
+					<textFieldExpression><![CDATA[T($F{BreaksInCareRespiteStillCaringQuestionLabel}).replace("@dpname",$P{dpname})]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="f320e159-4a47-4da3-b56f-ccfdf8865eb3">

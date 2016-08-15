@@ -116,6 +116,12 @@
 	<field name="CareeMiddleNamesAnswer" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Caree/MiddleNames/Answer]]></fieldDescription>
 	</field>
+    <field name="AboutYouTheCarerClaimantFirstNameAnswer" class="java.lang.String">
+        <fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/OtherNames/Answer]]></fieldDescription>
+    </field>
+    <field name="AboutYouTheCarerClaimantSurnameAnswer" class="java.lang.String">
+        <fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Surname/Answer]]></fieldDescription>
+    </field>
 	<variable name="dpname" class="java.lang.String">
 		<variableExpression><![CDATA[$F{AboutCareYouProvideCareeOtherNamesAnswer}+" "+$F{AboutCareYouProvideCareeSurnameAnswer}]]></variableExpression>
 	</variable>
@@ -585,6 +591,12 @@
 				<subreportParameter name="TEMPLATE_DIR">
 					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
+                <subreportParameter name="dpname">
+                    <subreportParameterExpression><![CDATA[$V{dpname}]]></subreportParameterExpression>
+                </subreportParameter>
+                <subreportParameter name="yourname">
+                    <subreportParameterExpression><![CDATA[$F{AboutCareYouProvideCareeOtherNamesAnswer}+" "+$F{AboutYouTheCarerClaimantSurnameAnswer}]]></subreportParameterExpression>
+                </subreportParameter>
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/Caree/CareBreak")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_CareBreak.jasper"]]></subreportExpression>
 			</subreport>
