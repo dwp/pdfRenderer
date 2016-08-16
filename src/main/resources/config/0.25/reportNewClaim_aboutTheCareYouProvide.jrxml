@@ -595,7 +595,7 @@
                     <subreportParameterExpression><![CDATA[$V{dpname}]]></subreportParameterExpression>
                 </subreportParameter>
                 <subreportParameter name="yourname">
-                    <subreportParameterExpression><![CDATA[$F{AboutCareYouProvideCareeOtherNamesAnswer}+" "+$F{AboutYouTheCarerClaimantSurnameAnswer}]]></subreportParameterExpression>
+                    <subreportParameterExpression><![CDATA[$F{AboutYouTheCarerClaimantFirstNameAnswer}+" "+$F{AboutYouTheCarerClaimantSurnameAnswer}]]></subreportParameterExpression>
                 </subreportParameter>
 				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)        $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/Caree/CareBreak")]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_CareBreak.jasper"]]></subreportExpression>
