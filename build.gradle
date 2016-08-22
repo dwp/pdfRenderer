@@ -6,7 +6,7 @@ buildscript {
         jcenter()
         mavenCentral()
         maven {
-            url 'https://build.3cbeta.co.uk/artifactory/repo'
+            url "${artifactory_url}repo"
             credentials {
                 username = "${artifactory_user}"
                 password = "${artifactory_password}"
@@ -51,7 +51,7 @@ allprojects {
 String repo = version.endsWith('SNAPSHOT') ? 'libs-snapshot-local' : 'libs-release-local'
 
 artifactory {
-    contextUrl = "http://build.3cbeta.co.uk:8080/artifactory/"   //The base Artifactory URL if not overridden by the publisher/resolver
+    contextUrl = "${artifactory_url}"   //The base Artifactory URL if not overridden by the publisher/resolver
     publish {
         mavenLocal()
         repository {
