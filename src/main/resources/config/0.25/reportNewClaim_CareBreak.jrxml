@@ -179,7 +179,7 @@
 						<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="be1b0ece-0d1a-4335-98d6-dda1eb8211b9">
 							<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 							<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
-							<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA["breaks-any-q"]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA["breaks-anyother-q"]]></propertyExpression>
 						</reportElement>
 						<textFieldExpression><![CDATA[T($F{BreaksOtherSinceClaimQuestionLabel}).replace("@dpname",$P{dpname})]]></textFieldExpression>
 					</textField>
@@ -187,7 +187,7 @@
 						<reportElement key="" style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="780dc54f-3aa4-4d11-885d-3f5a935dea64">
 							<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 							<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
-							<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA["breaks-any-a"]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA["breaks-anyother-a"]]></propertyExpression>
 						</reportElement>
 						<textFieldExpression><![CDATA[T($F{BreaksOtherSinceClaimAnswer})]]></textFieldExpression>
 					</textField>
@@ -217,6 +217,7 @@
 			<textField isBlankWhenNull="true">
 				<reportElement positionType="Float" mode="Opaque" x="0" y="0" width="594" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#E6E6E6" uuid="546e57b0-0c10-4b4b-b768-1f3cea76fdc0">
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA[$V{BreakNum}+"heading"]]></propertyExpression>
 					<printWhenExpression><![CDATA[!T($F{StartDateQuestionLabel}).isEmpty()]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
@@ -240,7 +241,7 @@ IF("YouHospital".equals($F{BreaksTypeAnswer}), "Customer - hospital", IF("DPHosp
 					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="b9dd621d-5779-4eb0-9c44-1f44c4c55647">
 						<property name="local_mesure_unity" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
-						<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA[$V{BreakNum}+"break-ended-q"]]></propertyExpression>
+						<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA[$V{BreakNum}+"break-who-q"]]></propertyExpression>
 					</reportElement>
 					<textFieldExpression><![CDATA[T($F{WhoWasAwayQuestionLabel})]]></textFieldExpression>
 				</textField>
@@ -248,7 +249,7 @@ IF("YouHospital".equals($F{BreaksTypeAnswer}), "Customer - hospital", IF("DPHosp
 					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="51aa8880-5be4-41c3-b972-fcf59c10d50c">
 						<property name="local_mesure_unity" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
-						<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA[$V{BreakNum}+"break-ended-a"]]></propertyExpression>
+						<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA[$V{BreakNum}+"break-who-a"]]></propertyExpression>
 						<printWhenExpression><![CDATA[!T($F{BreakEndedAnswer}).isEmpty()]]></printWhenExpression>
 					</reportElement>
 					<textFieldExpression><![CDATA[T($F{WhoWasAwayAnswer}).replace("@dpname",$P{dpname}).replace("@yourname",$P{yourname})]]></textFieldExpression>
@@ -350,7 +351,7 @@ IF("YouHospital".equals($F{BreaksTypeAnswer}), "Customer - hospital", IF("DPHosp
 					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="e03c71c0-bdd9-450c-bdbb-5b5e4c68a024">
 						<property name="local_mesure_unity" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
-						<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA[$V{BreakNum}+"startdate-q"]]></propertyExpression>
+						<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA[$V{BreakNum}+"enddate-q"]]></propertyExpression>
 					</reportElement>
 					<textFieldExpression><![CDATA[IF(!"Other".equals($F{BreaksTypeAnswer}), T($F{EndDateQuestionLabel}).replace("@dpname",$P{dpname}), T($F{StartDateQuestionLabel}).replace("@dpname",$P{dpname}))]]></textFieldExpression>
 				</textField>
@@ -358,7 +359,7 @@ IF("YouHospital".equals($F{BreaksTypeAnswer}), "Customer - hospital", IF("DPHosp
 					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="ae1699e8-0023-4c15-81b8-44ecdfbd3a0d">
 						<property name="local_mesure_unity" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
-						<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA[$V{BreakNum}+"startdate-a"]]></propertyExpression>
+						<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA[$V{BreakNum}+"enddate-a"]]></propertyExpression>
 						<printWhenExpression><![CDATA[!T($F{EndDateAnswer}).isEmpty()]]></printWhenExpression>
 					</reportElement>
 					<textFieldExpression><![CDATA[IF(!"Other".equals($F{BreaksTypeAnswer}), T($F{EndDateAnswer}), T($F{StartDateAnswer}))]]></textFieldExpression>
