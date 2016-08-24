@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
-<!-- 2016-08-15T15:26:36 -->
+<!-- 2016-08-24T09:41:34 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_CareBreak" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isSummaryNewPage="true" isIgnorePagination="true" uuid="d2b233ab-6178-4bb0-9059-17e24879fcd8">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
@@ -152,14 +152,14 @@
 					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 						<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="a9f4a284-7c57-49a6-9bb1-70b65bc07018">
 							<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
-							<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA["breaks-any-q"]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA["breaks-"+IF($V{variable1}==-1, "head", "foot")+"-any-q"]]></propertyExpression>
 						</reportElement>
 						<textFieldExpression><![CDATA[T($F{BreaksSinceClaimQuestion}).replace("@dpname",$P{dpname})]]></textFieldExpression>
 					</textField>
 					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 						<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="ac1e911a-07ae-4ed0-a9f3-a5f9b1d4c251">
 							<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
-							<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA["breaks-any-a"]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA["breaks-"+IF($V{variable1}==-1, "head", "foot")+"-any-a"]]></propertyExpression>
 						</reportElement>
 						<textFieldExpression><![CDATA[T($F{BreaksSinceClaimAnswer})]]></textFieldExpression>
 					</textField>
@@ -179,7 +179,7 @@
 						<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="be1b0ece-0d1a-4335-98d6-dda1eb8211b9">
 							<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 							<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
-							<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA["breaks-anyother-q"]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA["breaks-"+IF($V{variable1}==-1, "head", "foot")+"-anyother-q"]]></propertyExpression>
 						</reportElement>
 						<textFieldExpression><![CDATA[T($F{BreaksOtherSinceClaimQuestionLabel}).replace("@dpname",$P{dpname})]]></textFieldExpression>
 					</textField>
@@ -187,7 +187,7 @@
 						<reportElement key="" style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="780dc54f-3aa4-4d11-885d-3f5a935dea64">
 							<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 							<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
-							<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA["breaks-anyother-a"]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA["breaks-"+IF($V{variable1}==-1, "head", "foot")+"-anyother-a"]]></propertyExpression>
 						</reportElement>
 						<textFieldExpression><![CDATA[T($F{BreaksOtherSinceClaimAnswer})]]></textFieldExpression>
 					</textField>
