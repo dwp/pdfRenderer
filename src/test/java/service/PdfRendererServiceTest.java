@@ -1,12 +1,11 @@
 package service;
 
 import controllers.PdfServiceApplication;
-import generators.HtmlGenerator;
 import generators.PdfGenerator;
 import gov.dwp.carers.monitor.Counters;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import testData.ClaimBuilder;
@@ -21,7 +20,7 @@ import static org.mockito.Mockito.mock;
  * Created by peterwhitehead on 11/05/2016.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = PdfServiceApplication.class)
+@SpringBootTest(classes = PdfServiceApplication.class)
 @TestPropertySource(locations="classpath:test.application.properties")
 public class PdfRendererServiceTest {
     @Inject

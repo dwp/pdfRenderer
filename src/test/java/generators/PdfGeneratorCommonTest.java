@@ -8,7 +8,7 @@ import org.apache.commons.lang.StringUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import testData.ClaimBuilder;
@@ -30,7 +30,7 @@ import static org.junit.Assert.fail;
  * Created by peterwhitehead on 06/05/2016.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = PdfServiceApplication.class)
+@SpringBootTest(classes = PdfServiceApplication.class)
 @TestPropertySource(locations="classpath:test.application.properties")
 public class PdfGeneratorCommonTest extends FileHelper {
 
