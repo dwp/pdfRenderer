@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
-<!-- 2016-06-23T12:44:21 -->
+<!-- 2016-08-26T13:23:14 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYourPartner" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="2c76a7f8-deb9-45af-83f2-c12559d20c72">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
@@ -28,6 +28,9 @@
 	</field>
 	<field name="paidDirectAnswer" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/DirectPayment/Answer]]></fieldDescription>
+	</field>
+	<field name="paidRentalAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/RentalIncome/Answer]]></fieldDescription>
 	</field>
 	<field name="paidAnyOtherAnswer" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/AnyOtherPayment/Answer]]></fieldDescription>
@@ -202,6 +205,12 @@
 	</field>
 	<field name="directPayHowOftenPaidOtherAnswer" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/DirectPay/HowOftenPaidThisPayOther/Answer]]></fieldDescription>
+	</field>
+	<field name="rentalIncomeQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/RentalIncomeInfo/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="rentalIncomeAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/RentalIncomeInfo/Answer]]></fieldDescription>
 	</field>
 	<field name="anyOtherPayQuestion" class="java.lang.String">
 		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Incomes/OtherPaymentsInfo/QuestionLabel]]></fieldDescription>
@@ -1049,7 +1058,7 @@
 		<band height="56" splitType="Immediate">
 			<property name="local_mesure_unitheight" value="pixel"/>
 			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-			<printWhenExpression><![CDATA[!T($F{anyOtherPayAnswer}).equalsIgnoreCase("")]]></printWhenExpression>
+			<printWhenExpression><![CDATA[!T($F{rentalIncomeAnswer}).equalsIgnoreCase("")]]></printWhenExpression>
 			<staticText>
 				<reportElement style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="20" isRemoveLineWhenBlank="true" uuid="d8b192d7-788b-476b-bb7b-0d92e375078c">
 					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourAccounts"/>
@@ -1058,7 +1067,7 @@
 				<textElement verticalAlignment="Middle">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[Any other income, eg rental income]]></text>
+				<text><![CDATA[Rental income]]></text>
 			</staticText>
 			<frame>
 				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="20" width="594" height="36" uuid="80d9f6af-c521-43d3-bbe6-151b062de3ee">
@@ -1070,13 +1079,46 @@
 					<bottomPen lineWidth="0.5"/>
 				</box>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement key="" positionType="Float" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="c8978e41-34fa-47a8-a77c-e4e37d15b368">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="net.sf.jasperreports.export.html.id" value="otherpay-q"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{rentalIncomeQuestion})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 					<reportElement key="" style="Answer" positionType="Float" x="0" y="18" width="594" height="18" isRemoveLineWhenBlank="true" uuid="609fcd47-2ce5-4107-9e15-d81db8789779">
 						<property name="local_mesure_unity" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 						<property name="net.sf.jasperreports.export.html.id" value="anyotherpay-a"/>
 					</reportElement>
-					<textFieldExpression><![CDATA[T($F{anyOtherPayAnswer})]]></textFieldExpression>
+					<textFieldExpression><![CDATA[T($F{rentalIncomeAnswer})]]></textFieldExpression>
 				</textField>
+			</frame>
+		</band>
+		<band height="56" splitType="Immediate">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<printWhenExpression><![CDATA[!T($F{anyOtherPayAnswer}).equalsIgnoreCase("")]]></printWhenExpression>
+			<staticText>
+				<reportElement style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="20" isRemoveLineWhenBlank="true" uuid="d8b192d7-788b-476b-bb7b-0d92e375078c">
+					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourAccounts"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Any other income]]></text>
+			</staticText>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="20" width="594" height="36" uuid="80d9f6af-c521-43d3-bbe6-151b062de3ee">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 					<reportElement key="" positionType="Float" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="c8978e41-34fa-47a8-a77c-e4e37d15b368">
 						<property name="local_mesure_unity" value="pixel"/>
@@ -1084,6 +1126,14 @@
 						<property name="net.sf.jasperreports.export.html.id" value="otherpay-q"/>
 					</reportElement>
 					<textFieldExpression><![CDATA[T($F{paidOtherQuestion})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement key="" style="Answer" positionType="Float" x="0" y="18" width="594" height="18" isRemoveLineWhenBlank="true" uuid="609fcd47-2ce5-4107-9e15-d81db8789779">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="net.sf.jasperreports.export.html.id" value="anyotherpay-a"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{anyOtherPayAnswer})]]></textFieldExpression>
 				</textField>
 			</frame>
 		</band>
