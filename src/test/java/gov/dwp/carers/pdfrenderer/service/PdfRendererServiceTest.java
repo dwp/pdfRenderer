@@ -1,14 +1,15 @@
-package service;
+package gov.dwp.carers.pdfrenderer.service;
 
-import controllers.PdfServiceApplication;
-import generators.PdfGenerator;
+
 import gov.dwp.carers.monitor.Counters;
+import gov.dwp.carers.pdfrenderer.controllers.PdfServiceApplication;
+import gov.dwp.carers.pdfrenderer.generators.PdfGenerator;
+import gov.dwp.carers.pdfrenderer.testdata.ClaimBuilder;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import testData.ClaimBuilder;
 import javax.inject.Inject;
 
 import static org.hamcrest.CoreMatchers.containsString;
