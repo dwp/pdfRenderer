@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
-<!-- 2016-08-24T09:41:34 -->
+<!-- 2016-09-01T16:02:53 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_CareBreak" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isSummaryNewPage="true" isIgnorePagination="true" uuid="d2b233ab-6178-4bb0-9059-17e24879fcd8">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
@@ -218,7 +218,7 @@
 				<reportElement positionType="Float" mode="Opaque" x="0" y="0" width="594" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#E6E6E6" uuid="546e57b0-0c10-4b4b-b768-1f3cea76fdc0">
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					<propertyExpression name="net.sf.jasperreports.export.html.id"><![CDATA[$V{BreakNum}+"heading"]]></propertyExpression>
-					<printWhenExpression><![CDATA[!T($F{StartDateQuestionLabel}).isEmpty()]]></printWhenExpression>
+					<printWhenExpression><![CDATA[!T($F{StartDateQuestionLabel}).isEmpty() || !T($F{EndDateQuestionLabel}).isEmpty()]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
 					<font isBold="true"/>
@@ -258,7 +258,7 @@ IF("YouHospital".equals($F{BreaksTypeAnswer}), "Customer - hospital", IF("DPHosp
 		</band>
 		<band height="18" splitType="Immediate">
 			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-			<printWhenExpression><![CDATA[!T($F{StartDateQuestionLabel}).isEmpty()]]></printWhenExpression>
+			<printWhenExpression><![CDATA[!T($F{StartDateQuestionLabel}).isEmpty() || !T($F{EndDateQuestionLabel}).isEmpty()]]></printWhenExpression>
 			<frame>
 				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="53cb527a-85f9-42e3-b4e0-9683fff7458a">
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
@@ -283,7 +283,7 @@ IF("YouHospital".equals($F{BreaksTypeAnswer}), "Customer - hospital", IF("DPHosp
 		</band>
 		<band height="18" splitType="Immediate">
 			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-			<printWhenExpression><![CDATA[!T($F{StartTimeQuestionLabel}).isEmpty()]]></printWhenExpression>
+			<printWhenExpression><![CDATA[!T($F{StartTimeQuestionLabel}).isEmpty() || !T($F{EndTimeQuestionLabel}).isEmpty()]]></printWhenExpression>
 			<frame>
 				<reportElement key="" positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="7267e7bc-bd6a-4422-a0ce-c4c8d3d7cc78">
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
@@ -338,7 +338,7 @@ IF("YouHospital".equals($F{BreaksTypeAnswer}), "Customer - hospital", IF("DPHosp
 		</band>
 		<band height="18" splitType="Immediate">
 			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-			<printWhenExpression><![CDATA[!T($F{EndDateQuestionLabel}).isEmpty()]]></printWhenExpression>
+			<printWhenExpression><![CDATA[!T($F{EndDateQuestionLabel}).isEmpty() || !T($F{StartDateQuestionLabel}).isEmpty()]]></printWhenExpression>
 			<frame>
 				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="9dab6481-d669-471b-a60e-bef58fbb083a">
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
@@ -368,7 +368,7 @@ IF("YouHospital".equals($F{BreaksTypeAnswer}), "Customer - hospital", IF("DPHosp
 		</band>
 		<band height="18" splitType="Immediate">
 			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-			<printWhenExpression><![CDATA[!T($F{EndTimeQuestionLabel}).isEmpty()]]></printWhenExpression>
+			<printWhenExpression><![CDATA[!T($F{EndTimeQuestionLabel}).isEmpty() || !T($F{StartTimeQuestionLabel}).isEmpty()]]></printWhenExpression>
 			<frame>
 				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="9a38385c-8738-437c-a618-8c3e15f8e1d3">
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
