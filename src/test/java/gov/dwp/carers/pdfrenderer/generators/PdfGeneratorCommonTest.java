@@ -57,11 +57,11 @@ public class PdfGeneratorCommonTest extends FileHelper {
             final JasperPrint jasperPrint = pdfGenerator.generateFrom(dataSource, getVersion(xml));
             pdfGenerator.exportReportToStream(jasperPrint, new FileOutputStream(pdfFileLocation));
         } catch(InvalidSourceFormatException e) {
-            generatorResult = "";
+            generatorResult = "exception";
         } catch (Exception e) {
             fail();
         }
-        assertThat(generatorResult , is(""));
+        assertThat(generatorResult , is("exception"));
     }
 
     @Test
