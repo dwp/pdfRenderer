@@ -46,20 +46,13 @@ public class PdfContentMatchingClaimTest extends PdfContentMatching {
     private void extractClaimPDFTestForVersion(final String version) throws Exception {
         LOGGER.info("extractClaimPDFTestForVersion for version:" + version);
         final XMLClaimData xmlClaimData = new XMLClaimData();
-        contentForClaimVersion(version, 1, pdfGenerator, xmlClaimData.functionalTestCase1);
-        contentForClaimVersion(version, 2, pdfGenerator, xmlClaimData.functionalTestCase2);
-        contentForClaimVersion(version, 3, pdfGenerator, xmlClaimData.functionalTestCase3);
-        contentForClaimVersion(version, 4, pdfGenerator, xmlClaimData.functionalTestCase4);
-        contentForClaimVersion(version, 5, pdfGenerator, xmlClaimData.functionalTestCase5);
-        contentForClaimVersion(version, 6, pdfGenerator, xmlClaimData.functionalTestCase6);
-        contentForClaimVersion(version, 7, pdfGenerator, xmlClaimData.functionalTestCase7);
-        contentForClaimVersion(version, 8, pdfGenerator, xmlClaimData.functionalTestCase8);
-        contentForClaimVersion(version, 9, pdfGenerator, xmlClaimData.functionalTestCase9);
-        contentForClaimVersion(version, 10, pdfGenerator, xmlClaimData.functionalTestCase10);
-        contentForClaimVersion(version, 11, pdfGenerator, xmlClaimData.functionalTestCase11);
-        contentForClaimVersion(version, 12, pdfGenerator, xmlClaimData.functionalTestCase12);
-        contentForClaimVersion(version, 13, pdfGenerator, xmlClaimData.functionalTestCase13);
-        contentForClaimVersion(version, 14, pdfGenerator, xmlClaimData.functionalTestCase14);
-        contentForClaimVersion(version, 15, pdfGenerator, xmlClaimData.functionalTestCase15);
+        contentForClaimVersion(version, 1, pdfGenerator, xmlClaimData.functionalMandatoryTest);
+        contentForClaimVersion(version, 2, pdfGenerator, xmlClaimData.functionalEducationTest);
+        contentForClaimVersion(version, 3, pdfGenerator, xmlClaimData.functionalIncomesTest);
+        contentForClaimVersion(version, 4, pdfGenerator, xmlClaimData.functionalOtherMoneyTest);
+        contentForClaimVersion(version, 5, pdfGenerator, xmlClaimData.functionalBreaksTest);
+        contentForClaimVersion(version, 6, pdfGenerator, xmlClaimData.functionalSelfEmploymentTest);
+        contentForClaimVersion(version, 7, pdfGenerator, xmlClaimData.functionalPayDetailsTest);
+        contentForClaimVersion(version, 8, pdfGenerator, xmlClaimData.functionalConsentTest);
     }
 }

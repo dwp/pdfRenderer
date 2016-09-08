@@ -13,94 +13,59 @@ import java.util.function.Function;
  * Created by peterwhitehead on 09/05/2016.
  */
 public class XMLClaimData extends TestUtils {
-    public Function <String, List<String>> functionalTestCase1 = xml -> {
-        final List<String> details = getFunctionalTestCase1(xml);
+    public Function <String, List<String>> functionalMandatoryTest = xml -> {
+        final List<String> details = getFunctionalMandatoryTest(xml);
         return details;
     };
 
-    public Function <String, List<String>> functionalTestCase2 = xml -> {
-        final List<String> details = getFunctionalTestCase2(xml);
+    public Function <String, List<String>> functionalEducationTest = xml -> {
+        final List<String> details = getFunctionalEducationTest(xml);
         return details;
     };
 
-    public Function <String, List<String>> functionalTestCase3 = xml -> {
-        final List<String> details = getFunctionalTestCase3(xml);//
+    public Function <String, List<String>> functionalIncomesTest = xml -> {
+        final List<String> details = getFunctionalIncomesTest(xml);//
         return details;
     };
 
-    public Function <String, List<String>> functionalTestCase4 = xml -> {
-        final List<String> details = getFunctionalTestCase4(xml);//
+    public Function <String, List<String>> functionalOtherMoneyTest = xml -> {
+        final List<String> details = getFunctionalOtherMoneyTest(xml);//
         return details;
     };
 
-    public Function <String, List<String>> functionalTestCase5 = xml -> {
-        final List<String> details = getFunctionalTestCase5(xml);//
+    public Function <String, List<String>> functionalBreaksTest = xml -> {
+        final List<String> details = getFunctionalBreaksTest(xml);//
         return details;
     };
 
-    public Function <String, List<String>> functionalTestCase6 = xml -> {
-        final List<String> details = getFunctionalTestCase6(xml);//
+    public Function <String, List<String>> functionalSelfEmploymentTest = xml -> {
+        final List<String> details = getFunctionalSelfEmploymentTest(xml);//
         return details;
     };
 
-    public Function <String, List<String>> functionalTestCase7 = xml -> {
-        final List<String> details = getFunctionalTestCase7(xml);//
+    public Function <String, List<String>> functionalPayDetailsTest = xml -> {
+        final List<String> details = getFunctionalPayDetailsTest(xml);//
         return details;
     };
 
-    public Function <String, List<String>> functionalTestCase8 = xml -> {
-        final List<String> details = getFunctionalTestCase8(xml);//
+    public Function <String, List<String>> functionalConsentTest = xml -> {
+        final List<String> details = getFunctionalConsentTest(xml);//
         return details;
     };
 
-    public Function <String, List<String>> functionalTestCase9 = xml -> {
-        final List<String> details = getFunctionalTestCase9(xml);//
-        return details;
-    };
-
-    public Function <String, List<String>> functionalTestCase10 = xml -> {
-        final List<String> details = getFunctionalTestCase10(xml);//
-        return details;
-    };
-
-    public Function <String, List<String>> functionalTestCase11 = xml -> {
-        final List<String> details = getFunctionalTestCase11(xml);//
-        return details;
-    };
-
-    public Function <String, List<String>> functionalTestCase12 = xml -> {
-        final List<String> details = getFunctionalTestCase12(xml);//
-        return details;
-    };
-
-    public Function <String, List<String>> functionalTestCase13 = xml -> {
-        final List<String> details = getFunctionalTestCase13(xml);//
-        return details;
-    };
-
-    public Function <String, List<String>> functionalTestCase14 = xml -> {
-        final List<String> details = getFunctionalTestCase14(xml);//
-        return details;
-    };
-
-    public Function <String, List<String>> functionalTestCase15 = xml -> {
-        final List<String> details = getFunctionalTestCase15(xml);//
-        return details;
-    };
-
-    private List<String> getFunctionalTestCase1(final String xml) {
+    private List<String> getFunctionalMandatoryTest(final String xml) {
         final List<Pair<String, String>> details = functionalTestCaseMandatoryFields(xml);
         return convertListOfPairsToListOfString(details);
     }
 
-    private List<String> getFunctionalTestCase2(final String xml) {
+    private List<String> getFunctionalEducationTest(final String xml) {
         final List<Pair<String, String>> details = functionalTestCaseMandatoryFields(xml);
         details.addAll(sectionAboutYourPartner(xml));
         details.addAll(sectionAboutYourEducation(xml));
         return convertListOfPairsToListOfString(details);
     }
 
-    private List<String> getFunctionalTestCase3(final String xml) {
+    private List<String> getFunctionalIncomesTest(final String xml) {
         final List<Pair<String, String>> details = functionalTestCaseMandatoryFields(xml);
         details.addAll(sectionAboutYourPartner(xml));
         details.addAll(careBreaks(xml));
@@ -111,74 +76,33 @@ public class XMLClaimData extends TestUtils {
         return convertListOfPairsToListOfString(details);
     }
 
-    private List<String> getFunctionalTestCase4(final String xml) {
-        final List<Pair<String, String>> details = functionalTestCaseMandatoryFields(xml);
-        details.addAll(careBreaks(xml));
-        return convertListOfPairsToListOfString(details);
-    }
-
-    private List<String> getFunctionalTestCase5(final String xml) {
-        final List<Pair<String, String>> details = functionalTestCaseMandatoryFields(xml);
-        details.addAll(sectionAboutYourPartner(xml));
-        details.addAll(careBreaks(xml));
-        return convertListOfPairsToListOfString(details);
-    }
-
-    private List<String> getFunctionalTestCase6(final String xml) {
+    private List<String> getFunctionalOtherMoneyTest(final String xml) {
         final List<Pair<String, String>> details = functionalTestCaseMandatoryFields(xml);
         details.addAll(sectionAboutOtherMoney(xml));
         return convertListOfPairsToListOfString(details);
     }
 
-    private List<String> getFunctionalTestCase7(final String xml) {
+    private List<String> getFunctionalBreaksTest(final String xml) {
         final List<Pair<String, String>> details = functionalTestCaseMandatoryFields(xml);
         details.addAll(sectionAboutYourPartner(xml));
         details.addAll(careBreaks(xml));
         return convertListOfPairsToListOfString(details);
     }
 
-    private List<String> getFunctionalTestCase8(final String xml) {
+    private List<String> getFunctionalSelfEmploymentTest(final String xml) {
         final List<Pair<String, String>> details = functionalTestCaseMandatoryFields(xml);
         details.addAll(sectionAboutSelfEmployment(xml));
         return convertListOfPairsToListOfString(details);
     }
 
-    private List<String> getFunctionalTestCase9(final String xml) {
-        final List<Pair<String, String>> details = functionalTestCaseMandatoryFields(xml);
-        return convertListOfPairsToListOfString(details);
-    }
-
-    private List<String> getFunctionalTestCase10(final String xml) {
-        final List<Pair<String, String>> details = functionalTestCaseMandatoryFields(xml);
-        return convertListOfPairsToListOfString(details);
-    }
-
-    private List<String> getFunctionalTestCase11(final String xml) {
-        final List<Pair<String, String>> details = functionalTestCaseMandatoryFields(xml);
-        details.addAll(sectionCustomerConsent(xml));
-        return convertListOfPairsToListOfString(details);
-    }
-
-    private List<String> getFunctionalTestCase12(final String xml) {
-        final List<Pair<String, String>> details = functionalTestCaseMandatoryFields(xml);
-        details.addAll(sectionCustomerConsent(xml));
-        return convertListOfPairsToListOfString(details);
-    }
-
-    private List<String> getFunctionalTestCase13(final String xml) {
+    private List<String> getFunctionalPayDetailsTest(final String xml) {
         final List<Pair<String, String>> details = functionalTestCaseMandatoryFields(xml);
         details.addAll(sectionCustomerConsent(xml));
         details.addAll(sectionAboutYourPayDetails(xml));
         return convertListOfPairsToListOfString(details);
     }
 
-    private List<String> getFunctionalTestCase14(final String xml) {
-        final List<Pair<String, String>> details = functionalTestCaseMandatoryFields(xml);
-        details.addAll(sectionCustomerConsent(xml));
-        return convertListOfPairsToListOfString(details);
-    }
-
-    private List<String> getFunctionalTestCase15(final String xml) {
+    private List<String> getFunctionalConsentTest(final String xml) {
         final List<Pair<String, String>> details = functionalTestCaseMandatoryFields(xml);
         details.addAll(sectionCustomerConsent(xml));
         return convertListOfPairsToListOfString(details);
