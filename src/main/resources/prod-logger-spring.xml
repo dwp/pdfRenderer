@@ -1,0 +1,60 @@
+<configuration scan="true" scanPeriod="30 seconds">
+    <appender name="APPLICATION_LOG" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH:-${user.home}}/logs/${application.name}-application.log</file>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>${LOG_PATH:-${user.home}}/logs/application_archive/${application.name}-application.%d{yyyy-MM-dd}.log
+            </fileNamePattern>
+            <!-- keep 30 days' worth of history -->
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>%d - [%thread] - %logger{15} - %message%n%xException{5}</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="GELF" class="me.moocar.logbackgelf.GelfUDPAppender">
+        <remoteHost>grayloghost</remoteHost>
+        <port>12201</port>
+        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+            <layout class="me.moocar.logbackgelf.GelfLayout">
+                <fullMessageLayout class="ch.qos.logback.classic.PatternLayout">
+                    <pattern>%d - [%thread] - %logger{15} - %message%n%xException{5}</pattern>
+                </fullMessageLayout>
+                <useLoggerName>true</useLoggerName>
+                <useThreadName>true</useThreadName>
+                <useMarker>true</useMarker>
+                <includeFullMDC>true</includeFullMDC>
+            </layout>
+        </encoder>
+    </appender>
+
+    <appender name="ASYNC_APPLICATION_LOG" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="APPLICATION_LOG"/>
+    </appender>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d - [%thread] - %logger{15} - %message%n%xException{5}</pattern>
+        </encoder>
+    </appender>
+
+    <!--Only log play messages to stdout -->
+    <logger name="pdf" level="INFO" additivity="false">
+        <appender-ref ref="STDOUT"/>
+    </logger>
+
+    <!-- log application messages to root logger appenders -->
+    <logger name="application" level="DEBUG"/>
+
+    <!-- Note: The appenders are cumulative.
+    A logger will log to the appenders attached to itself (if any) as well as all the appenders attached to its ancestors.
+     The top ancestor is root; thus all loggers will log to the application log and graylog. -->
+    <root level="INFO">
+        <appender-ref ref="GELF"/>
+        <appender-ref ref="ASYNC_APPLICATION_LOG"/>
+    </root>
+
+</configuration>
