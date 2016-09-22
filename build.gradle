@@ -173,6 +173,10 @@ test {
     testLogging.showStandardStreams = true
 }
 
+processResources {
+    exclude('**/*.jrxml')
+}
+
 bootRun {
     addResources = true
 }
