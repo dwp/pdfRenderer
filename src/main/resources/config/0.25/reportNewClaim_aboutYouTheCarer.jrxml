@@ -1,0 +1,970 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
+<!-- 2016-06-24T13:02:50 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYouTheCarer" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a66aead0-a2c6-4cbf-be45-bb0d849ea1f9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<property name="net.sf.jasperreports.text.save.line.breaks" value="true"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<template><![CDATA[$P{TEMPLATE_DIR} + "StyleTemplateClaim.jrtx"]]></template>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="TEMPLATE_DIR" class="java.lang.String">
+		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="xPath">
+		<![CDATA[/]]>
+	</queryString>
+	<field name="AboutYouTheCarerWantsContactEmailAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/WantsContactEmail/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerWantsContactEmailQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/WantsContactEmail/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerEmailAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Email/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerEmailQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Email/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AbouYouTheCarerDayTimeTelephoneNumberAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/DayTimePhoneNumber/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerSpeechOrHearingDifficultyQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/TextPhoneContact/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerSpeechOrHearingDifficultyAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/TextPhoneContact/Answer]]></fieldDescription>
+	</field>
+	<field name="ResidencyNationalityQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/Nationality/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="ResidencyNationalityAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/Nationality/Answer]]></fieldDescription>
+	</field>
+	<field name="ResidencyNationalityAnotherCountryQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/ActualNationality/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="ResidencyNationalityAnotherCountryAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/ActualNationality/Answer]]></fieldDescription>
+	</field>
+	<field name="ResidencyAlwaysLivedInUKQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/AlwaysLivedInUK/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="ResidencyAlwaysLivedInUKAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/AlwaysLivedInUK/Answer]]></fieldDescription>
+	</field>
+	<field name="ResidencyLiveInUKNowQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/LiveInUKNow/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="ResidencyLiveInUKNowAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/LiveInUKNow/Answer]]></fieldDescription>
+	</field>
+	<field name="ResidencyArrivedInUKQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/ArrivedInUK/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="ResidencyArrivedInUKAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/ArrivedInUK/Answer]]></fieldDescription>
+	</field>
+	<field name="ResidencyArrivedInUKDateQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/ArrivedInUKDate/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="ResidencyArrivedInUKDateAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/ArrivedInUKDate/Answer]]></fieldDescription>
+	</field>
+	<field name="ResidencyTimeOutsideGBLast3YearsQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/TimeOutsideGBLast3Years/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="ResidencyTimeOutsideGBLast3YearsAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/TimeOutsideGBLast3Years/Answer]]></fieldDescription>
+	</field>
+	<field name="ResidencyTripDetailsQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/TripDetails/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="ResidencyTripDetailsAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/TripDetails/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerEEAGuardQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/EEA/EEAGuardQuestion/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerEEAGuardAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/EEA/EEAGuardQuestion/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerReceiveEEAPensionsBenefitsQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/EEA/EEAReceivePensionsBenefits/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerReceiveEEAPensionsBenefitsAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/EEA/EEAReceivePensionsBenefits/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerReceiveEEAPensionsBenefitsDetailsQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/EEA/EEAReceivePensionsBenefitsDetails/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerReceiveEEAPensionsBenefitsDetailsAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/EEA/EEAReceivePensionsBenefitsDetails/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerWorkingEEAInsuranceQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/EEA/EEAWorkingInsurance/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerWorkingEEAInsuranceAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/EEA/EEAWorkingInsurance/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerWorkingEEAInsuranceDetailsQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/EEA/EEAWorkingInsuranceDetails/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerWorkingEEAInsuranceDetailsAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/EEA/EEAWorkingInsuranceDetails/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerHavePartnerQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/HavePartner/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerHavePartnerAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/HavePartner/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerEmployedQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Employed/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerEmployedAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Employed/Answer]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerSelfEmployedQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployed/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerSelfEmployedAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/SelfEmployed/Answer]]></fieldDescription>
+	</field>
+	<field name="displayMoneyEEA" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/OtherBenefits/EEA]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerClaimDateQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/DateOfClaim/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AboutYouTheCarerClaimDateAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/DateOfClaim/Answer]]></fieldDescription>
+	</field>
+	<field name="AbouYouTheCarerMaritalStatusAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/MaritalStatus/Answer]]></fieldDescription>
+	</field>
+	<field name="AbouYouTheCarerDayTimeTelephoneNumberQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/DayTimePhoneNumber/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AbouYouTheCarerMaritalStatusQuestionLabel" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/MaritalStatus/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AbouYouTheCarerCared35HoursBeforeQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Cared35HoursBefore/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AbouYouTheCarerCared35HoursBeforeAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Cared35HoursBefore/Answer]]></fieldDescription>
+	</field>
+	<field name="AbouYouTheCarerDateStartCaringQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/DateStartCaring/QuestionLabel]]></fieldDescription>
+	</field>
+	<field name="AbouYouTheCarerDateStartCaringAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/DateStartCaring/Answer]]></fieldDescription>
+	</field>
+	<field name="OriginTag" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/Origin]]></fieldDescription>
+	</field>
+	<field name="ResidencyArrivedInUKFromAnswer" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/ArrivedInUKFrom/Answer]]></fieldDescription>
+	</field>
+	<field name="ResidencyArrivedInUKFromQuestion" class="java.lang.String">
+		<fieldDescription><![CDATA[/DWPBody/DWPCATransaction/DWPCAClaim/Residency/ArrivedInUKFrom/QuestionLabel]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="20" splitType="Immediate">
+			<staticText>
+				<reportElement key="" style="HeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="20" forecolor="#000000" uuid="4174c253-6428-4e9c-b5d7-a74b83203f95">
+					<property name="net.sf.jasperreports.export.html.id" value="HeadingPart1AboutYouTheCarer"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle" markup="styled">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PART 1 - ABOUT YOU - THE CARER]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="1" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<subreport>
+				<reportElement key="" positionType="Float" x="0" y="0" width="594" height="1" isRemoveLineWhenBlank="true" uuid="7cddcfe6-34c5-4310-9447-f3964df987f4">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource) $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/Claimant")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_aboutYouTheCarer_YourDetails.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="20" splitType="Immediate">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement key="" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="20" forecolor="#000000" uuid="b5b52f77-e6bb-4d7e-8b20-6dc4cab23a22">
+					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourContactDetails"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle" markup="styled">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Your contact details]]></text>
+			</staticText>
+		</band>
+		<band height="1" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<subreport>
+				<reportElement key="" positionType="Float" x="0" y="0" width="594" height="1" isRemoveLineWhenBlank="true" uuid="86c767c0-52a4-498e-93cf-7c3ab6dd5cba">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TEMPLATE_DIR">
+					<subreportParameterExpression><![CDATA[$P{TEMPLATE_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource) $P{REPORT_DATA_SOURCE}).subDataSource("/DWPBody/DWPCATransaction/DWPCAClaim/Claimant/Address/Answer")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportNewClaim_addressForNestedReports.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="20" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement key="" style="SubHeadingClaim" positionType="Float" x="0" y="0" width="594" height="20" uuid="c64490ca-003f-47b5-8859-b206542a08b8">
+					<property name="net.sf.jasperreports.export.html.id" value="aboutyou-howwecontact-q"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle" markup="styled">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[How we can contact you]]></text>
+			</staticText>
+		</band>
+		<band height="18" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<printWhenExpression><![CDATA[!T($F{AbouYouTheCarerDayTimeTelephoneNumberQuestionLabel}).isEmpty()]]></printWhenExpression>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="c5d36ccd-315b-45eb-a5e5-448921adfbef">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="b6b48e2b-db12-45a5-887a-3c88bcae4893">
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-phone-q"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[T($F{AbouYouTheCarerDayTimeTelephoneNumberQuestionLabel})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="0cc3309a-996b-48fb-a96b-48857a605f39">
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-phone-a"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[T($F{AbouYouTheCarerDayTimeTelephoneNumberAnswer})]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="18" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="a9e16191-8e74-485f-830f-4188924b270d">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="a3503460-4846-4b36-9cd7-3196914e4dcb">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-textphone-q"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[T($F{AboutYouTheCarerSpeechOrHearingDifficultyQuestion})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="08474f6d-a180-4641-a3f4-0b477843d386">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-textphone-a"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[T($F{AboutYouTheCarerSpeechOrHearingDifficultyAnswer})]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="18" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="1b94d233-f81a-4ed3-a033-a52903f52a8e">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="a3503460-4846-4b36-9cd7-3196914e4dca">
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-gotemail-q"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[T($F{AboutYouTheCarerWantsContactEmailQuestion})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="18474f6d-a180-4641-a3f4-0b477843d38a">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-gotemail-a"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[T($F{AboutYouTheCarerWantsContactEmailAnswer})]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="36" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<frame>
+				<reportElement key="" positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="36" isRemoveLineWhenBlank="true" uuid="221b7f65-9788-4ebd-91ce-273e84cc6913">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="a3503461-4846-4b36-9cd7-3196914e4dcd">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-email-q"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[T($F{AboutYouTheCarerEmailQuestion})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement key="" style="Answer" positionType="Float" x="0" y="18" width="594" height="18" isRemoveLineWhenBlank="true" uuid="19474f61-a180-4641-a3f4-0b477843d38d">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-email-a"/>
+					</reportElement>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[T($F{AboutYouTheCarerEmailAnswer})]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="20" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement style="SubHeadingClaim" positionType="Float" x="0" y="0" width="594" height="20" uuid="11925ae7-8287-429b-9d41-e4b447f228fd">
+					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourClaimDate"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle" markup="styled">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Your claim date]]></text>
+			</staticText>
+		</band>
+		<band height="18" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="9f73da1e-0b3b-4a4b-b3c3-34bc978f5f62">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="5b4d1eca-9216-4389-849e-14c074093a3b">
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-claimdate-q"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{AboutYouTheCarerClaimDateQuestion})]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="4f2b464f-d57e-4053-a5e8-9e65da71d763">
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-claimdate-a"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{AboutYouTheCarerClaimDateAnswer})]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="18" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="56e97c46-ae71-486e-bf25-7379eb06b573">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="54866046-98c6-453a-a415-0cc9f244cc25">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-35before-q"/>
+					</reportElement>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[T($F{AbouYouTheCarerCared35HoursBeforeQuestion})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="682ae823-950e-4545-8ddc-e2d35ff31029">
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-35before-a"/>
+					</reportElement>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[T($F{AbouYouTheCarerCared35HoursBeforeAnswer})]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="18" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="d41763d7-b019-41ef-a582-bd86b130b5f5">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="8cb87da2-3374-4475-9ef6-db42c518e938">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-startcaring-a"/>
+					</reportElement>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[T($F{AbouYouTheCarerDateStartCaringAnswer})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="fe9c3714-334a-4196-8e8b-6d02f38757a6">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-startcaring-q"/>
+					</reportElement>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[T($F{AbouYouTheCarerDateStartCaringQuestion})]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="20" splitType="Immediate">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="20" forecolor="#000000" uuid="f647fa16-31cd-4b73-8c88-855fe67cf124">
+					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingYourNationalityAndResidency"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle" markup="styled">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Your nationality and residency]]></text>
+			</staticText>
+		</band>
+		<band height="18" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="2051fa4e-4b04-4569-a21a-c8e0643f53ad">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="590422b4-d0b9-41bc-9175-a9a5eef8d1a7">
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-natgb-q"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{ResidencyNationalityQuestion})]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="4a186ab4-1950-4c0c-95a1-3a9b27096e2d">
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-natgb-a"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<printWhenExpression><![CDATA[T($F{ResidencyNationalityAnotherCountryAnswer}).isEmpty()]]></printWhenExpression>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{ResidencyNationalityAnswer})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="06829694-2b1a-45df-8b32-142988c3f223">
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-natgb-a"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<printWhenExpression><![CDATA[!T($F{ResidencyNationalityAnotherCountryAnswer}).isEmpty()]]></printWhenExpression>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{ResidencyNationalityAnotherCountryAnswer})]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="18" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="eebe1b8d-27d5-45ed-8923-0f6e3f959fc4">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="424cac41-dbaf-4f3d-a115-7b3869dea303">
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-alwaysuk-q"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{ResidencyAlwaysLivedInUKQuestion})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="68585033-51a3-480a-93dd-c4d55649983f">
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-alwaysuk-a"/>
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{ResidencyAlwaysLivedInUKAnswer})]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="18" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<printWhenExpression><![CDATA[!T($F{ResidencyLiveInUKNowQuestion}).isEmpty()]]></printWhenExpression>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="fa9999ab-b600-49e7-8abb-5fc208351fa9">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="cd4f26c0-27b3-4691-a28f-ad55f282194f">
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-uknow-q"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{ResidencyLiveInUKNowQuestion})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="5cdf704b-caee-471e-a33d-c4f3d8e674d1">
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-uknow-a"/>
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{ResidencyLiveInUKNowAnswer})]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="18" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<printWhenExpression><![CDATA[!T($F{ResidencyArrivedInUKQuestion}).isEmpty()]]></printWhenExpression>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="61d0cb68-39c5-4b6f-8544-9361b6deb13d">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="4a288ce2-a10d-4d9a-a06b-462ef9b2340d">
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-arrived-q"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{ResidencyArrivedInUKQuestion})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="c3d93968-29a0-4e5e-9816-f3b3661b055c">
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-arrived-a"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<printWhenExpression><![CDATA[!T($F{ResidencyArrivedInUKAnswer}).isEmpty()]]></printWhenExpression>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{ResidencyArrivedInUKAnswer}).equalsIgnoreCase("less") ? "Less than 3 years ago" : "More than 3 years ago"]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="18" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<printWhenExpression><![CDATA[!T($F{ResidencyArrivedInUKDateQuestion}).isEmpty()]]></printWhenExpression>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="b248733c-a494-4969-9895-fb9eaaec7e01">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="1" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="7578fcc3-a7e7-4ec4-b73c-238903e2065a">
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-arriveddate-q"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{ResidencyArrivedInUKDateQuestion})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="ed19cadf-aac4-4657-8c36-f3d6f63f06d8">
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-arriveddate-a"/>
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{ResidencyArrivedInUKDateAnswer})]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="18" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<printWhenExpression><![CDATA[!T($F{ResidencyArrivedInUKFromQuestion}).isEmpty()]]></printWhenExpression>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="9cbbe3bb-4d55-4993-97f0-313908499795">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="26f04003-d6ff-4093-9f63-017f421d6fc1">
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-from-q"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{ResidencyArrivedInUKFromQuestion})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="a738b2b8-c0b3-4a55-900b-ab3d5c504f35">
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-from-a"/>
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{ResidencyArrivedInUKFromAnswer})]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="20" splitType="Immediate">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement style="SubHeadingClaim" positionType="Float" x="0" y="0" width="594" height="20" forecolor="#000000" uuid="ec6ad3bc-6469-4ef5-9ebd-878ccf50b1da">
+					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingTimeOutsideOfEnglandScotlandWales"/>
+					<printWhenExpression><![CDATA[!T($F{OriginTag}).equalsIgnoreCase("GB-NIR")]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle" markup="styled">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Time outside of England, Scotland or Wales]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubHeadingClaim" positionType="Float" x="0" y="0" width="594" height="20" forecolor="#000000" uuid="d2d3eab0-fc7e-4f40-9cbc-419687cc29db">
+					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingTimeOutsideOfEnglandScotlandWales"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<printWhenExpression><![CDATA[T($F{OriginTag}).equalsIgnoreCase("GB-NIR")]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle" markup="styled">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Time outside of Northern Ireland]]></text>
+			</staticText>
+		</band>
+		<band height="18" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="9f2fabaa-6031-4bc3-944b-82759f61fbd1">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="26f04003-d6ff-4093-9f63-017f421d6fc1">
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-outsidegb-q"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{ResidencyTimeOutsideGBLast3YearsQuestion})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="a738b2b8-c0b3-4a55-900b-ab3d5c504f35">
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-outsidegb-a"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{ResidencyTimeOutsideGBLast3YearsAnswer})]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="36" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<printWhenExpression><![CDATA[!T($F{ResidencyTripDetailsQuestion}).isEmpty()]]></printWhenExpression>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="36" isRemoveLineWhenBlank="true" uuid="53c36529-d19e-47bd-b4f8-49105b9b3ebf">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="83447bbb-e8e8-4d5d-9154-e4f194ba3f45">
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-tripdetails-q"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{ResidencyTripDetailsQuestion})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Answer" positionType="Float" x="0" y="18" width="594" height="18" isRemoveLineWhenBlank="true" uuid="a2a1c0f0-a335-44a4-a5d9-1df4932359bc">
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-tripdetails-a"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{ResidencyTripDetailsAnswer})]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="20" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement key="" style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="badfdb41-025e-422b-9da8-49bb6e64b71c">
+					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingMoneyEEA"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<printWhenExpression><![CDATA[!T($F{displayMoneyEEA}).isEmpty()]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle" markup="styled">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Payments from abroad and working abroad]]></text>
+			</staticText>
+		</band>
+		<band height="18" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="71e2e1ff-a68a-43be-b25a-6d121895285c">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="2ee48a2a-af42-4f38-a3e4-cc17663ca86f">
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-eea-worked-q"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[T($F{AboutYouTheCarerEEAGuardQuestion})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="8fa3ef39-6d2c-4298-9282-8ceeac0f04fc">
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-eaa-worked-a"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[T($F{AboutYouTheCarerEEAGuardAnswer})]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="18" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="b58bd5d0-95e8-4124-ba5c-3240ec720330">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="2ee48a2a-af42-4f38-a3e4-cc17663ca86e">
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-eea-pension-q"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[T($F{AboutYouTheCarerReceiveEEAPensionsBenefitsQuestion})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="8fa3ef39-6d2c-4298-9282-8ceeac0f04fb">
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-eea-pension-a"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[T($F{AboutYouTheCarerReceiveEEAPensionsBenefitsAnswer})]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="36" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<printWhenExpression><![CDATA[!T($F{AboutYouTheCarerReceiveEEAPensionsBenefitsDetailsQuestion}).isEmpty()]]></printWhenExpression>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="36" isRemoveLineWhenBlank="true" uuid="9e34e3b6-9759-4227-aa16-f7a27918bd7a">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="f64abea0-79dc-4d40-8ce7-85ca8c2dc888">
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-eea-pensiondetail-q"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[T($F{AboutYouTheCarerReceiveEEAPensionsBenefitsDetailsQuestion})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Answer" positionType="Float" x="0" y="18" width="594" height="18" isRemoveLineWhenBlank="true" uuid="272a83f2-7d4b-42b6-803e-d2b1b8d6f14f">
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-eea-pensiondetail-a"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[T($F{AboutYouTheCarerReceiveEEAPensionsBenefitsDetailsAnswer})]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="18" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="d6b8c067-b708-44ec-a695-3b2f622dd648">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="6c8a52e6-05ef-4ac9-9de7-e3a8261ba2ff">
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-ins-q"/>
+					</reportElement>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[T($F{AboutYouTheCarerWorkingEEAInsuranceQuestion})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="42e462db-6f31-4e2f-89de-627b9fdb58a5">
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-eea-ins-a"/>
+					</reportElement>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[T($F{AboutYouTheCarerWorkingEEAInsuranceAnswer})]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="36" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<printWhenExpression><![CDATA[!T($F{AboutYouTheCarerWorkingEEAInsuranceDetailsQuestion}).isEmpty()]]></printWhenExpression>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="36" isRemoveLineWhenBlank="true" uuid="e364e2e9-d413-4b50-9ae7-a639e9711850">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement key="" positionType="Float" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="6c8a52e6-05ef-4ac2-9de3-e3a8261ba2aa">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-eea-insdetail-q"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[T($F{AboutYouTheCarerWorkingEEAInsuranceDetailsQuestion})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement key="" style="Answer" positionType="Float" x="0" y="18" width="594" height="18" isRemoveLineWhenBlank="true" uuid="42e462db-6f31-4e22-89d2-627b9fdb5899">
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-eea-insdetail-a"/>
+					</reportElement>
+					<textElement verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[T($F{AboutYouTheCarerWorkingEEAInsuranceDetailsAnswer})]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="38" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement style="SubHeadingClaim" positionType="Float" x="0" y="0" width="594" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="e6f266ef-a89c-4838-8827-f094edabe302">
+					<property name="net.sf.jasperreports.export.html.id" value="SubHeadingMaritalStatus"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<printWhenExpression><![CDATA[!T($F{AbouYouTheCarerMaritalStatusAnswer}).isEmpty()]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle" markup="styled">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Marital status]]></text>
+			</staticText>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="20" width="594" height="18" isRemoveLineWhenBlank="true" uuid="0c5b3cff-df1f-4019-97c0-47b10569e2a1">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="e104909a-47f9-46d7-a59a-7fdc28aa6a38">
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-marital-q"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{AbouYouTheCarerMaritalStatusQuestionLabel})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement key="" style="Answer" positionType="Float" x="420" y="0" width="174" height="18" isRemoveLineWhenBlank="true" uuid="771cb2d1-54f2-42b7-9743-74b57d507655">
+						<property name="net.sf.jasperreports.export.html.id" value="aboutyou-marital-a"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[T($F{AbouYouTheCarerMaritalStatusAnswer})]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,181 @@
+commit eb5831124a939fa9a8b455de20b9bb9150eb8e1a
+Merge: e4739df efcbe0f
+Author: David Hutchinson <david@scrumconnect.com>
+Date:   Wed Aug 3 15:42:50 2016 +0100
+
+    merge
+
+commit efcbe0fc3ed46a3e61f2528b87dc9886eb0333ba
+Author: David Hutchinson <david@scrumconnect.com>
+Date:   Wed Aug 3 13:57:31 2016 +0100
+
+    bumped version
+
+commit e7c67be8ebaf4a2ae346b444195089d19c9a2f56
+Author: Colin Greenwood <colingreenwood@scrumconnect.com>
+Date:   Fri Jul 29 09:19:30 2016 +0100
+
+    CADS-1183 : Circs pdf bank details header too small and cutting off bank word so increase height from 20 to 40 to allow wrapping.
+
+commit 39165222db5add9fbb7c8208d27923afae09284e
+Author: Colin Greenwood <colingreenwood@scrumconnect.com>
+Date:   Mon Jul 25 13:25:04 2016 +0100
+
+    CADS-1171 : Add html ids to header fields.
+
+commit be74908a8c68fe7c8409df7cda9e0bc95af39a85
+Author: Colin Greenwood <colingreenwood@scrumconnect.com>
+Date:   Mon Jul 25 12:02:56 2016 +0100
+
+    CADS-1164 : About You Carer Dual provision show in PDF summary table when other carer getting UC. Fix html ids to be unique.
+
+commit 00ebf244e065a2e357097944f20b2a9c0792a768
+Author: Colin Greenwood <colingreenwood@scrumconnect.com>
+Date:   Mon Jul 25 11:48:36 2016 +0100
+
+    CADS-1164 : About You Carer Dual provision show in PDF summary table when other carer getting UC.
+
+commit d34bd62d10da3216f5f2d608ddadee557a64c306
+Author: David Hutchinson <david@scrumconnect.com>
+Date:   Thu Jul 21 15:26:04 2016 +0100
+
+    modified gradle.build
+
+commit e4739df73848d9934ad7573a08bfa623855a92e8
+Author: David Hutchinson <david@scrumconnect.com>
+Date:   Thu Jul 21 14:59:55 2016 +0100
+
+    merged
+
+commit acb7c88e25776b6a045d678c57157978ae4f21dc
+Merge: 59645f4 302d3e7
+Author: David Hutchinson <david@scrumconnect.com>
+Date:   Thu Jul 21 14:22:32 2016 +0100
+
+    merged
+
+commit 302d3e7076b1b90c1fc1f6266fac2ec2b259cdb0
+Author: Peter Whitehead <peter@scrumconnect.com>
+Date:   Thu Jul 21 13:45:31 2016 +0100
+
+    CADS-1169: id needs adding to 'Qualifying Benefit' label on the summary table
+
+commit 59645f47e6efc465ce7373f181887cc6f396a83a
+Author: David Hutchinson <david@scrumconnect.com>
+Date:   Thu Jul 21 11:19:59 2016 +0100
+
+    bumped version in gradle
+
+commit fbc786c520ccd37e5f7c52e68749259af6bc7e14
+Author: David Hutchinson <david@scrumconnect.com>
+Date:   Wed Jul 20 16:24:38 2016 +0100
+
+    updated version and build.gradle
+
+commit d7ca1820ceaab6e3c07ab5870163ece7afd1a4a1
+Author: David Hutchinson <david@scrumconnect.com>
+Date:   Wed Jul 20 12:42:09 2016 +0100
+
+    bumped version
+
+commit 47b0e12db35a8e67486332b21e03da0f8a209c4e
+Author: David Hutchinson <david@scrumconnect.com>
+Date:   Wed Jul 20 10:54:02 2016 +0100
+
+    updated .gitignore
+
+commit fff8c16ead6a7f7448b26b9e2c613fa453935a5d
+Author: David Hutchinson <david@scrumconnect.com>
+Date:   Wed Jul 20 09:34:25 2016 +0100
+
+    bumped version
+
+commit 82300d76f33a66a10d06d6220da64c0dc72cf892
+Author: Colin Greenwood <colingreenwood@scrumconnect.com>
+Date:   Wed Jul 13 15:33:20 2016 +0100
+
+    CADS-1137 : Additional questions relating to other carer claiming uc for caring for dp. OtherCarer, OtherCarerUc, OtherCarerUcDetails. Added new fields to CareYouProvide pdf. Replaced old redundant fields Cared35HoursBefore and DateStartCaring no longer in schema.
+
+commit b6f765716fac31d2fbb17a17faee187fb7df3295
+Author: Peter Whitehead <peter@scrumconnect.com>
+Date:   Tue Jul 12 12:29:17 2016 +0100
+
+    CADS-1107: Align with changes to java inspection service
+
+commit 5f2d33df999c210f318e07c37b70cfc45ac5a216
+Author: Peter Whitehead <peter@scrumconnect.com>
+Date:   Thu Jul 7 11:21:22 2016 +0100
+
+    CADS-715 : Changes to get logback working replicated from CR - removed httpPort
+
+commit 03961c000453ca3be044d638d932c27bcbf81c2d
+Author: Peter Whitehead <peter@scrumconnect.com>
+Date:   Thu Jul 7 09:41:38 2016 +0100
+
+    CADS-715 : Changes to get logback working replicated from CR - changed env.name = lab
+
+commit 94bc3fcfd86e69beab2e0fe6bbf39f2fa82a1c65
+Author: Peter Whitehead <peter@scrumconnect.com>
+Date:   Wed Jul 6 15:02:03 2016 +0100
+
+    CADS-715 : Changes to get logback working replicated from CR - changed env.name = lab
+
+commit b6df2ac7e7b262b1d4343d6fc8bf8df579eb3400
+Author: Peter Whitehead <peter@scrumconnect.com>
+Date:   Wed Jul 6 10:51:59 2016 +0100
+
+    CADS-715 : Changes to get logback working replicated from CR
+
+commit 4873b12a8e4ad3133b5eb0bafb7a7d703991e5ad
+Author: Peter Whitehead <peter@scrumconnect.com>
+Date:   Tue Jul 5 14:28:22 2016 +0100
+
+    CADS-1141 : Claim: PDF missing ID attribute for the heading label and question for Claim Date
+
+commit 06e78f49ed11aa7a323f7df6a03948faf4eee9a3
+Author: Peter Whitehead <peter@scrumconnect.com>
+Date:   Tue Jul 5 14:27:35 2016 +0100
+
+    CADS-858 : Claim & Circs: PDF Tidy up
+
+commit 55b9db87f3e456a185f3a7f8d12aee98393e9714
+Author: Colin Greenwood <colingreenwood@scrumconnect.com>
+Date:   Fri Jul 1 17:38:26 2016 +0100
+
+    CADS-1133 : Summary table nationality ids was duplicated for outgb and alwaysgb.
+
+commit 613807da0f36d7d588a1debdd15da48d8c0cfe0b
+Author: Colin Greenwood <colingreenwood@scrumconnect.com>
+Date:   Fri Jul 1 16:41:28 2016 +0100
+
+    CADS-623 : Workflow assistance under 16 over 65 fixup PDF summary to stretch when long assisted decision like when under 16.
+
+commit 3dbcb5c71f4c72b67a10b6d6410aeb8c88d372ed
+Author: Peter Whitehead <peter@scrumconnect.com>
+Date:   Tue Jun 28 15:49:23 2016 +0100
+
+    CADS-1107: Align with changes to java inspection service
+
+commit 1a910161695b147027ab7d0059abbbf84261aa6d
+Author: Peter Whitehead <peter@scrumconnect.com>
+Date:   Tue Jun 28 14:18:29 2016 +0100
+
+    CADS-1107: Align with changes to java inspection service
+
+commit 63e50e81b2c88cabcf9033078aa6b8e204926fa8
+Author: Peter Whitehead <peter@scrumconnect.com>
+Date:   Mon Jun 27 10:36:50 2016 +0100
+
+    CADS-858 : Claim & Circs: PDF Tidy up
+
+commit 51e95acc120413b7ee2b6b7c0cb1e06de64752cd
+Author: Peter Whitehead <peter@scrumconnect.com>
+Date:   Mon Jun 27 10:11:24 2016 +0100
+
+    CADS-858 : Claim & Circs: PDF Tidy up
+
+commit d75a592a874c6ee06a16e37c3463edb3a618e19a
+Author: Peter Whitehead <peter@scrumconnect.com>
+Date:   Mon Jun 27 08:57:09 2016 +0100
+
+    CADS-858 : Claim & Circs: PDF Tidy up

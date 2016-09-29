@@ -1,12 +1,12 @@
 buildscript {
     ext {
-        springBootVersion = '1.3.6.RELEASE'
+        springBootVersion = '1.4.0.RELEASE'
     }
     repositories {
         jcenter()
         mavenCentral()
         maven {
-            url 'https://build.3cbeta.co.uk/artifactory/repo'
+            url "${artifactory_url}repo"
             credentials {
                 username = "${artifactory_user}"
                 password = "${artifactory_password}"
@@ -41,7 +41,7 @@ allprojects {
     apply plugin: 'maven-publish'
     apply plugin: 'spring-boot'
     apply plugin: 'com.github.gmazelier.jasperreports'
-    version = '3.03-SNAPSHOT'
+    version = '3.04-SNAPSHOT'
     archivesBaseName = 'p1'
     group = 'gov.dwp.carers'
     sourceCompatibility = 1.8
@@ -51,7 +51,7 @@ allprojects {
 String repo = version.endsWith('SNAPSHOT') ? 'libs-snapshot-local' : 'libs-release-local'
 
 artifactory {
-    contextUrl = "http://build.3cbeta.co.uk:8080/artifactory/"   //The base Artifactory URL if not overridden by the publisher/resolver
+    contextUrl = "${artifactory_url}"   //The base Artifactory URL if not overridden by the publisher/resolver
     publish {
         mavenLocal()
         repository {
@@ -109,7 +109,7 @@ dependencies {
     compile("com.adobe.xmp:xmpcore:5.1.2")
     compile("gov.dwp.carers:fonts:1.0")
     compile("xalan:xalan:2.7.2")
-    compile("gov.dwp.carers:xmlcommons:8.11-SNAPSHOT")
+    compile("gov.dwp.carers:xmlcommons:8.16-SNAPSHOT")
     compile("gov.dwp.carers:carerscommon:8.03-SNAPSHOT")
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.boot:spring-boot-starter-jetty")
