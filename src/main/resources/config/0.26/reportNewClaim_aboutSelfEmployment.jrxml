@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
-<!-- 2016-09-15T17:41:44 -->
+<!-- 2016-10-13T12:21:47 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportNewClaim_aboutYourPartner" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="2c76a7f8-deb9-45af-83f2-c12559d20c72">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
@@ -588,13 +588,14 @@
 				</textField>
 			</frame>
 		</band>
-		<band height="56" splitType="Immediate">
+		<band height="36" splitType="Immediate">
 			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 			<printWhenExpression><![CDATA[!T($F{AboutEmploymentAdditionaInfoQuestion}).isEmpty()]]></printWhenExpression>
 			<staticText>
-				<reportElement style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="20" isRemoveLineWhenBlank="true" uuid="3b7a4779-53b3-423c-8f6b-9bc5f86ff79f">
+				<reportElement style="SubHeadingClaim" positionType="Float" mode="Opaque" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="3b7a4779-53b3-423c-8f6b-9bc5f86ff79f">
 					<property name="net.sf.jasperreports.export.html.id" value="semp-addinfo"/>
 					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
 					<font isBold="true"/>
@@ -602,14 +603,11 @@
 				<text><![CDATA[Additional information for your work]]></text>
 			</staticText>
 			<frame>
-				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="20" width="594" height="18" isRemoveLineWhenBlank="true" uuid="f880728e-27cd-41f0-95f2-736cfef9fdbd">
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="18" width="594" height="18" isRemoveLineWhenBlank="true" uuid="f880728e-27cd-41f0-95f2-736cfef9fdbd">
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 				</reportElement>
-				<box>
-					<bottomPen lineWidth="0.5"/>
-				</box>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 					<reportElement positionType="Float" x="0" y="0" width="392" height="18" isRemoveLineWhenBlank="true" uuid="a14ed3ff-d2dc-4de1-99b0-5b418ebe8d8e">
 						<property name="net.sf.jasperreports.export.html.id" value="semp-addinfo-q"/>
@@ -625,27 +623,27 @@
 					<textFieldExpression><![CDATA[T($F{AboutEmploymentAdditionaInfoAnswer})]]></textFieldExpression>
 				</textField>
 			</frame>
+		</band>
+		<band height="18" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<printWhenExpression><![CDATA[!T($F{AboutEmploymentAdditionaInfoOther}).isEmpty()]]></printWhenExpression>
 			<frame>
-				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="38" width="594" height="18" isRemoveLineWhenBlank="true" uuid="b4a6a6c2-7b51-466f-8417-8d2ecf918cf0">
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="1eb97340-9434-4809-b712-2734ebda5f2f">
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
-					<printWhenExpression><![CDATA[!T($F{AboutEmploymentAdditionaInfoOther}).isEmpty()]]></printWhenExpression>
 				</reportElement>
 				<box>
 					<bottomPen lineWidth="0.5"/>
 				</box>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-					<reportElement key="" style="Answer" positionType="Float" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="5991c9b7-69ad-4f2c-b62e-61d26b774bc6">
+					<reportElement key="" style="Answer" positionType="Float" x="0" y="0" width="594" height="18" isRemoveLineWhenBlank="true" uuid="8bb1352e-4350-47ef-9f29-c241f8e32afb">
 						<property name="net.sf.jasperreports.export.html.id" value="semp-addinfo-other"/>
 						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 					</reportElement>
-					<box>
-						<bottomPen lineWidth="0.0"/>
-					</box>
 					<textFieldExpression><![CDATA[T($F{AboutEmploymentAdditionaInfoOther})]]></textFieldExpression>
 				</textField>
 			</frame>
 		</band>
 	</detail>
 </jasperReport>
+
