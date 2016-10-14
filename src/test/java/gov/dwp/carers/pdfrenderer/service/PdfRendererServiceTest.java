@@ -51,7 +51,7 @@ public class PdfRendererServiceTest {
 
     @Test
     public void errorWhenNonXMLRequest() throws Exception {
-        XmlDataSource source=new XmlDataSource("", "testReport", "", "This is not xml!");
+        XmlDataSource source=new XmlDataSource("", "testReport", "1.00", "This is not xml!");
         final byte[] response = pdfRendererService.generatePdf(source);
         assertThat(new String(response, "UTF-8"), is("<Error>Failed to convert XML for transactionId:</Error>"));
     }

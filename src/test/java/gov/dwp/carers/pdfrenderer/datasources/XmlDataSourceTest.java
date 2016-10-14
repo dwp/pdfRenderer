@@ -13,7 +13,7 @@ public class XmlDataSourceTest {
     public void errorWhenBadXMLtoJRXmlDataSource() {
         String xml = "not xml!";
         String expectedError="XmlDataSource failed to convert XML likely bad xml";
-        XmlDataSource dataSource = new XmlDataSource("1234", "testReport", "", xml);
+        XmlDataSource dataSource = new XmlDataSource("1234", "testReport", "1.00", xml);
         assertThatThrownBy(() -> dataSource.convertToJRDataSource()).isInstanceOf(InvalidXmlException.class).hasMessageContaining(expectedError);
     }
 
@@ -29,7 +29,7 @@ public class XmlDataSourceTest {
     @Test
     public void convertXMLtoJRXmlDataSource() {
         String xml = "<Body><q1>Question</q1></Body>";
-        XmlDataSource dataSource = new XmlDataSource("1234", "testReport", "", xml);
+        XmlDataSource dataSource = new XmlDataSource("1234", "testReport", "1.00", xml);
         assertThat(dataSource.convertToJRDataSource(), is(instanceOf(JRXmlDataSource.class)));
     }
 }

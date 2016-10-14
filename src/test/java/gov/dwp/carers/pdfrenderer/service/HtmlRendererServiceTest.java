@@ -36,14 +36,6 @@ public class HtmlRendererServiceTest {
     }
 
     @Test
-    public void correctlyTransformGoodDataNoVersion() throws Exception {
-        XmlDataSource source = new XmlDataSource("", "testReport", "", goodXml);
-        final String response = htmlRendererService.generateHtml(source);
-        assertThat(response, containsString("QUESTION1"));
-        assertThat(response, containsString("ANSWER1"));
-    }
-
-    @Test
     public void correctlyTransformGoodDataWithVersion() throws Exception {
         XmlDataSource source = new XmlDataSource("", "testReport", "1.00", goodXml);
         final String response = htmlRendererService.generateHtml(source);
@@ -53,7 +45,7 @@ public class HtmlRendererServiceTest {
 
     @Test
     public void errorWhenNonXMLRequest() throws Exception {
-        XmlDataSource source=new XmlDataSource("", "testReport", "", "This is not xml!");
+        XmlDataSource source=new XmlDataSource("", "testReport", "1.00", "This is not xml!");
         final String status = htmlRendererService.generateHtml(source);
         assertThat(status, is("<Error>Failed to convert XML for transactionId:</Error>"));
     }
