@@ -10,7 +10,6 @@ import gov.dwp.carers.pdfrenderer.generators.SuccessOrFailure;
 import gov.dwp.carers.monitor.Counters;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperPrint;
-import netscape.javascript.JSException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
