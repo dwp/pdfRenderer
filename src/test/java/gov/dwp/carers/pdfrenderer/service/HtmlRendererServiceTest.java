@@ -2,57 +2,59 @@ package gov.dwp.carers.pdfrenderer.service;
 
 import gov.dwp.carers.pdfrenderer.controllers.PdfServiceApplication;
 import gov.dwp.carers.pdfrenderer.datasources.XmlDataSource;
-import gov.dwp.carers.pdfrenderer.generators.HtmlGenerator;
-import gov.dwp.carers.monitor.Counters;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import gov.dwp.carers.pdfrenderer.testdata.ClaimBuilder;
 import javax.inject.Inject;
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
-/**
- * Created by peterwhitehead on 11/05/2016.
- */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = PdfServiceApplication.class)
-@TestPropertySource(locations="classpath:test.application.properties")
+@TestPropertySource(locations = "classpath:test.application.properties")
 public class HtmlRendererServiceTest {
     @Inject
     private HtmlRendererService htmlRendererService;
 
+    String goodXml = "<Body><TestData><Question>QUESTION1</Question><Answer>ANSWER1</Answer></TestData></Body>";
+
     @Test
-    public void acceptXMLAndReturnBADREQUESTErrorIfUnknownXMLType() throws Exception {
-        final String status = htmlRendererService.generateHtml("<Invalid>type</Invalid>");
-        assertThat(status, is("<Error>Failed to render XML for transactionId: []</Error>"));
+    public void errorWhenNoReportType() throws Exception {
+        XmlDataSource source = new XmlDataSource("", "", "", "<data></data>");
+        final String response = htmlRendererService.generateHtml(source);
+        assertThat(response, is("<Error>Report name not specified unable to generate report</Error>"));
     }
 
     @Test
-    public void notAcceptNonXMLRequest() throws Exception {
-        final String status = htmlRendererService.generateHtml("Hello");
-        assertThat(status, is("<Error>Failed to render XML for transactionId: []</Error>"));
+    public void errorWhenBadReportType() throws Exception {
+        XmlDataSource source = new XmlDataSource("", "badReportName", "", "<data></data>");
+        final String response = htmlRendererService.generateHtml(source);
+        assertThat(response, is("<Error>Failed to find report for :/badReportName</Error>"));
     }
 
     @Test
-    public void returnInternalErrorCodeIfCouldNotGenerateHTML() throws Exception {
-        final Counters counters = mock(Counters.class);
-        final HtmlGenerator reportGenerator = mock(HtmlGenerator.class);
-        final HtmlRendererService htmlRendererServiceMock = new HtmlRendererService(reportGenerator, counters);
-        when(reportGenerator.generateFrom(Mockito.any(XmlDataSource.class), Mockito.anyString())).thenThrow(Throwable.class);
-        final String status = htmlRendererServiceMock.generateHtml(ClaimBuilder.goodClaim());
-        assertThat(status, is("<Error>Failed to render XML for transactionId: [NFM33DB]</Error>"));
+    public void correctlyTransformGoodDataNoVersion() throws Exception {
+        XmlDataSource source = new XmlDataSource("", "testReport", "", goodXml);
+        final String response = htmlRendererService.generateHtml(source);
+        assertThat(response, containsString("QUESTION1"));
+        assertThat(response, containsString("ANSWER1"));
     }
 
     @Test
-    public void acceptValidXMLAndGenerateAHTML() throws Exception {
-        final String status = htmlRendererService.generateHtml(ClaimBuilder.goodClaim());
-        assertThat(status, containsString("Transaction: NFM33DB"));
+    public void correctlyTransformGoodDataWithVersion() throws Exception {
+        XmlDataSource source = new XmlDataSource("", "testReport", "1.00", goodXml);
+        final String response = htmlRendererService.generateHtml(source);
+        assertThat(response, containsString("QUESTION1"));
+        assertThat(response, containsString("ANSWER1"));
+    }
+
+    @Test
+    public void errorWhenNonXMLRequest() throws Exception {
+        XmlDataSource source=new XmlDataSource("", "testReport", "", "This is not xml!");
+        final String status = htmlRendererService.generateHtml(source);
+        assertThat(status, is("<Error>Failed to convert XML for transactionId:</Error>"));
     }
 }

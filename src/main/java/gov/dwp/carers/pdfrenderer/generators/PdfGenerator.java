@@ -42,7 +42,7 @@ public class PdfGenerator extends ReportGenerator {
 
     private void setPath() {
         if (iccPath.charAt(0) == FORWARD_SLASH.charAt(0) && this.getClass().getResource(iccPath) != null) {
-            iccPath = iccPath.substring(iccPath.indexOf(FORWARD_SLASH.charAt(0)) +1);
+            iccPath = iccPath.substring(iccPath.indexOf(FORWARD_SLASH.charAt(0)) + 1);
         } else if (iccPath.charAt(0) == FORWARD_SLASH.charAt(0)) {
             iccPath = "." + iccPath;
         }
@@ -74,9 +74,10 @@ public class PdfGenerator extends ReportGenerator {
 
     @Inject
     public PdfGenerator(final @Value("${icc.path}") String iccPath,
-                        final @Value("${jasper.folder}") String jasperLocation,
-                        final @Value("${jrxml.folder}") String jrxmlLocation) {
-        super(jasperLocation, jrxmlLocation);
+                        final @Value("${jasper.local.folder}") String jasperLocalLocation,
+                        final @Value("${jasper.reports.folder}") String jasperReportsFolderLocation,
+                        final @Value("${jasper.reportsjar.folder}") String jasperReportsJarLocation) {
+        super(jasperLocalLocation, jasperReportsFolderLocation, jasperReportsJarLocation);
         this.iccPath = iccPath;
     }
 }
