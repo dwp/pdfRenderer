@@ -18,9 +18,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-/**
- * Created by peterwhitehead on 04/05/2016.
- */
 @Component
 public class ReportGenerator {
     private static final Logger LOGGER = LoggerFactory.getLogger(ReportGenerator.class);
@@ -38,10 +35,14 @@ public class ReportGenerator {
 
             // The reports renderer looks for jrtx template files in the TEMPLATE_DIR so needs to be set and files present
             final Map<String, Object> parameters = new ConcurrentHashMap<>();
-            String jasperFolder = jasperFileLocation.getPath().replaceAll(GETFOLDERREGEX, "");
+            String jarfileprefix = "";
+            if (jasperFileLocation.getProtocol().equals("jar") && !jasperFileLocation.getPath().startsWith("jar")) {
+                jarfileprefix = "jar:";
+            }
+            String jasperFolder = jarfileprefix + jasperFileLocation.getPath().replaceAll(GETFOLDERREGEX, "") + FORWARD_SLASH;
             LOGGER.info("Setting TEMPLATE_DIR to:" + jasperFolder);
-            parameters.put("SUBREPORT_DIR", jasperFolder + FORWARD_SLASH);
-            parameters.put("TEMPLATE_DIR", jasperFolder + FORWARD_SLASH);
+            parameters.put("SUBREPORT_DIR", jasperFolder);
+            parameters.put("TEMPLATE_DIR", jasperFolder);
 
             final JasperReport jasperReport = (JasperReport) JRLoader.loadObject(jasperFileLocation);
             LOGGER.info("ReportGenerator filling jasper report");
@@ -74,14 +75,14 @@ public class ReportGenerator {
             URL url = JRLoader.class.getClassLoader().getResource(location + FORWARD_SLASH + filepath);
             if (file.exists()) {
                 try {
-                    LOGGER.info("ReportGenerator found jasper report file at:"+file.getName());
                     fileFoundUrl = file.toURI().toURL();
+                    LOGGER.info("ReportGenerator found " + fileFoundUrl.getProtocol() + "jasper report file at:" + file.getName());
                     break;
                 } catch (Exception e) {
                     // just ignore and look for jasper on the other paths
                 }
             } else if (url != null) {
-                LOGGER.info("ReportGenerator found jasper report on classpath at:"+url.getFile());
+                LOGGER.info("ReportGenerator found " + url.getProtocol() + " jasper report on classpath at:" + url.getFile());
                 fileFoundUrl = url;
                 break;
             }
@@ -128,6 +129,6 @@ public class ReportGenerator {
             LOGGER.debug("ReportGenerator adding 1 reportsJar jasper location to jasper locations :" + jasperReportsJarLocation);
             jasperLocations.add(jasperReportsJarLocation);
         }
-        LOGGER.info("ReportGenerator added "+jasperLocations.size()+" report locations");
+        LOGGER.info("ReportGenerator added " + jasperLocations.size() + " report locations");
     }
 }
