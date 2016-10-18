@@ -39,6 +39,13 @@ public class PdfServiceApplication {
 
     @PostConstruct
     public void onStart() {
+
+        System.out.println("============================ COLING onStart .... =====================");
+        String cp = System.getProperty("java.class.path");
+        String[] cps = cp.split(":");
+        for (int n = 0; n < cps.length; n++) {
+            System.out.println("classpath:" + n + "->" + cps[n]);
+        }
         if (LOGGER.isInfoEnabled()) {
             LOGGER.info("Starting application with - serverPort:" + serverPort + " envName:" + envName + " appName:" + appName);
             LOGGER.info("RS (RenderingService) is now starting.");
