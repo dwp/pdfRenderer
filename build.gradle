@@ -123,6 +123,7 @@ dependencies {
             'org.springframework.boot:spring-boot-starter-test'
     )
     runtime("me.moocar:logback-gelf:0.3")
+    runtime("gov.dwp.carers:pdfreports:1.02-SNAPSHOT")
 }
 
 //Use this for publishing to local Maven repo
