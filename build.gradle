@@ -109,7 +109,7 @@ dependencies {
     compile("com.adobe.xmp:xmpcore:6.1.10")
     compile("gov.dwp.carers:fonts:1.0")
     compile("xalan:xalan:2.7.2")
-    compile("gov.dwp.carers:xmlcommons:8.22-SNAPSHOT")
+    compile("gov.dwp.carers:xmlcommons:8.24-SNAPSHOT")
     compile("gov.dwp.carers:carerscommon:8.06-SNAPSHOT")
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.boot:spring-boot-starter-jetty")
@@ -123,7 +123,7 @@ dependencies {
             'org.springframework.boot:spring-boot-starter-test'
     )
     runtime("me.moocar:logback-gelf:0.3")
-    runtime("gov.dwp.carers:pdfreports:1.02-SNAPSHOT")
+    runtime("gov.dwp.carers:pdfreports:1.03-SNAPSHOT")
 }
 
 //Use this for publishing to local Maven repo
