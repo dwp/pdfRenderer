@@ -73,12 +73,4 @@ public class HtmlGenerator extends ReportGenerator {
         }
         return print;
     }
-
-    @Inject
-    public HtmlGenerator(
-            final @Value("${jasper.local.folder}") String jasperLocalLocation,
-            final @Value("${jasper.reports.folder}") String jasperReportsFolderLocation,
-            final @Value("${jasper.reportsjar.folder}") String jasperReportsJarLocation) {
-        super(jasperLocalLocation, jasperReportsFolderLocation, jasperReportsJarLocation);
-    }
 }

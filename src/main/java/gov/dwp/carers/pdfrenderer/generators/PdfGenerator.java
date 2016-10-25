@@ -23,6 +23,7 @@ import java.io.OutputStream;
 public class PdfGenerator extends ReportGenerator {
     private static final Logger LOGGER = LoggerFactory.getLogger(PdfGenerator.class);
 
+    @Value("${icc.path}")
     private String iccPath;
 
     private SimplePdfExporterConfiguration initConfig() {
@@ -70,14 +71,5 @@ public class PdfGenerator extends ReportGenerator {
             LOGGER.error(e.getMessage(), e);
         }
         return successOrFailure;
-    }
-
-    @Inject
-    public PdfGenerator(final @Value("${icc.path}") String iccPath,
-                        final @Value("${jasper.local.folder}") String jasperLocalLocation,
-                        final @Value("${jasper.reports.folder}") String jasperReportsFolderLocation,
-                        final @Value("${jasper.reportsjar.folder}") String jasperReportsJarLocation) {
-        super(jasperLocalLocation, jasperReportsFolderLocation, jasperReportsJarLocation);
-        this.iccPath = iccPath;
     }
 }

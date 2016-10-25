@@ -41,7 +41,7 @@ allprojects {
     apply plugin: 'maven-publish'
     apply plugin: 'spring-boot'
     apply plugin: 'com.github.gmazelier.jasperreports'
-    version = '4.02-SNAPSHOT'
+    version = '4.03-SNAPSHOT'
     archivesBaseName = 'p1'
     group = 'gov.dwp.carers'
     sourceCompatibility = 1.8
@@ -123,7 +123,6 @@ dependencies {
             'org.springframework.boot:spring-boot-starter-test'
     )
     runtime("me.moocar:logback-gelf:0.3")
-    runtime("gov.dwp.carers:pdfreports:1.03-SNAPSHOT")
 }
 
 //Use this for publishing to local Maven repo
