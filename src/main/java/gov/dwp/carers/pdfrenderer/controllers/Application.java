@@ -15,12 +15,9 @@ import utils.RenameThread;
 
 import javax.inject.Inject;
 
-/**
- * Created by peterwhitehead on 03/05/2016.
- */
+// ColinG @EnableWebMvc breaks Pdf extended characters like euro and bullet.
 @RestController
 @Component
-@EnableWebMvc
 public class Application {
     private static final Logger LOGGER = LoggerFactory.getLogger(Application.class);
     private static final String CLAIM_JASPER_TEMPLATE = "reportClaimWithSummary";
