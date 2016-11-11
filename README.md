@@ -38,8 +38,7 @@ and uses gradle to build
 Using the PDF Renderer
 ======================
 
-Call the renderer supplying only the claim XML.  The report version is
-determined from the XML itself.
+Call the renderer supplying only the claim XML, transaction id, report name and version.
 
 e.g.
 
@@ -169,6 +168,7 @@ o.s.b.c.e.j.JettyEmbeddedServletContainer - Jetty started on port(s)
 2016-07-08 09:28:20,143 - \[INFO\] - \[main\] -
 controllers.PdfServiceApplication - Started PdfServiceApplication in
 5.316 seconds (JVM running for 5.901)</pre>
+
 
 Stopping the pdfRenderer
 ========================
