@@ -18,13 +18,13 @@ Releases:
 
 PDF Renderer 4.03
 -----------------
-Download the Latest Release of PDF Renderer library [here](https://github.com/Department-for-Work-and-Pensions/pdfRenderer/releases/4.03-SNAPSHOT/p1-4.03-SNAPSHOT.jar) or the microservice (executable jar with embedded webserver) [here](https://github.com/Department-for-Work-and-Pensions/pdfRenderer/releases/4.03-SNAPSHOT/p1-4.03-SNAPSHOT-full.jar).
+Download the Latest Release of PDF Renderer library [here](https://github.com/Department-for-Work-and-Pensions/pdfRenderer/tree/master/releases/4.03-SNAPSHOT/p1-4.03-SNAPSHOT.jar) or the microservice (executable jar with embedded webserver) [here](https://github.com/Department-for-Work-and-Pensions/pdfRenderer/tree/master/releases/4.03-SNAPSHOT/p1-4.03-SNAPSHOT-full.jar).
 
-Get the [source](https://github.com/Department-for-Work-and-Pensions/pdfRenderer/releases/4.03-SNAPSHOT/p1-4.03-SNAPSHOT-sources.jar), [release notes](https://github.com/Department-for-Work-and-Pensions/pdfRenderer/docs/releaseNotes/4.04-SNAPSHOT.releaseNotes.md), [Javadoc API documents](https://github.com/Department-for-Work-and-Pensions/pdfRenderer/javadocs/4.03-SNAPSHOT/index.html)
+Get the [source](https://github.com/Department-for-Work-and-Pensions/pdfRenderer/tree/master/releases/4.03-SNAPSHOT/p1-4.03-SNAPSHOT-sources.jar), [release notes](https://github.com/Department-for-Work-and-Pensions/pdfRenderer/docs/releaseNotes/4.04-SNAPSHOT.releaseNotes.md), [Javadoc API documents](https://github.com/Department-for-Work-and-Pensions/pdfRenderer/tree/master/javadocs/4.03-SNAPSHOT/index.html)
 
 All Releases
 --------------
-All releases are available [here](https://github.com/Department-for-Work-and-Pensions/pdfRenderer/releases)
+All releases are available [here](https://github.com/Department-for-Work-and-Pensions/pdfRenderer/tree/master/releases)
 
 Building the PDF Renderer:
 ===========
@@ -43,7 +43,7 @@ determined from the XML itself.
 
 e.g.
 
-[claim.xml](https://github.com/Department-for-Work-and-Pensions/pdfRenderer/docs/examples/claim.xml)
+[claim.xml](https://github.com/Department-for-Work-and-Pensions/pdfRenderer/tree/master/docs/examples/claim.xml)
 <pre>
   &lt;DWPBody xsi:schemaLocation="http://www.govtalk.gov.uk/dwp/carers-allowance file:/future/0.21/schema/ca/CarersAllowance\_Schema.xsd"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -243,11 +243,11 @@ similarly if you change the url to http://127.0.0.1:9010/pdf
 
 ### **Example Files**
 
-**[claim.xml](https://github.com/Department-for-Work-and-Pensions/pdfRenderer/docs/examples/claim.xml)**
+**[claim.xml](https://github.com/Department-for-Work-and-Pensions/pdfRenderer/tree/master/docs/examples/claim.xml)**
 
-**[claim.html](https://github.com/Department-for-Work-and-Pensions/pdfRenderer/docs/examples/claim.html)**
+**[claim.html](https://github.com/Department-for-Work-and-Pensions/pdfRenderer/tree/master/docs/examples/claim.html)**
 
-**[claim.pdf](https://github.com/Department-for-Work-and-Pensions/pdfRenderer/docs/examples/claim.pdf)**
+**[claim.pdf](https://github.com/Department-for-Work-and-Pensions/pdfRenderer/tree/master/docs/examples/claim.pdf)**
 
 Reports
 =======
