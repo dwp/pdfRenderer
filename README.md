@@ -20,7 +20,7 @@ PDF Renderer 4.03
 -----------------
 Download the Latest Release of PDF Renderer library [here](https://github.com/Department-for-Work-and-Pensions/pdfRenderer/tree/master/releases/4.03-SNAPSHOT/p1-4.03-SNAPSHOT.jar) or the microservice (executable jar with embedded webserver) [here](https://github.com/Department-for-Work-and-Pensions/pdfRenderer/tree/master/releases/4.03-SNAPSHOT/p1-4.03-SNAPSHOT-full.jar).
 
-Get the [source](https://github.com/Department-for-Work-and-Pensions/pdfRenderer/tree/master/releases/4.03-SNAPSHOT/p1-4.03-SNAPSHOT-sources.jar), [release notes](https://github.com/Department-for-Work-and-Pensions/pdfRenderer/docs/releaseNotes/4.04-SNAPSHOT.releaseNotes.md), [Javadoc API documents](https://github.com/Department-for-Work-and-Pensions/pdfRenderer/tree/master/javadocs/4.03-SNAPSHOT/index.html)
+Get the [source](https://github.com/Department-for-Work-and-Pensions/pdfRenderer/tree/master/releases/4.03-SNAPSHOT/p1-4.03-SNAPSHOT-sources.jar), [release notes](https://github.com/Department-for-Work-and-Pensions/pdfRenderer/tree/master/docs/releaseNotes/4.04-SNAPSHOT.releaseNotes.md), [Javadoc API documents](https://github.com/Department-for-Work-and-Pensions/pdfRenderer/tree/master/javadocs/4.03-SNAPSHOT/index.html)
 
 All Releases
 --------------
