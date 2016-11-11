@@ -249,6 +249,15 @@ similarly if you change the url to http://127.0.0.1:9010/pdf
 
 **[claim.pdf](https://github.com/Department-for-Work-and-Pensions/pdfRenderer/docs/examples/claim.pdf)**
 
+Reports
+=======
+
+The reports used to render the data are included in the pdfRenderer
+executable jar (/config/&lt;report version&gt;/...)
+
+The version required is determined from
+the &lt;DWPBody&gt;/&lt;Version&gt; tag.
+
 Logging
 =======
 
@@ -263,3 +272,12 @@ e.g*.
 application logging
 
 &lt;TODO&gt; for the spring boot logging
+
+Next Steps
+==========
+
+The code is awaiting code review, so there will be some tidying up to
+make it clearer, more consistent and adhere to best practices etc.
+
+The end artefact will be made more general and more flexible, e.g being
+able to define the reports externally
