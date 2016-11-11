@@ -13,6 +13,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+
 import javax.inject.Inject;
 import java.io.OutputStream;
 import java.util.List;
@@ -23,7 +24,7 @@ import java.util.List;
 @Component
 public class HtmlGenerator extends ReportGenerator {
     private static final Logger LOGGER = LoggerFactory.getLogger(HtmlGenerator.class);
-    
+
     @Override
     public SuccessOrFailure exportReportToStream(final JasperPrint print, final OutputStream stream) {
         SuccessOrFailure successOrFailure = new GenerationFailure();
@@ -60,20 +61,16 @@ public class HtmlGenerator extends ReportGenerator {
 
     /**
      * Remove the last empty page from the report
+     *
      * @param print
      * @return
      */
     private JasperPrint removeBlankPage(final JasperPrint print) {
         final List<JRPrintPage> pages = print.getPages();
-        final JRPrintPage lastPage = pages.get(pages.size() -1);
-        if (null != lastPage && lastPage.getElements().size() == 0){
+        final JRPrintPage lastPage = pages.get(pages.size() - 1);
+        if (null != lastPage && lastPage.getElements().size() == 0) {
             pages.remove(lastPage);
         }
         return print;
-    }
-
-    @Inject
-    public HtmlGenerator(final @Value("${jasper.folder}") String jasperLocation, final @Value("${jrxml.folder}") String jrxmlLocation) {
-        super(jasperLocation, jrxmlLocation);
     }
 }

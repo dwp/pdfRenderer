@@ -1,5 +1,6 @@
 package gov.dwp.carers.pdfrenderer.service;
 
+import gov.dwp.carers.pdfrenderer.datasources.ReportDataSource;
 import gov.dwp.carers.pdfrenderer.generators.PdfGenerator;
 import gov.dwp.carers.monitor.Counters;
 import org.springframework.stereotype.Component;
@@ -12,8 +13,8 @@ import javax.inject.Inject;
 public class PdfRendererService extends RendererService {
     private final PdfGenerator reportGenerator;
 
-    public byte[] generatePdf(final String xmlBody) {
-        return outputGeneration(xmlBody, reportGenerator);
+    public byte[] generatePdf(ReportDataSource source) {
+        return outputGeneration(source, reportGenerator);
     }
 
     @Inject

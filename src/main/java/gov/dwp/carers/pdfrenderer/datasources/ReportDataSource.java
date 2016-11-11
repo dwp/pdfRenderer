@@ -8,5 +8,9 @@ import net.sf.jasperreports.engine.JRDataSource;
 public interface ReportDataSource {
     JRDataSource convertToJRDataSource();
 
-    String jasperReportFilenameMatcher();
+    String getTransactionId();
+
+    String getReportName();
+
+    String getReportVersion();
 }

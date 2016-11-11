@@ -4,7 +4,6 @@ import gov.dwp.carers.monitor.MonitorRegistration;
 import gov.dwp.carers.pdfrenderer.monitoring.PdfHealthCheck;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.slf4j.MDC;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.system.ApplicationPidFileWriter;
@@ -14,7 +13,6 @@ import org.springframework.context.annotation.PropertySource;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.inject.Inject;
-import java.net.InetAddress;
 import java.util.Arrays;
 
 /**
@@ -41,18 +39,15 @@ public class PdfServiceApplication {
 
     @PostConstruct
     public void onStart() {
-        try {
-            if (LOGGER.isInfoEnabled()) {
-                LOGGER.info("Starting application with - serverPort:" + serverPort + " envName:" + envName + " appName:" + appName);
-            }
-            MDC.put("httpPort", serverPort);
-            MDC.put("hostName", InetAddress.getLocalHost().getHostName());
-            MDC.put("envName", envName);
-            MDC.put("appName", appName);
-        } catch (Exception e) {
-            LOGGER.error("Failed to initialise MDC " + e.getMessage(), e);
+
+        System.out.println("============================ COLING onStart .... =====================");
+        String cp = System.getProperty("java.class.path");
+        String[] cps = cp.split(":");
+        for (int n = 0; n < cps.length; n++) {
+            System.out.println("classpath:" + n + "->" + cps[n]);
         }
         if (LOGGER.isInfoEnabled()) {
+            LOGGER.info("Starting application with - serverPort:" + serverPort + " envName:" + envName + " appName:" + appName);
             LOGGER.info("RS (RenderingService) is now starting.");
         }
 

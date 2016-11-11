@@ -1,8 +1,7 @@
 package gov.dwp.carers.pdfrenderer.generators;
 
-import gov.dwp.carers.pdfrenderer.datasources.XmlDataSource;
+import gov.dwp.carers.pdfrenderer.datasources.CarersXmlDataSource;
 import net.sf.jasperreports.engine.JasperPrint;
-import org.apache.commons.lang3.StringUtils;
 import java.io.File;
 import java.io.FileOutputStream;
 
@@ -26,8 +25,8 @@ public class FileHelper {
     }
 
     private SuccessOrFailure generateFile(final String fileLocation, final String xml, final ReportGenerator generator) throws Exception {
-        final XmlDataSource dataSource = new XmlDataSource(xml);
-        final JasperPrint print = generator.generateFrom(dataSource, StringUtils.substringBetween(xml, "<Version>", "</Version>"));
+        final CarersXmlDataSource carersData = new CarersXmlDataSource(xml);
+        final JasperPrint print = generator.generateFrom(carersData);
         final FileOutputStream fileOutputStream = new FileOutputStream(fileLocation);
         return generator.exportReportToStream(print, fileOutputStream);
     }
