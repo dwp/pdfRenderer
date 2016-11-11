@@ -167,8 +167,8 @@ o.s.b.c.e.j.JettyEmbeddedServletContainer - Jetty started on port(s)
 
 2016-07-08 09:28:20,143 - \[INFO\] - \[main\] -
 controllers.PdfServiceApplication - Started PdfServiceApplication in
-5.316 seconds (JVM running for 5.901)</pre>
-
+5.316 seconds (JVM running for 5.901)
+</pre>
 
 Stopping the pdfRenderer
 ========================
