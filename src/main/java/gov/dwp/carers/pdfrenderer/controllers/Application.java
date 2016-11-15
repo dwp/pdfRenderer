@@ -68,7 +68,7 @@ public class Application {
             @RequestParam("reportversion") String reportVersion,
             @RequestParam("xml") String xml) {
         RenameThread.renameThreadFromTransactionId(transactionid);
-        LOGGER.info("STARTED /pdf Application.doPDF for transaction:" + transactionid + " reportname:" + reportName + " version:" + reportVersion);
+        LOGGER.info("STARTED /pdf Application.doPDF for transaction:{} reportname:{} version:{}", transactionid, reportName, reportVersion);
         byte[] response = null;
         try {
             XmlDataSource source = new XmlDataSource(transactionid, reportName, reportVersion, xml);
@@ -90,7 +90,7 @@ public class Application {
             @RequestParam("reportversion") String reportVersion,
             @RequestParam("xml") String xml) {
         RenameThread.renameThreadFromTransactionId(transactionid);
-        LOGGER.info("STARTED /html Application.doHTML for transaction:" + transactionid + " reportname:" + reportName + " version:" + reportVersion);
+        LOGGER.info("STARTED /html Application.doHTML for transaction:{} reportname:{} version:{}", transactionid, reportName, reportVersion);
         String response = null;
         try {
             XmlDataSource source = new XmlDataSource(transactionid, reportName, reportVersion, xml);

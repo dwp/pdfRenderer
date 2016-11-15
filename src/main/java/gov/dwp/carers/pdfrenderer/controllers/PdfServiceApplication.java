@@ -10,6 +10,7 @@ import org.springframework.boot.system.ApplicationPidFileWriter;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.PropertySource;
+
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.inject.Inject;
@@ -39,27 +40,21 @@ public class PdfServiceApplication {
 
     @PostConstruct
     public void onStart() {
-        if (LOGGER.isInfoEnabled()) {
-            LOGGER.info("STARTING application with - serverPort:" + serverPort + " envName:" + envName + " appName:" + appName);
-        }
-
+        LOGGER.info("STARTING application with - serverPort:{} envName:{} appName:{}", serverPort, envName, appName);
         monitorRegistration.registerReporters();
-
-        if (LOGGER.isInfoEnabled()) {
-            LOGGER.info("PS (PdfrenderingService) started.");
-        }
+        LOGGER.info("PS (PdfrenderingService) started.");
     }
 
     @PreDestroy
     public void onStop() {
-        LOGGER.info("STOPPING application with - serverPort:" + serverPort + " envName:" + envName + " appName:" + appName);
+        LOGGER.info("STOPPING application with - serverPort:{} envName:{} appName:{}", serverPort, envName, appName);
         monitorRegistration.unRegisterReporters();
         monitorRegistration.unRegisterHealthChecks();
     }
 
     @Inject
     private void registerHealthChecks(final PdfHealthCheck pdfHealthCheck) {
-        LOGGER.info(appName + " - registering health checks.");
+        LOGGER.info("{} - registering health checks.", appName);
         monitorRegistration.registerHealthChecks(Arrays.asList(pdfHealthCheck));
     }
 
