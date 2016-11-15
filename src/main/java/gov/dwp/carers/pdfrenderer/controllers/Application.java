@@ -1,21 +1,19 @@
 package gov.dwp.carers.pdfrenderer.controllers;
 
 import gov.dwp.carers.pdfrenderer.datasources.CarersXmlDataSource;
-import gov.dwp.carers.pdfrenderer.datasources.InvalidSourceFormatException;
 import gov.dwp.carers.pdfrenderer.datasources.XmlDataSource;
-import org.apache.commons.lang3.StringUtils;
+import gov.dwp.exceptions.DwpRuntimeException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 import gov.dwp.carers.pdfrenderer.service.HtmlRendererService;
 import gov.dwp.carers.pdfrenderer.service.PdfRendererService;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import utils.RenameThread;
 
 import javax.inject.Inject;
 
-// ColinG @EnableWebMvc breaks Pdf extended characters like euro and bullet.
+// ColinG beware @EnableWebMvc breaks Pdf extended characters like euro and bullet.
 @RestController
 @Component
 public class Application {
@@ -27,51 +25,83 @@ public class Application {
     private final HtmlRendererService htmlRendererService;
 
     @RequestMapping(value = "/print", method = RequestMethod.POST, consumes = "text/xml")
-    public
     @ResponseBody
-    byte[] generatePDF(@RequestBody final String requestBody) {
+    public byte[] generatePDF(@RequestBody final String requestBody) {
         RenameThread.getTransactionIdAndRenameThread(requestBody);
-        LOGGER.info("generatePDF called with requestBody");
-        CarersXmlDataSource carersData = new CarersXmlDataSource(requestBody);
-        return pdfRendererService.generatePdf(carersData);
+        LOGGER.info("STARTED /print Application.generatePDF with requestBody");
+        byte[] response = null;
+        try {
+            CarersXmlDataSource carersData = new CarersXmlDataSource(requestBody);
+            response = pdfRendererService.generatePdf(carersData);
+        } catch (RuntimeException e) {
+            LOGGER.error("RuntimeException", e);
+            throw new DwpRuntimeException("RuntimeException", e);
+        } finally {
+            LOGGER.info("ENDED /print Application.generatePDF with requestBody");
+        }
+        return response;
     }
 
     @RequestMapping(value = "/show", method = RequestMethod.POST, consumes = "application/xml")
-    public
     @ResponseBody
-    String generateHTML(@RequestBody final String requestBody) {
+    public String generateHTML(@RequestBody final String requestBody) {
         RenameThread.getTransactionIdAndRenameThread(requestBody);
-        LOGGER.info("generateHTML called with requestBody");
-        CarersXmlDataSource carersData = new CarersXmlDataSource(requestBody);
-        return htmlRendererService.generateHtml(carersData);
+        LOGGER.info("STARTED /show Application.generateHTML with requestBody");
+        String response = null;
+        try {
+            CarersXmlDataSource carersData = new CarersXmlDataSource(requestBody);
+            response = htmlRendererService.generateHtml(carersData);
+        } catch (RuntimeException e) {
+            LOGGER.error("RuntimeException", e);
+            throw new DwpRuntimeException("RuntimeException", e);
+        } finally {
+            LOGGER.info("ENDED /show Application.generateHTML");
+        }
+        return response;
     }
 
     @RequestMapping(value = "/pdf", method = RequestMethod.POST)
-    public
     @ResponseBody
-    byte[] doPDF(
+    public byte[] doPDF(
             @RequestParam("transactionid") String transactionid,
             @RequestParam("reportname") String reportName,
             @RequestParam("reportversion") String reportVersion,
             @RequestParam("xml") String xml) {
         RenameThread.renameThreadFromTransactionId(transactionid);
-        LOGGER.info("/pdf called for transactionid:" + transactionid + " at version:" + reportVersion);
-        XmlDataSource source=new XmlDataSource(transactionid, reportName, reportVersion, xml);
-        return pdfRendererService.generatePdf(source);
+        LOGGER.info("STARTED /pdf Application.doPDF for transaction:" + transactionid + " reportname:" + reportName + " version:" + reportVersion);
+        byte[] response = null;
+        try {
+            XmlDataSource source = new XmlDataSource(transactionid, reportName, reportVersion, xml);
+            response = pdfRendererService.generatePdf(source);
+        } catch (RuntimeException e) {
+            LOGGER.error("RuntimeException", e);
+            throw new DwpRuntimeException("RuntimeException", e);
+        } finally {
+            LOGGER.info("ENDED /pdf Application.doPDF with requestBody");
+        }
+        return response;
     }
 
     @RequestMapping(value = "/html", method = RequestMethod.POST)
-    public
     @ResponseBody
-    String doHtml(
+    public String doHtml(
             @RequestParam("transactionid") String transactionid,
             @RequestParam("reportname") String reportName,
             @RequestParam("reportversion") String reportVersion,
             @RequestParam("xml") String xml) {
         RenameThread.renameThreadFromTransactionId(transactionid);
-        LOGGER.info("/html called for transactionid:" + transactionid + " at version:" + reportVersion);
-        XmlDataSource source=new XmlDataSource(transactionid, reportName, reportVersion, xml);
-        return htmlRendererService.generateHtml(source);
+        LOGGER.info("STARTED /html Application.doHTML for transaction:" + transactionid + " reportname:" + reportName + " version:" + reportVersion);
+        String response = null;
+        try {
+            XmlDataSource source = new XmlDataSource(transactionid, reportName, reportVersion, xml);
+            response = htmlRendererService.generateHtml(source);
+        } catch (RuntimeException e) {
+            LOGGER.error("RuntimeException", e);
+            throw new DwpRuntimeException("RuntimeException", e);
+        } finally {
+            LOGGER.info("ENDED /html Application.doHTML");
+        }
+        return response;
     }
 
     @Inject
@@ -79,5 +109,4 @@ public class Application {
         this.pdfRendererService = pdfRendererService;
         this.htmlRendererService = htmlRendererService;
     }
-
 }
