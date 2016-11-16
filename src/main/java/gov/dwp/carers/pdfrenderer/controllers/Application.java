@@ -33,9 +33,6 @@ public class Application {
         try {
             CarersXmlDataSource carersData = new CarersXmlDataSource(requestBody);
             response = pdfRendererService.generatePdf(carersData);
-        } catch (RuntimeException e) {
-            LOGGER.error("RuntimeException", e);
-            throw new DwpRuntimeException("RuntimeException", e);
         } finally {
             LOGGER.info("ENDED /print Application.generatePDF with requestBody");
         }
@@ -51,9 +48,6 @@ public class Application {
         try {
             CarersXmlDataSource carersData = new CarersXmlDataSource(requestBody);
             response = htmlRendererService.generateHtml(carersData);
-        } catch (RuntimeException e) {
-            LOGGER.error("RuntimeException", e);
-            throw new DwpRuntimeException("RuntimeException", e);
         } finally {
             LOGGER.info("ENDED /show Application.generateHTML");
         }
@@ -73,9 +67,6 @@ public class Application {
         try {
             XmlDataSource source = new XmlDataSource(transactionid, reportName, reportVersion, xml);
             response = pdfRendererService.generatePdf(source);
-        } catch (RuntimeException e) {
-            LOGGER.error("RuntimeException", e);
-            throw new DwpRuntimeException("RuntimeException", e);
         } finally {
             LOGGER.info("ENDED /pdf Application.doPDF with requestBody");
         }
@@ -95,9 +86,6 @@ public class Application {
         try {
             XmlDataSource source = new XmlDataSource(transactionid, reportName, reportVersion, xml);
             response = htmlRendererService.generateHtml(source);
-        } catch (RuntimeException e) {
-            LOGGER.error("RuntimeException", e);
-            throw new DwpRuntimeException("RuntimeException", e);
         } finally {
             LOGGER.info("ENDED /html Application.doHTML");
         }
