@@ -7,7 +7,6 @@ node ('master') {
     artifactoryGradle.deployer.ivyPattern = '[organisation]/[module]/ivy-[revision].xml'
     artifactoryGradle.deployer.artifactPattern = '[organisation]/[module]/[revision]/[artifact]-[revision](-[classifier]).[ext]'
     artifactoryGradle.deployer.mavenCompatible = true
-    artifactoryGradle.deployer.artifactDeploymentPatterns.addInclude("*.jar")
     artifactoryGradle.deployer.usesPlugin = true
 
     def buildInfo = Artifactory.newBuildInfo()
@@ -31,6 +30,8 @@ node ('master') {
             junit keepLongStdio: true, testResults: 'build/test-results/test/*.xml'
         } catch (Exception e) {
             publishHTML([allowMissing: true, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'build/reports/tests/test/', reportFiles: 'index.html', reportName: 'Test Report'])
+            junit allowEmptyResults: true, keepLongStdio: true, testResults: 'build/test-results/test/*.xml'
+            throw e;
         }
     }
     stage ('Publish build info') {
