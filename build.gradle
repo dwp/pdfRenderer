@@ -31,6 +31,7 @@ buildscript {
         classpath("net.sf.jasperreports:jasperreports:6.3.1")
         classpath("com.itextpdf:itextpdf:5.5.10")
         classpath("net.sf.jasperreports:jasperreports-functions:6.3.1")
+        classpath 'com.kenshoo:gradle-fpm:0.5'
     }
 }
 
@@ -41,6 +42,7 @@ allprojects {
     apply plugin: 'maven-publish'
     apply plugin: 'spring-boot'
     apply plugin: 'com.github.gmazelier.jasperreports'
+    apply plugin: 'fpm-packaging'
     version = '4.05-SNAPSHOT'
     archivesBaseName = 'p1'
     group = 'gov.dwp.carers'
@@ -142,6 +144,15 @@ publishing {
             }
         }
     }
+}
+
+rpm {
+    packageName = 'p1' // Optional, default is project.name
+    dependencies = ['pdfreports'] //Optional, an array of package dependencies
+    baseDir = "${project.buildDir}/build/libs" // Optional, base directory to package, default: project.buildDir
+    prefix = '/data/carers/p1' // Optional, a path to prefix files when building package, default: root (/)
+    extraOptions = ['--vendor': 'DWP', '--maintainer': 'CADS Team'] // Optional, a map containing extra options
+    extraFlags   = ['--rpm-auto-add-directories'] // Optional, a list of additional flags to fpm
 }
 
 task sourcesJar(type: Jar, dependsOn: classes) {
