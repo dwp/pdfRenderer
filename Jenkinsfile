@@ -37,4 +37,17 @@ node ('master') {
     stage ('Publish build info') {
         server.publishBuildInfo buildInfo
     }
+    if (env.BRANCH_NAME == 'integration') {
+        stage ('Deploy to lab') {
+            sshagent(['8b4a081b-f1d6-424d-959f-ae9279d08b3b']) {
+                sh 'scp build/libs/p1-*-SNAPSHOT-full.jar p1lab@37.26.89.94:p1-latest-SNAPSHOT-full.jar'
+                sh 'ssh p1lab@37.26.89.94 "./deploy.sh restart > output.log 2>&1 &"'
+            }
+        }
+    }
+    if (env.BRANCH_NAME == 'int-release') {
+        stage ('Build RPM') {
+            artifactoryGradle.run switches: '-Dgradle.user.home=$JENKINS_HOME/.gradle', buildFile: 'build.gradle', tasks: 'rpm', server: server
+        }
+    }
 }
