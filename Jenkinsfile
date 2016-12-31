@@ -48,6 +48,8 @@ node ('master') {
     if (env.BRANCH_NAME == 'int-release') {
         stage ('Build RPM') {
             artifactoryGradle.run switches: '-Dgradle.user.home=$JENKINS_HOME/.gradle', buildFile: 'build.gradle', tasks: 'rpm', server: server
+            sh 'cp build/linux-package/*.rpm /opt/repo/cads/preview/'
+            build job: 'Update repository metadata', parameters: [string(name: 'REPO_NAME', value: 'preview')], wait: false
         }
     }
 }
