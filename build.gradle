@@ -147,10 +147,10 @@ publishing {
 }
 
 rpm {
-    packageName = 'p1' // Optional, default is project.name
+    packageName = "${archivesBaseName}" // Optional, default is project.name
     dependencies = ['pdfreports'] //Optional, an array of package dependencies
     baseDir = "${project.buildDir}/build/libs" // Optional, base directory to package, default: project.buildDir
-    prefix = '/data/carers/p1' // Optional, a path to prefix files when building package, default: root (/)
+    prefix = "/data/carers/${archivesBaseName}/${archivesBaseName}-${version}" // Optional, a path to prefix files when building package, default: root (/)
     extraOptions = ['--vendor': 'DWP', '--maintainer': 'CADS Team'] // Optional, a map containing extra options
     extraFlags   = ['--rpm-auto-add-directories'] // Optional, a list of additional flags to fpm
 }
