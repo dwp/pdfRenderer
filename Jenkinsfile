@@ -2,8 +2,13 @@ node ('master') {
     def server = Artifactory.server('newlab-artifactory')
     def artifactoryGradle = Artifactory.newGradleBuild()
     artifactoryGradle.tool = 'Gradle321' // Tool name from Jenkins configuration
-    artifactoryGradle.deployer repo:'libs-snapshot-local', server: server
     artifactoryGradle.resolver repo:'repo', server: server
+    if (env.BRANCH_NAME == 'integration') {
+        artifactoryGradle.deployer repo:'libs-snapshot-local', server: server
+    }
+    if (env.BRANCH_NAME == 'int-release') {
+        artifactoryGradle.deployer repo:'libs-release-local', server: server
+    }
     artifactoryGradle.deployer.ivyPattern = '[organisation]/[module]/ivy-[revision].xml'
     artifactoryGradle.deployer.artifactPattern = '[organisation]/[module]/[revision]/[artifact]-[revision](-[classifier]).[ext]'
     artifactoryGradle.deployer.mavenCompatible = true
@@ -24,7 +29,7 @@ node ('master') {
     stage ('Build') {
         try {
             withEnv(['_JAVA_OPTIONS=-Dcarers.keystore=/opt/carers-keystore/carerskeystore']) {
-                artifactoryGradle.run switches: '-Dgradle.user.home=$JENKINS_HOME/.gradle', buildFile: 'build.gradle', tasks: 'clean test build sourcesJar artifactoryPublish', buildInfo: buildInfo, server: server
+                artifactoryGradle.run switches: '-Dgradle.user.home=$JENKINS_HOME/.gradle', buildFile: 'build.gradle', tasks: 'clean test build sourcesJar artifactoryPublish rpm', buildInfo: buildInfo, server: server
             }
             publishHTML([allowMissing: true, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'build/reports/tests/test/', reportFiles: 'index.html', reportName: 'Test Report'])
             junit keepLongStdio: true, testResults: 'build/test-results/test/*.xml'
@@ -44,10 +49,13 @@ node ('master') {
                 sh 'ssh p1lab@37.26.89.94 "./deploy.sh restart > output.log 2>&1 &"'
             }
         }
+        stage ('Add RPM to Lab repo') {
+            sh 'cp build/linux-package/*.rpm /opt/repo/cads/lab/'
+            build job: 'Update repository metadata', parameters: [string(name: 'REPO_NAME', value: 'lab')], wait: false
+        }
     }
     if (env.BRANCH_NAME == 'int-release') {
-        stage ('Build RPM') {
-            artifactoryGradle.run switches: '-Dgradle.user.home=$JENKINS_HOME/.gradle', buildFile: 'build.gradle', tasks: 'rpm', server: server
+        stage ('Add RPM to Preview repo') {
             sh 'cp build/linux-package/*.rpm /opt/repo/cads/preview/'
             build job: 'Update repository metadata', parameters: [string(name: 'REPO_NAME', value: 'preview')], wait: false
         }

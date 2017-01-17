@@ -35,6 +35,8 @@ buildscript {
     }
 }
 
+String candidate = "$System.env.BRANCH_NAME".contentEquals('feature/future') ? 'RELEASE' : 'SNAPSHOT'
+
 allprojects {
     apply plugin: 'com.jfrog.artifactory'
     apply plugin: 'java'
@@ -43,7 +45,7 @@ allprojects {
     apply plugin: 'spring-boot'
     apply plugin: 'com.github.gmazelier.jasperreports'
     apply plugin: 'fpm-packaging'
-    version = '4.05-SNAPSHOT'
+    version = "4.05-${candidate}"
     archivesBaseName = 'p1'
     group = 'gov.dwp.carers'
     sourceCompatibility = 1.8
@@ -147,7 +149,7 @@ publishing {
 }
 
 rpm {
-    packageName = "${archivesBaseName}" // Optional, default is project.name
+    packageName = "${archivesBaseName}-${version}" // Optional, default is project.name
     dependencies = ['pdfreports'] //Optional, an array of package dependencies
     baseDir = "${project.buildDir}/build/libs" // Optional, base directory to package, default: project.buildDir
     prefix = "/data/carers/${archivesBaseName}/${archivesBaseName}-${version}" // Optional, a path to prefix files when building package, default: root (/)
