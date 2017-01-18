@@ -26,10 +26,23 @@ node ('master') {
     stage ('Checkout') {
         checkout scm
     }
-    stage ('Build') {
+
+    def gradletool = tool name: 'Gradle321', type: 'hudson.plugins.gradle.GradleInstallation'
+    def gradlebin = "${gradletool}/bin/gradle -Dgradle.user.home=$JENKINS_HOME/.gradle"
+
+    def app_name = sh (
+        script: "${gradlebin} properties | grep name | awk '{print \$2}'",
+        returnStdout: true
+        ).trim()
+    def app_ver = sh (
+        script: "${gradlebin} properties | grep version | awk '{print \$2}'",
+        returnStdout: true
+        ).trim()
+
+    stage ('Gradle build and test') {
         try {
             withEnv(['_JAVA_OPTIONS=-Dcarers.keystore=/opt/carers-keystore/carerskeystore']) {
-                artifactoryGradle.run switches: '-Dgradle.user.home=$JENKINS_HOME/.gradle', buildFile: 'build.gradle', tasks: 'clean test build sourcesJar artifactoryPublish rpm', buildInfo: buildInfo, server: server
+                artifactoryGradle.run switches: '-Dgradle.user.home=$JENKINS_HOME/.gradle', buildFile: 'build.gradle', tasks: 'clean test build sourcesJar artifactoryPublish', buildInfo: buildInfo, server: server
             }
             publishHTML([allowMissing: true, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'build/reports/tests/test/', reportFiles: 'index.html', reportName: 'Test Report'])
             junit keepLongStdio: true, testResults: 'build/test-results/test/*.xml'
@@ -39,8 +52,11 @@ node ('master') {
             throw e;
         }
     }
-    stage ('Publish build info') {
+    stage ('Publish Gradle build info') {
         server.publishBuildInfo buildInfo
+    }
+    stage ('Build service RedHat package') {
+        sh "fpm -s dir -t rpm --name ${app_name}-${app_ver} --version ${env.BUILD_NUMBER} --prefix /data/carers/${app_name}/${app_name}-${app_ver} build/libs/${app_name}-${app_ver}-full.jar=/"
     }
     if (env.BRANCH_NAME == 'integration') {
         stage ('Deploy to lab') {
@@ -50,13 +66,13 @@ node ('master') {
             }
         }
         stage ('Add RPM to Lab repo') {
-            sh 'cp build/linux-package/*.rpm /opt/repo/cads/lab/'
+            sh 'cp *.rpm /opt/repo/cads/lab/'
             build job: 'Update repository metadata', parameters: [string(name: 'REPO_NAME', value: 'lab')], wait: false
         }
     }
     if (env.BRANCH_NAME == 'int-release') {
         stage ('Add RPM to Preview repo') {
-            sh 'cp build/linux-package/*.rpm /opt/repo/cads/preview/'
+            sh 'cp *.rpm /opt/repo/cads/preview/'
             build job: 'Update repository metadata', parameters: [string(name: 'REPO_NAME', value: 'preview')], wait: false
         }
     }
