@@ -32,3 +32,4 @@ build
 gradlew
 gradlew.bat
 gradle
+src/main/resources/config/application-info.properties
