@@ -162,6 +162,13 @@ task sourcesJar(type: Jar, dependsOn: classes) {
     from sourceSets.main.allSource
 }
 
+task apidocsJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from sourceSets.main.allSource
+}
+
+javadoc.destinationDir = file("${projectDir}/javadocs/${version}")
+
 task createInfoFile << {
     def props = new Properties()
     props.setProperty("application.version", version)
